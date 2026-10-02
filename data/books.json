@@ -1,10 +1,35 @@
 {
   "stages": [
-    { "id": "design",    "name": "설계",       "en": "Design",    "desc": "회로와 칩을 그리는 단계" },
-    { "id": "process",   "name": "제조 공정",   "en": "Fab",       "desc": "웨이퍼 위에 트랜지스터를 쌓는 단계" },
-    { "id": "packaging", "name": "패키징",     "en": "Packaging", "desc": "다이를 자르고 잇고 쌓는 단계" },
-    { "id": "device",    "name": "반도체 소자", "en": "Devices",   "desc": "메모리·센서처럼 칩이 하는 일" },
-    { "id": "system",    "name": "시스템·응용", "en": "Systems",   "desc": "칩이 모여 만드는 제품과 서비스" }
+    {
+      "id": "design",
+      "name": "설계",
+      "en": "Design",
+      "desc": "회로와 칩을 그리는 단계"
+    },
+    {
+      "id": "process",
+      "name": "제조 공정",
+      "en": "Fab",
+      "desc": "웨이퍼 위에 트랜지스터를 쌓는 단계"
+    },
+    {
+      "id": "packaging",
+      "name": "패키징",
+      "en": "Packaging",
+      "desc": "다이를 자르고 잇고 쌓는 단계"
+    },
+    {
+      "id": "device",
+      "name": "반도체 소자",
+      "en": "Devices",
+      "desc": "메모리·센서처럼 칩이 하는 일"
+    },
+    {
+      "id": "system",
+      "name": "시스템·응용",
+      "en": "Systems",
+      "desc": "칩이 모여 만드는 제품과 서비스"
+    }
   ],
   "books": [
     {
@@ -23,7 +48,29 @@
       "simulators": 50,
       "color": "#c2550c",
       "colorDark": "#fb9a4b",
-      "topics": ["리소그래피·EUV", "플라즈마 식각", "CVD·ALD", "이온 주입", "CMP", "FinFET·GAA"]
+      "topics": [
+        "리소그래피·EUV",
+        "플라즈마 식각",
+        "CVD·ALD",
+        "이온 주입",
+        "CMP",
+        "FinFET·GAA"
+      ],
+      "motif": "layers",
+      "featured": [
+        {
+          "title": "트랜지스터 구조 비교",
+          "desc": "평면 MOSFET → FinFET → GAA 나노시트를 3D로 돌려 보기",
+          "link": "chapters/advanced.html#sim-3d",
+          "image": "img/sims/processbook-sim-3d.jpg"
+        },
+        {
+          "title": "트렌치 식각 프로파일",
+          "desc": "압력·바이어스를 바꾸면 트렌치 벽이 휘고 무너진다",
+          "link": "chapters/etch.html#sim-etch",
+          "image": "img/sims/processbook-sim-etch.jpg"
+        }
+      ]
     },
     {
       "id": "memorybook",
@@ -41,7 +88,28 @@
       "simulators": 90,
       "color": "#0e9384",
       "colorDark": "#2dd4bf",
-      "topics": ["DRAM 셀·타이밍", "HBM·TSV", "3D NAND", "SSD·FTL", "MRAM·PCM·CXL"]
+      "topics": [
+        "DRAM 셀·타이밍",
+        "HBM·TSV",
+        "3D NAND",
+        "SSD·FTL",
+        "MRAM·PCM·CXL"
+      ],
+      "motif": "memory",
+      "featured": [
+        {
+          "title": "2.5D HBM 패키지 분해 모델",
+          "desc": "DRAM 다이 8단, TSV, 인터포저를 한 겹씩 뜯어 보기",
+          "link": "chapters/hbm.html#sim-h3",
+          "image": "img/sims/memorybook-sim-h3.jpg"
+        },
+        {
+          "title": "3D V-NAND 블록 모델",
+          "desc": "채널 홀과 계단 구조가 수백 단으로 쌓이는 모습",
+          "link": "chapters/vnand.html#sim-vn3d",
+          "image": "img/sims/memorybook-sim-vn3d.jpg"
+        }
+      ]
     },
     {
       "id": "sensorbook",
@@ -59,7 +127,28 @@
       "simulators": 80,
       "color": "#0a84c6",
       "colorDark": "#38b6f5",
-      "topics": ["포토다이오드·QE", "BSI·DTI 픽셀", "노이즈·PTC", "ISP 파이프라인", "적층 센서·SPAD"]
+      "topics": [
+        "포토다이오드·QE",
+        "BSI·DTI 픽셀",
+        "노이즈·PTC",
+        "ISP 파이프라인",
+        "적층 센서·SPAD"
+      ],
+      "motif": "pixel",
+      "featured": [
+        {
+          "title": "베이어 픽셀 어레이 단면",
+          "desc": "마이크로렌즈부터 포토다이오드·배선까지 3D 단면",
+          "link": "chapters/pixel.html#sim-p3",
+          "image": "img/sims/sensorbook-sim-p3.jpg"
+        },
+        {
+          "title": "디모자이킹 비교",
+          "desc": "지퍼·위색·모아레가 생기는 순간을 돋보기로",
+          "link": "chapters/color.html#sim-dm",
+          "image": "img/sims/sensorbook-sim-dm.jpg"
+        }
+      ]
     },
     {
       "id": "computerbook",
@@ -77,7 +166,29 @@
       "simulators": 57,
       "color": "#4f46e5",
       "colorDark": "#8b85ff",
-      "topics": ["논리 게이트", "장난감 CPU", "캐시·가상 메모리", "운영체제", "네트워크·웹", "GPU"]
+      "topics": [
+        "논리 게이트",
+        "장난감 CPU",
+        "캐시·가상 메모리",
+        "운영체제",
+        "네트워크·웹",
+        "GPU"
+      ],
+      "motif": "logic",
+      "featured": [
+        {
+          "title": "장난감 CPU",
+          "desc": "어셈블리를 직접 짜서 한 사이클씩 돌려 보기",
+          "link": "chapters/cpu.html#sim-toy",
+          "image": "img/sims/computerbook-sim-toy.jpg"
+        },
+        {
+          "title": "4비트 덧셈기",
+          "desc": "올림수가 번져 가는 모습을 게이트 단위로",
+          "link": "chapters/logic.html#sim-add",
+          "image": "img/sims/computerbook-sim-add.jpg"
+        }
+      ]
     },
     {
       "id": "aibook",
@@ -95,7 +206,28 @@
       "simulators": 100,
       "color": "#6e56cf",
       "colorDark": "#a18cff",
-      "topics": ["어텐션·Transformer", "LLM 학습", "KV 캐시·추측 디코딩", "양자화", "RAG·에이전트"]
+      "topics": [
+        "어텐션·Transformer",
+        "LLM 학습",
+        "KV 캐시·추측 디코딩",
+        "양자화",
+        "RAG·에이전트"
+      ],
+      "motif": "attention",
+      "featured": [
+        {
+          "title": "어텐션 행렬 직접 편집기",
+          "desc": "점수를 끌어 바꾸면 문장의 해석이 달라진다",
+          "link": "chapters/attention.html#sim-editor",
+          "image": "img/sims/aibook-sim-editor.jpg"
+        },
+        {
+          "title": "임베딩 공간 탐색기",
+          "desc": "단어들이 모여 사는 3D 의미 공간을 돌려 보기",
+          "link": "chapters/embedding.html#sim-space",
+          "image": "img/sims/aibook-sim-space.jpg"
+        }
+      ]
     },
     {
       "id": "camerabook",
@@ -113,7 +245,29 @@
       "simulators": 60,
       "color": "#d9480f",
       "colorDark": "#ff8a4c",
-      "topics": ["노출 삼각형", "피사계 심도", "AF", "화이트 밸런스", "RAW 현상", "스마트폰 카메라"]
+      "topics": [
+        "노출 삼각형",
+        "피사계 심도",
+        "AF",
+        "화이트 밸런스",
+        "RAW 현상",
+        "스마트폰 카메라"
+      ],
+      "motif": "aperture",
+      "featured": [
+        {
+          "title": "빛망울 모양 실험실",
+          "desc": "조리개 날개 수와 F값이 빛망울을 바꾼다",
+          "link": "chapters/aperture.html#sim-bokeh",
+          "image": "img/sims/camerabook-sim-bokeh.jpg"
+        },
+        {
+          "title": "프로펠러와 롤링 셔터",
+          "desc": "프로펠러가 휘어 찍히는 이유를 직접 재현",
+          "link": "chapters/shutter.html#sim-rolling",
+          "image": "img/sims/camerabook-sim-rolling.jpg"
+        }
+      ]
     },
     {
       "id": "designbook",
@@ -128,7 +282,8 @@
       "status": "writing",
       "color": "#be185d",
       "colorDark": "#f472b6",
-      "topics": []
+      "topics": [],
+      "motif": "circuit"
     },
     {
       "id": "packagingbook",
@@ -143,7 +298,8 @@
       "status": "writing",
       "color": "#a16207",
       "colorDark": "#facc15",
-      "topics": []
+      "topics": [],
+      "motif": "package"
     },
     {
       "id": "carbook",
@@ -158,7 +314,8 @@
       "status": "writing",
       "color": "#15803d",
       "colorDark": "#4ade80",
-      "topics": []
+      "topics": [],
+      "motif": "car"
     }
   ],
   "tools": [
@@ -169,7 +326,22 @@
       "description": "Sony, Samsung ISOCELL, OmniVision 등 스마트폰 카메라 센서와, 어떤 폰이 어떤 센서를 쓰는지 출처와 함께 정리한 공개 카탈로그입니다.",
       "url": "https://sensors.euiyun.com/",
       "repo": "https://github.com/geniuskey/sensors",
-      "related": ["sensorbook", "camerabook"]
+      "related": [
+        "sensorbook",
+        "camerabook"
+      ]
     }
-  ]
+  ],
+  "author": {
+    "name": "euiyun",
+    "role": "반도체 회사에 다니는 학생",
+    "title": "반도체 회사에 다니는데, 반도체를 잘 몰랐습니다",
+    "paragraphs": [
+      "회의실에서는 HBM, EUV, 하이브리드 본딩 같은 단어가 매일같이 오갑니다. 고개는 열심히 끄덕였지만, 솔직히 그 단어들 뒤에서 무슨 일이 벌어지는지 설명할 자신은 없었습니다. 반도체 회사에 다니면서 반도체를 모른다는 건, 생각보다 오래 마음에 걸리는 일이었습니다.",
+      "그래서 공부하기로 했습니다. 다만 책을 읽고 밑줄 긋는 대신, 이해한 것을 하나씩 손으로 만들어 보기로 했습니다. 커패시터에서 전하가 새는 속도를 슬라이더로 바꿔 보고, 식각 조건을 비틀어 트렌치가 무너지는 모습을 눈으로 확인하면서요. 제대로 이해하지 못한 것은 시뮬레이터로 만들 수 없었습니다. 그래서 만드는 일 자체가 제게는 가장 엄격한 시험이었습니다.",
+      "이 시리즈는 그 공부의 기록입니다. 그렇게 한 권이 두 권이 되고, 어느새 웨이퍼 한 장을 채워 보자는 욕심이 생겼습니다. 저처럼 \"대충은 아는데 제대로는 모르는\" 분, 반도체 업계에 막 발을 들인 분, 그리고 칩 하나가 어떻게 세상을 움직이는지 궁금한 모든 분께 이 책들이 작은 지름길이 되면 좋겠습니다."
+    ],
+    "closing": "틀린 내용을 발견하면 언제든 알려 주세요. 그것도 제 공부가 됩니다.",
+    "contact": "https://github.com/geniuskey"
+  }
 }

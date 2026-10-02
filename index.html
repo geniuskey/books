@@ -20,6 +20,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
 <link rel="stylesheet" href="css/style.css">
+<script src="js/covers.js" defer></script>
 <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -28,9 +29,10 @@
   <div class="wrap">
     <a class="brand" href="#top"><img src="favicon.svg" alt=""> euiyun books <small>인터랙티브 교과서 시리즈</small></a>
     <nav class="topnav" aria-label="섹션">
+      <a href="#play">시뮬레이터</a>
       <a href="#map">가치사슬 지도</a>
       <a href="#shelf">전체 책장</a>
-      <a href="#tools">도구·데이터</a>
+      <a href="#author">만든 사람</a>
     </nav>
     <div class="actions">
       <button class="icon-btn" id="theme-btn" type="button" aria-label="라이트/다크 모드 전환">
@@ -51,8 +53,8 @@
         <h1>웨이퍼 한 장에서<br><span class="grad">세상을 움직이는 칩까지</span></h1>
         <p class="lead">반도체 공정, 메모리, 이미지 센서부터 그 칩들이 만들어 내는 컴퓨터, AI, 카메라까지. 읽기만 하는 교과서가 아니라 슬라이더를 움직이고 3D 구조를 돌리며 직접 실험하는 한국어 웹 교과서 시리즈입니다. 모두 무료이고 설치할 것도 없습니다.</p>
         <div class="cta">
-          <a class="btn primary" href="#map">가치사슬 지도로 보기 →</a>
-          <a class="btn" href="#shelf">전체 책장</a>
+          <a class="btn primary" href="#play">지금 바로 만져 보기 →</a>
+          <a class="btn" href="#map">가치사슬 지도</a>
         </div>
         <div class="stats" id="stats" aria-live="polite">
           <div><b data-stat="published">–</b><span>출간된 교과서</span></div>
@@ -62,9 +64,26 @@
         </div>
       </div>
       <div class="wafer-box">
-        <svg class="wafer" id="wafer" viewBox="0 0 400 400" role="group" aria-label="웨이퍼 맵: 다이 하나가 교과서 한 권"></svg>
+        <div class="wafer-tilt" id="wafer-tilt">
+          <svg class="wafer" id="wafer" viewBox="-24 -24 448 448" role="group" aria-label="웨이퍼 맵: 다이 하나가 교과서 한 권"></svg>
+        </div>
         <div class="die-info" id="die-info" aria-live="polite"></div>
       </div>
+    </div>
+  </section>
+
+  <section class="block" id="play">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">Hands-on</div>
+          <h2>읽지 말고, 만져 보세요</h2>
+          <p>모든 책에는 브라우저에서 바로 돌아가는 시뮬레이터가 들어 있습니다. 아래는 각 책에서 두 개씩 고른 장면입니다. 누르면 해당 시뮬레이터로 바로 이동합니다.</p>
+        </div>
+        <span class="scroll-hint">옆으로 넘겨 더 보기 →</span>
+      </div>
+      <div class="today" id="today"></div>
+      <div class="strip" id="strip"></div>
     </div>
   </section>
 
@@ -105,6 +124,18 @@
             <li><a href="https://camerabook.euiyun.com/">CameraBook · 카메라 교과서</a></li>
           </ul>
         </noscript>
+      </div>
+    </div>
+  </section>
+
+  <section class="block author" id="author">
+    <div class="wrap">
+      <div class="author-grid">
+        <div class="author-side">
+          <div class="eyebrow">Author's Note</div>
+          <div class="quote" aria-hidden="true">“</div>
+        </div>
+        <div class="author-body" id="author-body"></div>
       </div>
     </div>
   </section>
