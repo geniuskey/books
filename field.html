@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>분야 · euiyun books</title>
+<meta name="description" content="반도체·SW·AI처럼 일하는 지식부터 돈·집·세금·건강처럼 살아가는 지식까지 — 시뮬레이터를 직접 만지며 배우는 한국어 인터랙티브 웹 교과서 시리즈.">
+<link rel="canonical" href="https://books.euiyun.com/field.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0a84c6">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="euiyun books">
+<meta property="og:title" content="분야 · euiyun books">
+<meta property="og:description" content="반도체·SW·AI처럼 일하는 지식부터 돈·집·세금·건강처럼 살아가는 지식까지 — 시뮬레이터를 직접 만지며 배우는 한국어 인터랙티브 웹 교과서 시리즈.">
+<meta property="og:url" content="https://books.euiyun.com/field.html">
+<meta property="og:image" content="https://books.euiyun.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/covers.js" defer></script>
+<script src="js/core.js" defer></script>
+<script src="js/wafer.js" defer></script>
+<script src="js/field.js" defer></script>
+</head>
+<body>
+
+<main>
+  <section class="hero field-hero">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow" id="f-wing"></div>
+        <h1 id="f-name">&nbsp;</h1>
+        <p class="lead" id="f-desc"></p>
+        <div class="stats">
+          <div><b data-stat="published">–</b><span>출간</span></div>
+          <div><b data-stat="writing">–</b><span>집필 중</span></div>
+          <div><b data-stat="planned">–</b><span>집필 예정</span></div>
+          <div><b data-stat="simulators">–</b><span>시뮬레이터</span></div>
+        </div>
+      </div>
+      <div class="wafer-box">
+        <div class="wafer-tilt">
+          <svg class="wafer" id="wafer" viewBox="-24 -24 448 448" role="group" aria-label="웨이퍼 맵: 다이 하나가 교과서 한 권"></svg>
+        </div>
+        <div class="die-info" id="die-info" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="flow">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">Map</div>
+          <h2><span id="flow-title"></span></h2>
+          <p><span id="flow-desc"></span></p>
+        </div>
+      </div>
+      <div class="chain" id="chain"></div>
+    </div>
+  </section>
+
+  <section class="block" id="shelf">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">Books</div>
+          <h2>이 분야의 책</h2>
+          <p>출간된 책은 바로 읽을 수 있고, 아직인 책은 만들고 싶은 시뮬레이터를 미리 적어 두었습니다.</p>
+        </div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="block" id="others">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">Other Fields</div>
+          <h2>다른 분야</h2>
+          <p></p>
+        </div>
+      </div>
+      <div class="other-fields" id="other-fields"></div>
+    </div>
+  </section>
+</main>
+</body>
+</html>

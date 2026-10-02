@@ -1,34 +1,159 @@
 {
-  "stages": [
+  "statusLabels": {
+    "published": "출간",
+    "writing": "집필 중",
+    "planned": "집필 예정"
+  },
+  "phases": [
     {
-      "id": "design",
-      "name": "설계",
-      "en": "Design",
-      "desc": "회로와 칩을 그리는 단계"
+      "id": 1,
+      "name": "다음 차례",
+      "desc": "지금 쓰고 있거나 곧 시작할 책"
     },
     {
-      "id": "process",
-      "name": "제조 공정",
-      "en": "Fab",
-      "desc": "웨이퍼 위에 트랜지스터를 쌓는 단계"
+      "id": 2,
+      "name": "그다음",
+      "desc": "1단계가 끝나면 이어서 쓸 책"
     },
     {
-      "id": "packaging",
-      "name": "패키징",
-      "en": "Packaging",
-      "desc": "다이를 자르고 잇고 쌓는 단계"
+      "id": 3,
+      "name": "언젠가",
+      "desc": "꼭 쓰고 싶지만 조금 멀리 있는 책"
+    }
+  ],
+  "wings": [
+    {
+      "id": "work",
+      "name": "일하는 지식",
+      "en": "Knowledge for Work",
+      "desc": "반도체, 소프트웨어, AI처럼 일하는 데 필요한 전문 지식"
     },
     {
-      "id": "device",
-      "name": "반도체 소자",
-      "en": "Devices",
-      "desc": "메모리·센서처럼 칩이 하는 일"
+      "id": "life",
+      "name": "살아가는 지식",
+      "en": "Knowledge for Life",
+      "desc": "돈, 집, 세금, 건강처럼 어른으로 살아가는 데 필요한 지식"
+    }
+  ],
+  "fields": [
+    {
+      "id": "semiconductor",
+      "wing": "work",
+      "name": "반도체",
+      "en": "Semiconductor",
+      "color": "#0a84c6",
+      "colorDark": "#38b6f5",
+      "desc": "칩이 설계되고, 만들어지고, 쓰이기까지. 이 시리즈의 출발점입니다.",
+      "stages": [
+        {
+          "id": "physics",
+          "name": "기초 물리",
+          "en": "Physics",
+          "desc": "전자가 움직이는 원리"
+        },
+        {
+          "id": "design",
+          "name": "설계",
+          "en": "Design",
+          "desc": "회로와 칩을 그리는 단계"
+        },
+        {
+          "id": "process",
+          "name": "제조 공정",
+          "en": "Fab",
+          "desc": "웨이퍼 위에 트랜지스터를 쌓는 단계"
+        },
+        {
+          "id": "packaging",
+          "name": "패키징·테스트",
+          "en": "Back-end",
+          "desc": "자르고, 잇고, 쌓고, 검사하는 단계"
+        },
+        {
+          "id": "device",
+          "name": "반도체 제품",
+          "en": "Products",
+          "desc": "메모리·센서·전력 소자처럼 칩이 하는 일"
+        },
+        {
+          "id": "industry",
+          "name": "산업",
+          "en": "Industry",
+          "desc": "칩을 둘러싼 돈과 공급망"
+        }
+      ]
     },
     {
-      "id": "system",
-      "name": "시스템·응용",
-      "en": "Systems",
-      "desc": "칩이 모여 만드는 제품과 서비스"
+      "id": "computing",
+      "wing": "work",
+      "name": "컴퓨터·SW",
+      "en": "Computing",
+      "color": "#4f46e5",
+      "colorDark": "#8b85ff",
+      "desc": "0과 1에서 시작해 프로그램, 운영체제, 네트워크, 클라우드까지."
+    },
+    {
+      "id": "ai",
+      "wing": "work",
+      "name": "AI·데이터",
+      "en": "AI & Data",
+      "color": "#9333ea",
+      "colorDark": "#c084fc",
+      "desc": "수학과 통계에서 신경망, LLM, 그리고 AI와 함께 일하는 법까지."
+    },
+    {
+      "id": "electronics",
+      "wing": "work",
+      "name": "전자·모빌리티",
+      "en": "Electronics",
+      "color": "#15803d",
+      "colorDark": "#4ade80",
+      "desc": "회로 기초부터 임베디드, 배터리, 자동차, 로봇까지."
+    },
+    {
+      "id": "money",
+      "wing": "life",
+      "name": "돈·금융",
+      "en": "Money",
+      "color": "#b45309",
+      "colorDark": "#fbbf24",
+      "desc": "복리, 금리, 주식, 보험, 연금. 월급을 받는 순간부터 필요한 지식."
+    },
+    {
+      "id": "housing",
+      "wing": "life",
+      "name": "집·부동산",
+      "en": "Housing",
+      "color": "#0f766e",
+      "colorDark": "#2dd4bf",
+      "desc": "전월세 계약부터 청약, 대출, 내 집 마련까지."
+    },
+    {
+      "id": "law",
+      "wing": "life",
+      "name": "세금·법",
+      "en": "Tax & Law",
+      "color": "#475569",
+      "colorDark": "#94a3b8",
+      "desc": "연말정산, 근로계약, 생활 법률, 상속·증여."
+    },
+    {
+      "id": "health",
+      "wing": "life",
+      "name": "건강",
+      "en": "Health",
+      "color": "#be123c",
+      "colorDark": "#fb7185",
+      "desc": "몸의 원리, 운동, 영양, 수면, 그리고 병원과 약."
+    },
+    {
+      "id": "culture",
+      "wing": "life",
+      "name": "취미·교양",
+      "en": "Culture",
+      "color": "#c2410c",
+      "colorDark": "#fb923c",
+      "desc": "사진, 음악, 요리, 별. 삶을 풍요롭게 하는 지식."
     }
   ],
   "books": [
@@ -70,7 +195,8 @@
           "link": "chapters/etch.html#sim-etch",
           "image": "img/sims/processbook-sim-etch.jpg"
         }
-      ]
+      ],
+      "field": "semiconductor"
     },
     {
       "id": "memorybook",
@@ -109,7 +235,8 @@
           "link": "chapters/vnand.html#sim-vn3d",
           "image": "img/sims/memorybook-sim-vn3d.jpg"
         }
-      ]
+      ],
+      "field": "semiconductor"
     },
     {
       "id": "sensorbook",
@@ -148,7 +275,172 @@
           "link": "chapters/color.html#sim-dm",
           "image": "img/sims/sensorbook-sim-dm.jpg"
         }
-      ]
+      ],
+      "field": "semiconductor"
+    },
+    {
+      "id": "designbook",
+      "code": "DSN",
+      "title": "DesignBook",
+      "subtitle": "반도체 설계 교과서",
+      "headline": "집필 중",
+      "description": "회로와 칩을 설계하는 과정을 다룰 예정입니다.",
+      "url": "https://designbook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/designbook",
+      "stage": "design",
+      "status": "writing",
+      "color": "#be185d",
+      "colorDark": "#f472b6",
+      "topics": [],
+      "motif": "circuit",
+      "field": "semiconductor",
+      "phase": 1
+    },
+    {
+      "id": "packagingbook",
+      "code": "PKG",
+      "title": "PackagingBook",
+      "subtitle": "반도체 패키징 교과서",
+      "headline": "집필 중",
+      "description": "다이를 자르고, 잇고, 쌓는 패키징 기술을 다룰 예정입니다.",
+      "url": "https://packagingbook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/packagingbook",
+      "stage": "packaging",
+      "status": "writing",
+      "color": "#a16207",
+      "colorDark": "#facc15",
+      "topics": [],
+      "motif": "package",
+      "field": "semiconductor",
+      "phase": 1
+    },
+    {
+      "id": "devicebook",
+      "code": "DEV",
+      "title": "DeviceBook",
+      "subtitle": "반도체 소자 물리",
+      "description": "밴드, 도핑, PN 접합, MOSFET. 모든 반도체 책의 공통 기초.",
+      "field": "semiconductor",
+      "status": "planned",
+      "phase": 1,
+      "ideas": [
+        "도핑 농도에 따른 페르미 준위 이동",
+        "PN 접합 공핍층과 I–V 곡선",
+        "MOSFET 채널이 생기는 순간"
+      ],
+      "stage": "physics"
+    },
+    {
+      "id": "npubook",
+      "code": "NPU",
+      "title": "NPUBook",
+      "subtitle": "AI 반도체",
+      "description": "GPU, NPU, HBM. AI를 돌리는 칩의 구조.",
+      "field": "semiconductor",
+      "status": "planned",
+      "phase": 1,
+      "ideas": [
+        "시스톨릭 어레이 행렬곱",
+        "연산 vs 메모리 대역폭 루프라인",
+        "칩렛과 HBM 배치"
+      ],
+      "stage": "device"
+    },
+    {
+      "id": "analogbook",
+      "code": "ANA",
+      "title": "AnalogBook",
+      "subtitle": "아날로그 회로",
+      "description": "증폭기, 전류 미러, 비교기, ADC. 디지털 뒤에 숨은 아날로그.",
+      "field": "semiconductor",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "소신호 이득과 주파수 응답",
+        "차동 증폭기 오프셋",
+        "SAR ADC 한 비트씩 결정하기"
+      ],
+      "stage": "design"
+    },
+    {
+      "id": "testbook",
+      "code": "YLD",
+      "title": "TestBook",
+      "subtitle": "테스트·수율",
+      "description": "웨이퍼 테스트, 불량 분석, 수율을 올리는 법.",
+      "field": "semiconductor",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "웨이퍼 맵 불량 패턴 분류",
+        "결함 밀도와 수율 모델",
+        "테스트 시간과 원가"
+      ],
+      "stage": "packaging"
+    },
+    {
+      "id": "powerbook",
+      "code": "PWR",
+      "title": "PowerBook",
+      "subtitle": "전력 반도체",
+      "description": "Si, SiC, GaN. 전기를 다루는 반도체.",
+      "field": "semiconductor",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "스위칭 손실과 효율",
+        "항복 전압과 온저항",
+        "인버터 PWM 파형"
+      ],
+      "stage": "device"
+    },
+    {
+      "id": "chipindustrybook",
+      "code": "IND",
+      "title": "ChipIndustryBook",
+      "subtitle": "반도체 산업 지도",
+      "description": "팹리스, 파운드리, 메모리, 장비. 반도체 산업은 어떻게 돌아가나.",
+      "field": "semiconductor",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "웨이퍼 한 장의 원가 계산",
+        "메모리 가격 사이클",
+        "공급망 지도 탐색기"
+      ],
+      "stage": "industry"
+    },
+    {
+      "id": "equipbook",
+      "code": "EQP",
+      "title": "EquipBook",
+      "subtitle": "반도체 장비",
+      "description": "노광기, 식각기, 증착기 안을 들여다보기.",
+      "field": "semiconductor",
+      "status": "planned",
+      "phase": 3,
+      "ideas": [
+        "EUV 광원과 반사 광학계",
+        "플라즈마 챔버 조건 조정",
+        "장비 가동률과 팹 생산량"
+      ],
+      "stage": "process"
+    },
+    {
+      "id": "displaybook",
+      "code": "DSP",
+      "title": "DisplayBook",
+      "subtitle": "디스플레이",
+      "description": "LCD, OLED, 마이크로 LED의 픽셀 구조.",
+      "field": "semiconductor",
+      "status": "planned",
+      "phase": 3,
+      "ideas": [
+        "서브픽셀과 색 재현",
+        "TFT 백플레인 구동",
+        "번인과 수명"
+      ],
+      "stage": "device"
     },
     {
       "id": "computerbook",
@@ -159,7 +451,6 @@
       "description": "스위치 하나에서 CPU, 메모리, 운영체제, 네트워크, GPU까지. 장난감 CPU를 한 박자씩 돌리고 패킷을 보내며, 컴퓨터 구조를 배운 적 없어도 이해하도록 썼습니다.",
       "url": "https://computerbook.euiyun.com/",
       "repo": "https://github.com/geniuskey/computerbook",
-      "stage": "system",
       "status": "published",
       "level": "입문",
       "chapters": 15,
@@ -188,6 +479,142 @@
           "link": "chapters/logic.html#sim-add",
           "image": "img/sims/computerbook-sim-add.jpg"
         }
+      ],
+      "field": "computing"
+    },
+    {
+      "id": "programbook",
+      "code": "PGM",
+      "title": "ProgramBook",
+      "subtitle": "프로그래밍 첫걸음",
+      "description": "변수, 조건, 반복, 함수. 코드를 처음 쓰는 사람을 위한 책.",
+      "field": "computing",
+      "status": "planned",
+      "phase": 1,
+      "ideas": [
+        "한 줄씩 실행되는 코드 시각화",
+        "반복문으로 그림 그리기",
+        "함수 호출 스택 따라가기"
+      ]
+    },
+    {
+      "id": "algobook",
+      "code": "ALG",
+      "title": "AlgoBook",
+      "subtitle": "알고리즘·자료구조",
+      "description": "정렬, 탐색, 그래프, 동적 계획법을 눈으로.",
+      "field": "computing",
+      "status": "planned",
+      "phase": 1,
+      "ideas": [
+        "정렬 알고리즘 경주",
+        "해시 테이블 충돌",
+        "최단 경로 탐색 애니메이션"
+      ]
+    },
+    {
+      "id": "osbook",
+      "code": "KRN",
+      "title": "OSBook",
+      "subtitle": "운영체제",
+      "description": "프로세스, 메모리, 파일 시스템을 한 단계 더 깊이.",
+      "field": "computing",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "스케줄러 간트 차트",
+        "페이지 교체 대결",
+        "교착 상태 만들기와 풀기"
+      ]
+    },
+    {
+      "id": "networkbook",
+      "code": "NET",
+      "title": "NetworkBook",
+      "subtitle": "네트워크",
+      "description": "패킷이 지구 반대편까지 가는 길.",
+      "field": "computing",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "TCP 혼잡 제어 창 크기",
+        "라우팅 테이블 수렴",
+        "패킷 캡처 해부"
+      ]
+    },
+    {
+      "id": "databasebook",
+      "code": "DBS",
+      "title": "DatabaseBook",
+      "subtitle": "데이터베이스",
+      "description": "SQL, 인덱스, 트랜잭션.",
+      "field": "computing",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "B-트리 인덱스 삽입",
+        "조인 실행 계획 비교",
+        "트랜잭션 격리 수준 실험"
+      ]
+    },
+    {
+      "id": "webbook",
+      "code": "WEB",
+      "title": "WebBook",
+      "subtitle": "웹 개발",
+      "description": "HTML, CSS, JavaScript로 웹 페이지가 만들어지는 원리.",
+      "field": "computing",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "박스 모델 놀이터",
+        "이벤트 루프 시각화",
+        "렌더링 파이프라인"
+      ]
+    },
+    {
+      "id": "securitybook",
+      "code": "SEC",
+      "title": "SecurityBook",
+      "subtitle": "보안·암호",
+      "description": "해킹은 어떻게 일어나고 암호는 어떻게 지키나.",
+      "field": "computing",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "시저 암호에서 AES까지",
+        "공개키 교환 체험",
+        "SQL 인젝션 막기"
+      ]
+    },
+    {
+      "id": "cloudbook",
+      "code": "CLD",
+      "title": "CloudBook",
+      "subtitle": "클라우드·분산 시스템",
+      "description": "서버 수천 대가 하나처럼 움직이는 법.",
+      "field": "computing",
+      "status": "planned",
+      "phase": 3,
+      "ideas": [
+        "로드 밸런서 트래픽 분산",
+        "복제와 합의(Raft)",
+        "오토스케일링 비용"
+      ]
+    },
+    {
+      "id": "toolsbook",
+      "code": "TLS",
+      "title": "ToolsBook",
+      "subtitle": "개발자의 도구",
+      "description": "터미널, Git, 리눅스. 매일 쓰는 도구 제대로 알기.",
+      "field": "computing",
+      "status": "planned",
+      "phase": 3,
+      "ideas": [
+        "Git 브랜치 그래프 조작",
+        "셸 파이프라인 조립",
+        "권한과 프로세스 관찰"
       ]
     },
     {
@@ -199,7 +626,6 @@
       "description": "임베딩 공간을 직접 돌리고 어텐션 행렬을 손으로 고치며, 브라우저 안에서 작은 신경망을 학습시킵니다. MoE·FP4·추론 모델·에이전트 등 2026년 동향까지 다룹니다.",
       "url": "https://aibook.euiyun.com/",
       "repo": "https://github.com/geniuskey/aibook",
-      "stage": "system",
       "status": "published",
       "level": "공대 학부",
       "chapters": 13,
@@ -227,6 +653,489 @@
           "link": "chapters/embedding.html#sim-space",
           "image": "img/sims/aibook-sim-space.jpg"
         }
+      ],
+      "field": "ai"
+    },
+    {
+      "id": "mathbook",
+      "code": "MTH",
+      "title": "MathBook",
+      "subtitle": "AI를 위한 수학",
+      "description": "선형대수, 미분, 확률을 AI의 언어로.",
+      "field": "ai",
+      "status": "planned",
+      "phase": 1,
+      "ideas": [
+        "행렬이 공간을 변형하는 모습",
+        "경사 하강의 기울기",
+        "베이즈 정리 확률 갱신"
+      ]
+    },
+    {
+      "id": "statbook",
+      "code": "STA",
+      "title": "StatBook",
+      "subtitle": "통계와 데이터 분석",
+      "description": "평균의 함정부터 A/B 테스트까지.",
+      "field": "ai",
+      "status": "planned",
+      "phase": 1,
+      "ideas": [
+        "표본 크기와 신뢰구간",
+        "p-값 시뮬레이션",
+        "A/B 테스트 설계"
+      ]
+    },
+    {
+      "id": "workaibook",
+      "code": "WAI",
+      "title": "WorkAIBook",
+      "subtitle": "AI와 함께 일하기",
+      "description": "직장인을 위한 프롬프트, 자동화, 에이전트 활용.",
+      "field": "ai",
+      "status": "planned",
+      "phase": 1,
+      "ideas": [
+        "프롬프트 비교 실험실",
+        "업무 자동화 흐름 설계",
+        "AI 답변 검증 체크리스트"
+      ]
+    },
+    {
+      "id": "mlbook",
+      "code": "MLB",
+      "title": "MLBook",
+      "subtitle": "머신러닝 기초",
+      "description": "회귀, 분류, 결정 트리, 과적합.",
+      "field": "ai",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "결정 경계 그리기",
+        "과적합 곡선",
+        "교차 검증"
+      ]
+    },
+    {
+      "id": "visionbook",
+      "code": "VIS",
+      "title": "VisionBook",
+      "subtitle": "컴퓨터 비전",
+      "description": "합성곱에서 객체 인식, 이미지 생성까지.",
+      "field": "ai",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "합성곱 필터 놀이터",
+        "특징 맵 시각화",
+        "디퓨전 노이즈 제거 단계"
+      ]
+    },
+    {
+      "id": "rlbook",
+      "code": "RLB",
+      "title": "RLBook",
+      "subtitle": "강화학습",
+      "description": "보상으로 배우는 AI.",
+      "field": "ai",
+      "status": "planned",
+      "phase": 3,
+      "ideas": [
+        "그리드 월드 Q-러닝",
+        "탐험과 활용의 균형",
+        "정책 경사 장난감"
+      ]
+    },
+    {
+      "id": "carbook",
+      "code": "CAR",
+      "title": "CarBook",
+      "subtitle": "자동차 교과서",
+      "headline": "집필 중",
+      "description": "자동차 속 반도체와 시스템을 다룰 예정입니다.",
+      "url": "",
+      "repo": "https://github.com/geniuskey/carbook",
+      "status": "writing",
+      "color": "#15803d",
+      "colorDark": "#4ade80",
+      "topics": [],
+      "motif": "car",
+      "field": "electronics",
+      "phase": 1
+    },
+    {
+      "id": "electricbook",
+      "code": "ELC",
+      "title": "ElectricBook",
+      "subtitle": "전기·전자 회로 기초",
+      "description": "전압, 전류, 저항, 커패시터. 회로의 첫걸음.",
+      "field": "electronics",
+      "status": "planned",
+      "phase": 1,
+      "ideas": [
+        "옴의 법칙 회로 놀이터",
+        "RC 충방전 곡선",
+        "교류와 임피던스"
+      ]
+    },
+    {
+      "id": "embeddedbook",
+      "code": "EMB",
+      "title": "EmbeddedBook",
+      "subtitle": "임베디드·IoT",
+      "description": "마이크로컨트롤러로 세상을 움직이기.",
+      "field": "electronics",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "GPIO와 인터럽트",
+        "센서 값 샘플링",
+        "저전력 모드 배터리 수명"
+      ]
+    },
+    {
+      "id": "batterybook",
+      "code": "BAT",
+      "title": "BatteryBook",
+      "subtitle": "배터리·전기차",
+      "description": "리튬 이온 배터리와 전기차의 원리.",
+      "field": "electronics",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "충방전 곡선과 SOC",
+        "셀 밸런싱",
+        "주행 거리 계산기"
+      ]
+    },
+    {
+      "id": "robotbook",
+      "code": "ROB",
+      "title": "RobotBook",
+      "subtitle": "로봇",
+      "description": "모터, 제어, 센서 융합.",
+      "field": "electronics",
+      "status": "planned",
+      "phase": 3,
+      "ideas": [
+        "PID 제어 튜닝",
+        "역기구학 로봇 팔",
+        "라이다 SLAM 장난감"
+      ]
+    },
+    {
+      "id": "radiobook",
+      "code": "RAD",
+      "title": "RadioBook",
+      "subtitle": "무선 통신",
+      "description": "전파, 안테나, 5G와 Wi-Fi.",
+      "field": "electronics",
+      "status": "planned",
+      "phase": 3,
+      "ideas": [
+        "변조 방식 비교",
+        "안테나 방사 패턴",
+        "신호 대 잡음과 데이터율"
+      ]
+    },
+    {
+      "id": "moneybook",
+      "code": "MNY",
+      "title": "MoneyBook",
+      "subtitle": "돈의 기초",
+      "description": "복리, 인플레이션, 금리. 월급을 받으면 가장 먼저 알아야 할 것.",
+      "field": "money",
+      "status": "planned",
+      "phase": 1,
+      "ideas": [
+        "복리 vs 단리 그래프",
+        "인플레이션이 갉아먹는 돈",
+        "비상금과 예산 짜기"
+      ]
+    },
+    {
+      "id": "stockbook",
+      "code": "STK",
+      "title": "StockBook",
+      "subtitle": "주식·ETF",
+      "description": "주식과 ETF의 원리, 분산, 수수료, 장기 투자.",
+      "field": "money",
+      "status": "planned",
+      "phase": 1,
+      "ideas": [
+        "적립식 투자 시뮬레이터",
+        "분산 투자와 변동성",
+        "수수료가 수익에 미치는 영향"
+      ]
+    },
+    {
+      "id": "econbook",
+      "code": "ECO",
+      "title": "EconBook",
+      "subtitle": "경제 뉴스 읽기",
+      "description": "금리, 환율, 물가가 내 지갑에 닿는 경로.",
+      "field": "money",
+      "status": "planned",
+      "phase": 1,
+      "ideas": [
+        "기준금리와 대출 이자",
+        "환율과 해외 직구 가격",
+        "물가 지수 계산"
+      ]
+    },
+    {
+      "id": "creditbook",
+      "code": "CRD",
+      "title": "CreditBook",
+      "subtitle": "카드·신용·대출",
+      "description": "신용 점수, 카드, 대출 상환 방식.",
+      "field": "money",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "원리금 균등 vs 원금 균등",
+        "신용 점수 변화 요인",
+        "리볼빙의 함정"
+      ]
+    },
+    {
+      "id": "insurebook",
+      "code": "INS",
+      "title": "InsureBook",
+      "subtitle": "보험",
+      "description": "보험의 원리와 필요한 보장 고르기.",
+      "field": "money",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "위험 풀링 시뮬레이션",
+        "보험료와 보장 비교",
+        "실손 보험 청구 흐름"
+      ]
+    },
+    {
+      "id": "pensionbook",
+      "code": "PEN",
+      "title": "PensionBook",
+      "subtitle": "연금·노후",
+      "description": "국민연금, 퇴직연금, 개인연금으로 노후 준비하기.",
+      "field": "money",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "은퇴 자금 몬테카를로",
+        "연금 수령 시기 비교",
+        "세액공제 효과 계산"
+      ]
+    },
+    {
+      "id": "rentbook",
+      "code": "RNT",
+      "title": "RentBook",
+      "subtitle": "전월세·임대차",
+      "description": "전세와 월세, 계약서, 보증금 지키기.",
+      "field": "housing",
+      "status": "planned",
+      "phase": 1,
+      "ideas": [
+        "전세 vs 월세 비용 비교",
+        "전월세 전환율 계산",
+        "등기부등본 읽기 연습"
+      ]
+    },
+    {
+      "id": "housebook",
+      "code": "HOM",
+      "title": "HouseBook",
+      "subtitle": "부동산 기초",
+      "description": "집값은 어떻게 정해지고 무엇을 봐야 하나.",
+      "field": "housing",
+      "status": "planned",
+      "phase": 1,
+      "ideas": [
+        "입지 요소 가중치 놀이",
+        "매매 비용(취득세·중개료) 계산",
+        "금리와 집값의 관계"
+      ]
+    },
+    {
+      "id": "mortgagebook",
+      "code": "MTG",
+      "title": "MortgageBook",
+      "subtitle": "주택 대출",
+      "description": "LTV, DSR, 주택담보대출 상환 계획.",
+      "field": "housing",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "LTV·DSR 한도 계산기",
+        "고정 vs 변동 금리",
+        "중도 상환 효과"
+      ]
+    },
+    {
+      "id": "subscriptionbook",
+      "code": "SUB",
+      "title": "SubscriptionBook",
+      "subtitle": "청약",
+      "description": "청약 통장, 가점, 특별공급 이해하기.",
+      "field": "housing",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "청약 가점 계산기",
+        "경쟁률과 당첨 확률",
+        "분양가와 자금 계획"
+      ]
+    },
+    {
+      "id": "realinvestbook",
+      "code": "REI",
+      "title": "RealInvestBook",
+      "subtitle": "부동산 투자",
+      "description": "수익률, 재건축·재개발, 세금까지.",
+      "field": "housing",
+      "status": "planned",
+      "phase": 3,
+      "ideas": [
+        "임대 수익률 계산",
+        "재건축 분담금 장난감",
+        "보유세 시뮬레이션"
+      ]
+    },
+    {
+      "id": "taxbook",
+      "code": "TAX",
+      "title": "TaxBook",
+      "subtitle": "세금·연말정산",
+      "description": "소득세 구조와 연말정산 제대로 하기.",
+      "field": "law",
+      "status": "planned",
+      "phase": 1,
+      "ideas": [
+        "누진세율 구간 시각화",
+        "공제 항목별 환급액",
+        "종합소득세 신고 흐름"
+      ]
+    },
+    {
+      "id": "workbook",
+      "code": "JOB",
+      "title": "WorkBook",
+      "subtitle": "직장인의 법",
+      "description": "근로계약, 4대보험, 퇴직금, 휴가.",
+      "field": "law",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "퇴직금 계산기",
+        "4대보험 공제 내역",
+        "연차 발생 규칙"
+      ]
+    },
+    {
+      "id": "lawbook",
+      "code": "LAW",
+      "title": "LawBook",
+      "subtitle": "생활 법률",
+      "description": "계약, 분쟁, 내용증명, 소송의 기초.",
+      "field": "law",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "계약서 위험 조항 찾기",
+        "소멸시효 타임라인",
+        "분쟁 해결 경로 선택"
+      ]
+    },
+    {
+      "id": "inheritbook",
+      "code": "INH",
+      "title": "InheritBook",
+      "subtitle": "상속·증여",
+      "description": "상속 순위, 유류분, 증여세.",
+      "field": "law",
+      "status": "planned",
+      "phase": 3,
+      "ideas": [
+        "상속 지분 계산기",
+        "증여세 시뮬레이션",
+        "10년 합산 규칙"
+      ]
+    },
+    {
+      "id": "bodybook",
+      "code": "BOD",
+      "title": "BodyBook",
+      "subtitle": "몸의 원리",
+      "description": "심장, 폐, 근육, 호르몬. 몸은 어떻게 돌아가나.",
+      "field": "health",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "심박수와 혈류",
+        "에너지 대사 계산",
+        "호르몬 피드백 루프"
+      ]
+    },
+    {
+      "id": "fitbook",
+      "code": "FIT",
+      "title": "FitBook",
+      "subtitle": "운동 과학",
+      "description": "근력, 유산소, 회복의 과학.",
+      "field": "health",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "점진적 과부하 계획",
+        "심박 구간 훈련",
+        "회복과 초과 회복 곡선"
+      ]
+    },
+    {
+      "id": "foodbook",
+      "code": "FOD",
+      "title": "FoodBook",
+      "subtitle": "영양·식단",
+      "description": "탄단지, 혈당, 식단 짜기.",
+      "field": "health",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "기초대사량과 칼로리",
+        "혈당 곡선 비교",
+        "단백질 섭취 계획"
+      ]
+    },
+    {
+      "id": "sleepbook",
+      "code": "SLP",
+      "title": "SleepBook",
+      "subtitle": "수면·스트레스",
+      "description": "수면 주기와 스트레스 관리.",
+      "field": "health",
+      "status": "planned",
+      "phase": 3,
+      "ideas": [
+        "수면 주기 그래프",
+        "카페인 반감기",
+        "스트레스 반응 곡선"
+      ]
+    },
+    {
+      "id": "medbook",
+      "code": "MED",
+      "title": "MedBook",
+      "subtitle": "병원·약 똑똑하게",
+      "description": "검사 수치 읽기, 약의 원리, 의료 제도.",
+      "field": "health",
+      "status": "planned",
+      "phase": 3,
+      "ideas": [
+        "건강검진 수치 해석",
+        "약물 농도 반감기",
+        "의료비 본인 부담 계산"
       ]
     },
     {
@@ -238,7 +1147,6 @@
       "description": "조리개·셔터·ISO부터 초점, 화이트 밸런스, RAW, 플래시, 동영상, 스마트폰 카메라까지 — 가상 카메라를 직접 조작하며 왜 그렇게 찍히는지 배웁니다.",
       "url": "https://camerabook.euiyun.com/",
       "repo": "https://github.com/geniuskey/camerabook",
-      "stage": "system",
       "status": "published",
       "level": "입문",
       "chapters": 17,
@@ -267,55 +1175,68 @@
           "link": "chapters/shutter.html#sim-rolling",
           "image": "img/sims/camerabook-sim-rolling.jpg"
         }
+      ],
+      "field": "culture"
+    },
+    {
+      "id": "musicbook",
+      "code": "MUS",
+      "title": "MusicBook",
+      "subtitle": "음악 이론",
+      "description": "음, 화음, 리듬을 소리로 배우기.",
+      "field": "culture",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "배음과 음색",
+        "코드 진행 놀이터",
+        "리듬 시퀀서"
       ]
     },
     {
-      "id": "designbook",
-      "code": "DSN",
-      "title": "DesignBook",
-      "subtitle": "반도체 설계 교과서",
-      "headline": "집필 중",
-      "description": "회로와 칩을 설계하는 과정을 다룰 예정입니다.",
-      "url": "https://designbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/designbook",
-      "stage": "design",
-      "status": "writing",
-      "color": "#be185d",
-      "colorDark": "#f472b6",
-      "topics": [],
-      "motif": "circuit"
+      "id": "cookbook",
+      "code": "COK",
+      "title": "CookBook",
+      "subtitle": "요리의 과학",
+      "description": "열, 마이야르 반응, 발효.",
+      "field": "culture",
+      "status": "planned",
+      "phase": 3,
+      "ideas": [
+        "굽기 온도와 마이야르",
+        "삼투압과 염지",
+        "발효 시간 그래프"
+      ]
     },
     {
-      "id": "packagingbook",
-      "code": "PKG",
-      "title": "PackagingBook",
-      "subtitle": "반도체 패키징 교과서",
-      "headline": "집필 중",
-      "description": "다이를 자르고, 잇고, 쌓는 패키징 기술을 다룰 예정입니다.",
-      "url": "https://packagingbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/packagingbook",
-      "stage": "packaging",
-      "status": "writing",
-      "color": "#a16207",
-      "colorDark": "#facc15",
-      "topics": [],
-      "motif": "package"
+      "id": "starbook",
+      "code": "AST",
+      "title": "StarBook",
+      "subtitle": "별과 우주",
+      "description": "밤하늘, 행성, 망원경.",
+      "field": "culture",
+      "status": "planned",
+      "phase": 3,
+      "ideas": [
+        "오늘 밤 별자리 지도",
+        "행성 궤도 시뮬레이터",
+        "망원경 배율과 집광력"
+      ]
     },
     {
-      "id": "carbook",
-      "code": "CAR",
-      "title": "CarBook",
-      "subtitle": "자동차 교과서",
-      "headline": "집필 중",
-      "description": "자동차 속 반도체와 시스템을 다룰 예정입니다.",
-      "url": "",
-      "repo": "https://github.com/geniuskey/carbook",
-      "stage": "system",
-      "status": "writing",
-      "color": "#15803d",
-      "colorDark": "#4ade80",
-      "topics": [],
-      "motif": "car"
+      "id": "physicsbook",
+      "code": "PHY",
+      "title": "PhysicsBook",
+      "subtitle": "일상의 물리",
+      "description": "자전거, 전자레인지, 무지개 속 물리.",
+      "field": "culture",
+      "status": "planned",
+      "phase": 3,
+      "ideas": [
+        "포물선 운동 놀이터",
+        "파동 간섭",
+        "열 전달 비교"
+      ]
     }
   ],
   "tools": [
@@ -339,7 +1260,8 @@
     "paragraphs": [
       "회의실에서는 HBM, EUV, 하이브리드 본딩 같은 단어가 매일같이 오갑니다. 고개는 열심히 끄덕였지만, 솔직히 그 단어들 뒤에서 무슨 일이 벌어지는지 설명할 자신은 없었습니다. 반도체 회사에 다니면서 반도체를 모른다는 건, 생각보다 오래 마음에 걸리는 일이었습니다.",
       "그래서 공부하기로 했습니다. 다만 책을 읽고 밑줄 긋는 대신, 이해한 것을 하나씩 손으로 만들어 보기로 했습니다. 커패시터에서 전하가 새는 속도를 슬라이더로 바꿔 보고, 식각 조건을 비틀어 트렌치가 무너지는 모습을 눈으로 확인하면서요. 제대로 이해하지 못한 것은 시뮬레이터로 만들 수 없었습니다. 그래서 만드는 일 자체가 제게는 가장 엄격한 시험이었습니다.",
-      "이 시리즈는 그 공부의 기록입니다. 그렇게 한 권이 두 권이 되고, 어느새 웨이퍼 한 장을 채워 보자는 욕심이 생겼습니다. 저처럼 \"대충은 아는데 제대로는 모르는\" 분, 반도체 업계에 막 발을 들인 분, 그리고 칩 하나가 어떻게 세상을 움직이는지 궁금한 모든 분께 이 책들이 작은 지름길이 되면 좋겠습니다."
+      "그렇게 한 권이 두 권이 되고, 욕심이 하나 더 생겼습니다. 회사 밖에서도 모르는 게 많았거든요. 전세 계약서의 특약, 연말정산의 공제 항목, 퇴직연금의 운용 방법 같은 것들 말이에요. 그래서 이 시리즈는 이제 두 갈래로 자랍니다. 일하는 데 필요한 지식, 그리고 살아가는 데 필요한 지식.",
+      "저처럼 \"대충은 아는데 제대로는 모르는\" 분, 새로운 분야에 막 발을 들인 분, 그리고 세상이 어떻게 돌아가는지 궁금한 모든 분께 이 책들이 작은 지름길이 되면 좋겠습니다."
     ],
     "closing": "틀린 내용을 발견하면 언제든 알려 주세요. 그것도 제 공부가 됩니다.",
     "contact": "https://github.com/geniuskey"
