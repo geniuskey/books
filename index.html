@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>euiyun books · 인터랙티브 교과서 시리즈</title>
+<meta name="description" content="반도체 공정·메모리·이미지 센서에서 컴퓨터·AI·카메라까지 — 시뮬레이터를 직접 만지며 배우는 한국어 인터랙티브 웹 교과서 시리즈.">
+<link rel="canonical" href="https://books.euiyun.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0a84c6">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="euiyun books">
+<meta property="og:title" content="euiyun books · 인터랙티브 교과서 시리즈">
+<meta property="og:description" content="반도체 공정·메모리·이미지 센서에서 컴퓨터·AI·카메라까지 — 시뮬레이터를 직접 만지며 배우는 한국어 인터랙티브 웹 교과서 시리즈.">
+<meta property="og:url" content="https://books.euiyun.com/">
+<meta property="og:image" content="https://books.euiyun.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="favicon.svg" alt=""> euiyun books <small>인터랙티브 교과서 시리즈</small></a>
+    <nav class="topnav" aria-label="섹션">
+      <a href="#map">가치사슬 지도</a>
+      <a href="#shelf">전체 책장</a>
+      <a href="#tools">도구·데이터</a>
+    </nav>
+    <div class="actions">
+      <button class="icon-btn" id="theme-btn" type="button" aria-label="라이트/다크 모드 전환">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a class="icon-btn" href="https://github.com/geniuskey" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">Interactive Textbook Series</div>
+        <h1>웨이퍼 한 장에서<br><span class="grad">세상을 움직이는 칩까지</span></h1>
+        <p class="lead">반도체 공정, 메모리, 이미지 센서부터 그 칩들이 만들어 내는 컴퓨터, AI, 카메라까지. 읽기만 하는 교과서가 아니라 슬라이더를 움직이고 3D 구조를 돌리며 직접 실험하는 한국어 웹 교과서 시리즈입니다. 모두 무료이고 설치할 것도 없습니다.</p>
+        <div class="cta">
+          <a class="btn primary" href="#map">가치사슬 지도로 보기 →</a>
+          <a class="btn" href="#shelf">전체 책장</a>
+        </div>
+        <div class="stats" id="stats" aria-live="polite">
+          <div><b data-stat="published">–</b><span>출간된 교과서</span></div>
+          <div><b data-stat="chapters">–</b><span>챕터</span></div>
+          <div><b data-stat="simulators">–</b><span>시뮬레이터</span></div>
+          <div><b data-stat="writing">–</b><span>집필 중</span></div>
+        </div>
+      </div>
+      <div class="wafer-box">
+        <svg class="wafer" id="wafer" viewBox="0 0 400 400" role="group" aria-label="웨이퍼 맵: 다이 하나가 교과서 한 권"></svg>
+        <div class="die-info" id="die-info" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="map">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">Semiconductor Value Chain</div>
+          <h2>반도체 가치사슬 위의 교과서</h2>
+          <p>칩은 설계되고, 팹에서 만들어지고, 패키징되어, 메모리나 센서가 되고, 마침내 컴퓨터·AI·카메라 속에서 일합니다. 각 단계를 다루는 교과서를 그 자리에 놓았습니다.</p>
+        </div>
+      </div>
+      <div class="chain" id="chain"></div>
+    </div>
+  </section>
+
+  <section class="block" id="shelf">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">All Books</div>
+          <h2>전체 책장</h2>
+          <p>시리즈는 계속 늘어납니다. 분야와 상태로 걸러 보거나 주제어로 찾아보세요.</p>
+        </div>
+      </div>
+      <div class="toolbar">
+        <input class="search" id="search" type="search" placeholder="주제 검색 (예: HBM, 어텐션, EUV)" aria-label="교과서 검색">
+        <div class="filters" id="filters" role="group" aria-label="필터"></div>
+      </div>
+      <div class="grid" id="grid">
+        <noscript>
+          <ul>
+            <li><a href="https://processbook.euiyun.com/">ProcessBook · 반도체 제조 공정 교과서</a></li>
+            <li><a href="https://memorybook.euiyun.com/">MemoryBook · 메모리 반도체 교과서</a></li>
+            <li><a href="https://sensorbook.euiyun.com/">SensorBook · 이미지 센서 교과서</a></li>
+            <li><a href="https://computerbook.euiyun.com/">ComputerBook · 누구나 읽는 컴퓨터 교과서</a></li>
+            <li><a href="https://aibook.euiyun.com/">AIBook · 신경망에서 LLM까지</a></li>
+            <li><a href="https://camerabook.euiyun.com/">CameraBook · 카메라 교과서</a></li>
+          </ul>
+        </noscript>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="tools">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">Tools &amp; Data</div>
+          <h2>도구·데이터</h2>
+          <p>교과서와 함께 보면 좋은 공개 데이터베이스와 도구입니다.</p>
+        </div>
+      </div>
+      <div class="tools" id="tool-list"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© euiyun · 본문 <a href="https://creativecommons.org/licenses/by/4.0/deed.ko">CC BY 4.0</a>, 코드 MIT</p>
+    <p><a href="https://github.com/geniuskey/books">이 페이지의 소스</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
