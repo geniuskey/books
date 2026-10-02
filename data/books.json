@@ -158,6 +158,48 @@
   ],
   "books": [
     {
+      "id": "designbook",
+      "code": "DSN",
+      "title": "DesignBook",
+      "subtitle": "반도체 설계 교과서",
+      "headline": "코드에서 마스크까지",
+      "description": "Verilog 코드가 게이트, 표준 셀, 배선, 타이밍 검증을 거쳐 마스크가 되기까지. 레이아웃의 사각형 하나하나가 ProcessBook의 어떤 공정이 되는지 단면으로 확인합니다.",
+      "url": "https://designbook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/designbook",
+      "stage": "design",
+      "status": "published",
+      "color": "#6d3fd1",
+      "colorDark": "#a98bff",
+      "topics": [
+        "RTL·Verilog",
+        "논리 합성",
+        "표준 셀 레이아웃",
+        "배치·배선",
+        "타이밍·STA",
+        "DRC·LVS",
+        "OPC·마스크"
+      ],
+      "motif": "circuit",
+      "field": "semiconductor",
+      "chapters": 14,
+      "simulators": 45,
+      "level": "공대 학부",
+      "featured": [
+        {
+          "title": "표준 셀 절단선 단면",
+          "desc": "레이아웃에 절단선을 그으면 어떤 마스크·공정 단계가 되는지 보인다",
+          "link": "chapters/stdcell.html#sim-xs",
+          "image": "img/sims/designbook-sim-xs.jpg"
+        },
+        {
+          "title": "배치 알고리즘",
+          "desc": "무작위 배치에서 이차 배치·어닐링으로 배선 길이가 줄어드는 과정",
+          "link": "chapters/place.html#sim-pl",
+          "image": "img/sims/designbook-sim-pl.jpg"
+        }
+      ]
+    },
+    {
       "id": "processbook",
       "code": "PRC",
       "title": "ProcessBook",
@@ -197,6 +239,48 @@
         }
       ],
       "field": "semiconductor"
+    },
+    {
+      "id": "packagingbook",
+      "code": "PKG",
+      "title": "PackagingBook",
+      "subtitle": "반도체 패키징 교과서",
+      "headline": "웨이퍼에서 완성된 칩까지",
+      "description": "범핑, 다이싱, 와이어 본딩, 플립칩, 몰딩부터 2.5D·TSV·HBM까지. 조건을 바꾸면 접합·휨·열·수명이 어떻게 변하는지, 패키지 단면을 한 단계씩 쌓아 보며 배웁니다.",
+      "url": "https://packagingbook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/packagingbook",
+      "stage": "packaging",
+      "status": "published",
+      "color": "#0b8572",
+      "colorDark": "#3fd2b4",
+      "topics": [
+        "범핑·RDL",
+        "다이싱",
+        "와이어 본딩",
+        "플립칩·언더필",
+        "팬아웃 WLP",
+        "2.5D 인터포저",
+        "TSV·HBM"
+      ],
+      "motif": "package",
+      "field": "semiconductor",
+      "chapters": 17,
+      "simulators": 50,
+      "level": "공대 학부",
+      "featured": [
+        {
+          "title": "HBM 적층 빌더",
+          "desc": "적층 수·다이 두께·접합 방식을 바꾸며 높이 한도 720 µm 맞추기",
+          "link": "chapters/hbm.html#sim-hb",
+          "image": "img/sims/packagingbook-sim-hb.jpg"
+        },
+        {
+          "title": "2.5D 패키지 단면 비교",
+          "desc": "실리콘 인터포저·RDL·브리지, 네 가지 2.5D 구조를 한눈에",
+          "link": "chapters/interposer.html#sim-st",
+          "image": "img/sims/packagingbook-sim-st.jpg"
+        }
+      ]
     },
     {
       "id": "memorybook",
@@ -277,42 +361,6 @@
         }
       ],
       "field": "semiconductor"
-    },
-    {
-      "id": "designbook",
-      "code": "DSN",
-      "title": "DesignBook",
-      "subtitle": "반도체 설계 교과서",
-      "headline": "집필 중",
-      "description": "회로와 칩을 설계하는 과정을 다룰 예정입니다.",
-      "url": "https://designbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/designbook",
-      "stage": "design",
-      "status": "writing",
-      "color": "#be185d",
-      "colorDark": "#f472b6",
-      "topics": [],
-      "motif": "circuit",
-      "field": "semiconductor",
-      "phase": 1
-    },
-    {
-      "id": "packagingbook",
-      "code": "PKG",
-      "title": "PackagingBook",
-      "subtitle": "반도체 패키징 교과서",
-      "headline": "집필 중",
-      "description": "다이를 자르고, 잇고, 쌓는 패키징 기술을 다룰 예정입니다.",
-      "url": "https://packagingbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/packagingbook",
-      "stage": "packaging",
-      "status": "writing",
-      "color": "#a16207",
-      "colorDark": "#facc15",
-      "topics": [],
-      "motif": "package",
-      "field": "semiconductor",
-      "phase": 1
     },
     {
       "id": "devicebook",
@@ -751,17 +799,41 @@
       "code": "CAR",
       "title": "CarBook",
       "subtitle": "자동차 교과서",
-      "headline": "집필 중",
-      "description": "자동차 속 반도체와 시스템을 다룰 예정입니다.",
-      "url": "",
+      "headline": "연료 한 방울에서 스스로 달리는 차까지",
+      "description": "엔진과 변속기, 타이어와 서스펜션, 모터와 배터리, 그리고 스스로 보고 판단하는 자율주행까지. 슬라이더를 움직이고 3D 모델을 돌려 보며 자동차를 배웁니다.",
+      "url": "https://carbook.euiyun.com/",
       "repo": "https://github.com/geniuskey/carbook",
-      "status": "writing",
-      "color": "#15803d",
-      "colorDark": "#4ade80",
-      "topics": [],
+      "status": "published",
+      "color": "#dd5a16",
+      "colorDark": "#ff8a47",
+      "topics": [
+        "엔진·변속기",
+        "타이어·제동",
+        "서스펜션·조향",
+        "하이브리드·모터",
+        "배터리·BMS",
+        "ADAS·센서",
+        "자율주행"
+      ],
       "motif": "car",
       "field": "electronics",
-      "phase": 1
+      "chapters": 22,
+      "simulators": 140,
+      "level": "입문~공대 학부",
+      "featured": [
+        {
+          "title": "투시 자동차",
+          "desc": "차체를 투명하게 만들어 부품의 위치를 3D로 찾아보기",
+          "link": "chapters/overview.html#sim-xray",
+          "image": "img/sims/carbook-sim-xray.jpg"
+        },
+        {
+          "title": "2D 유동 놀이터",
+          "desc": "차 옆모습 주위로 공기가 흐르고 갈라지는 모습",
+          "link": "chapters/aero.html#sim-fl",
+          "image": "img/sims/carbook-sim-fl.jpg"
+        }
+      ]
     },
     {
       "id": "electricbook",
