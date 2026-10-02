@@ -256,7 +256,8 @@ section.block { padding: 56px 0; border-top: 1px solid var(--border); }
   .chain.cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
   .chain.cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 18px; }
   .chain.cols-6 .stage { padding: 14px 12px; }
-  .chain.cols-6 .chip { padding: 8px 9px; gap: 8px; font-size: 13.5px; }
+  .chain.cols-6 .chip { padding: 8px; gap: 7px; font-size: 12.5px; letter-spacing: -0.01em; }
+  .chain.cols-6 .chip .sq { width: 26px; height: 26px; font-size: 9px; }
 }
 .stage {
   position: relative; background: var(--bg-elev); border: 1px solid var(--border); border-radius: var(--radius);

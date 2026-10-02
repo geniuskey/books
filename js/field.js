@@ -63,7 +63,7 @@ EB.start(null, (d) => {
     EB.tint(a, b);
     a.href = EB.readUrl(b) || `#card-${b.id}`;
     if (!EB.readUrl(b)) a.dataset.jump = b.id;
-    a.innerHTML = `<span class="sq">${esc(b.code)}</span><span>${esc(b.title)}<small>${esc(EB.isPublished(b) ? b.subtitle : `${b.subtitle} · ${EB.status(b)}`)}</small></span>`;
+    a.innerHTML = `<span class="sq">${esc(b.code)}</span><span>${esc(b.title).replace(/Book$/, "<wbr>Book")}<small>${esc(EB.isPublished(b) ? b.subtitle : `${b.subtitle} · ${EB.status(b)}`)}</small></span>`;
     return a;
   }
 
