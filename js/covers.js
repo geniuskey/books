@@ -104,6 +104,17 @@
       [0, 1, 2].forEach((k) => { s += `<path class="cv-wave" style="animation-delay:${k * 0.5}s" d="M150 ${58 - k * 12} q${14 + k * 10} ${18 + k * 12} 0 ${36 + k * 24}" fill="none" stroke="${W}" stroke-width="2"/>`; });
       return svg(s);
     },
+    // 웨이퍼 맵: 가장자리 고리 모양으로 불량 다이가 몰려 있다
+    wafermap() {
+      const cx = 130, cy = 65, r = 58, p = 11; let s = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${W}" fill-opacity=".14" stroke="${W}" stroke-opacity=".6"/>`;
+      for (let i = -5; i <= 5; i++) for (let j = -5; j <= 5; j++) {
+        const x = cx + i * p, y = cy + j * p, far = Math.hypot(Math.abs(i * p) + p / 2, Math.abs(j * p) + p / 2);
+        if (far > r - 2) continue;
+        const ring = Math.hypot(i, j) > 3.6;
+        s += `<rect x="${x - 4.5}" y="${y - 4.5}" width="9" height="9" rx="1.5" fill="${ring ? "#ff6b6b" : W}" fill-opacity="${ring ? 0.9 : 0.55}"${ring ? ` class="cv-blink" style="animation-delay:${((i + j + 10) * 0.07).toFixed(2)}s"` : ""}/>`;
+      }
+      return svg(s);
+    },
     // 기본: 다이 격자
     grid() {
       let s = "";

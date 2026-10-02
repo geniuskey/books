@@ -241,6 +241,48 @@
       "field": "semiconductor"
     },
     {
+      "id": "yieldbook",
+      "code": "YLD",
+      "title": "YieldBook",
+      "subtitle": "반도체 수율 분석 교과서",
+      "headline": "수율은 왜 떨어졌는가",
+      "description": "웨이퍼와 다이, 결함 밀도와 수율 모델, 명시야·암시야·전자빔 검사, 웨이퍼 맵의 공간 패턴에서 근본 원인까지. 가상의 사건 YB-12를 따라가며 시뮬레이터와 추리 게임으로 배웁니다.",
+      "url": "https://yieldbook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/yieldbook",
+      "field": "semiconductor",
+      "stage": "process",
+      "status": "published",
+      "level": "공대 학부",
+      "chapters": 16,
+      "simulators": 50,
+      "color": "#3b5bdb",
+      "colorDark": "#8ea6ff",
+      "topics": [
+        "수율 모델",
+        "결함·임계 면적",
+        "광학·전자빔 검사",
+        "웨이퍼 맵 패턴",
+        "반복 결함·레티클",
+        "공통성 분석",
+        "수율 탐정 게임"
+      ],
+      "motif": "wafermap",
+      "featured": [
+        {
+          "title": "웨이퍼 맵 무늬 도감",
+          "desc": "가장자리 고리, 도넛, 스크래치… 무늬마다 범인이 다르다",
+          "link": "chapters/patterns.html#sim-atlas",
+          "image": "img/sims/yieldbook-sim-atlas.jpg"
+        },
+        {
+          "title": "수율 탐정: 수율 수사실",
+          "desc": "떨어진 수율의 범인을 맵과 데이터로 추리하는 게임",
+          "link": "chapters/detective.html#sim-detective",
+          "image": "img/sims/yieldbook-sim-detective.jpg"
+        }
+      ]
+    },
+    {
       "id": "packagingbook",
       "code": "PKG",
       "title": "PackagingBook",
@@ -369,14 +411,36 @@
       "subtitle": "반도체 소자 물리",
       "description": "밴드, 도핑, PN 접합, MOSFET. 모든 반도체 책의 공통 기초.",
       "field": "semiconductor",
-      "status": "planned",
+      "status": "writing",
       "phase": 1,
       "ideas": [
         "도핑 농도에 따른 페르미 준위 이동",
         "PN 접합 공핍층과 I–V 곡선",
         "MOSFET 채널이 생기는 순간"
       ],
-      "stage": "physics"
+      "stage": "physics",
+      "repo": "https://github.com/geniuskey/devicebook",
+      "url": "https://devicebook.euiyun.com/",
+      "headline": "집필 중"
+    },
+    {
+      "id": "failurebook",
+      "code": "FAL",
+      "title": "FailureBook",
+      "subtitle": "반도체 불량 분석",
+      "headline": "집필 중",
+      "description": "불량이 난 다이 하나를 열어 원인을 찾는 고장 분석(FA). YieldBook의 다음 이야기.",
+      "url": "https://failurebook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/failurebook",
+      "field": "semiconductor",
+      "stage": "process",
+      "status": "writing",
+      "phase": 1,
+      "ideas": [
+        "전기적 고장 위치 찾기(핫스팟)",
+        "디캡·단면 가공 순서",
+        "SEM·TEM 영상으로 원인 판정"
+      ]
     },
     {
       "id": "npubook",
@@ -409,22 +473,6 @@
         "SAR ADC 한 비트씩 결정하기"
       ],
       "stage": "design"
-    },
-    {
-      "id": "testbook",
-      "code": "YLD",
-      "title": "TestBook",
-      "subtitle": "테스트·수율",
-      "description": "웨이퍼 테스트, 불량 분석, 수율을 올리는 법.",
-      "field": "semiconductor",
-      "status": "planned",
-      "phase": 2,
-      "ideas": [
-        "웨이퍼 맵 불량 패턴 분류",
-        "결함 밀도와 수율 모델",
-        "테스트 시간과 원가"
-      ],
-      "stage": "packaging"
     },
     {
       "id": "powerbook",
