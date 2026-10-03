@@ -200,6 +200,49 @@
       ]
     },
     {
+      "id": "socbook",
+      "code": "SOC",
+      "title": "SoCBook",
+      "subtitle": "시스템 온 칩 교과서",
+      "headline": "손톱만 한 칩 안의 컴퓨터",
+      "description": "CPU 파이프라인, 캐시와 일관성, NoC, GPU, NPU, ISP, 전력과 열, 클럭과 보안까지. 가상의 기준 칩 SB-1의 부품 하나하나를 직접 건드리고 바꿔 보며 SoC를 배웁니다.",
+      "url": "https://socbook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/socbook",
+      "field": "semiconductor",
+      "stage": "design",
+      "status": "published",
+      "level": "공대 학부",
+      "chapters": 19,
+      "simulators": 150,
+      "color": "#c8285f",
+      "colorDark": "#ff7aa2",
+      "topics": [
+        "CPU 파이프라인",
+        "비순차 실행",
+        "캐시·일관성",
+        "NoC·AXI",
+        "GPU·NPU",
+        "ISP·미디어",
+        "전력·열",
+        "보안 부팅"
+      ],
+      "motif": "soc",
+      "featured": [
+        {
+          "title": "SB-1 다이 탐험",
+          "desc": "3 nm급 기준 칩의 CPU·GPU·NPU·캐시 블록을 하나씩 눌러 보기",
+          "link": "chapters/overview.html#sim-die",
+          "image": "img/sims/socbook-sim-die.jpg"
+        },
+        {
+          "title": "메시 NoC 패킷 시뮬레이터",
+          "desc": "칩 안의 도로망에서 패킷이 길을 찾고 막히는 모습",
+          "link": "chapters/noc.html#sim-mesh",
+          "image": "img/sims/socbook-sim-mesh.jpg"
+        }
+      ]
+    },
+    {
       "id": "processbook",
       "code": "PRC",
       "title": "ProcessBook",
