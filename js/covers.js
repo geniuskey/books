@@ -144,6 +144,25 @@
       s += `<path class="cv-flow" d="M84 44 V56 H165 V62 M89 100 V112 H150" fill="none" stroke="#000" stroke-opacity=".45" stroke-width="2" stroke-dasharray="4 6"/>`;
       return svg(s);
     },
+    // 디스플레이: RGB 서브픽셀이 켜졌다 꺼진다
+    subpixel() {
+      const C = ["#ff7a8a", "#7deaa0", "#8ab4ff"]; let s = "";
+      range(4).forEach((j) => range(6).forEach((i) => range(3).forEach((k) => {
+        const x = 62 + i * 21 + k * 6.5, y = 10 + j * 28;
+        s += `<rect class="cv-pulse" style="animation-delay:${(((i + j) % 4) * 0.3 + k * 0.1).toFixed(2)}s" x="${x}" y="${y}" width="5" height="24" rx="1.5" fill="${C[k]}" fill-opacity=".85"/>`;
+      })));
+      return svg(s);
+    },
+    // 테스트: 셔무 플롯, 전압·주파수 격자에서 통과/불량 경계
+    shmoo() {
+      let s = "";
+      range(8).forEach((j) => range(10).forEach((i) => {
+        const pass = j >= 7 - Math.floor(i * 0.7) - 1 && i > 0;
+        s += `<rect x="${64 + i * 13}" y="${10 + j * 13.5}" width="11.5" height="12" rx="1.5" fill="${pass ? "#7deaa0" : "#ff7a8a"}" fill-opacity="${pass ? 0.8 : 0.55}"/>`;
+      }));
+      s += `<rect class="cv-pulse" x="128" y="51" width="38" height="54" rx="2" fill="none" stroke="${W}" stroke-width="2"/>`;
+      return svg(s);
+    },
     // 기본: 다이 격자
     grid() {
       let s = "";
