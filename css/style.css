@@ -373,6 +373,8 @@ section.block { padding: 56px 0; border-top: 1px solid var(--border); }
 @keyframes cv-flow { to { stroke-dashoffset: -20; } }
 .cv-drop { animation: cv-drop 2.4s ease-out infinite; }
 @keyframes cv-drop { from { transform: translateY(-30px); opacity: 0; } 30% { transform: none; opacity: 1; } }
+.cv-scan-lens { animation: cv-scan 3s ease-in-out infinite; }
+@keyframes cv-scan { 0%, 100% { transform: translate(-40px, -30px); } 45%, 55% { transform: none; } }
 .cv-wave { transform-box: fill-box; transform-origin: left center; animation: cv-wave 1.5s ease-out infinite; }
 @keyframes cv-wave { from { opacity: 0; transform: scale(.6); } 40% { opacity: 1; } to { opacity: 0; transform: scale(1.2); } }
 @media (prefers-reduced-motion: reduce) { .cover-art * { animation: none !important; } .cover-art { transition: none; } }

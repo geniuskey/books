@@ -241,6 +241,49 @@
       "field": "semiconductor"
     },
     {
+      "id": "lithobook",
+      "code": "LIT",
+      "title": "LithoBook",
+      "subtitle": "반도체 노광 교과서",
+      "headline": "빛으로 회로를 새긴다",
+      "description": "회절과 해상도, 마스크와 OPC, 레지스트, 공정 윈도, 오버레이, EUV, 멀티 패터닝까지. 가상의 패턴 LB-28을 레이아웃에서 식각 전사까지 일곱 단계로 옮기며 파장·NA·초점·노광량을 직접 바꿔 봅니다.",
+      "url": "https://lithobook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/lithobook",
+      "field": "semiconductor",
+      "stage": "process",
+      "status": "published",
+      "level": "공대 학부",
+      "chapters": 19,
+      "simulators": 150,
+      "color": "#6741d9",
+      "colorDark": "#b9a2ff",
+      "topics": [
+        "회절·해상도",
+        "조명·초점",
+        "마스크·OPC",
+        "레지스트·현상",
+        "공정 윈도",
+        "오버레이",
+        "EUV·확률적 결함",
+        "멀티 패터닝"
+      ],
+      "motif": "litho",
+      "featured": [
+        {
+          "title": "LB-28을 광자로 찍기",
+          "desc": "같은 노광량에서도 광자 개수가 선의 가장자리를 흔든다",
+          "link": "chapters/stochastic.html#sim-print",
+          "image": "img/sims/lithobook-sim-print.jpg"
+        },
+        {
+          "title": "일곱 단계 파이프라인",
+          "desc": "레이아웃 → OPC → 마스크 → 노광 → 레지스트 → 현상 → 식각 전사",
+          "link": "chapters/overview.html#sim-pipe",
+          "image": "img/sims/lithobook-sim-pipe.jpg"
+        }
+      ]
+    },
+    {
       "id": "yieldbook",
       "code": "YLD",
       "title": "YieldBook",
@@ -279,6 +322,48 @@
           "desc": "떨어진 수율의 범인을 맵과 데이터로 추리하는 게임",
           "link": "chapters/detective.html#sim-detective",
           "image": "img/sims/yieldbook-sim-detective.jpg"
+        }
+      ]
+    },
+    {
+      "id": "failurebook",
+      "code": "FAL",
+      "title": "FailureBook",
+      "subtitle": "반도체 불량 분석 교과서",
+      "headline": "불량 칩에서 범인까지",
+      "description": "불량 발생, 전기적 검출, 위치 추적, 층 제거, SEM·TEM·EDS, 근본 원인까지. 가상의 사건 FB-28을 따라가며 각 분석 기법이 무엇을 보여 주고 무엇을 놓치는지 시뮬레이터로 확인합니다.",
+      "url": "https://failurebook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/failurebook",
+      "field": "semiconductor",
+      "stage": "process",
+      "status": "published",
+      "level": "공대 학부",
+      "chapters": 16,
+      "simulators": 50,
+      "color": "#6b46d6",
+      "colorDark": "#a78bfa",
+      "topics": [
+        "고장 메커니즘",
+        "스캔 진단·비트맵",
+        "에미션·OBIRCH",
+        "디프로세싱",
+        "FIB·SEM·TEM",
+        "EDS·SIMS",
+        "근본 원인·8D"
+      ],
+      "motif": "probe",
+      "featured": [
+        {
+          "title": "에미션 현미경",
+          "desc": "후면에서 빛나는 한 점, 무엇이 빛나고 무엇이 숨는가",
+          "link": "chapters/emission.html#sim-pem",
+          "image": "img/sims/failurebook-sim-pem.jpg"
+        },
+        {
+          "title": "용의자 대면",
+          "desc": "공정 결함마다 다른 단면과 전기적 증상 맞춰 보기",
+          "link": "chapters/mechanisms.html#sim-lineup",
+          "image": "img/sims/failurebook-sim-lineup.jpg"
         }
       ]
     },
@@ -422,25 +507,6 @@
       "repo": "https://github.com/geniuskey/devicebook",
       "url": "https://devicebook.euiyun.com/",
       "headline": "집필 중"
-    },
-    {
-      "id": "failurebook",
-      "code": "FAL",
-      "title": "FailureBook",
-      "subtitle": "반도체 불량 분석",
-      "headline": "집필 중",
-      "description": "불량이 난 다이 하나를 열어 원인을 찾는 고장 분석(FA). YieldBook의 다음 이야기.",
-      "url": "https://failurebook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/failurebook",
-      "field": "semiconductor",
-      "stage": "process",
-      "status": "writing",
-      "phase": 1,
-      "ideas": [
-        "전기적 고장 위치 찾기(핫스팟)",
-        "디캡·단면 가공 순서",
-        "SEM·TEM 영상으로 원인 판정"
-      ]
     },
     {
       "id": "npubook",
