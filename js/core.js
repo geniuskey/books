@@ -78,7 +78,7 @@
   EB.footer = () => {
     const f = document.createElement("footer");
     f.innerHTML = `<div class="wrap">
-      <p>© euiyun · 본문 <a href="https://creativecommons.org/licenses/by/4.0/deed.ko">CC BY 4.0</a>, 코드 MIT</p>
+      <p>© euiyun · 본문 <a href="https://creativecommons.org/licenses/by/4.0/deed.ko">CC BY 4.0</a>, 코드 <a href="https://github.com/geniuskey/books/blob/main/LICENSE.md">MIT</a></p>
       <p class="links"><a href="index.html">홈</a><a href="library.html">전체 책장</a><a href="roadmap.html">로드맵</a><a href="https://github.com/geniuskey/books">이 사이트의 소스</a></p>
     </div>`;
     document.body.appendChild(f);
