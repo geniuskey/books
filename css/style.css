@@ -577,3 +577,25 @@ footer .links { display: flex; flex-wrap: wrap; gap: 6px 16px; }
 footer { border-top: 1px solid var(--border); padding: 32px 0 48px; color: var(--text-dim); font-size: 14px; }
 footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: space-between; }
 footer p { margin: 0; }
+
+/* 실험 탐색과 문제별 학습 경로 */
+[hidden] { display: none !important; }
+.discovery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 20px; }
+.experiment, .learning-path, .entry-card { border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-elev); overflow: hidden; }
+.experiment img { display: block; width: 100%; height: auto; aspect-ratio: 16/10; object-fit: cover; object-position: top; border-bottom: 1px solid var(--border); }
+.experiment .body, .learning-path, .entry-card { padding: 22px; }
+.experiment h2, .entry-card h2 { font-size: 21px; margin: 8px 0; }
+.experiment p, .learning-path p, .entry-card p { color: var(--text-dim); }
+.experiment .tags { margin: 16px 0; }
+.experiment .tags a { font-size: 13px; background: var(--surface); padding: 4px 8px; border-radius: 6px; }
+.experiment .source { font-size: 13px; color: var(--text-dim); }
+.learning-path { margin-bottom: 24px; scroll-margin-top: 100px; }
+.learning-path h2 { margin-top: 0; }
+.learning-path li { padding: 10px 0; }
+.learning-path li p { margin: 4px 0; }
+.learning-path .challenge { padding: 16px; background: var(--surface); border-radius: var(--radius-sm); }
+.search-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.search-choice { display: flex; align-items: center; gap: 8px; }
+.search-row select { padding: 10px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-elev); color: var(--text); font: inherit; max-width: 100%; }
+.discovery-intro { padding: 24px 0; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }

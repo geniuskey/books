@@ -1,0 +1,789 @@
+{
+  "schemaVersion": 1,
+  "experiments": [
+    {
+      "id": "devicebook/sim-join",
+      "bookId": "devicebook",
+      "title": "pn 접합이 만들어지는 순간",
+      "description": "p와 n을 붙이면 확산 → 이온 노출 → 전기장 → 밴드 휨",
+      "url": "https://devicebook.euiyun.com/chapters/pn.html#sim-join",
+      "image": "img/sims/devicebook-sim-join.jpg",
+      "question": "접합을 만들면 전하 이동과 전기장은 어떤 순서로 생길까요?",
+      "concepts": [
+        "device"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "devicebook/sim-lattice",
+      "bookId": "devicebook",
+      "title": "다이아몬드 격자와 결정면",
+      "description": "실리콘 결정을 3D로 돌리고 밀러 지수 면을 잘라 보기",
+      "url": "https://devicebook.euiyun.com/chapters/crystal.html#sim-lattice",
+      "image": "img/sims/devicebook-sim-lattice.jpg",
+      "question": "같은 결정도 자르는 면에 따라 어떻게 달라 보일까요?",
+      "concepts": [
+        "device",
+        "structure"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "designbook/sim-xs",
+      "bookId": "designbook",
+      "title": "표준 셀 절단선 단면",
+      "description": "레이아웃에 절단선을 그으면 어떤 마스크·공정 단계가 되는지 보인다",
+      "url": "https://designbook.euiyun.com/chapters/stdcell.html#sim-xs",
+      "image": "img/sims/designbook-sim-xs.jpg",
+      "question": "평면 레이아웃의 선은 단면에서 어떤 구조가 될까요?",
+      "concepts": [
+        "design",
+        "structure",
+        "process"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "designbook/sim-pl",
+      "bookId": "designbook",
+      "title": "배치 알고리즘",
+      "description": "무작위 배치에서 이차 배치·어닐링으로 배선 길이가 줄어드는 과정",
+      "url": "https://designbook.euiyun.com/chapters/place.html#sim-pl",
+      "image": "img/sims/designbook-sim-pl.jpg",
+      "question": "셀 배치를 바꾸면 배선 길이가 어떻게 달라질까요?",
+      "concepts": [
+        "design",
+        "systems"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "socbook/sim-die",
+      "bookId": "socbook",
+      "title": "SB-1 다이 탐험",
+      "description": "3 nm급 기준 칩의 CPU·GPU·NPU·캐시 블록을 하나씩 눌러 보기",
+      "url": "https://socbook.euiyun.com/chapters/overview.html#sim-die",
+      "image": "img/sims/socbook-sim-die.jpg",
+      "question": "CPU와 GPU, 캐시는 칩 안에서 어떻게 연결될까요?",
+      "concepts": [
+        "computing",
+        "structure"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "socbook/sim-mesh",
+      "bookId": "socbook",
+      "title": "메시 NoC 패킷 시뮬레이터",
+      "description": "칩 안의 도로망에서 패킷이 길을 찾고 막히는 모습",
+      "url": "https://socbook.euiyun.com/chapters/noc.html#sim-mesh",
+      "image": "img/sims/socbook-sim-mesh.jpg",
+      "question": "패킷이 같은 길에 몰리면 어디서 병목이 생길까요?",
+      "concepts": [
+        "systems",
+        "computing"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "processbook/sim-3d",
+      "bookId": "processbook",
+      "title": "트랜지스터 구조 비교",
+      "description": "평면 MOSFET → FinFET → GAA 나노시트를 3D로 돌려 보기",
+      "url": "https://processbook.euiyun.com/chapters/advanced.html#sim-3d",
+      "image": "img/sims/processbook-sim-3d.jpg",
+      "question": "게이트가 채널을 감싸는 방식은 어떻게 달라질까요?",
+      "concepts": [
+        "device",
+        "structure"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "processbook/sim-etch",
+      "bookId": "processbook",
+      "title": "트렌치 식각 프로파일",
+      "description": "압력·바이어스를 바꾸면 트렌치 벽이 휘고 무너진다",
+      "url": "https://processbook.euiyun.com/chapters/etch.html#sim-etch",
+      "image": "img/sims/processbook-sim-etch.jpg",
+      "question": "압력과 바이어스를 바꾸면 식각 옆벽은 어떻게 변할까요?",
+      "concepts": [
+        "process",
+        "structure"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "lithobook/sim-print",
+      "bookId": "lithobook",
+      "title": "LB-28을 광자로 찍기",
+      "description": "같은 노광량에서도 광자 개수가 선의 가장자리를 흔든다",
+      "url": "https://lithobook.euiyun.com/chapters/stochastic.html#sim-print",
+      "image": "img/sims/lithobook-sim-print.jpg",
+      "question": "같은 노광량인데 왜 매번 다른 패턴이 나올까요?",
+      "concepts": [
+        "lithography",
+        "variation",
+        "failure"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "lithobook/sim-pipe",
+      "bookId": "lithobook",
+      "title": "일곱 단계 파이프라인",
+      "description": "레이아웃 → OPC → 마스크 → 노광 → 레지스트 → 현상 → 식각 전사",
+      "url": "https://lithobook.euiyun.com/chapters/overview.html#sim-pipe",
+      "image": "img/sims/lithobook-sim-pipe.jpg",
+      "question": "설계한 패턴은 공정을 거치며 어떻게 달라질까요?",
+      "concepts": [
+        "lithography",
+        "process",
+        "design"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "yieldbook/sim-atlas",
+      "bookId": "yieldbook",
+      "title": "웨이퍼 맵 무늬 도감",
+      "description": "가장자리 고리, 도넛, 스크래치… 무늬마다 범인이 다르다",
+      "url": "https://yieldbook.euiyun.com/chapters/patterns.html#sim-atlas",
+      "image": "img/sims/yieldbook-sim-atlas.jpg",
+      "question": "웨이퍼 무늬만으로 어떤 원인을 의심할 수 있을까요?",
+      "concepts": [
+        "yield",
+        "failure"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "yieldbook/sim-detective",
+      "bookId": "yieldbook",
+      "title": "수율 탐정: 수율 수사실",
+      "description": "떨어진 수율의 범인을 맵과 데이터로 추리하는 게임",
+      "url": "https://yieldbook.euiyun.com/chapters/detective.html#sim-detective",
+      "image": "img/sims/yieldbook-sim-detective.jpg",
+      "question": "수율 저하의 원인을 좁히려면 어떤 증거가 필요할까요?",
+      "concepts": [
+        "yield",
+        "failure",
+        "variation"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "failurebook/sim-pem",
+      "bookId": "failurebook",
+      "title": "에미션 현미경",
+      "description": "후면에서 빛나는 한 점, 무엇이 빛나고 무엇이 숨는가",
+      "url": "https://failurebook.euiyun.com/chapters/emission.html#sim-pem",
+      "image": "img/sims/failurebook-sim-pem.jpg",
+      "question": "빛나는 결함과 보이지 않는 결함은 어떻게 다를까요?",
+      "concepts": [
+        "failure",
+        "imaging"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "failurebook/sim-lineup",
+      "bookId": "failurebook",
+      "title": "용의자 대면",
+      "description": "공정 결함마다 다른 단면과 전기적 증상 맞춰 보기",
+      "url": "https://failurebook.euiyun.com/chapters/mechanisms.html#sim-lineup",
+      "image": "img/sims/failurebook-sim-lineup.jpg",
+      "question": "같은 전기적 증상에 다른 공정 원인이 있을까요?",
+      "concepts": [
+        "failure",
+        "process"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "packagingbook/sim-hb",
+      "bookId": "packagingbook",
+      "title": "HBM 적층 빌더",
+      "description": "적층 수·다이 두께·접합 방식을 바꾸며 높이 한도 720 µm 맞추기",
+      "url": "https://packagingbook.euiyun.com/chapters/hbm.html#sim-hb",
+      "image": "img/sims/packagingbook-sim-hb.jpg",
+      "question": "높이 제한 안에서 HBM을 더 쌓으려면 무엇을 바꿔야 할까요?",
+      "concepts": [
+        "packaging",
+        "structure",
+        "memory"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "packagingbook/sim-st",
+      "bookId": "packagingbook",
+      "title": "2.5D 패키지 단면 비교",
+      "description": "실리콘 인터포저·RDL·브리지, 네 가지 2.5D 구조를 한눈에",
+      "url": "https://packagingbook.euiyun.com/chapters/interposer.html#sim-st",
+      "image": "img/sims/packagingbook-sim-st.jpg",
+      "question": "인터포저와 브리지는 연결 구조가 어떻게 다를까요?",
+      "concepts": [
+        "packaging",
+        "structure"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "testbook/sim-pc3",
+      "bookId": "testbook",
+      "title": "수직형 프로브 카드",
+      "description": "수천 개 바늘이 웨이퍼 패드에 닿는 구조를 3D로 둘러보기",
+      "url": "https://testbook.euiyun.com/chapters/interface.html#sim-pc3",
+      "image": "img/sims/testbook-sim-pc3.jpg",
+      "question": "수천 개의 프로브는 웨이퍼와 어떻게 접촉할까요?",
+      "concepts": [
+        "test",
+        "structure"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "testbook/sim-sh",
+      "bookId": "testbook",
+      "title": "셔무 플롯 생성기",
+      "description": "전압과 주파수를 훑어 칩이 통과하는 경계를 직접 찾기",
+      "url": "https://testbook.euiyun.com/chapters/limits.html#sim-sh",
+      "image": "img/sims/testbook-sim-sh.jpg",
+      "question": "전압과 주파수를 함께 바꾸면 통과 경계가 어떻게 보일까요?",
+      "concepts": [
+        "test",
+        "device"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "memorybook/sim-h3",
+      "bookId": "memorybook",
+      "title": "2.5D HBM 패키지 분해 모델",
+      "description": "DRAM 다이 8단, TSV, 인터포저를 한 겹씩 뜯어 보기",
+      "url": "https://memorybook.euiyun.com/chapters/hbm.html#sim-h3",
+      "image": "img/sims/memorybook-sim-h3.jpg",
+      "question": "HBM의 다이와 TSV, 인터포저는 어떻게 연결될까요?",
+      "concepts": [
+        "memory",
+        "packaging",
+        "structure"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "memorybook/sim-vn3d",
+      "bookId": "memorybook",
+      "title": "3D V-NAND 블록 모델",
+      "description": "채널 홀과 계단 구조가 수백 단으로 쌓이는 모습",
+      "url": "https://memorybook.euiyun.com/chapters/vnand.html#sim-vn3d",
+      "image": "img/sims/memorybook-sim-vn3d.jpg",
+      "question": "수직 채널과 계단은 메모리 층들을 어떻게 연결할까요?",
+      "concepts": [
+        "memory",
+        "structure"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "sensorbook/sim-p3",
+      "bookId": "sensorbook",
+      "title": "베이어 픽셀 어레이 단면",
+      "description": "마이크로렌즈부터 포토다이오드·배선까지 3D 단면",
+      "url": "https://sensorbook.euiyun.com/chapters/pixel.html#sim-p3",
+      "image": "img/sims/sensorbook-sim-p3.jpg",
+      "question": "빛은 픽셀의 어떤 층을 지나 전하로 바뀔까요?",
+      "concepts": [
+        "imaging",
+        "device",
+        "structure"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "sensorbook/sim-dm",
+      "bookId": "sensorbook",
+      "title": "디모자이킹 비교",
+      "description": "지퍼·위색·모아레가 생기는 순간을 돋보기로",
+      "url": "https://sensorbook.euiyun.com/chapters/color.html#sim-dm",
+      "image": "img/sims/sensorbook-sim-dm.jpg",
+      "question": "없는 색을 추정하면 왜 가짜 무늬가 생길까요?",
+      "concepts": [
+        "imaging",
+        "color"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "displaybook/sim-st3d",
+      "bookId": "displaybook",
+      "title": "OLED 서브픽셀 적층 분해",
+      "description": "반사 양극부터 박막 봉지까지, 나노미터 층을 3D로 펼쳐 보기",
+      "url": "https://displaybook.euiyun.com/chapters/oled.html#sim-st3d",
+      "image": "img/sims/displaybook-sim-st3d.jpg",
+      "question": "OLED의 각 층은 어떤 순서로 쌓일까요?",
+      "concepts": [
+        "structure",
+        "device"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "displaybook/sim-gamut",
+      "bookId": "displaybook",
+      "title": "색역 삼각형 드래그",
+      "description": "원색을 끌어 sRGB·DCI-P3·BT.2020 커버리지 비교",
+      "url": "https://displaybook.euiyun.com/chapters/color.html#sim-gamut",
+      "image": "img/sims/displaybook-sim-gamut.jpg",
+      "question": "원색의 위치를 바꾸면 표현할 수 있는 색은 어떻게 달라질까요?",
+      "concepts": [
+        "color"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "computerbook/sim-toy",
+      "bookId": "computerbook",
+      "title": "장난감 CPU",
+      "description": "어셈블리를 직접 짜서 한 사이클씩 돌려 보기",
+      "url": "https://computerbook.euiyun.com/chapters/cpu.html#sim-toy",
+      "image": "img/sims/computerbook-sim-toy.jpg",
+      "question": "명령 하나는 CPU 안에서 어떤 단계로 실행될까요?",
+      "concepts": [
+        "computing",
+        "systems"
+      ],
+      "level": "입문",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "computerbook/sim-add",
+      "bookId": "computerbook",
+      "title": "4비트 덧셈기",
+      "description": "올림수가 번져 가는 모습을 게이트 단위로",
+      "url": "https://computerbook.euiyun.com/chapters/logic.html#sim-add",
+      "image": "img/sims/computerbook-sim-add.jpg",
+      "question": "덧셈의 올림수는 논리 게이트를 어떻게 통과할까요?",
+      "concepts": [
+        "computing",
+        "design"
+      ],
+      "level": "입문",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "aibook/sim-editor",
+      "bookId": "aibook",
+      "title": "어텐션 행렬 직접 편집기",
+      "description": "점수를 끌어 바꾸면 문장의 해석이 달라진다",
+      "url": "https://aibook.euiyun.com/chapters/attention.html#sim-editor",
+      "image": "img/sims/aibook-sim-editor.jpg",
+      "question": "어텐션 점수를 바꾸면 어떤 정보가 더 섞일까요?",
+      "concepts": [
+        "ai"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "aibook/sim-space",
+      "bookId": "aibook",
+      "title": "임베딩 공간 탐색기",
+      "description": "단어들이 모여 사는 3D 의미 공간을 돌려 보기",
+      "url": "https://aibook.euiyun.com/chapters/embedding.html#sim-space",
+      "image": "img/sims/aibook-sim-space.jpg",
+      "question": "의미가 비슷한 단어는 공간에서 어떻게 배치될까요?",
+      "concepts": [
+        "ai"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "carbook/sim-xray",
+      "bookId": "carbook",
+      "title": "투시 자동차",
+      "description": "차체를 투명하게 만들어 부품의 위치를 3D로 찾아보기",
+      "url": "https://carbook.euiyun.com/chapters/overview.html#sim-xray",
+      "image": "img/sims/carbook-sim-xray.jpg",
+      "question": "차체 안의 주요 부품은 어디에 배치될까요?",
+      "concepts": [
+        "mechanics",
+        "structure"
+      ],
+      "level": "입문~공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "carbook/sim-fl",
+      "bookId": "carbook",
+      "title": "2D 유동 놀이터",
+      "description": "차 옆모습 주위로 공기가 흐르고 갈라지는 모습",
+      "url": "https://carbook.euiyun.com/chapters/aero.html#sim-fl",
+      "image": "img/sims/carbook-sim-fl.jpg",
+      "question": "차체 형상을 따라 흐름이 어디에서 갈라질까요?",
+      "concepts": [
+        "mechanics"
+      ],
+      "level": "입문~공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "phonebook/sim-explode",
+      "bookId": "phonebook",
+      "title": "스마트폰 분해 뷰어",
+      "description": "유리부터 배터리·보드·카메라까지 부품을 눌러 가며 한 겹씩 펼치기",
+      "url": "https://phonebook.euiyun.com/chapters/anatomy.html#sim-explode",
+      "image": "img/sims/phonebook-sim-explode.jpg",
+      "question": "얇은 스마트폰 안에서 부품들은 어떻게 배치될까요?",
+      "concepts": [
+        "structure",
+        "systems"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "phonebook/sim-mod",
+      "bookId": "phonebook",
+      "title": "카메라 모듈 분해",
+      "description": "렌즈·VCM·OIS·이미지 센서가 몇 mm 안에 쌓이는 방식",
+      "url": "https://phonebook.euiyun.com/chapters/camera.html#sim-mod",
+      "image": "img/sims/phonebook-sim-mod.jpg",
+      "question": "초점과 손떨림 보정 부품은 어디에서 움직일까요?",
+      "concepts": [
+        "imaging",
+        "optics",
+        "structure"
+      ],
+      "level": "공대 학부",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "camerabook/sim-bokeh",
+      "bookId": "camerabook",
+      "title": "빛망울 모양 실험실",
+      "description": "조리개 날개 수와 F값이 빛망울을 바꾼다",
+      "url": "https://camerabook.euiyun.com/chapters/aperture.html#sim-bokeh",
+      "image": "img/sims/camerabook-sim-bokeh.jpg",
+      "question": "조리개 모양을 바꾸면 빛망울이 어떻게 달라질까요?",
+      "concepts": [
+        "optics",
+        "imaging"
+      ],
+      "level": "입문",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "camerabook/sim-rolling",
+      "bookId": "camerabook",
+      "title": "프로펠러와 롤링 셔터",
+      "description": "프로펠러가 휘어 찍히는 이유를 직접 재현",
+      "url": "https://camerabook.euiyun.com/chapters/shutter.html#sim-rolling",
+      "image": "img/sims/camerabook-sim-rolling.jpg",
+      "question": "회전하는 물체가 사진에서는 왜 휘어 보일까요?",
+      "concepts": [
+        "imaging",
+        "variation"
+      ],
+      "level": "입문",
+      "reviewStatus": "unreviewed"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "device",
+      "label": "반도체 소자",
+      "aliases": [
+        "semiconductor",
+        "MOSFET",
+        "pn junction"
+      ]
+    },
+    {
+      "id": "structure",
+      "label": "구조와 단면",
+      "aliases": [
+        "structure",
+        "3D",
+        "적층"
+      ]
+    },
+    {
+      "id": "design",
+      "label": "설계와 배치",
+      "aliases": [
+        "placement",
+        "layout",
+        "배선"
+      ]
+    },
+    {
+      "id": "systems",
+      "label": "시스템과 병목",
+      "aliases": [
+        "NoC",
+        "network",
+        "latency",
+        "대기"
+      ]
+    },
+    {
+      "id": "process",
+      "label": "공정",
+      "aliases": [
+        "process",
+        "식각",
+        "etch"
+      ]
+    },
+    {
+      "id": "lithography",
+      "label": "노광",
+      "aliases": [
+        "lithography",
+        "EUV",
+        "광자"
+      ]
+    },
+    {
+      "id": "variation",
+      "label": "변동과 확률",
+      "aliases": [
+        "variation",
+        "stochastic",
+        "statistics",
+        "통계"
+      ]
+    },
+    {
+      "id": "yield",
+      "label": "수율",
+      "aliases": [
+        "yield",
+        "wafer",
+        "웨이퍼"
+      ]
+    },
+    {
+      "id": "failure",
+      "label": "불량 분석",
+      "aliases": [
+        "failure",
+        "defect",
+        "결함"
+      ]
+    },
+    {
+      "id": "packaging",
+      "label": "패키징",
+      "aliases": [
+        "packaging",
+        "HBM",
+        "bonding",
+        "본딩"
+      ]
+    },
+    {
+      "id": "test",
+      "label": "검사와 테스트",
+      "aliases": [
+        "test",
+        "probe",
+        "shmoo",
+        "셔무"
+      ]
+    },
+    {
+      "id": "memory",
+      "label": "메모리",
+      "aliases": [
+        "memory",
+        "NAND",
+        "DRAM"
+      ]
+    },
+    {
+      "id": "imaging",
+      "label": "영상과 센서",
+      "aliases": [
+        "imaging",
+        "sensor",
+        "camera",
+        "카메라"
+      ]
+    },
+    {
+      "id": "color",
+      "label": "색과 재구성",
+      "aliases": [
+        "color",
+        "demosaicing",
+        "색역"
+      ]
+    },
+    {
+      "id": "computing",
+      "label": "컴퓨터 구조",
+      "aliases": [
+        "CPU",
+        "computer",
+        "logic",
+        "논리"
+      ]
+    },
+    {
+      "id": "ai",
+      "label": "AI와 표현",
+      "aliases": [
+        "AI",
+        "embedding",
+        "attention",
+        "임베딩",
+        "어텐션"
+      ]
+    },
+    {
+      "id": "mechanics",
+      "label": "기계와 유동",
+      "aliases": [
+        "mechanics",
+        "fluid",
+        "자동차"
+      ]
+    },
+    {
+      "id": "optics",
+      "label": "광학",
+      "aliases": [
+        "optics",
+        "lens",
+        "렌즈",
+        "조리개"
+      ]
+    }
+  ],
+  "paths": [
+    {
+      "id": "yield-investigation",
+      "title": "수율이 떨어졌는데 어디부터 조사할까?",
+      "description": "공간 패턴에서 가설을 세우고, 우연과 원인을 구분한 뒤 증거로 판단합니다.",
+      "prerequisites": "웨이퍼와 다이의 의미를 알고 있으면 시작할 수 있습니다.",
+      "query": "수율",
+      "steps": [
+        {
+          "bookId": "yieldbook",
+          "link": "chapters/patterns.html#sim-atlas",
+          "title": "무늬에서 가설 세우기",
+          "task": "패턴마다 가능한 원인과 추가로 필요한 증거를 하나씩 적어 보세요."
+        },
+        {
+          "bookId": "yieldbook",
+          "link": "chapters/statistics.html#sim-fa",
+          "title": "무늬와 우연 구분하기",
+          "task": "무작위 데이터에서도 보이는 무늬를 관찰하고 첫 가설을 다시 점검하세요."
+        },
+        {
+          "bookId": "failurebook",
+          "link": "chapters/mechanisms.html#sim-lineup",
+          "title": "증상과 물리적 원인 연결하기",
+          "task": "전기적 증상에 맞는 결함 단면을 비교하세요."
+        },
+        {
+          "bookId": "yieldbook",
+          "link": "chapters/detective.html#sim-detective",
+          "title": "수율 수사실에서 판단하기",
+          "task": "맵과 데이터를 함께 사용해 원인을 좁히세요."
+        }
+      ],
+      "challenge": "비슷한 웨이퍼 무늬가 나와도 원인을 바로 단정할 수 없는 이유와 다음 검사 한 가지를 설명해 보세요."
+    },
+    {
+      "id": "defect-evaluation",
+      "title": "불량 분류 모델을 어떻게 평가할까?",
+      "description": "검사에서 얻는 표본과 분류 결과, 학습 데이터 밖의 성능을 함께 봅니다.",
+      "prerequisites": "불량 검출과 불량 유형 분류가 다른 작업임을 구분해 보세요.",
+      "query": "불량",
+      "steps": [
+        {
+          "bookId": "yieldbook",
+          "link": "chapters/classify.html#sim-sp",
+          "title": "리뷰할 표본 선택하기",
+          "task": "샘플링 방식에 따라 어떤 결함을 놓칠 수 있는지 예상하세요."
+        },
+        {
+          "bookId": "yieldbook",
+          "link": "chapters/classify.html#sim-ad",
+          "title": "자동 결함 분류 살펴보기",
+          "task": "어떤 유형끼리 혼동되는지 관찰하고 전체 점수와 비교하세요."
+        },
+        {
+          "bookId": "aibook",
+          "link": "chapters/training.html#sim-tr-poly",
+          "title": "과적합과 일반화 실험하기",
+          "task": "모델 복잡도를 바꾸면서 학습 데이터와 검증 데이터의 차이를 관찰하세요."
+        }
+      ],
+      "challenge": "학습 성능이 좋아졌다는 이유만으로 분류 모델을 교체하면 안 되는 이유를 표본과 일반화 관점에서 설명해 보세요."
+    },
+    {
+      "id": "technical-search",
+      "title": "기술 문서 검색은 왜 근거를 놓칠까?",
+      "description": "문서를 나누는 방식부터 검색과 평가까지, 작은 문서함으로 실패 원인을 추적합니다.",
+      "prerequisites": "벡터 유사도가 낯설다면 AIBook의 임베딩 공간 실험부터 살펴보세요.",
+      "query": "임베딩",
+      "steps": [
+        {
+          "bookId": "aibook",
+          "link": "chapters/embedding.html#sim-space",
+          "title": "의미 공간 이해하기",
+          "task": "단어의 가까움이 검색에서 무엇을 뜻하는지 생각해 보세요."
+        },
+        {
+          "bookId": "aibook",
+          "link": "chapters/rag.html#sim-chunk",
+          "title": "청킹 경계 비교하기",
+          "task": "같은 질문에 필요한 근거가 청크 경계에서 나뉘는지 확인하세요."
+        },
+        {
+          "bookId": "aibook",
+          "link": "chapters/rag.html#sim-hybrid",
+          "title": "키워드와 벡터 검색 비교하기",
+          "task": "고유 용어가 있는 질문과 의미 중심 질문의 검색 결과를 비교하세요."
+        },
+        {
+          "bookId": "aibook",
+          "link": "chapters/rag.html#sim-eval",
+          "title": "검색과 답변의 실패 구분하기",
+          "task": "근거를 못 찾은 경우와 근거를 잘못 사용한 경우를 나눠 보세요."
+        }
+      ],
+      "challenge": "답변이 틀렸을 때 청킹·검색·생성 중 어디부터 조사할지, 확인할 증거와 함께 설명해 보세요."
+    }
+  ]
+}

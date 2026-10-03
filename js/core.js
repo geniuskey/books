@@ -46,10 +46,9 @@
 
   /* ---------- 머리말·꼬리말 ---------- */
   const NAV = [
-    { href: "index.html#work", label: "일하는 지식", key: "work" },
-    { href: "index.html#life", label: "살아가는 지식", key: "life" },
-    { href: "library.html", label: "전체 책장", key: "library" },
-    { href: "roadmap.html", label: "로드맵", key: "roadmap" },
+    { href: "library.html", label: "교과서 찾기", key: "library" },
+    { href: "simulators.html", label: "실험 찾기", key: "simulators" },
+    { href: "paths.html", label: "문제로 시작하기", key: "paths" },
   ];
   EB.header = (active) => {
     const h = document.createElement("header");

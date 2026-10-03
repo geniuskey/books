@@ -1,11 +1,11 @@
-/* 홈: 전체 웨이퍼, 두 갈래와 분야 카드, 대표 시뮬레이터, 다음 차례, 저자 노트, 도구 */
+/* 홈: 전체 웨이퍼, 두 갈래와 분야 카드, 대표 시뮬레이터, 저자 노트, 도구 */
 EB.start("home", (d) => {
   "use strict";
   const { $, esc } = EB;
 
   // 통계
   const c = EB.counts(d.books);
-  const vals = { published: c.published, writing: c.writing, planned: c.planned, fields: d.fields.length };
+  const vals = { published: c.published, writing: c.writing, planned: c.planned, fields: d.fields.length, experiments: d.books.filter(EB.isPublished).reduce((n, b) => n + (b.featured || []).length, 0) };
   EB.$$("[data-stat]").forEach((el) => { el.textContent = vals[el.dataset.stat]; });
 
   // 전체 웨이퍼: 분야마다 부채꼴 하나
@@ -29,8 +29,7 @@ EB.start("home", (d) => {
           <div class="fc-en">${esc(f.en)}</div>
           <h3>${esc(f.name)}</h3>
           <p>${esc(f.desc)}</p>
-          ${EB.progress(f.books)}
-          <div class="fc-count"><span>출간 <b>${k.published}</b></span><span>집필 중 <b>${k.writing}</b></span><span>예정 <b>${k.planned}</b></span><span class="go">분야 보기 →</span></div>
+          <div class="fc-count"><span>출간 <b>${k.published}</b></span><span class="go">분야 보기 →</span></div>
         </div>`;
       box.appendChild(a);
     });
@@ -65,18 +64,6 @@ EB.start("home", (d) => {
   } else {
     $("#play").hidden = true;
   }
-
-  // 다음 차례: 1단계 책 미리보기
-  const next = d.books.filter((b) => !EB.isPublished(b) && b.phase === 1);
-  const nb = $("#next-list");
-  next.forEach((b) => {
-    const a = document.createElement("a");
-    a.className = "chip " + b.status;
-    EB.tint(a, b);
-    a.href = `${EB.fieldUrl(b.field)}#card-${b.id}`;
-    a.innerHTML = `<span class="sq">${esc(b.code)}</span><span>${esc(b.subtitle)}<small>${esc(b.fieldObj.name)} · ${esc(EB.status(b))}</small></span>`;
-    nb.appendChild(a);
-  });
 
   // 만든 사람
   const au = d.author;

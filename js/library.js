@@ -22,7 +22,7 @@ EB.start("library", (d) => {
   });
 
   // 필터: 갈래 / 분야 / 상태 (각각 하나씩 고르기)
-  const state = { wing: "all", field: "all", status: "all" };
+  const state = { wing: "all", field: "all", status: "published" };
   const groups = {
     wing: [{ v: "all", t: "전체" }, ...d.wings.map((w) => ({ v: w.id, t: w.name }))],
     field: [{ v: "all", t: "모든 분야" }, ...d.fields.map((f) => ({ v: f.id, t: f.name, wing: f.wing }))],
@@ -52,7 +52,9 @@ EB.start("library", (d) => {
 
   // 주소로 필터 열기: library.html?status=planned&wing=life
   const qs = new URLSearchParams(location.search);
-  ["wing", "field", "status"].forEach((k) => { if (qs.get(k)) state[k] = qs.get(k); });
+  ["wing", "field", "status"].forEach((k) => {
+    if (groups[k].some((o) => o.v === qs.get(k))) state[k] = qs.get(k);
+  });
   if (qs.get("q")) search.value = qs.get("q");
 
   function sync() {
@@ -63,6 +65,10 @@ EB.start("library", (d) => {
       });
     });
     const q = search.value.trim().toLowerCase();
+    const params = new URLSearchParams();
+    Object.entries(state).forEach(([k, v]) => params.set(k, v));
+    if (q) params.set("q", search.value.trim());
+    history.replaceState(null, "", `${location.pathname}?${params}${location.hash}`);
     let shown = 0;
     EB.$$("#shelf-groups .group").forEach((sec) => {
       let n = 0;

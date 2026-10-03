@@ -1,0 +1,517 @@
+{
+  "schemaVersion": 1,
+  "concepts": [
+    {
+      "id": "device",
+      "label": "반도체 소자",
+      "aliases": [
+        "semiconductor",
+        "MOSFET",
+        "pn junction"
+      ]
+    },
+    {
+      "id": "structure",
+      "label": "구조와 단면",
+      "aliases": [
+        "structure",
+        "3D",
+        "적층"
+      ]
+    },
+    {
+      "id": "design",
+      "label": "설계와 배치",
+      "aliases": [
+        "placement",
+        "layout",
+        "배선"
+      ]
+    },
+    {
+      "id": "systems",
+      "label": "시스템과 병목",
+      "aliases": [
+        "NoC",
+        "network",
+        "latency",
+        "대기"
+      ]
+    },
+    {
+      "id": "process",
+      "label": "공정",
+      "aliases": [
+        "process",
+        "식각",
+        "etch"
+      ]
+    },
+    {
+      "id": "lithography",
+      "label": "노광",
+      "aliases": [
+        "lithography",
+        "EUV",
+        "광자"
+      ]
+    },
+    {
+      "id": "variation",
+      "label": "변동과 확률",
+      "aliases": [
+        "variation",
+        "stochastic",
+        "statistics",
+        "통계"
+      ]
+    },
+    {
+      "id": "yield",
+      "label": "수율",
+      "aliases": [
+        "yield",
+        "wafer",
+        "웨이퍼"
+      ]
+    },
+    {
+      "id": "failure",
+      "label": "불량 분석",
+      "aliases": [
+        "failure",
+        "defect",
+        "결함"
+      ]
+    },
+    {
+      "id": "packaging",
+      "label": "패키징",
+      "aliases": [
+        "packaging",
+        "HBM",
+        "bonding",
+        "본딩"
+      ]
+    },
+    {
+      "id": "test",
+      "label": "검사와 테스트",
+      "aliases": [
+        "test",
+        "probe",
+        "shmoo",
+        "셔무"
+      ]
+    },
+    {
+      "id": "memory",
+      "label": "메모리",
+      "aliases": [
+        "memory",
+        "NAND",
+        "DRAM"
+      ]
+    },
+    {
+      "id": "imaging",
+      "label": "영상과 센서",
+      "aliases": [
+        "imaging",
+        "sensor",
+        "camera",
+        "카메라"
+      ]
+    },
+    {
+      "id": "color",
+      "label": "색과 재구성",
+      "aliases": [
+        "color",
+        "demosaicing",
+        "색역"
+      ]
+    },
+    {
+      "id": "computing",
+      "label": "컴퓨터 구조",
+      "aliases": [
+        "CPU",
+        "computer",
+        "logic",
+        "논리"
+      ]
+    },
+    {
+      "id": "ai",
+      "label": "AI와 표현",
+      "aliases": [
+        "AI",
+        "embedding",
+        "attention",
+        "임베딩",
+        "어텐션"
+      ]
+    },
+    {
+      "id": "mechanics",
+      "label": "기계와 유동",
+      "aliases": [
+        "mechanics",
+        "fluid",
+        "자동차"
+      ]
+    },
+    {
+      "id": "optics",
+      "label": "광학",
+      "aliases": [
+        "optics",
+        "lens",
+        "렌즈",
+        "조리개"
+      ]
+    }
+  ],
+  "experiments": {
+    "devicebook/sim-join": {
+      "question": "접합을 만들면 전하 이동과 전기장은 어떤 순서로 생길까요?",
+      "concepts": [
+        "device"
+      ]
+    },
+    "devicebook/sim-lattice": {
+      "question": "같은 결정도 자르는 면에 따라 어떻게 달라 보일까요?",
+      "concepts": [
+        "device",
+        "structure"
+      ]
+    },
+    "designbook/sim-xs": {
+      "question": "평면 레이아웃의 선은 단면에서 어떤 구조가 될까요?",
+      "concepts": [
+        "design",
+        "structure",
+        "process"
+      ]
+    },
+    "designbook/sim-pl": {
+      "question": "셀 배치를 바꾸면 배선 길이가 어떻게 달라질까요?",
+      "concepts": [
+        "design",
+        "systems"
+      ]
+    },
+    "socbook/sim-die": {
+      "question": "CPU와 GPU, 캐시는 칩 안에서 어떻게 연결될까요?",
+      "concepts": [
+        "computing",
+        "structure"
+      ]
+    },
+    "socbook/sim-mesh": {
+      "question": "패킷이 같은 길에 몰리면 어디서 병목이 생길까요?",
+      "concepts": [
+        "systems",
+        "computing"
+      ]
+    },
+    "processbook/sim-3d": {
+      "question": "게이트가 채널을 감싸는 방식은 어떻게 달라질까요?",
+      "concepts": [
+        "device",
+        "structure"
+      ]
+    },
+    "processbook/sim-etch": {
+      "question": "압력과 바이어스를 바꾸면 식각 옆벽은 어떻게 변할까요?",
+      "concepts": [
+        "process",
+        "structure"
+      ]
+    },
+    "lithobook/sim-print": {
+      "question": "같은 노광량인데 왜 매번 다른 패턴이 나올까요?",
+      "concepts": [
+        "lithography",
+        "variation",
+        "failure"
+      ]
+    },
+    "lithobook/sim-pipe": {
+      "question": "설계한 패턴은 공정을 거치며 어떻게 달라질까요?",
+      "concepts": [
+        "lithography",
+        "process",
+        "design"
+      ]
+    },
+    "yieldbook/sim-atlas": {
+      "question": "웨이퍼 무늬만으로 어떤 원인을 의심할 수 있을까요?",
+      "concepts": [
+        "yield",
+        "failure"
+      ]
+    },
+    "yieldbook/sim-detective": {
+      "question": "수율 저하의 원인을 좁히려면 어떤 증거가 필요할까요?",
+      "concepts": [
+        "yield",
+        "failure",
+        "variation"
+      ]
+    },
+    "failurebook/sim-pem": {
+      "question": "빛나는 결함과 보이지 않는 결함은 어떻게 다를까요?",
+      "concepts": [
+        "failure",
+        "imaging"
+      ]
+    },
+    "failurebook/sim-lineup": {
+      "question": "같은 전기적 증상에 다른 공정 원인이 있을까요?",
+      "concepts": [
+        "failure",
+        "process"
+      ]
+    },
+    "packagingbook/sim-hb": {
+      "question": "높이 제한 안에서 HBM을 더 쌓으려면 무엇을 바꿔야 할까요?",
+      "concepts": [
+        "packaging",
+        "structure",
+        "memory"
+      ]
+    },
+    "packagingbook/sim-st": {
+      "question": "인터포저와 브리지는 연결 구조가 어떻게 다를까요?",
+      "concepts": [
+        "packaging",
+        "structure"
+      ]
+    },
+    "testbook/sim-pc3": {
+      "question": "수천 개의 프로브는 웨이퍼와 어떻게 접촉할까요?",
+      "concepts": [
+        "test",
+        "structure"
+      ]
+    },
+    "testbook/sim-sh": {
+      "question": "전압과 주파수를 함께 바꾸면 통과 경계가 어떻게 보일까요?",
+      "concepts": [
+        "test",
+        "device"
+      ]
+    },
+    "memorybook/sim-h3": {
+      "question": "HBM의 다이와 TSV, 인터포저는 어떻게 연결될까요?",
+      "concepts": [
+        "memory",
+        "packaging",
+        "structure"
+      ]
+    },
+    "memorybook/sim-vn3d": {
+      "question": "수직 채널과 계단은 메모리 층들을 어떻게 연결할까요?",
+      "concepts": [
+        "memory",
+        "structure"
+      ]
+    },
+    "sensorbook/sim-p3": {
+      "question": "빛은 픽셀의 어떤 층을 지나 전하로 바뀔까요?",
+      "concepts": [
+        "imaging",
+        "device",
+        "structure"
+      ]
+    },
+    "sensorbook/sim-dm": {
+      "question": "없는 색을 추정하면 왜 가짜 무늬가 생길까요?",
+      "concepts": [
+        "imaging",
+        "color"
+      ]
+    },
+    "displaybook/sim-st3d": {
+      "question": "OLED의 각 층은 어떤 순서로 쌓일까요?",
+      "concepts": [
+        "structure",
+        "device"
+      ]
+    },
+    "displaybook/sim-gamut": {
+      "question": "원색의 위치를 바꾸면 표현할 수 있는 색은 어떻게 달라질까요?",
+      "concepts": [
+        "color"
+      ]
+    },
+    "computerbook/sim-toy": {
+      "question": "명령 하나는 CPU 안에서 어떤 단계로 실행될까요?",
+      "concepts": [
+        "computing",
+        "systems"
+      ]
+    },
+    "computerbook/sim-add": {
+      "question": "덧셈의 올림수는 논리 게이트를 어떻게 통과할까요?",
+      "concepts": [
+        "computing",
+        "design"
+      ]
+    },
+    "aibook/sim-editor": {
+      "question": "어텐션 점수를 바꾸면 어떤 정보가 더 섞일까요?",
+      "concepts": [
+        "ai"
+      ]
+    },
+    "aibook/sim-space": {
+      "question": "의미가 비슷한 단어는 공간에서 어떻게 배치될까요?",
+      "concepts": [
+        "ai"
+      ]
+    },
+    "carbook/sim-xray": {
+      "question": "차체 안의 주요 부품은 어디에 배치될까요?",
+      "concepts": [
+        "mechanics",
+        "structure"
+      ]
+    },
+    "carbook/sim-fl": {
+      "question": "차체 형상을 따라 흐름이 어디에서 갈라질까요?",
+      "concepts": [
+        "mechanics"
+      ]
+    },
+    "phonebook/sim-explode": {
+      "question": "얇은 스마트폰 안에서 부품들은 어떻게 배치될까요?",
+      "concepts": [
+        "structure",
+        "systems"
+      ]
+    },
+    "phonebook/sim-mod": {
+      "question": "초점과 손떨림 보정 부품은 어디에서 움직일까요?",
+      "concepts": [
+        "imaging",
+        "optics",
+        "structure"
+      ]
+    },
+    "camerabook/sim-bokeh": {
+      "question": "조리개 모양을 바꾸면 빛망울이 어떻게 달라질까요?",
+      "concepts": [
+        "optics",
+        "imaging"
+      ]
+    },
+    "camerabook/sim-rolling": {
+      "question": "회전하는 물체가 사진에서는 왜 휘어 보일까요?",
+      "concepts": [
+        "imaging",
+        "variation"
+      ]
+    }
+  },
+  "paths": [
+    {
+      "id": "yield-investigation",
+      "title": "수율이 떨어졌는데 어디부터 조사할까?",
+      "description": "공간 패턴에서 가설을 세우고, 우연과 원인을 구분한 뒤 증거로 판단합니다.",
+      "prerequisites": "웨이퍼와 다이의 의미를 알고 있으면 시작할 수 있습니다.",
+      "query": "수율",
+      "steps": [
+        {
+          "bookId": "yieldbook",
+          "link": "chapters/patterns.html#sim-atlas",
+          "title": "무늬에서 가설 세우기",
+          "task": "패턴마다 가능한 원인과 추가로 필요한 증거를 하나씩 적어 보세요."
+        },
+        {
+          "bookId": "yieldbook",
+          "link": "chapters/statistics.html#sim-fa",
+          "title": "무늬와 우연 구분하기",
+          "task": "무작위 데이터에서도 보이는 무늬를 관찰하고 첫 가설을 다시 점검하세요."
+        },
+        {
+          "bookId": "failurebook",
+          "link": "chapters/mechanisms.html#sim-lineup",
+          "title": "증상과 물리적 원인 연결하기",
+          "task": "전기적 증상에 맞는 결함 단면을 비교하세요."
+        },
+        {
+          "bookId": "yieldbook",
+          "link": "chapters/detective.html#sim-detective",
+          "title": "수율 수사실에서 판단하기",
+          "task": "맵과 데이터를 함께 사용해 원인을 좁히세요."
+        }
+      ],
+      "challenge": "비슷한 웨이퍼 무늬가 나와도 원인을 바로 단정할 수 없는 이유와 다음 검사 한 가지를 설명해 보세요."
+    },
+    {
+      "id": "defect-evaluation",
+      "title": "불량 분류 모델을 어떻게 평가할까?",
+      "description": "검사에서 얻는 표본과 분류 결과, 학습 데이터 밖의 성능을 함께 봅니다.",
+      "prerequisites": "불량 검출과 불량 유형 분류가 다른 작업임을 구분해 보세요.",
+      "query": "불량",
+      "steps": [
+        {
+          "bookId": "yieldbook",
+          "link": "chapters/classify.html#sim-sp",
+          "title": "리뷰할 표본 선택하기",
+          "task": "샘플링 방식에 따라 어떤 결함을 놓칠 수 있는지 예상하세요."
+        },
+        {
+          "bookId": "yieldbook",
+          "link": "chapters/classify.html#sim-ad",
+          "title": "자동 결함 분류 살펴보기",
+          "task": "어떤 유형끼리 혼동되는지 관찰하고 전체 점수와 비교하세요."
+        },
+        {
+          "bookId": "aibook",
+          "link": "chapters/training.html#sim-tr-poly",
+          "title": "과적합과 일반화 실험하기",
+          "task": "모델 복잡도를 바꾸면서 학습 데이터와 검증 데이터의 차이를 관찰하세요."
+        }
+      ],
+      "challenge": "학습 성능이 좋아졌다는 이유만으로 분류 모델을 교체하면 안 되는 이유를 표본과 일반화 관점에서 설명해 보세요."
+    },
+    {
+      "id": "technical-search",
+      "title": "기술 문서 검색은 왜 근거를 놓칠까?",
+      "description": "문서를 나누는 방식부터 검색과 평가까지, 작은 문서함으로 실패 원인을 추적합니다.",
+      "prerequisites": "벡터 유사도가 낯설다면 AIBook의 임베딩 공간 실험부터 살펴보세요.",
+      "query": "임베딩",
+      "steps": [
+        {
+          "bookId": "aibook",
+          "link": "chapters/embedding.html#sim-space",
+          "title": "의미 공간 이해하기",
+          "task": "단어의 가까움이 검색에서 무엇을 뜻하는지 생각해 보세요."
+        },
+        {
+          "bookId": "aibook",
+          "link": "chapters/rag.html#sim-chunk",
+          "title": "청킹 경계 비교하기",
+          "task": "같은 질문에 필요한 근거가 청크 경계에서 나뉘는지 확인하세요."
+        },
+        {
+          "bookId": "aibook",
+          "link": "chapters/rag.html#sim-hybrid",
+          "title": "키워드와 벡터 검색 비교하기",
+          "task": "고유 용어가 있는 질문과 의미 중심 질문의 검색 결과를 비교하세요."
+        },
+        {
+          "bookId": "aibook",
+          "link": "chapters/rag.html#sim-eval",
+          "title": "검색과 답변의 실패 구분하기",
+          "task": "근거를 못 찾은 경우와 근거를 잘못 사용한 경우를 나눠 보세요."
+        }
+      ],
+      "challenge": "답변이 틀렸을 때 청킹·검색·생성 중 어디부터 조사할지, 확인할 증거와 함께 설명해 보세요."
+    }
+  ]
+}

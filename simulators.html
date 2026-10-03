@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>실험 찾기 · euiyun books</title>
+<meta name="description" content="질문과 개념으로 대표 실험을 찾고, 결과를 예측한 뒤 직접 비교해 보세요.">
+<link rel="canonical" href="https://books.euiyun.com/simulators.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0a84c6">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="euiyun books">
+<meta property="og:title" content="실험 찾기 · euiyun books">
+<meta property="og:description" content="질문과 개념으로 대표 실험을 찾고, 결과를 예측한 뒤 직접 비교해 보세요.">
+<meta property="og:url" content="https://books.euiyun.com/simulators.html">
+<meta property="og:image" content="https://books.euiyun.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/covers.js" defer>
+</script>
+<script src="js/core.js" defer>
+</script>
+<script src="js/discovery.js" defer>
+</script>
+</head>
+<body data-page="simulators">
+<main>
+<section class="page-head">
+<div class="wrap">
+<h1>실험 찾기</h1>
+<p class="lead">질문과 개념으로 대표 실험을 찾고, 결과를 예측한 뒤 직접 비교해 보세요.</p>
+<div class="lib-filters">
+<label for="search">어떤 원리를 실험해 볼까요?</label>
+<input class="search" id="search" type="search" placeholder="예: HBM, 어텐션, 노광, camera">
+<div class="search-row">
+<div class="search-choice">
+<label for="experiment-field">분야</label>
+<select id="experiment-field">
+<option value="">모든 분야</option>
+</select>
+</div>
+<div class="search-choice">
+<label for="experiment-level">난이도</label>
+<select id="experiment-level">
+<option value="">모든 난이도</option>
+</select>
+</div>
+<button class="btn" id="reset-filters" type="button">필터 초기화</button>
+</div>
+<p id="shown" aria-live="polite">
+</p>
+</div>
+</div>
+</section>
+<div class="wrap">
+<div id="experiments" class="discovery-grid">
+</div>
+<p id="no-result" hidden>일치하는 대표 실험이 없습니다. 다른 주제어를 쓰거나 필터를 초기화해 보세요. 모든 교과서의 실험이 등록된 것은 아닙니다.</p>
+</div>
+<noscript>
+<p class="wrap">목록을 보려면 JavaScript를 켜 주세요.</p>
+</noscript>
+</main>
+</body>
+</html>
