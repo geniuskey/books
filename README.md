@@ -45,8 +45,8 @@ python3 -m http.server 8000   # → http://localhost:8000
 | `ideas` | 집필 예정 책에서 만들고 싶은 시뮬레이터 |
 | `headline`, `url`, `repo` | 출간·집필 중인 책의 한 줄 문구, 사이트 주소, GitHub 주소 |
 | `chapters`, `simulators`, `level`, `topics` | 출간된 책의 챕터 수, 시뮬레이터 수, 난이도, 주제어 |
-| `color`, `colorDark` | 책 대표색 (없으면 분야 색) |
-| `motif` | 표지 일러스트 (`memory`, `pixel`, `layers`, `attention`, `aperture`, `logic`, `circuit`, `package`, `car`; 없으면 기본 격자). 새 그림은 `js/covers.js`에 추가 |
+| `color`, `colorDark` | 책 대표색 (없으면 분야 색). 기본은 각 책 사이트의 `--accent`지만, 같은 분야에서 비슷한 색이 겹치면 이 사이트에서만 다른 색으로 바꿔 씁니다 |
+| `motif` | 표지 일러스트 (`memory`, `pixel`, `layers`, `attention`, `aperture`, `logic`, `circuit`, `package`, `car`, `wafermap`, `litho`, `probe`, `soc`, `subpixel`, `shmoo`; 없으면 기본 격자). 새 그림은 `js/covers.js`에 추가 |
 | `featured` | 대표 시뮬레이터: `title`, `desc`, `link`(책 주소 기준 상대 경로, 예: `chapters/hbm.html#sim-h3`), `image`(`img/sims/` 아래 캡처) |
 
 새 책을 계획하면 `status: "planned"`로 한 줄 추가하고, 쓰기 시작하면 `writing`, 출간하면 `published`로 바꾸며 주소와 숫자를 채우면 됩니다.
