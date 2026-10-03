@@ -1063,6 +1063,48 @@
       ]
     },
     {
+      "id": "phonebook",
+      "code": "PHN",
+      "title": "PhoneBook",
+      "subtitle": "스마트폰 해부 교과서",
+      "headline": "8 mm 두께 안의 작은 도시",
+      "description": "디스플레이, AP, 보드, 배터리, 안테나, 카메라, 센서, 열, 기구 설계까지. 스마트폰을 3D로 한 겹씩 분해하고 다시 조립하며, 좋은 폰 설계의 트레이드오프를 배웁니다.",
+      "url": "https://phonebook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/phonebook",
+      "field": "electronics",
+      "status": "published",
+      "level": "공대 학부",
+      "chapters": 14,
+      "simulators": 140,
+      "color": "#0b8a7c",
+      "colorDark": "#2dd4bf",
+      "topics": [
+        "3D 분해·조립",
+        "OLED·LTPO",
+        "AP·스로틀링",
+        "HDI 보드",
+        "배터리·충전",
+        "안테나·RF",
+        "카메라 모듈",
+        "방열·기구"
+      ],
+      "motif": "phone",
+      "featured": [
+        {
+          "title": "스마트폰 분해 뷰어",
+          "desc": "유리부터 배터리·보드·카메라까지 부품을 눌러 가며 한 겹씩 펼치기",
+          "link": "chapters/anatomy.html#sim-explode",
+          "image": "img/sims/phonebook-sim-explode.jpg"
+        },
+        {
+          "title": "카메라 모듈 분해",
+          "desc": "렌즈·VCM·OIS·이미지 센서가 몇 mm 안에 쌓이는 방식",
+          "link": "chapters/camera.html#sim-mod",
+          "image": "img/sims/phonebook-sim-mod.jpg"
+        }
+      ]
+    },
+    {
       "id": "electricbook",
       "code": "ELC",
       "title": "ElectricBook",

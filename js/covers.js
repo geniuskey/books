@@ -163,6 +163,20 @@
       s += `<rect class="cv-pulse" x="128" y="51" width="38" height="54" rx="2" fill="none" stroke="${W}" stroke-width="2"/>`;
       return svg(s);
     },
+    // 스마트폰: 유리·디스플레이·보드·배터리·뒷판이 비스듬히 분해되어 떠 있다
+    phone() {
+      let s = "";
+      const layers = [[0.28, "none"], [0.5, "screen"], [0.4, "board"], [0.55, "battery"], [0.22, "back"]];
+      layers.forEach(([o, kind], k) => {
+        const x = 70 + k * 18, y = 6 + k * 12;
+        s += `<g class="cv-drop" style="animation-delay:${(k * 0.12).toFixed(2)}s"><rect x="${x}" y="${y}" width="62" height="96" rx="9" fill="${W}" fill-opacity="${o}" stroke="${W}" stroke-opacity=".7"/>`;
+        if (kind === "board") s += `<rect x="${x + 8}" y="${y + 8}" width="20" height="14" rx="2" fill="#000" fill-opacity=".3"/><rect x="${x + 34}" y="${y + 8}" width="18" height="30" rx="2" fill="#000" fill-opacity=".2"/>`;
+        if (kind === "battery") s += `<rect x="${x + 10}" y="${y + 30}" width="42" height="52" rx="4" fill="#000" fill-opacity=".18"/>`;
+        if (kind === "back") s += `<rect x="${x + 6}" y="${y + 6}" width="20" height="20" rx="5" fill="#000" fill-opacity=".3"/>`;
+        s += `</g>`;
+      });
+      return svg(s);
+    },
     // 기본: 다이 격자
     grid() {
       let s = "";
