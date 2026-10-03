@@ -177,6 +177,19 @@
       });
       return svg(s);
     },
+    // 소자 물리: pn 접합의 에너지 밴드가 휘고, 전자와 정공이 떠 있다
+    band() {
+      let s = "";
+      [[30, "Ec"], [74, "Ev"]].forEach(([y, label]) => {
+        s += `<path class="cv-grow" d="M64 ${y} H112 C130 ${y} 134 ${y + 26} 152 ${y + 26} H196" fill="none" stroke="${W}" stroke-width="2.5"/>`;
+        s += `<text x="62" y="${y - 5}" fill="${W}" fill-opacity=".7" font-size="9" font-family="monospace">${label}</text>`;
+      });
+      s += `<line x1="64" y1="60" x2="196" y2="60" stroke="${W}" stroke-opacity=".6" stroke-dasharray="4 4"/>`;
+      [160, 172, 184].forEach((x, k) => { s += `<circle class="cv-pulse" style="animation-delay:${k * 0.3}s" cx="${x}" cy="49" r="3.2" fill="#8ab4ff"/>`; });
+      [72, 86, 100].forEach((x, k) => { s += `<circle class="cv-pulse" style="animation-delay:${k * 0.3 + 0.15}s" cx="${x}" cy="82" r="3.2" fill="none" stroke="#ff8a8a" stroke-width="1.6"/>`; });
+      s += `<rect x="112" y="16" width="40" height="104" fill="${W}" fill-opacity=".1"/>`;
+      return svg(s);
+    },
     // 기본: 다이 격자
     grid() {
       let s = "";
