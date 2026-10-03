@@ -453,6 +453,49 @@
       ]
     },
     {
+      "id": "testbook",
+      "code": "TST",
+      "title": "TestBook",
+      "subtitle": "반도체 테스트 교과서",
+      "headline": "좋은 칩과 나쁜 칩을 가르는 기술",
+      "description": "테스트 장비(ATE), 프로브 카드, 폴트 모델과 스캔·BIST 같은 테스트 용이성 설계(DFT), 번인, 빈 분류, 테스트 비용까지. 가상의 모바일 SoC TB-7의 테스트 계획서를 한 장씩 채워 갑니다.",
+      "url": "https://testbook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/testbook",
+      "field": "semiconductor",
+      "stage": "packaging",
+      "status": "published",
+      "level": "공대 학부",
+      "chapters": 16,
+      "simulators": 87,
+      "color": "#c2255c",
+      "colorDark": "#ff86b4",
+      "topics": [
+        "ATE·핀 일렉트로닉스",
+        "프로브 카드",
+        "폴트 모델·ATPG",
+        "스캔·BIST",
+        "JTAG",
+        "셔무·Vmin",
+        "번인",
+        "빈 분류·테스트 비용"
+      ],
+      "motif": "shmoo",
+      "featured": [
+        {
+          "title": "수직형 프로브 카드",
+          "desc": "수천 개 바늘이 웨이퍼 패드에 닿는 구조를 3D로 둘러보기",
+          "link": "chapters/interface.html#sim-pc3",
+          "image": "img/sims/testbook-sim-pc3.jpg"
+        },
+        {
+          "title": "셔무 플롯 생성기",
+          "desc": "전압과 주파수를 훑어 칩이 통과하는 경계를 직접 찾기",
+          "link": "chapters/limits.html#sim-sh",
+          "image": "img/sims/testbook-sim-sh.jpg"
+        }
+      ]
+    },
+    {
       "id": "memorybook",
       "code": "MEM",
       "title": "MemoryBook",
@@ -531,6 +574,49 @@
         }
       ],
       "field": "semiconductor"
+    },
+    {
+      "id": "displaybook",
+      "code": "DSP",
+      "title": "DisplayBook",
+      "subtitle": "디스플레이 교과서",
+      "headline": "전자 하나에서 빛나는 화면까지",
+      "description": "색채 과학, TFT, LCD, OLED, 마이크로LED, HDR, 구동 회로부터 폴더블과 XR까지. 서브픽셀을 확대하고 OLED 적층을 돌려 보며 디스플레이가 빛을 만드는 원리를 배웁니다.",
+      "url": "https://displaybook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/displaybook",
+      "field": "semiconductor",
+      "stage": "device",
+      "status": "published",
+      "level": "공대 학부",
+      "chapters": 20,
+      "simulators": 170,
+      "color": "#d1366f",
+      "colorDark": "#ff6b9e",
+      "topics": [
+        "색채 과학·색역",
+        "TFT 백플레인",
+        "LCD·백라이트",
+        "OLED·TADF",
+        "마이크로LED",
+        "HDR·감마",
+        "폴더블",
+        "XR 광학"
+      ],
+      "motif": "subpixel",
+      "featured": [
+        {
+          "title": "OLED 서브픽셀 적층 분해",
+          "desc": "반사 양극부터 박막 봉지까지, 나노미터 층을 3D로 펼쳐 보기",
+          "link": "chapters/oled.html#sim-st3d",
+          "image": "img/sims/displaybook-sim-st3d.jpg"
+        },
+        {
+          "title": "색역 삼각형 드래그",
+          "desc": "원색을 끌어 sRGB·DCI-P3·BT.2020 커버리지 비교",
+          "link": "chapters/color.html#sim-gamut",
+          "image": "img/sims/displaybook-sim-gamut.jpg"
+        }
+      ]
     },
     {
       "id": "devicebook",
@@ -630,22 +716,6 @@
         "장비 가동률과 팹 생산량"
       ],
       "stage": "process"
-    },
-    {
-      "id": "displaybook",
-      "code": "DSP",
-      "title": "DisplayBook",
-      "subtitle": "디스플레이",
-      "description": "LCD, OLED, 마이크로 LED의 픽셀 구조.",
-      "field": "semiconductor",
-      "status": "planned",
-      "phase": 3,
-      "ideas": [
-        "서브픽셀과 색 재현",
-        "TFT 백플레인 구동",
-        "번인과 수명"
-      ],
-      "stage": "device"
     },
     {
       "id": "computerbook",
