@@ -1,4 +1,4 @@
-# euiyun books
+# Books
 
 [books.euiyun.com](https://books.euiyun.com/) — 인터랙티브 웹 교과서 시리즈를 소개하는 사이트입니다.
 시리즈는 두 갈래로 자랍니다: **일하는 지식**(반도체·SW·AI·전자)과 **살아가는 지식**(돈·집·세금·건강·취미).
@@ -7,7 +7,7 @@
 | 파일 | 내용 |
 |---|---|
 | `index.html` | 홈. 교과서·실험·문제별 경로 진입, 마스터 웨이퍼, 분야 카드, 대표 시뮬레이터, 저자 노트, 도구 |
-| `field.html?f=<분야 id>` | 분야 페이지. 분야 웨이퍼, 가치사슬(단계가 있는 분야) 또는 추천 읽기 순서, 책장, 다른 분야 |
+| `field.html?f=<분야 id>` | 분야 페이지. 대분류의 관계와 각 분류에 속한 책을 보여 주는 지식 지도, 책장, 다른 분야 |
 | `library.html` | 전체 책장. 갈래·분야·상태 필터와 검색 (`?wing=life&status=planned&q=전세`처럼 주소로도 지정 가능) |
 | `roadmap.html` | 로드맵. 전체·분야별 진행률, 단계별(다음 차례 → 그다음 → 언젠가) 책 목록과 만들고 싶은 시뮬레이터 |
 | `simulators.html` | 대표 실험 검색. 학습 질문·한영 동의어, 분야·교과서 난이도 필터와 공유 가능한 검색 URL |
@@ -25,6 +25,7 @@ python3 -m http.server 8000   # → http://localhost:8000
 - `js/wafer.js` — 웨이퍼 맵 (분야 하나 / 전체 부채꼴 모드)과 분야 카드용 작은 웨이퍼
 - `js/covers.js` — 책 표지 일러스트
 - `js/home.js`, `js/field.js`, `js/library.js`, `js/roadmap.js` — 페이지별 렌더링
+- `js/field-maps.js` — 분야별 지도 제목·대분류·책 배치·연결 설명. 반도체 분류는 `books.json`의 `stages`를 사용하며, 새 책은 분류 지정 전에도 탐색 그룹에 표시됩니다.
 - `css/style.css` — 각 교과서와 같은 디자인 토큰을 쓰는 공통 스타일
 
 ## 데이터: `data/books.json`

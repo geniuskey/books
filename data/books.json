@@ -1207,16 +1207,19 @@
       "id": "moneybook",
       "code": "MNY",
       "title": "MoneyBook",
-      "subtitle": "돈의 기초",
-      "description": "복리, 인플레이션, 금리. 월급을 받으면 가장 먼저 알아야 할 것.",
+      "subtitle": "살아가는 데 필요한 돈 교과서",
+      "headline": "월급 명세서에서 은퇴 설계까지",
+      "description": "물가와 복리에서 월급 명세서, 예산, 저축, 신용과 대출, 집, 주식·채권·ETF, 자산배분, 세금, 보험, 연금과 은퇴까지. 한결의 가계부와 인생 시뮬레이터를 따라 숫자를 직접 바꾸며 돈의 흐름을 배웁니다.",
+      "url": "https://moneybook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/moneybook",
       "field": "money",
-      "status": "planned",
-      "phase": 1,
-      "ideas": [
-        "복리 vs 단리 그래프",
-        "인플레이션이 갉아먹는 돈",
-        "비상금과 예산 짜기"
-      ]
+      "status": "published",
+      "chapters": 23,
+      "simulators": 200,
+      "level": "입문",
+      "color": "#0b8a63",
+      "colorDark": "#4fd1a1",
+      "topics": ["복리·물가", "예산·저축", "신용·대출", "투자·자산배분", "세금·보험", "연금·은퇴"]
     },
     {
       "id": "stockbook",

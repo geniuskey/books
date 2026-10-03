@@ -1,4 +1,4 @@
-/* euiyun books — 모든 페이지가 함께 쓰는 데이터 로딩, 머리말·꼬리말, 카드 렌더링 */
+/* Books — 모든 페이지가 함께 쓰는 데이터 로딩, 머리말·꼬리말, 카드 렌더링 */
 (function () {
   "use strict";
 
@@ -54,7 +54,7 @@
     const h = document.createElement("header");
     h.className = "topbar";
     h.innerHTML = `<div class="wrap">
-      <a class="brand" href="index.html"><img src="favicon.svg" alt=""> euiyun books <small>인터랙티브 교과서 시리즈</small></a>
+      <a class="brand" href="index.html"><img src="favicon.svg" alt=""> Books <small>인터랙티브 교과서 시리즈</small></a>
       <nav class="topnav" aria-label="주요 메뉴">${NAV.map((n) => `<a href="${n.href}"${n.key === active ? ' aria-current="page"' : ""}>${n.label}</a>`).join("")}</nav>
       <div class="actions">
         <button class="icon-btn" id="theme-btn" type="button" aria-label="라이트/다크 모드 전환">

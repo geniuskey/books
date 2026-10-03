@@ -16,7 +16,19 @@ EB.start("library", (d) => {
     sec.innerHTML = `<div class="group-head"><h2><i></i>${esc(f.name)} <small>${esc(f.en)}</small></h2><a href="${EB.fieldUrl(f.id)}">분야 보기 →</a></div>`;
     const grid = document.createElement("div");
     grid.className = "grid";
-    f.books.forEach((b) => grid.appendChild(EB.card(b)));
+    f.books.forEach((b) => {
+      const card = EB.card(b);
+      const description = card.querySelector(".body > p");
+      if (description) {
+        description.id = `${card.id}-description`;
+        description.classList.add("book-description");
+        description.setAttribute("role", "tooltip");
+        card.tabIndex = 0;
+        card.setAttribute("aria-label", b.title);
+        card.setAttribute("aria-describedby", description.id);
+      }
+      grid.appendChild(card);
+    });
     sec.appendChild(grid);
     shelf.appendChild(sec);
   });
