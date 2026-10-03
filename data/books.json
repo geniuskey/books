@@ -158,6 +158,49 @@
   ],
   "books": [
     {
+      "id": "devicebook",
+      "code": "DEV",
+      "title": "DeviceBook",
+      "subtitle": "반도체 소자 물리 교과서",
+      "headline": "전자와 정공에서 트랜지스터까지",
+      "description": "결정과 밴드, 캐리어 통계, 수송, pn 접합, 쇼트키, MOS, MOSFET, BJT, 광소자까지. 포아송·드리프트–확산 방정식을 실제로 푸는 1D 솔버로 밴드와 전류가 바뀌는 모습을 직접 봅니다.",
+      "url": "https://devicebook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/devicebook",
+      "field": "semiconductor",
+      "stage": "physics",
+      "status": "published",
+      "level": "공대 학부",
+      "chapters": 14,
+      "simulators": 89,
+      "color": "#495057",
+      "colorDark": "#adb5bd",
+      "topics": [
+        "결정·밴드",
+        "캐리어 통계",
+        "드리프트·확산",
+        "pn 접합",
+        "쇼트키·오믹",
+        "MOS·MOSFET",
+        "스케일링·GAA",
+        "BJT·광소자"
+      ],
+      "motif": "band",
+      "featured": [
+        {
+          "title": "pn 접합이 만들어지는 순간",
+          "desc": "p와 n을 붙이면 확산 → 이온 노출 → 전기장 → 밴드 휨",
+          "link": "chapters/pn.html#sim-join",
+          "image": "img/sims/devicebook-sim-join.jpg"
+        },
+        {
+          "title": "다이아몬드 격자와 결정면",
+          "desc": "실리콘 결정을 3D로 돌리고 밀러 지수 면을 잘라 보기",
+          "link": "chapters/crystal.html#sim-lattice",
+          "image": "img/sims/devicebook-sim-lattice.jpg"
+        }
+      ]
+    },
+    {
       "id": "designbook",
       "code": "DSN",
       "title": "DesignBook",
@@ -617,25 +660,6 @@
           "image": "img/sims/displaybook-sim-gamut.jpg"
         }
       ]
-    },
-    {
-      "id": "devicebook",
-      "code": "DEV",
-      "title": "DeviceBook",
-      "subtitle": "반도체 소자 물리",
-      "description": "밴드, 도핑, PN 접합, MOSFET. 모든 반도체 책의 공통 기초.",
-      "field": "semiconductor",
-      "status": "writing",
-      "phase": 1,
-      "ideas": [
-        "도핑 농도에 따른 페르미 준위 이동",
-        "PN 접합 공핍층과 I–V 곡선",
-        "MOSFET 채널이 생기는 순간"
-      ],
-      "stage": "physics",
-      "repo": "https://github.com/geniuskey/devicebook",
-      "url": "https://devicebook.euiyun.com/",
-      "headline": "집필 중"
     },
     {
       "id": "npubook",
