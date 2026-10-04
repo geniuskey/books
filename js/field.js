@@ -7,7 +7,8 @@ EB.start(null, (d) => {
   const wing = d.wingById[f.wing];
 
   document.title = `${f.name} · Books`;
-  EB.$$(`.topnav a[href="index.html#${f.wing}"]`).forEach((a) => a.setAttribute("aria-current", "page"));
+  EB.$(".nav-fields summary").setAttribute("aria-current", "page");
+  EB.$$(".nav-fields-menu a").find((a) => a.getAttribute("href") === EB.fieldUrl(f.id))?.setAttribute("aria-current", "page");
   EB.tint(document.body, f);
 
   // 분야별 개념 그룹 안에 책을 배치한다. 기존 반도체 단계는 원본 데이터를 사용한다.

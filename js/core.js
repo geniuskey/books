@@ -55,7 +55,10 @@
     h.className = "topbar";
     h.innerHTML = `<div class="wrap">
       <a class="brand" href="/"><img src="favicon.svg" alt=""> Books <small>인터랙티브 교과서 시리즈</small></a>
-      <nav class="topnav" aria-label="주요 메뉴">${NAV.map((n) => `<a href="${n.href}"${n.key === active ? ' aria-current="page"' : ""}>${n.label}</a>`).join("")}</nav>
+      <nav class="topnav" aria-label="주요 메뉴">
+        <details class="nav-fields"><summary>분야 <span aria-hidden="true">⌄</span></summary><div class="nav-fields-menu"></div></details>
+        ${NAV.map((n) => `<a href="${n.href}"${n.key === active ? ' aria-current="page"' : ""}>${n.label}</a>`).join("")}
+      </nav>
       <div class="actions">
         <button class="icon-btn" id="theme-btn" type="button" aria-label="라이트/다크 모드 전환">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -66,12 +69,29 @@
       </div>
     </div>`;
     document.body.prepend(h);
+    const fieldsMenu = $(".nav-fields", h);
+    document.addEventListener("click", (event) => {
+      if (!fieldsMenu.contains(event.target)) fieldsMenu.open = false;
+    });
+    fieldsMenu.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && fieldsMenu.open) {
+        fieldsMenu.open = false;
+        $("summary", fieldsMenu).focus();
+      }
+    });
     $("#theme-btn").addEventListener("click", () => {
       const root = document.documentElement;
       const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
       root.dataset.theme = dark ? "light" : "dark";
       try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
     });
+  };
+
+  EB.populateFieldMenu = (d) => {
+    $(".nav-fields-menu").innerHTML = d.wings.map((w) => `<div class="nav-fields-group">
+      <span class="nav-fields-heading">${esc(w.name)}</span>
+      ${d.fields.filter((f) => f.wing === w.id).map((f) => `<a href="${EB.fieldUrl(f.id)}">${esc(f.name)}</a>`).join("")}
+    </div>`).join("");
   };
 
   EB.footer = () => {
@@ -145,7 +165,7 @@
     EB.header(active);
     EB.footer();
     EB.load()
-      .then(fn)
+      .then((d) => { EB.populateFieldMenu(d); return fn(d); })
       .catch((err) => {
         console.error(err);
         const main = $("main");
