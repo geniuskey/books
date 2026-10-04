@@ -201,6 +201,16 @@
       [14, 9, 5.5, 3, 1.6].forEach((h, k) => { s += `<rect class="cv-grow" x="${10 + k * 5}" y="${112 - h * 4}" width="3.5" height="${h * 4}" fill="${W}" fill-opacity=".7"/>`; });
       return svg(s);
     },
+    // 아날로그: 연산 증폭기 기호와 보드 선도, 증폭되어 나오는 사인파
+    analog() {
+      let s = "";
+      range(5).forEach((i) => { s += `<path d="M40 ${24 + i * 22}H190" stroke="${W}" stroke-opacity=".18"/>`; });
+      s += `<path d="M40 30H96c20 0 30 10 44 30s28 46 50 56" fill="none" stroke="${W}" stroke-opacity=".55" stroke-width="1.4"/>`;
+      s += `<path d="M70 50L70 100L112 75Z" fill="${W}" fill-opacity=".85"/><path d="M60 62H70M60 88H70M112 75H124" stroke="${W}" stroke-width="1.6"/>`;
+      s += `<path class="cv-flow" d="M124 75c6-8 10-8 14 0s8 8 14 0 8-8 14 0 8 8 14 0" fill="none" stroke="${W}" stroke-opacity=".8" stroke-width="1.6" stroke-dasharray="5 4"/>`;
+      s += `<path class="cv-flow" style="animation-delay:.2s" d="M46 62c2-3 4-3 6 0s4 3 6 0" fill="none" stroke="${W}" stroke-opacity=".7" stroke-width="1.2" stroke-dasharray="3 3"/>`;
+      return svg(s);
+    },
     // 기본: 다이 격자
     grid() {
       let s = "";

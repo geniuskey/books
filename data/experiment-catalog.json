@@ -1110,6 +1110,1032 @@
     "link": "chapters/thermal.html#sim-heat"
   },
   {
+    "id": "analogbook/adc/sim-quant",
+    "bookId": "analogbook",
+    "title": "계단, 톱니, 그리고 6 dB/비트",
+    "link": "chapters/adc.html#sim-quant"
+  },
+  {
+    "id": "analogbook/adc/sim-dac",
+    "bookId": "analogbook",
+    "title": "단위 커패시터 부정합 → DNL·INL",
+    "link": "chapters/adc.html#sim-dac"
+  },
+  {
+    "id": "analogbook/adc/sim-cmp",
+    "bookId": "analogbook",
+    "title": "래치 재생, 준안정, 비교기 잡음",
+    "link": "chapters/adc.html#sim-cmp"
+  },
+  {
+    "id": "analogbook/adc/sim-flash",
+    "bookId": "analogbook",
+    "title": "플래시 ADC: 온도계 코드와 버블",
+    "link": "chapters/adc.html#sim-flash"
+  },
+  {
+    "id": "analogbook/adc/sim-pipe",
+    "bookId": "analogbook",
+    "title": "파이프라인 잔차와 1.5비트/단 보정",
+    "link": "chapters/adc.html#sim-pipe"
+  },
+  {
+    "id": "analogbook/adc/sim-hist",
+    "bookId": "analogbook",
+    "title": "히스토그램이 DNL·INL·누락 코드를 보여 준다",
+    "link": "chapters/adc.html#sim-hist"
+  },
+  {
+    "id": "analogbook/adc/sim-dyn",
+    "bookId": "analogbook",
+    "title": "입력 주파수가 오르면 무엇이 무너지나",
+    "link": "chapters/adc.html#sim-dyn"
+  },
+  {
+    "id": "analogbook/adc/sim-map",
+    "bookId": "analogbook",
+    "title": "해상도–속도 지도와 FoM 계산기",
+    "link": "chapters/adc.html#sim-map"
+  },
+  {
+    "id": "analogbook/adc/sim-sar",
+    "bookId": "analogbook",
+    "title": "SAR ADC 이진 탐색: AB-1 12비트 1 MS/s",
+    "link": "chapters/adc.html#sim-sar"
+  },
+  {
+    "id": "analogbook/bandgap/sim-lsb",
+    "bookId": "analogbook",
+    "title": "늘어난 자: 기준 오차가 LSB로",
+    "link": "chapters/bandgap.html#sim-lsb"
+  },
+  {
+    "id": "analogbook/bandgap/sim-ct",
+    "bookId": "analogbook",
+    "title": "V BE 는 온도가 오르면 내려간다",
+    "link": "chapters/bandgap.html#sim-ct"
+  },
+  {
+    "id": "analogbook/bandgap/sim-pt",
+    "bookId": "analogbook",
+    "title": "밀도가 다른 두 PNP의 전압 차",
+    "link": "chapters/bandgap.html#sim-pt"
+  },
+  {
+    "id": "analogbook/bandgap/sim-sm",
+    "bookId": "analogbook",
+    "title": "K를 끌어 기울기를 0으로",
+    "link": "chapters/bandgap.html#sim-sm"
+  },
+  {
+    "id": "analogbook/bandgap/sim-bg",
+    "bookId": "analogbook",
+    "title": "살아 있는 밴드갭: 온도와 저항비",
+    "link": "chapters/bandgap.html#sim-bg"
+  },
+  {
+    "id": "analogbook/bandgap/sim-cu",
+    "bookId": "analogbook",
+    "title": "곡률: 기울기 0 다음에 남는 것",
+    "link": "chapters/bandgap.html#sim-cu"
+  },
+  {
+    "id": "analogbook/bandgap/sim-tr",
+    "bookId": "analogbook",
+    "title": "칩 120개의 트리밍: 오차의 생김새",
+    "link": "chapters/bandgap.html#sim-tr"
+  },
+  {
+    "id": "analogbook/bandgap/sim-zs",
+    "bookId": "analogbook",
+    "title": "두 곡선, 두 교점: 초기값이 결과를 고른다",
+    "link": "chapters/bandgap.html#sim-zs"
+  },
+  {
+    "id": "analogbook/bandgap/sim-su",
+    "bookId": "analogbook",
+    "title": "전원을 켠다: 스타트업 회로의 유무",
+    "link": "chapters/bandgap.html#sim-su"
+  },
+  {
+    "id": "analogbook/diffpair/sim-noise",
+    "bookId": "analogbook",
+    "title": "두 선의 같은 간섭은 빼기에서 사라진다",
+    "link": "chapters/diffpair.html#sim-noise"
+  },
+  {
+    "id": "analogbook/diffpair/sim-harm",
+    "bookId": "analogbook",
+    "title": "짝수 고조파는 어디로 갔나",
+    "link": "chapters/diffpair.html#sim-harm"
+  },
+  {
+    "id": "analogbook/diffpair/sim-split",
+    "bookId": "analogbook",
+    "title": "꼬리 전류는 어느 쪽으로 흐르나",
+    "link": "chapters/diffpair.html#sim-split"
+  },
+  {
+    "id": "analogbook/diffpair/sim-range",
+    "bookId": "analogbook",
+    "title": "gm을 얻으면 선형 범위를 잃는다",
+    "link": "chapters/diffpair.html#sim-range"
+  },
+  {
+    "id": "analogbook/diffpair/sim-half",
+    "bookId": "analogbook",
+    "title": "꼬리 마디는 언제 가만히 있나",
+    "link": "chapters/diffpair.html#sim-half"
+  },
+  {
+    "id": "analogbook/diffpair/sim-icmr",
+    "bookId": "analogbook",
+    "title": "V CM 을 어디까지 움직일 수 있나",
+    "link": "chapters/diffpair.html#sim-icmr"
+  },
+  {
+    "id": "analogbook/diffpair/sim-cmrr",
+    "bookId": "analogbook",
+    "title": "CMRR은 무엇이 정하나",
+    "link": "chapters/diffpair.html#sim-cmrr"
+  },
+  {
+    "id": "analogbook/diffpair/sim-5t",
+    "bookId": "analogbook",
+    "title": "AB-1 1단: 살아 있는 5T OTA",
+    "link": "chapters/diffpair.html#sim-5t"
+  },
+  {
+    "id": "analogbook/diffpair/sim-offset",
+    "bookId": "analogbook",
+    "title": "어긋난 쌍은 곡선을 옆으로 민다",
+    "link": "chapters/diffpair.html#sim-offset"
+  },
+  {
+    "id": "analogbook/feedback/sim-loop",
+    "bookId": "analogbook",
+    "title": "A를 만 배 바꿔도 폐루프 이득은 1/β 근처에 머문다",
+    "link": "chapters/feedback.html#sim-loop"
+  },
+  {
+    "id": "analogbook/feedback/sim-acc",
+    "bookId": "analogbook",
+    "title": "\"12비트에는 루프 이득 몇 dB?\" 계산기",
+    "link": "chapters/feedback.html#sim-acc"
+  },
+  {
+    "id": "analogbook/feedback/sim-bw",
+    "bookId": "analogbook",
+    "title": "1/β 선을 끌면 대역은 교점을 따라 움직인다",
+    "link": "chapters/feedback.html#sim-bw"
+  },
+  {
+    "id": "analogbook/feedback/sim-thd",
+    "bookId": "analogbook",
+    "title": "같은 출력, 다른 왜곡: 피드백 유무의 THD",
+    "link": "chapters/feedback.html#sim-thd"
+  },
+  {
+    "id": "analogbook/feedback/sim-topo",
+    "bookId": "analogbook",
+    "title": "직렬은 키우고 병렬은 줄인다: 엔진으로 잰 R in ·R out",
+    "link": "chapters/feedback.html#sim-topo"
+  },
+  {
+    "id": "analogbook/feedback/sim-inv",
+    "bookId": "analogbook",
+    "title": "가상 접지: − 단자는 왜 0 V에 붙어 있나",
+    "link": "chapters/feedback.html#sim-inv"
+  },
+  {
+    "id": "analogbook/feedback/sim-pga",
+    "bookId": "analogbook",
+    "title": "AB-1 PGA: 트랜지스터 OTA로 이득 40을 만들고 루프 이득을 잰다",
+    "link": "chapters/feedback.html#sim-pga"
+  },
+  {
+    "id": "analogbook/feedback/sim-st",
+    "bookId": "analogbook",
+    "title": "슈미트 트리거: 양의 피드백이 채터링을 없앤다",
+    "link": "chapters/feedback.html#sim-st"
+  },
+  {
+    "id": "analogbook/feedback/sim-dl",
+    "bookId": "analogbook",
+    "title": "루프 지연이 늘면 음의 피드백도 울린다",
+    "link": "chapters/feedback.html#sim-dl"
+  },
+  {
+    "id": "analogbook/frequency/sim-rc",
+    "bookId": "analogbook",
+    "title": "주파수를 올리면 출력은 얼마나 작아지고 얼마나 늦어지나",
+    "link": "chapters/frequency.html#sim-rc"
+  },
+  {
+    "id": "analogbook/frequency/sim-bp",
+    "bookId": "analogbook",
+    "title": "보드 선도 놀이터: 극점·영점을 놓고 끌기",
+    "link": "chapters/frequency.html#sim-bp"
+  },
+  {
+    "id": "analogbook/frequency/sim-sp",
+    "bookId": "analogbook",
+    "title": "s 평면 · 보드 · 계단 응답을 한 번에",
+    "link": "chapters/frequency.html#sim-sp"
+  },
+  {
+    "id": "analogbook/frequency/sim-cs",
+    "bookId": "analogbook",
+    "title": "R D 를 키우면 이득은 오르고 대역은 줄고, 곱은 그대로",
+    "link": "chapters/frequency.html#sim-cs"
+  },
+  {
+    "id": "analogbook/frequency/sim-mil",
+    "bookId": "analogbook",
+    "title": "이득을 올리면 입력 극점이 내려온다",
+    "link": "chapters/frequency.html#sim-mil"
+  },
+  {
+    "id": "analogbook/frequency/sim-casc",
+    "bookId": "analogbook",
+    "title": "같은 이득, 다른 대역: 공통 소스 대 캐스코드",
+    "link": "chapters/frequency.html#sim-casc"
+  },
+  {
+    "id": "analogbook/frequency/sim-oc",
+    "bookId": "analogbook",
+    "title": "어느 커패시터가 대역을 잡아먹나",
+    "link": "chapters/frequency.html#sim-oc"
+  },
+  {
+    "id": "analogbook/frequency/sim-sf",
+    "bookId": "analogbook",
+    "title": "버퍼가 울린다: 소스 팔로워의 숨은 인덕터",
+    "link": "chapters/frequency.html#sim-sf"
+  },
+  {
+    "id": "analogbook/frequency/sim-ota",
+    "bookId": "analogbook",
+    "title": "AB-1 OTA: 보상 없이 두면, 그리고 C c 를 걸면",
+    "link": "chapters/frequency.html#sim-ota"
+  },
+  {
+    "id": "analogbook/glossary/sim-gloss",
+    "bookId": "analogbook",
+    "title": "용어 사전과 암기 카드",
+    "link": "chapters/glossary.html#sim-gloss"
+  },
+  {
+    "id": "analogbook/glossary/sim-calc",
+    "bookId": "analogbook",
+    "title": "손 계산기: 식 하나, 곡선 하나",
+    "link": "chapters/glossary.html#sim-calc"
+  },
+  {
+    "id": "analogbook/glossary/sim-units",
+    "bookId": "analogbook",
+    "title": "dB·단위 변환기",
+    "link": "chapters/glossary.html#sim-units"
+  },
+  {
+    "id": "analogbook/glossary/sim-quiz",
+    "bookId": "analogbook",
+    "title": "종합 퀴즈와 단계별 정답률",
+    "link": "chapters/glossary.html#sim-quiz"
+  },
+  {
+    "id": "analogbook/lab/sim-newton",
+    "bookId": "analogbook",
+    "title": "뉴턴 반복: 접선을 따라 해로 내려간다",
+    "link": "chapters/lab.html#sim-newton"
+  },
+  {
+    "id": "analogbook/lab/sim-lab",
+    "bookId": "analogbook",
+    "title": "회로도 편집기 + 브라우저 SPICE",
+    "link": "chapters/lab.html#sim-lab"
+  },
+  {
+    "id": "analogbook/lab/sim-chain",
+    "bookId": "analogbook",
+    "title": "AB-1 신호 사슬: 잡음 예산을 짜서 ENOB 10.5를 넘겨라",
+    "link": "chapters/lab.html#sim-chain"
+  },
+  {
+    "id": "analogbook/lab/sim-c1",
+    "bookId": "analogbook",
+    "title": "과제 1: 공통 소스 20 dB · 10 MHz · 200 µW",
+    "link": "chapters/lab.html#sim-c1"
+  },
+  {
+    "id": "analogbook/lab/sim-c2",
+    "bookId": "analogbook",
+    "title": "과제 2: C L 5 pF에서 PM ≥ 60°, GBW ≥ 20 MHz",
+    "link": "chapters/lab.html#sim-c2"
+  },
+  {
+    "id": "analogbook/lab/sim-c3",
+    "bookId": "analogbook",
+    "title": "과제 3: 면적으로 오프셋 줄이기, 대가는 위상 여유",
+    "link": "chapters/lab.html#sim-c3"
+  },
+  {
+    "id": "analogbook/ldo/sim-why",
+    "bookId": "analogbook",
+    "title": "배터리를 그대로 쓰면 전원이 춤춘다",
+    "link": "chapters/ldo.html#sim-why"
+  },
+  {
+    "id": "analogbook/ldo/sim-ldo",
+    "bookId": "analogbook",
+    "title": "살아 있는 LDO: 게이트가 부하를 따라 움직인다",
+    "link": "chapters/ldo.html#sim-ldo"
+  },
+  {
+    "id": "analogbook/ldo/sim-drop",
+    "bookId": "analogbook",
+    "title": "입력을 내리면 어디서 레귤레이션이 무너지나",
+    "link": "chapters/ldo.html#sim-drop"
+  },
+  {
+    "id": "analogbook/ldo/sim-size",
+    "bookId": "analogbook",
+    "title": "V SD 200 mV에서 10 mA를 내려면 W가 얼마여야 하나",
+    "link": "chapters/ldo.html#sim-size"
+  },
+  {
+    "id": "analogbook/ldo/sim-reg",
+    "bookId": "analogbook",
+    "title": "루프 이득이 레귤레이션을 정한다: 손 계산 vs 엔진",
+    "link": "chapters/ldo.html#sim-reg"
+  },
+  {
+    "id": "analogbook/ldo/sim-tran",
+    "bookId": "analogbook",
+    "title": "부하가 뛰면 출력 커패시터가 먼저 버틴다",
+    "link": "chapters/ldo.html#sim-tran"
+  },
+  {
+    "id": "analogbook/ldo/sim-stab",
+    "bookId": "analogbook",
+    "title": "부하 전류가 극점을 끌고 다닌다",
+    "link": "chapters/ldo.html#sim-stab"
+  },
+  {
+    "id": "analogbook/ldo/sim-psrr",
+    "bookId": "analogbook",
+    "title": "주파수마다 다른 PSRR: 1 MHz에서 40 dB를 지키나",
+    "link": "chapters/ldo.html#sim-psrr"
+  },
+  {
+    "id": "analogbook/ldo/sim-eff",
+    "bookId": "analogbook",
+    "title": "LDO는 남는 전압을 열로 버린다",
+    "link": "chapters/ldo.html#sim-eff"
+  },
+  {
+    "id": "analogbook/mirror/sim-copy",
+    "bookId": "analogbook",
+    "title": "전류 → 전압 → 전류: 단순 미러의 복사",
+    "link": "chapters/mirror.html#sim-copy"
+  },
+  {
+    "id": "analogbook/mirror/sim-ratio",
+    "bookId": "analogbook",
+    "title": "단위 소자 배치와 기울기 오차",
+    "link": "chapters/mirror.html#sim-ratio"
+  },
+  {
+    "id": "analogbook/mirror/sim-iv",
+    "bookId": "analogbook",
+    "title": "IOUT–VOUT 곡선 위의 커서",
+    "link": "chapters/mirror.html#sim-iv"
+  },
+  {
+    "id": "analogbook/mirror/sim-casc",
+    "bookId": "analogbook",
+    "title": "세 미러 비교: 출력 저항 대 헤드룸",
+    "link": "chapters/mirror.html#sim-casc"
+  },
+  {
+    "id": "analogbook/mirror/sim-mismatch",
+    "bookId": "analogbook",
+    "title": "미러 부정합 몬테카를로",
+    "link": "chapters/mirror.html#sim-mismatch"
+  },
+  {
+    "id": "analogbook/mirror/sim-dist",
+    "bookId": "analogbook",
+    "title": "전압으로 보낼까, 전류로 보낼까",
+    "link": "chapters/mirror.html#sim-dist"
+  },
+  {
+    "id": "analogbook/mirror/sim-ref",
+    "bookId": "analogbook",
+    "title": "전원과 온도를 흔들어 본 두 기준 전류",
+    "link": "chapters/mirror.html#sim-ref"
+  },
+  {
+    "id": "analogbook/mirror/sim-beta",
+    "bookId": "analogbook",
+    "title": "β-multiplier의 두 해와 스타트업",
+    "link": "chapters/mirror.html#sim-beta"
+  },
+  {
+    "id": "analogbook/mirror/sim-ab1",
+    "bookId": "analogbook",
+    "title": "AB-1 바이어스: M8 → M5, M7",
+    "link": "chapters/mirror.html#sim-ab1"
+  },
+  {
+    "id": "analogbook/mismatch/sim-dope",
+    "bookId": "analogbook",
+    "title": "도펀트 개수 요동: 두 쌍둥이의 VTH",
+    "link": "chapters/mismatch.html#sim-dope"
+  },
+  {
+    "id": "analogbook/mismatch/sim-pg",
+    "bookId": "analogbook",
+    "title": "펠그롬 직선: 4배 면적, 절반 σ",
+    "link": "chapters/mismatch.html#sim-pg"
+  },
+  {
+    "id": "analogbook/mismatch/sim-dpos",
+    "bookId": "analogbook",
+    "title": "오프셋은 어디서 오는가: 항별 분해",
+    "link": "chapters/mismatch.html#sim-dpos"
+  },
+  {
+    "id": "analogbook/mismatch/sim-mc",
+    "bookId": "analogbook",
+    "title": "몬테카를로: AB-1 오프셋 분포",
+    "link": "chapters/mismatch.html#sim-mc"
+  },
+  {
+    "id": "analogbook/mismatch/sim-gmid",
+    "bookId": "analogbook",
+    "title": "같은 면적, 다른 동작점: 오프셋 σ",
+    "link": "chapters/mismatch.html#sim-gmid"
+  },
+  {
+    "id": "analogbook/mismatch/sim-grad",
+    "bookId": "analogbook",
+    "title": "배치 편집기: 기울기 위의 A와 B",
+    "link": "chapters/mismatch.html#sim-grad"
+  },
+  {
+    "id": "analogbook/mismatch/sim-corner",
+    "bookId": "analogbook",
+    "title": "코너 × 온도: AB-1 OTA는 어디서 무너지나",
+    "link": "chapters/mismatch.html#sim-corner"
+  },
+  {
+    "id": "analogbook/mismatch/sim-yield",
+    "bookId": "analogbook",
+    "title": "꼬리 넓이 = 불량률",
+    "link": "chapters/mismatch.html#sim-yield"
+  },
+  {
+    "id": "analogbook/mismatch/sim-fix",
+    "bookId": "analogbook",
+    "title": "보정 전과 후: 잔여 오프셋",
+    "link": "chapters/mismatch.html#sim-fix"
+  },
+  {
+    "id": "analogbook/mosfet/sim-xsec",
+    "bookId": "analogbook",
+    "title": "게이트가 채널을 만들고, 드레인이 채널을 기울인다",
+    "link": "chapters/mosfet.html#sim-xsec"
+  },
+  {
+    "id": "analogbook/mosfet/sim-vccs",
+    "bookId": "analogbook",
+    "title": "저항을 두 배로 바꿔도 전류는 그대로인가",
+    "link": "chapters/mosfet.html#sim-vccs"
+  },
+  {
+    "id": "analogbook/mosfet/sim-idvgs",
+    "bookId": "analogbook",
+    "title": "로그 축으로 보면 문턱 아래가 보인다",
+    "link": "chapters/mosfet.html#sim-idvgs"
+  },
+  {
+    "id": "analogbook/mosfet/sim-idvds",
+    "bookId": "analogbook",
+    "title": "무릎의 왼쪽과 오른쪽",
+    "link": "chapters/mosfet.html#sim-idvds"
+  },
+  {
+    "id": "analogbook/mosfet/sim-map",
+    "bookId": "analogbook",
+    "title": "VGS–VDS 평면의 영역 지도",
+    "link": "chapters/mosfet.html#sim-map"
+  },
+  {
+    "id": "analogbook/mosfet/sim-clm",
+    "bookId": "analogbook",
+    "title": "짧은 채널은 기울고, 긴 채널은 평평하다",
+    "link": "chapters/mosfet.html#sim-clm"
+  },
+  {
+    "id": "analogbook/mosfet/sim-body",
+    "bookId": "analogbook",
+    "title": "소스가 바디보다 높으면 문턱이 오른다",
+    "link": "chapters/mosfet.html#sim-body"
+  },
+  {
+    "id": "analogbook/mosfet/sim-size",
+    "bookId": "analogbook",
+    "title": "원하는 전류를 내는 트랜지스터를 그려라",
+    "link": "chapters/mosfet.html#sim-size"
+  },
+  {
+    "id": "analogbook/mosfet/sim-tracer",
+    "bookId": "analogbook",
+    "title": "커브 트레이서: 이 장의 모든 곡선을 한 화면에",
+    "link": "chapters/mosfet.html#sim-tracer"
+  },
+  {
+    "id": "analogbook/noise/sim-rand",
+    "bookId": "analogbook",
+    "title": "잡음 파형, 히스토그램, PSD",
+    "link": "chapters/noise.html#sim-rand"
+  },
+  {
+    "id": "analogbook/noise/sim-rth",
+    "bookId": "analogbook",
+    "title": "저항 열잡음: 높이는 R·T, 넓이는 B",
+    "link": "chapters/noise.html#sim-rth"
+  },
+  {
+    "id": "analogbook/noise/sim-add",
+    "bookId": "analogbook",
+    "title": "잡음 더하기: 직각으로 잇는다",
+    "link": "chapters/noise.html#sim-add"
+  },
+  {
+    "id": "analogbook/noise/sim-ktc",
+    "bookId": "analogbook",
+    "title": "높이 × 대역 = kT/C",
+    "link": "chapters/noise.html#sim-ktc"
+  },
+  {
+    "id": "analogbook/noise/sim-nbw",
+    "bookId": "analogbook",
+    "title": "잡음 대역폭은 −3 dB 대역보다 넓다",
+    "link": "chapters/noise.html#sim-nbw"
+  },
+  {
+    "id": "analogbook/noise/sim-mos",
+    "bookId": "analogbook",
+    "title": "MOSFET 잡음 스펙트럼과 1/f 코너",
+    "link": "chapters/noise.html#sim-mos"
+  },
+  {
+    "id": "analogbook/noise/sim-inref",
+    "bookId": "analogbook",
+    "title": "AB-1 OTA 입력 환산 잡음: 누가 범인인가",
+    "link": "chapters/noise.html#sim-inref"
+  },
+  {
+    "id": "analogbook/noise/sim-chop",
+    "bookId": "analogbook",
+    "title": "초핑으로 1/f 잡음을 치운다",
+    "link": "chapters/noise.html#sim-chop"
+  },
+  {
+    "id": "analogbook/noise/sim-power",
+    "bookId": "analogbook",
+    "title": "잡음 절반은 전류 4배",
+    "link": "chapters/noise.html#sim-power"
+  },
+  {
+    "id": "analogbook/noise/sim-snr",
+    "bookId": "analogbook",
+    "title": "AB-1 SNR 예산 계산기",
+    "link": "chapters/noise.html#sim-snr"
+  },
+  {
+    "id": "analogbook/opamp/sim-spec",
+    "bookId": "analogbook",
+    "title": "사양서의 숫자는 어떤 회로에서 재는가",
+    "link": "chapters/opamp.html#sim-spec"
+  },
+  {
+    "id": "analogbook/opamp/sim-live",
+    "bookId": "analogbook",
+    "title": "AB-1 OTA: 손잡이 넷, 숫자 여섯",
+    "link": "chapters/opamp.html#sim-live"
+  },
+  {
+    "id": "analogbook/opamp/sim-wiz",
+    "bookId": "analogbook",
+    "title": "손 설계 마법사: 다섯 걸음과 검증",
+    "link": "chapters/opamp.html#sim-wiz"
+  },
+  {
+    "id": "analogbook/opamp/sim-sysos",
+    "bookId": "analogbook",
+    "title": "정합된 소자로도 오프셋이 생긴다",
+    "link": "chapters/opamp.html#sim-sysos"
+  },
+  {
+    "id": "analogbook/opamp/sim-slew",
+    "bookId": "analogbook",
+    "title": "작은 계단은 휘고, 큰 계단은 미끄러진다",
+    "link": "chapters/opamp.html#sim-slew"
+  },
+  {
+    "id": "analogbook/opamp/sim-swing",
+    "bookId": "analogbook",
+    "title": "사인을 키우면 어디서 잘리나",
+    "link": "chapters/opamp.html#sim-swing"
+  },
+  {
+    "id": "analogbook/opamp/sim-radar",
+    "bookId": "analogbook",
+    "title": "세 구조의 성격표",
+    "link": "chapters/opamp.html#sim-radar"
+  },
+  {
+    "id": "analogbook/opamp/sim-cmfb",
+    "bookId": "analogbook",
+    "title": "떠다니는 공통 모드를 붙잡는다",
+    "link": "chapters/opamp.html#sim-cmfb"
+  },
+  {
+    "id": "analogbook/opamp/sim-power",
+    "bookId": "analogbook",
+    "title": "전류를 두 배로 쓰면 무엇을 얻나",
+    "link": "chapters/opamp.html#sim-power"
+  },
+  {
+    "id": "analogbook/overview/sim-chain",
+    "bookId": "analogbook",
+    "title": "AB-1 신호 사슬: 10 mV가 숫자가 되기까지",
+    "link": "chapters/overview.html#sim-chain"
+  },
+  {
+    "id": "analogbook/overview/sim-inv",
+    "bookId": "analogbook",
+    "title": "인버터의 두 얼굴: 스위치인가, 증폭기인가",
+    "link": "chapters/overview.html#sim-inv"
+  },
+  {
+    "id": "analogbook/overview/sim-noise",
+    "bookId": "analogbook",
+    "title": "잡음 앞에서: 비트는 버티고, 아날로그 값은 바로 틀린다",
+    "link": "chapters/overview.html#sim-noise"
+  },
+  {
+    "id": "analogbook/overview/sim-db",
+    "bookId": "analogbook",
+    "title": "데시벨 감각: µV부터 V까지, Hz부터 GHz까지",
+    "link": "chapters/overview.html#sim-db"
+  },
+  {
+    "id": "analogbook/overview/sim-cs",
+    "bookId": "analogbook",
+    "title": "공통 소스 증폭기: 얼마나 크게 넣을 수 있나",
+    "link": "chapters/overview.html#sim-cs"
+  },
+  {
+    "id": "analogbook/overview/sim-radar",
+    "bookId": "analogbook",
+    "title": "꼭짓점 하나를 당기면 무엇이 끌려오나",
+    "link": "chapters/overview.html#sim-radar"
+  },
+  {
+    "id": "analogbook/overview/sim-scale",
+    "bookId": "analogbook",
+    "title": "노드가 작아질수록: 디지털은 줄고, 아날로그는 버틴다",
+    "link": "chapters/overview.html#sim-scale"
+  },
+  {
+    "id": "analogbook/overview/sim-flow",
+    "bookId": "analogbook",
+    "title": "설계 흐름: 문제는 어디서 발견되고, 어디로 돌아가나",
+    "link": "chapters/overview.html#sim-flow"
+  },
+  {
+    "id": "analogbook/pll/sim-ring",
+    "bookId": "analogbook",
+    "title": "홀수 인버터 고리에서 에지가 돈다",
+    "link": "chapters/pll.html#sim-ring"
+  },
+  {
+    "id": "analogbook/pll/sim-lc",
+    "bookId": "analogbook",
+    "title": "음저항이 탱크 손실을 이기면 진동이 자란다",
+    "link": "chapters/pll.html#sim-lc"
+  },
+  {
+    "id": "analogbook/pll/sim-vco",
+    "bookId": "analogbook",
+    "title": "VCO 조정 곡선과 K VCO",
+    "link": "chapters/pll.html#sim-vco"
+  },
+  {
+    "id": "analogbook/pll/sim-edge",
+    "bookId": "analogbook",
+    "title": "에지를 겹쳐 그리면 지터가 보인다",
+    "link": "chapters/pll.html#sim-edge"
+  },
+  {
+    "id": "analogbook/pll/sim-pn",
+    "bookId": "analogbook",
+    "title": "루프 대역이 적분 지터를 정한다",
+    "link": "chapters/pll.html#sim-pn"
+  },
+  {
+    "id": "analogbook/pll/sim-pfd",
+    "bookId": "analogbook",
+    "title": "위상차가 전류 펄스 폭이 된다",
+    "link": "chapters/pll.html#sim-pfd"
+  },
+  {
+    "id": "analogbook/pll/sim-loop",
+    "bookId": "analogbook",
+    "title": "2형 PLL의 개루프 보드 선도",
+    "link": "chapters/pll.html#sim-loop"
+  },
+  {
+    "id": "analogbook/pll/sim-adc",
+    "bookId": "analogbook",
+    "title": "지터 → ADC SNR 계산기",
+    "link": "chapters/pll.html#sim-adc"
+  },
+  {
+    "id": "analogbook/pll/sim-lock",
+    "bookId": "analogbook",
+    "title": "PLL 락 시뮬레이터: 4 MHz → N × 4 MHz",
+    "link": "chapters/pll.html#sim-lock"
+  },
+  {
+    "id": "analogbook/sigmadelta/sim-os",
+    "bookId": "analogbook",
+    "title": "오버샘플링: 넓이는 같고 대역 안 몫만 준다",
+    "link": "chapters/sigmadelta.html#sim-os"
+  },
+  {
+    "id": "analogbook/sigmadelta/sim-mod1",
+    "bookId": "analogbook",
+    "title": "1차 ΔΣ 변조기를 한 표본씩 돌린다",
+    "link": "chapters/sigmadelta.html#sim-mod1"
+  },
+  {
+    "id": "analogbook/sigmadelta/sim-sine",
+    "bookId": "analogbook",
+    "title": "비트열에서 사인을 되찾는다",
+    "link": "chapters/sigmadelta.html#sim-sine"
+  },
+  {
+    "id": "analogbook/sigmadelta/sim-ns",
+    "bookId": "analogbook",
+    "title": "잡음 성형 스펙트럼과 대역 내 SQNR",
+    "link": "chapters/sigmadelta.html#sim-ns"
+  },
+  {
+    "id": "analogbook/sigmadelta/sim-map",
+    "bookId": "analogbook",
+    "title": "성능 지도: 목표 해상도에 필요한 OSR",
+    "link": "chapters/sigmadelta.html#sim-map"
+  },
+  {
+    "id": "analogbook/sigmadelta/sim-stab",
+    "bookId": "analogbook",
+    "title": "입력 크기와 SQNR: 과부하 붕괴",
+    "link": "chapters/sigmadelta.html#sim-stab"
+  },
+  {
+    "id": "analogbook/sigmadelta/sim-idle",
+    "bookId": "analogbook",
+    "title": "작은 DC 입력이 만드는 톤",
+    "link": "chapters/sigmadelta.html#sim-idle"
+  },
+  {
+    "id": "analogbook/sigmadelta/sim-dec",
+    "bookId": "analogbook",
+    "title": "sinc^K 필터: 영점이 접힘 대역을 막는다",
+    "link": "chapters/sigmadelta.html#sim-dec"
+  },
+  {
+    "id": "analogbook/sigmadelta/sim-dem",
+    "bookId": "analogbook",
+    "title": "다중 비트 DAC 부정합과 DWA",
+    "link": "chapters/sigmadelta.html#sim-dem"
+  },
+  {
+    "id": "analogbook/singlestage/sim-cs",
+    "bookId": "analogbook",
+    "title": "동작점은 부하선을 따라 미끄러진다",
+    "link": "chapters/singlestage.html#sim-cs"
+  },
+  {
+    "id": "analogbook/singlestage/sim-gain",
+    "bookId": "analogbook",
+    "title": "R D 를 키우면 이득은 어디까지 오르나",
+    "link": "chapters/singlestage.html#sim-gain"
+  },
+  {
+    "id": "analogbook/singlestage/sim-swing",
+    "bookId": "analogbook",
+    "title": "큰 신호를 넣으면 출력은 어떻게 잘리나",
+    "link": "chapters/singlestage.html#sim-swing"
+  },
+  {
+    "id": "analogbook/singlestage/sim-active",
+    "bookId": "analogbook",
+    "title": "이득이 크면 출력 직류가 예민하다",
+    "link": "chapters/singlestage.html#sim-active"
+  },
+  {
+    "id": "analogbook/singlestage/sim-degen",
+    "bookId": "analogbook",
+    "title": "R S 하나로 왜곡이 얼마나 줄어드나",
+    "link": "chapters/singlestage.html#sim-degen"
+  },
+  {
+    "id": "analogbook/singlestage/sim-sf",
+    "bookId": "analogbook",
+    "title": "출력은 입력을 얼마나 잘 따라가나",
+    "link": "chapters/singlestage.html#sim-sf"
+  },
+  {
+    "id": "analogbook/singlestage/sim-cg",
+    "bookId": "analogbook",
+    "title": "소스로 들어가면 왜 저항이 작은가",
+    "link": "chapters/singlestage.html#sim-cg"
+  },
+  {
+    "id": "analogbook/singlestage/sim-cascode",
+    "bookId": "analogbook",
+    "title": "캐스코드 바이어스가 틀리면 무너진다",
+    "link": "chapters/singlestage.html#sim-cascode"
+  },
+  {
+    "id": "analogbook/singlestage/sim-compare",
+    "bookId": "analogbook",
+    "title": "단일단 구조 비교기",
+    "link": "chapters/singlestage.html#sim-compare"
+  },
+  {
+    "id": "analogbook/smallsignal/sim-tan",
+    "bookId": "analogbook",
+    "title": "접선의 기울기가 gm이다",
+    "link": "chapters/smallsignal.html#sim-tan"
+  },
+  {
+    "id": "analogbook/smallsignal/sim-dist",
+    "bookId": "analogbook",
+    "title": "진폭을 키우면 직선 근사가 깨진다",
+    "link": "chapters/smallsignal.html#sim-dist"
+  },
+  {
+    "id": "analogbook/smallsignal/sim-hyb",
+    "bookId": "analogbook",
+    "title": "살아 있는 하이브리드-π 모델",
+    "link": "chapters/smallsignal.html#sim-hyb"
+  },
+  {
+    "id": "analogbook/smallsignal/sim-gro",
+    "bookId": "analogbook",
+    "title": "고유 이득 지도: L과 VOV",
+    "link": "chapters/smallsignal.html#sim-gro"
+  },
+  {
+    "id": "analogbook/smallsignal/sim-gmid",
+    "bookId": "analogbook",
+    "title": "gm/ID는 30을 넘지 못한다",
+    "link": "chapters/smallsignal.html#sim-gmid"
+  },
+  {
+    "id": "analogbook/smallsignal/sim-ft",
+    "bookId": "analogbook",
+    "title": "효율을 올리면 느려진다: fT vs gm/ID",
+    "link": "chapters/smallsignal.html#sim-ft"
+  },
+  {
+    "id": "analogbook/smallsignal/sim-look",
+    "bookId": "analogbook",
+    "title": "AB180 NMOS 설계표",
+    "link": "chapters/smallsignal.html#sim-look"
+  },
+  {
+    "id": "analogbook/smallsignal/sim-tri",
+    "bookId": "analogbook",
+    "title": "설계 공간 삼각형",
+    "link": "chapters/smallsignal.html#sim-tri"
+  },
+  {
+    "id": "analogbook/smallsignal/sim-size",
+    "bookId": "analogbook",
+    "title": "gm/ID 사이징 계산기",
+    "link": "chapters/smallsignal.html#sim-size"
+  },
+  {
+    "id": "analogbook/stability/sim-osc",
+    "bookId": "analogbook",
+    "title": "되돌아온 신호가 180° 늦으면 빼기가 더하기가 된다",
+    "link": "chapters/stability.html#sim-osc"
+  },
+  {
+    "id": "analogbook/stability/sim-pm",
+    "bookId": "analogbook",
+    "title": "위상 여유를 끌어내리면 계단 응답이 울린다",
+    "link": "chapters/stability.html#sim-pm"
+  },
+  {
+    "id": "analogbook/stability/sim-nyq",
+    "bookId": "analogbook",
+    "title": "궤적이 −1을 감싸면 발산한다",
+    "link": "chapters/stability.html#sim-nyq"
+  },
+  {
+    "id": "analogbook/stability/sim-split",
+    "bookId": "analogbook",
+    "title": "C c 를 키우면 두 극점이 갈라진다",
+    "link": "chapters/stability.html#sim-split"
+  },
+  {
+    "id": "analogbook/stability/sim-rhp",
+    "bookId": "analogbook",
+    "title": "R z 로 영점을 무한대 너머 좌반면으로 옮긴다",
+    "link": "chapters/stability.html#sim-rhp"
+  },
+  {
+    "id": "analogbook/stability/sim-cl",
+    "bookId": "analogbook",
+    "title": "C L 을 2 pF에서 20 pF로 늘리면",
+    "link": "chapters/stability.html#sim-cl"
+  },
+  {
+    "id": "analogbook/stability/sim-lab",
+    "bookId": "analogbook",
+    "title": "AB-1 OTA 보상 실험실: C c · R z · C L",
+    "link": "chapters/stability.html#sim-lab"
+  },
+  {
+    "id": "analogbook/stability/sim-mb",
+    "bookId": "analogbook",
+    "title": "루프를 끊지 않고 루프 이득 재기",
+    "link": "chapters/stability.html#sim-mb"
+  },
+  {
+    "id": "analogbook/switchedcap/sim-sh",
+    "bookId": "analogbook",
+    "title": "추적하고, 붙잡는다",
+    "link": "chapters/switchedcap.html#sim-sh"
+  },
+  {
+    "id": "analogbook/switchedcap/sim-trk",
+    "bookId": "analogbook",
+    "title": "추적 구간 안에 1 LSB까지 갈 수 있는가",
+    "link": "chapters/switchedcap.html#sim-trk"
+  },
+  {
+    "id": "analogbook/switchedcap/sim-alias",
+    "bookId": "analogbook",
+    "title": "fs/2를 넘으면 접힌다",
+    "link": "chapters/switchedcap.html#sim-alias"
+  },
+  {
+    "id": "analogbook/switchedcap/sim-ktc",
+    "bookId": "analogbook",
+    "title": "표본마다 다른 잡음, LSB와 비교",
+    "link": "chapters/switchedcap.html#sim-ktc"
+  },
+  {
+    "id": "analogbook/switchedcap/sim-ron",
+    "bookId": "analogbook",
+    "title": "Ron 곡선과 그것이 만드는 고조파",
+    "link": "chapters/switchedcap.html#sim-ron"
+  },
+  {
+    "id": "analogbook/switchedcap/sim-inj",
+    "bookId": "analogbook",
+    "title": "오차 mV와 속도 ns의 맞바꿈",
+    "link": "chapters/switchedcap.html#sim-inj"
+  },
+  {
+    "id": "analogbook/switchedcap/sim-scr",
+    "bookId": "analogbook",
+    "title": "전하 묶음이 저항을 만든다",
+    "link": "chapters/switchedcap.html#sim-scr"
+  },
+  {
+    "id": "analogbook/switchedcap/sim-int",
+    "bookId": "analogbook",
+    "title": "SC 적분기와 저역 필터: 클록이 주파수를 정한다",
+    "link": "chapters/switchedcap.html#sim-int"
+  },
+  {
+    "id": "analogbook/switchedcap/sim-set",
+    "bookId": "analogbook",
+    "title": "AB-1 OTA는 반 주기 안에 12비트로 정착하는가",
+    "link": "chapters/switchedcap.html#sim-set"
+  },
+  {
     "id": "processbook/advanced/sim-3d",
     "bookId": "processbook",
     "title": "트랜지스터 구조 비교",

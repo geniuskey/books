@@ -286,6 +286,49 @@
       ]
     },
     {
+      "id": "analogbook",
+      "code": "ANA",
+      "title": "AnalogBook",
+      "subtitle": "반도체 아날로그 회로설계 교과서",
+      "headline": "읽는 대신 만지는 아날로그",
+      "description": "MOSFET 소신호 모델과 gm/ID에서 단일단·차동 증폭기, 주파수 응답과 피드백, 연산 증폭기 설계와 보상, 잡음·부정합, 밴드갭·LDO, 스위치드 커패시터, ADC·ΔΣ·PLL까지. 브라우저 안의 SPICE로 회로를 직접 그려 동작점과 보드 선도를 돌려 봅니다.",
+      "url": "https://analogbook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/analogbook",
+      "field": "semiconductor",
+      "stage": "design",
+      "status": "published",
+      "level": "공대 학부",
+      "chapters": 20,
+      "simulators": 171,
+      "color": "#c2255c",
+      "colorDark": "#f783ac",
+      "topics": [
+        "소신호·gm/ID",
+        "증폭기·전류 미러",
+        "주파수 응답",
+        "피드백·안정도",
+        "연산 증폭기",
+        "잡음·부정합",
+        "밴드갭·LDO",
+        "ADC·ΔΣ·PLL"
+      ],
+      "motif": "analog",
+      "featured": [
+        {
+          "title": "위상 여유와 계단 응답",
+          "desc": "위상 여유를 끌어내리면 보드 선도의 교차점이 움직이고 계단 응답이 울린다",
+          "link": "chapters/stability.html#sim-pm",
+          "image": "img/sims/analogbook-sim-pm.jpg"
+        },
+        {
+          "title": "SAR ADC 이진 탐색",
+          "desc": "커패시터 DAC가 한 비트씩 시험하며 입력 전압을 반으로 좁혀 간다",
+          "link": "chapters/adc.html#sim-sar",
+          "image": "img/sims/analogbook-sim-sar.jpg"
+        }
+      ]
+    },
+    {
       "id": "processbook",
       "code": "PRC",
       "title": "ProcessBook",
@@ -746,22 +789,6 @@
         "칩렛과 HBM 배치"
       ],
       "stage": "device"
-    },
-    {
-      "id": "analogbook",
-      "code": "ANA",
-      "title": "AnalogBook",
-      "subtitle": "아날로그 회로",
-      "description": "증폭기, 전류 미러, 비교기, ADC. 디지털 뒤에 숨은 아날로그.",
-      "field": "semiconductor",
-      "status": "planned",
-      "phase": 2,
-      "ideas": [
-        "소신호 이득과 주파수 응답",
-        "차동 증폭기 오프셋",
-        "SAR ADC 한 비트씩 결정하기"
-      ],
-      "stage": "design"
     },
     {
       "id": "powerbook",

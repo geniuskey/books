@@ -246,6 +246,14 @@
       "question": "시뮬레이터는 I-V 곡선을 어떻게 한 점씩 계산할까요?",
       "concepts": ["device", "structure"]
     },
+    "analogbook/sim-pm": {
+      "question": "피드백 증폭기는 왜 울리고, 위상 여유는 그걸 어떻게 막을까요?",
+      "concepts": ["design", "systems"]
+    },
+    "analogbook/sim-sar": {
+      "question": "ADC는 아날로그 전압을 어떻게 한 비트씩 숫자로 바꿀까요?",
+      "concepts": ["design", "computing"]
+    },
     "lithobook/sim-pipe": {
       "question": "설계한 패턴은 공정을 거치며 어떻게 달라질까요?",
       "concepts": [
