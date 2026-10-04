@@ -47,7 +47,7 @@ EB.start("home", (d) => {
       a.className = "field-card";
       a.href = EB.fieldUrl(f.id);
       EB.tint(a, f);
-      a.innerHTML = `${EB.miniWafer(f.books)}
+      a.innerHTML = `${EB.fieldArt(f)}
         <div class="fc-body">
           <div class="fc-en">${esc(f.en)}</div>
           <h3>${esc(f.name)}</h3>

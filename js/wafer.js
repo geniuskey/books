@@ -198,6 +198,6 @@
       const cls = b ? b.status : "empty";
       return `<rect class="m-${cls}" x="${(s.x - die / 2).toFixed(1)}" y="${(s.y - die / 2).toFixed(1)}" width="${die.toFixed(1)}" height="${die.toFixed(1)}" rx="5"/>`;
     }).join("");
-    return `<svg class="mini-wafer" viewBox="0 0 400 400" aria-hidden="true"><circle cx="200" cy="200" r="${R}" class="m-disc"/>${dies}<circle cx="200" cy="${200 + R}" r="9" class="m-notch"/></svg>`;
+    return `<svg class="mini-wafer" viewBox="0 0 400 400" aria-hidden="true"><circle cx="200" cy="200" r="${R}" class="m-disc"/>${dies}</svg>`;
   };
 })();

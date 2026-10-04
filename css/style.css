@@ -568,12 +568,18 @@ section.block { padding: 56px 0; border-top: 1px solid var(--border); }
 @media (prefers-reduced-motion: reduce) { .field-card { transition: none; } .field-card:hover { transform: none; } }
 .mini-wafer { flex: none; width: 108px; height: 108px; transition: transform .6s; }
 .field-card:hover .mini-wafer { transform: rotate(-12deg); }
-.mini-wafer .m-disc { fill: var(--surface-2); stroke: var(--wafer-edge); stroke-width: 4; }
-.mini-wafer .m-notch { fill: var(--bg-elev); stroke: var(--wafer-edge); stroke-width: 4; }
+.mini-wafer .m-disc { fill: color-mix(in srgb, var(--c) 7%, var(--bg-elev)); }
 .mini-wafer .m-empty { fill: var(--die-empty); }
 .mini-wafer .m-published { fill: var(--c); }
 .mini-wafer .m-writing { fill: color-mix(in srgb, var(--c) 18%, var(--die-empty)); stroke: var(--c); stroke-width: 4; stroke-dasharray: 9 6; }
 .mini-wafer .m-planned { fill: color-mix(in srgb, var(--c) 32%, var(--die-empty)); }
+.field-art { flex: none; width: 108px; height: 108px; color: var(--c); }
+.field-art .fa-backdrop { fill: color-mix(in srgb, var(--c) 7%, var(--bg-elev)); }
+.field-art .fa-paper { fill: var(--bg-elev); }
+.field-art .fa-tint { fill: color-mix(in srgb, var(--c) 16%, var(--bg-elev)); }
+.field-art .fa-solid { fill: currentColor; stroke: none; }
+.field-art .fa-muted { opacity: .45; }
+.field-art .fa-accent { stroke-width: 3; }
 .fc-body { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 6px; }
 .fc-en { font-family: var(--mono); font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--c); font-weight: 600; }
 .field-card h3 { margin: 0; font-size: 20px; letter-spacing: -0.02em; }
