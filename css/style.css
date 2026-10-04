@@ -802,14 +802,46 @@ footer p { margin: 0; }
 /* 실험 탐색과 문제별 학습 경로 */
 [hidden] { display: none !important; }
 .discovery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 20px; }
-.experiment, .learning-path, .entry-card { border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-elev); overflow: hidden; }
-.experiment img { display: block; width: 100%; height: auto; aspect-ratio: 16/10; object-fit: cover; object-position: top; border-bottom: 1px solid var(--border); }
-.experiment .body, .learning-path, .entry-card { padding: 22px; }
-.experiment h2, .entry-card h2 { font-size: 21px; margin: 8px 0; }
-.experiment p, .learning-path p, .entry-card p { color: var(--text-dim); }
-.experiment .tags { margin: 16px 0; }
-.experiment .tags a { font-size: 13px; background: var(--surface); padding: 4px 8px; border-radius: 6px; }
-.experiment .source { font-size: 13px; color: var(--text-dim); }
+.learning-path, .entry-card { border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-elev); overflow: hidden; }
+.learning-path, .entry-card { padding: 22px; }
+.entry-card h2 { font-size: 21px; margin: 8px 0; }
+.learning-path p, .entry-card p { color: var(--text-dim); }
+body[data-page="simulators"] .page-head { padding: 26px 0 10px; }
+body[data-page="simulators"] .page-head h1 { margin: 0 0 15px; font-size: clamp(28px, 3vw, 34px); }
+body[data-page="simulators"] .lib-filters { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 0; }
+.experiment-results-bar { display: flex; flex-basis: 100%; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 20px; }
+.experiment-results-bar #shown { margin: 0; color: var(--text-dim); font-size: 13px; }
+.experiment-results-bar label { display: inline-flex; align-items: center; gap: 8px; color: var(--text-dim); font-size: 13px; white-space: nowrap; }
+.experiment-results-bar select { padding: 5px 8px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-elev); color: var(--text); font: inherit; }
+.experiment-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-elev); }
+.experiment-table { width: 100%; min-width: 780px; border-collapse: collapse; font-size: 13px; line-height: 1.4; }
+.experiment-table th { padding: 10px 12px; border-bottom: 1px solid var(--border); background: var(--surface); color: var(--text-dim); text-align: left; font-weight: 700; white-space: nowrap; }
+.experiment-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.experiment-table tbody tr:last-child td { border-bottom: 0; }
+.experiment-table tbody tr:nth-child(even) { background: color-mix(in srgb, var(--surface) 35%, var(--bg-elev)); }
+.experiment-table tbody tr:hover { background: var(--surface); }
+.experiment-table th:first-child, .experiment-table td:first-child { width: 66px; }
+.experiment-table th:nth-child(2) { width: 12%; }
+.experiment-table th:nth-child(3) { width: 20%; }
+.experiment-table th:nth-child(4) { width: 48%; }
+.column-filter-trigger { display: inline-flex; align-items: center; gap: 4px; padding: 0; border: 0; background: none; color: inherit; font: inherit; font-weight: inherit; cursor: pointer; white-space: nowrap; }
+.column-filter-trigger .filter-count { display: inline-block; min-width: 24px; text-align: left; }
+.column-filter-trigger > span:last-child { color: var(--text-faint); font-size: 14px; }
+.column-filter-trigger.active { color: var(--accent); }
+.filter-popover { position: fixed; z-index: 50; width: min(280px, calc(100vw - 16px)); max-height: calc(100vh - 16px); overflow-y: auto; padding: 8px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-elev); color: var(--text); box-shadow: 0 12px 32px rgba(0,0,0,.18); font-size: 13px; line-height: 1.4; }
+.filter-options { max-height: 220px; overflow-y: auto; }
+.filter-option { display: flex; align-items: center; gap: 7px; padding: 5px 4px; cursor: pointer; }
+.filter-option span { flex: 1; }
+.filter-option small { color: var(--text-faint); font: 11px var(--mono); }
+.filter-empty { margin: 8px 4px; color: var(--text-dim); }
+.filter-clear { margin: 5px 4px 2px; padding: 3px 0; border: 0; background: none; color: var(--accent); font: 600 12px var(--font); cursor: pointer; }
+.experiment-table .experiment-number { color: var(--text-faint); font: 12px var(--mono); }
+.experiment-table .experiment-title a { color: var(--text); font-weight: 600; }
+.experiment-table .experiment-title a span { color: var(--accent); font-size: 11px; }
+.experiment-table .experiment-book { color: var(--text-dim); }
+.experiment-pages { display: flex; justify-content: center; align-items: center; gap: 16px; padding: 28px 0 48px; }
+.experiment-pages button { padding: 9px 16px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-elev); color: var(--text); font: inherit; cursor: pointer; }
+.experiment-pages button:disabled { opacity: .45; cursor: default; }
 .learning-path { margin-bottom: 24px; scroll-margin-top: 100px; }
 .learning-path h2 { margin-top: 0; }
 .learning-path li { padding: 10px 0; }

@@ -24,14 +24,16 @@ def unique(items, label):
     return set(ids)
 
 
-catalog, learning, discovery = read('books.json'), read('learning.json'), read('discovery.json')
+catalog, learning, discovery, anchors = read('books.json'), read('learning.json'), read('discovery.json'), read('experiment-catalog.json')
 book_ids = unique(catalog['books'], 'book')
 fields = unique(catalog['fields'], 'field')
 concept_ids = unique(learning['concepts'], 'concept')
 unique(learning['paths'], 'path')
 unique(discovery['experiments'], 'experiment')
+unique(anchors, 'catalog experiment')
 books = {b['id']: b for b in catalog['books']}
 expected = set()
+featured_links = set()
 checked_anchors = 0
 skipped_anchors = 0
 
@@ -63,11 +65,19 @@ for b in catalog['books']:
         eid = b['id'] + '/' + f['link'].split('#')[-1]
         check(eid not in expected, f'Duplicate featured ID: {eid}')
         expected.add(eid)
+        featured_links.add(b['id'] + '/' + f['link'])
         check((ROOT / f['image']).is_file(), f'Missing image: {f["image"]}')
         anchor(b['id'], f['link'])
 
 check(expected == set(learning['experiments']), 'Editorial metadata does not match featured experiments')
-check(expected == {e['id'] for e in discovery['experiments']}, 'Discovery index has missing/extra experiments')
+catalog_links = {item['bookId'] + '/' + item['link'] for item in anchors}
+check(featured_links <= catalog_links, 'Featured experiment is absent from full catalog')
+check({item['id'] for item in anchors} == {e['id'] for e in discovery['experiments']}, 'Discovery index has missing/extra experiments')
+for item in anchors:
+    check(item['bookId'] in books and books[item['bookId']]['status'] == 'published', f'Invalid catalog book: {item["id"]}')
+    check(bool(item['title'].strip()), f'Untitled catalog experiment: {item["id"]}')
+    if item['bookId'] in books:
+        anchor(item['bookId'], item['link'])
 for eid, e in learning['experiments'].items():
     check(bool(e['question'].strip()), f'Missing learning question: {eid}')
     check(bool(e['concepts']) and set(e['concepts']) <= concept_ids, f'Invalid concept reference: {eid}')
@@ -85,8 +95,13 @@ spec = importlib.util.spec_from_file_location('builder', ROOT / 'tools/build-dis
 builder = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(builder)
 check(builder.build() == discovery, 'Generated discovery.json is stale; run tools/build-discovery.py')
+if all((ROOT.parent / b['id'] / 'chapters').is_dir() for b in catalog['books'] if b['status'] == 'published'):
+    spec = importlib.util.spec_from_file_location('collector', ROOT / 'tools/collect-experiments.py')
+    collector = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(collector)
+    check(collector.collect() == anchors, 'Experiment catalog is stale; run tools/collect-experiments.py')
 
 if errors:
     print('\n'.join(errors), file=sys.stderr)
     sys.exit(1)
-print(f'OK: {len(expected)} experiments, {len(learning["paths"])} paths, {checked_anchors} local anchors; {skipped_anchors} anchors need external checking')
+print(f'OK: {len(anchors)} experiments ({len(expected)} enriched), {len(learning["paths"])} paths, {checked_anchors} local anchors; {skipped_anchors} anchors need external checking')
