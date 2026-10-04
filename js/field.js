@@ -55,7 +55,8 @@ EB.start(null, (d) => {
     EB.tint(a, b);
     a.href = EB.readUrl(b) || `#card-${b.id}`;
     if (!EB.readUrl(b)) a.dataset.jump = b.id;
-    a.innerHTML = `<span class="map-book-code">${esc(b.code)}</span><span class="map-book-name"><b>${esc(b.title)}</b><small>${esc(b.subtitle)}</small></span><span class="map-book-status">${esc(EB.isPublished(b) ? "읽기 ↗" : EB.status(b))}</span>`;
+    const mapTitle = b.title.replace(/Book$/, " Book").replace(/([a-z])([A-Z][a-z])/g, "$1 $2");
+    a.innerHTML = `<span class="map-book-code">${esc(b.code)}</span><span class="map-book-name"><b>${esc(mapTitle)}</b><small>${esc(b.subtitle)}</small></span>`;
     return a;
   }
 
