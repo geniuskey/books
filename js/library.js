@@ -41,20 +41,10 @@ EB.start("library", (d) => {
     status: [{ v: "all", t: "모든 상태" }, ...Object.entries(d.statusLabels).map(([v, t]) => ({ v, t }))],
   };
   Object.entries(groups).forEach(([key, opts]) => {
-    const box = $(`#f-${key}`);
-    opts.forEach((o) => {
-      const b = document.createElement("button");
-      b.type = "button";
-      b.textContent = o.t;
-      b.dataset.v = o.v;
-      if (o.wing) b.dataset.wing = o.wing;
-      b.setAttribute("aria-pressed", String(o.v === "all"));
-      box.appendChild(b);
-    });
-    box.addEventListener("click", (e) => {
-      const b = e.target.closest("button");
-      if (!b) return;
-      state[key] = b.dataset.v;
+    const select = $(`#f-${key}`);
+    opts.forEach((o) => select.add(new Option(o.t, o.v)));
+    select.addEventListener("change", () => {
+      state[key] = select.value;
       if (key === "wing") state.field = "all";
       sync();
     });
@@ -67,15 +57,13 @@ EB.start("library", (d) => {
   ["wing", "field", "status"].forEach((k) => {
     if (groups[k].some((o) => o.v === qs.get(k))) state[k] = qs.get(k);
   });
+  if (state.wing !== "all" && !groups.field.some((o) => o.v === state.field && (!o.wing || o.wing === state.wing))) state.field = "all";
   if (qs.get("q")) search.value = qs.get("q");
 
   function sync() {
-    Object.keys(groups).forEach((key) => {
-      EB.$$(`#f-${key} button`).forEach((b) => {
-        b.setAttribute("aria-pressed", String(b.dataset.v === state[key]));
-        if (key === "field") b.hidden = state.wing !== "all" && b.dataset.wing && b.dataset.wing !== state.wing;
-      });
-    });
+    const field = $("#f-field");
+    field.replaceChildren(...groups.field.filter((o) => !o.wing || state.wing === "all" || o.wing === state.wing).map((o) => new Option(o.t, o.v)));
+    Object.keys(groups).forEach((key) => { $(`#f-${key}`).value = state[key]; });
     const q = search.value.trim().toLowerCase();
     const params = new URLSearchParams();
     Object.entries(state).forEach(([k, v]) => params.set(k, v));
