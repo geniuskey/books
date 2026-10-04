@@ -31,11 +31,13 @@ def build():
         if eid in validation:
             experiment['validationSummary'] = validation[eid]['summary']
         experiments.append(experiment)
-    result = dict(schemaVersion=1, experiments=experiments, concepts=learning['concepts'], paths=learning['paths'])
+    result = dict(schemaVersion=1, experiments=experiments, concepts=learning['concepts'], paths=learning['paths'],
+                  bookPaths=learning['bookPaths'])
     return result
 
 
 if __name__ == '__main__':
     result = build()
     (ROOT / 'data/discovery.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-    print(f'Built {len(result["experiments"])} experiments and {len(result["paths"])} paths')
+    print(f'Built {len(result["experiments"])} experiments, {len(result["paths"])} experiment paths, '
+          f'{len(result["bookPaths"])} book paths')

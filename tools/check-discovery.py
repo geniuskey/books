@@ -31,6 +31,7 @@ book_ids = unique(catalog['books'], 'book')
 fields = unique(catalog['fields'], 'field')
 concept_ids = unique(learning['concepts'], 'concept')
 unique(learning['paths'], 'path')
+unique(learning['bookPaths'], 'book path')
 unique(discovery['experiments'], 'experiment')
 unique(anchors, 'catalog experiment')
 books = {b['id']: b for b in catalog['books']}
@@ -96,13 +97,35 @@ for eid, record in validation.items():
     check(bool(record.get('cases')), f'No reference cases: {eid}')
 for p in learning['paths']:
     check(bool(p['steps']) and bool(p['challenge']), f'Incomplete path: {p["id"]}')
+    for key in ('audience', 'duration', 'outcome', 'scenario', 'prerequisites', 'note'):
+        check(bool(p.get(key, '').strip()), f'Missing path {key}: {p["id"]}')
+    check(bool(p.get('checks')) and all(isinstance(c, str) and c.strip() for c in p.get('checks', [])),
+          f'Missing path answer checks: {p["id"]}')
     for step in p['steps']:
+        for key in ('title', 'duration', 'why', 'task', 'record'):
+            check(bool(step.get(key, '').strip()), f'Missing step {key}: {p["id"]}')
         check(step['bookId'] in book_ids, f'Unknown book: {step["bookId"]}')
         if step['bookId'] in books:
             check(books[step['bookId']]['status'] == 'published', f'Unpublished path step: {step["bookId"]}')
             anchor(step['bookId'], step['link'])
 
 # Rebuild in memory, so checking never edits tracked files.
+covered_books = set()
+for p in learning['bookPaths']:
+    for key in ('group', 'title', 'start', 'outcome'):
+        check(bool(p.get(key, '').strip()), f'Missing book path {key}: {p["id"]}')
+    check(bool(p.get('steps')), f'Empty book path: {p["id"]}')
+    for step in p.get('steps', []):
+        bid = step.get('bookId')
+        check(bid in books and books[bid]['status'] == 'published', f'Invalid book path book: {bid}')
+        covered_books.add(bid)
+        for key in ('focus', 'why'):
+            check(bool(step.get(key, '').strip()), f'Missing book path step {key}: {p["id"]}')
+check(covered_books == {b['id'] for b in books.values() if b['status'] == 'published'},
+      'Book paths must cover every published book')
+all_path_ids = [p['id'] for p in learning['paths'] + learning['bookPaths']]
+check(len(all_path_ids) == len(set(all_path_ids)), 'Book and experiment path IDs overlap')
+
 import importlib.util
 spec = importlib.util.spec_from_file_location('builder', ROOT / 'tools/build-discovery.py')
 builder = importlib.util.module_from_spec(spec)
@@ -119,5 +142,7 @@ if all((ROOT.parent / b['id'] / 'chapters').is_dir() for b in catalog['books'] i
 if errors:
     print('\n'.join(errors), file=sys.stderr)
     sys.exit(1)
-print(f'OK: {len(anchors)} experiments ({len(learning["experiments"])} enriched, {len(validation)} reference-checked), {len(learning["paths"])} paths, {checked_anchors} local anchors; {skipped_anchors} anchors need external checking')
+print(f'OK: {len(anchors)} experiments ({len(learning["experiments"])} enriched, {len(validation)} reference-checked), '
+      f'{len(learning["paths"])} experiment paths, {len(learning["bookPaths"])} book paths covering {len(covered_books)} books, '
+      f'{checked_anchors} local anchors; {skipped_anchors} anchors need external checking')
 print(model_check.stdout.strip())
