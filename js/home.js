@@ -30,17 +30,31 @@ EB.start("home", (d) => {
     event.preventDefault();
     if (cancelBookOpening) return;
 
-    const rect = link.getBoundingClientRect();
-    const width = Math.min(240, innerWidth * .39, innerHeight * .43);
-    const height = width * 1.42;
-    // Preserve the shelf spine width at the initial animation scale.
-    const depth = rect.width * height / rect.height;
-    const front = depth / 2;
     const layer = document.createElement("div");
     layer.className = "book-opening";
     layer.style.setProperty("--book-color", book.color);
-    layer.style.setProperty("--opening-width", `${width}px`);
-    layer.style.setProperty("--opening-depth", `${depth}px`);
+    function updateGeometry() {
+      const rect = link.getBoundingClientRect();
+      const width = Math.min(240, innerWidth * .39, innerHeight * .43);
+      const height = width * 1.42;
+      const perspective = 1400;
+      // At rotateY(90deg), the spine is width / 2 closer to the camera.
+      // Cancel that perspective magnification when matching the shelf bounds.
+      const initialScale = rect.height / height * (1 - width / (2 * perspective));
+      // Keep every face and hinge in the same responsive coordinate system.
+      const depth = rect.width * height / rect.height;
+      const values = {
+        "opening-width": `${width}px`, "opening-depth": `${depth}px`,
+        "opening-perspective": `${perspective}px`,
+        "opening-gap": `${depth * .04}px`,
+        "opening-x": `${rect.left + rect.width / 2 - document.documentElement.clientWidth / 2}px`,
+        "opening-y": `${rect.top + rect.height / 2 - document.documentElement.clientHeight / 2}px`,
+        "opening-scale": initialScale,
+      };
+      Object.entries(values).forEach(([name, value]) => layer.style.setProperty(`--${name}`, value));
+    }
+    updateGeometry();
+    window.addEventListener("resize", updateGeometry);
     layer.innerHTML = `<div class="book-opening-shade"></div>
       <div class="book-opening-stage" aria-hidden="true"><div class="book-opening-model">
         <div class="opening-back"></div>
@@ -49,6 +63,7 @@ EB.start("home", (d) => {
         <div class="opening-paper opening-leaf leaf-one"></div><div class="opening-paper opening-leaf leaf-two"></div>
         <div class="opening-cover"><div class="opening-cover-front"><small>${esc(book.fieldObj.name)}</small><strong>${esc(title)}</strong><span>${esc(book.subtitle)}</span><em>${esc(book.code)} / GENIUSKEY</em></div><div class="opening-cover-inside"></div></div>
         <div class="opening-spine">${esc(title)}</div>
+        <div class="opening-gutter"></div>
       </div></div><p class="book-opening-caption" role="status">${esc(title)} 펼치는 중…</p>`;
     document.body.appendChild(layer);
     link.classList.add("book-is-opening");
@@ -56,6 +71,7 @@ EB.start("home", (d) => {
     let timer;
     function cleanup() {
       clearTimeout(timer);
+      window.removeEventListener("resize", updateGeometry);
       animations.forEach((animation) => animation.cancel());
       layer.remove();
       link.classList.remove("book-is-opening");
@@ -91,27 +107,27 @@ EB.start("home", (d) => {
     }
     const animate = (selector, frames, options) => animations.push($(selector, layer).animate(frames, { fill: "both", ...options }));
     try {
-      const x = rect.left + rect.width / 2 - innerWidth / 2;
-      const y = rect.top + rect.height / 2 - innerHeight / 2;
       animate(".book-opening-stage", [
-        { transform: `translate(${x}px, ${y}px) scale(${rect.height / height})`, offset: 0 },
-        { transform: `translate(${x}px, ${y - 28}px) scale(${rect.height / height * 1.12})`, offset: .2 },
-        { transform: "translate(0, 0) scale(1)", offset: .65 },
-        { transform: `translate(${width * .35}px, 0) scale(1)`, offset: 1 },
-      ], { duration: 1150, easing: "cubic-bezier(.22,.7,.25,1)" });
+        { transform: "translate(var(--opening-x), var(--opening-y)) scale(var(--opening-scale))", offset: 0 },
+        { transform: "translate(var(--opening-x), calc(var(--opening-y) - 28px)) scale(var(--opening-scale))", offset: .15 },
+        { transform: "translate(0, 0) scale(1)", offset: .55 },
+        { transform: "translate(calc(var(--opening-width) * .35), 0) scale(1)", offset: 1 },
+      ], { duration: 1150, easing: "linear" });
       animate(".book-opening-model", [
         { transform: "rotateX(0deg) rotateY(90deg) rotateZ(0deg)" },
         { transform: "rotateX(8deg) rotateY(24deg) rotateZ(-5deg)", offset: .55 },
         { transform: "rotateX(8deg) rotateY(-10deg) rotateZ(-2deg)" },
-      ], { duration: 1050, easing: "ease-in-out" });
-      animate(".opening-cover", [{ transform: `translateZ(${front}px) rotateY(0deg)` }, { transform: `translateZ(${front}px) rotateY(-158deg)` }], { delay: 100, duration: 850, easing: "cubic-bezier(.3,0,.2,1)" });
+      ], { duration: 650, easing: "linear" });
+      // All inner edges share one binding axis. Tiny closed angles keep the
+      // faces ordered without separating their hinges along the book depth.
+      animate(".opening-cover", [{ transform: "translateZ(var(--paper-front)) rotateY(-.9deg)" }, { transform: "translateZ(var(--paper-front)) rotateY(-158deg)" }], { delay: 550, duration: 650, easing: "cubic-bezier(.3,0,.2,1)" });
       [".leaf-one", ".leaf-two"].forEach((selector, i) => animate(selector, [
-        { transform: `translateZ(${front - 2 - i * 2}px) rotateY(0deg)` },
-        { transform: `translateZ(${front - 2 - i * 2}px) rotateY(${-148 + i * 12}deg)` },
-      ], { delay: 220 + i * 90, duration: 800, easing: "ease-in-out" }));
+        { transform: `translateZ(var(--paper-front)) rotateY(${-0.6 + i * .3}deg)` },
+        { transform: `translateZ(var(--paper-front)) rotateY(${-148 + i * 12}deg)` },
+      ], { delay: 650 + i * 70, duration: 650, easing: "ease-in-out" }));
       animate(".book-opening-shade", [{ opacity: 0 }, { opacity: 1 }], { duration: 250 });
       animate(".book-opening-caption", [{ opacity: 0 }, { opacity: 1 }], { delay: 150, duration: 250 });
-      timer = setTimeout(openDestination, 1300);
+      timer = setTimeout(openDestination, 1500);
     } catch (error) {
       openDestination();
     }
