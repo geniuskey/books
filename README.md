@@ -77,7 +77,8 @@ Work/Life는 홈의 큐레이션으로 유지하고, 실험에는 분야를 가�
 - `data/experiment-catalog.json`: 형제 폴더의 출간된 책에서 실험 앵커와 제목을 수집한 스냅샷입니다. 각 책의 HTML이 바뀌면 다시 수집합니다.
 - `data/learning.json`: 개념 ID·한영 동의어, 일부 실험의 학습 질문·개념 연결, 명시적인 학습 경로. 책 배열의 진열 순서와 경로의 순서는 독립입니다.
 - `data/model-validation.json`: 기준 사례를 실제 책의 계산 함수에 실행한 기록입니다. 확인 날짜·범위·담당 방식·소스 해시·입출력 사례를 보관합니다.
-- `data/discovery.json`: 전체 실험 목록에 `books.json`과 `learning.json`의 정보를 합쳐 생성하는 검색용 파일. 직접 수정하지 않습니다.
+- `data/discovery.json`, `data/paths.json`: `tools/build-discovery.py`가 만드는 생성 파일. 직접 수정하지 않습니다. `discovery.json`은 `simulators.html`의 검색용 실험 목록이고, `paths.json`은 `paths.html`의 읽기·실험 경로입니다. 페이지마다 필요한 파일만 받도록 나눴습니다.
+  - 내려받는 크기를 줄이려고 공백 없이 저장하고, 페이지가 `books.json`으로 복원할 수 있는 값은 뺍니다. 빼는 값은 `bookId`(ID 앞부분), `url`(책 URL + `chapters/<chapter>.html#<anchor>`, 다른 형태일 때만 `link`를 남김), `level`(책 난이도), 그리고 빈 값과 기본값(`reviewStatus: unreviewed`)입니다.
 - 실험 ID는 `bookId/chapterName/anchorId`입니다. 기존 앵커를 바꾸면 연결된 메타데이터와 외부 링크도 함께 마이그레이션해야 합니다.
 - `reviewStatus: unreviewed`는 계산 모델의 검증을 완료하지 않았다는 내부 상태입니다. `reference-checked`는 기록된 입력과 경계값의 계산만 통과했다는 뜻이며, 실제 현상에 대한 예측력이나 전체 화면 조작을 보증하지 않습니다. 검색 등록이나 링크 확인만으로 상태를 변경하지 않습니다.
 - 검색은 전체 실험의 제목·책 이름과, 보강된 일부 실험의 설명·질문·개념 동의어를 대상으로 합니다. 모든 챕터 본문을 검색하는 기능은 아직 없습니다. 난이도는 개별 실험 평가가 아닌 책 메타데이터입니다.

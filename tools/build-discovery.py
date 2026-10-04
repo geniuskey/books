@@ -1,8 +1,18 @@
-"""Build the static discovery index from book anchors and editorial metadata."""
+"""Build the static discovery index from book anchors and editorial metadata.
+
+Writes two files so each page downloads only what it renders:
+- data/discovery.json: the experiment search index (simulators.html)
+- data/paths.json: the reading and experiment paths (paths.html)
+
+Experiments omit what the page can rebuild from books.json: bookId (the ID prefix),
+url (book URL + chapters/<chapter>.html#<anchor>, unless `link` says otherwise),
+level (the book's level), and empty or default fields.
+"""
 import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+OUTPUTS = ('discovery.json', 'paths.json')
 
 
 def build():
@@ -15,29 +25,39 @@ def build():
                 for book in books.values() for item in book.get('featured', [])}
     experiments = []
     for item in anchors:
-        book = books[item['bookId']]
         eid = item['id']
+        if eid.split('/')[0] != item['bookId']:
+            raise ValueError(f'Experiment ID must start with its book ID: {eid}')
         feature = featured.get(item['bookId'] + '/' + item['link'])
         meta = learning['experiments'].get(item['bookId'] + '/' + item['link'].split('#')[-1])
-        experiment = dict(
-            id=eid, bookId=item['bookId'], title=item['title'],
-            description=(meta.get('description', '') if meta else '') or (feature['desc'] if feature else ''),
-            url=book['url'].rstrip('/') + '/' + item['link'],
-            image=feature['image'] if feature else '',
-            question=meta['question'] if meta else '',
-            concepts=meta['concepts'] if meta else [],
-            level=book.get('level', '입문'), reviewStatus='reference-checked' if eid in validation else 'unreviewed',
-        )
+        experiment = dict(id=eid, title=item['title'])
+        _, chapter, anchor = (eid.split('/', 2) + ['', ''])[:3]
+        if item['link'] != f'chapters/{chapter}.html#{anchor}':
+            experiment['link'] = item['link']
+        description = (meta.get('description', '') if meta else '') or (feature['desc'] if feature else '')
+        if description:
+            experiment['description'] = description
+        if meta and meta['question']:
+            experiment['question'] = meta['question']
+        if meta and meta['concepts']:
+            experiment['concepts'] = meta['concepts']
         if eid in validation:
+            experiment['reviewStatus'] = 'reference-checked'
             experiment['validationSummary'] = validation[eid]['summary']
         experiments.append(experiment)
-    result = dict(schemaVersion=1, experiments=experiments, concepts=learning['concepts'], paths=learning['paths'],
-                  bookPaths=learning['bookPaths'])
-    return result
+    discovery = dict(schemaVersion=2, experiments=experiments, concepts=learning['concepts'])
+    paths = dict(schemaVersion=2, paths=learning['paths'], bookPaths=learning['bookPaths'])
+    return {'discovery.json': discovery, 'paths.json': paths}
+
+
+def dump(data):
+    return json.dumps(data, ensure_ascii=False, separators=(',', ':')) + '\n'
 
 
 if __name__ == '__main__':
     result = build()
-    (ROOT / 'data/discovery.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-    print(f'Built {len(result["experiments"])} experiments, {len(result["paths"])} experiment paths, '
-          f'{len(result["bookPaths"])} book paths')
+    for name, data in result.items():
+        (ROOT / 'data' / name).write_text(dump(data), encoding='utf-8')
+    print(f'Built {len(result["discovery.json"]["experiments"])} experiments, '
+          f'{len(result["paths.json"]["paths"])} experiment paths, '
+          f'{len(result["paths.json"]["bookPaths"])} book paths')

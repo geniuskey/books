@@ -1,11 +1,15 @@
+/* 페이지에 필요한 파일만, books.json과 동시에 요청한다 */
+const discoveryData = fetch(document.body.dataset.page === "paths" ? "data/paths.json" : "data/discovery.json")
+  .then((response) => {
+    if (!response.ok) throw new Error("실험 목록 로딩 실패");
+    return response.json();
+  });
+discoveryData.catch(() => {});
 EB.start(document.body.dataset.page, async (d) => {
   "use strict";
   const { $, $$, esc } = EB;
-  const response = await fetch("data/discovery.json");
-  if (!response.ok) throw new Error("실험 목록 로딩 실패");
-  const data = await response.json();
+  const data = await discoveryData;
   const books = Object.fromEntries(d.books.map((b) => [b.id, b]));
-  const concepts = Object.fromEntries(data.concepts.map((c) => [c.id, c]));
   const normalize = (s) => s.normalize("NFKC").toLowerCase();
   if (document.body.dataset.page === "paths") {
     const bookPaths = data.bookPaths;
@@ -50,6 +54,19 @@ EB.start(document.body.dataset.page, async (d) => {
     revealPath();
     return;
   }
+  /* 생성 파일에서 생략한 값(책 ID·URL·난이도·빈 필드)을 되살린다 */
+  const concepts = Object.fromEntries(data.concepts.map((c) => [c.id, c]));
+  data.experiments.forEach((e) => {
+    const [bookId, chapter, ...anchor] = e.id.split("/");
+    const book = books[bookId];
+    e.bookId = bookId;
+    e.url = book.url.replace(/\/$/, "") + "/" + (e.link || `chapters/${chapter}.html#${anchor.join("/")}`);
+    e.level = book.level || "입문";
+    e.description ??= "";
+    e.question ??= "";
+    e.concepts ??= [];
+    e.reviewStatus ??= "unreviewed";
+  });
   const search = $("#search");
   const params = new URLSearchParams(location.search);
   search.value = params.get("q") || "";

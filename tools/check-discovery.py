@@ -151,7 +151,10 @@ import importlib.util
 spec = importlib.util.spec_from_file_location('builder', ROOT / 'tools/build-discovery.py')
 builder = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(builder)
-check(builder.build() == discovery, 'Generated discovery.json is stale; run tools/build-discovery.py')
+for name, data in builder.build().items():
+    path = ROOT / 'data' / name
+    check(path.is_file() and path.read_text(encoding='utf-8') == builder.dump(data),
+          f'Generated {name} is stale; run tools/build-discovery.py')
 model_check = subprocess.run(['node', str(ROOT / 'tools/check-models.cjs')], capture_output=True, text=True)
 check(model_check.returncode == 0, 'Model reference checks failed: ' + (model_check.stderr or model_check.stdout).strip())
 if all((ROOT.parent / b['id'] / 'chapters').is_dir() for b in catalog['books'] if b['status'] == 'published'):
