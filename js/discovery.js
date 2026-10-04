@@ -31,7 +31,7 @@ EB.start(document.body.dataset.page, async (d) => {
       <section class="path-case" aria-labelledby="${esc(p.id)}-case"><h3 id="${esc(p.id)}-case">따라갈 사례</h3><p>${esc(p.scenario)}</p><p class="path-case-note">${esc(p.note)}</p></section>
       <ol class="path-steps">${p.steps.map((s, i) => `<li><div class="path-step-head"><h3>${esc(s.title)}</h3><span class="path-meta">약 ${esc(s.duration)}</span></div>
         <p>${esc(s.why)}</p><p><b>해볼 일</b> ${esc(s.task)}</p><p class="path-record"><b>남길 기록</b> ${esc(s.record)}</p>
-        <a class="path-open" href="${esc(new URL(s.link, books[s.bookId].url).href)}">${i + 1}단계 실험 열기 →</a><span class="path-book">${esc(books[s.bookId].title)}</span></li>`).join("")}</ol>
+        <a class="path-open" href="${esc(new URL(s.link, books[s.bookId].url).href)}" target="_blank" rel="noopener">${i + 1}단계 실험 열기 →</a><span class="path-book">${esc(books[s.bookId].title)}</span></li>`).join("")}</ol>
       <section class="challenge" aria-labelledby="${esc(p.id)}-challenge"><h3 id="${esc(p.id)}-challenge">처음 질문에 답해 보세요</h3><p>${esc(p.challenge)}</p><h4>답변 점검</h4><ul>${p.checks.map((c) => `<li>${esc(c)}</li>`).join("")}</ul></section>
       <p class="path-footer"><a href="simulators.html?q=${encodeURIComponent(p.query)}">관련 실험 더 찾기 →</a><a href="#${esc(p.id)}">이 경로 링크</a><a href="#learning-paths">다른 경로 고르기 ↑</a></p>
     </article></details>`).join("")}</section>`;
@@ -179,7 +179,7 @@ EB.start(document.body.dataset.page, async (d) => {
       return `<tr><td class="experiment-number">${String((page - 1) * pageSize + i + 1).padStart(4, "0")}</td>
         <td>${esc(book.fieldObj.name)}</td>
         <td><a class="experiment-book" href="${esc(book.url)}">${esc(book.title)}</a></td>
-        <td class="experiment-title"><a href="${esc(e.url)}">${esc(e.title)} <span aria-hidden="true">↗</span></a>
+        <td class="experiment-title"><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)} <span aria-hidden="true">↗</span></a>
           ${e.description ? `<p class="experiment-description">${esc(e.description)}</p>` : ""}
           ${e.question ? `<p class="experiment-question"><b>살펴볼 질문</b> ${esc(e.question)}</p>` : ""}
           ${e.reviewStatus === "reference-checked" ? `<p class="experiment-validation"><b>기준 사례 확인</b> ${esc(e.validationSummary)}</p>` : ""}</td>

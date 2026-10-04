@@ -207,6 +207,8 @@ EB.start("home", (d) => {
       const a = document.createElement("a");
       a.className = "home-experiment";
       a.href = f.book.url + f.link;
+      a.target = "_blank";
+      a.rel = "noopener";
       EB.tint(a, f.book);
       a.innerHTML = `<div class="home-experiment-image"><img src="${esc(f.image)}" alt="${esc(f.title)} 시뮬레이터 화면" loading="lazy"></div>
         <div class="home-experiment-body"><span class="home-experiment-book">${esc(f.book.title)}</span><h3>${esc(question)}</h3><p>${esc(f.desc)}</p><span class="home-experiment-action">${esc(f.title)} 열기 <span aria-hidden="true">↗</span></span></div>`;
