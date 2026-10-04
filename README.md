@@ -56,7 +56,7 @@ python3 -m http.server 8000   # → http://localhost:8000
 | `headline`, `url`, `repo` | 출간·집필 중인 책의 한 줄 문구, 사이트 주소, GitHub 주소 |
 | `chapters`, `simulators`, `level`, `topics` | 출간된 책의 챕터 수, 시뮬레이터 수, 난이도, 주제어 |
 | `color`, `colorDark` | 책 대표색 (없으면 분야 색). 기본은 각 책 사이트의 `--accent`지만, 같은 분야에서 비슷한 색이 겹치면 이 사이트에서만 다른 색으로 바꿔 씁니다 |
-| `motif` | 표지 일러스트 (`memory`, `pixel`, `layers`, `attention`, `aperture`, `logic`, `circuit`, `package`, `car`, `wafermap`, `litho`, `probe`, `soc`, `subpixel`, `shmoo`; 없으면 기본 격자). 새 그림은 `js/covers.js`에 추가 |
+| `motif` | 표지 일러스트 (`memory`, `pixel`, `layers`, `attention`, `aperture`, `logic`, `circuit`, `package`, `car`, `wafermap`, `litho`, `probe`, `soc`, `subpixel`, `shmoo`, `lens`; 없으면 기본 격자). 새 그림은 `js/covers.js`에 추가 |
 | `featured` | 대표 시뮬레이터: `title`, `desc`, `link`(책 주소 기준 상대 경로, 예: `chapters/hbm.html#sim-h3`), `image`(`img/sims/` 아래 캡처) |
 
 새 주제는 먼저 `data/editorial-backlog.json`에 아이디어로 보관합니다. 독자 한 유형, 기존 책으로 해결되지 않는 질문, 차별화된 대표 실험을 정한 뒤 `books.json`에 `status: "planned"`로 올립니다. 쓰기 시작하면 `writing`, 출간하면 `published`로 바꾸며 주소와 숫자를 채웁니다.
@@ -65,7 +65,7 @@ python3 -m http.server 8000   # → http://localhost:8000
 
 홈 분야 카드는 책이 한 권 이상 있는 분야를 모두 표시하고, 출간 전인 분야는 "준비 중"으로 표시합니다. 건강 분야는 BodyBook 한 권으로 시작하며, 다른 건강 주제는 편집 아이디어로 보관합니다.
 
-현재 다음 차례는 집필 예정인 OpticsBook입니다. ElectricBook·StatBook은 후속 후보로 옮겼습니다. OpticsBook은 반도체 분야의 기초 물리로 분류하며, 이미지 센서 개발에 필요한 회절·PSF·MTF, 마이크로렌즈·픽셀 광학 스택·입사각·광학 크로스토크에 집중합니다. SensorBook의 센서 구조·회로·신호 처리 설명을 광학 원리와 설계 변수로 보완합니다.
+OpticsBook을 출간해 반도체 분야의 기초 물리로 분류했습니다. 이미지 센서 개발에 필요한 회절·PSF·MTF, 박막, 마이크로렌즈·픽셀 광학 스택·입사각·광학 크로스토크를 다루며, SensorBook의 센서 구조·회로·신호 처리 설명을 광학 원리와 설계 변수로 보완합니다. 읽기 경로 `lens-to-pixel`은 OpticsBook에서 SensorBook으로 이어집니다. 현재 다음 차례(1단계)에는 책이 없고, ElectricBook·StatBook 등은 후속 후보입니다.
 
 `og.png`(공유 미리보기 이미지)와 `img/sims/`의 시뮬레이터 화면은 캡처 이미지라 책이 늘거나 시뮬레이터가 바뀌면 다시 캡처해 주세요. 시뮬레이터 캡처는 각 책 페이지에서 `#sim-… .sim-view` 영역을 가로 720px JPEG로 저장한 것입니다.
 

@@ -681,18 +681,28 @@
       "id": "opticsbook",
       "code": "OPT",
       "title": "OpticsBook",
-      "subtitle": "이미지 센서를 위한 광학",
-      "description": "기하광학과 파동광학에서 회절·간섭, PSF·MTF, 박막과 편광까지. 이미지 센서의 마이크로렌즈·픽셀 광학 스택·입사각·광학 크로스토크를 연결하며 빛이 픽셀에 도달하고 흡수되는 과정을 배웁니다.",
+      "subtitle": "이미지 센서를 위한 광학 교과서",
+      "headline": "렌즈를 지나 실리콘에 닿기까지",
+      "description": "기하광학과 파동광학에서 간섭·회절·편광, 박막 TMM, PSF·MTF, CRA와 마이크로렌즈, RCWA·FDTD까지 — 빛이 렌즈를 지나 1 µm도 안 되는 픽셀에 흡수되기까지를 슬라이더로 직접 계산하며 배웁니다.",
+      "url": "https://opticsbook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/opticsbook",
       "field": "semiconductor",
       "stage": "physics",
-      "status": "planned",
-      "phase": 1,
-      "ideas": [
-        "파장·개구와 회절 PSF·MTF 비교",
-        "마이크로렌즈 형상·위치와 입사각에 따른 집광",
-        "픽셀 광학 스택의 반사·투과·흡수",
-        "픽셀 크기·파장·입사각과 광학 크로스토크"
-      ]
+      "status": "published",
+      "level": "공대 학부",
+      "chapters": 18,
+      "simulators": 128,
+      "color": "#e67700",
+      "colorDark": "#ffa94d",
+      "topics": [
+        "회절·PSF",
+        "MTF·샘플링",
+        "박막 TMM",
+        "CRA·마이크로렌즈",
+        "픽셀 광학 스택",
+        "RCWA·FDTD"
+      ],
+      "motif": "lens"
     },
     {
       "id": "sensorbook",

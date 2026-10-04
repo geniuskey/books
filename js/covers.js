@@ -335,6 +335,19 @@
       });
       return svg(s);
     },
+    // 볼록 렌즈가 광선을 모으고 초점에서 에어리 고리가 맥동한다
+    lens() {
+      const fx = 176, fy = 65; let s = "";
+      s += `<path d="M58 65H198" stroke="${W}" stroke-opacity=".2" stroke-dasharray="3 4"/>`;
+      [-36, -22, -8, 8, 22, 36].forEach((h, k) => {
+        s += `<path class="cv-flow" style="animation-delay:${(k * 0.12).toFixed(2)}s" d="M60 ${fy + h}H112L${fx} ${fy}" fill="none" stroke="#ffd38a" stroke-opacity=".85" stroke-width="1.3" stroke-dasharray="6 4"/>`;
+      });
+      s += `<path d="M112 20Q132 65 112 110Q92 65 112 20Z" fill="${W}" fill-opacity=".3" stroke="${W}" stroke-opacity=".8" stroke-width="1.4"/>`;
+      [14, 9, 4.5].forEach((r, k) => {
+        s += `<circle class="cv-pulse" style="animation-delay:${(k * 0.3).toFixed(1)}s" cx="${fx}" cy="${fy}" r="${r}" fill="${W}" fill-opacity="${(0.12 + k * 0.3).toFixed(2)}"/>`;
+      });
+      return svg(s);
+    },
     // 기본: 다이 격자
     grid() {
       let s = "";

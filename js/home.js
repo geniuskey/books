@@ -24,7 +24,7 @@ EB.start("home", (d) => {
     analogbook: "아날로그 회로", processbook: "제조 공정", lithobook: "노광",
     etchbook: "식각", yieldbook: "수율 분석", failurebook: "불량 분석",
     tcadbook: "소자 시뮬레이션", packagingbook: "패키징", testbook: "반도체 검사",
-    memorybook: "메모리", sensorbook: "이미지 센서", displaybook: "디스플레이",
+    memorybook: "메모리", opticsbook: "센서 광학", sensorbook: "이미지 센서", displaybook: "디스플레이",
     chipindustrybook: "반도체 산업", computerbook: "컴퓨터", aibook: "인공지능",
     carbook: "자동차", shipbook: "선박", phonebook: "스마트폰",
     colorbook: "색채공학", moneybook: "돈과 금융", stockbook: "주식", camerabook: "카메라",
