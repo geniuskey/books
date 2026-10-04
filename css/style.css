@@ -558,18 +558,6 @@ section.block { padding: 56px 0; border-top: 1px solid var(--border); }
 .sign small { color: var(--text-dim); font-size: 13.5px; }
 .sign a { margin-left: auto; font-weight: 600; font-size: 14px; }
 
-/* ---------- Tools ---------- */
-.tools { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
-.tool {
-  background: var(--bg-elev); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px;
-  display: flex; flex-direction: column; gap: 8px;
-}
-.tool h3 { margin: 0; font-size: 18px; }
-.tool h3 small { font-weight: 500; color: var(--text-dim); font-size: 14px; margin-left: 6px; }
-.tool p { margin: 0; color: var(--text-dim); font-size: 14.5px; }
-.tool .rel { font-size: 13px; color: var(--text-faint); }
-.tool .links { display: flex; gap: 14px; font-size: 14px; font-weight: 600; margin-top: 4px; }
-
 /* ---------- Wafer: 집필 예정·전체 모드 ---------- */
 .wafer .die.planned .body { fill: color-mix(in srgb, var(--c) 20%, var(--die-empty)); fill-opacity: 1; stroke: color-mix(in srgb, var(--c) 45%, transparent); stroke-width: .8; }
 .wafer .die.planned text { fill: var(--c); opacity: .85; }

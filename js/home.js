@@ -99,19 +99,6 @@ EB.start("home", (d) => {
     $("#author").hidden = true;
   }
 
-  // 도구·데이터
-  const tl = $("#tool-list");
-  (d.tools || []).forEach((t) => {
-    const rel = (t.related || []).map((id) => d.books.find((b) => b.id === id)).filter(Boolean);
-    const el = document.createElement("div");
-    el.className = "tool";
-    el.innerHTML = `<h3>${esc(t.title)}<small>${esc(t.subtitle)}</small></h3>
-      <p>${esc(t.description)}</p>
-      ${rel.length ? `<div class="rel">함께 읽기: ${rel.map((b) => `<a href="${esc(b.url)}">${esc(b.title)}</a>`).join(", ")}</div>` : ""}
-      <div class="links"><a href="${esc(t.url)}">열기 →</a>${t.repo ? `<a href="${esc(t.repo)}">GitHub</a>` : ""}</div>`;
-    tl.appendChild(el);
-  });
-
   // 해시로 들어온 경우(index.html#life 등) 렌더링 뒤에 다시 맞춘다
   if (location.hash) { const t = document.getElementById(location.hash.slice(1)); if (t) t.scrollIntoView(); }
 });
