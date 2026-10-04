@@ -56,7 +56,7 @@
     h.innerHTML = `<div class="wrap">
       <a class="brand" href="/"><img src="favicon.svg" alt=""> Books <small>인터랙티브 교과서 시리즈</small></a>
       <nav class="topnav" aria-label="주요 메뉴">
-        <details class="nav-fields"><summary>분야 <span aria-hidden="true">⌄</span></summary><div class="nav-fields-menu"></div></details>
+        <details class="nav-fields"><summary>분야 <svg class="dropdown-triangle" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4h10L6 10z"/></svg></summary><div class="nav-fields-menu"></div></details>
         ${NAV.map((n) => `<a href="${n.href}"${n.key === active ? ' aria-current="page"' : ""}>${n.label}</a>`).join("")}
       </nav>
       <div class="actions">
