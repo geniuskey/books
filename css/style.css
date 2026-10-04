@@ -548,14 +548,14 @@ section.block { padding: 56px 0; border-top: 1px solid var(--border); }
 .map-relation span { position: absolute; bottom: 8px; left: 50%; width: 70px; transform: translateX(-50%); font-size: 9px; text-align: center; padding: 2px 4px; border-radius: 4px; background: var(--surface); }
 .map-note { margin: 18px 0 0; color: var(--text-dim); font-size: 11px; }
 @media (min-width: 1000px) {
-  .map-group:nth-child(4) { grid-column: 3; grid-row: 2; }
-  .map-group:nth-child(5) { grid-column: 2; grid-row: 2; }
-  .map-group:nth-child(6) { grid-column: 1; grid-row: 2; }
-  .map-group:nth-child(3) .map-relation { top: 100%; left: 50%; width: 1px; height: 50px; }
-  .map-group:nth-child(3) .map-relation b { top: auto; bottom: -10px; right: -7px; transform: none; }
-  .map-group:nth-child(3) .map-relation span { bottom: 12px; left: 8px; width: 100px; transform: none; }
-  .map-group:nth-child(4) .map-relation, .map-group:nth-child(5) .map-relation { left: auto; right: 100%; }
-  .map-group:nth-child(4) .map-relation b, .map-group:nth-child(5) .map-relation b { right: auto; left: -1px; transform: rotate(90deg); }
+  .knowledge-map:not(.semiconductor-map) .map-group:nth-child(4) { grid-column: 3; grid-row: 2; }
+  .knowledge-map:not(.semiconductor-map) .map-group:nth-child(5) { grid-column: 2; grid-row: 2; }
+  .knowledge-map:not(.semiconductor-map) .map-group:nth-child(6) { grid-column: 1; grid-row: 2; }
+  .knowledge-map:not(.semiconductor-map) .map-group:nth-child(3) .map-relation { top: 100%; left: 50%; width: 1px; height: 50px; }
+  .knowledge-map:not(.semiconductor-map) .map-group:nth-child(3) .map-relation b { top: auto; bottom: -10px; right: -7px; transform: none; }
+  .knowledge-map:not(.semiconductor-map) .map-group:nth-child(3) .map-relation span { bottom: 12px; left: 8px; width: 100px; transform: none; }
+  .knowledge-map:not(.semiconductor-map) .map-group:nth-child(4) .map-relation, .knowledge-map:not(.semiconductor-map) .map-group:nth-child(5) .map-relation { left: auto; right: 100%; }
+  .knowledge-map:not(.semiconductor-map) .map-group:nth-child(4) .map-relation b, .knowledge-map:not(.semiconductor-map) .map-group:nth-child(5) .map-relation b { right: auto; left: -1px; transform: rotate(90deg); }
 }
 @media (max-width: 999px) {
   .knowledge-map { grid-template-columns: 1fr; gap: 48px; }
@@ -565,6 +565,26 @@ section.block { padding: 56px 0; border-top: 1px solid var(--border); }
   .map-relation b { top: auto; bottom: -10px; right: -7px; transform: none; }
   .map-relation span { bottom: 12px; left: 8px; width: 150px; transform: none; text-align: left; }
   .map-heading { align-items: start; flex-direction: column; }
+}
+.semiconductor-map { gap: 24px 16px; }
+.semiconductor-map .map-relation span { display: none; }
+.semiconductor-map .map-relation { top: 50%; left: 100%; width: 16px; height: 1px; }
+.semiconductor-map .map-relation b { top: -13px; right: -1px; bottom: auto; transform: rotate(-90deg); }
+@media (min-width: 1100px) {
+  .semiconductor-map { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .semiconductor-map .map-group { padding: 12px; }
+  .semiconductor-map .map-group h3 { font-size: 16px; }
+}
+@media (min-width: 700px) and (max-width: 1099px) {
+  .semiconductor-map { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .semiconductor-map .map-group:nth-child(3) .map-relation { display: none; }
+}
+@media (min-width: 480px) and (max-width: 699px) {
+  .semiconductor-map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .semiconductor-map .map-group:nth-child(even) .map-relation { display: none; }
+}
+@media (max-width: 479px) {
+  .semiconductor-map .map-relation { display: none; }
 }
 @media (max-width: 540px) {
   .field-intro { padding-top: 22px; }

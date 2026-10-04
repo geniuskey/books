@@ -29,6 +29,7 @@ EB.start(null, (d) => {
   $("#flow-title").textContent = map?.title || `${f.name} 지식 지도`;
   $("#flow-desc").textContent = map?.desc || f.desc;
   const chain = $("#chain");
+  if (f.id === "semiconductor") chain.classList.add("semiconductor-map");
   groups.forEach((g, i) => {
     const section = document.createElement("section");
     section.className = "map-group";
