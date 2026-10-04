@@ -370,6 +370,33 @@
       ]
     },
     {
+      "id": "etchbook",
+      "code": "ETC",
+      "title": "EtchBook",
+      "subtitle": "반도체 식각 교과서",
+      "headline": "깎아서 새긴다",
+      "description": "습식 식각부터 플라스마·시스, RIE와 이방성, 선택비, ARDE, 보잉, 마이크로트렌칭, 원자층 식각까지. 가상의 EB-20 트렌치를 따라 이온·라디칼·고분자와 시간을 바꾸며 단면이 깎이는 과정을 직접 봅니다.",
+      "url": "https://etchbook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/etchbook",
+      "field": "semiconductor",
+      "stage": "process",
+      "status": "published",
+      "level": "공대 학부",
+      "chapters": 18,
+      "simulators": 103,
+      "color": "#c2255c",
+      "colorDark": "#f783ac",
+      "topics": [
+        "습식·건식 식각",
+        "플라스마·시스",
+        "RIE·이방성",
+        "선택비·프로파일",
+        "ARDE·보잉",
+        "원자층 식각"
+      ],
+      "motif": "layers"
+    },
+    {
       "id": "yieldbook",
       "code": "YLD",
       "title": "YieldBook",
@@ -1225,16 +1252,19 @@
       "id": "stockbook",
       "code": "STK",
       "title": "StockBook",
-      "subtitle": "주식·ETF",
-      "description": "주식과 ETF의 원리, 분산, 수수료, 장기 투자.",
+      "subtitle": "만져 보며 배우는 주식 교과서",
+      "headline": "호가창에서 옵션까지",
+      "description": "호가창에 주문을 넣는 것부터 차트, 재무제표, 가치평가, 배당, 위험과 분산, ETF, 팩터, 백테스트, 레버리지, 선물·옵션, 세금과 투자 심리까지. 10년치 가상 시장에서 직접 사고팔며 주식의 원리를 배웁니다.",
+      "url": "https://stockbook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/stockbook",
       "field": "money",
-      "status": "planned",
-      "phase": 1,
-      "ideas": [
-        "적립식 투자 시뮬레이터",
-        "분산 투자와 변동성",
-        "수수료가 수익에 미치는 영향"
-      ]
+      "status": "published",
+      "level": "입문",
+      "chapters": 26,
+      "simulators": 390,
+      "color": "#6741d9",
+      "colorDark": "#a78bfa",
+      "topics": ["호가·체결", "재무제표·가치평가", "위험·분산", "ETF·팩터", "백테스트", "선물·옵션"]
     },
     {
       "id": "econbook",
