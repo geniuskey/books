@@ -1292,7 +1292,21 @@
         "리듬·시퀀서",
         "신시사이저·DSP"
       ],
-      "motif": "music"
+      "motif": "music",
+      "featured": [
+        {
+          "title": "16배음 가산 합성기",
+          "desc": "배음 막대를 끌어 사인파를 플루트·클라리넷·금관으로",
+          "link": "chapters/harmonics.html#sim-additive",
+          "image": "img/sims/musicbook-sim-additive.jpg"
+        },
+        {
+          "title": "코드 진행 놀이터",
+          "desc": "기능별 색 패드로 진행을 짜고 오선보와 건반으로 듣기",
+          "link": "chapters/progressions.html#sim-prg-playground",
+          "image": "img/sims/musicbook-sim-prg-playground.jpg"
+        }
+      ]
     }
   ],
   "tools": [

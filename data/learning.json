@@ -171,6 +171,18 @@
         "렌즈",
         "조리개"
       ]
+    },
+    {
+      "id": "sound",
+      "label": "소리와 음악",
+      "aliases": [
+        "sound",
+        "music",
+        "acoustics",
+        "배음",
+        "화음",
+        "음악"
+      ]
     }
   ],
   "experiments": {
@@ -475,6 +487,16 @@
       "question": "청킹 방식을 바꾸면 관련 문서를 찾는 비율은 달라질까요?",
       "description": "검색의 재현율을 확인해 근거를 못 찾는 문제를 추적합니다.",
       "concepts": ["ai", "systems"]
+    },
+    "musicbook/sim-additive": {
+      "question": "사인파를 몇 개 쌓으면 플루트와 클라리넷의 음색이 갈릴까요?",
+      "description": "배음의 세기를 바꾸며 파형과 음색이 함께 달라지는 모습을 듣고 봅니다.",
+      "concepts": ["sound"]
+    },
+    "musicbook/sim-prg-playground": {
+      "question": "같은 화음도 진행의 어디에 놓이느냐에 따라 왜 다르게 들릴까요?",
+      "description": "으뜸·버금딸림·딸림 기능별로 화음을 골라 진행을 만들고 오선보와 소리로 비교합니다.",
+      "concepts": ["sound"]
     }
   },
   "paths": [
