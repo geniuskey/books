@@ -5,7 +5,7 @@ EB.start("home", (d) => {
 
   // 통계
   const c = EB.counts(d.books);
-  const vals = { published: c.published, writing: c.writing, planned: c.planned, fields: d.fields.length, experiments: d.books.filter(EB.isPublished).reduce((n, b) => n + (b.featured || []).length, 0) };
+  const vals = { published: c.published, writing: c.writing, planned: c.planned, fields: d.fields.filter((f) => f.books.length).length, experiments: d.books.filter(EB.isPublished).reduce((n, b) => n + (b.featured || []).length, 0) };
   EB.$$("[data-stat]").forEach((el) => { el.textContent = vals[el.dataset.stat]; });
 
   // 첫 화면의 서가: 다른 분야를 먼저 보여 주고, 출간된 책만 바로 연결한다.
@@ -168,7 +168,7 @@ EB.start("home", (d) => {
   // 두 갈래: 분야 카드
   d.wings.forEach((w) => {
     const box = $(`#fields-${w.id}`);
-    const fields = d.fields.filter((f) => f.wing === w.id);
+    const fields = d.fields.filter((f) => f.wing === w.id && f.books.length);
     box.classList.add("field-deck");
     box.style.setProperty("--field-gaps", Math.max(1, fields.length - 1));
     fields.forEach((f) => {

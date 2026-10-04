@@ -1,4 +1,4 @@
-/* 로드맵: 전체·분야별 진행률, 단계별(다음 차례 → 그다음 → 언젠가) 책 목록 */
+/* 로드맵: 전체·분야별 진행률, 다음 차례와 후속 후보 */
 EB.start("roadmap", (d) => {
   "use strict";
   const { $, esc } = EB;
@@ -15,7 +15,7 @@ EB.start("roadmap", (d) => {
     h.className = "rm-wing";
     h.textContent = w.name;
     fb.appendChild(h);
-    d.fields.filter((f) => f.wing === w.id).forEach((f) => {
+    d.fields.filter((f) => f.wing === w.id && f.books.length).forEach((f) => {
       const k = EB.counts(f.books);
       const row = document.createElement("a");
       row.className = "rm-field";
@@ -47,6 +47,7 @@ EB.start("roadmap", (d) => {
   d.phases.forEach((p) => {
     const list = d.books.filter((b) => !EB.isPublished(b) && b.phase === p.id)
       .sort((a, b) => (a.status === "writing" ? -1 : 0) - (b.status === "writing" ? -1 : 0));
+    if (!list.length) return;
     const sec = document.createElement("section");
     sec.className = "rm-phase";
     sec.innerHTML = `<div class="rm-phase-head"><span class="ph">PHASE ${p.id}</span><h2>${esc(p.name)} <small>${list.length}권</small></h2><p>${esc(p.desc)}</p></div>`;

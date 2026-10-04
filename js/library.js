@@ -37,7 +37,7 @@ EB.start("library", (d) => {
   const state = { wing: "all", field: "all", status: "published" };
   const groups = {
     wing: [{ v: "all", t: "전체" }, ...d.wings.map((w) => ({ v: w.id, t: w.name }))],
-    field: [{ v: "all", t: "모든 분야" }, ...d.fields.map((f) => ({ v: f.id, t: f.name, wing: f.wing }))],
+    field: [{ v: "all", t: "모든 분야" }, ...d.fields.filter((f) => f.books.length).map((f) => ({ v: f.id, t: f.name, wing: f.wing }))],
     status: [{ v: "all", t: "모든 상태" }, ...Object.entries(d.statusLabels).map(([v, t]) => ({ v, t }))],
   };
   Object.entries(groups).forEach(([key, opts]) => {

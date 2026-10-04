@@ -1,7 +1,7 @@
 # Books
 
 [books.euiyun.com](https://books.euiyun.com/) — 인터랙티브 웹 교과서 시리즈를 소개하는 사이트입니다.
-시리즈는 두 갈래로 자랍니다: **일하는 지식**(반도체·SW·AI·전자)과 **살아가는 지식**(돈·집·세금·건강·취미).
+시리즈는 두 갈래로 자랍니다: **일하는 지식**(반도체·SW·AI·기기)과 **살아가는 지식**(돈·집·건강·취미).
 
 ## 페이지
 | 파일 | 내용 |
@@ -9,7 +9,7 @@
 | `index.html` | 홈. 출간된 책을 바로 여는 서가, 교과서·실험 진입, 분야 카드, 질문으로 고른 대표 실험 6개, 저자 노트 |
 | `field.html?f=<분야 id>` | 분야 페이지. 대분류의 관계와 각 분류에 속한 책을 보여 주는 지식 지도, 책장, 다른 분야 |
 | `library.html` | 전체 책장. 갈래·분야·상태 필터와 검색 (`?wing=life&status=planned&q=전세`처럼 주소로도 지정 가능) |
-| `roadmap.html` | 로드맵. 전체·분야별 진행률, 단계별(다음 차례 → 그다음 → 언젠가) 책 목록과 만들고 싶은 시뮬레이터 |
+| `roadmap.html` | 로드맵. 전체·분야별 진행률, 다음 차례와 후속 후보, 만들고 싶은 시뮬레이터. 아이디어는 진행률에서 제외 |
 | `simulators.html` | 출간된 책의 전체 실험 검색. 일부 실험의 학습 질문·한영 동의어, 분야·교과서·난이도 열의 복수 선택 필터와 공유 가능한 검색 URL |
 | `paths.html` | 출간된 전권을 안내하는 질문별 읽기 경로. 시작 책·읽을 주제·다음 책으로 넘어가는 이유를 안내하고, 세 가지 짧은 실험 경로 제공 |
 | `feedback.html` | 전권 공통 독자 의견 창구. 오류 제보와 개선 건의·새 책 요청을 한곳에서 받음 |
@@ -41,7 +41,7 @@ python3 -m http.server 8000   # → http://localhost:8000
 - `wings` — 두 갈래 (`work`, `life`)
 - `fields` — 분야. `id`, `wing`, `name`, `en`, `desc`, `color`, `colorDark`, 선택적으로 `stages`(가치사슬 단계, 지금은 반도체만)
 - `books` — 책. 같은 분야 안에서는 배열 순서가 추천 읽기 순서이자 웨이퍼를 채우는 순서입니다.
-- `phases` — 로드맵 단계 (1 다음 차례, 2 그다음, 3 언젠가)
+- `phases` — 로드맵 단계 (1 다음 차례, 2 후속 후보). 집필 중인 책을 포함해 다음 차례는 최대 3권
 - `statusLabels` — 상태 표시 문구 (`published` 출간, `writing` 집필 중, `planned` 집필 예정)
 - `tools`, `author` — 도구·데이터 목록, 저자 노트
 
@@ -59,7 +59,13 @@ python3 -m http.server 8000   # → http://localhost:8000
 | `motif` | 표지 일러스트 (`memory`, `pixel`, `layers`, `attention`, `aperture`, `logic`, `circuit`, `package`, `car`, `wafermap`, `litho`, `probe`, `soc`, `subpixel`, `shmoo`; 없으면 기본 격자). 새 그림은 `js/covers.js`에 추가 |
 | `featured` | 대표 시뮬레이터: `title`, `desc`, `link`(책 주소 기준 상대 경로, 예: `chapters/hbm.html#sim-h3`), `image`(`img/sims/` 아래 캡처) |
 
-새 책을 계획하면 `status: "planned"`로 한 줄 추가하고, 쓰기 시작하면 `writing`, 출간하면 `published`로 바꾸며 주소와 숫자를 채우면 됩니다.
+새 주제는 먼저 `data/editorial-backlog.json`에 아이디어로 보관합니다. 독자 한 유형, 기존 책으로 해결되지 않는 질문, 차별화된 대표 실험을 정한 뒤 `books.json`에 `status: "planned"`로 올립니다. 쓰기 시작하면 `writing`, 출간하면 `published`로 바꾸며 주소와 숫자를 채웁니다.
+
+`data/editorial-backlog.json`은 공개 책장·분야 지도·진행률에 포함하지 않는 편집 자료입니다. 원래 책 정보와 통합 대상·이유, 제거한 분야를 보관합니다. `merge`는 통합 방향이며 본문 반영 완료를 뜻하지 않습니다. `idea`는 보류 아이디어, `removed-field`는 제거한 세금·법 분야의 주제입니다. GPUBook은 GPU 실행 구조와 병렬 컴퓨팅으로 범위를 좁혔고, NPU는 SoCBook 심화 섹션으로 계획합니다.
+
+홈 분야 카드는 책이 한 권 이상 있는 분야를 모두 표시하고, 출간 전인 분야는 "준비 중"으로 표시합니다. 건강 분야는 BodyBook 한 권으로 시작하며, 다른 건강 주제는 편집 아이디어로 보관합니다.
+
+현재 다음 차례는 집필 예정인 OpticsBook입니다. ElectricBook·StatBook은 후속 후보로 옮겼습니다. OpticsBook은 반도체 분야의 기초 물리로 분류하며, 이미지 센서 개발에 필요한 회절·PSF·MTF, 마이크로렌즈·픽셀 광학 스택·입사각·광학 크로스토크에 집중합니다. SensorBook의 센서 구조·회로·신호 처리 설명을 광학 원리와 설계 변수로 보완합니다.
 
 `og.png`(공유 미리보기 이미지)와 `img/sims/`의 시뮬레이터 화면은 캡처 이미지라 책이 늘거나 시뮬레이터가 바뀌면 다시 캡처해 주세요. 시뮬레이터 캡처는 각 책 페이지에서 `#sim-… .sim-view` 영역을 가로 720px JPEG로 저장한 것입니다.
 

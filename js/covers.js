@@ -313,6 +313,28 @@
       [10, 16, 24, 20, 28].forEach((w, k) => { s += `<rect class="cv-depth" style="animation-delay:${(0.2 + k * 0.35).toFixed(2)}s" x="${194 - w}" y="${72 + k * 9}" width="${w}" height="7" rx="1" fill="#7deaa0" fill-opacity=".7"/>`; });
       return svg(s);
     },
+    // 심장 박동과 심전도: 심장이 뛰고 파형이 흘러간다
+    heart() {
+      const beat = "h14l4-6 4 10 5-40 6 52 4-16 6 0 8-6 8 6h14";
+      let s = "";
+      range(4).forEach((k) => { s += `<path d="M10 ${30 + k * 24}H196" stroke="${W}" stroke-opacity=".1"/>`; });
+      s += `<svg x="92" y="0" width="108" height="130" overflow="hidden"><g class="cv-slide" style="--dx:-73px;animation-duration:1.6s"><path d="M0 104${(beat + " ").repeat(4)}" fill="none" stroke="#ff8a9a" stroke-width="2" stroke-linejoin="round"/></g></svg>`;
+      s += `<path class="cv-hit" d="M140 64 116 40c-14-14 4-34 18-20l6 6 6-6c14-14 32 6 18 20Z" fill="${W}" fill-opacity=".75" stroke="${W}" stroke-width="1.4"/>`;
+      return svg(s);
+    },
+    // 오선과 음표, 아래에서 스펙트럼 막대가 출렁인다
+    music() {
+      const r = rnd(11); let s = "";
+      range(5).forEach((k) => { s += `<path d="M60 ${30 + k * 9}H196" stroke="${W}" stroke-opacity=".4"/>`; });
+      [[78, 61], [100, 52.5], [122, 43.5], [144, 48], [166, 39], [186, 52.5]].forEach(([x, y], k) => {
+        s += `<g class="cv-bob" style="animation-delay:${(k * 0.3).toFixed(1)}s"><ellipse cx="${x}" cy="${y}" rx="5.4" ry="4" transform="rotate(-20 ${x} ${y})" fill="${W}" fill-opacity=".9"/><path d="M${x + 5} ${y}V${y - 24}" stroke="${W}" stroke-width="1.4"/></g>`;
+      });
+      range(16).forEach((i) => {
+        const h = 8 + r() * 30;
+        s += `<rect class="cv-grow" style="animation-delay:${(r() * 2).toFixed(2)}s;animation-duration:${(0.8 + r()).toFixed(2)}s" x="${62 + i * 8.4}" y="${124 - h}" width="5.6" height="${h.toFixed(1)}" rx="1.4" fill="#7dd3fc" fill-opacity=".75"/>`;
+      });
+      return svg(s);
+    },
     // 기본: 다이 격자
     grid() {
       let s = "";

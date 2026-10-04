@@ -1,0 +1,755 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-05",
+  "description": "공개 출간 계획에서 제외한 편집 아이디어. 통합 항목은 편집 방향이며 본문 반영 완료를 뜻하지 않는다.",
+  "removedFields": [
+    {
+      "id": "law",
+      "wing": "life",
+      "name": "세금·법",
+      "en": "Tax & Law",
+      "color": "#475569",
+      "colorDark": "#94a3b8",
+      "desc": "연말정산, 근로계약, 생활 법률, 상속·증여."
+    }
+  ],
+  "items": [
+    {
+      "book": {
+        "id": "equipbook",
+        "code": "EQP",
+        "title": "EquipBook",
+        "subtitle": "반도체 장비",
+        "description": "노광기, 식각기, 증착기 안을 들여다보기.",
+        "field": "semiconductor",
+        "status": "planned",
+        "phase": 3,
+        "ideas": [
+          "EUV 광원과 반사 광학계",
+          "플라즈마 챔버 조건 조정",
+          "장비 가동률과 팹 생산량"
+        ],
+        "stage": "process"
+      },
+      "disposition": "merge",
+      "targets": [
+        "processbook",
+        "lithobook",
+        "etchbook",
+        "chipindustrybook"
+      ],
+      "reason": "장비의 원리와 가동률을 기존 공정·산업 책의 심화 주제로 배분한다."
+    },
+    {
+      "book": {
+        "id": "programbook",
+        "code": "PGM",
+        "title": "ProgramBook",
+        "subtitle": "프로그래밍 첫걸음",
+        "description": "변수, 조건, 반복, 함수. 코드를 처음 쓰는 사람을 위한 책.",
+        "field": "computing",
+        "status": "planned",
+        "phase": 1,
+        "ideas": [
+          "한 줄씩 실행되는 코드 시각화",
+          "반복문으로 그림 그리기",
+          "함수 호출 스택 따라가기"
+        ]
+      },
+      "disposition": "idea",
+      "targets": [],
+      "reason": "독립 출간을 약속하지 않고 수요와 차별화된 실험이 확인될 때 재검토한다."
+    },
+    {
+      "book": {
+        "id": "algobook",
+        "code": "ALG",
+        "title": "AlgoBook",
+        "subtitle": "알고리즘·자료구조",
+        "description": "정렬, 탐색, 그래프, 동적 계획법을 눈으로.",
+        "field": "computing",
+        "status": "planned",
+        "phase": 1,
+        "ideas": [
+          "정렬 알고리즘 경주",
+          "해시 테이블 충돌",
+          "최단 경로 탐색 애니메이션"
+        ]
+      },
+      "disposition": "idea",
+      "targets": [],
+      "reason": "독립 출간을 약속하지 않고 수요와 차별화된 실험이 확인될 때 재검토한다."
+    },
+    {
+      "book": {
+        "id": "webbook",
+        "code": "WEB",
+        "title": "WebBook",
+        "subtitle": "웹 개발",
+        "description": "HTML, CSS, JavaScript로 웹 페이지가 만들어지는 원리.",
+        "field": "computing",
+        "status": "planned",
+        "phase": 2,
+        "ideas": [
+          "박스 모델 놀이터",
+          "이벤트 루프 시각화",
+          "렌더링 파이프라인"
+        ]
+      },
+      "disposition": "idea",
+      "targets": [],
+      "reason": "독립 출간을 약속하지 않고 수요와 차별화된 실험이 확인될 때 재검토한다."
+    },
+    {
+      "book": {
+        "id": "securitybook",
+        "code": "SEC",
+        "title": "SecurityBook",
+        "subtitle": "보안·암호",
+        "description": "해킹은 어떻게 일어나고 암호는 어떻게 지키나.",
+        "field": "computing",
+        "status": "planned",
+        "phase": 2,
+        "ideas": [
+          "시저 암호에서 AES까지",
+          "공개키 교환 체험",
+          "SQL 인젝션 막기"
+        ]
+      },
+      "disposition": "idea",
+      "targets": [],
+      "reason": "독립 출간을 약속하지 않고 수요와 차별화된 실험이 확인될 때 재검토한다."
+    },
+    {
+      "book": {
+        "id": "cloudbook",
+        "code": "CLD",
+        "title": "CloudBook",
+        "subtitle": "클라우드·분산 시스템",
+        "description": "서버 수천 대가 하나처럼 움직이는 법.",
+        "field": "computing",
+        "status": "planned",
+        "phase": 3,
+        "ideas": [
+          "로드 밸런서 트래픽 분산",
+          "복제와 합의(Raft)",
+          "오토스케일링 비용"
+        ]
+      },
+      "disposition": "idea",
+      "targets": [],
+      "reason": "독립 출간을 약속하지 않고 수요와 차별화된 실험이 확인될 때 재검토한다."
+    },
+    {
+      "book": {
+        "id": "toolsbook",
+        "code": "TLS",
+        "title": "ToolsBook",
+        "subtitle": "개발자의 도구",
+        "description": "터미널, Git, 리눅스. 매일 쓰는 도구 제대로 알기.",
+        "field": "computing",
+        "status": "planned",
+        "phase": 3,
+        "ideas": [
+          "Git 브랜치 그래프 조작",
+          "셸 파이프라인 조립",
+          "권한과 프로세스 관찰"
+        ]
+      },
+      "disposition": "merge",
+      "targets": [
+        "programbook"
+      ],
+      "reason": "Git·터미널은 프로그래밍 입문 실습으로 묶는다. 대상 책도 현재 아이디어 단계다."
+    },
+    {
+      "book": {
+        "id": "mathbook",
+        "code": "MTH",
+        "title": "MathBook",
+        "subtitle": "AI를 위한 수학",
+        "description": "선형대수, 미분, 확률을 AI의 언어로.",
+        "field": "ai",
+        "status": "planned",
+        "phase": 1,
+        "ideas": [
+          "행렬이 공간을 변형하는 모습",
+          "경사 하강의 기울기",
+          "베이즈 정리 확률 갱신"
+        ]
+      },
+      "disposition": "merge",
+      "targets": [
+        "aibook"
+      ],
+      "reason": "AI 이해에 필요한 수학 보충편부터 구성한다."
+    },
+    {
+      "book": {
+        "id": "workaibook",
+        "code": "WAI",
+        "title": "WorkAIBook",
+        "subtitle": "AI와 함께 일하기",
+        "description": "직장인을 위한 프롬프트, 자동화, 에이전트 활용.",
+        "field": "ai",
+        "status": "planned",
+        "phase": 1,
+        "ideas": [
+          "프롬프트 비교 실험실",
+          "업무 자동화 흐름 설계",
+          "AI 답변 검증 체크리스트"
+        ]
+      },
+      "disposition": "merge",
+      "targets": [
+        "aibook"
+      ],
+      "reason": "업무 사례와 실습 경로로 구성한다."
+    },
+    {
+      "book": {
+        "id": "mlbook",
+        "code": "MLB",
+        "title": "MLBook",
+        "subtitle": "머신러닝 기초",
+        "description": "회귀, 분류, 결정 트리, 과적합.",
+        "field": "ai",
+        "status": "planned",
+        "phase": 2,
+        "ideas": [
+          "결정 경계 그리기",
+          "과적합 곡선",
+          "교차 검증"
+        ]
+      },
+      "disposition": "merge",
+      "targets": [
+        "aibook"
+      ],
+      "reason": "회귀·분류·과적합의 기초를 기존 AI 책에 보강한다."
+    },
+    {
+      "book": {
+        "id": "visionbook",
+        "code": "VIS",
+        "title": "VisionBook",
+        "subtitle": "컴퓨터 비전",
+        "description": "합성곱에서 객체 인식, 이미지 생성까지.",
+        "field": "ai",
+        "status": "planned",
+        "phase": 2,
+        "ideas": [
+          "합성곱 필터 놀이터",
+          "특징 맵 시각화",
+          "디퓨전 노이즈 제거 단계"
+        ]
+      },
+      "disposition": "idea",
+      "targets": [],
+      "reason": "독립 출간을 약속하지 않고 수요와 차별화된 실험이 확인될 때 재검토한다."
+    },
+    {
+      "book": {
+        "id": "rlbook",
+        "code": "RLB",
+        "title": "RLBook",
+        "subtitle": "강화학습",
+        "description": "보상으로 배우는 AI.",
+        "field": "ai",
+        "status": "planned",
+        "phase": 3,
+        "ideas": [
+          "그리드 월드 Q-러닝",
+          "탐험과 활용의 균형",
+          "정책 경사 장난감"
+        ]
+      },
+      "disposition": "idea",
+      "targets": [],
+      "reason": "독립 출간을 약속하지 않고 수요와 차별화된 실험이 확인될 때 재검토한다."
+    },
+    {
+      "book": {
+        "id": "embeddedbook",
+        "code": "EMB",
+        "title": "EmbeddedBook",
+        "subtitle": "임베디드·IoT",
+        "description": "마이크로컨트롤러로 세상을 움직이기.",
+        "field": "electronics",
+        "status": "planned",
+        "phase": 2,
+        "ideas": [
+          "GPIO와 인터럽트",
+          "센서 값 샘플링",
+          "저전력 모드 배터리 수명"
+        ]
+      },
+      "disposition": "idea",
+      "targets": [],
+      "reason": "독립 출간을 약속하지 않고 수요와 차별화된 실험이 확인될 때 재검토한다."
+    },
+    {
+      "book": {
+        "id": "batterybook",
+        "code": "BAT",
+        "title": "BatteryBook",
+        "subtitle": "배터리·전기차",
+        "description": "리튬 이온 배터리와 전기차의 원리.",
+        "field": "electronics",
+        "status": "planned",
+        "phase": 2,
+        "ideas": [
+          "충방전 곡선과 SOC",
+          "셀 밸런싱",
+          "주행 거리 계산기"
+        ]
+      },
+      "disposition": "merge",
+      "targets": [
+        "carbook"
+      ],
+      "reason": "자동차 책의 배터리·BMS 심화 주제로 다룬다."
+    },
+    {
+      "book": {
+        "id": "robotbook",
+        "code": "ROB",
+        "title": "RobotBook",
+        "subtitle": "로봇",
+        "description": "모터, 제어, 센서 융합.",
+        "field": "electronics",
+        "status": "planned",
+        "phase": 3,
+        "ideas": [
+          "PID 제어 튜닝",
+          "역기구학 로봇 팔",
+          "라이다 SLAM 장난감"
+        ]
+      },
+      "disposition": "idea",
+      "targets": [],
+      "reason": "독립 출간을 약속하지 않고 수요와 차별화된 실험이 확인될 때 재검토한다."
+    },
+    {
+      "book": {
+        "id": "radiobook",
+        "code": "RAD",
+        "title": "RadioBook",
+        "subtitle": "무선 통신",
+        "description": "전파, 안테나, 5G와 Wi-Fi.",
+        "field": "electronics",
+        "status": "planned",
+        "phase": 3,
+        "ideas": [
+          "변조 방식 비교",
+          "안테나 방사 패턴",
+          "신호 대 잡음과 데이터율"
+        ]
+      },
+      "disposition": "idea",
+      "targets": [],
+      "reason": "독립 출간을 약속하지 않고 수요와 차별화된 실험이 확인될 때 재검토한다."
+    },
+    {
+      "book": {
+        "id": "econbook",
+        "code": "ECO",
+        "title": "EconBook",
+        "subtitle": "경제 뉴스 읽기",
+        "description": "금리, 환율, 물가가 내 지갑에 닿는 경로.",
+        "field": "money",
+        "status": "planned",
+        "phase": 1,
+        "ideas": [
+          "기준금리와 대출 이자",
+          "환율과 해외 직구 가격",
+          "물가 지수 계산"
+        ]
+      },
+      "disposition": "idea",
+      "targets": [],
+      "reason": "독립 출간을 약속하지 않고 수요와 차별화된 실험이 확인될 때 재검토한다."
+    },
+    {
+      "book": {
+        "id": "creditbook",
+        "code": "CRD",
+        "title": "CreditBook",
+        "subtitle": "카드·신용·대출",
+        "description": "신용 점수, 카드, 대출 상환 방식.",
+        "field": "money",
+        "status": "planned",
+        "phase": 2,
+        "ideas": [
+          "원리금 균등 vs 원금 균등",
+          "신용 점수 변화 요인",
+          "리볼빙의 함정"
+        ]
+      },
+      "disposition": "merge",
+      "targets": [
+        "moneybook"
+      ],
+      "reason": "돈 교과서의 신용·대출 장을 심화한다."
+    },
+    {
+      "book": {
+        "id": "insurebook",
+        "code": "INS",
+        "title": "InsureBook",
+        "subtitle": "보험",
+        "description": "보험의 원리와 필요한 보장 고르기.",
+        "field": "money",
+        "status": "planned",
+        "phase": 2,
+        "ideas": [
+          "위험 풀링 시뮬레이션",
+          "보험료와 보장 비교",
+          "실손 보험 청구 흐름"
+        ]
+      },
+      "disposition": "merge",
+      "targets": [
+        "moneybook"
+      ],
+      "reason": "돈 교과서의 보험 장을 심화한다."
+    },
+    {
+      "book": {
+        "id": "pensionbook",
+        "code": "PEN",
+        "title": "PensionBook",
+        "subtitle": "연금·노후",
+        "description": "국민연금, 퇴직연금, 개인연금으로 노후 준비하기.",
+        "field": "money",
+        "status": "planned",
+        "phase": 2,
+        "ideas": [
+          "은퇴 자금 몬테카를로",
+          "연금 수령 시기 비교",
+          "세액공제 효과 계산"
+        ]
+      },
+      "disposition": "merge",
+      "targets": [
+        "moneybook"
+      ],
+      "reason": "돈 교과서의 연금·은퇴 장을 심화한다."
+    },
+    {
+      "book": {
+        "id": "housebook",
+        "code": "HOM",
+        "title": "HouseBook",
+        "subtitle": "부동산 기초",
+        "description": "집값은 어떻게 정해지고 무엇을 봐야 하나.",
+        "field": "housing",
+        "status": "planned",
+        "phase": 1,
+        "ideas": [
+          "입지 요소 가중치 놀이",
+          "매매 비용(취득세·중개료) 계산",
+          "금리와 집값의 관계"
+        ]
+      },
+      "disposition": "merge",
+      "targets": [
+        "rentbook"
+      ],
+      "reason": "주거 입문서에 집 선택과 거래 비용의 기초를 포함한다."
+    },
+    {
+      "book": {
+        "id": "mortgagebook",
+        "code": "MTG",
+        "title": "MortgageBook",
+        "subtitle": "주택 대출",
+        "description": "LTV, DSR, 주택담보대출 상환 계획.",
+        "field": "housing",
+        "status": "planned",
+        "phase": 2,
+        "ideas": [
+          "LTV·DSR 한도 계산기",
+          "고정 vs 변동 금리",
+          "중도 상환 효과"
+        ]
+      },
+      "disposition": "merge",
+      "targets": [
+        "rentbook"
+      ],
+      "reason": "주거 입문서에 대출 구조와 상환 부담의 기초를 포함한다."
+    },
+    {
+      "book": {
+        "id": "subscriptionbook",
+        "code": "SUB",
+        "title": "SubscriptionBook",
+        "subtitle": "청약",
+        "description": "청약 통장, 가점, 특별공급 이해하기.",
+        "field": "housing",
+        "status": "planned",
+        "phase": 2,
+        "ideas": [
+          "청약 가점 계산기",
+          "경쟁률과 당첨 확률",
+          "분양가와 자금 계획"
+        ]
+      },
+      "disposition": "merge",
+      "targets": [
+        "rentbook"
+      ],
+      "reason": "주거 입문서에 청약과 구매 자금 계획의 기초를 포함한다."
+    },
+    {
+      "book": {
+        "id": "realinvestbook",
+        "code": "REI",
+        "title": "RealInvestBook",
+        "subtitle": "부동산 투자",
+        "description": "수익률, 재건축·재개발, 세금까지.",
+        "field": "housing",
+        "status": "planned",
+        "phase": 3,
+        "ideas": [
+          "임대 수익률 계산",
+          "재건축 분담금 장난감",
+          "보유세 시뮬레이션"
+        ]
+      },
+      "disposition": "idea",
+      "targets": [],
+      "reason": "독립 출간을 약속하지 않고 수요와 차별화된 실험이 확인될 때 재검토한다."
+    },
+    {
+      "book": {
+        "id": "taxbook",
+        "code": "TAX",
+        "title": "TaxBook",
+        "subtitle": "세금·연말정산",
+        "description": "소득세 구조와 연말정산 제대로 하기.",
+        "field": "law",
+        "status": "planned",
+        "phase": 1,
+        "ideas": [
+          "누진세율 구간 시각화",
+          "공제 항목별 환급액",
+          "종합소득세 신고 흐름"
+        ]
+      },
+      "disposition": "removed-field",
+      "targets": [],
+      "reason": "세금·법 분야 확장을 중단한다."
+    },
+    {
+      "book": {
+        "id": "workbook",
+        "code": "JOB",
+        "title": "WorkBook",
+        "subtitle": "직장인의 법",
+        "description": "근로계약, 4대보험, 퇴직금, 휴가.",
+        "field": "law",
+        "status": "planned",
+        "phase": 2,
+        "ideas": [
+          "퇴직금 계산기",
+          "4대보험 공제 내역",
+          "연차 발생 규칙"
+        ]
+      },
+      "disposition": "removed-field",
+      "targets": [],
+      "reason": "세금·법 분야 확장을 중단한다."
+    },
+    {
+      "book": {
+        "id": "lawbook",
+        "code": "LAW",
+        "title": "LawBook",
+        "subtitle": "생활 법률",
+        "description": "계약, 분쟁, 내용증명, 소송의 기초.",
+        "field": "law",
+        "status": "planned",
+        "phase": 2,
+        "ideas": [
+          "계약서 위험 조항 찾기",
+          "소멸시효 타임라인",
+          "분쟁 해결 경로 선택"
+        ]
+      },
+      "disposition": "removed-field",
+      "targets": [],
+      "reason": "세금·법 분야 확장을 중단한다."
+    },
+    {
+      "book": {
+        "id": "inheritbook",
+        "code": "INH",
+        "title": "InheritBook",
+        "subtitle": "상속·증여",
+        "description": "상속 순위, 유류분, 증여세.",
+        "field": "law",
+        "status": "planned",
+        "phase": 3,
+        "ideas": [
+          "상속 지분 계산기",
+          "증여세 시뮬레이션",
+          "10년 합산 규칙"
+        ]
+      },
+      "disposition": "removed-field",
+      "targets": [],
+      "reason": "세금·법 분야 확장을 중단한다."
+    },
+    {
+      "book": {
+        "id": "fitbook",
+        "code": "FIT",
+        "title": "FitBook",
+        "subtitle": "운동 과학",
+        "description": "근력, 유산소, 회복의 과학.",
+        "field": "health",
+        "status": "planned",
+        "phase": 2,
+        "ideas": [
+          "점진적 과부하 계획",
+          "심박 구간 훈련",
+          "회복과 초과 회복 곡선"
+        ]
+      },
+      "disposition": "idea",
+      "targets": [],
+      "reason": "독립 출간을 약속하지 않고 수요와 차별화된 실험이 확인될 때 재검토한다."
+    },
+    {
+      "book": {
+        "id": "foodbook",
+        "code": "FOD",
+        "title": "FoodBook",
+        "subtitle": "영양·식단",
+        "description": "탄단지, 혈당, 식단 짜기.",
+        "field": "health",
+        "status": "planned",
+        "phase": 2,
+        "ideas": [
+          "기초대사량과 칼로리",
+          "혈당 곡선 비교",
+          "단백질 섭취 계획"
+        ]
+      },
+      "disposition": "idea",
+      "targets": [],
+      "reason": "독립 출간을 약속하지 않고 수요와 차별화된 실험이 확인될 때 재검토한다."
+    },
+    {
+      "book": {
+        "id": "sleepbook",
+        "code": "SLP",
+        "title": "SleepBook",
+        "subtitle": "수면·스트레스",
+        "description": "수면 주기와 스트레스 관리.",
+        "field": "health",
+        "status": "planned",
+        "phase": 3,
+        "ideas": [
+          "수면 주기 그래프",
+          "카페인 반감기",
+          "스트레스 반응 곡선"
+        ]
+      },
+      "disposition": "idea",
+      "targets": [],
+      "reason": "독립 출간을 약속하지 않고 수요와 차별화된 실험이 확인될 때 재검토한다."
+    },
+    {
+      "book": {
+        "id": "medbook",
+        "code": "MED",
+        "title": "MedBook",
+        "subtitle": "병원·약 똑똑하게",
+        "description": "검사 수치 읽기, 약의 원리, 의료 제도.",
+        "field": "health",
+        "status": "planned",
+        "phase": 3,
+        "ideas": [
+          "건강검진 수치 해석",
+          "약물 농도 반감기",
+          "의료비 본인 부담 계산"
+        ]
+      },
+      "disposition": "idea",
+      "targets": [],
+      "reason": "독립 출간을 약속하지 않고 수요와 차별화된 실험이 확인될 때 재검토한다."
+    },
+    {
+      "book": {
+        "id": "cookbook",
+        "code": "COK",
+        "title": "CookBook",
+        "subtitle": "요리의 과학",
+        "description": "열, 마이야르 반응, 발효.",
+        "field": "culture",
+        "status": "planned",
+        "phase": 3,
+        "ideas": [
+          "굽기 온도와 마이야르",
+          "삼투압과 염지",
+          "발효 시간 그래프"
+        ]
+      },
+      "disposition": "idea",
+      "targets": [],
+      "reason": "독립 출간을 약속하지 않고 수요와 차별화된 실험이 확인될 때 재검토한다."
+    },
+    {
+      "book": {
+        "id": "starbook",
+        "code": "AST",
+        "title": "StarBook",
+        "subtitle": "별과 우주",
+        "description": "밤하늘, 행성, 망원경.",
+        "field": "culture",
+        "status": "planned",
+        "phase": 3,
+        "ideas": [
+          "오늘 밤 별자리 지도",
+          "행성 궤도 시뮬레이터",
+          "망원경 배율과 집광력"
+        ]
+      },
+      "disposition": "idea",
+      "targets": [],
+      "reason": "독립 출간을 약속하지 않고 수요와 차별화된 실험이 확인될 때 재검토한다."
+    },
+    {
+      "book": {
+        "id": "physicsbook",
+        "code": "PHY",
+        "title": "PhysicsBook",
+        "subtitle": "일상의 물리",
+        "description": "자전거, 전자레인지, 무지개 속 물리.",
+        "field": "culture",
+        "status": "planned",
+        "phase": 3,
+        "ideas": [
+          "포물선 운동 놀이터",
+          "파동 간섭",
+          "열 전달 비교"
+        ]
+      },
+      "disposition": "idea",
+      "targets": [],
+      "reason": "독립 출간을 약속하지 않고 수요와 차별화된 실험이 확인될 때 재검토한다."
+    }
+  ],
+  "scopeDecisions": [
+    {
+      "source": "npubook",
+      "replacement": "gpubook",
+      "sectionTarget": "socbook",
+      "section": "NPU의 시스톨릭 어레이와 데이터 재사용",
+      "note": "GPU는 병렬 실행·메모리 병목 중심의 독립 책으로 계획하고 NPU는 SoCBook 심화 섹션으로 둔다."
+    }
+  ]
+}

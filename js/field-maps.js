@@ -6,20 +6,18 @@ window.FIELD_MAPS = {
   },
   computing: {
     title: "컴퓨터의 원리에서 연결된 서비스까지",
-    desc: "컴퓨터를 이해하고, 프로그램을 만들고, 서비스를 연결하고 운영합니다.",
+    desc: "프로그램 실행과 데이터 저장, 네트워크 연결의 원리를 배웁니다.",
     groups: [
       ["컴퓨터의 기초", "Foundation", "하드웨어와 운영체제가 프로그램을 실행하는 원리", ["computerbook", "osbook"]],
-      ["프로그램 만들기", "Build", "언어·알고리즘·도구로 소프트웨어를 만드는 방법", ["programbook", "algobook", "toolsbook", "webbook"]],
-      ["연결과 운영", "Connect", "데이터를 저장하고 시스템을 연결하고 보호하기", ["networkbook", "databasebook", "cloudbook", "securitybook"]],
+      ["연결과 운영", "Connect", "데이터를 저장하고 시스템을 연결하기", ["networkbook", "databasebook"]],
     ],
   },
   ai: {
-    title: "수학과 데이터가 지능이 되기까지",
+    title: "데이터 해석에서 신경망과 언어 모델까지",
     desc: "모델을 이해하는 기초와 학습 원리, 실제 활용 분야를 연결합니다.",
     groups: [
-      ["수학·데이터", "Foundation", "모델을 읽는 수학과 데이터를 해석하는 통계", ["mathbook", "statbook"]],
-      ["학습과 모델", "Learning", "머신러닝에서 신경망·언어 모델까지", ["mlbook", "aibook"]],
-      ["인식·행동·활용", "Applications", "보고, 행동하고, 사람의 일을 돕는 AI", ["visionbook", "rlbook", "workaibook"]],
+      ["수학·데이터", "Foundation", "표본과 불확실성, 실험 설계로 데이터를 해석하기", ["statbook"]],
+      ["학습과 모델", "Learning", "머신러닝에서 신경망·언어 모델까지", ["aibook"]],
     ],
   },
   electronics: {
@@ -27,53 +25,38 @@ window.FIELD_MAPS = {
     desc: "전기 신호가 연결되고 제어되어 일상의 기기와 이동 수단이 됩니다.",
     groups: [
       ["회로와 전기", "Circuits", "전자 기기를 이루는 회로의 기본 원리", ["electricbook"]],
-      ["연결과 제어", "Control", "임베디드 소프트웨어와 무선 통신", ["embeddedbook", "radiobook"]],
-      ["기기와 모빌리티", "Systems", "스마트폰·자동차·선박·배터리·로봇의 작동 방식", ["phonebook", "carbook", "shipbook", "batterybook", "robotbook"]],
+      ["빛과 색", "Color", "빛을 측정하고 기기에서 색을 재현하는 원리", ["colorbook"]],
+      ["기기와 이동 수단", "Systems", "스마트폰·자동차·선박의 작동 방식", ["phonebook", "carbook", "shipbook"]],
     ],
   },
   money: {
     title: "돈의 흐름을 이해하고 미래를 준비하기",
     desc: "금융의 기본 개념을 자산 운용과 위험 대비에 연결합니다.",
     groups: [
-      ["돈과 경제", "Understand", "금리·물가·경제 뉴스의 기본 언어", ["moneybook", "econbook"]],
-      ["신용과 투자", "Manage", "빌리는 돈과 투자하는 돈의 구조", ["creditbook", "stockbook"]],
-      ["보장과 노후", "Prepare", "불확실한 위험과 긴 미래에 대비하기", ["insurebook", "pensionbook"]],
+      ["돈과 경제", "Understand", "금리·물가·경제 뉴스의 기본 언어", ["moneybook"]],
+      ["신용과 투자", "Manage", "빌리는 돈과 투자하는 돈의 구조", ["stockbook"]],
     ],
   },
   housing: {
     title: "사는 집에서 내 집 마련까지",
-    desc: "주거와 계약의 기초를 자금 마련, 청약과 투자 판단에 연결합니다.",
+    desc: "전월세 계약과 보증금에서 대출과 내 집 마련의 기초까지 한 권으로 연결합니다.",
     groups: [
-      ["주거와 계약", "Living", "부동산의 기본 구조와 전월세 계약", ["housebook", "rentbook"]],
-      ["자금 마련", "Financing", "주택 대출의 구조와 상환 부담 이해하기", ["mortgagebook"]],
-      ["내 집과 투자", "Decisions", "청약과 부동산 선택을 이해하는 기준", ["subscriptionbook", "realinvestbook"]],
-    ],
-  },
-  law: {
-    title: "일상의 권리에서 세금과 자산 이전까지",
-    desc: "생활과 일에서 생기는 법적 관계를 소득과 재산의 흐름에 연결합니다.",
-    groups: [
-      ["생활과 일의 권리", "Rights", "생활 속 계약과 직장에서의 권리", ["lawbook", "workbook"]],
-      ["소득과 세금", "Tax", "세금의 구조와 연말정산 이해하기", ["taxbook"]],
-      ["상속과 증여", "Transfer", "재산을 물려주고 받는 법과 세금", ["inheritbook"]],
+      ["주거와 계약", "Living", "부동산의 기본 구조와 전월세 계약", ["rentbook"]],
     ],
   },
   health: {
     title: "몸을 이해하고 일상을 돌보기",
-    desc: "몸의 원리를 생활 습관과 의료 이용에 연결합니다.",
+    desc: "심장·폐·근육·호르몬의 작동과 연결을 배우며 몸의 원리를 이해합니다.",
     groups: [
       ["몸의 원리", "Understand", "우리 몸의 구조와 작동 방식", ["bodybook"]],
-      ["일상의 건강", "Daily Care", "운동·영양·수면을 함께 이해하기", ["fitbook", "foodbook", "sleepbook"]],
-      ["병원과 약", "Medical Care", "진료와 약을 이해하는 기본 지식", ["medbook"]],
     ],
   },
   culture: {
     title: "세상의 원리를 발견하고 즐기는 방법",
-    desc: "자연을 설명하는 원리에서 관찰과 기록, 감각과 표현으로 관심을 넓힙니다.",
+    desc: "카메라로 빛을 기록하고 음악으로 소리를 구성하는 원리를 배웁니다.",
     groups: [
-      ["일상의 원리", "Discover", "주변의 현상을 설명하는 물리", ["physicsbook"]],
-      ["관찰과 기록", "Observe", "빛을 기록하는 카메라와 밤하늘 탐색", ["camerabook", "starbook"]],
-      ["감각과 표현", "Create", "소리와 맛을 이해하고 즐기는 방법", ["musicbook", "cookbook"]],
+      ["관찰과 기록", "Observe", "카메라의 촬영 조건과 이미지의 관계", ["camerabook"]],
+      ["감각과 표현", "Create", "음·화음·리듬을 직접 듣고 구성하기", ["musicbook"]],
     ],
   },
 };

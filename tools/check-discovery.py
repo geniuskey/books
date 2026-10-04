@@ -35,6 +35,27 @@ unique(learning['bookPaths'], 'book path')
 unique(discovery['experiments'], 'experiment')
 unique(anchors, 'catalog experiment')
 books = {b['id']: b for b in catalog['books']}
+backlog = read('editorial-backlog.json')
+archived_books = [item['book'] for item in backlog['items']]
+archived_ids = unique(archived_books, 'editorial backlog book')
+check(not book_ids & archived_ids, 'Editorial backlog books must not appear in the public catalog')
+phase_ids = {p['id'] for p in catalog['phases']}
+check(sum(b.get('phase') == 1 for b in catalog['books'] if b['status'] != 'published') <= 3,
+      'Next phase must contain at most three books, including books being written')
+for b in catalog['books']:
+    check(b['status'] in catalog['statusLabels'], f'Unknown status: {b["id"]}')
+    if b['status'] != 'published':
+        check(b.get('phase') in phase_ids, f'Unknown roadmap phase: {b["id"]}')
+for item in backlog['items']:
+    check(item['disposition'] in {'merge', 'idea', 'removed-field'}, 'Unknown backlog disposition')
+    check(bool(item.get('reason', '').strip()), f'Missing backlog reason: {item["book"]["id"]}')
+    if item['disposition'] == 'merge':
+        check(bool(item.get('targets')), f'Missing merge targets: {item["book"]["id"]}')
+    check(set(item.get('targets', [])) <= book_ids | archived_ids,
+          f'Unknown merge target: {item["book"]["id"]}')
+for decision in backlog.get('scopeDecisions', []):
+    check(decision['replacement'] in book_ids and decision['sectionTarget'] in book_ids,
+          f'Unknown scope decision target: {decision["source"]}')
 expected = set()
 featured_links = set()
 checked_anchors = 0

@@ -90,7 +90,7 @@
   EB.populateFieldMenu = (d) => {
     $(".nav-fields-menu").innerHTML = d.wings.map((w) => `<div class="nav-fields-group">
       <span class="nav-fields-heading">${esc(w.name)}</span>
-      ${d.fields.filter((f) => f.wing === w.id).map((f) => `<a href="${EB.fieldUrl(f.id)}">${esc(f.name)}</a>`).join("")}
+      ${d.fields.filter((f) => f.wing === w.id && f.books.length).map((f) => `<a href="${EB.fieldUrl(f.id)}">${esc(f.name)}</a>`).join("")}
     </div>`).join("");
   };
 

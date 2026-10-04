@@ -18192,6 +18192,1098 @@
     "link": "chapters/valuation.html#sim-tornado"
   },
   {
+    "id": "bodybook/breathing/sim-br-co2",
+    "bookId": "bodybook",
+    "title": "CO2 반응 곡선과 저산소",
+    "link": "chapters/breathing.html#sim-br-co2"
+  },
+  {
+    "id": "bodybook/breathing/sim-br-loop",
+    "bookId": "bodybook",
+    "title": "호흡 조절 고리와 운동",
+    "link": "chapters/breathing.html#sim-br-loop"
+  },
+  {
+    "id": "bodybook/breathing/sim-br-hold",
+    "bookId": "bodybook",
+    "title": "숨 참기 모니터",
+    "link": "chapters/breathing.html#sim-br-hold"
+  },
+  {
+    "id": "bodybook/breathing/sim-br-hh",
+    "bookId": "bodybook",
+    "title": "pH 지도: 헨더슨-하셀바흐",
+    "link": "chapters/breathing.html#sim-br-hh"
+  },
+  {
+    "id": "bodybook/breathing/sim-br-ab",
+    "bookId": "bodybook",
+    "title": "산염기 장애와 보상의 화살표",
+    "link": "chapters/breathing.html#sim-br-ab"
+  },
+  {
+    "id": "bodybook/breathing/sim-br-vt",
+    "bookId": "bodybook",
+    "title": "환기 역치 찾기",
+    "link": "chapters/breathing.html#sim-br-vt"
+  },
+  {
+    "id": "bodybook/breathing/sim-br-hv",
+    "bookId": "bodybook",
+    "title": "과호흡과 호흡성 알칼리증",
+    "link": "chapters/breathing.html#sim-br-hv"
+  },
+  {
+    "id": "bodybook/breathing/sim-br-cs",
+    "bookId": "bodybook",
+    "title": "지연과 이득이 만드는 주기성 호흡",
+    "link": "chapters/breathing.html#sim-br-cs"
+  },
+  {
+    "id": "bodybook/breathing/sim-br-daon",
+    "bookId": "bodybook",
+    "title": "다온의 대회 막판, 산과 숨",
+    "link": "chapters/breathing.html#sim-br-daon"
+  },
+  {
+    "id": "bodybook/cell/sim-ce-walk",
+    "bookId": "bodybook",
+    "title": "무작위 걸음과 확산",
+    "link": "chapters/cell.html#sim-ce-walk"
+  },
+  {
+    "id": "bodybook/cell/sim-ce-time",
+    "bookId": "bodybook",
+    "title": "거리의 제곱: µm는 순간, cm는 몇 시간",
+    "link": "chapters/cell.html#sim-ce-time"
+  },
+  {
+    "id": "bodybook/cell/sim-ce-fick",
+    "bookId": "bodybook",
+    "title": "막을 건너는 양",
+    "link": "chapters/cell.html#sim-ce-fick"
+  },
+  {
+    "id": "bodybook/cell/sim-ce-osmo",
+    "bookId": "bodybook",
+    "title": "적혈구와 세 가지 용액",
+    "link": "chapters/cell.html#sim-ce-osmo"
+  },
+  {
+    "id": "bodybook/cell/sim-ce-nernst",
+    "bookId": "bodybook",
+    "title": "칼륨만 지나는 막",
+    "link": "chapters/cell.html#sim-ce-nernst"
+  },
+  {
+    "id": "bodybook/cell/sim-ce-ghk",
+    "bookId": "bodybook",
+    "title": "세 이온의 줄다리기(GHK)",
+    "link": "chapters/cell.html#sim-ce-ghk"
+  },
+  {
+    "id": "bodybook/cell/sim-ce-pump",
+    "bookId": "bodybook",
+    "title": "펌프를 멈추면",
+    "link": "chapters/cell.html#sim-ce-pump"
+  },
+  {
+    "id": "bodybook/cell/sim-ce-daon",
+    "bookId": "bodybook",
+    "title": "대회 날의 물과 소금",
+    "link": "chapters/cell.html#sim-ce-daon"
+  },
+  {
+    "id": "bodybook/ecg/sim-sa",
+    "bookId": "bodybook",
+    "title": "동방결절의 톱니: 박자를 만드는 세포",
+    "link": "chapters/ecg.html#sim-sa"
+  },
+  {
+    "id": "bodybook/ecg/sim-conduct",
+    "bookId": "bodybook",
+    "title": "흥분이 지나가는 길과 심전도",
+    "link": "chapters/ecg.html#sim-conduct"
+  },
+  {
+    "id": "bodybook/ecg/sim-calipers",
+    "bookId": "bodybook",
+    "title": "한 박동 해부와 캘리퍼",
+    "link": "chapters/ecg.html#sim-calipers"
+  },
+  {
+    "id": "bodybook/ecg/sim-ecg-rate",
+    "bookId": "bodybook",
+    "title": "칸 세어 심박수 읽기",
+    "link": "chapters/ecg.html#sim-ecg-rate"
+  },
+  {
+    "id": "bodybook/ecg/sim-leads",
+    "bookId": "bodybook",
+    "title": "심장 벡터와 세 유도의 그림자",
+    "link": "chapters/ecg.html#sim-leads"
+  },
+  {
+    "id": "bodybook/ecg/sim-vap",
+    "bookId": "bodybook",
+    "title": "활동 전위와 QT 간격",
+    "link": "chapters/ecg.html#sim-vap"
+  },
+  {
+    "id": "bodybook/ecg/sim-hrv",
+    "bookId": "bodybook",
+    "title": "숨 쉴 때마다 흔들리는 박자",
+    "link": "chapters/ecg.html#sim-hrv"
+  },
+  {
+    "id": "bodybook/ecg/sim-arrhythmia",
+    "bookId": "bodybook",
+    "title": "부정맥 갤러리: 박자와 펌프",
+    "link": "chapters/ecg.html#sim-arrhythmia"
+  },
+  {
+    "id": "bodybook/ecg/sim-daon-ecg",
+    "bookId": "bodybook",
+    "title": "다온의 안정 심전도, 0주에서 12주까지",
+    "link": "chapters/ecg.html#sim-daon-ecg"
+  },
+  {
+    "id": "bodybook/exercise/ex-energy",
+    "bookId": "bodybook",
+    "title": "전력 운동의 에너지 내역",
+    "link": "chapters/exercise.html#ex-energy"
+  },
+  {
+    "id": "bodybook/exercise/ex-pcr",
+    "bookId": "bodybook",
+    "title": "인터벌 질주와 인산크레아틴 회복",
+    "link": "chapters/exercise.html#ex-pcr"
+  },
+  {
+    "id": "bodybook/exercise/ex-kin",
+    "bookId": "bodybook",
+    "title": "산소 부족과 운동 뒤 산소 빚",
+    "link": "chapters/exercise.html#ex-kin"
+  },
+  {
+    "id": "bodybook/exercise/ex-ramp",
+    "bookId": "bodybook",
+    "title": "러닝머신 점증 부하 검사",
+    "link": "chapters/exercise.html#ex-ramp"
+  },
+  {
+    "id": "bodybook/exercise/ex-race",
+    "bookId": "bodybook",
+    "title": "VO2max와 젖산 역치가 정하는 기록",
+    "link": "chapters/exercise.html#ex-race"
+  },
+  {
+    "id": "bodybook/exercise/ex-fuel",
+    "bookId": "bodybook",
+    "title": "강도에 따른 연료 비율",
+    "link": "chapters/exercise.html#ex-fuel"
+  },
+  {
+    "id": "bodybook/exercise/ex-zones",
+    "bookId": "bodybook",
+    "title": "다온의 심박 구간과 한 주의 배분",
+    "link": "chapters/exercise.html#ex-zones"
+  },
+  {
+    "id": "bodybook/exercise/ex-adapt",
+    "bookId": "bodybook",
+    "title": "적응의 시간 상수",
+    "link": "chapters/exercise.html#ex-adapt"
+  },
+  {
+    "id": "bodybook/exercise/ex-plan",
+    "bookId": "bodybook",
+    "title": "다온의 12주 훈련 계획",
+    "link": "chapters/exercise.html#ex-plan"
+  },
+  {
+    "id": "bodybook/flow/sim-co-hr",
+    "bookId": "bodybook",
+    "title": "심박수와 심박출량: 어디서 꺾이는가",
+    "link": "chapters/flow.html#sim-co-hr"
+  },
+  {
+    "id": "bodybook/flow/sim-rect",
+    "bookId": "bodybook",
+    "title": "심박출량 직사각형",
+    "link": "chapters/flow.html#sim-rect"
+  },
+  {
+    "id": "bodybook/flow/sim-cycle",
+    "bookId": "bodybook",
+    "title": "수축기와 이완기의 나눔",
+    "link": "chapters/flow.html#sim-cycle"
+  },
+  {
+    "id": "bodybook/flow/sim-fick",
+    "bookId": "bodybook",
+    "title": "픽 원리: 산소 장부로 심박출량 구하기",
+    "link": "chapters/flow.html#sim-fick"
+  },
+  {
+    "id": "bodybook/flow/sim-distribution",
+    "bookId": "bodybook",
+    "title": "혈류 배분: 쉴 때와 달릴 때",
+    "link": "chapters/flow.html#sim-distribution"
+  },
+  {
+    "id": "bodybook/flow/sim-karvonen",
+    "bookId": "bodybook",
+    "title": "카르보넨 심박 구간 계산기",
+    "link": "chapters/flow.html#sim-karvonen"
+  },
+  {
+    "id": "bodybook/flow/sim-kinetics",
+    "bookId": "bodybook",
+    "title": "심박수의 오르막과 내리막",
+    "link": "chapters/flow.html#sim-kinetics"
+  },
+  {
+    "id": "bodybook/flow/sim-athlete",
+    "bookId": "bodybook",
+    "title": "같은 심박출량, 다른 심장",
+    "link": "chapters/flow.html#sim-athlete"
+  },
+  {
+    "id": "bodybook/flow/sim-daon-run",
+    "bookId": "bodybook",
+    "title": "다온의 달리기 모니터",
+    "link": "chapters/flow.html#sim-daon-run"
+  },
+  {
+    "id": "bodybook/gas/sim-gx-casc",
+    "bookId": "bodybook",
+    "title": "산소 분압의 계단과 고도",
+    "link": "chapters/gas.html#sim-gx-casc"
+  },
+  {
+    "id": "bodybook/gas/sim-gx-aeq",
+    "bookId": "bodybook",
+    "title": "폐포 가스식: 환기, 산소 농도, 고도",
+    "link": "chapters/gas.html#sim-gx-aeq"
+  },
+  {
+    "id": "bodybook/gas/sim-gx-diff",
+    "bookId": "bodybook",
+    "title": "모세혈관을 지나는 0.75초",
+    "link": "chapters/gas.html#sim-gx-diff"
+  },
+  {
+    "id": "bodybook/gas/sim-gx-odc",
+    "bookId": "bodybook",
+    "title": "해리 곡선과 보어 효과",
+    "link": "chapters/gas.html#sim-gx-odc"
+  },
+  {
+    "id": "bodybook/gas/sim-gx-del",
+    "bookId": "bodybook",
+    "title": "산소를 실어 나르는 세 손잡이",
+    "link": "chapters/gas.html#sim-gx-del"
+  },
+  {
+    "id": "bodybook/gas/sim-gx-co",
+    "bookId": "bodybook",
+    "title": "일산화탄소와 빈혈 비교",
+    "link": "chapters/gas.html#sim-gx-co"
+  },
+  {
+    "id": "bodybook/gas/sim-gx-vq",
+    "bookId": "bodybook",
+    "title": "두 무리의 폐포: 션트와 사강",
+    "link": "chapters/gas.html#sim-gx-vq"
+  },
+  {
+    "id": "bodybook/gas/sim-gx-co2",
+    "bookId": "bodybook",
+    "title": "이산화탄소 운반과 홀데인 효과",
+    "link": "chapters/gas.html#sim-gx-co2"
+  },
+  {
+    "id": "bodybook/gas/sim-gx-daon",
+    "bookId": "bodybook",
+    "title": "다온의 산소 사슬, 해수면에서 고원까지",
+    "link": "chapters/gas.html#sim-gx-daon"
+  },
+  {
+    "id": "bodybook/glossary/sim-gloss",
+    "bookId": "bodybook",
+    "title": "용어 찾기",
+    "link": "chapters/glossary.html#sim-gloss"
+  },
+  {
+    "id": "bodybook/glossary/sim-ref",
+    "bookId": "bodybook",
+    "title": "정상 범위 찾기",
+    "link": "chapters/glossary.html#sim-ref"
+  },
+  {
+    "id": "bodybook/glossary/sim-units",
+    "bookId": "bodybook",
+    "title": "두 개의 자",
+    "link": "chapters/glossary.html#sim-units"
+  },
+  {
+    "id": "bodybook/glucose/sim-gl-ogtt",
+    "bookId": "bodybook",
+    "title": "포도당 부하 검사의 네 곡선",
+    "link": "chapters/glucose.html#sim-gl-ogtt"
+  },
+  {
+    "id": "bodybook/glucose/sim-gl-loop",
+    "bookId": "bodybook",
+    "title": "최소 모델의 고리를 움직여 보기",
+    "link": "chapters/glucose.html#sim-gl-loop"
+  },
+  {
+    "id": "bodybook/glucose/sim-gl-knobs",
+    "bookId": "bodybook",
+    "title": "감수성 × 분비 평면",
+    "link": "chapters/glucose.html#sim-gl-knobs"
+  },
+  {
+    "id": "bodybook/glucose/sim-gl-meal",
+    "bookId": "bodybook",
+    "title": "양, 속도, 지방",
+    "link": "chapters/glucose.html#sim-gl-meal"
+  },
+  {
+    "id": "bodybook/glucose/sim-gl-walk",
+    "bookId": "bodybook",
+    "title": "언제, 얼마나 걸을까",
+    "link": "chapters/glucose.html#sim-gl-walk"
+  },
+  {
+    "id": "bodybook/glucose/sim-gl-t1",
+    "bookId": "bodybook",
+    "title": "식사 인슐린의 양과 시각",
+    "link": "chapters/glucose.html#sim-gl-t1"
+  },
+  {
+    "id": "bodybook/glucose/sim-gl-kidney",
+    "bookId": "bodybook",
+    "title": "여과, 재흡수, 배설",
+    "link": "chapters/glucose.html#sim-gl-kidney"
+  },
+  {
+    "id": "bodybook/glucose/sim-gl-day",
+    "bookId": "bodybook",
+    "title": "하루의 혈당과 평균",
+    "link": "chapters/glucose.html#sim-gl-day"
+  },
+  {
+    "id": "bodybook/glucose/sim-gl-daon",
+    "bookId": "bodybook",
+    "title": "다온의 점심, 그리고 대회의 연료",
+    "link": "chapters/glucose.html#sim-gl-daon"
+  },
+  {
+    "id": "bodybook/heart/sim-beat",
+    "bookId": "bodybook",
+    "title": "한 박동을 느린 화면으로",
+    "link": "chapters/heart.html#sim-beat"
+  },
+  {
+    "id": "bodybook/heart/sim-wiggers",
+    "bookId": "bodybook",
+    "title": "위거스 도표 읽기",
+    "link": "chapters/heart.html#sim-wiggers"
+  },
+  {
+    "id": "bodybook/heart/sim-valve",
+    "bookId": "bodybook",
+    "title": "좁아진 대동맥판",
+    "link": "chapters/heart.html#sim-valve"
+  },
+  {
+    "id": "bodybook/heart/sim-pv",
+    "bookId": "bodybook",
+    "title": "압력-부피 고리 해부",
+    "link": "chapters/heart.html#sim-pv"
+  },
+  {
+    "id": "bodybook/heart/sim-loads",
+    "bookId": "bodybook",
+    "title": "세 손잡이로 고리 바꾸기",
+    "link": "chapters/heart.html#sim-loads"
+  },
+  {
+    "id": "bodybook/heart/sim-starling",
+    "bookId": "bodybook",
+    "title": "프랭크-스탈링 곡선",
+    "link": "chapters/heart.html#sim-starling"
+  },
+  {
+    "id": "bodybook/heart/sim-balance",
+    "bookId": "bodybook",
+    "title": "두 펌프의 균형",
+    "link": "chapters/heart.html#sim-balance"
+  },
+  {
+    "id": "bodybook/heart/sim-states",
+    "bookId": "bodybook",
+    "title": "상태별 압력-부피 고리",
+    "link": "chapters/heart.html#sim-states"
+  },
+  {
+    "id": "bodybook/heart/sim-daon",
+    "bookId": "bodybook",
+    "title": "다온의 심장, 안정에서 대회 속도까지",
+    "link": "chapters/heart.html#sim-daon"
+  },
+  {
+    "id": "bodybook/homeostasis/sim-hs-thermo",
+    "bookId": "bodybook",
+    "title": "방의 온도 조절기",
+    "link": "chapters/homeostasis.html#sim-hs-thermo"
+  },
+  {
+    "id": "bodybook/homeostasis/sim-hs-gain",
+    "bookId": "bodybook",
+    "title": "이득을 올리면 오차가 준다",
+    "link": "chapters/homeostasis.html#sim-hs-gain"
+  },
+  {
+    "id": "bodybook/homeostasis/sim-hs-delay",
+    "bookId": "bodybook",
+    "title": "지연-이득 지도",
+    "link": "chapters/homeostasis.html#sim-hs-delay"
+  },
+  {
+    "id": "bodybook/homeostasis/sim-hs-int",
+    "bookId": "bodybook",
+    "title": "비례 제어와 적분 제어",
+    "link": "chapters/homeostasis.html#sim-hs-int"
+  },
+  {
+    "id": "bodybook/homeostasis/sim-hs-pos",
+    "bookId": "bodybook",
+    "title": "양성 피드백과 끝내는 장치",
+    "link": "chapters/homeostasis.html#sim-hs-pos"
+  },
+  {
+    "id": "bodybook/homeostasis/sim-hs-stand",
+    "bookId": "bodybook",
+    "title": "일어서기: 압반사 모니터",
+    "link": "chapters/homeostasis.html#sim-hs-stand"
+  },
+  {
+    "id": "bodybook/homeostasis/sim-hs-ff",
+    "bookId": "bodybook",
+    "title": "미리 움직이면 빚이 준다",
+    "link": "chapters/homeostasis.html#sim-hs-ff"
+  },
+  {
+    "id": "bodybook/homeostasis/sim-hs-sp",
+    "bookId": "bodybook",
+    "title": "설정점 옮기기: 열과 더위",
+    "link": "chapters/homeostasis.html#sim-hs-sp"
+  },
+  {
+    "id": "bodybook/homeostasis/sim-hs-build",
+    "bookId": "bodybook",
+    "title": "나만의 항상성 루프",
+    "link": "chapters/homeostasis.html#sim-hs-build"
+  },
+  {
+    "id": "bodybook/hormone/sim-hm-wire",
+    "bookId": "bodybook",
+    "title": "전선으로 보낼까, 방송할까",
+    "link": "chapters/hormone.html#sim-hm-wire"
+  },
+  {
+    "id": "bodybook/hormone/sim-hm-half",
+    "bookId": "bodybook",
+    "title": "반감기 사다리와 쌓이는 농도",
+    "link": "chapters/hormone.html#sim-hm-half"
+  },
+  {
+    "id": "bodybook/hormone/sim-hm-dose",
+    "bookId": "bodybook",
+    "title": "수용체가 줄면 곡선이 밀린다",
+    "link": "chapters/hormone.html#sim-hm-dose"
+  },
+  {
+    "id": "bodybook/hormone/sim-loop",
+    "bookId": "bodybook",
+    "title": "HPA 축 피드백 루프",
+    "link": "chapters/hormone.html#sim-loop"
+  },
+  {
+    "id": "bodybook/hormone/sim-hm-clock",
+    "bookId": "bodybook",
+    "title": "생활 시간을 옮기면 몸시계는 며칠 늦게 온다",
+    "link": "chapters/hormone.html#sim-hm-clock"
+  },
+  {
+    "id": "bodybook/hormone/sim-hm-stress",
+    "bookId": "bodybook",
+    "title": "아드레날린은 초, 코르티솔은 시간",
+    "link": "chapters/hormone.html#sim-hm-stress"
+  },
+  {
+    "id": "bodybook/hormone/sim-hm-hpt",
+    "bookId": "bodybook",
+    "title": "두 곡선의 교점이 검사 결과다",
+    "link": "chapters/hormone.html#sim-hm-hpt"
+  },
+  {
+    "id": "bodybook/hormone/sim-hm-t4",
+    "bookId": "bodybook",
+    "title": "T4 반감기 7일: 검사 시점 고르기",
+    "link": "chapters/hormone.html#sim-hm-t4"
+  },
+  {
+    "id": "bodybook/hormone/sim-hm-builder",
+    "bookId": "bodybook",
+    "title": "이득과 지연으로 고리 만들기",
+    "link": "chapters/hormone.html#sim-hm-builder"
+  },
+  {
+    "id": "bodybook/kidney/sim-kd-nephron",
+    "bookId": "bodybook",
+    "title": "180 L가 1.5 L가 되기까지",
+    "link": "chapters/kidney.html#sim-kd-nephron"
+  },
+  {
+    "id": "bodybook/kidney/sim-kd-gfr",
+    "bookId": "bodybook",
+    "title": "두 세동맥으로 여과율 조절하기",
+    "link": "chapters/kidney.html#sim-kd-gfr"
+  },
+  {
+    "id": "bodybook/kidney/sim-kd-auto",
+    "bookId": "bodybook",
+    "title": "자동 조절의 평평한 구간",
+    "link": "chapters/kidney.html#sim-kd-auto"
+  },
+  {
+    "id": "bodybook/kidney/sim-kd-clear",
+    "bookId": "bodybook",
+    "title": "깨끗해진 혈장의 부피",
+    "link": "chapters/kidney.html#sim-kd-clear"
+  },
+  {
+    "id": "bodybook/kidney/sim-kd-glu",
+    "bookId": "bodybook",
+    "title": "포도당 적정 곡선",
+    "link": "chapters/kidney.html#sim-kd-glu"
+  },
+  {
+    "id": "bodybook/kidney/sim-kd-cc",
+    "bookId": "bodybook",
+    "title": "역류 증폭을 한 걸음씩",
+    "link": "chapters/kidney.html#sim-kd-cc"
+  },
+  {
+    "id": "bodybook/kidney/sim-kd-adh",
+    "bookId": "bodybook",
+    "title": "삼투압 → ADH → 소변",
+    "link": "chapters/kidney.html#sim-kd-adh"
+  },
+  {
+    "id": "bodybook/kidney/sim-kd-water",
+    "bookId": "bodybook",
+    "title": "물 1 L를 마시면, 땀을 흘리면",
+    "link": "chapters/kidney.html#sim-kd-water"
+  },
+  {
+    "id": "bodybook/kidney/sim-kd-comp",
+    "bookId": "bodybook",
+    "title": "무엇을 넣고 빼면 물은 어디로 가는가",
+    "link": "chapters/kidney.html#sim-kd-comp"
+  },
+  {
+    "id": "bodybook/kidney/sim-kd-race",
+    "bookId": "bodybook",
+    "title": "다온의 대회 날, 물과 소금",
+    "link": "chapters/kidney.html#sim-kd-race"
+  },
+  {
+    "id": "bodybook/lab/sim-monitor",
+    "bookId": "bodybook",
+    "title": "가상 인체 모니터",
+    "link": "chapters/lab.html#sim-monitor"
+  },
+  {
+    "id": "bodybook/lab/sim-race",
+    "bookId": "bodybook",
+    "title": "10 km를 킬로미터마다",
+    "link": "chapters/lab.html#sim-race"
+  },
+  {
+    "id": "bodybook/lab/sim-alt",
+    "bookId": "bodybook",
+    "title": "산을 오르면 산소 계단이 내려간다",
+    "link": "chapters/lab.html#sim-alt"
+  },
+  {
+    "id": "bodybook/lab/sim-bleed",
+    "bookId": "bodybook",
+    "title": "피를 잃으면 심박이 먼저 말한다",
+    "link": "chapters/lab.html#sim-bleed"
+  },
+  {
+    "id": "bodybook/lab/sim-me",
+    "bookId": "bodybook",
+    "title": "내 몸의 성적표",
+    "link": "chapters/lab.html#sim-me"
+  },
+  {
+    "id": "bodybook/lab/sim-limit",
+    "bookId": "bodybook",
+    "title": "병목 찾기",
+    "link": "chapters/lab.html#sim-limit"
+  },
+  {
+    "id": "bodybook/lungs/sim-lu-mech",
+    "bookId": "bodybook",
+    "title": "숨 한 번의 역학",
+    "link": "chapters/lungs.html#sim-lu-mech"
+  },
+  {
+    "id": "bodybook/lungs/sim-lu-vol",
+    "bookId": "bodybook",
+    "title": "폐 부피 지도와 폐활량계",
+    "link": "chapters/lungs.html#sim-lu-vol"
+  },
+  {
+    "id": "bodybook/lungs/sim-lu-fev",
+    "bookId": "bodybook",
+    "title": "힘껏 내쉬기: 부피-시간 곡선과 흐름-부피 고리",
+    "link": "chapters/lungs.html#sim-lu-fev"
+  },
+  {
+    "id": "bodybook/lungs/sim-lu-pv",
+    "bookId": "bodybook",
+    "title": "정적 압력-부피 곡선",
+    "link": "chapters/lungs.html#sim-lu-pv"
+  },
+  {
+    "id": "bodybook/lungs/sim-lu-lap",
+    "bookId": "bodybook",
+    "title": "두 폐포의 줄다리기",
+    "link": "chapters/lungs.html#sim-lu-lap"
+  },
+  {
+    "id": "bodybook/lungs/sim-lu-aw",
+    "bookId": "bodybook",
+    "title": "기관지 반지름과 저항",
+    "link": "chapters/lungs.html#sim-lu-aw"
+  },
+  {
+    "id": "bodybook/lungs/sim-lu-dead",
+    "bookId": "bodybook",
+    "title": "얕고 빠르게, 깊고 느리게",
+    "link": "chapters/lungs.html#sim-lu-dead"
+  },
+  {
+    "id": "bodybook/lungs/sim-lu-ptx",
+    "bookId": "bodybook",
+    "title": "기흉: 두 용수철이 서로를 놓을 때",
+    "link": "chapters/lungs.html#sim-lu-ptx"
+  },
+  {
+    "id": "bodybook/lungs/sim-lu-daon",
+    "bookId": "bodybook",
+    "title": "다온의 숨, 안정에서 대회 속도까지",
+    "link": "chapters/lungs.html#sim-lu-daon"
+  },
+  {
+    "id": "bodybook/metabolism/sim-mt-flow",
+    "bookId": "bodybook",
+    "title": "음식 100 kcal는 어디로 가는가",
+    "link": "chapters/metabolism.html#sim-mt-flow"
+  },
+  {
+    "id": "bodybook/metabolism/sim-mt-bmr",
+    "bookId": "bodybook",
+    "title": "기초대사량 공식 세 개",
+    "link": "chapters/metabolism.html#sim-mt-bmr"
+  },
+  {
+    "id": "bodybook/metabolism/sim-mt-organs",
+    "bookId": "bodybook",
+    "title": "장기별 휴식 대사",
+    "link": "chapters/metabolism.html#sim-mt-organs"
+  },
+  {
+    "id": "bodybook/metabolism/sim-mt-mets",
+    "bookId": "bodybook",
+    "title": "활동 고르기와 MET 계산",
+    "link": "chapters/metabolism.html#sim-mt-mets"
+  },
+  {
+    "id": "bodybook/metabolism/sim-mt-calor",
+    "bookId": "bodybook",
+    "title": "VO₂와 VCO₂로 에너지와 연료 읽기",
+    "link": "chapters/metabolism.html#sim-mt-calor"
+  },
+  {
+    "id": "bodybook/metabolism/sim-mt-macro",
+    "bookId": "bodybook",
+    "title": "한 끼의 에너지와 열 효과",
+    "link": "chapters/metabolism.html#sim-mt-macro"
+  },
+  {
+    "id": "bodybook/metabolism/sim-mt-fuel",
+    "bookId": "bodybook",
+    "title": "강도에 따른 연료: 비율과 양",
+    "link": "chapters/metabolism.html#sim-mt-fuel"
+  },
+  {
+    "id": "bodybook/metabolism/sim-mt-atp",
+    "bookId": "bodybook",
+    "title": "ATP 회전 속도",
+    "link": "chapters/metabolism.html#sim-mt-atp"
+  },
+  {
+    "id": "bodybook/metabolism/sim-ledger",
+    "bookId": "bodybook",
+    "title": "하루 에너지 장부",
+    "link": "chapters/metabolism.html#sim-ledger"
+  },
+  {
+    "id": "bodybook/muscle/mu-zoom",
+    "bookId": "bodybook",
+    "title": "근육에서 분자까지 확대하기",
+    "link": "chapters/muscle.html#mu-zoom"
+  },
+  {
+    "id": "bodybook/muscle/mu-slide",
+    "bookId": "bodybook",
+    "title": "근절을 직접 줄이고 늘이기",
+    "link": "chapters/muscle.html#mu-slide"
+  },
+  {
+    "id": "bodybook/muscle/mu-cycle",
+    "bookId": "bodybook",
+    "title": "교차다리 한 바퀴",
+    "link": "chapters/muscle.html#mu-cycle"
+  },
+  {
+    "id": "bodybook/muscle/mu-ec",
+    "bookId": "bodybook",
+    "title": "전기에서 칼슘, 칼슘에서 힘",
+    "link": "chapters/muscle.html#mu-ec"
+  },
+  {
+    "id": "bodybook/muscle/mu-sum",
+    "bookId": "bodybook",
+    "title": "자극 빈도와 강축",
+    "link": "chapters/muscle.html#mu-sum"
+  },
+  {
+    "id": "bodybook/muscle/mu-lt",
+    "bookId": "bodybook",
+    "title": "길이-장력 곡선과 겹침",
+    "link": "chapters/muscle.html#mu-lt"
+  },
+  {
+    "id": "bodybook/muscle/mu-fv",
+    "bookId": "bodybook",
+    "title": "힘-속도 곡선과 파워",
+    "link": "chapters/muscle.html#mu-fv"
+  },
+  {
+    "id": "bodybook/muscle/mu-mu",
+    "bookId": "bodybook",
+    "title": "운동 단위 60개의 동원",
+    "link": "chapters/muscle.html#mu-mu"
+  },
+  {
+    "id": "bodybook/muscle/mu-fib",
+    "bookId": "bodybook",
+    "title": "섬유 유형별 피로 곡선",
+    "link": "chapters/muscle.html#mu-fib"
+  },
+  {
+    "id": "bodybook/muscle/mu-daon",
+    "bookId": "bodybook",
+    "title": "다온의 허벅지, 출발에서 결승선까지",
+    "link": "chapters/muscle.html#mu-daon"
+  },
+  {
+    "id": "bodybook/nerve/sim-nv-neuron",
+    "bookId": "bodybook",
+    "title": "신호가 뉴런을 지나가는 길",
+    "link": "chapters/nerve.html#sim-nv-neuron"
+  },
+  {
+    "id": "bodybook/nerve/sim-nv-ap",
+    "bookId": "bodybook",
+    "title": "역치와 \"전부 아니면 전무\"",
+    "link": "chapters/nerve.html#sim-nv-ap"
+  },
+  {
+    "id": "bodybook/nerve/sim-nv-gates",
+    "bookId": "bodybook",
+    "title": "통로가 열리고 닫히는 순서",
+    "link": "chapters/nerve.html#sim-nv-gates"
+  },
+  {
+    "id": "bodybook/nerve/sim-nv-refr",
+    "bookId": "bodybook",
+    "title": "두 번째 자극은 언제 통하는가",
+    "link": "chapters/nerve.html#sim-nv-refr"
+  },
+  {
+    "id": "bodybook/nerve/sim-nv-fi",
+    "bookId": "bodybook",
+    "title": "전류, 발화 빈도, 그리고 독",
+    "link": "chapters/nerve.html#sim-nv-fi"
+  },
+  {
+    "id": "bodybook/nerve/sim-nv-cond",
+    "bookId": "bodybook",
+    "title": "수초가 있는 길, 없는 길",
+    "link": "chapters/nerve.html#sim-nv-cond"
+  },
+  {
+    "id": "bodybook/nerve/sim-nv-syn",
+    "bookId": "bodybook",
+    "title": "시간 합산, 공간 합산, 억제",
+    "link": "chapters/nerve.html#sim-nv-syn"
+  },
+  {
+    "id": "bodybook/nerve/sim-nv-reflex",
+    "bookId": "bodybook",
+    "title": "무릎 반사를 밀리초로 쪼개기",
+    "link": "chapters/nerve.html#sim-nv-reflex"
+  },
+  {
+    "id": "bodybook/nerve/sim-nv-ans",
+    "bookId": "bodybook",
+    "title": "교감과 부교감의 줄다리기",
+    "link": "chapters/nerve.html#sim-nv-ans"
+  },
+  {
+    "id": "bodybook/nerve/sim-nv-react",
+    "bookId": "bodybook",
+    "title": "출발 신호에서 첫발까지",
+    "link": "chapters/nerve.html#sim-nv-react"
+  },
+  {
+    "id": "bodybook/overview/sim-ov-map",
+    "bookId": "bodybook",
+    "title": "몸 지도: 무게, 에너지, 혈류의 몫",
+    "link": "chapters/overview.html#sim-ov-map"
+  },
+  {
+    "id": "bodybook/overview/sim-ov-day",
+    "bookId": "bodybook",
+    "title": "하루의 계수기",
+    "link": "chapters/overview.html#sim-ov-day"
+  },
+  {
+    "id": "bodybook/overview/sim-ov-comp",
+    "bookId": "bodybook",
+    "title": "몸의 구성과 물의 세 칸",
+    "link": "chapters/overview.html#sim-ov-comp"
+  },
+  {
+    "id": "bodybook/overview/sim-ov-scale",
+    "bookId": "bodybook",
+    "title": "생쥐에서 코끼리까지",
+    "link": "chapters/overview.html#sim-ov-scale"
+  },
+  {
+    "id": "bodybook/overview/sim-ov-zoom",
+    "bookId": "bodybook",
+    "title": "크기를 키우면 산소가 닿지 않는다",
+    "link": "chapters/overview.html#sim-ov-zoom"
+  },
+  {
+    "id": "bodybook/overview/sim-ov-graph",
+    "bookId": "bodybook",
+    "title": "달리기 한 번에 계통이 어떻게 이어지나",
+    "link": "chapters/overview.html#sim-ov-graph"
+  },
+  {
+    "id": "bodybook/overview/sim-ov-range",
+    "bookId": "bodybook",
+    "title": "참고 범위는 분포다",
+    "link": "chapters/overview.html#sim-ov-range"
+  },
+  {
+    "id": "bodybook/overview/sim-ov-daon",
+    "bookId": "bodybook",
+    "title": "다온의 숫자, 나의 숫자",
+    "link": "chapters/overview.html#sim-ov-daon"
+  },
+  {
+    "id": "bodybook/thermo/sim-th-balance",
+    "bookId": "bodybook",
+    "title": "열 생산과 열 손실의 저울",
+    "link": "chapters/thermo.html#sim-th-balance"
+  },
+  {
+    "id": "bodybook/thermo/sim-th-met",
+    "bookId": "bodybook",
+    "title": "운동 강도와 심부 체온",
+    "link": "chapters/thermo.html#sim-th-met"
+  },
+  {
+    "id": "bodybook/thermo/sim-th-humid",
+    "bookId": "bodybook",
+    "title": "습도와 증발, 그리고 열지수",
+    "link": "chapters/thermo.html#sim-th-humid"
+  },
+  {
+    "id": "bodybook/thermo/sim-th-nodes",
+    "bookId": "bodybook",
+    "title": "심부 → 피부 → 공기",
+    "link": "chapters/thermo.html#sim-th-nodes"
+  },
+  {
+    "id": "bodybook/thermo/sim-th-cold",
+    "bookId": "bodybook",
+    "title": "추위, 바람, 옷",
+    "link": "chapters/thermo.html#sim-th-cold"
+  },
+  {
+    "id": "bodybook/thermo/sim-th-fever",
+    "bookId": "bodybook",
+    "title": "오한에서 땀까지",
+    "link": "chapters/thermo.html#sim-th-fever"
+  },
+  {
+    "id": "bodybook/thermo/sim-th-acclim",
+    "bookId": "bodybook",
+    "title": "첫날과 열나흘째",
+    "link": "chapters/thermo.html#sim-th-acclim"
+  },
+  {
+    "id": "bodybook/thermo/sim-th-map",
+    "bookId": "bodybook",
+    "title": "몸의 온도 지도",
+    "link": "chapters/thermo.html#sim-th-map"
+  },
+  {
+    "id": "bodybook/thermo/sim-th-ill",
+    "bookId": "bodybook",
+    "title": "체온계 위의 경고 신호",
+    "link": "chapters/thermo.html#sim-th-ill"
+  },
+  {
+    "id": "bodybook/thermo/sim-th-race",
+    "bookId": "bodybook",
+    "title": "다온의 10 km, 체온 모니터",
+    "link": "chapters/thermo.html#sim-th-race"
+  },
+  {
+    "id": "bodybook/vessels/sim-r4",
+    "bookId": "bodybook",
+    "title": "혈관 벽을 끌어 반지름 바꾸기",
+    "link": "chapters/vessels.html#sim-r4"
+  },
+  {
+    "id": "bodybook/vessels/sim-parallel",
+    "bookId": "bodybook",
+    "title": "병렬 회로: 장기마다 따로 여닫는 꼭지",
+    "link": "chapters/vessels.html#sim-parallel"
+  },
+  {
+    "id": "bodybook/vessels/sim-circuit",
+    "bookId": "bodybook",
+    "title": "대동맥에서 대정맥까지",
+    "link": "chapters/vessels.html#sim-circuit"
+  },
+  {
+    "id": "bodybook/vessels/sim-windkessel",
+    "bookId": "bodybook",
+    "title": "늘어나는 대동맥: 탄성과 맥압",
+    "link": "chapters/vessels.html#sim-windkessel"
+  },
+  {
+    "id": "bodybook/vessels/sim-cuff",
+    "bookId": "bodybook",
+    "title": "코로트코프 소리로 혈압 읽기",
+    "link": "chapters/vessels.html#sim-cuff"
+  },
+  {
+    "id": "bodybook/vessels/sim-bpclass",
+    "bookId": "bodybook",
+    "title": "혈압 지도: 두 숫자가 만드는 구간",
+    "link": "chapters/vessels.html#sim-bpclass"
+  },
+  {
+    "id": "bodybook/vessels/sim-tilt",
+    "bookId": "bodybook",
+    "title": "기울기 검사대: 중력과 피 기둥",
+    "link": "chapters/vessels.html#sim-tilt"
+  },
+  {
+    "id": "bodybook/vessels/sim-capillary",
+    "bookId": "bodybook",
+    "title": "스탈링 힘과 부종",
+    "link": "chapters/vessels.html#sim-capillary"
+  },
+  {
+    "id": "bodybook/vessels/sim-baroreflex",
+    "bookId": "bodybook",
+    "title": "모니터로 보는 압반사: 일어서기와 출혈",
+    "link": "chapters/vessels.html#sim-baroreflex"
+  },
+  {
+    "id": "bodybook/weight/sim-wt-tub",
+    "bookId": "bodybook",
+    "title": "에너지 균형의 욕조",
+    "link": "chapters/weight.html#sim-wt-tub"
+  },
+  {
+    "id": "bodybook/weight/sim-wt-line",
+    "bookId": "bodybook",
+    "title": "직선 예측과 실제 곡선",
+    "link": "chapters/weight.html#sim-wt-line"
+  },
+  {
+    "id": "bodybook/weight/sim-wt-comp",
+    "bookId": "bodybook",
+    "title": "빠지는 무게의 구성",
+    "link": "chapters/weight.html#sim-wt-comp"
+  },
+  {
+    "id": "bodybook/weight/sim-wt-water",
+    "bookId": "bodybook",
+    "title": "처음 3주, 무엇이 빠지는가",
+    "link": "chapters/weight.html#sim-wt-water"
+  },
+  {
+    "id": "bodybook/weight/sim-wt-adapt",
+    "bookId": "bodybook",
+    "title": "적응 열생성 켜고 끄기",
+    "link": "chapters/weight.html#sim-wt-adapt"
+  },
+  {
+    "id": "bodybook/weight/sim-wt-plateau",
+    "bookId": "bodybook",
+    "title": "섭취선을 끌어 평형 찾기",
+    "link": "chapters/weight.html#sim-wt-plateau"
+  },
+  {
+    "id": "bodybook/weight/sim-wt-exer",
+    "bookId": "bodybook",
+    "title": "식사, 운동, 둘 다",
+    "link": "chapters/weight.html#sim-wt-exer"
+  },
+  {
+    "id": "bodybook/weight/sim-wt-regain",
+    "bookId": "bodybook",
+    "title": "식단을 멈춘 뒤 2년",
+    "link": "chapters/weight.html#sim-wt-regain"
+  },
+  {
+    "id": "bodybook/weight/sim-wt-plan",
+    "bookId": "bodybook",
+    "title": "다온의 12주, 그리고 1년",
+    "link": "chapters/weight.html#sim-wt-plan"
+  },
+  {
     "id": "camerabook/aperture/sim-iris",
     "bookId": "camerabook",
     "title": "조리개 날개 들여다보기",
@@ -18550,5 +19642,695 @@
     "bookId": "camerabook",
     "title": "표준 vs Log vs 그레이딩",
     "link": "chapters/video.html#sim-log"
+  },
+  {
+    "id": "musicbook/chords/sim-chd-builder",
+    "bookId": "musicbook",
+    "title": "화음 조립기: 3도 스택 보기",
+    "link": "chapters/chords.html#sim-chd-builder"
+  },
+  {
+    "id": "musicbook/chords/sim-chd-inv",
+    "bookId": "musicbook",
+    "title": "전위와 숫자저음",
+    "link": "chapters/chords.html#sim-chd-inv"
+  },
+  {
+    "id": "musicbook/chords/sim-chd-tension",
+    "bookId": "musicbook",
+    "title": "텐션 탐색기: 회피음과 암시 음계",
+    "link": "chapters/chords.html#sim-chd-tension"
+  },
+  {
+    "id": "musicbook/chords/sim-chd-voicing",
+    "bookId": "musicbook",
+    "title": "보이싱 실험실: 배치·음역·거칠기",
+    "link": "chapters/chords.html#sim-chd-voicing"
+  },
+  {
+    "id": "musicbook/chords/sim-chd-ident",
+    "bookId": "musicbook",
+    "title": "화음 판별기: 건반을 찍으면 이름 후보와 근거",
+    "link": "chapters/chords.html#sim-chd-ident"
+  },
+  {
+    "id": "musicbook/chords/sim-chd-pcset",
+    "bookId": "musicbook",
+    "title": "집합류 탐색기: 모든 3·4·5음 화음",
+    "link": "chapters/chords.html#sim-chd-pcset"
+  },
+  {
+    "id": "musicbook/consonance/sim-con-interval",
+    "bookId": "musicbook",
+    "title": "음정 재생기: 리사주 도형과 배음 일치",
+    "link": "chapters/consonance.html#sim-con-interval"
+  },
+  {
+    "id": "musicbook/consonance/sim-con-beats",
+    "bookId": "musicbook",
+    "title": "맥놀이 → 거칠기 → 두 음: Δf 탐색기",
+    "link": "chapters/consonance.html#sim-con-beats"
+  },
+  {
+    "id": "musicbook/consonance/sim-con-sethares",
+    "bookId": "musicbook",
+    "title": "음색별 불협화 곡선 (세타레스 모델)",
+    "link": "chapters/consonance.html#sim-con-sethares"
+  },
+  {
+    "id": "musicbook/consonance/sim-con-matrix",
+    "bookId": "musicbook",
+    "title": "배음 일치 행렬",
+    "link": "chapters/consonance.html#sim-con-matrix"
+  },
+  {
+    "id": "musicbook/consonance/sim-con-chords",
+    "bookId": "musicbook",
+    "title": "화음 거칠기 순위표",
+    "link": "chapters/consonance.html#sim-con-chords"
+  },
+  {
+    "id": "musicbook/consonance/sim-con-ear",
+    "bookId": "musicbook",
+    "title": "음정 청음 훈련",
+    "link": "chapters/consonance.html#sim-con-ear"
+  },
+  {
+    "id": "musicbook/dsp/sim-dsp-alias",
+    "bookId": "musicbook",
+    "title": "에일리어싱 실험실: 낮은 샘플레이트에서 스윕 듣기",
+    "link": "chapters/dsp.html#sim-dsp-alias"
+  },
+  {
+    "id": "musicbook/dsp/sim-dsp-quant",
+    "bookId": "musicbook",
+    "title": "양자화기: 비트 수 · 디더 · 노이즈 셰이핑",
+    "link": "chapters/dsp.html#sim-dsp-quant"
+  },
+  {
+    "id": "musicbook/dsp/sim-dsp-fft",
+    "bookId": "musicbook",
+    "title": "FFT 창 함수 탐색기: 가까운 두 음을 가를 수 있을까",
+    "link": "chapters/dsp.html#sim-dsp-fft"
+  },
+  {
+    "id": "musicbook/dsp/sim-dsp-spectro",
+    "bookId": "musicbook",
+    "title": "실시간 스펙트로그램: 창 길이를 바꿔 가며 보기",
+    "link": "chapters/dsp.html#sim-dsp-spectro"
+  },
+  {
+    "id": "musicbook/dsp/sim-dsp-eq",
+    "bookId": "musicbook",
+    "title": "4밴드 파라메트릭 EQ 설계기",
+    "link": "chapters/dsp.html#sim-dsp-eq"
+  },
+  {
+    "id": "musicbook/dsp/sim-dsp-comb",
+    "bookId": "musicbook",
+    "title": "딜레이 라인 하나로 만드는 콤·플랜저·코러스·에코",
+    "link": "chapters/dsp.html#sim-dsp-comb"
+  },
+  {
+    "id": "musicbook/dsp/sim-dsp-reverb",
+    "bookId": "musicbook",
+    "title": "리버브 해부: 슈뢰더 · 프리버브 · 지수 감쇠 잡음",
+    "link": "chapters/dsp.html#sim-dsp-reverb"
+  },
+  {
+    "id": "musicbook/dsp/sim-dsp-comp",
+    "bookId": "musicbook",
+    "title": "컴프레서: 정적 곡선과 이득 감소 계측",
+    "link": "chapters/dsp.html#sim-dsp-comp"
+  },
+  {
+    "id": "musicbook/glossary/sim-gl-ear",
+    "bookId": "musicbook",
+    "title": "귀로 푸는 10문제",
+    "link": "chapters/glossary.html#sim-gl-ear"
+  },
+  {
+    "id": "musicbook/harmonics/sim-additive",
+    "bookId": "musicbook",
+    "title": "16배음 가산 합성기",
+    "link": "chapters/harmonics.html#sim-additive"
+  },
+  {
+    "id": "musicbook/harmonics/sim-fourier",
+    "bookId": "musicbook",
+    "title": "부분합 수렴과 깁스 현상",
+    "link": "chapters/harmonics.html#sim-fourier"
+  },
+  {
+    "id": "musicbook/harmonics/sim-missing",
+    "bookId": "musicbook",
+    "title": "기본음을 지워도 음높이는 남는다",
+    "link": "chapters/harmonics.html#sim-missing"
+  },
+  {
+    "id": "musicbook/harmonics/sim-phase",
+    "bookId": "musicbook",
+    "title": "같은 진폭, 다른 위상",
+    "link": "chapters/harmonics.html#sim-phase"
+  },
+  {
+    "id": "musicbook/harmonics/sim-vowel",
+    "bookId": "musicbook",
+    "title": "F1–F2 평면 위의 모음 합성기",
+    "link": "chapters/harmonics.html#sim-vowel"
+  },
+  {
+    "id": "musicbook/harmonics/sim-live",
+    "bookId": "musicbook",
+    "title": "실시간 스펙트럼 분석기 (마이크 / 이 페이지 출력)",
+    "link": "chapters/harmonics.html#sim-live"
+  },
+  {
+    "id": "musicbook/instruments/sim-ins-string",
+    "bookId": "musicbook",
+    "title": "뜯는 위치와 현의 모드 합성",
+    "link": "chapters/instruments.html#sim-ins-string"
+  },
+  {
+    "id": "musicbook/instruments/sim-ins-mersenne",
+    "bookId": "musicbook",
+    "title": "현 계산기: 길이·장력·지름·재질 → 음높이",
+    "link": "chapters/instruments.html#sim-ins-mersenne"
+  },
+  {
+    "id": "musicbook/instruments/sim-ins-ks",
+    "bookId": "musicbook",
+    "title": "카플러스–스트롱 기타와 스펙트로그램",
+    "link": "chapters/instruments.html#sim-ins-ks"
+  },
+  {
+    "id": "musicbook/instruments/sim-ins-inharm",
+    "bookId": "musicbook",
+    "title": "비조화성 B와 옥타브의 맥놀이",
+    "link": "chapters/instruments.html#sim-ins-inharm"
+  },
+  {
+    "id": "musicbook/instruments/sim-ins-tube",
+    "bookId": "musicbook",
+    "title": "관 공명기: 열린·닫힌·원뿔",
+    "link": "chapters/instruments.html#sim-ins-tube"
+  },
+  {
+    "id": "musicbook/instruments/sim-ins-drum",
+    "bookId": "musicbook",
+    "title": "원형 막의 모드와 타격 위치",
+    "link": "chapters/instruments.html#sim-ins-drum"
+  },
+  {
+    "id": "musicbook/instruments/sim-ins-idio",
+    "bookId": "musicbook",
+    "title": "타악기의 배음 지도: 막대·종·현 비교",
+    "link": "chapters/instruments.html#sim-ins-idio"
+  },
+  {
+    "id": "musicbook/melody/sim-mel-roll",
+    "bookId": "musicbook",
+    "title": "피아노 롤 편집기와 선율 통계",
+    "link": "chapters/melody.html#sim-mel-roll"
+  },
+  {
+    "id": "musicbook/melody/sim-mel-key",
+    "bookId": "musicbook",
+    "title": "크룸핸즐–슈뮤클러 키 찾기",
+    "link": "chapters/melody.html#sim-mel-key"
+  },
+  {
+    "id": "musicbook/melody/sim-mel-motif",
+    "bookId": "musicbook",
+    "title": "동기 변형기: P · T · I · R · RI · 확대 · 축소 · 반복 진행",
+    "link": "chapters/melody.html#sim-mel-motif"
+  },
+  {
+    "id": "musicbook/melody/sim-mel-markov",
+    "bookId": "musicbook",
+    "title": "n차 마르코프 선율 생성기",
+    "link": "chapters/melody.html#sim-mel-markov"
+  },
+  {
+    "id": "musicbook/melody/sim-mel-noise",
+    "bookId": "musicbook",
+    "title": "백색 · 브라운 · 1/f · 평균 회귀 선율",
+    "link": "chapters/melody.html#sim-mel-noise"
+  },
+  {
+    "id": "musicbook/melody/sim-mel-constraint",
+    "bookId": "musicbook",
+    "title": "코드 진행 위의 제약 기반 선율 생성기",
+    "link": "chapters/melody.html#sim-mel-constraint"
+  },
+  {
+    "id": "musicbook/melody/sim-mel-cpt",
+    "bookId": "musicbook",
+    "title": "2성 1류 대위법 검사기와 자동 작곡",
+    "link": "chapters/melody.html#sim-mel-cpt"
+  },
+  {
+    "id": "musicbook/melody/sim-mel-canon",
+    "bookId": "musicbook",
+    "title": "돌림노래 플레이어: 자크 형제",
+    "link": "chapters/melody.html#sim-mel-canon"
+  },
+  {
+    "id": "musicbook/midi/sim-midi-smear",
+    "bookId": "musicbook",
+    "title": "직렬 전송과 화음 번짐",
+    "link": "chapters/midi.html#sim-midi-smear"
+  },
+  {
+    "id": "musicbook/midi/sim-midi-monitor",
+    "bookId": "musicbook",
+    "title": "MIDI 메시지 모니터",
+    "link": "chapters/midi.html#sim-midi-monitor"
+  },
+  {
+    "id": "musicbook/midi/sim-midi-decode",
+    "bookId": "musicbook",
+    "title": "바이트 스트림 해독기",
+    "link": "chapters/midi.html#sim-midi-decode"
+  },
+  {
+    "id": "musicbook/midi/sim-midi-bend",
+    "bookId": "musicbook",
+    "title": "피치 벤드 계산기와 계단 글리산도",
+    "link": "chapters/midi.html#sim-midi-bend"
+  },
+  {
+    "id": "musicbook/midi/sim-midi-clock",
+    "bookId": "musicbook",
+    "title": "MIDI 클럭 지터와 템포 추정",
+    "link": "chapters/midi.html#sim-midi-clock"
+  },
+  {
+    "id": "musicbook/midi/sim-midi-vlq",
+    "bookId": "musicbook",
+    "title": "VLQ 인코더와 틱 ↔ 시간 계산기",
+    "link": "chapters/midi.html#sim-midi-vlq"
+  },
+  {
+    "id": "musicbook/midi/sim-midi-smf",
+    "bookId": "musicbook",
+    "title": "표준 MIDI 파일 만들기 (.mid 내려받기)",
+    "link": "chapters/midi.html#sim-midi-smf"
+  },
+  {
+    "id": "musicbook/midi/sim-midi-webmidi",
+    "bookId": "musicbook",
+    "title": "Web MIDI 입력 모니터",
+    "link": "chapters/midi.html#sim-midi-webmidi"
+  },
+  {
+    "id": "musicbook/progressions/sim-prg-playground",
+    "bookId": "musicbook",
+    "title": "코드 진행 놀이터",
+    "link": "chapters/progressions.html#sim-prg-playground"
+  },
+  {
+    "id": "musicbook/progressions/sim-prg-markov",
+    "bookId": "musicbook",
+    "title": "기능 전이 그래프와 무작위 걸음",
+    "link": "chapters/progressions.html#sim-prg-markov"
+  },
+  {
+    "id": "musicbook/progressions/sim-prg-tritone",
+    "bookId": "musicbook",
+    "title": "트라이톤 해결: V7 → I",
+    "link": "chapters/progressions.html#sim-prg-tritone"
+  },
+  {
+    "id": "musicbook/progressions/sim-prg-cadence",
+    "bookId": "musicbook",
+    "title": "종지 실험실과 귀 훈련",
+    "link": "chapters/progressions.html#sim-prg-cadence"
+  },
+  {
+    "id": "musicbook/progressions/sim-prg-voicelead",
+    "bookId": "musicbook",
+    "title": "보이스 리딩 실험실: 비용과 병행 검출",
+    "link": "chapters/progressions.html#sim-prg-voicelead"
+  },
+  {
+    "id": "musicbook/progressions/sim-prg-blues",
+    "bookId": "musicbook",
+    "title": "12마디 블루스 셔플",
+    "link": "chapters/progressions.html#sim-prg-blues"
+  },
+  {
+    "id": "musicbook/progressions/sim-prg-capo",
+    "bookId": "musicbook",
+    "title": "카포 계산기: 운지 모양과 실제 소리",
+    "link": "chapters/progressions.html#sim-prg-capo"
+  },
+  {
+    "id": "musicbook/psychoacoustics/sim-psy-loud",
+    "bookId": "musicbook",
+    "title": "등청감 곡선 탐색기 (ISO 226:2003)",
+    "link": "chapters/psychoacoustics.html#sim-psy-loud"
+  },
+  {
+    "id": "musicbook/psychoacoustics/sim-psy-mask",
+    "bookId": "musicbook",
+    "title": "마스킹 실험: 프로브가 언제 사라지나",
+    "link": "chapters/psychoacoustics.html#sim-psy-mask"
+  },
+  {
+    "id": "musicbook/psychoacoustics/sim-psy-jnd",
+    "bookId": "musicbook",
+    "title": "나의 JND 재기 (2IFC, 2-down-1-up)",
+    "link": "chapters/psychoacoustics.html#sim-psy-jnd"
+  },
+  {
+    "id": "musicbook/psychoacoustics/sim-psy-shepard",
+    "bookId": "musicbook",
+    "title": "셰퍼드 톤 · 리세 글리산도 · 트라이톤 역설",
+    "link": "chapters/psychoacoustics.html#sim-psy-shepard"
+  },
+  {
+    "id": "musicbook/psychoacoustics/sim-psy-itd",
+    "bookId": "musicbook",
+    "title": "ITD·ILD 소리 위치 만들기 (헤드폰)",
+    "link": "chapters/psychoacoustics.html#sim-psy-itd"
+  },
+  {
+    "id": "musicbook/psychoacoustics/sim-psy-binaural",
+    "bookId": "musicbook",
+    "title": "양이 맥놀이 vs 단이 맥놀이 (헤드폰)",
+    "link": "chapters/psychoacoustics.html#sim-psy-binaural"
+  },
+  {
+    "id": "musicbook/psychoacoustics/sim-psy-precedence",
+    "bookId": "musicbook",
+    "title": "선행음 효과: 융합 → 메아리 (헤드폰)",
+    "link": "chapters/psychoacoustics.html#sim-psy-precedence"
+  },
+  {
+    "id": "musicbook/reharm/sim-rh-secdom",
+    "bookId": "musicbook",
+    "title": "세컨더리 도미넌트 생성기",
+    "link": "chapters/reharm.html#sim-rh-secdom"
+  },
+  {
+    "id": "musicbook/reharm/sim-rh-borrow",
+    "bookId": "musicbook",
+    "title": "모달 인터체인지 팔레트",
+    "link": "chapters/reharm.html#sim-rh-borrow"
+  },
+  {
+    "id": "musicbook/reharm/sim-rh-tritsub",
+    "bookId": "musicbook",
+    "title": "ii–V–I vs ii–♭II7–I",
+    "link": "chapters/reharm.html#sim-rh-tritsub"
+  },
+  {
+    "id": "musicbook/reharm/sim-rh-dim7",
+    "bookId": "musicbook",
+    "title": "감7화음 하나, 으뜸음 넷",
+    "link": "chapters/reharm.html#sim-rh-dim7"
+  },
+  {
+    "id": "musicbook/reharm/sim-rh-negative",
+    "bookId": "musicbook",
+    "title": "음수 화성 변환기",
+    "link": "chapters/reharm.html#sim-rh-negative"
+  },
+  {
+    "id": "musicbook/reharm/sim-rh-tonnetz",
+    "bookId": "musicbook",
+    "title": "토네츠 탐색기: P · L · R",
+    "link": "chapters/reharm.html#sim-rh-tonnetz"
+  },
+  {
+    "id": "musicbook/reharm/sim-rh-melody",
+    "bookId": "musicbook",
+    "title": "선율 재화성기: 환희의 송가",
+    "link": "chapters/reharm.html#sim-rh-melody"
+  },
+  {
+    "id": "musicbook/rhythm/sim-rhy-metro",
+    "bookId": "musicbook",
+    "title": "메트로놈 · 탭 템포 · 비동기 측정",
+    "link": "chapters/rhythm.html#sim-rhy-metro"
+  },
+  {
+    "id": "musicbook/rhythm/sim-rhy-group",
+    "bookId": "musicbook",
+    "title": "박절 그룹핑 탐색기",
+    "link": "chapters/rhythm.html#sim-rhy-group"
+  },
+  {
+    "id": "musicbook/rhythm/sim-rhy-notes",
+    "bookId": "musicbook",
+    "title": "음표 길이 시각화기 (한 마디 4/4)",
+    "link": "chapters/rhythm.html#sim-rhy-notes"
+  },
+  {
+    "id": "musicbook/rhythm/sim-rhy-sync",
+    "bookId": "musicbook",
+    "title": "당김음 실험실 (LHL 점수)",
+    "link": "chapters/rhythm.html#sim-rhy-sync"
+  },
+  {
+    "id": "musicbook/rhythm/sim-rhy-swing",
+    "bookId": "musicbook",
+    "title": "스윙 비율 실험실",
+    "link": "chapters/rhythm.html#sim-rhy-swing"
+  },
+  {
+    "id": "musicbook/rhythm/sim-rhy-poly",
+    "bookId": "musicbook",
+    "title": "폴리리듬 · 폴리미터 원형 시계",
+    "link": "chapters/rhythm.html#sim-rhy-poly"
+  },
+  {
+    "id": "musicbook/rhythm/sim-rhy-jangdan",
+    "bookId": "musicbook",
+    "title": "장단 플레이어 (장구 합성)",
+    "link": "chapters/rhythm.html#sim-rhy-jangdan"
+  },
+  {
+    "id": "musicbook/scales/sim-scl-explorer",
+    "bookId": "musicbook",
+    "title": "음계 탐색기: 시계·마스크·단계·오선보",
+    "link": "chapters/scales.html#sim-scl-explorer"
+  },
+  {
+    "id": "musicbook/scales/sim-scl-even",
+    "bookId": "musicbook",
+    "title": "최대 균등성 시각화: 고른 집합 vs 내 집합",
+    "link": "chapters/scales.html#sim-scl-even"
+  },
+  {
+    "id": "musicbook/scales/sim-scl-modes",
+    "bookId": "musicbook",
+    "title": "선법 밝기 사다리",
+    "link": "chapters/scales.html#sim-scl-modes"
+  },
+  {
+    "id": "musicbook/scales/sim-scl-fifths",
+    "bookId": "musicbook",
+    "title": "5도권과 조표",
+    "link": "chapters/scales.html#sim-scl-fifths"
+  },
+  {
+    "id": "musicbook/scales/sim-scl-penta",
+    "bookId": "musicbook",
+    "title": "5음음계 즉흥 패드: 틀린 음이 있을까?",
+    "link": "chapters/scales.html#sim-scl-penta"
+  },
+  {
+    "id": "musicbook/scales/sim-scl-mask",
+    "bookId": "musicbook",
+    "title": "비트마스크 음계 실험실",
+    "link": "chapters/scales.html#sim-scl-mask"
+  },
+  {
+    "id": "musicbook/scales/sim-scl-world",
+    "bookId": "musicbook",
+    "title": "세계의 음계를 센트 자로 재기",
+    "link": "chapters/scales.html#sim-scl-world"
+  },
+  {
+    "id": "musicbook/sequencer/sim-seq-main",
+    "bookId": "musicbook",
+    "title": "리듬 시퀀서",
+    "link": "chapters/sequencer.html#sim-seq-main"
+  },
+  {
+    "id": "musicbook/sequencer/sim-seq-clock",
+    "bookId": "musicbook",
+    "title": "스케줄러 지터 측정: setTimeout vs 룩어헤드",
+    "link": "chapters/sequencer.html#sim-seq-clock"
+  },
+  {
+    "id": "musicbook/sequencer/sim-seq-human",
+    "bookId": "musicbook",
+    "title": "휴머나이즈와 미세 타이밍",
+    "link": "chapters/sequencer.html#sim-seq-human"
+  },
+  {
+    "id": "musicbook/sequencer/sim-seq-euclid",
+    "bookId": "musicbook",
+    "title": "유클리드 리듬 생성기 (3고리)",
+    "link": "chapters/sequencer.html#sim-seq-euclid"
+  },
+  {
+    "id": "musicbook/sequencer/sim-seq-synth",
+    "bookId": "musicbook",
+    "title": "드럼 합성 실험실",
+    "link": "chapters/sequencer.html#sim-seq-synth"
+  },
+  {
+    "id": "musicbook/sequencer/sim-seq-poly",
+    "bookId": "musicbook",
+    "title": "폴리미터 시퀀서",
+    "link": "chapters/sequencer.html#sim-seq-poly"
+  },
+  {
+    "id": "musicbook/sound/sim-snd-air",
+    "bookId": "musicbook",
+    "title": "공기 분자와 압력파 (슬로 모션)",
+    "link": "chapters/sound.html#sim-snd-air"
+  },
+  {
+    "id": "musicbook/sound/sim-snd-sine",
+    "bookId": "musicbook",
+    "title": "사인파 발생기와 페이저",
+    "link": "chapters/sound.html#sim-snd-sine"
+  },
+  {
+    "id": "musicbook/sound/sim-snd-db",
+    "bookId": "musicbook",
+    "title": "dB 사다리: 압력·거리·음원 수, 그리고 귀로 듣는 dB",
+    "link": "chapters/sound.html#sim-snd-db"
+  },
+  {
+    "id": "musicbook/sound/sim-snd-sweep",
+    "bookId": "musicbook",
+    "title": "로그 스윕 청력 테스트",
+    "link": "chapters/sound.html#sim-snd-sweep"
+  },
+  {
+    "id": "musicbook/sound/sim-snd-phase",
+    "bookId": "musicbook",
+    "title": "두 사인파의 위상차와 상쇄",
+    "link": "chapters/sound.html#sim-snd-phase"
+  },
+  {
+    "id": "musicbook/sound/sim-snd-field",
+    "bookId": "musicbook",
+    "title": "스피커 두 대의 간섭 무늬 (청취자를 끌어 보세요)",
+    "link": "chapters/sound.html#sim-snd-field"
+  },
+  {
+    "id": "musicbook/sound/sim-snd-beats",
+    "bookId": "musicbook",
+    "title": "맥놀이 → 거칠기 → 두 음",
+    "link": "chapters/sound.html#sim-snd-beats"
+  },
+  {
+    "id": "musicbook/sound/sim-snd-standing",
+    "bookId": "musicbook",
+    "title": "두 벽 사이의 정상파와 방 응답",
+    "link": "chapters/sound.html#sim-snd-standing"
+  },
+  {
+    "id": "musicbook/studio/sim-std-main",
+    "bookId": "musicbook",
+    "title": "루프 스테이션: 화성 · 드럼 · 베이스 · 선율 · 믹서",
+    "link": "chapters/studio.html#sim-std-main"
+  },
+  {
+    "id": "musicbook/studio/sim-std-arrange",
+    "bookId": "musicbook",
+    "title": "편곡기: 구간마다 트랙 켜고 끄기",
+    "link": "chapters/studio.html#sim-std-arrange"
+  },
+  {
+    "id": "musicbook/studio/sim-std-spectrum",
+    "bookId": "musicbook",
+    "title": "믹스 스펙트럼: 트랙별 색으로 보는 마스킹",
+    "link": "chapters/studio.html#sim-std-spectrum"
+  },
+  {
+    "id": "musicbook/studio/sim-std-challenge",
+    "bookId": "musicbook",
+    "title": "코드 진행 받아쓰기",
+    "link": "chapters/studio.html#sim-std-challenge"
+  },
+  {
+    "id": "musicbook/synthesis/sim-syn-adsr",
+    "bookId": "musicbook",
+    "title": "ADSR 편집기 (점을 끌어 보세요)",
+    "link": "chapters/synthesis.html#sim-syn-adsr"
+  },
+  {
+    "id": "musicbook/synthesis/sim-syn-sub",
+    "bookId": "musicbook",
+    "title": "감산 합성기: 필터 응답과 배음",
+    "link": "chapters/synthesis.html#sim-syn-sub"
+  },
+  {
+    "id": "musicbook/synthesis/sim-syn-lfo",
+    "bookId": "musicbook",
+    "title": "LFO 놀이터: 비브라토와 트레몰로",
+    "link": "chapters/synthesis.html#sim-syn-lfo"
+  },
+  {
+    "id": "musicbook/synthesis/sim-syn-am",
+    "bookId": "musicbook",
+    "title": "AM / 링 변조와 측파대",
+    "link": "chapters/synthesis.html#sim-syn-am"
+  },
+  {
+    "id": "musicbook/synthesis/sim-syn-fm",
+    "bookId": "musicbook",
+    "title": "2-연산자 FM 신시사이저",
+    "link": "chapters/synthesis.html#sim-syn-fm"
+  },
+  {
+    "id": "musicbook/synthesis/sim-syn-unison",
+    "bookId": "musicbook",
+    "title": "유니즌 디튠과 배음별 맥놀이",
+    "link": "chapters/synthesis.html#sim-syn-unison"
+  },
+  {
+    "id": "musicbook/tuning/sim-tun-calc",
+    "bookId": "musicbook",
+    "title": "센트 ↔ 비율 계산기와 음정 듣기",
+    "link": "chapters/tuning.html#sim-tun-calc"
+  },
+  {
+    "id": "musicbook/tuning/sim-tun-spiral",
+    "bookId": "musicbook",
+    "title": "5도의 나선: 몇 번 쌓아야 거의 닫힐까",
+    "link": "chapters/tuning.html#sim-tun-spiral"
+  },
+  {
+    "id": "musicbook/tuning/sim-tun-lattice",
+    "bookId": "musicbook",
+    "title": "순정률 격자와 콤마 펌프",
+    "link": "chapters/tuning.html#sim-tun-lattice"
+  },
+  {
+    "id": "musicbook/tuning/sim-tun-compare",
+    "bookId": "musicbook",
+    "title": "조율 체계 비교기: 같은 화음, 다른 조율",
+    "link": "chapters/tuning.html#sim-tun-compare"
+  },
+  {
+    "id": "musicbook/tuning/sim-tun-edo",
+    "bookId": "musicbook",
+    "title": "N등분 평균율 탐색기",
+    "link": "chapters/tuning.html#sim-tun-edo"
+  },
+  {
+    "id": "musicbook/tuning/sim-tun-pitch",
+    "bookId": "musicbook",
+    "title": "연주 피치 슬라이더: 같은 선율, 다른 A",
+    "link": "chapters/tuning.html#sim-tun-pitch"
   }
 ]

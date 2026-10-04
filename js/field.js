@@ -15,7 +15,7 @@ EB.start(null, (d) => {
   const map = window.FIELD_MAPS[f.id];
   const groups = f.stages
     ? f.stages.map((s) => ({ ...s, books: f.books.filter((b) => b.stage === s.id) }))
-    : (map?.groups || []).map(([name, en, desc, ids]) => ({ name, en, desc, books: ids.map((id) => f.books.find((b) => b.id === id)).filter(Boolean) }));
+    : (map?.groups || []).map(([name, en, desc, ids]) => ({ name, en, desc, books: ids.map((id) => f.books.find((b) => b.id === id)).filter(Boolean) })).filter((g) => g.books.length);
   // 새 책이 추가되더라도 지도에서 빠지지 않도록 별도 그룹에 표시한다.
   const assigned = new Set(groups.flatMap((g) => g.books.map((b) => b.id)));
   const remaining = f.books.filter((b) => !assigned.has(b.id));
@@ -27,9 +27,9 @@ EB.start(null, (d) => {
   $("#f-map-label").textContent = `${f.name} 지식 지도`;
   const k = EB.counts(f.books);
   const upcomingText = [k.writing && `집필 중 ${k.writing}`, k.planned && `집필 예정 ${k.planned}`].filter(Boolean).join(" · ");
-  $("#field-progress").innerHTML = `<div class="field-progress-top"><strong>${k.published}<small> / ${k.total}권</small></strong><span>${k.published ? "지금 읽을 수 있는 책" : "출간 준비 중"}</span></div>
+  $("#field-progress").innerHTML = `<div class="field-progress-top"><strong>${k.published}<small> / ${k.total}권</small></strong><span>${k.published ? "지금 읽을 수 있는 책" : k.total ? "출간 준비 중" : "현재 출간 계획 없음"}</span></div>
     ${EB.progress(f.books)}
-    <div class="field-progress-bottom"><span>${upcomingText || "모든 책 출간"}</span><a href="#shelf">책 목록 보기 ↓</a></div>`;
+    <div class="field-progress-bottom"><span>${upcomingText || (k.total ? "모든 책 출간" : "아이디어 보관 중")}</span>${k.total ? '<a href="#shelf">책 목록 보기 ↓</a>' : ""}</div>`;
   const chain = $("#chain");
   if (f.id === "semiconductor") chain.classList.add("semiconductor-map");
   groups.forEach((g, i) => {
@@ -72,7 +72,7 @@ EB.start(null, (d) => {
     const g = document.createElement("div");
     g.className = "other-wing";
     g.innerHTML = `<b>${esc(w.name)}</b>`;
-    d.fields.filter((x) => x.wing === w.id).forEach((x) => {
+    d.fields.filter((x) => x.wing === w.id && x.books.length).forEach((x) => {
       const a = document.createElement("a");
       a.href = EB.fieldUrl(x.id);
       EB.tint(a, x);
