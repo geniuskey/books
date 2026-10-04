@@ -1165,6 +1165,31 @@
       ]
     },
     {
+      "id": "colorbook",
+      "code": "CLR",
+      "title": "ColorBook",
+      "subtitle": "색채공학 교과서",
+      "headline": "스펙트럼 하나에서 픽셀 값 하나까지",
+      "description": "빛의 스펙트럼에서 측색학과 색공간, 색차, 조명, 카메라·디스플레이·인쇄의 색 재현까지. CIE 표준 데이터를 활용한 시뮬레이터로 색을 정의하고 측정하고 재현하는 법을 배웁니다.",
+      "url": "https://colorbook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/colorbook",
+      "field": "electronics",
+      "status": "published",
+      "level": "공대 학부",
+      "chapters": 20,
+      "simulators": 100,
+      "color": "#c2255c",
+      "colorDark": "#f783ac",
+      "topics": [
+        "스펙트럼·측색학",
+        "CIE XYZ·색공간",
+        "색차·색순응",
+        "조명·카메라·디스플레이",
+        "HDR·색 관리·인쇄"
+      ],
+      "motif": "subpixel"
+    },
+    {
       "id": "electricbook",
       "code": "ELC",
       "title": "ElectricBook",
