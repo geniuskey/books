@@ -800,11 +800,8 @@ footer p { margin: 0; }
 
 /* 실험 탐색과 문제별 학습 경로 */
 [hidden] { display: none !important; }
-.discovery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 20px; }
-.learning-path, .entry-card { border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-elev); overflow: hidden; }
-.learning-path, .entry-card { padding: 22px; }
-.entry-card h2 { font-size: 21px; margin: 8px 0; }
-.learning-path p, .entry-card p { color: var(--text-dim); }
+.learning-path { border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-elev); overflow: hidden; padding: 22px; }
+.learning-path p { color: var(--text-dim); }
 body[data-page="simulators"] .page-head { padding: 26px 0 10px; }
 body[data-page="simulators"] .page-head h1 { margin: 0 0 15px; font-size: clamp(28px, 3vw, 34px); }
 .experiment-caveat { margin: -7px 0 14px; color: var(--text-dim); font-size: 13px; line-height: 1.5; }
@@ -855,5 +852,4 @@ body[data-page="simulators"] .lib-filters { flex-direction: row; flex-wrap: wrap
 .search-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
 .search-choice { display: flex; align-items: center; gap: 8px; }
 .search-row select { padding: 10px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-elev); color: var(--text); font: inherit; max-width: 100%; }
-.discovery-intro { padding: 24px 0; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
