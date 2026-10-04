@@ -31,28 +31,22 @@
 <body>
 
 <main>
-  <section class="hero">
+  <section class="home-library" aria-labelledby="home-title">
     <div class="wrap">
-      <div>
-        <div class="eyebrow">Interactive Textbook Series</div>
-        <h1>읽는 교과서 말고,<br><span class="grad">만지는 교과서</span></h1>
-        <p class="lead">복잡한 시스템의 <b>작동 원리와 트레이드오프</b>를 직접 실험하며 이해합니다. 반도체에서 AI·데이터·SW, 일상의 과학까지. 결과를 먼저 예상하고, 조건을 바꾸고, 왜 달라지는지 설명해 보세요.</p>
-        <div class="cta">
-          <a class="btn primary" href="simulators.html">실험 찾기 →</a>
-          <a class="btn" href="paths.html">문제로 시작하기</a>
+      <div class="library-welcome">
+        <div>
+          <div class="eyebrow">The Interactive Library · Books</div>
+          <h1 id="home-title">궁금한 세계마다,<br><em>열어 볼 책이 있습니다.</em></h1>
         </div>
-        <div class="stats">
-          <div><b data-stat="published">–</b><span>출간</span></div>
-          <div><b data-stat="experiments">–</b><span>대표 실험</span></div>
-
-          <div><b data-stat="fields">–</b><span>분야</span></div>
+        <div class="library-welcome-side">
+          <p>반도체에서 컴퓨터와 AI, 자동차와 돈, 카메라까지. 책을 펼치고 직접 실험하며 세상의 작동 원리를 만나 보세요.</p>
+          <a href="library.html">전체 책장 둘러보기 <span aria-hidden="true">↗</span></a>
         </div>
       </div>
-      <div class="wafer-box">
-        <div class="wafer-tilt">
-          <svg class="wafer" id="wafer" viewBox="-24 -24 448 448" role="group" aria-label="웨이퍼 맵: 다이 하나가 교과서 한 권"></svg>
-        </div>
-        <div class="die-info" id="die-info" aria-live="polite"></div>
+      <div class="library-room" aria-label="출간된 책장">
+        <div class="library-room-head"><span>지금 바로 펼칠 수 있는 책</span><strong><span data-stat="published">–</span>권 출간</strong></div>
+        <div id="home-shelves" class="home-shelves"></div>
+        <div class="library-room-foot"><span>책등을 눌러 바로 읽어 보세요</span><a href="library.html">분야별로 찾기 →</a></div>
       </div>
     </div>
   </section>

@@ -162,6 +162,97 @@ a:hover { text-decoration: underline; }
 .btn.primary { background: var(--text); color: var(--bg); border-color: var(--text); }
 .btn.primary:hover { opacity: 0.9; }
 
+/* ---------- Home library ---------- */
+.home-library {
+  color: #f7f0e3;
+  background:
+    radial-gradient(ellipse 65% 65% at 50% -18%, rgba(233, 182, 105, .22), transparent 75%),
+    repeating-linear-gradient(90deg, transparent 0 118px, rgba(255,255,255,.015) 119px 120px),
+    linear-gradient(130deg, #25202a, #171b26 55%, #222029);
+  padding: 26px 0 34px;
+  overflow: hidden;
+}
+.library-welcome { display: flex; justify-content: space-between; align-items: end; gap: 32px; margin-bottom: 20px; }
+.library-welcome .eyebrow { color: #d5af7a; font-size: 11px; letter-spacing: .15em; }
+.library-welcome h1 { margin: 5px 0 0; font-size: clamp(29px, 3.7vw, 46px); line-height: 1.18; letter-spacing: -.045em; }
+.library-welcome h1 em { color: #f5ce92; font-style: normal; }
+.library-welcome-side { max-width: 390px; padding-bottom: 3px; }
+.library-welcome-side p { margin: 0 0 7px; color: #c4c0bd; font-size: 14px; line-height: 1.5; }
+.library-welcome-side a, .library-room-foot a { color: #f5ce92; font-weight: 700; font-size: 13px; }
+.library-welcome-side a:hover, .library-room-foot a:hover { color: #fff3df; }
+.library-room {
+  position: relative;
+  padding: 12px 21px 10px;
+  border: 1px solid #6b4c32;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #1c1515, #302522 50%, #1c1515);
+  box-shadow: inset 0 0 0 5px rgba(173, 117, 60, .09), inset 0 18px 30px rgba(0,0,0,.35), 0 18px 45px rgba(0,0,0,.27);
+}
+.library-room::before, .library-room::after {
+  content: ""; position: absolute; top: 0; bottom: 0; width: 15px; z-index: 1;
+  background: linear-gradient(90deg, #61442c, #9a6c42 30%, #38271f 75%, #201715);
+}
+.library-room::before { left: 0; }
+.library-room::after { right: 0; }
+.library-room-head, .library-room-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 0 12px; }
+.library-room-head { min-height: 23px; color: #d5b990; font-size: 12px; letter-spacing: .06em; }
+.library-room-head strong { color: #f6dbb3; font-family: var(--mono); font-size: 12px; }
+.library-room-foot { min-height: 27px; color: #a99f95; font-size: 11px; }
+.home-shelves { display: grid; gap: 8px; }
+.home-shelf {
+  display: flex; flex-direction: column; min-width: 0; padding: 3px 12px 0;
+  border-bottom: 17px solid #744d30;
+  background: radial-gradient(ellipse 70% 110% at 50% 5%, rgba(239, 182, 107, .1), transparent 65%), linear-gradient(90deg, #211a1b, #2d2423 50%, #211a1b);
+  box-shadow: 0 7px 0 #302019, 0 10px 12px rgba(0,0,0,.5), inset 0 18px 22px rgba(0,0,0,.35);
+}
+.shelf-label { align-self: flex-start; padding: 1px 3px; color: #dfc5a0; font-size: 11px; font-weight: 600; line-height: 1.4; letter-spacing: .04em; }
+.shelf-label span { margin-right: 9px; color: #a58967; font: 10px var(--mono); }
+.shelf-books { display: flex; align-items: end; justify-content: center; gap: 5px; min-width: 0; height: 241px; }
+.book-spine {
+  position: relative; display: flex; flex: 1 1 0; flex-direction: column; align-items: center; justify-content: space-between;
+  min-width: 0; max-width: 86px; height: 216px; padding: 12px 3px 10px;
+  color: #fff9ec; border: 1px solid rgba(255,255,255,.16); border-bottom: 0; border-radius: 3px 5px 0 0;
+  background: linear-gradient(90deg, rgba(0,0,0,.42), rgba(255,255,255,.15) 9%, transparent 19%, rgba(0,0,0,.08) 75%, rgba(0,0,0,.45) 95%), repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 5px), var(--book-color);
+  box-shadow: inset 3px 0 rgba(255,255,255,.12), inset -3px 0 rgba(0,0,0,.2), 4px 3px 5px rgba(0,0,0,.45);
+  text-decoration: none; transition: transform .18s ease, filter .18s ease; transform-origin: bottom center;
+}
+.book-spine:nth-child(4n + 2) { height: 225px; }
+.book-spine:nth-child(5n + 3) { height: 207px; }
+.book-spine.long-title { height: 236px; }
+.book-spine::before, .book-spine::after { content: ""; position: absolute; left: 3px; right: 3px; height: 3px; border-block: 1px solid rgba(255,241,210,.55); }
+.book-spine::before { top: 32px; }.book-spine::after { bottom: 31px; }
+.book-spine:hover, .book-spine:focus-visible { transform: translateY(-12px); filter: brightness(1.2); text-decoration: none; z-index: 2; }
+.book-spine:focus-visible { outline: 3px solid #ffdc91; outline-offset: 2px; }
+.spine-top, .spine-foot { max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: clip; line-height: 1; }
+.spine-top { font-size: 10px; font-weight: 700; }
+.spine-foot { font-family: var(--mono); font-size: 10px; letter-spacing: .1em; opacity: .9; }
+.spine-title { max-width: 100%; font: 700 clamp(13px, 1.45vw, 18px)/1.1 var(--font); writing-mode: vertical-rl; white-space: nowrap; letter-spacing: .015em; text-shadow: 0 1px 2px rgba(0,0,0,.5); }
+.book-spine.long-title .spine-title { font-size: 14px; }
+@media (max-width: 700px) {
+  .home-library { padding: 20px 0 25px; }
+  .library-welcome { display: block; margin-bottom: 17px; }
+  .library-welcome h1 { font-size: clamp(28px, 7vw, 39px); }
+  .library-welcome-side { max-width: 520px; margin-top: 12px; }
+  .library-welcome-side p { font-size: 13px; }
+  .library-room { padding-inline: 13px; }
+  .home-shelf { padding-inline: 5px; }
+  .shelf-label { font-size: 10px; }
+  .shelf-books {
+    display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px 4px; height: auto;
+    grid-auto-rows: 168px; align-items: end;
+    background: linear-gradient(to bottom, transparent 168px, #744d30 168px 183px, #302019 183px 190px, transparent 190px);
+  }
+  .book-spine, .book-spine:nth-child(4n + 2), .book-spine:nth-child(5n + 3) { width: 100%; max-width: none; height: 158px; padding: 8px 1px 7px; }
+  .book-spine:nth-child(3n + 1) { height: 150px; }
+  .book-spine.long-title { height: 164px; }
+  .book-spine::before { top: 23px; }.book-spine::after { bottom: 22px; }
+  .spine-top { font-size: 7px; }
+  .spine-foot { font-size: 8px; }
+  .spine-title { font-size: clamp(10px, 2.8vw, 14px); }
+  .book-spine.long-title .spine-title { font-size: 10px; }
+}
+@media (prefers-reduced-motion: reduce) { .book-spine { transition: none; } }
+
 .stats {
   display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 32px;
   border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--border); gap: 1px;

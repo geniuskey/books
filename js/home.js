@@ -1,4 +1,4 @@
-/* 홈: 전체 웨이퍼, 두 갈래와 분야 카드, 대표 시뮬레이터, 저자 노트, 도구 */
+/* 홈: 출간된 책장, 두 갈래와 분야 카드, 대표 시뮬레이터, 저자 노트, 도구 */
 EB.start("home", (d) => {
   "use strict";
   const { $, esc } = EB;
@@ -8,11 +8,34 @@ EB.start("home", (d) => {
   const vals = { published: c.published, writing: c.writing, planned: c.planned, fields: d.fields.length, experiments: d.books.filter(EB.isPublished).reduce((n, b) => n + (b.featured || []).length, 0) };
   EB.$$("[data-stat]").forEach((el) => { el.textContent = vals[el.dataset.stat]; });
 
-  // 전체 웨이퍼: 분야마다 부채꼴 하나
-  EB.wafer($("#wafer"), $("#die-info"), {
-    fields: d.fields, n: 11, waferName: "MASTER WAFER",
-    yieldNote: "갈 길이 멀어서 더 재밌는 중",
-    hint: "부채꼴 하나가 분야 하나, 다이 하나가 교과서 한 권. 다이를 가리키거나 눌러 보세요.",
+  // 첫 화면의 서가: 다른 분야를 먼저 보여 주고, 출간된 책만 바로 연결한다.
+  const published = d.books.filter((b) => EB.isPublished(b) && b.url);
+  const beyondChips = published.filter((b) => b.field !== "semiconductor");
+  const chips = published.filter((b) => b.field === "semiconductor");
+  const shelves = [];
+  const orderedBooks = [...beyondChips, ...chips];
+  for (let i = 0; i < orderedBooks.length; i += 11) {
+    shelves.push([i === 0 ? "더 넓은 세계" : "계속 이어지는 책들", orderedBooks.slice(i, i + 11)]);
+  }
+  const shelfBox = $("#home-shelves");
+  shelves.filter(([, books]) => books.length).forEach(([name, books], rowIndex) => {
+    const shelf = document.createElement("div");
+    shelf.className = "home-shelf";
+    shelf.innerHTML = `<div class="shelf-label"><span>${esc(String(rowIndex + 1).padStart(2, "0"))}</span>${esc(name)}</div><div class="shelf-books"></div>`;
+    const bookBox = $(".shelf-books", shelf);
+    books.forEach((b) => {
+      const a = document.createElement("a");
+      a.className = "book-spine";
+      const spineName = b.title.replace(/Book$/, " Book").replace(/([a-z])([A-Z][a-z])/g, "$1 $2");
+      if (spineName.length > 16) a.classList.add("long-title");
+      a.href = b.url;
+      a.style.setProperty("--book-color", b.color);
+      a.setAttribute("aria-label", `${spineName} · ${b.subtitle} 읽기`);
+      a.title = `${spineName} · ${b.subtitle}`;
+      a.innerHTML = `<span class="spine-top">${esc(b.fieldObj.name)}</span><span class="spine-title">${esc(spineName)}</span><span class="spine-foot">${esc(b.code)}</span>`;
+      bookBox.appendChild(a);
+    });
+    shelfBox.appendChild(shelf);
   });
 
   // 두 갈래: 분야 카드
