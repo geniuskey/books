@@ -160,6 +160,24 @@
     card.classList.add("flash");
   });
 
+  /* 링크는 모두 새 탭으로 연다. 같은 페이지 안의 #이동만 현재 탭에 둔다. */
+  const here = () => location.origin + location.pathname + location.search;
+  const openInNewTab = (a) => {
+    if (a.hasAttribute("download") || a.protocol === "javascript:" || a.getAttribute("href").startsWith("#")) return;
+    if (a.origin + a.pathname + a.search === here() && a.hash) return;
+    a.target = "_blank";
+    if (!a.relList.contains("noopener")) a.relList.add("noopener");
+  };
+  const scanLinks = (root) => {
+    if (root.matches?.("a[href]")) openInNewTab(root);
+    root.querySelectorAll?.("a[href]").forEach(openInNewTab);
+  };
+  scanLinks(document);
+  new MutationObserver((records) => records.forEach((r) => {
+    if (r.type === "attributes") scanLinks(r.target);
+    else r.addedNodes.forEach(scanLinks);
+  })).observe(document.documentElement, { childList: true, subtree: true, attributes: true, attributeFilter: ["href"] });
+
   /* 페이지 시작: 머리말·꼬리말을 붙이고 데이터를 읽은 뒤 페이지별 함수를 부른다 */
   EB.start = (active, fn) => {
     EB.header(active);
