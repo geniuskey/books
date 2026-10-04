@@ -648,6 +648,20 @@ section.block { padding: 56px 0; border-top: 1px solid var(--border); }
   .field-deck .field-card:hover .mini-wafer { transform: none; }
 }
 
+/* Home Dock: surrounding cards slide aside within the original row width. */
+@media (min-width: 1001px) and (hover: hover) and (prefers-reduced-motion: no-preference) {
+  :is(.field-deck, .home-experiments).dock-active > :is(.field-card, .home-experiment) {
+    z-index: var(--dock-z, 0);
+    transform: translateX(var(--dock-x, 0px));
+    transition: transform .38s cubic-bezier(.22, 1, .36, 1), border-color .2s, box-shadow .28s ease;
+  }
+  :is(.field-deck, .home-experiments).dock-active > .dock-current {
+    transform: translate(var(--dock-x, 0px), -14px) scale(1.025);
+    border-color: var(--c);
+    box-shadow: 0 20px 38px rgba(57, 37, 22, .22);
+  }
+}
+
 .next-list { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
 
 /* ---------- 분야 페이지 ---------- */

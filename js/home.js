@@ -89,6 +89,49 @@ EB.start("home", (d) => {
     $("#play").hidden = true;
   }
 
+  // Dock: 레이아웃 좌표를 기준으로 계산해 애니메이션 중 좌표가 흔들리지 않게 한다.
+  const dockMedia = matchMedia("(min-width: 1001px) and (hover: hover) and (prefers-reduced-motion: no-preference)");
+  EB.$$(".field-deck, .home-experiments").forEach((deck) => {
+    const cards = [...deck.children];
+    let active = null;
+    function reset() {
+      active = null;
+      deck.classList.remove("dock-active");
+      cards.forEach((card) => {
+        card.classList.remove("dock-current");
+        card.style.removeProperty("--dock-x");
+        card.style.removeProperty("--dock-z");
+      });
+    }
+    function activate(card) {
+      if (!dockMedia.matches || !cards.includes(card) || active === card) return;
+      active = card;
+      const index = cards.indexOf(card);
+      deck.classList.add("dock-active");
+      cards.forEach((item, i) => {
+        const distance = Math.abs(i - index);
+        // 겹침은 유지하고 가까운 카드만 조금 더 밀어낸다. 선택한 카드는 중앙을 유지한다.
+        const shift = distance === 0 ? 0 : Math.sign(i - index) * 24 / distance;
+        item.style.setProperty("--dock-x", `${shift}px`);
+        item.style.setProperty("--dock-z", cards.length - Math.abs(i - index));
+        item.classList.toggle("dock-current", item === card);
+      });
+    }
+    deck.addEventListener("pointermove", (event) => {
+      if (event.pointerType !== "touch") activate(event.target.closest(".field-card, .home-experiment"));
+    });
+    deck.addEventListener("pointerleave", () => {
+      reset();
+      if (deck.contains(document.activeElement)) activate(document.activeElement);
+    });
+    deck.addEventListener("focusin", (event) => activate(event.target));
+    deck.addEventListener("focusout", (event) => {
+      if (!deck.contains(event.relatedTarget)) reset();
+    });
+    dockMedia.addEventListener("change", reset);
+    new ResizeObserver(reset).observe(deck);
+  });
+
   // 만든 사람
   const au = d.author;
   if (au) {
