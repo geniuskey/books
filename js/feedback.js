@@ -26,7 +26,7 @@ EB.start(null, (data) => {
     context.hidden = false;
   }
 
-  const templates = { error: "error.yml", question: "question.yml", request: "request.yml" };
+  const templates = { error: "error.yml", request: "request.yml" };
   document.querySelectorAll("[data-feedback-type]").forEach((link) => {
     const url = new URL("https://github.com/geniuskey/books/issues/new");
     url.searchParams.set("template", templates[link.dataset.feedbackType]);

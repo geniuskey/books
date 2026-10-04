@@ -1,5 +1,5 @@
 name: 건의·요청
-description: 책의 개선 아이디어나 새로 읽고 싶은 책을 알려 주세요.
+description: 이해하기 어려웠던 설명, 개선 아이디어나 새로 읽고 싶은 책을 알려 주세요.
 title: "[건의] "
 body:
   - type: dropdown
@@ -37,6 +37,6 @@ body:
     id: reason
     attributes:
       label: 자세한 내용
-      description: 개선 아이디어나 새 책을 원하는 이유를 적어 주세요.
+      description: 이해하기 어려웠던 부분, 개선 아이디어나 새 책을 원하는 이유를 적어 주세요.
     validations:
       required: true
