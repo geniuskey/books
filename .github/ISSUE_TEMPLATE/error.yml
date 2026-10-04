@@ -1,0 +1,32 @@
+name: 오류 제보
+description: 책의 오탈자, 내용 오류, 실험 문제를 알려 주세요.
+title: "[오류] "
+body:
+  - type: input
+    id: book
+    attributes:
+      label: 책 이름
+      placeholder: 예) MemoryBook
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: 해당 페이지 URL
+      description: 가능하면 주소창의 링크를 붙여 주세요.
+    validations:
+      required: false
+  - type: textarea
+    id: problem
+    attributes:
+      label: 잘못된 부분
+      description: 무엇이 잘못되었는지 알려 주세요. 오탈자는 문장 일부를 인용해 주시면 찾기 쉽습니다.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 수정 제안
+      description: 알고 계신 정확한 내용이나 참고 자료가 있으면 적어 주세요.
+    validations:
+      required: false

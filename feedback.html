@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>오류·질문·제안 · Books</title>
+<meta name="description" content="Books 교과서의 오류를 제보하고, 내용을 질문하거나, 다음 책을 제안해 주세요.">
+<link rel="canonical" href="https://books.euiyun.com/feedback.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0a84c6">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Books">
+<meta property="og:title" content="오류·질문·제안 · Books">
+<meta property="og:description" content="Books 교과서의 오류를 제보하고, 내용을 질문하거나, 다음 책을 제안해 주세요.">
+<meta property="og:url" content="https://books.euiyun.com/feedback.html">
+<meta property="og:image" content="https://books.euiyun.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/core.js" defer></script>
+<script src="js/feedback.js" defer></script>
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3d6151a0abc94ede89285d462527fa80"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+<main>
+  <section class="page-head">
+    <div class="wrap">
+      <div class="eyebrow">Feedback</div>
+      <h1>책을 함께 고쳐 주세요</h1>
+      <p class="lead">잘못된 내용, 더 알고 싶은 부분, 다음에 읽고 싶은 책을 알려 주세요. 모든 책의 의견을 한곳에서 받습니다.</p>
+    </div>
+  </section>
+  <section class="block feedback-section">
+    <div class="wrap">
+      <div class="feedback-context" id="feedback-context" hidden></div>
+      <div class="feedback-grid">
+        <article class="feedback-card" id="error">
+          <span class="feedback-step">01 · Corrections</span>
+          <h2>오류 제보</h2>
+          <p>오탈자, 잘못된 설명이나 수치, 작동하지 않는 실험을 알려 주세요.</p>
+          <a data-feedback-type="error" href="https://github.com/geniuskey/books/issues/new">오류 제보하기 →</a>
+        </article>
+        <article class="feedback-card" id="question">
+          <span class="feedback-step">02 · Questions</span>
+          <h2>내용 질문</h2>
+          <p>이해되지 않는 설명이나 더 다뤘으면 하는 내용을 질문해 주세요.</p>
+          <a data-feedback-type="question" href="https://github.com/geniuskey/books/issues/new">질문 보내기 →</a>
+        </article>
+        <article class="feedback-card" id="request">
+          <span class="feedback-step">03 · Requests</span>
+          <h2>다음 책 제안</h2>
+          <p>읽고 싶은 주제와 그 이유를 알려 주세요. 집필 계획을 정할 때 참고하겠습니다.</p>
+          <a data-feedback-type="request" href="https://github.com/geniuskey/books/issues/new">책 제안하기 →</a>
+        </article>
+      </div>
+      <p class="feedback-note">현재 접수는 GitHub에서 진행되며 GitHub 로그인이 필요합니다. 공개 글이므로 개인 정보는 적지 마세요.</p>
+    </div>
+  </section>
+</main>
+</body>
+</html>

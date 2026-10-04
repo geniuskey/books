@@ -136,7 +136,7 @@
         info.innerHTML = `<div class="k">DIE ${g.dataset.pos} · <span class="verdict">EMPTY</span>${f ? " · " + esc(f.name) : ""}</div>
           <h3>아직 노광되지 않은 다이</h3>
           <p>${f ? `${esc(f.name)} 분야에서 다음 책을 기다리는 자리입니다.` : "이 자리에 들어갈 다음 책을 준비하고 있습니다."} 어떤 책이 들어오면 좋을까요?</p>
-          <div class="row"><a href="https://github.com/geniuskey/books/issues">다음 책 제안하기 →</a></div>`;
+          <div class="row"><a href="feedback.html?type=request">다음 책 제안하기 →</a></div>`;
         return;
       }
       EB.tint(info, b);
