@@ -741,14 +741,23 @@
       "code": "IND",
       "title": "ChipIndustryBook",
       "subtitle": "반도체 산업 지도",
-      "description": "팹리스, 파운드리, 메모리, 장비. 반도체 산업은 어떻게 돌아가나.",
+      "headline": "칩 하나를 누가 만드는가",
+      "description": "설계 도구와 IP, 팹리스, 장비·소재, 파운드리·메모리, 패키징부터 시장과 지정학까지. 반도체 산업의 가치사슬을 지도와 시뮬레이터로 살펴봅니다.",
+      "url": "https://chipindustrybook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/chipindustrybook",
       "field": "semiconductor",
-      "status": "planned",
-      "phase": 2,
-      "ideas": [
-        "웨이퍼 한 장의 원가 계산",
-        "메모리 가격 사이클",
-        "공급망 지도 탐색기"
+      "status": "published",
+      "level": "대학·일반",
+      "chapters": 17,
+      "simulators": 130,
+      "color": "#0b7285",
+      "colorDark": "#66d9e8",
+      "topics": [
+        "반도체 가치사슬",
+        "팹리스·파운드리",
+        "장비·소재",
+        "메모리·패키징",
+        "공급망·지정학"
       ],
       "stage": "industry"
     },
