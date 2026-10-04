@@ -1,0 +1,3 @@
+interface:
+  display_name: "Book Series Common"
+  short_description: "Audit shared book site metadata, analytics, and navigation"
