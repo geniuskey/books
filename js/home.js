@@ -41,7 +41,10 @@ EB.start("home", (d) => {
   // 두 갈래: 분야 카드
   d.wings.forEach((w) => {
     const box = $(`#fields-${w.id}`);
-    d.fields.filter((f) => f.wing === w.id).forEach((f) => {
+    const fields = d.fields.filter((f) => f.wing === w.id);
+    box.classList.add("field-deck");
+    box.style.setProperty("--field-gaps", Math.max(1, fields.length - 1));
+    fields.forEach((f) => {
       const k = EB.counts(f.books);
       const a = document.createElement("a");
       a.className = "field-card";
@@ -72,6 +75,7 @@ EB.start("home", (d) => {
   const selected = picks.map((pick) => ({ ...pick, experiment: all.find((f) => f.book.id === pick.book && f.link === pick.link) })).filter((pick) => pick.experiment);
   if (selected.length) {
     const grid = $("#home-experiments");
+    grid.style.setProperty("--experiment-gaps", Math.max(1, selected.length - 1));
     selected.forEach(({ question, experiment: f }) => {
       const a = document.createElement("a");
       a.className = "home-experiment";

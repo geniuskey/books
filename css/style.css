@@ -508,9 +508,10 @@ section.block { padding: 56px 0; border-top: 1px solid var(--border); }
 @media (prefers-reduced-motion: reduce) { .cover-art * { animation: none !important; } .cover-art { transition: none; } }
 
 /* ---------- 홈의 대표 실험 ---------- */
-.home-experiments { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-.home-experiment { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-elev); color: var(--text); box-shadow: var(--shadow); transition: border-color .2s, transform .2s; }
-.home-experiment:hover, .home-experiment:focus-visible { text-decoration: none; border-color: var(--c); transform: translateY(-2px); }
+.home-experiments { --card-width: 357px; display: grid; grid-template-columns: repeat(var(--experiment-gaps, 5), minmax(0, 1fr)) var(--card-width); gap: 0; padding: 12px 0 20px; isolation: isolate; }
+.home-experiment { position: relative; display: flex; flex-direction: column; width: var(--card-width); min-width: 0; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-elev); color: var(--text); box-shadow: -8px 4px 22px rgba(57, 37, 22, .10); transition: border-color .2s, transform .28s ease, box-shadow .28s ease; }
+.home-experiment:nth-child(even) { transform: translateY(7px) rotate(1deg); }
+.home-experiment:hover, .home-experiment:focus-visible { z-index: 2; text-decoration: none; border-color: var(--c); transform: translateY(-10px) rotate(-1deg); box-shadow: 0 18px 36px rgba(57, 37, 22, .20); }
 .home-experiment-image { aspect-ratio: 16 / 9; overflow: hidden; background: #fff; border-bottom: 1px solid var(--border); }
 .home-experiment-image img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
 .home-experiment-body { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 18px 20px 20px; }
@@ -520,9 +521,13 @@ section.block { padding: 56px 0; border-top: 1px solid var(--border); }
 .home-experiment-action { margin-top: auto; color: var(--c); font-size: 14px; font-weight: 700; }
 .home-experiments-foot { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 5px 14px; margin-top: 28px; color: var(--text-dim); }
 .home-experiments-foot a { font-weight: 700; }
-@media (max-width: 900px) { .home-experiments { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 580px) { .home-experiments { grid-template-columns: 1fr; } .home-experiment-image { aspect-ratio: 2 / 1; } }
-@media (prefers-reduced-motion: reduce) { .home-experiment { transition: none; } .home-experiment:hover, .home-experiment:focus-visible { transform: none; } }
+@media (max-width: 1000px), (hover: none) {
+  .home-experiments { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 14px 4px 24px; scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+  .home-experiment { flex: 0 0 min(var(--card-width), 88%); width: auto; scroll-snap-align: start; }
+  .home-experiment:nth-child(even) { transform: none; }
+}
+@media (max-width: 580px) { .home-experiment-image { aspect-ratio: 2 / 1; } }
+@media (prefers-reduced-motion: reduce) { .home-experiment { transition: none; } .home-experiment:nth-child(even), .home-experiment:hover, .home-experiment:focus-visible { transform: none; } }
 
 /* ---------- Author ---------- */
 .author { background: linear-gradient(180deg, var(--surface), var(--bg)); }
@@ -587,6 +592,61 @@ section.block { padding: 56px 0; border-top: 1px solid var(--border); }
 .fc-count { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12.5px; color: var(--text-dim); }
 .fc-count b { font-family: var(--mono); color: var(--text); }
 .fc-count .go { margin-left: auto; color: var(--c); font-weight: 600; }
+
+/* 한 줄의 분야 서가: 카드 폭은 유지하고 오른쪽 일러스트 부분을 포갠다. */
+.field-deck {
+  --card-width: 357px;
+  grid-template-columns: repeat(var(--field-gaps), minmax(0, 1fr)) var(--card-width);
+  gap: 0;
+  padding: 12px 0 20px;
+  isolation: isolate;
+}
+.field-deck .field-card {
+  position: relative;
+  width: var(--card-width);
+  min-height: 224px;
+  align-items: center;
+  flex-direction: row-reverse;
+  box-shadow: -8px 4px 22px rgba(57, 37, 22, .10);
+  transform: translateY(0) rotate(0);
+  transition: transform .28s ease, border-color .2s, box-shadow .28s ease;
+}
+.field-deck .field-card:nth-child(even) { transform: translateY(7px) rotate(1deg); }
+.field-deck .fc-body { flex: none; width: 185px; }
+.field-deck .field-art, .field-deck .mini-wafer { width: 108px; height: 108px; }
+.field-deck .fc-count { margin-top: 5px; }
+.field-deck .field-card:is(:hover, :focus-visible) {
+  z-index: 2;
+  transform: translateY(-10px) rotate(-1deg);
+  border-color: var(--c);
+  box-shadow: 0 18px 36px rgba(57, 37, 22, .20);
+}
+@media (max-width: 1000px), (hover: none) {
+  .field-deck {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 14px 4px 24px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+  .field-deck .field-card {
+    flex: 0 0 min(var(--card-width), 88%);
+    width: auto;
+    scroll-snap-align: start;
+  }
+  .field-deck .fc-body { flex: 1; width: auto; }
+  .field-deck .field-art, .field-deck .mini-wafer { width: 80px; height: 80px; }
+  .field-deck .field-card:nth-child(even) { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .field-deck .field-card,
+  .field-deck .field-card:nth-child(even),
+  .field-deck .field-card:is(:hover, :focus-visible) { transition: none; transform: none; }
+  .field-deck .mini-wafer { transition: none; }
+  .field-deck .field-card:hover .mini-wafer { transform: none; }
+}
 
 .next-list { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
 
