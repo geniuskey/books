@@ -829,7 +829,8 @@
         "메모리·패키징",
         "공급망·지정학"
       ],
-      "stage": "industry"
+      "stage": "industry",
+      "motif": "globe"
     },
     {
       "id": "equipbook",
@@ -1215,7 +1216,8 @@
         "선체 구조",
         "친환경 선박",
         "항해·자율운항"
-      ]
+      ],
+      "motif": "ship"
     },
     {
       "id": "phonebook",
@@ -1382,7 +1384,8 @@
         "투자·자산배분",
         "세금·보험",
         "연금·은퇴"
-      ]
+      ],
+      "motif": "coins"
     },
     {
       "id": "stockbook",
@@ -1407,7 +1410,8 @@
         "ETF·팩터",
         "백테스트",
         "선물·옵션"
-      ]
+      ],
+      "motif": "candles"
     },
     {
       "id": "econbook",

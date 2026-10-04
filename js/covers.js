@@ -153,14 +153,18 @@
       })));
       return svg(s);
     },
-    // 테스트: 셔무 플롯, 전압·주파수 격자에서 통과/불량 경계
+    // 테스트: 프로브 바늘이 내려와 닿으면 셔무 플롯의 열이 하나씩 판정된다
     shmoo() {
-      let s = "";
-      range(8).forEach((j) => range(10).forEach((i) => {
-        const pass = j >= 7 - Math.floor(i * 0.7) - 1 && i > 0;
-        s += `<rect x="${64 + i * 13}" y="${10 + j * 13.5}" width="11.5" height="12" rx="1.5" fill="${pass ? "#7deaa0" : "#ff7a8a"}" fill-opacity="${pass ? 0.8 : 0.55}"/>`;
+      const x0 = 74, y0 = 16, p = 12, cols = 10, rows = 8; let s = "";
+      s += `<path d="M${x0 - 5} ${y0 - 4}V${y0 + rows * p + 2}H${x0 + cols * p + 4}" fill="none" stroke="${W}" stroke-opacity=".6" stroke-width="1.2"/>`;
+      s += `<text x="${x0 - 12}" y="${y0 + 4}" fill="${W}" fill-opacity=".75" font-size="8" font-family="monospace">V</text><text x="${x0 + cols * p - 10}" y="${y0 + rows * p + 11}" fill="${W}" fill-opacity=".75" font-size="8" font-family="monospace">F</text>`;
+      range(cols).forEach((i) => range(rows).forEach((j) => {
+        const v = 1 - j / (rows - 1), f = i / (cols - 1);
+        const pass = v > 0.12 + 0.75 * f ** 1.7 && !(v > 0.9 && f > 0.75);
+        s += `<rect class="cv-hit" style="animation-delay:${(0.15 + i * 0.24).toFixed(2)}s" x="${x0 + i * p}" y="${y0 + j * p}" width="10" height="10" rx="1.5" fill="${pass ? "#7deaa0" : "#ff7a8a"}" fill-opacity="${pass ? 0.85 : 0.5}"/>`;
       }));
-      s += `<rect class="cv-pulse" x="128" y="51" width="38" height="54" rx="2" fill="none" stroke="${W}" stroke-width="2"/>`;
+      s += `<g class="cv-sweep" style="--dx:${cols * p}px"><rect x="${x0 - 1}" y="${y0 - 2}" width="12" height="${rows * p + 2}" rx="2" fill="${W}" fill-opacity=".16" stroke="${W}" stroke-opacity=".8"/>`;
+      s += `<path d="M${x0 + 5} ${y0 - 14}V${y0 - 4}" stroke="${W}" stroke-width="1.6"/><path d="M${x0 - 1} ${y0 - 14}h12" stroke="${W}" stroke-width="2.4" stroke-linecap="round"/></g>`;
       return svg(s);
     },
     // 스마트폰: 유리·디스플레이·보드·배터리·뒷판이 비스듬히 분해되어 떠 있다
@@ -190,25 +194,123 @@
       s += `<rect x="112" y="16" width="40" height="104" fill="${W}" fill-opacity=".1"/>`;
       return svg(s);
     },
-    // TCAD: 격자 위에 트랜지스터 단면과 등전위선, 수렴하는 잔차
+    // TCAD: 접합 근처가 촘촘한 격자 위의 MOSFET 단면, 드레인 쪽 등전위선이 숨 쉬고 채널로 전자가 흐른다
     tcad() {
-      let s = "";
-      range(9).forEach((i) => { s += `<path d="M${40 + i * 18} 40V122" stroke="${W}" stroke-opacity=".22"/>`; });
-      range(6).forEach((j) => { s += `<path d="M40 ${40 + j * 16.4}H184" stroke="${W}" stroke-opacity=".22"/>`; });
-      s += `<rect x="92" y="18" width="40" height="18" rx="2" fill="${W}" fill-opacity=".85"/><rect x="88" y="36" width="48" height="4" fill="${W}" fill-opacity=".45"/>`;
-      s += `<path d="M40 40c18 0 22 26 36 30s14 8 36 8 22-4 36-8 18-30 36-30V122H40z" fill="${W}" fill-opacity=".14"/>`;
-      [0, 12, 24].forEach((d, k) => { s += `<path class="cv-flow" style="animation-delay:${k * 0.2}s" d="M40 ${52 + d}c26 0 30 ${18 + d / 3} 72 ${18 + d / 3}s46-${18 + d / 3} 72-${18 + d / 3}" fill="none" stroke="${W}" stroke-opacity=".75" stroke-width="1.4" stroke-dasharray="5 6"/>`; });
-      [14, 9, 5.5, 3, 1.6].forEach((h, k) => { s += `<rect class="cv-grow" x="${10 + k * 5}" y="${112 - h * 4}" width="3.5" height="${h * 4}" fill="${W}" fill-opacity=".7"/>`; });
+      const xs = [64, 76, 86, 94, 99, 102, 105, 110, 118, 130, 142, 150, 155, 158, 161, 166, 174, 184, 196];
+      const ys = [30, 32, 35, 39, 44, 51, 60, 72, 88, 106, 124];
+      let s = `<rect x="64" y="30" width="132" height="94" fill="${W}" fill-opacity=".08"/>`;
+      s += `<path d="M64 30H104C104 48 97 56 82 56H64Z" fill="${W}" fill-opacity=".34"/><path d="M196 30H156C156 48 163 56 178 56H196Z" fill="${W}" fill-opacity=".34"/>`;
+      xs.forEach((x) => { s += `<path d="M${x} 30V124" stroke="${W}" stroke-opacity=".2" stroke-width=".6"/>`; });
+      ys.forEach((y) => { s += `<path d="M64 ${y}H196" stroke="${W}" stroke-opacity=".2" stroke-width=".6"/>`; });
+      s += `<svg x="64" y="30" width="132" height="94" viewBox="64 30 132 94" overflow="hidden">`;
+      [34, 46, 58].forEach((r, k) => {
+        const dy = (Math.sqrt(r * r - 24 * 24) * 0.9).toFixed(1);
+        s += `<path class="cv-breathe" style="animation-delay:${(k * 0.25).toFixed(2)}s" d="M${172 - r} 30A${r} ${(r * 0.9).toFixed(1)} 0 0 0 196 ${(30 + +dy).toFixed(1)}" fill="none" stroke="#ffd27a" stroke-opacity="${(0.9 - k * 0.2).toFixed(2)}" stroke-width="1.3"/>`;
+      });
+      s += `</svg><rect x="104" y="26" width="52" height="4" fill="${W}" fill-opacity=".5"/><rect x="108" y="12" width="44" height="14" rx="1.5" fill="${W}" fill-opacity=".9"/>`;
+      s += `<rect x="70" y="21" width="24" height="9" rx="1.5" fill="${W}" fill-opacity=".7"/><rect x="166" y="21" width="24" height="9" rx="1.5" fill="${W}" fill-opacity=".7"/>`;
+      range(4).forEach((k) => { s += `<circle class="cv-run" style="--dx:50px;animation-delay:-${(k * 0.4).toFixed(1)}s" cx="105" cy="33.5" r="2.2" fill="#8ab4ff"/>`; });
       return svg(s);
     },
-    // 아날로그: 연산 증폭기 기호와 보드 선도, 증폭되어 나오는 사인파
+    // 아날로그: 비반전 증폭기, 작은 입력 사인파가 큰 출력 사인파로 흘러 나간다
     analog() {
+      const zig = (dx, dy, n = 4) => range(n).map((k) => `l${(dx / n / 2).toFixed(1)} ${k % 2 ? -dy : dy} l${(dx / n / 2).toFixed(1)} ${k % 2 ? dy : -dy}`).join(" ");
       let s = "";
-      range(5).forEach((i) => { s += `<path d="M40 ${24 + i * 22}H190" stroke="${W}" stroke-opacity=".18"/>`; });
-      s += `<path d="M40 30H96c20 0 30 10 44 30s28 46 50 56" fill="none" stroke="${W}" stroke-opacity=".55" stroke-width="1.4"/>`;
-      s += `<path d="M70 50L70 100L112 75Z" fill="${W}" fill-opacity=".85"/><path d="M60 62H70M60 88H70M112 75H124" stroke="${W}" stroke-width="1.6"/>`;
-      s += `<path class="cv-flow" d="M124 75c6-8 10-8 14 0s8 8 14 0 8-8 14 0 8 8 14 0" fill="none" stroke="${W}" stroke-opacity=".8" stroke-width="1.6" stroke-dasharray="5 4"/>`;
-      s += `<path class="cv-flow" style="animation-delay:.2s" d="M46 62c2-3 4-3 6 0s4 3 6 0" fill="none" stroke="${W}" stroke-opacity=".7" stroke-width="1.2" stroke-dasharray="3 3"/>`;
+      range(5).forEach((i) => { s += `<path d="M140 ${30 + i * 20}H196" stroke="${W}" stroke-opacity=".14"/>`; });
+      s += `<path d="M92 56H80V20H100 ${zig(24, 5)} H136V70" fill="none" stroke="${W}" stroke-width="1.4"/>`;
+      s += `<path d="M80 56H74 ${zig(-16, 4)} H52V64M46 64H64M49 68H61M53 72H57" fill="none" stroke="${W}" stroke-width="1.3" stroke-opacity=".85"/>`;
+      s += `<path d="M44 84H92M130 70H140" stroke="${W}" stroke-width="1.4"/>`;
+      s += `<path d="M92 42V98L130 70Z" fill="${W}" fill-opacity=".22" stroke="${W}" stroke-width="1.6" stroke-linejoin="round"/>`;
+      s += `<path d="M96 56h6M96 84h6M99 81v6" stroke="${W}" stroke-width="1.3"/>`;
+      [[80, 56], [136, 70]].forEach(([x, y]) => { s += `<circle cx="${x}" cy="${y}" r="2.4" fill="${W}"/>`; });
+      const wave = (x, y, w, h, amp, per, color, sw) => {
+        const cyc = Math.ceil(w / per) + 2; let d = `M${-per} ${h / 2}`;
+        range(cyc * 2).forEach((k) => { d += k ? ` t${per / 2} 0` : ` q${per / 4} ${-2 * amp} ${per / 2} 0`; });
+        return `<svg x="${x}" y="${y}" width="${w}" height="${h}" overflow="hidden"><path class="cv-slide" style="--dx:${per}px" d="${d}" fill="none" stroke="${color}" stroke-width="${sw}" stroke-linecap="round"/></svg>`;
+      };
+      s += wave(46, 74, 42, 20, 5, 14, "#ffd27a", 1.6);
+      s += wave(140, 42, 56, 56, 22, 28, "#ffd27a", 2);
+      return svg(s);
+    },
+    // 반도체 산업: 도는 지구 위에서 설계·장비·소재·파운드리 거점을 잇는 공급망
+    globe() {
+      const cx = 138, cy = 66, R = 54; let s = "";
+      s += `<circle cx="${cx}" cy="${cy}" r="${R}" fill="${W}" fill-opacity=".1" stroke="${W}" stroke-opacity=".6" stroke-width="1.2"/>`;
+      [-36, -18, 0, 18, 36].forEach((d) => { s += `<ellipse cx="${cx}" cy="${cy + d}" rx="${Math.sqrt(R * R - d * d).toFixed(1)}" ry="${(4 - Math.abs(d) / 12).toFixed(1)}" fill="none" stroke="${W}" stroke-opacity=".22"/>`; });
+      range(4).forEach((k) => { s += `<ellipse class="cv-turn" style="transform-origin:${cx}px ${cy}px;animation-delay:-${(k * 1.5).toFixed(1)}s" cx="${cx}" cy="${cy}" rx="${R}" ry="${R}" fill="none" stroke="${W}" stroke-opacity=".3"/>`; });
+      const N = { us: [100, 52], nl: [128, 34], jp: [178, 50], kr: [166, 58], tw: [160, 84], cn: [140, 64] };
+      [["us", "tw", -26], ["nl", "tw", -30], ["jp", "kr", -10], ["kr", "cn", -8], ["tw", "us", 30], ["cn", "nl", -14]].forEach(([a, b, bend], k) => {
+        const [x1, y1] = N[a], [x2, y2] = N[b];
+        const d = `M${x1} ${y1}Q${(x1 + x2) / 2} ${(y1 + y2) / 2 + bend} ${x2} ${y2}`;
+        s += `<path d="${d}" fill="none" stroke="${W}" stroke-opacity=".25" stroke-width="1.2"/><path class="cv-flow" style="animation-delay:-${(k * 0.17).toFixed(2)}s" d="${d}" fill="none" stroke="#ffd27a" stroke-width="1.8" stroke-dasharray="3 9" stroke-linecap="round"/>`;
+      });
+      Object.values(N).forEach(([x, y], k) => {
+        s += `<circle class="cv-ping" style="transform-origin:${x}px ${y}px;animation-delay:${(k * 0.3).toFixed(1)}s" cx="${x}" cy="${y}" r="7" fill="${W}" fill-opacity=".3"/><circle cx="${x}" cy="${y}" r="3" fill="${W}"/>`;
+      });
+      s += `<g transform="translate(160 84)"><rect x="-7" y="-7" width="14" height="14" rx="2" fill="${W}" stroke="#000" stroke-opacity=".3"/><rect x="-3.5" y="-3.5" width="7" height="7" fill="#000" fill-opacity=".3"/></g>`;
+      return svg(s);
+    },
+    // 선박: 컨테이너선이 겹친 물결 위에서 흔들리고 굴뚝에서 연기가 오른다
+    ship() {
+      const sea = (y, amp, per, o, dx, dur) => {
+        let d = `M${-per} ${amp * 2}`;
+        range(Math.ceil(220 / per) * 2 + 4).forEach((k) => { d += k ? ` t${per / 2} 0` : ` q${per / 4} ${-2 * amp} ${per / 2} 0`; });
+        return `<svg x="0" y="${y}" width="200" height="${130 - y}" overflow="hidden"><path class="cv-slide" style="--dx:${dx * per}px;animation-duration:${dur}s" d="${d}V60H${-per}Z" fill="${W}" fill-opacity="${o}"/></svg>`;
+      };
+      let s = sea(88, 3, 30, 0.16, 1, 3);
+      s += `<g class="cv-bob" style="transform-origin:130px 96px">`;
+      s += `<path d="M66 80H194L184 100H84Q72 98 66 80Z" fill="${W}" fill-opacity=".85"/><path d="M70 90H190" stroke="#ff8a8a" stroke-opacity=".8" stroke-width="3"/>`;
+      s += `<rect x="74" y="50" width="20" height="30" rx="1.5" fill="${W}" fill-opacity=".75"/><rect x="72" y="46" width="24" height="5" rx="1" fill="${W}"/>`;
+      range(3).forEach((k) => { s += `<rect x="${77 + k * 6}" y="54" width="4" height="3" fill="#000" fill-opacity=".35"/>`; });
+      s += `<rect x="80" y="36" width="8" height="10" fill="${W}" fill-opacity=".6"/><rect x="80" y="36" width="8" height="3" fill="#ff8a8a" fill-opacity=".9"/>`;
+      const C = ["#ff8a8a", "#ffd27a", "#8ab4ff", "#7deaa0", "#ffffff"]; const r = rnd(3);
+      range(7).forEach((i) => range(3 - (i === 6 ? 1 : 0)).forEach((j) => {
+        s += `<rect x="${100 + i * 12.5}" y="${71 - j * 9}" width="11.5" height="8" rx="1" fill="${C[Math.floor(r() * C.length)]}" fill-opacity=".85" stroke="#000" stroke-opacity=".2" stroke-width=".6"/>`;
+      }));
+      s += `</g>`;
+      [0, 1, 2].forEach((k) => { s += `<circle class="cv-rise" style="animation-delay:${(k * 0.8).toFixed(1)}s" cx="84" cy="30" r="${3 + k}" fill="${W}" fill-opacity=".45"/>`; });
+      s += sea(96, 4, 40, 0.3, -1, 2.4);
+      return svg(s);
+    },
+    // 돈: 복리로 불어나는 동전 탑, 위로 동전이 떨어지고 지수 곡선이 그려진다
+    coins() {
+      const n = [1, 2, 3, 4, 6, 8, 11, 14], base = 118, step = 5; let s = "";
+      s += `<path d="M66 ${base + 4}H196M66 ${base + 4}V14" stroke="${W}" stroke-opacity=".45" stroke-width="1.1"/>`;
+      const tops = [];
+      n.forEach((c, k) => {
+        const x = 80 + k * 15;
+        range(c).forEach((j) => {
+          const y = base - j * step, top = j === c - 1;
+          s += `<g${top ? ` class="cv-coin" style="animation-delay:${(0.15 + k * 0.22).toFixed(2)}s"` : ""}><rect x="${x - 6.5}" y="${y - 2}" width="13" height="4" fill="#ffd27a" fill-opacity=".75"/><ellipse cx="${x}" cy="${y + 2}" rx="6.5" ry="2.2" fill="#ffd27a" fill-opacity=".75"/><ellipse cx="${x}" cy="${y - 2}" rx="6.5" ry="2.2" fill="#ffe7a8" stroke="#000" stroke-opacity=".18" stroke-width=".6"/></g>`;
+          if (top) tops.push([x, y - 8]);
+        });
+      });
+      const d = "M" + tops.map(([x, y]) => `${x} ${y}`).join(" L");
+      s += `<path class="cv-draw" pathLength="1" d="${d}" fill="none" stroke="${W}" stroke-width="1.8" stroke-linejoin="round" stroke-dasharray="1"/>`;
+      s += `<path d="M${tops[7][0] - 4} ${tops[7][1] + 1}l4 -6 3 7" fill="none" stroke="${W}" stroke-width="1.6" stroke-linejoin="round"/>`;
+      return svg(s);
+    },
+    // 주식: 흘러가는 캔들 차트와 오른쪽의 출렁이는 호가창
+    candles() {
+      const r = rnd(29), N = 16, gap = 8; let walk = [0];
+      range(N).forEach(() => walk.push(walk[walk.length - 1] + (r() - 0.46) * 14));
+      const drift = walk[N] / N; walk = walk.map((v, i) => v - drift * i);
+      const lo = Math.min(...walk), hi = Math.max(...walk), Y = (v) => 96 - ((v - lo) / (hi - lo || 1)) * 62;
+      let chart = "";
+      range(2).forEach((rep) => range(N).forEach((i) => {
+        const o = walk[i], c = walk[i + 1], x = (rep * N + i) * gap + 4, up = c >= o;
+        const wt = Math.max(o, c) + r() * 5, wb = Math.min(o, c) - r() * 5, col = up ? "#7deaa0" : "#ff7a8a";
+        chart += `<path d="M${x} ${Y(wt).toFixed(1)}V${Y(wb).toFixed(1)}" stroke="${col}" stroke-width="1"/><rect x="${x - 2.5}" y="${Y(Math.max(o, c)).toFixed(1)}" width="5" height="${Math.max(1.5, Math.abs(Y(o) - Y(c))).toFixed(1)}" rx=".8" fill="${col}" fill-opacity=".9"/>`;
+      }));
+      const ma = range(2 * N).map((k) => { const i = k % N, a = walk.slice(Math.max(0, i - 2), i + 2); return `${k * gap + 4} ${Y(a.reduce((p, q) => p + q, 0) / a.length).toFixed(1)}`; });
+      chart += `<path d="M${ma.join(" L")}" fill="none" stroke="${W}" stroke-opacity=".6" stroke-width="1.2"/>`;
+      let s = "";
+      range(5).forEach((k) => { s += `<path d="M60 ${18 + k * 22}H160" stroke="${W}" stroke-opacity=".14"/>`; });
+      s += `<svg x="60" y="0" width="100" height="130" overflow="hidden"><g class="cv-slide" style="--dx:-${N * gap}px;animation-duration:8s">${chart}</g></svg>`;
+      s += `<path d="M164 10V120" stroke="${W}" stroke-opacity=".35"/>`;
+      [26, 18, 22, 12, 8].forEach((w, k) => { s += `<rect class="cv-depth" style="animation-delay:${(k * 0.35).toFixed(2)}s" x="${194 - w}" y="${14 + k * 9}" width="${w}" height="7" rx="1" fill="#ff7a8a" fill-opacity=".7"/>`; });
+      s += `<rect x="168" y="61" width="26" height="8" rx="1.5" fill="${W}" fill-opacity=".9"/>`;
+      [10, 16, 24, 20, 28].forEach((w, k) => { s += `<rect class="cv-depth" style="animation-delay:${(0.2 + k * 0.35).toFixed(2)}s" x="${194 - w}" y="${72 + k * 9}" width="${w}" height="7" rx="1" fill="#7deaa0" fill-opacity=".7"/>`; });
       return svg(s);
     },
     // 기본: 다이 격자
