@@ -14,10 +14,108 @@ EB.start("home", (d) => {
   const chips = published.filter((b) => b.field === "semiconductor");
   const shelves = [];
   const orderedBooks = [...beyondChips, ...chips];
-  for (let i = 0; i < orderedBooks.length; i += 11) {
-    shelves.push([i === 0 ? "더 넓은 세계" : "계속 이어지는 책들", orderedBooks.slice(i, i + 11)]);
+  const booksPerShelf = Math.max(1, Math.ceil(orderedBooks.length / 2));
+  for (let i = 0; i < orderedBooks.length; i += booksPerShelf) {
+    shelves.push([i === 0 ? "더 넓은 세계" : "계속 이어지는 책들", orderedBooks.slice(i, i + booksPerShelf)]);
   }
   const shelfBox = $("#home-shelves");
+  let cancelBookOpening = null;
+  window.addEventListener("pageshow", (event) => {
+    if (event.persisted) cancelBookOpening?.();
+  });
+
+  function openBook(event, link, book, title) {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey ||
+        matchMedia("(prefers-reduced-motion: reduce)").matches || !Element.prototype.animate) return;
+    event.preventDefault();
+    if (cancelBookOpening) return;
+
+    const rect = link.getBoundingClientRect();
+    const width = Math.min(240, innerWidth * .39, innerHeight * .43);
+    const height = width * 1.42;
+    // Preserve the shelf spine width at the initial animation scale.
+    const depth = rect.width * height / rect.height;
+    const front = depth / 2;
+    const layer = document.createElement("div");
+    layer.className = "book-opening";
+    layer.style.setProperty("--book-color", book.color);
+    layer.style.setProperty("--opening-width", `${width}px`);
+    layer.style.setProperty("--opening-depth", `${depth}px`);
+    layer.innerHTML = `<div class="book-opening-shade"></div>
+      <div class="book-opening-stage" aria-hidden="true"><div class="book-opening-model">
+        <div class="opening-back"></div>
+        <div class="opening-edge opening-edge-top"></div><div class="opening-edge opening-edge-bottom"></div><div class="opening-edge opening-edge-side"></div>
+        <div class="opening-paper opening-paper-base"><small>${esc(book.fieldObj.name)}</small><strong>${esc(title)}</strong><span>${esc(book.subtitle)}</span><i></i></div>
+        <div class="opening-paper opening-leaf leaf-one"></div><div class="opening-paper opening-leaf leaf-two"></div>
+        <div class="opening-cover"><div class="opening-cover-front"><small>${esc(book.fieldObj.name)}</small><strong>${esc(title)}</strong><span>${esc(book.subtitle)}</span><em>${esc(book.code)} / GENIUSKEY</em></div><div class="opening-cover-inside"></div></div>
+        <div class="opening-spine">${esc(title)}</div>
+      </div></div><p class="book-opening-caption" role="status">${esc(title)} 펼치는 중…</p>`;
+    document.body.appendChild(layer);
+    link.classList.add("book-is-opening");
+    const animations = [];
+    let timer;
+    function cleanup() {
+      clearTimeout(timer);
+      animations.forEach((animation) => animation.cancel());
+      layer.remove();
+      link.classList.remove("book-is-opening");
+      document.removeEventListener("keydown", onKey);
+      cancelBookOpening = null;
+    }
+    function onKey(e) {
+      if (e.key === "Escape") { cleanup(); link.focus({ preventScroll: true }); }
+    }
+    cancelBookOpening = cleanup;
+    document.addEventListener("keydown", onKey);
+    function openDestination() {
+      // Create the destination only after the animation; never reload the shelf.
+      const tab = window.open("about:blank", "_blank");
+      if (tab) {
+        tab.opener = null;
+        tab.location.replace(link.href);
+        cleanup();
+      } else {
+        // Some browsers require a fresh click after a delayed popup request.
+        const caption = $(".book-opening-caption", layer);
+        caption.replaceChildren();
+        const retry = document.createElement("a");
+        retry.href = link.href;
+        retry.target = "_blank";
+        retry.rel = "noopener";
+        retry.textContent = `${title} 새 탭에서 열기 →`;
+        retry.style.color = "inherit";
+        retry.addEventListener("click", () => setTimeout(cleanup, 0), { once: true });
+        caption.appendChild(retry);
+        retry.focus({ preventScroll: true });
+      }
+    }
+    const animate = (selector, frames, options) => animations.push($(selector, layer).animate(frames, { fill: "both", ...options }));
+    try {
+      const x = rect.left + rect.width / 2 - innerWidth / 2;
+      const y = rect.top + rect.height / 2 - innerHeight / 2;
+      animate(".book-opening-stage", [
+        { transform: `translate(${x}px, ${y}px) scale(${rect.height / height})`, offset: 0 },
+        { transform: `translate(${x}px, ${y - 28}px) scale(${rect.height / height * 1.12})`, offset: .2 },
+        { transform: "translate(0, 0) scale(1)", offset: .65 },
+        { transform: `translate(${width * .35}px, 0) scale(1)`, offset: 1 },
+      ], { duration: 1150, easing: "cubic-bezier(.22,.7,.25,1)" });
+      animate(".book-opening-model", [
+        { transform: "rotateX(0deg) rotateY(90deg) rotateZ(0deg)" },
+        { transform: "rotateX(8deg) rotateY(24deg) rotateZ(-5deg)", offset: .55 },
+        { transform: "rotateX(8deg) rotateY(-10deg) rotateZ(-2deg)" },
+      ], { duration: 1050, easing: "ease-in-out" });
+      animate(".opening-cover", [{ transform: `translateZ(${front}px) rotateY(0deg)` }, { transform: `translateZ(${front}px) rotateY(-158deg)` }], { delay: 100, duration: 850, easing: "cubic-bezier(.3,0,.2,1)" });
+      [".leaf-one", ".leaf-two"].forEach((selector, i) => animate(selector, [
+        { transform: `translateZ(${front - 2 - i * 2}px) rotateY(0deg)` },
+        { transform: `translateZ(${front - 2 - i * 2}px) rotateY(${-148 + i * 12}deg)` },
+      ], { delay: 220 + i * 90, duration: 800, easing: "ease-in-out" }));
+      animate(".book-opening-shade", [{ opacity: 0 }, { opacity: 1 }], { duration: 250 });
+      animate(".book-opening-caption", [{ opacity: 0 }, { opacity: 1 }], { delay: 150, duration: 250 });
+      timer = setTimeout(openDestination, 1300);
+    } catch (error) {
+      openDestination();
+    }
+  }
   shelves.filter(([, books]) => books.length).forEach(([name, books], rowIndex) => {
     const shelf = document.createElement("div");
     shelf.className = "home-shelf";
@@ -29,9 +127,12 @@ EB.start("home", (d) => {
       const spineName = b.title.replace(/Book$/, " Book").replace(/([a-z])([A-Z][a-z])/g, "$1 $2");
       if (spineName.length > 16) a.classList.add("long-title");
       a.href = b.url;
+      a.target = "_blank";
+      a.rel = "noopener";
       a.style.setProperty("--book-color", b.color);
       a.setAttribute("aria-label", `${spineName} · ${b.subtitle} 읽기`);
       a.title = `${spineName} · ${b.subtitle}`;
+      a.addEventListener("click", (event) => openBook(event, a, b, spineName));
       a.innerHTML = `<span class="spine-top">${esc(b.fieldObj.name)}</span><span class="spine-title">${esc(spineName)}</span><span class="spine-foot">${esc(b.code)}</span>`;
       bookBox.appendChild(a);
     });

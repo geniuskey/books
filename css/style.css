@@ -221,27 +221,55 @@ a:hover { text-decoration: underline; }
 }
 .shelf-label { align-self: flex-start; padding: 1px 3px; color: #dfc5a0; font-size: 11px; font-weight: 600; line-height: 1.4; letter-spacing: .04em; }
 .shelf-label span { margin-right: 9px; color: #a58967; font: 10px var(--mono); }
-.shelf-books { display: flex; align-items: end; justify-content: center; gap: 5px; min-width: 0; height: 241px; }
+.shelf-books { display: flex; align-items: end; justify-content: center; gap: clamp(1px, .4vw, 5px); min-width: 0; height: 261px; }
 .book-spine {
   position: relative; display: flex; flex: 1 1 0; flex-direction: column; align-items: center; justify-content: space-between;
-  min-width: 0; max-width: 86px; height: 216px; padding: 12px 3px 10px;
+  min-width: 0; max-width: 86px; height: 236px; padding: 12px 3px 10px;
   color: #fff9ec; border: 1px solid rgba(255,255,255,.16); border-bottom: 0; border-radius: 3px 5px 0 0;
   background: linear-gradient(90deg, rgba(0,0,0,.42), rgba(255,255,255,.15) 9%, transparent 19%, rgba(0,0,0,.08) 75%, rgba(0,0,0,.45) 95%), repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 5px), var(--book-color);
   box-shadow: inset 3px 0 rgba(255,255,255,.12), inset -3px 0 rgba(0,0,0,.2), 4px 3px 5px rgba(0,0,0,.45);
   text-decoration: none; transition: transform .18s ease, filter .18s ease; transform-origin: bottom center;
 }
-.book-spine:nth-child(4n + 2) { height: 225px; }
-.book-spine:nth-child(5n + 3) { height: 207px; }
-.book-spine.long-title { height: 236px; }
+.book-spine:nth-child(4n + 2) { height: 245px; }
+.book-spine:nth-child(5n + 3) { height: 227px; }
+.book-spine.long-title { height: 256px; }
 .book-spine::before, .book-spine::after { content: ""; position: absolute; left: 3px; right: 3px; height: 3px; border-block: 1px solid rgba(255,241,210,.55); }
 .book-spine::before { top: 32px; }.book-spine::after { bottom: 31px; }
 .book-spine:hover, .book-spine:focus-visible { transform: translateY(-12px); filter: brightness(1.2); text-decoration: none; z-index: 2; }
 .book-spine:focus-visible { outline: 3px solid #ffdc91; outline-offset: 2px; }
+.book-spine.book-is-opening { opacity: 0; }
+.book-opening { position: fixed; inset: 0; z-index: 10000; isolation: isolate; overflow: hidden; }
+.book-opening-shade { position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(25,19,17,.58), rgba(12,10,12,.88)); backdrop-filter: blur(5px); }
+.book-opening-stage { position: absolute; left: calc(50% - var(--opening-width) / 2); top: calc(50% - var(--opening-width) * .71); width: var(--opening-width); height: calc(var(--opening-width) * 1.42); perspective: 1400px; }
+.book-opening-model { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; }
+.opening-back, .opening-cover, .opening-paper { position: absolute; inset: 0; border-radius: 2px 7px 7px 2px; }
+.opening-back { background: var(--book-color); transform: translateZ(calc(var(--opening-depth) / -2)); box-shadow: 12px 24px 45px rgba(0,0,0,.4); }
+.opening-cover { transform-style: preserve-3d; transform-origin: left center; }
+.opening-cover-front, .opening-cover-inside { position: absolute; inset: 0; border-radius: inherit; backface-visibility: hidden; }
+.opening-cover-front { display: flex; flex-direction: column; padding: 12% 10% 10% 14%; color: #fff4da; border: 1px solid rgba(255,239,200,.4); background: linear-gradient(90deg, rgba(0,0,0,.4), transparent 7%, rgba(255,255,255,.13) 9%, transparent 12%), repeating-linear-gradient(0deg, #ffffff05 0 1px, transparent 1px 4px), var(--book-color); box-shadow: inset 0 0 0 7px #00000012; }
+.opening-cover-front small { font-size: 11px; letter-spacing: .12em; border-bottom: 1px solid #fff4da66; padding-bottom: 12px; }
+.opening-cover-front strong { margin-top: 22%; font: 700 clamp(18px, 3.5vw, 30px)/1.15 var(--font); overflow-wrap: anywhere; }
+.opening-cover-front span { margin-top: 12px; font-size: clamp(10px, 1.8vw, 13px); line-height: 1.6; }
+.opening-cover-front em { margin-top: auto; padding-top: 12px; font: 9px var(--mono); letter-spacing: .1em; }
+.opening-cover-inside { background: linear-gradient(90deg, #e8ddc6, #faf2de 75%, #c5b99e); transform: rotateY(180deg); border: 5px solid var(--book-color); }
+.opening-paper { inset: 5px 3px 5px 0; background: linear-gradient(90deg, #c8bea8, #fff9ea 12%, #f4ecd9); transform-origin: left center; border: 1px solid #d9cfba; }
+.opening-paper-base { display: flex; flex-direction: column; padding: 18% 11%; transform: translateZ(calc(var(--opening-depth) / 2 - 6px)); color: #443a30; box-shadow: 1px 1px #e2d7c0, 2px 2px #fff7e6, 3px 3px #cbbfa6, 4px 4px #fff7e6; }
+.opening-paper-base small { font-size: 9px; letter-spacing: .12em; }
+.opening-paper-base strong { margin-top: 20%; font-size: clamp(14px, 2.5vw, 23px); line-height: 1.3; overflow-wrap: anywhere; }
+.opening-paper-base span { margin-top: 12px; font-size: 10px; line-height: 1.6; }
+.opening-paper-base i { margin-top: 20%; height: 25%; background: repeating-linear-gradient(to bottom, #b9aa9066 0 1px, transparent 1px 10px); }
+.opening-leaf { background: linear-gradient(90deg, #c8bea8, #fff9ea 12%, #f4ecd9); }
+.opening-edge { position: absolute; background: repeating-linear-gradient(90deg, #d1c5ac 0 1px, #f8efd9 1px 3px); backface-visibility: hidden; }
+.opening-edge-side { right: calc(3px - var(--opening-depth) / 2 + 3px); top: 5px; bottom: 5px; width: calc(var(--opening-depth) - 6px); transform: rotateY(90deg); }
+.opening-edge-top, .opening-edge-bottom { left: 0; right: 3px; height: calc(var(--opening-depth) - 6px); background: repeating-linear-gradient(0deg, #d1c5ac 0 1px, #f8efd9 1px 3px); }
+.opening-edge-top { top: calc(8px - var(--opening-depth) / 2); transform: rotateX(90deg); }
+.opening-edge-bottom { bottom: calc(8px - var(--opening-depth) / 2); transform: rotateX(-90deg); }
+.opening-spine { position: absolute; left: calc(var(--opening-depth) / -2); top: 0; width: var(--opening-depth); height: 100%; transform: rotateY(-90deg); background: linear-gradient(90deg, #0005, transparent, #fff2), var(--book-color); color: #fff4da; writing-mode: vertical-rl; text-align: center; padding: 12px 3px; font-size: 12px; backface-visibility: hidden; }
+.book-opening-caption { position: absolute; bottom: max(24px, 9vh); left: 16px; right: 16px; margin: 0; color: #f7e8ce; text-align: center; font-size: 13px; letter-spacing: .05em; }
 .spine-top, .spine-foot { max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: clip; line-height: 1; }
 .spine-top { font-size: 10px; font-weight: 700; }
 .spine-foot { font-family: var(--mono); font-size: 10px; letter-spacing: .1em; opacity: .9; }
 .spine-title { max-width: 100%; font: 700 clamp(13px, 1.45vw, 18px)/1.1 var(--font); writing-mode: vertical-rl; white-space: nowrap; letter-spacing: .015em; text-shadow: 0 1px 2px rgba(0,0,0,.5); }
-.book-spine.long-title .spine-title { font-size: 14px; }
 @media (max-width: 700px) {
   .home-library { padding: 20px 0 25px; }
   .library-welcome { display: block; margin-bottom: 17px; }
@@ -252,18 +280,15 @@ a:hover { text-decoration: underline; }
   .home-shelf { padding-inline: 5px; }
   .shelf-label { font-size: 10px; }
   .shelf-books {
-    display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px 4px; height: auto;
-    grid-auto-rows: 168px; align-items: end;
-    background: linear-gradient(to bottom, transparent 168px, #744d30 168px 183px, #302019 183px 190px, transparent 190px);
+    height: 188px;
   }
-  .book-spine, .book-spine:nth-child(4n + 2), .book-spine:nth-child(5n + 3) { width: 100%; max-width: none; height: 158px; padding: 8px 1px 7px; }
-  .book-spine:nth-child(3n + 1) { height: 150px; }
-  .book-spine.long-title { height: 164px; }
+  .book-spine, .book-spine:nth-child(4n + 2), .book-spine:nth-child(5n + 3) { max-width: none; height: 178px; padding: 8px 1px 7px; }
+  .book-spine:nth-child(3n + 1) { height: 170px; }
+  .book-spine.long-title { height: 184px; }
   .book-spine::before { top: 23px; }.book-spine::after { bottom: 22px; }
   .spine-top { font-size: 7px; }
   .spine-foot { font-size: 8px; }
   .spine-title { font-size: clamp(10px, 2.8vw, 14px); }
-  .book-spine.long-title .spine-title { font-size: 10px; }
 }
 @media (prefers-reduced-motion: reduce) { .book-spine { transition: none; } }
 
