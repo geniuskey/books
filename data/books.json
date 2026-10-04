@@ -1166,6 +1166,31 @@
       ]
     },
     {
+      "id": "shipbook",
+      "code": "SHP",
+      "title": "ShipBook",
+      "subtitle": "인터랙티브 선박 교과서",
+      "headline": "수만 톤의 강철이 어떻게 바다를 건너는가",
+      "description": "부력과 복원성에서 프로펠러, 파도, 선체 구조, 친환경 연료와 자율운항까지. 슬라이더를 움직이고 3D 모델을 돌려 보며 선박의 원리를 배웁니다.",
+      "url": "https://shipbook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/shipbook",
+      "status": "published",
+      "color": "#0b6fb5",
+      "colorDark": "#4fb3ff",
+      "field": "electronics",
+      "chapters": 23,
+      "simulators": 220,
+      "topics": [
+        "부력·복원성",
+        "저항·추진",
+        "프로펠러",
+        "파도·내항성",
+        "선체 구조",
+        "친환경 선박",
+        "항해·자율운항"
+      ]
+    },
+    {
       "id": "phonebook",
       "code": "PHN",
       "title": "PhoneBook",
@@ -1323,7 +1348,14 @@
       "level": "입문",
       "color": "#0b8a63",
       "colorDark": "#4fd1a1",
-      "topics": ["복리·물가", "예산·저축", "신용·대출", "투자·자산배분", "세금·보험", "연금·은퇴"]
+      "topics": [
+        "복리·물가",
+        "예산·저축",
+        "신용·대출",
+        "투자·자산배분",
+        "세금·보험",
+        "연금·은퇴"
+      ]
     },
     {
       "id": "stockbook",
@@ -1341,7 +1373,14 @@
       "simulators": 390,
       "color": "#6741d9",
       "colorDark": "#a78bfa",
-      "topics": ["호가·체결", "재무제표·가치평가", "위험·분산", "ETF·팩터", "백테스트", "선물·옵션"]
+      "topics": [
+        "호가·체결",
+        "재무제표·가치평가",
+        "위험·분산",
+        "ETF·팩터",
+        "백테스트",
+        "선물·옵션"
+      ]
     },
     {
       "id": "econbook",

@@ -28,7 +28,7 @@ window.FIELD_MAPS = {
     groups: [
       ["회로와 전기", "Circuits", "전자 기기를 이루는 회로의 기본 원리", ["electricbook"]],
       ["연결과 제어", "Control", "임베디드 소프트웨어와 무선 통신", ["embeddedbook", "radiobook"]],
-      ["기기와 모빌리티", "Systems", "스마트폰·자동차·배터리·로봇의 작동 방식", ["phonebook", "carbook", "batterybook", "robotbook"]],
+      ["기기와 모빌리티", "Systems", "스마트폰·자동차·선박·배터리·로봇의 작동 방식", ["phonebook", "carbook", "shipbook", "batterybook", "robotbook"]],
     ],
   },
   money: {
