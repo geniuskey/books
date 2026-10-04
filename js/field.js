@@ -10,13 +10,6 @@ EB.start(null, (d) => {
   EB.$$(`.topnav a[href="index.html#${f.wing}"]`).forEach((a) => a.setAttribute("aria-current", "page"));
   EB.tint(document.body, f);
 
-  // 머리
-  $("#f-wing").innerHTML = `<a href="index.html#${esc(f.wing)}">${esc(wing.name)}</a> · ${esc(f.en)}`;
-  $("#f-name").textContent = f.name;
-  $("#f-desc").textContent = f.desc;
-  const k = EB.counts(f.books);
-  $("#field-counts").innerHTML = `<span><b>${k.total}</b>권의 교과서</span><span>출간 ${k.published}</span><span>집필 중 ${k.writing}</span><span>집필 예정 ${k.planned}</span>`;
-
   // 분야별 개념 그룹 안에 책을 배치한다. 기존 반도체 단계는 원본 데이터를 사용한다.
   const map = window.FIELD_MAPS[f.id];
   const groups = f.stages
@@ -26,8 +19,16 @@ EB.start(null, (d) => {
   const assigned = new Set(groups.flatMap((g) => g.books.map((b) => b.id)));
   const remaining = f.books.filter((b) => !assigned.has(b.id));
   if (remaining.length) groups.push({ name: "더 넓게 탐색하기", en: "Explore", desc: "이 분야에서 이어지는 주제", books: remaining });
+  // 분야별 문장을 첫 화면의 제목으로 쓰고, 책 현황은 짧은 진행 표시로 묶는다.
+  $("#f-wing").innerHTML = `<a href="index.html#${esc(f.wing)}">${esc(wing.name)}</a><span aria-hidden="true"> / </span>${esc(f.name)}<span class="field-en">${esc(f.en)}</span>`;
   $("#flow-title").textContent = map?.title || `${f.name} 지식 지도`;
   $("#flow-desc").textContent = map?.desc || f.desc;
+  $("#f-map-label").textContent = `${f.name} 지식 지도`;
+  const k = EB.counts(f.books);
+  const upcomingText = [k.writing && `집필 중 ${k.writing}`, k.planned && `집필 예정 ${k.planned}`].filter(Boolean).join(" · ");
+  $("#field-progress").innerHTML = `<div class="field-progress-top"><strong>${k.published}<small> / ${k.total}권</small></strong><span>${k.published ? "지금 읽을 수 있는 책" : "출간 준비 중"}</span></div>
+    ${EB.progress(f.books)}
+    <div class="field-progress-bottom"><span>${upcomingText || "모든 책 출간"}</span><a href="#shelf">책 목록 보기 ↓</a></div>`;
   const chain = $("#chain");
   if (f.id === "semiconductor") chain.classList.add("semiconductor-map");
   groups.forEach((g, i) => {
