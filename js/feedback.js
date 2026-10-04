@@ -1,5 +1,5 @@
 /* 책에서 전달한 위치를 GitHub 접수 양식에 미리 채운다. */
-EB.start(null, (data) => {
+EB.start("feedback", (data) => {
   const params = new URLSearchParams(location.search);
   const bookId = params.get("book");
   const book = data.books.find((item) => item.id === bookId && item.status === "published");

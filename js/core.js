@@ -48,7 +48,7 @@
   const NAV = [
     { href: "library.html", label: "교과서 찾기", key: "library" },
     { href: "simulators.html", label: "실험 찾기", key: "simulators" },
-    { href: "paths.html", label: "문제로 시작하기", key: "paths" },
+    { href: "feedback.html", label: "독자 의견", key: "feedback" },
   ];
   EB.header = (active) => {
     const h = document.createElement("header");
