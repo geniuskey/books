@@ -19,6 +19,16 @@ EB.start("home", (d) => {
     shelves.push([i === 0 ? "더 넓은 세계" : "계속 이어지는 책들", orderedBooks.slice(i, i + booksPerShelf)]);
   }
   const shelfBox = $("#home-shelves");
+  const spineTopics = {
+    devicebook: "반도체 소자", designbook: "반도체 설계", socbook: "시스템 온 칩",
+    analogbook: "아날로그 회로", processbook: "제조 공정", lithobook: "노광",
+    etchbook: "식각", yieldbook: "수율 분석", failurebook: "불량 분석",
+    tcadbook: "소자 시뮬레이션", packagingbook: "패키징", testbook: "반도체 검사",
+    memorybook: "메모리", sensorbook: "이미지 센서", displaybook: "디스플레이",
+    chipindustrybook: "반도체 산업", computerbook: "컴퓨터", aibook: "인공지능",
+    carbook: "자동차", shipbook: "선박", phonebook: "스마트폰",
+    colorbook: "색채공학", moneybook: "돈과 금융", stockbook: "주식", camerabook: "카메라",
+  };
   let cancelBookOpening = null;
   window.addEventListener("pageshow", (event) => {
     if (event.persisted) cancelBookOpening?.();
@@ -149,7 +159,7 @@ EB.start("home", (d) => {
       a.setAttribute("aria-label", `${spineName} · ${b.subtitle} 읽기`);
       a.title = `${spineName} · ${b.subtitle}`;
       a.addEventListener("click", (event) => openBook(event, a, b, spineName));
-      a.innerHTML = `<span class="spine-top">${esc(b.fieldObj.name)}</span><span class="spine-title">${esc(spineName)}</span><span class="spine-foot">${esc(b.code)}</span>`;
+      a.innerHTML = `<span class="spine-top">${esc(b.fieldObj.name)}</span><span class="spine-label"><span class="spine-title">${esc(spineName)}</span><span class="spine-topic">${esc(spineTopics[b.id] || b.subtitle.replace(/ 교과서$/, ""))}</span></span><span class="spine-foot">${esc(b.code)}</span>`;
       bookBox.appendChild(a);
     });
     shelfBox.appendChild(shelf);
@@ -172,7 +182,7 @@ EB.start("home", (d) => {
           <div class="fc-en">${esc(f.en)}</div>
           <h3>${esc(f.name)}</h3>
           <p>${esc(f.desc)}</p>
-          <div class="fc-count"><span>출간 <b>${k.published}</b></span><span class="go">분야 보기 →</span></div>
+          <div class="fc-count"><span>${k.published ? `출간 <b>${k.published}</b>` : "준비 중"}</span><span class="go">분야 보기 →</span></div>
         </div>`;
       box.appendChild(a);
     });
