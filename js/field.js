@@ -46,7 +46,7 @@ EB.start(null, (d) => {
     if (i < groups.length - 1) {
       const relation = document.createElement("div");
       relation.className = "map-relation";
-      relation.innerHTML = `<span>${esc(map?.relations[i] || "주제 확장")}</span><b aria-hidden="true">↓</b>`;
+      relation.setAttribute("aria-hidden", "true");
       section.appendChild(relation);
     }
     chain.appendChild(section);
