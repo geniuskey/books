@@ -193,7 +193,7 @@ EB.start("home", (d) => {
   d.books.filter(EB.isPublished).forEach((b) => (b.featured || []).forEach((f) => all.push({ ...f, book: b })));
   const picks = [
     { book: "phonebook", link: "chapters/anatomy.html#sim-explode", question: "스마트폰 안에는 무엇이 들어 있을까?" },
-    { book: "computerbook", link: "chapters/cpu.html#sim-toy", question: "CPU는 명령을 어떻게 실행할까?" },
+    { book: "musicbook", link: "chapters/harmonics.html#sim-additive", question: "사인파를 쌓으면 왜 악기 소리가 될까?" },
     { book: "aibook", link: "chapters/attention.html#sim-editor", question: "AI는 문장의 어디에 주목할까?" },
     { book: "carbook", link: "chapters/aero.html#sim-fl", question: "차의 모양이 공기 흐름을 어떻게 바꿀까?" },
     { book: "camerabook", link: "chapters/shutter.html#sim-rolling", question: "프로펠러는 왜 휘어 찍힐까?" },
