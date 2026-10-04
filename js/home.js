@@ -58,31 +58,28 @@ EB.start("home", (d) => {
     });
   });
 
-  // 대표 시뮬레이터: 날짜마다 바뀌는 오늘의 시뮬레이터 + 갤러리
+  // 홈에서는 분야를 가로지르는 질문 여섯 개만 보여 준다. 전체 목록은 실험 탐색에 둔다.
   const all = [];
   d.books.filter(EB.isPublished).forEach((b) => (b.featured || []).forEach((f) => all.push({ ...f, book: b })));
-  if (all.length) {
-    const href = (f) => f.book.url + f.link;
-    const today = all[Math.floor(Date.now() / 864e5) % all.length];
-    const hero = $("#today");
-    EB.tint(hero, today.book);
-    hero.innerHTML = `<a class="shot" href="${esc(href(today))}"><img src="${esc(today.image)}" alt="${esc(today.title)} 시뮬레이터 화면" loading="lazy"></a>
-      <div class="txt">
-        <div class="k">TODAY'S SIMULATOR · 오늘의 시뮬레이터</div>
-        <h3>${esc(today.title)}</h3>
-        <p>${esc(today.desc)}</p>
-        <div class="from"><span class="sq">${esc(today.book.code)}</span>${esc(today.book.title)} · ${esc(today.book.subtitle)}</div>
-        <a class="btn primary" href="${esc(href(today))}">지금 만져 보기 →</a>
-      </div>`;
-    const strip = $("#strip");
-    all.filter((f) => f !== today).forEach((f) => {
+  const picks = [
+    { book: "phonebook", link: "chapters/anatomy.html#sim-explode", question: "스마트폰 안에는 무엇이 들어 있을까?" },
+    { book: "computerbook", link: "chapters/cpu.html#sim-toy", question: "CPU는 명령을 어떻게 실행할까?" },
+    { book: "aibook", link: "chapters/attention.html#sim-editor", question: "AI는 문장의 어디에 주목할까?" },
+    { book: "carbook", link: "chapters/aero.html#sim-fl", question: "차의 모양이 공기 흐름을 어떻게 바꿀까?" },
+    { book: "camerabook", link: "chapters/shutter.html#sim-rolling", question: "프로펠러는 왜 휘어 찍힐까?" },
+    { book: "yieldbook", link: "chapters/detective.html#sim-detective", question: "웨이퍼의 무늬로 불량 원인을 찾을 수 있을까?" },
+  ];
+  const selected = picks.map((pick) => ({ ...pick, experiment: all.find((f) => f.book.id === pick.book && f.link === pick.link) })).filter((pick) => pick.experiment);
+  if (selected.length) {
+    const grid = $("#home-experiments");
+    selected.forEach(({ question, experiment: f }) => {
       const a = document.createElement("a");
-      a.className = "shot-card";
-      a.href = href(f);
+      a.className = "home-experiment";
+      a.href = f.book.url + f.link;
       EB.tint(a, f.book);
-      a.innerHTML = `<div class="img"><img src="${esc(f.image)}" alt="${esc(f.title)} 시뮬레이터 화면" loading="lazy"></div>
-        <div class="cap"><span class="sq">${esc(f.book.code)}</span><b>${esc(f.title)}</b><small>${esc(f.desc)}</small></div>`;
-      strip.appendChild(a);
+      a.innerHTML = `<div class="home-experiment-image"><img src="${esc(f.image)}" alt="${esc(f.title)} 시뮬레이터 화면" loading="lazy"></div>
+        <div class="home-experiment-body"><span class="home-experiment-book">${esc(f.book.title)}</span><h3>${esc(question)}</h3><p>${esc(f.desc)}</p><span class="home-experiment-action">${esc(f.title)} 열기 <span aria-hidden="true">↗</span></span></div>`;
+      grid.appendChild(a);
     });
   } else {
     $("#play").hidden = true;
