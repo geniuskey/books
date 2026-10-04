@@ -12,7 +12,7 @@ let skipped = 0;
 for (const [id, record] of Object.entries(records)) {
   const sourcePath = resolve(root, '..', record.bookId, record.sourceFile);
   if (!existsSync(sourcePath)) { skipped++; continue; }
-  const source = readFileSync(sourcePath, 'utf8');
+  const source = readFileSync(sourcePath, 'utf8').replace(/\r\n/g, '\n');
   const hash = createHash('sha256').update(source).digest('hex');
   assert.equal(hash, record.sourceSha256, `${id}: model source changed; rerun reference review`);
   const window = {};
