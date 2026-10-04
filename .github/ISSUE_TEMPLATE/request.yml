@@ -1,18 +1,42 @@
-name: 다음 책 제안
-description: 읽고 싶은 새 책의 주제를 제안해 주세요.
-title: "[새 책] "
+name: 건의·요청
+description: 책의 개선 아이디어나 새로 읽고 싶은 책을 알려 주세요.
+title: "[건의] "
 body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 건의 유형
+      options:
+        - 책 내용·실험 개선
+        - 새 책 집필 요청
+        - 기타
+    validations:
+      required: true
+  - type: input
+    id: book
+    attributes:
+      label: 관련 책
+      description: 기존 책에 관한 건의라면 적어 주세요.
+    validations:
+      required: false
+  - type: input
+    id: page
+    attributes:
+      label: 해당 페이지 URL
+      description: 관련 페이지가 있다면 주소를 적어 주세요.
+    validations:
+      required: false
   - type: input
     id: topic
     attributes:
-      label: 원하는 주제
-      placeholder: 예) 배터리의 작동 원리
+      label: 건의 제목
+      placeholder: 예) 배터리 교과서가 있으면 좋겠어요
     validations:
       required: true
   - type: textarea
     id: reason
     attributes:
-      label: 읽고 싶은 이유
-      description: 알고 싶은 질문이나 직접 해 보고 싶은 실험이 있으면 적어 주세요.
+      label: 자세한 내용
+      description: 개선 아이디어나 새 책을 원하는 이유를 적어 주세요.
     validations:
       required: true

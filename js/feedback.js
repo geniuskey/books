@@ -30,8 +30,8 @@ EB.start(null, (data) => {
   document.querySelectorAll("[data-feedback-type]").forEach((link) => {
     const url = new URL("https://github.com/geniuskey/books/issues/new");
     url.searchParams.set("template", templates[link.dataset.feedbackType]);
-    if (book) url.searchParams.set("field:book", book.title);
-    if (pageUrl) url.searchParams.set("field:page", pageUrl);
+    if (book) url.searchParams.set("book", book.title);
+    if (pageUrl) url.searchParams.set("page", pageUrl);
     link.href = url.href;
   });
 
