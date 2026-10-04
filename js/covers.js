@@ -190,6 +190,17 @@
       s += `<rect x="112" y="16" width="40" height="104" fill="${W}" fill-opacity=".1"/>`;
       return svg(s);
     },
+    // TCAD: 격자 위에 트랜지스터 단면과 등전위선, 수렴하는 잔차
+    tcad() {
+      let s = "";
+      range(9).forEach((i) => { s += `<path d="M${40 + i * 18} 40V122" stroke="${W}" stroke-opacity=".22"/>`; });
+      range(6).forEach((j) => { s += `<path d="M40 ${40 + j * 16.4}H184" stroke="${W}" stroke-opacity=".22"/>`; });
+      s += `<rect x="92" y="18" width="40" height="18" rx="2" fill="${W}" fill-opacity=".85"/><rect x="88" y="36" width="48" height="4" fill="${W}" fill-opacity=".45"/>`;
+      s += `<path d="M40 40c18 0 22 26 36 30s14 8 36 8 22-4 36-8 18-30 36-30V122H40z" fill="${W}" fill-opacity=".14"/>`;
+      [0, 12, 24].forEach((d, k) => { s += `<path class="cv-flow" style="animation-delay:${k * 0.2}s" d="M40 ${52 + d}c26 0 30 ${18 + d / 3} 72 ${18 + d / 3}s46-${18 + d / 3} 72-${18 + d / 3}" fill="none" stroke="${W}" stroke-opacity=".75" stroke-width="1.4" stroke-dasharray="5 6"/>`; });
+      [14, 9, 5.5, 3, 1.6].forEach((h, k) => { s += `<rect class="cv-grow" x="${10 + k * 5}" y="${112 - h * 4}" width="3.5" height="${h * 4}" fill="${W}" fill-opacity=".7"/>`; });
+      return svg(s);
+    },
     // 기본: 다이 격자
     grid() {
       let s = "";

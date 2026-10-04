@@ -481,6 +481,49 @@
       ]
     },
     {
+      "id": "tcadbook",
+      "code": "TCD",
+      "title": "TCADBook",
+      "subtitle": "반도체 TCAD 교과서",
+      "headline": "웨이퍼 없이 소자를 만든다",
+      "description": "이온 주입·확산·산화 공정 모사에서 격자와 이산화, 포아송·드리프트-확산 방정식, 뉴턴 반복, PN 접합·MOS 커패시터·2D MOSFET 해석, 보정과 변동성까지. 가상의 45 nm 트랜지스터 TN-45를 공정 레시피에서 I-V 곡선까지 브라우저 안에서 직접 풀어 봅니다.",
+      "url": "https://tcadbook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/tcadbook",
+      "field": "semiconductor",
+      "stage": "process",
+      "status": "published",
+      "level": "공대 학부",
+      "chapters": 19,
+      "simulators": 174,
+      "color": "#0b7285",
+      "colorDark": "#66d9e8",
+      "topics": [
+        "공정 모사",
+        "격자·이산화",
+        "포아송·드리프트-확산",
+        "뉴턴 반복",
+        "PN·MOS 해석",
+        "2D MOSFET",
+        "보정·실험 계획",
+        "변동성"
+      ],
+      "motif": "tcad",
+      "featured": [
+        {
+          "title": "TN-45 2D 필드 탐색기",
+          "desc": "게이트·드레인 전압을 바꾸면 소자 안의 전위·전자·전계가 다시 풀린다",
+          "link": "chapters/mosfet.html#sim-field",
+          "image": "img/sims/tcadbook-sim-field.jpg"
+        },
+        {
+          "title": "Id-Vg 스윕: 한 점씩 푼다",
+          "desc": "바이어스 점마다 뉴턴 반복으로 풀어 문턱 전압·SS·DIBL을 뽑는다",
+          "link": "chapters/mosfet.html#sim-idvg",
+          "image": "img/sims/tcadbook-sim-idvg.jpg"
+        }
+      ]
+    },
+    {
       "id": "packagingbook",
       "code": "PKG",
       "title": "PackagingBook",

@@ -3642,6 +3642,1050 @@
     "link": "chapters/test.html#sim-iv"
   },
   {
+    "id": "tcadbook/calibration/sim-manual",
+    "bookId": "tcadbook",
+    "title": "숨긴 측정에 TN-45 모델을 손으로 맞추기",
+    "link": "chapters/calibration.html#sim-manual"
+  },
+  {
+    "id": "tcadbook/calibration/sim-metric",
+    "bookId": "tcadbook",
+    "title": "오차 척도가 최적점을 정한다",
+    "link": "chapters/calibration.html#sim-metric"
+  },
+  {
+    "id": "tcadbook/calibration/sim-tornado",
+    "bookId": "tcadbook",
+    "title": "토네이도: 압축 모델 민감도와 2D 검증",
+    "link": "chapters/calibration.html#sim-tornado"
+  },
+  {
+    "id": "tcadbook/calibration/sim-lm",
+    "bookId": "tcadbook",
+    "title": "매개변수 공간의 길: 경사 하강 · 가우스-뉴턴 · LM",
+    "link": "chapters/calibration.html#sim-lm"
+  },
+  {
+    "id": "tcadbook/calibration/sim-valley",
+    "bookId": "tcadbook",
+    "title": "이동도와 직렬 저항: 데이터가 골짜기를 닫는다",
+    "link": "chapters/calibration.html#sim-valley"
+  },
+  {
+    "id": "tcadbook/calibration/sim-doe",
+    "bookId": "tcadbook",
+    "title": "설계점 배치: 할로 도즈 × 스페이서 폭",
+    "link": "chapters/calibration.html#sim-doe"
+  },
+  {
+    "id": "tcadbook/calibration/sim-rsm",
+    "bookId": "tcadbook",
+    "title": "면 중심 CCD 9점 2D 풀이 → 2차 반응 표면",
+    "link": "chapters/calibration.html#sim-rsm"
+  },
+  {
+    "id": "tcadbook/calibration/sim-opt",
+    "bookId": "tcadbook",
+    "title": "목표 Vt·Ioff를 만족하며 Ion 최대화",
+    "link": "chapters/calibration.html#sim-opt"
+  },
+  {
+    "id": "tcadbook/calibration/sim-mc",
+    "bookId": "tcadbook",
+    "title": "반응 표면 위의 몬테카를로: Vt · Ion · Ioff 분포",
+    "link": "chapters/calibration.html#sim-mc"
+  },
+  {
+    "id": "tcadbook/calibration/sim-extract",
+    "bookId": "tcadbook",
+    "title": "2D TN-45 → 압축 모델 매개변수 추출",
+    "link": "chapters/calibration.html#sim-extract"
+  },
+  {
+    "id": "tcadbook/calibration/sim-bench",
+    "bookId": "tcadbook",
+    "title": "보정 작업대: 단계별 맞춤과 다른 게이트 길이로의 예측",
+    "link": "chapters/calibration.html#sim-bench"
+  },
+  {
+    "id": "tcadbook/carriers/sim-dos",
+    "bookId": "tcadbook",
+    "title": "g(E)·f(E)의 넓이가 n이다",
+    "link": "chapters/carriers.html#sim-dos"
+  },
+  {
+    "id": "tcadbook/carriers/sim-ni",
+    "bookId": "tcadbook",
+    "title": "n i (T) 아레니우스 그림과 밴드갭의 온도 의존",
+    "link": "chapters/carriers.html#sim-ni"
+  },
+  {
+    "id": "tcadbook/carriers/sim-dope",
+    "bookId": "tcadbook",
+    "title": "도핑 → 페르미 준위 → n, p",
+    "link": "chapters/carriers.html#sim-dope"
+  },
+  {
+    "id": "tcadbook/carriers/sim-fd",
+    "bookId": "tcadbook",
+    "title": "볼츠만 근사는 어디서 틀리기 시작하는가",
+    "link": "chapters/carriers.html#sim-fd"
+  },
+  {
+    "id": "tcadbook/carriers/sim-frz",
+    "bookId": "tcadbook",
+    "title": "n 대 1/T: 동결 · 외인성 · 진성 영역",
+    "link": "chapters/carriers.html#sim-frz"
+  },
+  {
+    "id": "tcadbook/carriers/sim-bgn",
+    "bookId": "tcadbook",
+    "title": "도핑에 따른 ΔE g 와 n i,eff",
+    "link": "chapters/carriers.html#sim-bgn"
+  },
+  {
+    "id": "tcadbook/carriers/sim-qf",
+    "bookId": "tcadbook",
+    "title": "순방향 pn 접합의 준페르미 준위 (1D 드리프트-확산 풀이)",
+    "link": "chapters/carriers.html#sim-qf"
+  },
+  {
+    "id": "tcadbook/carriers/sim-var",
+    "bookId": "tcadbook",
+    "title": "같은 해, 세 가지 저장 방식",
+    "link": "chapters/carriers.html#sim-var"
+  },
+  {
+    "id": "tcadbook/carriers/sim-tn",
+    "bookId": "tcadbook",
+    "title": "TN-45 가로 단면의 밴드 그림: 통계와 BGN 비교",
+    "link": "chapters/carriers.html#sim-tn"
+  },
+  {
+    "id": "tcadbook/diffusion/sim-rw",
+    "bookId": "tcadbook",
+    "title": "무작위 걸음이 가우시안이 된다",
+    "link": "chapters/diffusion.html#sim-rw"
+  },
+  {
+    "id": "tcadbook/diffusion/sim-st",
+    "bookId": "tcadbook",
+    "title": "시간 간격의 안정성: 양해법은 r > 1/2에서 폭발한다",
+    "link": "chapters/diffusion.html#sim-st"
+  },
+  {
+    "id": "tcadbook/diffusion/sim-an",
+    "bookId": "tcadbook",
+    "title": "수치해 대 해석해: erfc와 가우시안",
+    "link": "chapters/diffusion.html#sim-an"
+  },
+  {
+    "id": "tcadbook/diffusion/sim-ar",
+    "bookId": "tcadbook",
+    "title": "B, P, As, Sb의 확산 계수: 아레니우스 그림",
+    "link": "chapters/diffusion.html#sim-ar"
+  },
+  {
+    "id": "tcadbook/diffusion/sim-bx",
+    "bookId": "tcadbook",
+    "title": "상수 D 대 페르미 준위 의존 D: 고도즈 비소 어닐",
+    "link": "chapters/diffusion.html#sim-bx"
+  },
+  {
+    "id": "tcadbook/diffusion/sim-td",
+    "bookId": "tcadbook",
+    "title": "TED: 접합은 처음 몇 초에 움직인다",
+    "link": "chapters/diffusion.html#sim-td"
+  },
+  {
+    "id": "tcadbook/diffusion/sim-sp",
+    "bookId": "tcadbook",
+    "title": "온도 이력 편집기: 열 예산과 확장부 접합 깊이",
+    "link": "chapters/diffusion.html#sim-sp"
+  },
+  {
+    "id": "tcadbook/diffusion/sim-ac",
+    "bookId": "tcadbook",
+    "title": "화학 농도 대 활성 농도: 고용 한계가 면저항을 정한다",
+    "link": "chapters/diffusion.html#sim-ac"
+  },
+  {
+    "id": "tcadbook/diffusion/sim-xr",
+    "bookId": "tcadbook",
+    "title": "Rs–xj 곡선: 스파이크 온도 스윕",
+    "link": "chapters/diffusion.html#sim-xr"
+  },
+  {
+    "id": "tcadbook/diffusion/sim-a2",
+    "bookId": "tcadbook",
+    "title": "TN-45 소스/드레인 2D 스파이크 어닐",
+    "link": "chapters/diffusion.html#sim-a2"
+  },
+  {
+    "id": "tcadbook/equations/sim-gauss",
+    "bookId": "tcadbook",
+    "title": "가우스 법칙: 전하 덩어리 → 전계 → 전위",
+    "link": "chapters/equations.html#sim-gauss"
+  },
+  {
+    "id": "tcadbook/equations/sim-pn",
+    "bookId": "tcadbook",
+    "title": "평형 pn 접합: 비선형 포아송 대 공핍 근사",
+    "link": "chapters/equations.html#sim-pn"
+  },
+  {
+    "id": "tcadbook/equations/sim-cont",
+    "bookId": "tcadbook",
+    "title": "연속 방정식 상자: 플럭스 + 생성 − 재결합 = dn/dt",
+    "link": "chapters/equations.html#sim-cont"
+  },
+  {
+    "id": "tcadbook/equations/sim-cancel",
+    "bookId": "tcadbook",
+    "title": "평형 접합의 드리프트와 확산: 거대한 두 항의 상쇄",
+    "link": "chapters/equations.html#sim-cancel"
+  },
+  {
+    "id": "tcadbook/equations/sim-qf",
+    "bookId": "tcadbook",
+    "title": "pn 다이오드의 준 페르미 준위와 전류",
+    "link": "chapters/equations.html#sim-qf"
+  },
+  {
+    "id": "tcadbook/equations/sim-debye",
+    "bookId": "tcadbook",
+    "title": "디바이 길이: 도핑 계단이 번지는 폭과 격자 간격",
+    "link": "chapters/equations.html#sim-debye"
+  },
+  {
+    "id": "tcadbook/equations/sim-scale",
+    "bookId": "tcadbook",
+    "title": "40자리의 수: 원 단위와 정규화 단위",
+    "link": "chapters/equations.html#sim-scale"
+  },
+  {
+    "id": "tcadbook/equations/sim-bc",
+    "bookId": "tcadbook",
+    "title": "경계 조건 탐색기: n형 막대의 왼쪽 끝",
+    "link": "chapters/equations.html#sim-bc"
+  },
+  {
+    "id": "tcadbook/equations/sim-gate",
+    "bookId": "tcadbook",
+    "title": "게이트 경계: 일함수, 산화막, 계면 전하",
+    "link": "chapters/equations.html#sim-gate"
+  },
+  {
+    "id": "tcadbook/equations/sim-tn",
+    "bookId": "tcadbook",
+    "title": "TN-45: 전극 경계 조건과 게이트 중앙 단면의 포아송 해",
+    "link": "chapters/equations.html#sim-tn"
+  },
+  {
+    "id": "tcadbook/glossary/sim-flow",
+    "bookId": "tcadbook",
+    "title": "단계를 누르면 그 단계의 용어",
+    "link": "chapters/glossary.html#sim-flow"
+  },
+  {
+    "id": "tcadbook/highfield/sim-alpha",
+    "bookId": "tcadbook",
+    "title": "이온화 계수 α(E): 전자와 정공, 그리고 온도",
+    "link": "chapters/highfield.html#sim-alpha"
+  },
+  {
+    "id": "tcadbook/highfield/sim-ion",
+    "bookId": "tcadbook",
+    "title": "이온화 적분: 역바이어스를 올리면 1에 닿는다",
+    "link": "chapters/highfield.html#sim-ion"
+  },
+  {
+    "id": "tcadbook/highfield/sim-bv",
+    "bookId": "tcadbook",
+    "title": "BV 대 도핑: 수치해, 공핍 근사, 경험식",
+    "link": "chapters/highfield.html#sim-bv"
+  },
+  {
+    "id": "tcadbook/highfield/sim-mult",
+    "bookId": "tcadbook",
+    "title": "증배 계수 M: DD로 직접 풀기",
+    "link": "chapters/highfield.html#sim-mult"
+  },
+  {
+    "id": "tcadbook/highfield/sim-zener",
+    "bookId": "tcadbook",
+    "title": "누가 먼저 무너지나: 터널링 대 애벌랜치",
+    "link": "chapters/highfield.html#sim-zener"
+  },
+  {
+    "id": "tcadbook/highfield/sim-sf",
+    "bookId": "tcadbook",
+    "title": "TN-45 표면 가로 전계: 드레인 끝의 고전계 띠",
+    "link": "chapters/highfield.html#sim-sf"
+  },
+  {
+    "id": "tcadbook/highfield/sim-ii",
+    "bookId": "tcadbook",
+    "title": "충돌 이온화 생성률 지도: 국소 대 비국소",
+    "link": "chapters/highfield.html#sim-ii"
+  },
+  {
+    "id": "tcadbook/highfield/sim-bell",
+    "bookId": "tcadbook",
+    "title": "I sub -V g : 봉우리가 생기려면",
+    "link": "chapters/highfield.html#sim-bell"
+  },
+  {
+    "id": "tcadbook/highfield/sim-life",
+    "bookId": "tcadbook",
+    "title": "가속 시험에서 10년 수명까지: 외삽의 위험",
+    "link": "chapters/highfield.html#sim-life"
+  },
+  {
+    "id": "tcadbook/highfield/sim-heat",
+    "bookId": "tcadbook",
+    "title": "열 방정식으로 본 자기 발열: 벌크 대 SOI",
+    "link": "chapters/highfield.html#sim-heat"
+  },
+  {
+    "id": "tcadbook/highfield/sim-all",
+    "bookId": "tcadbook",
+    "title": "TN-45 고전계 점검표",
+    "link": "chapters/highfield.html#sim-all"
+  },
+  {
+    "id": "tcadbook/implant/sim-stop",
+    "bookId": "tcadbook",
+    "title": "핵 저지와 전자 저지의 교차",
+    "link": "chapters/implant.html#sim-stop"
+  },
+  {
+    "id": "tcadbook/implant/sim-range",
+    "bookId": "tcadbook",
+    "title": "여섯 이온의 Rp, ΔRp, ΔR⊥ (log-log)",
+    "link": "chapters/implant.html#sim-range"
+  },
+  {
+    "id": "tcadbook/implant/sim-prof",
+    "bookId": "tcadbook",
+    "title": "에너지와 도즈 → 1D 프로파일, 정점과 접합 깊이",
+    "link": "chapters/implant.html#sim-prof"
+  },
+  {
+    "id": "tcadbook/implant/sim-pearson",
+    "bookId": "tcadbook",
+    "title": "가우시안 대 피어슨 IV: 왜도와 첨도",
+    "link": "chapters/implant.html#sim-pearson"
+  },
+  {
+    "id": "tcadbook/implant/sim-chan",
+    "bookId": "tcadbook",
+    "title": "이중 피어슨: 기울기에 따른 채널링 꼬리",
+    "link": "chapters/implant.html#sim-chan"
+  },
+  {
+    "id": "tcadbook/implant/sim-screen",
+    "bookId": "tcadbook",
+    "title": "스크린 산화막 두께에 따른 정점과 표면 농도",
+    "link": "chapters/implant.html#sim-screen"
+  },
+  {
+    "id": "tcadbook/implant/sim-mc",
+    "bookId": "tcadbook",
+    "title": "이진 충돌 몬테카를로: 궤적과 히스토그램",
+    "link": "chapters/implant.html#sim-mc"
+  },
+  {
+    "id": "tcadbook/implant/sim-mask",
+    "bookId": "tcadbook",
+    "title": "마스크 창을 통과한 2D 주입",
+    "link": "chapters/implant.html#sim-mask"
+  },
+  {
+    "id": "tcadbook/implant/sim-halo",
+    "bookId": "tcadbook",
+    "title": "기울인 할로 주입과 게이트 그림자",
+    "link": "chapters/implant.html#sim-halo"
+  },
+  {
+    "id": "tcadbook/implant/sim-dmg",
+    "bookId": "tcadbook",
+    "title": "손상 밀도와 비정질화 임계 도즈",
+    "link": "chapters/implant.html#sim-dmg"
+  },
+  {
+    "id": "tcadbook/implant/sim-tn45",
+    "bookId": "tcadbook",
+    "title": "TN-45 주입 흐름: 주입 직후 2D 도핑",
+    "link": "chapters/implant.html#sim-tn45"
+  },
+  {
+    "id": "tcadbook/lab/sim-lab",
+    "bookId": "tcadbook",
+    "title": "TN-45 실험대",
+    "link": "chapters/lab.html#sim-lab"
+  },
+  {
+    "id": "tcadbook/lab/sim-cmp",
+    "bookId": "tcadbook",
+    "title": "런 겹쳐 보기",
+    "link": "chapters/lab.html#sim-cmp"
+  },
+  {
+    "id": "tcadbook/lab/sim-ms",
+    "bookId": "tcadbook",
+    "title": "다섯 가지 임무",
+    "link": "chapters/lab.html#sim-ms"
+  },
+  {
+    "id": "tcadbook/mesh/sim-fd",
+    "bookId": "tcadbook",
+    "title": "3점 유한 차분: 간격을 반으로 줄이면 오차는 1/4",
+    "link": "chapters/mesh.html#sim-fd"
+  },
+  {
+    "id": "tcadbook/mesh/sim-grade",
+    "bookId": "tcadbook",
+    "title": "점 개수는 그대로, 놓는 자리만 바꾼다",
+    "link": "chapters/mesh.html#sim-grade"
+  },
+  {
+    "id": "tcadbook/mesh/sim-box",
+    "bookId": "tcadbook",
+    "title": "점을 끌면 삼각형과 제어 체적이 따라온다",
+    "link": "chapters/mesh.html#sim-box"
+  },
+  {
+    "id": "tcadbook/mesh/sim-neg",
+    "bookId": "tcadbook",
+    "title": "같은 점, 다른 연결: 비들로네 변이 음의 전자 농도를 만든다",
+    "link": "chapters/mesh.html#sim-neg"
+  },
+  {
+    "id": "tcadbook/mesh/sim-tensor",
+    "bookId": "tcadbook",
+    "title": "가는 선은 끝까지 간다: 텐서 대 비정형",
+    "link": "chapters/mesh.html#sim-tensor"
+  },
+  {
+    "id": "tcadbook/mesh/sim-refine",
+    "bookId": "tcadbook",
+    "title": "적응 세분: 도핑 기준과 전위 기준",
+    "link": "chapters/mesh.html#sim-refine"
+  },
+  {
+    "id": "tcadbook/mesh/sim-tn45",
+    "bookId": "tcadbook",
+    "title": "TN-45 격자를 도핑 위에 겹쳐 본다",
+    "link": "chapters/mesh.html#sim-tn45"
+  },
+  {
+    "id": "tcadbook/mesh/sim-conv",
+    "bookId": "tcadbook",
+    "title": "격자 밀도에 따른 TN-45 Id-Vg, 문턱 전압, 켜짐 전류",
+    "link": "chapters/mesh.html#sim-conv"
+  },
+  {
+    "id": "tcadbook/mesh/sim-cost",
+    "bookId": "tcadbook",
+    "title": "노드 수와 풀이 시간: 이 브라우저에서 직접 잰다",
+    "link": "chapters/mesh.html#sim-cost"
+  },
+  {
+    "id": "tcadbook/mesh/sim-lab",
+    "bookId": "tcadbook",
+    "title": "TN-45 격자 설계 실험실",
+    "link": "chapters/mesh.html#sim-lab"
+  },
+  {
+    "id": "tcadbook/models/sim-mu",
+    "bookId": "tcadbook",
+    "title": "도핑에 따른 저전계 이동도: Caughey-Thomas 대 Masetti",
+    "link": "chapters/models.html#sim-mu"
+  },
+  {
+    "id": "tcadbook/models/sim-mt",
+    "bookId": "tcadbook",
+    "title": "마티센 규칙: 격자 산란과 불순물 산란이 합쳐지는 방식",
+    "link": "chapters/models.html#sim-mt"
+  },
+  {
+    "id": "tcadbook/models/sim-lb",
+    "bookId": "tcadbook",
+    "title": "Lombardi 표면 이동도: 성분별 분해와 유효 전계",
+    "link": "chapters/models.html#sim-lb"
+  },
+  {
+    "id": "tcadbook/models/sim-vf",
+    "bookId": "tcadbook",
+    "title": "속도-전계 곡선: Canali 속도 포화",
+    "link": "chapters/models.html#sim-vf"
+  },
+  {
+    "id": "tcadbook/models/sim-mm",
+    "bookId": "tcadbook",
+    "title": "TN-45 이동도 지도: 모델을 하나씩 켠다 (Vg = Vd = 1 V)",
+    "link": "chapters/models.html#sim-mm"
+  },
+  {
+    "id": "tcadbook/models/sim-et",
+    "bookId": "tcadbook",
+    "title": "SRH 재결합률과 트랩 준위",
+    "link": "chapters/models.html#sim-et"
+  },
+  {
+    "id": "tcadbook/models/sim-tau",
+    "bookId": "tcadbook",
+    "title": "SRH 대 오제 대 복사: 도핑과 주입에 따른 수명",
+    "link": "chapters/models.html#sim-tau"
+  },
+  {
+    "id": "tcadbook/models/sim-dio",
+    "bookId": "tcadbook",
+    "title": "재결합 모델에 따른 다이오드 I-V와 이상 계수 (1D 드리프트-확산)",
+    "link": "chapters/models.html#sim-dio"
+  },
+  {
+    "id": "tcadbook/models/sim-sw",
+    "bookId": "tcadbook",
+    "title": "종합: 이동도 모델을 바꿔 TN-45를 다시 푼다 (2D 드리프트-확산)",
+    "link": "chapters/models.html#sim-sw"
+  },
+  {
+    "id": "tcadbook/models/sim-sc",
+    "bookId": "tcadbook",
+    "title": "보정 손잡이: muScale·vsatScale에 대한 Ion 민감도",
+    "link": "chapters/models.html#sim-sc"
+  },
+  {
+    "id": "tcadbook/moscap/sim-band",
+    "bookId": "tcadbook",
+    "title": "게이트 전압과 밴드 휨: 축적에서 강반전까지",
+    "link": "chapters/moscap.html#sim-band"
+  },
+  {
+    "id": "tcadbook/moscap/sim-qs",
+    "bookId": "tcadbook",
+    "title": "Q s (ψ s ): 해석식과 수치해",
+    "link": "chapters/moscap.html#sim-qs"
+  },
+  {
+    "id": "tcadbook/moscap/sim-cv",
+    "bookId": "tcadbook",
+    "title": "세 가지 C-V를 한 번에 스윕한다",
+    "link": "chapters/moscap.html#sim-cv"
+  },
+  {
+    "id": "tcadbook/moscap/sim-vfb",
+    "bookId": "tcadbook",
+    "title": "게이트 재료와 산화막 전하가 C-V를 옮긴다",
+    "link": "chapters/moscap.html#sim-vfb"
+  },
+  {
+    "id": "tcadbook/moscap/sim-dit",
+    "bookId": "tcadbook",
+    "title": "D it 가 만드는 늘어짐(Stretch-out)",
+    "link": "chapters/moscap.html#sim-dit"
+  },
+  {
+    "id": "tcadbook/moscap/sim-poly",
+    "bookId": "tcadbook",
+    "title": "게이트 도핑을 낮추면 반전 용량이 무너진다",
+    "link": "chapters/moscap.html#sim-poly"
+  },
+  {
+    "id": "tcadbook/moscap/sim-sp",
+    "bookId": "tcadbook",
+    "title": "삼각 우물의 부띠와 반전층 중심",
+    "link": "chapters/moscap.html#sim-sp"
+  },
+  {
+    "id": "tcadbook/moscap/sim-dg",
+    "bookId": "tcadbook",
+    "title": "고전 · 밀도 기울기 · 슈뢰딩거–포아송 C-V",
+    "link": "chapters/moscap.html#sim-dg"
+  },
+  {
+    "id": "tcadbook/moscap/sim-cet",
+    "bookId": "tcadbook",
+    "title": "CET 예산: 무엇이 전기적 두께를 더하는가",
+    "link": "chapters/moscap.html#sim-cet"
+  },
+  {
+    "id": "tcadbook/moscap/sim-lab",
+    "bookId": "tcadbook",
+    "title": "게이트 스택 C-V 실험대",
+    "link": "chapters/moscap.html#sim-lab"
+  },
+  {
+    "id": "tcadbook/mosfet/sim-field",
+    "bookId": "tcadbook",
+    "title": "TN-45 2D 필드 탐색기",
+    "link": "chapters/mosfet.html#sim-field"
+  },
+  {
+    "id": "tcadbook/mosfet/sim-barrier",
+    "bookId": "tcadbook",
+    "title": "채널 표면의 전도대: 드레인이 장벽을 누른다",
+    "link": "chapters/mosfet.html#sim-barrier"
+  },
+  {
+    "id": "tcadbook/mosfet/sim-idvg",
+    "bookId": "tcadbook",
+    "title": "Id-Vg 스윕: 한 점씩 푼다",
+    "link": "chapters/mosfet.html#sim-idvg"
+  },
+  {
+    "id": "tcadbook/mosfet/sim-vt",
+    "bookId": "tcadbook",
+    "title": "V t 추출: 정전류 대 최대 g m",
+    "link": "chapters/mosfet.html#sim-vt"
+  },
+  {
+    "id": "tcadbook/mosfet/sim-ss",
+    "bookId": "tcadbook",
+    "title": "SS 대 C dep /C ox : 장채널 이론과 2D 해",
+    "link": "chapters/mosfet.html#sim-ss"
+  },
+  {
+    "id": "tcadbook/mosfet/sim-idvd",
+    "bookId": "tcadbook",
+    "title": "Id-Vd 가족 곡선",
+    "link": "chapters/mosfet.html#sim-idvd"
+  },
+  {
+    "id": "tcadbook/mosfet/sim-pinch",
+    "bookId": "tcadbook",
+    "title": "채널을 따라 본 반전 전하: 핀치오프와 속도 포화",
+    "link": "chapters/mosfet.html#sim-pinch"
+  },
+  {
+    "id": "tcadbook/mosfet/sim-roll",
+    "bookId": "tcadbook",
+    "title": "V t 롤오프와 할로",
+    "link": "chapters/mosfet.html#sim-roll"
+  },
+  {
+    "id": "tcadbook/mosfet/sim-punch",
+    "bookId": "tcadbook",
+    "title": "할로를 빼면 전류가 표면 아래로 샌다",
+    "link": "chapters/mosfet.html#sim-punch"
+  },
+  {
+    "id": "tcadbook/mosfet/sim-card",
+    "bookId": "tcadbook",
+    "title": "TN-45 특성 카드: 레시피 하나를 끝까지 푼다",
+    "link": "chapters/mosfet.html#sim-card"
+  },
+  {
+    "id": "tcadbook/numerics/sim-sg",
+    "bookId": "tcadbook",
+    "title": "중앙 차분 대 샤페터-거멜: 한 칸의 전위 차가 2kT/q를 넘으면",
+    "link": "chapters/numerics.html#sim-sg"
+  },
+  {
+    "id": "tcadbook/numerics/sim-nt",
+    "bookId": "tcadbook",
+    "title": "스칼라 뉴턴: 접선, 2차 수렴, 감쇠",
+    "link": "chapters/numerics.html#sim-nt"
+  },
+  {
+    "id": "tcadbook/numerics/sim-p1",
+    "bookId": "tcadbook",
+    "title": "pn 접합 포아송: 초기값·감쇠·피카르",
+    "link": "chapters/numerics.html#sim-p1"
+  },
+  {
+    "id": "tcadbook/numerics/sim-gm",
+    "bookId": "tcadbook",
+    "title": "다이오드에서 뉴턴 대 거멜: 반복 횟수와 바이어스",
+    "link": "chapters/numerics.html#sim-gm"
+  },
+  {
+    "id": "tcadbook/numerics/sim-sp",
+    "bookId": "tcadbook",
+    "title": "희소 행렬과 LU 채움: 번호를 어떻게 매기는가",
+    "link": "chapters/numerics.html#sim-sp"
+  },
+  {
+    "id": "tcadbook/numerics/sim-it",
+    "bookId": "tcadbook",
+    "title": "2D 포아송 행렬의 반복 풀이: 야코비·가우스-자이델·SOR·CG·ICCG",
+    "link": "chapters/numerics.html#sim-it"
+  },
+  {
+    "id": "tcadbook/numerics/sim-cr",
+    "bookId": "tcadbook",
+    "title": "허용 오차와 전류의 정확도",
+    "link": "chapters/numerics.html#sim-cr"
+  },
+  {
+    "id": "tcadbook/numerics/sim-jp",
+    "bookId": "tcadbook",
+    "title": "TN-45: 평형에서 한 번에 뛰기와 감쇠",
+    "link": "chapters/numerics.html#sim-jp"
+  },
+  {
+    "id": "tcadbook/numerics/sim-rp",
+    "bookId": "tcadbook",
+    "title": "바이어스 램프 실험실: 간격 · 초기값 · 감쇠 · 계단 반으로",
+    "link": "chapters/numerics.html#sim-rp"
+  },
+  {
+    "id": "tcadbook/overview/sim-flow",
+    "bookId": "tcadbook",
+    "title": "TN-45 한 바퀴: 레시피에서 Id-Vg까지",
+    "link": "chapters/overview.html#sim-flow"
+  },
+  {
+    "id": "tcadbook/overview/sim-split",
+    "bookId": "tcadbook",
+    "title": "웨이퍼 분할 대 가상 분할: 할로 도즈 고르기",
+    "link": "chapters/overview.html#sim-split"
+  },
+  {
+    "id": "tcadbook/overview/sim-see",
+    "bookId": "tcadbook",
+    "title": "보이지 않는 것을 본다: TN-45 내부의 전위·전자·전계·전류",
+    "link": "chapters/overview.html#sim-see"
+  },
+  {
+    "id": "tcadbook/overview/sim-p1d",
+    "bookId": "tcadbook",
+    "title": "점 위에서 푸는 1D 포아송 방정식",
+    "link": "chapters/overview.html#sim-p1d"
+  },
+  {
+    "id": "tcadbook/overview/sim-node",
+    "bookId": "tcadbook",
+    "title": "격자점 하나가 아는 것",
+    "link": "chapters/overview.html#sim-node"
+  },
+  {
+    "id": "tcadbook/overview/sim-scale",
+    "bookId": "tcadbook",
+    "title": "길이와 시간의 사다리",
+    "link": "chapters/overview.html#sim-scale"
+  },
+  {
+    "id": "tcadbook/overview/sim-ckt",
+    "bookId": "tcadbook",
+    "title": "압축 모델에서 회로로: 게이트 길이와 인버터",
+    "link": "chapters/overview.html#sim-ckt"
+  },
+  {
+    "id": "tcadbook/overview/sim-mob",
+    "bookId": "tcadbook",
+    "title": "이동도 모델이 켜짐 전류를 정한다",
+    "link": "chapters/overview.html#sim-mob"
+  },
+  {
+    "id": "tcadbook/overview/sim-cal",
+    "bookId": "tcadbook",
+    "title": "보정 손잡이 두 개, 측정값 하나",
+    "link": "chapters/overview.html#sim-cal"
+  },
+  {
+    "id": "tcadbook/overview/sim-lab",
+    "bookId": "tcadbook",
+    "title": "작은 TCAD: 레시피 → 도핑 → Id-Vg → 사양",
+    "link": "chapters/overview.html#sim-lab"
+  },
+  {
+    "id": "tcadbook/pn/sim-eq",
+    "bookId": "tcadbook",
+    "title": "도핑을 끌면 밴드가 휜다: 평형 포아송 풀이",
+    "link": "chapters/pn.html#sim-eq"
+  },
+  {
+    "id": "tcadbook/pn/sim-ms",
+    "bookId": "tcadbook",
+    "title": "격자 간격과 뉴턴 수렴: 전계는 격자를 탄다",
+    "link": "chapters/pn.html#sim-ms"
+  },
+  {
+    "id": "tcadbook/pn/sim-da",
+    "bookId": "tcadbook",
+    "title": "전하·전계·전위: 포아송 수치해 대 공핍 근사",
+    "link": "chapters/pn.html#sim-da"
+  },
+  {
+    "id": "tcadbook/pn/sim-fw",
+    "bookId": "tcadbook",
+    "title": "바이어스를 걸면: 준페르미 준위와 소수 캐리어 주입",
+    "link": "chapters/pn.html#sim-fw"
+  },
+  {
+    "id": "tcadbook/pn/sim-iv",
+    "bookId": "tcadbook",
+    "title": "순방향 I-V 스윕과 국소 이상 계수",
+    "link": "chapters/pn.html#sim-iv"
+  },
+  {
+    "id": "tcadbook/pn/sim-lt",
+    "bookId": "tcadbook",
+    "title": "SRH 수명과 재결합 분포: 전류는 어디서 사라지는가",
+    "link": "chapters/pn.html#sim-lt"
+  },
+  {
+    "id": "tcadbook/pn/sim-rv",
+    "bookId": "tcadbook",
+    "title": "역바이어스: 생성률 분포와 누설 전류",
+    "link": "chapters/pn.html#sim-rv"
+  },
+  {
+    "id": "tcadbook/pn/sim-cv",
+    "bookId": "tcadbook",
+    "title": "C-V 측정과 1/C² 도핑 추출 (소신호 AC, 100 kHz)",
+    "link": "chapters/pn.html#sim-cv"
+  },
+  {
+    "id": "tcadbook/pn/sim-tp",
+    "bookId": "tcadbook",
+    "title": "온도 스윕: I-V와 아레니우스 그림",
+    "link": "chapters/pn.html#sim-tp"
+  },
+  {
+    "id": "tcadbook/pn/sim-gr",
+    "bookId": "tcadbook",
+    "title": "경사 접합: 1/C²와 1/C³ 중 어느 쪽이 직선인가",
+    "link": "chapters/pn.html#sim-gr"
+  },
+  {
+    "id": "tcadbook/pn/sim-lab",
+    "bookId": "tcadbook",
+    "title": "종합: 1D 다이오드 실험실",
+    "link": "chapters/pn.html#sim-lab"
+  },
+  {
+    "id": "tcadbook/topography/sim-dg",
+    "bookId": "tcadbook",
+    "title": "딜-그로브: 선형에서 포물선으로 꺾이는 두께 곡선",
+    "link": "chapters/topography.html#sim-dg"
+  },
+  {
+    "id": "tcadbook/topography/sim-thin",
+    "bookId": "tcadbook",
+    "title": "얇은 영역: 마수드 대 순수 딜-그로브",
+    "link": "chapters/topography.html#sim-thin"
+  },
+  {
+    "id": "tcadbook/topography/sim-seg",
+    "bookId": "tcadbook",
+    "title": "산화가 도펀트를 재분배한다: 붕소 고갈과 인 쌓임",
+    "link": "chapters/topography.html#sim-seg"
+  },
+  {
+    "id": "tcadbook/topography/sim-locos",
+    "bookId": "tcadbook",
+    "title": "LOCOS 새부리 대 STI",
+    "link": "chapters/topography.html#sim-locos"
+  },
+  {
+    "id": "tcadbook/topography/sim-dep",
+    "bookId": "tcadbook",
+    "title": "트렌치 증착: 단차 피복과 보이드",
+    "link": "chapters/topography.html#sim-dep"
+  },
+  {
+    "id": "tcadbook/topography/sim-etch",
+    "bookId": "tcadbook",
+    "title": "등방 대 이방성 식각, 선택비",
+    "link": "chapters/topography.html#sim-etch"
+  },
+  {
+    "id": "tcadbook/topography/sim-ls",
+    "bookId": "tcadbook",
+    "title": "레벨 셋 풀이기: φ를 움직여 표면을 옮긴다",
+    "link": "chapters/topography.html#sim-ls"
+  },
+  {
+    "id": "tcadbook/topography/sim-spacer",
+    "bookId": "tcadbook",
+    "title": "스페이서 만들기: 증착 두께와 과식각",
+    "link": "chapters/topography.html#sim-spacer"
+  },
+  {
+    "id": "tcadbook/topography/sim-tn",
+    "bookId": "tcadbook",
+    "title": "TN-45: 스페이서 폭이 소스/드레인의 자리를 정한다",
+    "link": "chapters/topography.html#sim-tn"
+  },
+  {
+    "id": "tcadbook/transient/sim-ts",
+    "bookId": "tcadbook",
+    "title": "양해법과 음해법: 시간 간격을 키우면",
+    "link": "chapters/transient.html#sim-ts"
+  },
+  {
+    "id": "tcadbook/transient/sim-rr",
+    "bookId": "tcadbook",
+    "title": "역회복: 저장 전하가 빠져나가는 동안",
+    "link": "chapters/transient.html#sim-rr"
+  },
+  {
+    "id": "tcadbook/transient/sim-qv",
+    "bookId": "tcadbook",
+    "title": "C = dQ/dV: 전하 차분 대 AC 해석",
+    "link": "chapters/transient.html#sim-qv"
+  },
+  {
+    "id": "tcadbook/transient/sim-acf",
+    "bookId": "tcadbook",
+    "title": "다이오드 어드미턴스의 주파수 응답",
+    "link": "chapters/transient.html#sim-acf"
+  },
+  {
+    "id": "tcadbook/transient/sim-cg",
+    "bookId": "tcadbook",
+    "title": "TN-45의 Cgg-Vg (2D 포아송 + 전하 차분)",
+    "link": "chapters/transient.html#sim-cg"
+  },
+  {
+    "id": "tcadbook/transient/sim-ft",
+    "bookId": "tcadbook",
+    "title": "gm, Cgg, fT를 한 번의 스윕으로",
+    "link": "chapters/transient.html#sim-ft"
+  },
+  {
+    "id": "tcadbook/transient/sim-mm",
+    "bookId": "tcadbook",
+    "title": "TCAD 소자로 커패시터 방전하기",
+    "link": "chapters/transient.html#sim-mm"
+  },
+  {
+    "id": "tcadbook/transient/sim-inv",
+    "bookId": "tcadbook",
+    "title": "TN-45 인버터: VTC, 부하선, 지연",
+    "link": "chapters/transient.html#sim-inv"
+  },
+  {
+    "id": "tcadbook/transient/sim-ro",
+    "bookId": "tcadbook",
+    "title": "N단 링 오실레이터",
+    "link": "chapters/transient.html#sim-ro"
+  },
+  {
+    "id": "tcadbook/transport/sim-sc",
+    "bookId": "tcadbook",
+    "title": "길이 척도와 수송 모델의 영역",
+    "link": "chapters/transport.html#sim-sc"
+  },
+  {
+    "id": "tcadbook/transport/sim-m1",
+    "bookId": "tcadbook",
+    "title": "전자 하나의 자유 비행과 산란",
+    "link": "chapters/transport.html#sim-m1"
+  },
+  {
+    "id": "tcadbook/transport/sim-vf",
+    "bookId": "tcadbook",
+    "title": "앙상블 몬테카를로로 얻은 속도-전계 곡선",
+    "link": "chapters/transport.html#sim-vf"
+  },
+  {
+    "id": "tcadbook/transport/sim-os",
+    "bookId": "tcadbook",
+    "title": "전계 계단에 대한 속도 과도",
+    "link": "chapters/transport.html#sim-os"
+  },
+  {
+    "id": "tcadbook/transport/sim-hd",
+    "bookId": "tcadbook",
+    "title": "n⁺–n–n⁺에서 드리프트-확산 대 에너지 균형",
+    "link": "chapters/transport.html#sim-hd"
+  },
+  {
+    "id": "tcadbook/transport/sim-bl",
+    "bookId": "tcadbook",
+    "title": "장벽 꼭대기의 탄도 MOSFET",
+    "link": "chapters/transport.html#sim-bl"
+  },
+  {
+    "id": "tcadbook/transport/sim-bk",
+    "bookId": "tcadbook",
+    "title": "2D 해에서 kT 층을 읽어 탄도 비율 어림하기",
+    "link": "chapters/transport.html#sim-bk"
+  },
+  {
+    "id": "tcadbook/transport/sim-qc",
+    "bookId": "tcadbook",
+    "title": "반전층 분포: 고전 대 밀도 기울기 대 슈뢰딩거-포아송",
+    "link": "chapters/transport.html#sim-qc"
+  },
+  {
+    "id": "tcadbook/transport/sim-tr",
+    "bookId": "tcadbook",
+    "title": "장벽 투과율: NEGF 대 해석해, 이중 장벽 공명",
+    "link": "chapters/transport.html#sim-tr"
+  },
+  {
+    "id": "tcadbook/transport/sim-sd",
+    "bookId": "tcadbook",
+    "title": "소스-드레인 터널링: 장벽 길이를 줄이면",
+    "link": "chapters/transport.html#sim-sd"
+  },
+  {
+    "id": "tcadbook/transport/sim-lad",
+    "bookId": "tcadbook",
+    "title": "TN-45 모델 사다리: 게이트 길이에 따른 켜짐 전류",
+    "link": "chapters/transport.html#sim-lad"
+  },
+  {
+    "id": "tcadbook/variability/sim-dp",
+    "bookId": "tcadbook",
+    "title": "게이트 아래 상자의 원자 세기",
+    "link": "chapters/variability.html#sim-dp"
+  },
+  {
+    "id": "tcadbook/variability/sim-pg",
+    "bookId": "tcadbook",
+    "title": "펠그롬 그림: σVt 대 1/√(WL)",
+    "link": "chapters/variability.html#sim-pg"
+  },
+  {
+    "id": "tcadbook/variability/sim-rd",
+    "bookId": "tcadbook",
+    "title": "무작위 도펀트 표본 풀기 (2D 드리프트-확산)",
+    "link": "chapters/variability.html#sim-rd"
+  },
+  {
+    "id": "tcadbook/variability/sim-le",
+    "bookId": "tcadbook",
+    "title": "거친 가장자리 → 게이트 길이 분포 → 문턱 롤오프",
+    "link": "chapters/variability.html#sim-le"
+  },
+  {
+    "id": "tcadbook/variability/sim-wf",
+    "bookId": "tcadbook",
+    "title": "결정립 지도와 면적 평균 일함수",
+    "link": "chapters/variability.html#sim-wf"
+  },
+  {
+    "id": "tcadbook/variability/sim-td",
+    "bookId": "tcadbook",
+    "title": "평면 · FinFET · 나노시트 구조 돌려 보기",
+    "link": "chapters/variability.html#sim-td"
+  },
+  {
+    "id": "tcadbook/variability/sim-la",
+    "bookId": "tcadbook",
+    "title": "몸체 3D 정전기: 척도 길이, SS, DIBL",
+    "link": "chapters/variability.html#sim-la"
+  },
+  {
+    "id": "tcadbook/variability/sim-mc",
+    "bookId": "tcadbook",
+    "title": "격자 간격과 계산 비용: 2D 대 3D",
+    "link": "chapters/variability.html#sim-mc"
+  },
+  {
+    "id": "tcadbook/variability/sim-bg",
+    "bookId": "tcadbook",
+    "title": "세 구조의 변동성 예산과 SRAM 배열 수율",
+    "link": "chapters/variability.html#sim-bg"
+  },
+  {
     "id": "packagingbook/bump/sim-flow",
     "bookId": "packagingbook",
     "title": "전해 도금 범핑 흐름",

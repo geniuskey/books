@@ -238,6 +238,14 @@
         "failure"
       ]
     },
+    "tcadbook/sim-field": {
+      "question": "트랜지스터 안의 전계와 전자는 바이어스에 따라 어떻게 바뀔까요?",
+      "concepts": ["device", "process"]
+    },
+    "tcadbook/sim-idvg": {
+      "question": "시뮬레이터는 I-V 곡선을 어떻게 한 점씩 계산할까요?",
+      "concepts": ["device", "structure"]
+    },
     "lithobook/sim-pipe": {
       "question": "설계한 패턴은 공정을 거치며 어떻게 달라질까요?",
       "concepts": [
