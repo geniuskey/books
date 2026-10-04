@@ -1,6 +1,7 @@
 """Validate catalog references, generated index, local assets and available book anchors."""
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -25,6 +26,7 @@ def unique(items, label):
 
 
 catalog, learning, discovery, anchors = read('books.json'), read('learning.json'), read('discovery.json'), read('experiment-catalog.json')
+validation = read('model-validation.json')['experiments']
 book_ids = unique(catalog['books'], 'book')
 fields = unique(catalog['fields'], 'field')
 concept_ids = unique(learning['concepts'], 'concept')
@@ -69,8 +71,12 @@ for b in catalog['books']:
         check((ROOT / f['image']).is_file(), f'Missing image: {f["image"]}')
         anchor(b['id'], f['link'])
 
-check(expected == set(learning['experiments']), 'Editorial metadata does not match featured experiments')
+check(expected <= set(learning['experiments']), 'Featured experiments are missing editorial metadata')
 catalog_links = {item['bookId'] + '/' + item['link'] for item in anchors}
+catalog_ids = {item['id'] for item in anchors}
+editorial_keys = {item['bookId'] + '/' + item['link'].split('#')[-1] for item in anchors}
+check(set(learning['experiments']) <= editorial_keys, 'Editorial metadata references a missing experiment')
+check(set(validation) <= catalog_ids, 'Model validation references a missing experiment')
 check(featured_links <= catalog_links, 'Featured experiment is absent from full catalog')
 check({item['id'] for item in anchors} == {e['id'] for e in discovery['experiments']}, 'Discovery index has missing/extra experiments')
 for item in anchors:
@@ -81,6 +87,13 @@ for item in anchors:
 for eid, e in learning['experiments'].items():
     check(bool(e['question'].strip()), f'Missing learning question: {eid}')
     check(bool(e['concepts']) and set(e['concepts']) <= concept_ids, f'Invalid concept reference: {eid}')
+    if 'description' in e:
+        check(bool(e['description'].strip()), f'Empty experiment description: {eid}')
+for eid, record in validation.items():
+    check(record.get('bookId') == eid.split('/')[0], f'Validation book mismatch: {eid}')
+    for key in ('sourceFile', 'sourceSha256', 'checkedOn', 'reviewer', 'summary', 'method', 'reference'):
+        check(bool(record.get(key)), f'Missing validation {key}: {eid}')
+    check(bool(record.get('cases')), f'No reference cases: {eid}')
 for p in learning['paths']:
     check(bool(p['steps']) and bool(p['challenge']), f'Incomplete path: {p["id"]}')
     for step in p['steps']:
@@ -95,6 +108,8 @@ spec = importlib.util.spec_from_file_location('builder', ROOT / 'tools/build-dis
 builder = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(builder)
 check(builder.build() == discovery, 'Generated discovery.json is stale; run tools/build-discovery.py')
+model_check = subprocess.run(['node', str(ROOT / 'tools/check-models.cjs')], capture_output=True, text=True)
+check(model_check.returncode == 0, 'Model reference checks failed: ' + (model_check.stderr or model_check.stdout).strip())
 if all((ROOT.parent / b['id'] / 'chapters').is_dir() for b in catalog['books'] if b['status'] == 'published'):
     spec = importlib.util.spec_from_file_location('collector', ROOT / 'tools/collect-experiments.py')
     collector = importlib.util.module_from_spec(spec)
@@ -104,4 +119,5 @@ if all((ROOT.parent / b['id'] / 'chapters').is_dir() for b in catalog['books'] i
 if errors:
     print('\n'.join(errors), file=sys.stderr)
     sys.exit(1)
-print(f'OK: {len(anchors)} experiments ({len(expected)} enriched), {len(learning["paths"])} paths, {checked_anchors} local anchors; {skipped_anchors} anchors need external checking')
+print(f'OK: {len(anchors)} experiments ({len(learning["experiments"])} enriched, {len(validation)} reference-checked), {len(learning["paths"])} paths, {checked_anchors} local anchors; {skipped_anchors} anchors need external checking')
+print(model_check.stdout.strip())

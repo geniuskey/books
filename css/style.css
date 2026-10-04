@@ -825,6 +825,7 @@ footer p { margin: 0; }
 .learning-path p, .entry-card p { color: var(--text-dim); }
 body[data-page="simulators"] .page-head { padding: 26px 0 10px; }
 body[data-page="simulators"] .page-head h1 { margin: 0 0 15px; font-size: clamp(28px, 3vw, 34px); }
+.experiment-caveat { margin: -7px 0 14px; color: var(--text-dim); font-size: 13px; line-height: 1.5; }
 body[data-page="simulators"] .lib-filters { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 0; }
 .experiment-results-bar { display: flex; flex-basis: 100%; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 20px; }
 .experiment-results-bar #shown { margin: 0; color: var(--text-dim); font-size: 13px; }
@@ -856,6 +857,10 @@ body[data-page="simulators"] .lib-filters { flex-direction: row; flex-wrap: wrap
 .experiment-table .experiment-number { color: var(--text-faint); font: 12px var(--mono); }
 .experiment-table .experiment-title a { color: var(--text); font-weight: 600; }
 .experiment-table .experiment-title a span { color: var(--accent); font-size: 11px; }
+.experiment-table .experiment-description, .experiment-table .experiment-question, .experiment-table .experiment-validation { margin: 4px 0 0; font-size: 12px; font-weight: 400; line-height: 1.45; color: var(--text-dim); }
+.experiment-table .experiment-question b { color: var(--text); }
+.experiment-table .experiment-validation { color: var(--accent); }
+.experiment-table .experiment-validation b { font-weight: 700; }
 .experiment-table .experiment-book { color: var(--text-dim); }
 .experiment-pages { display: flex; justify-content: center; align-items: center; gap: 16px; padding: 28px 0 48px; }
 .experiment-pages button { padding: 9px 16px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-elev); color: var(--text); font: inherit; cursor: pointer; }

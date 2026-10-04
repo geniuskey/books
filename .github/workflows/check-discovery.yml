@@ -1,0 +1,33 @@
+name: Check experiment discovery and model references
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/**'
+      - 'tools/**'
+      - '.github/workflows/check-discovery.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '23 2 * * 1'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: books
+      - uses: actions/checkout@v4
+        with:
+          repository: geniuskey/yieldbook
+          path: yieldbook
+      - uses: actions/checkout@v4
+        with:
+          repository: geniuskey/computerbook
+          path: computerbook
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python3 tools/check-discovery.py
+        working-directory: books

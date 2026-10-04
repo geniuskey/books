@@ -5941,11 +5941,14 @@
       "id": "yieldbook/classify/sim-sp",
       "bookId": "yieldbook",
       "title": "리뷰 샘플링: 일부만 보고 전체를 말하기",
-      "description": "",
+      "description": "리뷰 표본을 고르는 방법에 따라 전체 불량 분포의 추정이 어떻게 달라지는지 살펴봅니다.",
       "url": "https://yieldbook.euiyun.com/chapters/classify.html#sim-sp",
       "image": "",
-      "question": "",
-      "concepts": [],
+      "question": "일부 결함만 리뷰할 때 어떤 유형을 놓치기 쉬울까요?",
+      "concepts": [
+        "failure",
+        "variation"
+      ],
       "level": "공대 학부",
       "reviewStatus": "unreviewed"
     },
@@ -5965,11 +5968,14 @@
       "id": "yieldbook/classify/sim-ad",
       "bookId": "yieldbook",
       "title": "문턱 분류기: 경계선 두 개로 네 종류 가르기",
-      "description": "",
+      "description": "두 문턱값으로 네 결함 유형을 나누고 오분류 변화를 확인합니다.",
       "url": "https://yieldbook.euiyun.com/chapters/classify.html#sim-ad",
       "image": "",
-      "question": "",
-      "concepts": [],
+      "question": "분류 경계선을 옮기면 어떤 결함끼리 혼동될까요?",
+      "concepts": [
+        "failure",
+        "variation"
+      ],
       "level": "공대 학부",
       "reviewStatus": "unreviewed"
     },
@@ -6209,13 +6215,17 @@
       "id": "yieldbook/models/sim-cmp",
       "bookId": "yieldbook",
       "title": "수율 모델 비교",
-      "description": "",
+      "description": "다이 면적·결함 밀도·군집 계수를 조절해 네 가지 수율 모델의 예측을 비교합니다.",
       "url": "https://yieldbook.euiyun.com/chapters/models.html#sim-cmp",
       "image": "",
-      "question": "",
-      "concepts": [],
+      "question": "같은 결함 밀도에서 다이 면적과 군집 가정을 바꾸면 예상 수율이 얼마나 달라질까요?",
+      "concepts": [
+        "yield",
+        "variation"
+      ],
       "level": "공대 학부",
-      "reviewStatus": "unreviewed"
+      "reviewStatus": "reference-checked",
+      "validationSummary": "푸아송·머피·시즈·음이항 수율식의 기준값과 경계값 확인. 화면 연결과 실제 공정 예측력은 검증하지 않음."
     },
     {
       "id": "yieldbook/models/sim-win",
@@ -6476,11 +6486,14 @@
       "id": "yieldbook/signature/sim-sp",
       "bookId": "yieldbook",
       "title": "스핀 장비: 회전 속도, 노즐, 가장자리",
-      "description": "",
+      "description": "리뷰 표본을 고르는 방법에 따라 전체 불량 분포의 추정이 어떻게 달라지는지 살펴봅니다.",
       "url": "https://yieldbook.euiyun.com/chapters/signature.html#sim-sp",
       "image": "",
-      "question": "",
-      "concepts": [],
+      "question": "일부 결함만 리뷰할 때 어떤 유형을 놓치기 쉬울까요?",
+      "concepts": [
+        "failure",
+        "variation"
+      ],
       "level": "공대 학부",
       "reviewStatus": "unreviewed"
     },
@@ -6548,11 +6561,14 @@
       "id": "yieldbook/statistics/sim-fa",
       "bookId": "yieldbook",
       "title": "무작위 맵 공장",
-      "description": "",
+      "description": "무작위 맵을 여러 번 만들며 관찰한 패턴이 우연인지 비교합니다.",
       "url": "https://yieldbook.euiyun.com/chapters/statistics.html#sim-fa",
       "image": "",
-      "question": "",
-      "concepts": [],
+      "question": "무작위 결함 맵에도 그럴듯한 무늬가 생길까요?",
+      "concepts": [
+        "yield",
+        "variation"
+      ],
       "level": "공대 학부",
       "reviewStatus": "unreviewed"
     },
@@ -7692,8 +7708,11 @@
       "description": "",
       "url": "https://packagingbook.euiyun.com/chapters/lab.html#sim-st",
       "image": "",
-      "question": "",
-      "concepts": [],
+      "question": "인터포저와 브리지는 연결 구조가 어떻게 다를까요?",
+      "concepts": [
+        "packaging",
+        "structure"
+      ],
       "level": "공대 학부",
       "reviewStatus": "unreviewed"
     },
@@ -8040,8 +8059,11 @@
       "description": "",
       "url": "https://packagingbook.euiyun.com/chapters/wafer.html#sim-st",
       "image": "",
-      "question": "",
-      "concepts": [],
+      "question": "인터포저와 브리지는 연결 구조가 어떻게 다를까요?",
+      "concepts": [
+        "packaging",
+        "structure"
+      ],
       "level": "공대 학부",
       "reviewStatus": "unreviewed"
     },
@@ -11480,8 +11502,10 @@
       "description": "",
       "url": "https://displaybook.euiyun.com/chapters/backlight.html#sim-gamut",
       "image": "",
-      "question": "",
-      "concepts": [],
+      "question": "원색의 위치를 바꾸면 표현할 수 있는 색은 어떻게 달라질까요?",
+      "concepts": [
+        "color"
+      ],
       "level": "공대 학부",
       "reviewStatus": "unreviewed"
     },
@@ -11698,8 +11722,10 @@
       "description": "",
       "url": "https://displaybook.euiyun.com/chapters/design.html#sim-gamut",
       "image": "",
-      "question": "",
-      "concepts": [],
+      "question": "원색의 위치를 바꾸면 표현할 수 있는 색은 어떻게 달라질까요?",
+      "concepts": [
+        "color"
+      ],
       "level": "공대 학부",
       "reviewStatus": "unreviewed"
     },
@@ -15106,13 +15132,16 @@
       "id": "computerbook/bits/sim-bin",
       "bookId": "computerbook",
       "title": "8비트 스위치 보드",
-      "description": "",
+      "description": "비트를 켜고 끄며 같은 값을 2진수·10진수·16진수로 확인합니다.",
       "url": "https://computerbook.euiyun.com/chapters/bits.html#sim-bin",
       "image": "",
-      "question": "",
-      "concepts": [],
+      "question": "8개의 비트 스위치로 13과 255를 어떻게 만들까요?",
+      "concepts": [
+        "computing"
+      ],
       "level": "입문",
-      "reviewStatus": "unreviewed"
+      "reviewStatus": "reference-checked",
+      "validationSummary": "8비트·16진수 변환의 0, 13, 255 기준 사례 확인. 화면 조작 전체는 검증하지 않음."
     },
     {
       "id": "computerbook/bits/sim-text",
@@ -16796,11 +16825,14 @@
       "id": "aibook/rag/sim-chunk",
       "bookId": "aibook",
       "title": "청킹 시각화: 경계가 어디에 생기는가",
-      "description": "",
+      "description": "청크 크기와 겹침을 바꾸며 검색에 필요한 문맥이 어디에 남는지 확인합니다.",
       "url": "https://aibook.euiyun.com/chapters/rag.html#sim-chunk",
       "image": "",
-      "question": "",
-      "concepts": [],
+      "question": "문서를 나누는 경계가 답의 근거를 잘라 버릴 수 있을까요?",
+      "concepts": [
+        "ai",
+        "systems"
+      ],
       "level": "공대 학부",
       "reviewStatus": "unreviewed"
     },
@@ -16820,11 +16852,14 @@
       "id": "aibook/rag/sim-hybrid",
       "bookId": "aibook",
       "title": "하이브리드 검색: 두 순위 목록과 결합 순위",
-      "description": "",
+      "description": "키워드·벡터 검색의 순위와 결합 결과를 나란히 비교합니다.",
       "url": "https://aibook.euiyun.com/chapters/rag.html#sim-hybrid",
       "image": "",
-      "question": "",
-      "concepts": [],
+      "question": "고유 용어와 의미 중심 질문에 어떤 검색 방식이 유리할까요?",
+      "concepts": [
+        "ai",
+        "systems"
+      ],
       "level": "공대 학부",
       "reviewStatus": "unreviewed"
     },
@@ -16868,11 +16903,14 @@
       "id": "aibook/rag/sim-eval",
       "bookId": "aibook",
       "title": "검색 평가: 청킹을 바꾸면 recall이 어떻게 변하나",
-      "description": "",
+      "description": "검색의 재현율을 확인해 근거를 못 찾는 문제를 추적합니다.",
       "url": "https://aibook.euiyun.com/chapters/rag.html#sim-eval",
       "image": "",
-      "question": "",
-      "concepts": [],
+      "question": "청킹 방식을 바꾸면 관련 문서를 찾는 비율은 달라질까요?",
+      "concepts": [
+        "ai",
+        "systems"
+      ],
       "level": "공대 학부",
       "reviewStatus": "unreviewed"
     },
@@ -17000,11 +17038,14 @@
       "id": "aibook/training/sim-tr-poly",
       "bookId": "aibook",
       "title": "다항식 피팅: 차수, 정규화, 학습/검증 오차",
-      "description": "",
+      "description": "모델 복잡도와 정규화를 바꾸며 과적합과 일반화 차이를 비교합니다.",
       "url": "https://aibook.euiyun.com/chapters/training.html#sim-tr-poly",
       "image": "",
-      "question": "",
-      "concepts": [],
+      "question": "다항식 차수가 높아질수록 학습·검증 오차는 어떻게 달라질까요?",
+      "concepts": [
+        "ai",
+        "variation"
+      ],
       "level": "공대 학부",
       "reviewStatus": "unreviewed"
     },

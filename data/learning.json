@@ -414,6 +414,51 @@
         "imaging",
         "variation"
       ]
+    },
+    "yieldbook/sim-cmp": {
+      "question": "같은 결함 밀도에서 다이 면적과 군집 가정을 바꾸면 예상 수율이 얼마나 달라질까요?",
+      "description": "다이 면적·결함 밀도·군집 계수를 조절해 네 가지 수율 모델의 예측을 비교합니다.",
+      "concepts": ["yield", "variation"]
+    },
+    "computerbook/sim-bin": {
+      "question": "8개의 비트 스위치로 13과 255를 어떻게 만들까요?",
+      "description": "비트를 켜고 끄며 같은 값을 2진수·10진수·16진수로 확인합니다.",
+      "concepts": ["computing"]
+    },
+    "yieldbook/sim-fa": {
+      "question": "무작위 결함 맵에도 그럴듯한 무늬가 생길까요?",
+      "description": "무작위 맵을 여러 번 만들며 관찰한 패턴이 우연인지 비교합니다.",
+      "concepts": ["yield", "variation"]
+    },
+    "yieldbook/sim-sp": {
+      "question": "일부 결함만 리뷰할 때 어떤 유형을 놓치기 쉬울까요?",
+      "description": "리뷰 표본을 고르는 방법에 따라 전체 불량 분포의 추정이 어떻게 달라지는지 살펴봅니다.",
+      "concepts": ["failure", "variation"]
+    },
+    "yieldbook/sim-ad": {
+      "question": "분류 경계선을 옮기면 어떤 결함끼리 혼동될까요?",
+      "description": "두 문턱값으로 네 결함 유형을 나누고 오분류 변화를 확인합니다.",
+      "concepts": ["failure", "variation"]
+    },
+    "aibook/sim-tr-poly": {
+      "question": "다항식 차수가 높아질수록 학습·검증 오차는 어떻게 달라질까요?",
+      "description": "모델 복잡도와 정규화를 바꾸며 과적합과 일반화 차이를 비교합니다.",
+      "concepts": ["ai", "variation"]
+    },
+    "aibook/sim-chunk": {
+      "question": "문서를 나누는 경계가 답의 근거를 잘라 버릴 수 있을까요?",
+      "description": "청크 크기와 겹침을 바꾸며 검색에 필요한 문맥이 어디에 남는지 확인합니다.",
+      "concepts": ["ai", "systems"]
+    },
+    "aibook/sim-hybrid": {
+      "question": "고유 용어와 의미 중심 질문에 어떤 검색 방식이 유리할까요?",
+      "description": "키워드·벡터 검색의 순위와 결합 결과를 나란히 비교합니다.",
+      "concepts": ["ai", "systems"]
+    },
+    "aibook/sim-eval": {
+      "question": "청킹 방식을 바꾸면 관련 문서를 찾는 비율은 달라질까요?",
+      "description": "검색의 재현율을 확인해 근거를 못 찾는 문제를 추적합니다.",
+      "concepts": ["ai", "systems"]
     }
   },
   "paths": [

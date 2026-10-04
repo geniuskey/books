@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "experiments": {
+    "yieldbook/models/sim-cmp": {
+      "bookId": "yieldbook",
+      "sourceFile": "js/wafer.js",
+      "sourceSha256": "7e0606db71f73440f3169c456172260b02d7078e682692831256bf3e6cca570b",
+      "checkedOn": "2026-10-04",
+      "reviewer": "automated reference cases",
+      "summary": "푸아송·머피·시즈·음이항 수율식의 기준값과 경계값 확인. 화면 연결과 실제 공정 예측력은 검증하지 않음.",
+      "method": "책의 수율식에서 독립적으로 계산한 값과 실행 중인 WM.Y 함수 비교",
+      "reference": "https://staff-old.najah.edu/sites/default/files/Lec29.pdf",
+      "cases": [
+        { "function": "poisson", "args": [0], "expected": 1 },
+        { "function": "poisson", "args": [1], "expected": 0.36787944117144233 },
+        { "function": "poisson", "args": [4], "expected": 0.01831563888873418 },
+        { "function": "murphy", "args": [0], "expected": 1 },
+        { "function": "murphy", "args": [1], "expected": 0.39957640089372803 },
+        { "function": "seeds", "args": [1], "expected": 0.5 },
+        { "function": "negbin", "args": [1, 1], "expected": 0.5 },
+        { "function": "negbin", "args": [3, 2], "expected": 0.16 }
+      ]
+    },
+    "computerbook/bits/sim-bin": {
+      "bookId": "computerbook",
+      "sourceFile": "js/common.js",
+      "sourceSha256": "478b626bbbaa11a6dae40e7aba953c9a790876ca048bd800c27ffd73b4d472af",
+      "checkedOn": "2026-10-04",
+      "reviewer": "automated reference cases",
+      "summary": "8비트·16진수 변환의 0, 13, 255 기준 사례 확인. 화면 조작 전체는 검증하지 않음.",
+      "method": "독립적인 자릿값 표기와 실행 중인 CB.bin·CB.hex 함수 비교",
+      "reference": "computerbook/chapters/bits.html",
+      "cases": [
+        { "function": "bin", "args": [0, 8], "expected": "00000000" },
+        { "function": "bin", "args": [13, 8], "expected": "00001101" },
+        { "function": "bin", "args": [255, 8], "expected": "11111111" },
+        { "function": "hex", "args": [0, 2], "expected": "00" },
+        { "function": "hex", "args": [13, 2], "expected": "0D" },
+        { "function": "hex", "args": [255, 2], "expected": "FF" }
+      ]
+    }
+  }
+}

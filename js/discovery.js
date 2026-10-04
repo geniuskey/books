@@ -130,7 +130,10 @@ EB.start(document.body.dataset.page, async (d) => {
       return `<tr><td class="experiment-number">${String((page - 1) * pageSize + i + 1).padStart(4, "0")}</td>
         <td>${esc(book.fieldObj.name)}</td>
         <td><a class="experiment-book" href="${esc(book.url)}">${esc(book.title)}</a></td>
-        <td class="experiment-title"><a href="${esc(e.url)}">${esc(e.title)} <span aria-hidden="true">↗</span></a></td>
+        <td class="experiment-title"><a href="${esc(e.url)}">${esc(e.title)} <span aria-hidden="true">↗</span></a>
+          ${e.description ? `<p class="experiment-description">${esc(e.description)}</p>` : ""}
+          ${e.question ? `<p class="experiment-question"><b>살펴볼 질문</b> ${esc(e.question)}</p>` : ""}
+          ${e.reviewStatus === "reference-checked" ? `<p class="experiment-validation"><b>기준 사례 확인</b> ${esc(e.validationSummary)}</p>` : ""}</td>
         <td>${esc(e.level)}</td></tr>`;
     }).join("");
     const pages = $("#experiment-pages");
