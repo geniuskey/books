@@ -194,7 +194,7 @@ EB.start("home", (d) => {
   const picks = [
     { book: "phonebook", link: "chapters/anatomy.html#sim-explode", question: "스마트폰 안에는 무엇이 들어 있을까?" },
     { book: "musicbook", link: "chapters/harmonics.html#sim-additive", question: "사인파를 쌓으면 왜 악기 소리가 될까?" },
-    { book: "aibook", link: "chapters/attention.html#sim-editor", question: "AI는 문장의 어디에 주목할까?" },
+    { book: "moneybook", link: "chapters/lab.html#sim-life", question: "오늘의 선택이 60세의 순자산을 얼마나 바꿀까?" },
     { book: "carbook", link: "chapters/aero.html#sim-fl", question: "차의 모양이 공기 흐름을 어떻게 바꿀까?" },
     { book: "camerabook", link: "chapters/shutter.html#sim-rolling", question: "프로펠러는 왜 휘어 찍힐까?" },
     { book: "yieldbook", link: "chapters/detective.html#sim-detective", question: "웨이퍼의 무늬로 불량 원인을 찾을 수 있을까?" },

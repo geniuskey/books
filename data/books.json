@@ -1158,7 +1158,15 @@
         "세금·보험",
         "연금·은퇴"
       ],
-      "motif": "coins"
+      "motif": "coins",
+      "featured": [
+        {
+          "title": "인생 시뮬레이터: 한 사람의 돈 63년",
+          "desc": "연봉·집·저축을 바꾸며 27세부터 90세까지 순자산 곡선 그리기",
+          "link": "chapters/lab.html#sim-life",
+          "image": "img/sims/moneybook-sim-life.jpg"
+        }
+      ]
     },
     {
       "id": "stockbook",

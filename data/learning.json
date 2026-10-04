@@ -183,6 +183,19 @@
         "화음",
         "음악"
       ]
+    },
+    {
+      "id": "money",
+      "label": "돈과 재무 설계",
+      "aliases": [
+        "money",
+        "personal finance",
+        "retirement",
+        "재무",
+        "자산",
+        "은퇴",
+        "연금"
+      ]
     }
   ],
   "experiments": {
@@ -497,6 +510,11 @@
       "question": "같은 화음도 진행의 어디에 놓이느냐에 따라 왜 다르게 들릴까요?",
       "description": "으뜸·버금딸림·딸림 기능별로 화음을 골라 진행을 만들고 오선보와 소리로 비교합니다.",
       "concepts": ["sound"]
+    },
+    "moneybook/sim-life": {
+      "question": "연봉·집·저축 습관을 바꾸면 60세와 90세의 순자산은 얼마나 달라질까요?",
+      "description": "소득·지출·주거·투자·연금을 한꺼번에 움직이며 평생의 현금흐름과 순자산 곡선을 비교합니다.",
+      "concepts": ["money"]
     }
   },
   "paths": [
