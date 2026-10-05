@@ -1341,6 +1341,48 @@
           "image": "img/sims/musicbook-sim-prg-playground.jpg"
         }
       ]
+    },
+    {
+      "id": "mathbook",
+      "code": "MTH",
+      "title": "MathBook",
+      "subtitle": "문제에서 출발하는 수학 교과서",
+      "headline": "이 수식이 없었다면 못 만들었을 물건",
+      "description": "전력망에서 복소수를, MRI에서 푸리에를, QR 코드에서 오류 정정 부호를 만납니다. 극한과 급수, 선형대수, 미분방정식, 표본화, 확률, 정보 이론, 최적화, 수치 해석, 기하와 대칭까지 — 정의보다 공학 문제에서 출발해 그림을 직접 끌며 직관을 만들도록 썼습니다.",
+      "url": "https://mathbook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/mathbook",
+      "status": "published",
+      "level": "공대 학부",
+      "chapters": 13,
+      "simulators": 91,
+      "color": "#2b54d4",
+      "colorDark": "#7d9bff",
+      "topics": [
+        "극한·급수",
+        "복소수·페이저",
+        "선형대수·SVD",
+        "미분방정식",
+        "푸리에·표본화",
+        "확률·정보",
+        "최적화·수치 해석",
+        "기하·대칭"
+      ],
+      "motif": "matrix",
+      "featured": [
+        {
+          "title": "격자를 휘는 행렬",
+          "desc": "기저 벡터를 끌면 공간 전체가 따라 휜다. 행렬식은 넓이 배율",
+          "link": "chapters/linalg.html#sim-la-grid",
+          "image": "img/sims/mathbook-sim-la-grid.jpg"
+        },
+        {
+          "title": "해밍 부호로 비트 고치기",
+          "desc": "아무 비트나 뒤집으면 세 검사의 신드롬이 오류 위치를 가리킨다",
+          "link": "chapters/information.html#sim-inf-hamming",
+          "image": "img/sims/mathbook-sim-inf-hamming.jpg"
+        }
+      ],
+      "field": "culture"
     }
   ],
   "tools": [

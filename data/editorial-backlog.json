@@ -164,28 +164,6 @@
     },
     {
       "book": {
-        "id": "mathbook",
-        "code": "MTH",
-        "title": "MathBook",
-        "subtitle": "AI를 위한 수학",
-        "description": "선형대수, 미분, 확률을 AI의 언어로.",
-        "field": "ai",
-        "status": "planned",
-        "phase": 1,
-        "ideas": [
-          "행렬이 공간을 변형하는 모습",
-          "경사 하강의 기울기",
-          "베이즈 정리 확률 갱신"
-        ]
-      },
-      "disposition": "merge",
-      "targets": [
-        "aibook"
-      ],
-      "reason": "AI 이해에 필요한 수학 보충편부터 구성한다."
-    },
-    {
-      "book": {
         "id": "workaibook",
         "code": "WAI",
         "title": "WorkAIBook",

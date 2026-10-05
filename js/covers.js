@@ -365,6 +365,20 @@
       });
       return svg(s);
     },
+    // 행렬 = 변환: 기저 벡터 î·ĵ가 기울면 격자 전체가 따라 휜다
+    matrix() {
+      const cx = 128, cy = 74, u = 22; let s = "", g = "";
+      range(9).forEach((k) => {
+        const d = (k - 4) * u;
+        s += `<path d="M${cx + d} 4V126M44 ${cy + d}H200" stroke="${W}" stroke-opacity=".1"/>`;
+        g += `<path d="M${cx + d} -40V170M20 ${cy + d}H236" stroke="${W}" stroke-opacity=".38"/>`;
+      });
+      g += `<rect x="${cx}" y="${cy - u}" width="${u}" height="${u}" fill="${W}" fill-opacity=".25"/>`;
+      g += `<path d="M${cx} ${cy}h${u - 3}" stroke="#7deaa0" stroke-width="2.4"/><path d="M${cx + u + 2} ${cy}l-6 -3.5v7Z" fill="#7deaa0"/>`;
+      g += `<path d="M${cx} ${cy}v${3 - u}" stroke="#ff8a8a" stroke-width="2.4"/><path d="M${cx} ${cy - u - 2}l-3.5 6h7Z" fill="#ff8a8a"/>`;
+      s += `<g class="cv-shear" style="transform-origin:${cx}px ${cy}px">${g}</g>`;
+      return svg(s);
+    },
     // 기본: 다이 격자
     grid() {
       let s = "";

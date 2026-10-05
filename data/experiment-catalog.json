@@ -21904,5 +21904,551 @@
     "bookId": "musicbook",
     "title": "연주 피치 슬라이더: 같은 선율, 다른 A",
     "link": "chapters/tuning.html#sim-tun-pitch"
+  },
+  {
+    "id": "mathbook/complex/sim-cx-multiply",
+    "bookId": "mathbook",
+    "title": "곱셈 = 회전 + 확대, 덧셈 = 평행이동",
+    "link": "chapters/complex.html#sim-cx-multiply"
+  },
+  {
+    "id": "mathbook/complex/sim-cx-euler",
+    "bookId": "mathbook",
+    "title": "\\((1 + i\\theta/n)^n\\) → \\(e^{i\\theta}\\): 작은 회전을 n번",
+    "link": "chapters/complex.html#sim-cx-euler"
+  },
+  {
+    "id": "mathbook/complex/sim-cx-phasor",
+    "bookId": "mathbook",
+    "title": "두 페이저의 합 = 두 사인파의 합",
+    "link": "chapters/complex.html#sim-cx-phasor"
+  },
+  {
+    "id": "mathbook/complex/sim-cx-rlc",
+    "bookId": "mathbook",
+    "title": "RLC 직렬 회로의 페이저 다이어그램과 공진",
+    "link": "chapters/complex.html#sim-cx-rlc"
+  },
+  {
+    "id": "mathbook/complex/sim-cx-power",
+    "bookId": "mathbook",
+    "title": "공장의 역률 보상: P, Q, S 삼각형",
+    "link": "chapters/complex.html#sim-cx-power"
+  },
+  {
+    "id": "mathbook/complex/sim-cx-film",
+    "bookId": "mathbook",
+    "title": "반사 방지 코팅 설계: 반사 페이저와 가시광 스펙트럼",
+    "link": "chapters/complex.html#sim-cx-film"
+  },
+  {
+    "id": "mathbook/complex/sim-cx-qam",
+    "bookId": "mathbook",
+    "title": "QAM 성상도와 잡음: 점을 촘촘히 할수록 생기는 일",
+    "link": "chapters/complex.html#sim-cx-qam"
+  },
+  {
+    "id": "mathbook/complex/sim-cx-roots",
+    "bookId": "mathbook",
+    "title": "s-평면의 근을 끌어 응답 바꾸기",
+    "link": "chapters/complex.html#sim-cx-roots"
+  },
+  {
+    "id": "mathbook/fourier/sim-ft-heat",
+    "bookId": "mathbook",
+    "title": "막대의 열: 모드마다 다른 속도로 식는다",
+    "link": "chapters/fourier.html#sim-ft-heat"
+  },
+  {
+    "id": "mathbook/fourier/sim-ft-epi",
+    "bookId": "mathbook",
+    "title": "원 N개로 파형 그리기 — 깁스 현상",
+    "link": "chapters/fourier.html#sim-ft-epi"
+  },
+  {
+    "id": "mathbook/fourier/sim-ft-wind",
+    "bookId": "mathbook",
+    "title": "감기 기계: 질량중심이 튀어나오는 주파수 찾기",
+    "link": "chapters/fourier.html#sim-ft-wind"
+  },
+  {
+    "id": "mathbook/fourier/sim-ft-spec",
+    "bookId": "mathbook",
+    "title": "시간과 주파수를 동시에 보기",
+    "link": "chapters/fourier.html#sim-ft-spec"
+  },
+  {
+    "id": "mathbook/fourier/sim-ft-unc",
+    "bookId": "mathbook",
+    "title": "짧은 소리 ↔ 넓은 스펙트럼",
+    "link": "chapters/fourier.html#sim-ft-unc"
+  },
+  {
+    "id": "mathbook/fourier/sim-ft-conv",
+    "bookId": "mathbook",
+    "title": "필터 = 스펙트럼에 H를 곱하기",
+    "link": "chapters/fourier.html#sim-ft-conv"
+  },
+  {
+    "id": "mathbook/fourier/sim-ft-2d",
+    "bookId": "mathbook",
+    "title": "스펙트럼에 구멍 뚫기: 저역·고역 필터",
+    "link": "chapters/fourier.html#sim-ft-2d"
+  },
+  {
+    "id": "mathbook/fourier/sim-ft-psf",
+    "bookId": "mathbook",
+    "title": "조리개 모양 → PSF → MTF (2D FFT로 계산)",
+    "link": "chapters/fourier.html#sim-ft-psf"
+  },
+  {
+    "id": "mathbook/fourier/sim-ft-jpeg",
+    "bookId": "mathbook",
+    "title": "JPEG 품질 슬라이더: 8×8 DCT 양자화",
+    "link": "chapters/fourier.html#sim-ft-jpeg"
+  },
+  {
+    "id": "mathbook/fourier/sim-ft-kspace",
+    "bookId": "mathbook",
+    "title": "k-공간 채우기: 스캔하는 동안 영상이 나타난다",
+    "link": "chapters/fourier.html#sim-ft-kspace"
+  },
+  {
+    "id": "mathbook/geometry/sim-geo-euler",
+    "bookId": "mathbook",
+    "title": "V − E + F는 무엇을 세는가",
+    "link": "chapters/geometry.html#sim-geo-euler"
+  },
+  {
+    "id": "mathbook/geometry/sim-geo-curv",
+    "bookId": "mathbook",
+    "title": "접촉원을 끌고 다니며 곡률 읽기",
+    "link": "chapters/geometry.html#sim-geo-curv"
+  },
+  {
+    "id": "mathbook/geometry/sim-geo-sphere",
+    "bookId": "mathbook",
+    "title": "구 위의 삼각형: 내각의 합은 180°가 아니다",
+    "link": "chapters/geometry.html#sim-geo-sphere"
+  },
+  {
+    "id": "mathbook/geometry/sim-geo-tissot",
+    "bookId": "mathbook",
+    "title": "티소 지시원: 같은 원이 지도마다 어떻게 변하나",
+    "link": "chapters/geometry.html#sim-geo-tissot"
+  },
+  {
+    "id": "mathbook/geometry/sim-geo-homo",
+    "bookId": "mathbook",
+    "title": "문서 스캐너: 네 꼭짓점으로 원근 펴기",
+    "link": "chapters/geometry.html#sim-geo-homo"
+  },
+  {
+    "id": "mathbook/geometry/sim-geo-ray",
+    "bookId": "mathbook",
+    "title": "스넬 법칙으로 광선 추적: 구면수차와 비구면 보정",
+    "link": "chapters/geometry.html#sim-geo-ray"
+  },
+  {
+    "id": "mathbook/geometry/sim-geo-dist",
+    "bookId": "mathbook",
+    "title": "직접 해 보는 렌즈 왜곡 보정",
+    "link": "chapters/geometry.html#sim-geo-dist"
+  },
+  {
+    "id": "mathbook/glossary/sim-gl-map",
+    "bookId": "mathbook",
+    "title": "책별 수학 도구 지도",
+    "link": "chapters/glossary.html#sim-gl-map"
+  },
+  {
+    "id": "mathbook/information/sim-inf-guess",
+    "bookId": "mathbook",
+    "title": "숫자 맞히기: 질문 하나는 몇 비트인가",
+    "link": "chapters/information.html#sim-inf-guess"
+  },
+  {
+    "id": "mathbook/information/sim-inf-entropy",
+    "bookId": "mathbook",
+    "title": "확률 막대를 끌어 엔트로피 바꾸기",
+    "link": "chapters/information.html#sim-inf-entropy"
+  },
+  {
+    "id": "mathbook/information/sim-inf-huffman",
+    "bookId": "mathbook",
+    "title": "허프만 트리 만들기",
+    "link": "chapters/information.html#sim-inf-huffman"
+  },
+  {
+    "id": "mathbook/information/sim-inf-bsc",
+    "bookId": "mathbook",
+    "title": "잡음 채널로 그림 보내기: 반복 부호의 비용",
+    "link": "chapters/information.html#sim-inf-bsc"
+  },
+  {
+    "id": "mathbook/information/sim-inf-hamming",
+    "bookId": "mathbook",
+    "title": "해밍(7,4): 비트를 뒤집으면 신드롬이 위치를 가리킨다",
+    "link": "chapters/information.html#sim-inf-hamming"
+  },
+  {
+    "id": "mathbook/information/sim-inf-capacity",
+    "bookId": "mathbook",
+    "title": "대역폭과 SNR로 채널 용량 재기",
+    "link": "chapters/information.html#sim-inf-capacity"
+  },
+  {
+    "id": "mathbook/information/sim-inf-rs",
+    "bookId": "mathbook",
+    "title": "다항식 부호: 점을 지우고 곡선 되살리기",
+    "link": "chapters/information.html#sim-inf-rs"
+  },
+  {
+    "id": "mathbook/limits/sim-lim-zeno",
+    "bookId": "mathbook",
+    "title": "정사각형을 반씩 채우기",
+    "link": "chapters/limits.html#sim-lim-zeno"
+  },
+  {
+    "id": "mathbook/limits/sim-lim-overhang",
+    "bookId": "mathbook",
+    "title": "조화 쌓기와 두 급수의 경주",
+    "link": "chapters/limits.html#sim-lim-overhang"
+  },
+  {
+    "id": "mathbook/limits/sim-lim-epsdelta",
+    "bookId": "mathbook",
+    "title": "ε 띠를 좁혀라, δ 띠가 답한다",
+    "link": "chapters/limits.html#sim-lim-epsdelta"
+  },
+  {
+    "id": "mathbook/limits/sim-lim-secant",
+    "bookId": "mathbook",
+    "title": "h → 0: 할선을 접선으로 접기",
+    "link": "chapters/limits.html#sim-lim-secant"
+  },
+  {
+    "id": "mathbook/limits/sim-lim-riemann",
+    "bookId": "mathbook",
+    "title": "리만 합 네 가지와 오차 차수",
+    "link": "chapters/limits.html#sim-lim-riemann"
+  },
+  {
+    "id": "mathbook/limits/sim-lim-ebase",
+    "bookId": "mathbook",
+    "title": "밑 b를 돌려 기울기 곡선과 겹쳐라",
+    "link": "chapters/limits.html#sim-lim-ebase"
+  },
+  {
+    "id": "mathbook/limits/sim-lim-taylor",
+    "bookId": "mathbook",
+    "title": "테일러 다항식 실험실",
+    "link": "chapters/limits.html#sim-lim-taylor"
+  },
+  {
+    "id": "mathbook/linalg/sim-la-grid",
+    "bookId": "mathbook",
+    "title": "격자를 휘는 기계: 2×2 행렬",
+    "link": "chapters/linalg.html#sim-la-grid"
+  },
+  {
+    "id": "mathbook/linalg/sim-la-compose",
+    "bookId": "mathbook",
+    "title": "순서를 바꾸면 결과가 바뀐다: BA vs AB",
+    "link": "chapters/linalg.html#sim-la-compose"
+  },
+  {
+    "id": "mathbook/linalg/sim-la-solve",
+    "bookId": "mathbook",
+    "title": "열 그림으로 연립방정식 풀기와 조건수",
+    "link": "chapters/linalg.html#sim-la-solve"
+  },
+  {
+    "id": "mathbook/linalg/sim-la-ccm",
+    "bookId": "mathbook",
+    "title": "색 보정 행렬: 색을 살리면 잡음도 자란다",
+    "link": "chapters/linalg.html#sim-la-ccm"
+  },
+  {
+    "id": "mathbook/linalg/sim-la-eig",
+    "bookId": "mathbook",
+    "title": "고유벡터를 손으로 찾기",
+    "link": "chapters/linalg.html#sim-la-eig"
+  },
+  {
+    "id": "mathbook/linalg/sim-la-modes",
+    "bookId": "mathbook",
+    "title": "3층 건물의 고유진동수와 모드 형상",
+    "link": "chapters/linalg.html#sim-la-modes"
+  },
+  {
+    "id": "mathbook/linalg/sim-la-svd",
+    "bookId": "mathbook",
+    "title": "단위원 → 타원: SVD 세 단계 분해",
+    "link": "chapters/linalg.html#sim-la-svd"
+  },
+  {
+    "id": "mathbook/linalg/sim-la-lowrank",
+    "bookId": "mathbook",
+    "title": "SVD 이미지 압축: rank-k 근사",
+    "link": "chapters/linalg.html#sim-la-lowrank"
+  },
+  {
+    "id": "mathbook/numerics/sim-num-bits",
+    "bookId": "mathbook",
+    "title": "배정밀도 해부기: 저장된 값은 정확히 얼마인가",
+    "link": "chapters/numerics.html#sim-num-bits"
+  },
+  {
+    "id": "mathbook/numerics/sim-num-minifloat",
+    "bookId": "mathbook",
+    "title": "미니플로트의 모든 수를 수직선에",
+    "link": "chapters/numerics.html#sim-num-minifloat"
+  },
+  {
+    "id": "mathbook/numerics/sim-num-patriot",
+    "bookId": "mathbook",
+    "title": "0.1초 시계의 누적 오차",
+    "link": "chapters/numerics.html#sim-num-patriot"
+  },
+  {
+    "id": "mathbook/numerics/sim-num-cancel",
+    "bookId": "mathbook",
+    "title": "순진한 식 vs 안정적인 식",
+    "link": "chapters/numerics.html#sim-num-cancel"
+  },
+  {
+    "id": "mathbook/numerics/sim-num-ushape",
+    "bookId": "mathbook",
+    "title": "미분 오차 vs 간격 h (로그–로그)",
+    "link": "chapters/numerics.html#sim-num-ushape"
+  },
+  {
+    "id": "mathbook/numerics/sim-num-wave",
+    "bookId": "mathbook",
+    "title": "1D 파동 방정식과 CFL 조건",
+    "link": "chapters/numerics.html#sim-num-wave"
+  },
+  {
+    "id": "mathbook/numerics/sim-num-fdtd",
+    "bookId": "mathbook",
+    "title": "1D FDTD: 유전체 판에 부딪히는 펄스",
+    "link": "chapters/numerics.html#sim-num-fdtd"
+  },
+  {
+    "id": "mathbook/numerics/sim-num-grating",
+    "bookId": "mathbook",
+    "title": "회절 차수의 방향",
+    "link": "chapters/numerics.html#sim-num-grating"
+  },
+  {
+    "id": "mathbook/numerics/sim-num-cond",
+    "bookId": "mathbook",
+    "title": "거의 평행한 두 직선의 교점",
+    "link": "chapters/numerics.html#sim-num-cond"
+  },
+  {
+    "id": "mathbook/ode/sim-ode-lens",
+    "bookId": "mathbook",
+    "title": "해석 렌즈: 같은 곡선에 이름표만 바꾸기",
+    "link": "chapters/ode.html#sim-ode-lens"
+  },
+  {
+    "id": "mathbook/ode/sim-ode-field",
+    "bookId": "mathbook",
+    "title": "기울기장 위에 해곡선 흘려 보내기",
+    "link": "chapters/ode.html#sim-ode-field"
+  },
+  {
+    "id": "mathbook/ode/sim-ode-euler",
+    "bookId": "mathbook",
+    "title": "오일러 vs RK4: 단계 크기 h와 오차·불안정",
+    "link": "chapters/ode.html#sim-ode-euler"
+  },
+  {
+    "id": "mathbook/ode/sim-ode-damping",
+    "bookId": "mathbook",
+    "title": "감쇠비 ζ와 특성근: 계단 응답 ↔ 복소평면",
+    "link": "chapters/ode.html#sim-ode-damping"
+  },
+  {
+    "id": "mathbook/ode/sim-ode-resonance",
+    "bookId": "mathbook",
+    "title": "주파수 응답 곡선과 공진의 성장",
+    "link": "chapters/ode.html#sim-ode-resonance"
+  },
+  {
+    "id": "mathbook/ode/sim-ode-sir",
+    "bookId": "mathbook",
+    "title": "SIR 모델: R₀, 회복 기간, 접종률",
+    "link": "chapters/ode.html#sim-ode-sir"
+  },
+  {
+    "id": "mathbook/ode/sim-ode-heat",
+    "bookId": "mathbook",
+    "title": "1D 열확산: 핫스팟과 도펀트가 퍼지는 모습",
+    "link": "chapters/ode.html#sim-ode-heat"
+  },
+  {
+    "id": "mathbook/optimization/sim-opt-descent",
+    "bookId": "mathbook",
+    "title": "손실 지형 위의 경사 하강",
+    "link": "chapters/optimization.html#sim-opt-descent"
+  },
+  {
+    "id": "mathbook/optimization/sim-opt-lr",
+    "bookId": "mathbook",
+    "title": "포물선 위의 걸음: 학습률의 세 영역",
+    "link": "chapters/optimization.html#sim-opt-lr"
+  },
+  {
+    "id": "mathbook/optimization/sim-opt-race",
+    "bookId": "mathbook",
+    "title": "경사 하강 vs 모멘텀 vs Adam",
+    "link": "chapters/optimization.html#sim-opt-race"
+  },
+  {
+    "id": "mathbook/optimization/sim-opt-lsq",
+    "bookId": "mathbook",
+    "title": "잔차 제곱의 넓이를 최소로",
+    "link": "chapters/optimization.html#sim-opt-lsq"
+  },
+  {
+    "id": "mathbook/optimization/sim-opt-lagrange",
+    "bookId": "mathbook",
+    "title": "제약 곡선 위의 최적점과 그림자 가격",
+    "link": "chapters/optimization.html#sim-opt-lagrange"
+  },
+  {
+    "id": "mathbook/optimization/sim-opt-lp",
+    "bookId": "mathbook",
+    "title": "생산 계획: 이익 직선을 밀어 꼭짓점 찾기",
+    "link": "chapters/optimization.html#sim-opt-lp"
+  },
+  {
+    "id": "mathbook/probability/sim-pr-photons",
+    "bookId": "mathbook",
+    "title": "픽셀 격자에 광자 떨어뜨리기",
+    "link": "chapters/probability.html#sim-pr-photons"
+  },
+  {
+    "id": "mathbook/probability/sim-pr-shot",
+    "bookId": "mathbook",
+    "title": "샷 노이즈 사진과 멀티프레임 평균",
+    "link": "chapters/probability.html#sim-pr-shot"
+  },
+  {
+    "id": "mathbook/probability/sim-pr-clt",
+    "bookId": "mathbook",
+    "title": "요인 n개를 더하면",
+    "link": "chapters/probability.html#sim-pr-clt"
+  },
+  {
+    "id": "mathbook/probability/sim-pr-cpk",
+    "bookId": "mathbook",
+    "title": "선폭 분포와 규격: Cpk와 ppm",
+    "link": "chapters/probability.html#sim-pr-cpk"
+  },
+  {
+    "id": "mathbook/probability/sim-pr-tail",
+    "bookId": "mathbook",
+    "title": "소자 N개 칩의 수율과 설계 마진",
+    "link": "chapters/probability.html#sim-pr-tail"
+  },
+  {
+    "id": "mathbook/probability/sim-pr-bayes",
+    "bookId": "mathbook",
+    "title": "칩 10,000개로 보는 베이즈 정리",
+    "link": "chapters/probability.html#sim-pr-bayes"
+  },
+  {
+    "id": "mathbook/probability/sim-pr-yield",
+    "bookId": "mathbook",
+    "title": "웨이퍼 맵: 결함 밀도와 다이 크기",
+    "link": "chapters/probability.html#sim-pr-yield"
+  },
+  {
+    "id": "mathbook/sampling/sim-smp-wheel",
+    "bookId": "mathbook",
+    "title": "수레바퀴 효과: 회전 속도 × 프레임률",
+    "link": "chapters/sampling.html#sim-smp-wheel"
+  },
+  {
+    "id": "mathbook/sampling/sim-smp-alias",
+    "bookId": "mathbook",
+    "title": "사인파 샘플링과 에일리어스 (소리 포함)",
+    "link": "chapters/sampling.html#sim-smp-alias"
+  },
+  {
+    "id": "mathbook/sampling/sim-smp-sinc",
+    "bookId": "mathbook",
+    "title": "샘플을 끌어서 sinc 재구성 보기",
+    "link": "chapters/sampling.html#sim-smp-sinc"
+  },
+  {
+    "id": "mathbook/sampling/sim-smp-aaf",
+    "bookId": "mathbook",
+    "title": "안티앨리어싱 필터 설계: 얼마나 가팔라야 하나",
+    "link": "chapters/sampling.html#sim-smp-aaf"
+  },
+  {
+    "id": "mathbook/sampling/sim-smp-moire",
+    "bookId": "mathbook",
+    "title": "모아레: 줄무늬 × 픽셀 격자, 그리고 두 격자 겹치기",
+    "link": "chapters/sampling.html#sim-smp-moire"
+  },
+  {
+    "id": "mathbook/sampling/sim-smp-bayer",
+    "bookId": "mathbook",
+    "title": "베이어 샘플링과 디모자이킹의 위색",
+    "link": "chapters/sampling.html#sim-smp-bayer"
+  },
+  {
+    "id": "mathbook/sampling/sim-smp-quant",
+    "bookId": "mathbook",
+    "title": "양자화 비트 수, 잡음 바닥, 디더",
+    "link": "chapters/sampling.html#sim-smp-quant"
+  },
+  {
+    "id": "mathbook/symmetry/sim-sym-d4",
+    "bookId": "mathbook",
+    "title": "정사각형의 대칭 8개와 케일리 표",
+    "link": "chapters/symmetry.html#sim-sym-d4"
+  },
+  {
+    "id": "mathbook/symmetry/sim-sym-fifteen",
+    "bookId": "mathbook",
+    "title": "15 퍼즐과 패리티 계기판",
+    "link": "chapters/symmetry.html#sim-sym-fifteen"
+  },
+  {
+    "id": "mathbook/symmetry/sim-sym-comm",
+    "bookId": "mathbook",
+    "title": "교환자 [A, B]는 조금만 바꾼다",
+    "link": "chapters/symmetry.html#sim-sym-comm"
+  },
+  {
+    "id": "mathbook/symmetry/sim-sym-wallpaper",
+    "bookId": "mathbook",
+    "title": "17가지 벽지군 그리기판",
+    "link": "chapters/symmetry.html#sim-sym-wallpaper"
+  },
+  {
+    "id": "mathbook/symmetry/sim-sym-restrict",
+    "bookId": "mathbook",
+    "title": "정다각형 채우기 vs 격자 논증",
+    "link": "chapters/symmetry.html#sim-sym-restrict"
+  },
+  {
+    "id": "mathbook/symmetry/sim-sym-miller",
+    "bookId": "mathbook",
+    "title": "밀러 지수 평면 단면 (드래그로 회전)",
+    "link": "chapters/symmetry.html#sim-sym-miller"
+  },
+  {
+    "id": "mathbook/symmetry/sim-sym-koh",
+    "bookId": "mathbook",
+    "title": "KOH 이방성 식각 단면",
+    "link": "chapters/symmetry.html#sim-sym-koh"
   }
 ]
