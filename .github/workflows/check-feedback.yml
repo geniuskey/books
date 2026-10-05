@@ -1,0 +1,20 @@
+name: Check feedback API
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'worker/**'
+      - 'js/feedback.js'
+      - 'data/books.json'
+      - '.github/workflows/check-feedback.yml'
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --test worker/test/*.test.js
+      - run: node --check js/feedback.js

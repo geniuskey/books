@@ -12,13 +12,53 @@
 | `roadmap.html` | 로드맵. 전체·분야별 진행률, 다음 차례와 후속 후보, 만들고 싶은 시뮬레이터. 아이디어는 진행률에서 제외 |
 | `simulators.html` | 출간된 책의 전체 실험 검색. 일부 실험의 학습 질문·한영 동의어, 분야·교과서·난이도 열의 복수 선택 필터와 공유 가능한 검색 URL |
 | `paths.html` | 출간된 전권을 안내하는 질문별 읽기 경로. 시작 책·읽을 주제·다음 책으로 넘어가는 이유를 안내하고, 세 가지 짧은 실험 경로 제공 |
-| `feedback.html` | 전권 공통 독자 의견 창구. 오류 제보와 개선 건의·새 책 요청을 한곳에서 받음 |
+| `feedback.html` | 전권 공통 독자 의견 창구. 오류 제보·건의·저자 응원을 로그인 없이 받고, GitHub 접수도 제공 |
 
 ## 독자 의견 접수
 
-모든 책의 상단 아이콘과 바닥글은 `feedback.html?book=<책 id>&page=<현재 URL>`로 연결됩니다. 포털은 책 ID와 URL의 도메인을 확인한 뒤 중앙 `geniuskey/books` 이슈 양식의 책·페이지 입력란을 미리 채웁니다. 양식은 `.github/ISSUE_TEMPLATE/`에 있으며 두 종류(오류 제보, 건의·요청)를 사용합니다. GitHub 접수에는 로그인이 필요하고 내용은 공개됩니다. 개별 답변은 약속하지 않습니다.
+모든 책의 상단 아이콘과 바닥글은 `feedback.html?book=<책 id>&page=<현재 URL>`로 연결됩니다. 로그인 없는 폼에서 오류 제보·의견·저자 응원을 받고, 닉네임은 선택 사항입니다. 글은 D1에 저장되며 저자만 확인합니다. 공개 조회 API는 없습니다. 책 ID와 URL의 출처는 브라우저와 Worker 양쪽에서 검증합니다. 전송에 실패하면 입력을 유지하고 같은 글의 재전송에는 같은 접수 ID를 사용합니다.
 
-로그인 없이 제출할 외부 폼을 연결할 때는 `js/feedback.js`의 유형별 목적지와 `feedback.html`의 안내 문구를 함께 바꾸고, 책·페이지·유형이 제출물에 남는지 실제 응답으로 확인합니다. 독자에게 공개될 수 있는 답변은 해당 이슈에서 처리하고, 수정 완료 시 관련 변경의 링크를 남깁니다.
+기존 GitHub 창구도 유지합니다. 중앙 `geniuskey/books`의 `.github/ISSUE_TEMPLATE/` 양식에 책·페이지 입력란을 미리 채웁니다. GitHub 접수는 로그인과 공개 글 작성이 필요합니다. 개별 답변은 약속하지 않습니다.
+
+### Cloudflare D1 접수 API
+
+정적 사이트는 GitHub Pages에 두고, `worker/`의 Cloudflare Worker가 `POST /api/feedback`을 처리합니다. D1 바인딩·마이그레이션은 [Cloudflare 문서](https://developers.cloudflare.com/d1/reference/migrations/), 연속 제출 제한은 [Rate Limiting 문서](https://developers.cloudflare.com/workers/runtime-apis/bindings/rate-limit/)를 따릅니다. 제한은 Cloudflare 위치별로 IP당 5회/분, 전체 100회/분이며 완전한 봇 차단을 보장하지 않습니다. IP는 접수 DB에 저장하지 않습니다. SQL 매개변수 바인딩, 요청 크기·필드 길이 제한, 허용 출처 검사와 숨겨진 스팸 입력란을 사용합니다.
+
+초기 설정 (Node.js 24 이상 권장):
+
+```bash
+cd worker
+npm ci
+npx wrangler login
+npx wrangler d1 create books-feedback
+```
+
+현재 설정은 운영 D1 `books-feedback`에 연결되어 있습니다. 다른 계정에서 처음 설정할 때는 생성 결과의 `database_id`를 `worker/wrangler.jsonc`에 넣습니다. 이미 같은 이름의 DB가 있으면 `npx wrangler d1 list`로 확인하고 해당 ID를 사용하세요. 계정 내 다른 Rate Limiting 바인딩과 namespace ID가 겹치지 않는지도 확인합니다.
+
+```bash
+npm run migrate:remote
+npm run deploy
+```
+
+배포 출력의 Worker URL에 `/api/feedback`을 붙여 `data/feedback-config.json`의 `endpoint`를 채웁니다. 사이트 변경을 배포하기 전에 실제 접수와 D1 저장을 확인하세요. endpoint가 비어 있거나 설정을 불러오지 못하면 폼은 전송을 막고 GitHub 창구를 안내합니다. API는 `https://books.euiyun.com`에서의 요청만 허용합니다. 토큰·비밀 키를 프런트엔드나 저장소에 넣지 않습니다.
+
+로컬 개발:
+
+```bash
+cd worker
+npm test
+npm run migrate:local
+npm run dev -- --var ALLOWED_ORIGINS:http://localhost:8000
+```
+
+정적 사이트는 별도 터미널에서 `python3 -m http.server 8000`으로 실행합니다. 로컬에서만 endpoint를 `http://localhost:8787/api/feedback`으로 바꿔 사용하고 배포 전 실제 Worker 주소로 복원합니다. 테스트는 저장·중복 방지·필드/출처 검증·요청 크기·연속 제출 제한·DB 장애를 확인합니다.
+
+저자는 Cloudflare 대시보드의 D1 `books-feedback`에서 `feedback` 테이블을 확인하거나 다음 명령을 사용합니다. 조회 결과에는 독자가 남긴 비공개 글이 포함되므로 공개 이슈 등에 그대로 옮기지 않습니다.
+
+```bash
+cd worker
+npx wrangler d1 execute DB --remote --command "SELECT type, nickname, message, book_id, page_url, created_at FROM feedback ORDER BY created_at DESC LIMIT 50"
+```
 
 ## 실행
 빌드 과정이 없는 정적 사이트입니다. `fetch`로 JSON을 읽으므로 로컬에서는 서버로 띄웁니다.

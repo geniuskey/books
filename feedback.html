@@ -29,12 +29,27 @@
     <div class="wrap">
       <div class="eyebrow">Feedback</div>
       <h1>독자 의견</h1>
-      <p class="lead">읽다가 발견한 오류와 이해하기 어려웠던 설명, 개선 아이디어를 알려 주세요. 새로 읽고 싶은 책도 요청할 수 있습니다.</p>
+      <p class="lead">발견한 오류, 읽고 싶은 주제, 저자에게 전하고 싶은 응원을 남겨 주세요. 로그인 없이 보낼 수 있습니다.</p>
     </div>
   </section>
   <section class="block feedback-section">
     <div class="wrap">
       <div class="feedback-context" id="feedback-context" hidden></div>
+      <form id="feedback-form" class="feedback-form">
+        <h2>저자에게 한마디</h2>
+        <p class="feedback-note">글은 저자만 확인하며 사이트에 공개되지 않습니다. 개인 정보는 적지 마세요. 개별 답변은 어려울 수 있습니다.</p>
+        <div class="feedback-form-row">
+          <label>글 종류<select name="type" required><option value="request">의견·건의</option><option value="error">오류 제보</option><option value="cheer">저자 응원</option></select></label>
+          <label>닉네임 <span>(선택)</span><input name="nickname" maxlength="40" autocomplete="nickname" placeholder="비워 두면 익명으로 접수됩니다"></label>
+        </div>
+        <label>관련 책 <span>(선택)</span><select name="bookId" id="feedback-book"><option value="">시리즈 전체 / 선택하지 않음</option></select></label>
+        <label>내용<textarea name="message" required maxlength="3000" rows="7" placeholder="어떤 점이 좋았나요? 어려웠던 설명이나 개선 아이디어도 편하게 남겨 주세요." aria-describedby="feedback-count"></textarea></label>
+        <div class="feedback-form-foot"><span id="feedback-count">0 / 3,000자</span><button id="feedback-submit" type="submit" disabled>보내기</button></div>
+        <div class="feedback-honeypot" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+        <p id="feedback-status" class="feedback-status" role="status" aria-live="polite">접수 창구를 연결하는 중…</p>
+      </form>
+      <noscript><p>로그인 없는 접수에는 JavaScript가 필요합니다. 아래 GitHub 창구를 이용할 수도 있습니다.</p></noscript>
+      <h2 class="feedback-alternative">GitHub으로 남기기</h2>
       <div class="feedback-grid">
         <article class="feedback-card" id="error">
           <span class="feedback-step">01 · Corrections</span>
@@ -49,7 +64,7 @@
           <a data-feedback-type="request" href="https://github.com/geniuskey/books/issues/new">건의하기 →</a>
         </article>
       </div>
-      <p class="feedback-note">보내주신 의견은 책 개선에 참고하며 개별 답변은 어려울 수 있습니다. 접수에는 GitHub 로그인이 필요하고 글은 공개되므로 개인 정보는 적지 마세요.</p>
+      <p class="feedback-note">위 GitHub 창구는 로그인이 필요하며 글이 공개됩니다. 로그인 없이 보내려면 상단 작성 폼을 이용해 주세요.</p>
     </div>
   </section>
 </main>

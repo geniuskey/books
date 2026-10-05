@@ -952,6 +952,22 @@ footer p { margin: 0; }
 .feedback-card p { margin: 0 0 20px; color: var(--text-dim); font-size: 15px; }
 .feedback-card a { margin-top: auto; font-weight: 700; }
 .feedback-note { margin: 18px 0 0; color: var(--text-dim); font-size: 13px; }
+.feedback-form { max-width: 760px; margin: 0 auto 40px; padding: clamp(20px, 4vw, 32px); border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-elev); }
+.feedback-form h2 { margin: 0; font-size: 24px; }
+.feedback-form .feedback-note { margin: 10px 0 24px; }
+.feedback-form label { display: block; margin-bottom: 18px; font-weight: 600; }
+.feedback-form label span { color: var(--text-dim); font-weight: 400; font-size: 13px; }
+.feedback-form input, .feedback-form select, .feedback-form textarea { display: block; width: 100%; margin-top: 7px; padding: 12px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg); color: var(--text); font: inherit; font-weight: 400; font-size: 16px; }
+.feedback-form textarea { resize: vertical; min-height: 170px; }
+.feedback-form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 0 20px; }
+.feedback-form-foot { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.feedback-form-foot span { color: var(--text-dim); font-size: 13px; }
+.feedback-form button { padding: 12px 26px; border: 0; border-radius: var(--radius-sm); background: var(--accent); color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+.feedback-form button:disabled { opacity: .5; cursor: default; }
+.feedback-status { margin: 16px 0 0; min-height: 1.5em; font-size: 14px; }
+.feedback-status[data-state="error"] { color: var(--text); font-weight: 600; }
+.feedback-honeypot { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.feedback-alternative { font-size: 20px; margin: 0 0 18px; }
 
 /* 실험 탐색과 문제별 학습 경로 */
 [hidden] { display: none !important; }

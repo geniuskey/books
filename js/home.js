@@ -165,7 +165,7 @@ EB.start("home", (d) => {
       animate(".book-opening-shade", [{ opacity: 0 }, { opacity: 1 }], { duration: 250 });
       animate(".book-opening-caption", [{ opacity: 0 }, { opacity: 1 }], { delay: 150, duration: 250 });
       // Hold the open spread long enough to glimpse the featured experiment.
-      timer = setTimeout(openDestination, 2300);
+      timer = setTimeout(openDestination, 2000);
     } catch (error) {
       openDestination();
     }
@@ -296,6 +296,7 @@ EB.start("home", (d) => {
     $("#author-body").innerHTML = `<h2>${esc(au.title)}</h2>
       ${au.paragraphs.map((p) => `<p>${esc(p)}</p>`).join("")}
       <p class="closing">${esc(au.closing)}</p>
+      <p><a href="feedback.html?type=cheer">저자에게 응원 한마디 남기기 →</a></p>
       <div class="sign"><span class="avatar" aria-hidden="true">${esc(au.name.slice(0, 1).toUpperCase())}</span><div><b>${esc(au.name)}</b><small>${esc(au.role)}</small></div>${au.contact ? `<a href="${esc(au.contact)}">GitHub →</a>` : ""}</div>`;
   } else {
     $("#author").hidden = true;
