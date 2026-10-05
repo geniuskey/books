@@ -348,6 +348,23 @@
       });
       return svg(s);
     },
+    // 네트워크: 라우터 그물망의 링크를 따라 패킷이 흐른다
+    network() {
+      const N = [[28, 34], [30, 98], [74, 64], [116, 26], [118, 104], [160, 62], [186, 24], [184, 106]];
+      const L = [[0, 2], [1, 2], [2, 3], [2, 4], [3, 5], [4, 5], [3, 4], [5, 6], [5, 7], [0, 3], [1, 4]];
+      let s = "";
+      L.forEach(([a, b], k) => {
+        const d = `M${N[a][0]} ${N[a][1]}L${N[b][0]} ${N[b][1]}`;
+        s += `<path d="${d}" stroke="${W}" stroke-opacity=".3" stroke-width="1.4"/>`;
+        if (k % 2 === 0) s += `<path class="cv-flow" style="animation-delay:-${(k * 0.15).toFixed(2)}s" d="${d}" fill="none" stroke="${W}" stroke-width="2.2" stroke-dasharray="4 12" stroke-linecap="round"/>`;
+      });
+      N.forEach(([x, y], k) => {
+        s += k === 2 || k === 5
+          ? `<rect x="${x - 9}" y="${y - 7}" width="18" height="14" rx="3" fill="${W}" fill-opacity=".85"/><path d="M${x - 5} ${y}H${x + 5}M${x} ${y - 4}V${y + 4}" stroke="#000" stroke-opacity=".35" stroke-width="1.4"/>`
+          : `<circle cx="${x}" cy="${y}" r="5.5" fill="${W}" fill-opacity=".3" stroke="${W}" stroke-width="1.4"/>`;
+      });
+      return svg(s);
+    },
     // 기본: 다이 격자
     grid() {
       let s = "";

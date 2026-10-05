@@ -10788,6 +10788,810 @@
     "link": "chapters/web.html#sim-html"
   },
   {
+    "id": "networkbook/apps/sim-dns",
+    "bookId": "networkbook",
+    "title": "DNS 조회의 여행: 캐시와 TTL",
+    "link": "chapters/apps.html#sim-dns"
+  },
+  {
+    "id": "networkbook/apps/sim-wf",
+    "bookId": "networkbook",
+    "title": "페이지 로딩 폭포수: HTTP/1.1 · HTTP/2 · HTTP/3",
+    "link": "chapters/apps.html#sim-wf"
+  },
+  {
+    "id": "networkbook/apps/sim-cdn",
+    "bookId": "networkbook",
+    "title": "캐시 적중률과 평균 응답 시간",
+    "link": "chapters/apps.html#sim-cdn"
+  },
+  {
+    "id": "networkbook/apps/sim-abr",
+    "bookId": "networkbook",
+    "title": "적응형 비트레이트: 대역폭이 흔들릴 때 플레이어는",
+    "link": "chapters/apps.html#sim-abr"
+  },
+  {
+    "id": "networkbook/apps/sim-p2p",
+    "bookId": "networkbook",
+    "title": "파일 하나를 N명에게: 클라이언트-서버 vs P2P",
+    "link": "chapters/apps.html#sim-p2p"
+  },
+  {
+    "id": "networkbook/cellular/sim-hex",
+    "bookId": "networkbook",
+    "title": "육각 셀과 주파수 재사용",
+    "link": "chapters/cellular.html#sim-hex"
+  },
+  {
+    "id": "networkbook/cellular/sim-ho",
+    "bookId": "networkbook",
+    "title": "두 기지국 사이를 지나가기: 핑퐁 vs 끊김",
+    "link": "chapters/cellular.html#sim-ho"
+  },
+  {
+    "id": "networkbook/cellular/sim-num",
+    "bookId": "networkbook",
+    "title": "뉴멀로지를 바꾸면 바둑판 모양이 바뀐다",
+    "link": "chapters/cellular.html#sim-num"
+  },
+  {
+    "id": "networkbook/cellular/sim-band",
+    "bookId": "networkbook",
+    "title": "대역별 셀 반경과 용량",
+    "link": "chapters/cellular.html#sim-band"
+  },
+  {
+    "id": "networkbook/cellular/sim-tdd",
+    "bookId": "networkbook",
+    "title": "TDD 슬롯 패턴과 FDD 비교",
+    "link": "chapters/cellular.html#sim-tdd"
+  },
+  {
+    "id": "networkbook/cloud/sim-vpc",
+    "bookId": "networkbook",
+    "title": "VPC 설계와 도달성 점검",
+    "link": "chapters/cloud.html#sim-vpc"
+  },
+  {
+    "id": "networkbook/cloud/sim-vx",
+    "bookId": "networkbook",
+    "title": "오버레이 오버헤드와 MTU",
+    "link": "chapters/cloud.html#sim-vx"
+  },
+  {
+    "id": "networkbook/cloud/sim-lb",
+    "bookId": "networkbook",
+    "title": "로드 밸런서: 알고리즘, 느린 서버, 장애",
+    "link": "chapters/cloud.html#sim-lb"
+  },
+  {
+    "id": "networkbook/cloud/sim-ch",
+    "bookId": "networkbook",
+    "title": "해시 링: 노드를 더하고 빼면 키가 얼마나 옮겨 갈까",
+    "link": "chapters/cloud.html#sim-ch"
+  },
+  {
+    "id": "networkbook/cloud/sim-geo",
+    "bookId": "networkbook",
+    "title": "지도에서 사용자 위치를 눌러 보세요",
+    "link": "chapters/cloud.html#sim-geo"
+  },
+  {
+    "id": "networkbook/copper/sim-diff",
+    "bookId": "networkbook",
+    "title": "꼬임과 차동 수신: 잡음은 어디로 사라지나",
+    "link": "chapters/copper.html#sim-diff"
+  },
+  {
+    "id": "networkbook/copper/sim-att",
+    "bookId": "networkbook",
+    "title": "케이블 길이·주파수 → 받는 신호의 크기",
+    "link": "chapters/copper.html#sim-att"
+  },
+  {
+    "id": "networkbook/copper/sim-code",
+    "bookId": "networkbook",
+    "title": "라인 코딩 파형 그리기",
+    "link": "chapters/copper.html#sim-code"
+  },
+  {
+    "id": "networkbook/copper/sim-eye",
+    "bookId": "networkbook",
+    "title": "눈이 감기는 세 가지 이유",
+    "link": "chapters/copper.html#sim-eye"
+  },
+  {
+    "id": "networkbook/copper/sim-dsl",
+    "bookId": "networkbook",
+    "title": "전화국까지 거리 → DSL 내려받기 속도",
+    "link": "chapters/copper.html#sim-dsl"
+  },
+  {
+    "id": "networkbook/datacenter/sim-dc3",
+    "bookId": "networkbook",
+    "title": "데이터센터 한 구역 둘러보기 — 눌러서 설명 보기",
+    "link": "chapters/datacenter.html#sim-dc3"
+  },
+  {
+    "id": "networkbook/datacenter/sim-clos",
+    "bookId": "networkbook",
+    "title": "Clos 패브릭 계산기",
+    "link": "chapters/datacenter.html#sim-clos"
+  },
+  {
+    "id": "networkbook/datacenter/sim-ecmp",
+    "bookId": "networkbook",
+    "title": "ECMP 부하 분산: 스파인 링크별 부하",
+    "link": "chapters/datacenter.html#sim-ecmp"
+  },
+  {
+    "id": "networkbook/datacenter/sim-tail",
+    "bookId": "networkbook",
+    "title": "팬아웃과 테일 지연",
+    "link": "chapters/datacenter.html#sim-tail"
+  },
+  {
+    "id": "networkbook/datacenter/sim-ar",
+    "bookId": "networkbook",
+    "title": "링 올리듀스: 조각이 고리를 도는 모습",
+    "link": "chapters/datacenter.html#sim-ar"
+  },
+  {
+    "id": "networkbook/ethernet/sim-mac",
+    "bookId": "networkbook",
+    "title": "MAC 주소 해부기",
+    "link": "chapters/ethernet.html#sim-mac"
+  },
+  {
+    "id": "networkbook/ethernet/sim-csma",
+    "bookId": "networkbook",
+    "title": "공유 버스의 충돌과 처리율",
+    "link": "chapters/ethernet.html#sim-csma"
+  },
+  {
+    "id": "networkbook/ethernet/sim-sw",
+    "bookId": "networkbook",
+    "title": "스위치의 MAC 학습: 단계별로 따라가기",
+    "link": "chapters/ethernet.html#sim-sw"
+  },
+  {
+    "id": "networkbook/ethernet/sim-stp",
+    "bookId": "networkbook",
+    "title": "브로드캐스트 폭풍과 스패닝 트리 (연결선을 눌러 끊어 보세요)",
+    "link": "chapters/ethernet.html#sim-stp"
+  },
+  {
+    "id": "networkbook/ethernet/sim-eff",
+    "bookId": "networkbook",
+    "title": "프레임 크기와 효율, 초당 프레임 수",
+    "link": "chapters/ethernet.html#sim-eff"
+  },
+  {
+    "id": "networkbook/history/sim-morse",
+    "bookId": "networkbook",
+    "title": "모스 전신기: 메시지를 점과 선으로",
+    "link": "chapters/history.html#sim-morse"
+  },
+  {
+    "id": "networkbook/history/sim-mux",
+    "bookId": "networkbook",
+    "title": "회선 교환 대 패킷 교환: 몇 명이 같은 선을 쓸 수 있나",
+    "link": "chapters/history.html#sim-mux"
+  },
+  {
+    "id": "networkbook/history/sim-tl",
+    "bookId": "networkbook",
+    "title": "타임머신: 사진 한 장(5 MB)을 보내는 데 걸리는 시간",
+    "link": "chapters/history.html#sim-tl"
+  },
+  {
+    "id": "networkbook/history/sim-bw",
+    "bookId": "networkbook",
+    "title": "대역폭 성장 그래프 (로그 눈금)",
+    "link": "chapters/history.html#sim-bw"
+  },
+  {
+    "id": "networkbook/history/sim-space",
+    "bookId": "networkbook",
+    "title": "행성 간 지연: 빛으로도 몇 분, 몇 시간",
+    "link": "chapters/history.html#sim-space"
+  },
+  {
+    "id": "networkbook/intro/sim-conn",
+    "bookId": "networkbook",
+    "title": "모두 직접 잇기 vs 교환기 하나",
+    "link": "chapters/intro.html#sim-conn"
+  },
+  {
+    "id": "networkbook/intro/sim-topo",
+    "bookId": "networkbook",
+    "title": "토폴로지별 고장 견디기: 선이나 장비를 눌러 고장 내 보세요",
+    "link": "chapters/intro.html#sim-topo"
+  },
+  {
+    "id": "networkbook/intro/sim-trip",
+    "bookId": "networkbook",
+    "title": "요청 하나의 여행: 내 폰에서 서버까지",
+    "link": "chapters/intro.html#sim-trip"
+  },
+  {
+    "id": "networkbook/intro/sim-xfer",
+    "bookId": "networkbook",
+    "title": "전송 시간 계산기: 지연이 지배할까, 대역폭이 지배할까",
+    "link": "chapters/intro.html#sim-xfer"
+  },
+  {
+    "id": "networkbook/intro/sim-light",
+    "bookId": "networkbook",
+    "title": "서울에서 출발하는 빛의 왕복 시간",
+    "link": "chapters/intro.html#sim-light"
+  },
+  {
+    "id": "networkbook/ip/sim-calc",
+    "bookId": "networkbook",
+    "title": "서브넷 계산기: 프리픽스 길이를 움직여 보세요",
+    "link": "chapters/ip.html#sim-calc"
+  },
+  {
+    "id": "networkbook/ip/sim-split",
+    "bookId": "networkbook",
+    "title": "/24 하나를 서브넷으로 나누기",
+    "link": "chapters/ip.html#sim-split"
+  },
+  {
+    "id": "networkbook/ip/sim-dhcp",
+    "bookId": "networkbook",
+    "title": "DHCP DORA: 주소를 빌리는 네 번의 대화",
+    "link": "chapters/ip.html#sim-dhcp"
+  },
+  {
+    "id": "networkbook/ip/sim-arp",
+    "bookId": "networkbook",
+    "title": "ARP: “이 IP 쓰는 분 누구세요?”",
+    "link": "chapters/ip.html#sim-arp"
+  },
+  {
+    "id": "networkbook/ip/sim-nat",
+    "bookId": "networkbook",
+    "title": "공유기의 NAT 변환표 채우기",
+    "link": "chapters/ip.html#sim-nat"
+  },
+  {
+    "id": "networkbook/ip/sim-v6",
+    "bookId": "networkbook",
+    "title": "IPv6 전체 주소 ↔ 축약형 변환기",
+    "link": "chapters/ip.html#sim-v6"
+  },
+  {
+    "id": "networkbook/journey/sim-trip",
+    "bookId": "networkbook",
+    "title": "영상 패킷 하나가 지나가는 길",
+    "link": "chapters/journey.html#sim-trip"
+  },
+  {
+    "id": "networkbook/journey/sim-budget",
+    "bookId": "networkbook",
+    "title": "입-귀 지연 예산 계산기",
+    "link": "chapters/journey.html#sim-budget"
+  },
+  {
+    "id": "networkbook/journey/sim-jit",
+    "bookId": "networkbook",
+    "title": "지터 버퍼: 지연과 끊김의 줄다리기",
+    "link": "chapters/journey.html#sim-jit"
+  },
+  {
+    "id": "networkbook/journey/sim-adapt",
+    "bookId": "networkbook",
+    "title": "대역폭이 출렁일 때: 적응 vs 고집",
+    "link": "chapters/journey.html#sim-adapt"
+  },
+  {
+    "id": "networkbook/journey/sim-data",
+    "bookId": "networkbook",
+    "title": "영상 통화 데이터 계산기",
+    "link": "chapters/journey.html#sim-data"
+  },
+  {
+    "id": "networkbook/layers/sim-sort",
+    "bookId": "networkbook",
+    "title": "이 프로토콜은 몇 층에 살까?",
+    "link": "chapters/layers.html#sim-sort"
+  },
+  {
+    "id": "networkbook/layers/sim-enc",
+    "bookId": "networkbook",
+    "title": "캡슐화와 헤더 오버헤드",
+    "link": "chapters/layers.html#sim-enc"
+  },
+  {
+    "id": "networkbook/layers/sim-dx",
+    "bookId": "networkbook",
+    "title": "HTTP GET 프레임 해부 (이더넷 + IPv4 + TCP + HTTP)",
+    "link": "chapters/layers.html#sim-dx"
+  },
+  {
+    "id": "networkbook/layers/sim-mb",
+    "bookId": "networkbook",
+    "title": "중간 장비는 무엇을 읽고, 무엇을 고쳐 쓰나",
+    "link": "chapters/layers.html#sim-mb"
+  },
+  {
+    "id": "networkbook/modulation/sim-am",
+    "bookId": "networkbook",
+    "title": "AM과 FM 파형 만들기",
+    "link": "chapters/modulation.html#sim-am"
+  },
+  {
+    "id": "networkbook/modulation/sim-dig",
+    "bookId": "networkbook",
+    "title": "비트열 → ASK · FSK · PSK 파형",
+    "link": "chapters/modulation.html#sim-dig"
+  },
+  {
+    "id": "networkbook/modulation/sim-con",
+    "bookId": "networkbook",
+    "title": "성좌도 + 잡음: 오류율 재기",
+    "link": "chapters/modulation.html#sim-con"
+  },
+  {
+    "id": "networkbook/modulation/sim-amc",
+    "bookId": "networkbook",
+    "title": "거리에 따른 적응 변조",
+    "link": "chapters/modulation.html#sim-amc"
+  },
+  {
+    "id": "networkbook/modulation/sim-ofdm",
+    "bookId": "networkbook",
+    "title": "부반송파 스펙트럼의 직교성",
+    "link": "chapters/modulation.html#sim-ofdm"
+  },
+  {
+    "id": "networkbook/modulation/sim-sch",
+    "bookId": "networkbook",
+    "title": "OFDMA 스케줄러: 시간 × 주파수 격자",
+    "link": "chapters/modulation.html#sim-sch"
+  },
+  {
+    "id": "networkbook/modulation/sim-bf",
+    "bookId": "networkbook",
+    "title": "배열 안테나 빔포밍",
+    "link": "chapters/modulation.html#sim-bf"
+  },
+  {
+    "id": "networkbook/modulation/sim-tp",
+    "bookId": "networkbook",
+    "title": "처리율 계산기",
+    "link": "chapters/modulation.html#sim-tp"
+  },
+  {
+    "id": "networkbook/netchips/sim-sw",
+    "bookId": "networkbook",
+    "title": "스위치 분해 모형",
+    "link": "chapters/netchips.html#sim-sw"
+  },
+  {
+    "id": "networkbook/netchips/sim-cap",
+    "bookId": "networkbook",
+    "title": "스위치 칩 용량 계산기",
+    "link": "chapters/netchips.html#sim-cap"
+  },
+  {
+    "id": "networkbook/netchips/sim-pps",
+    "bookId": "networkbook",
+    "title": "초당 패킷 수와 파이프라인",
+    "link": "chapters/netchips.html#sim-pps"
+  },
+  {
+    "id": "networkbook/netchips/sim-tcam",
+    "bookId": "networkbook",
+    "title": "TCAM 최장 접두사 검색",
+    "link": "chapters/netchips.html#sim-tcam"
+  },
+  {
+    "id": "networkbook/netchips/sim-buf",
+    "bookId": "networkbook",
+    "title": "인캐스트 마이크로버스트와 버퍼",
+    "link": "chapters/netchips.html#sim-buf"
+  },
+  {
+    "id": "networkbook/netchips/sim-nic",
+    "bookId": "networkbook",
+    "title": "오프로드와 RSS: 코어가 얼마나 바쁜가",
+    "link": "chapters/netchips.html#sim-nic"
+  },
+  {
+    "id": "networkbook/ops/sim-delay",
+    "bookId": "networkbook",
+    "title": "지연 분해기: 무엇이 지배하는가",
+    "link": "chapters/ops.html#sim-delay"
+  },
+  {
+    "id": "networkbook/ops/sim-ping",
+    "bookId": "networkbook",
+    "title": "가상 ping: 출력 읽기",
+    "link": "chapters/ops.html#sim-ping"
+  },
+  {
+    "id": "networkbook/ops/sim-bdp",
+    "bookId": "networkbook",
+    "title": "BDP와 윈도우 제한",
+    "link": "chapters/ops.html#sim-bdp"
+  },
+  {
+    "id": "networkbook/ops/sim-queue",
+    "bookId": "networkbook",
+    "title": "M/M/1 큐: 이용률과 대기 시간",
+    "link": "chapters/ops.html#sim-queue"
+  },
+  {
+    "id": "networkbook/ops/sim-bloat",
+    "bookId": "networkbook",
+    "title": "업로드 하나가 게임을 망치는 이유",
+    "link": "chapters/ops.html#sim-bloat"
+  },
+  {
+    "id": "networkbook/ops/sim-tb",
+    "bookId": "networkbook",
+    "title": "토큰 버킷: 버스트와 출력 트래픽",
+    "link": "chapters/ops.html#sim-tb"
+  },
+  {
+    "id": "networkbook/ops/sim-ts",
+    "bookId": "networkbook",
+    "title": "장애 추적: 숨은 원인을 찾아라",
+    "link": "chapters/ops.html#sim-ts"
+  },
+  {
+    "id": "networkbook/ops/sim-av",
+    "bookId": "networkbook",
+    "title": "가용성 계산기: 직렬과 이중화",
+    "link": "chapters/ops.html#sim-av"
+  },
+  {
+    "id": "networkbook/optical/sim-snell",
+    "bookId": "networkbook",
+    "title": "스넬의 법칙과 전반사: 광선 추적",
+    "link": "chapters/optical.html#sim-snell"
+  },
+  {
+    "id": "networkbook/optical/sim-disp",
+    "bookId": "networkbook",
+    "title": "분산: 퍼진 펄스가 이웃 비트를 덮는다",
+    "link": "chapters/optical.html#sim-disp"
+  },
+  {
+    "id": "networkbook/optical/sim-att",
+    "bookId": "networkbook",
+    "title": "광섬유 감쇠 스펙트럼",
+    "link": "chapters/optical.html#sim-att"
+  },
+  {
+    "id": "networkbook/optical/sim-bud",
+    "bookId": "networkbook",
+    "title": "광 링크 예산 계산기",
+    "link": "chapters/optical.html#sim-bud"
+  },
+  {
+    "id": "networkbook/optical/sim-wdm",
+    "bookId": "networkbook",
+    "title": "WDM 용량 계산기: 파장 수 × 파장당 속도",
+    "link": "chapters/optical.html#sim-wdm"
+  },
+  {
+    "id": "networkbook/optical/sim-pon",
+    "bookId": "networkbook",
+    "title": "PON: 한 가닥을 몇 집이 나눠 쓰나",
+    "link": "chapters/optical.html#sim-pon"
+  },
+  {
+    "id": "networkbook/photonics/sim-li",
+    "bookId": "networkbook",
+    "title": "L-I 곡선: 문턱을 넘으면 레이저가 된다",
+    "link": "chapters/photonics.html#sim-li"
+  },
+  {
+    "id": "networkbook/photonics/sim-bg",
+    "bookId": "networkbook",
+    "title": "밴드갭 ↔ 파장 변환기",
+    "link": "chapters/photonics.html#sim-bg"
+  },
+  {
+    "id": "networkbook/photonics/sim-mzm",
+    "bookId": "networkbook",
+    "title": "마하-젠더 변조기: 간섭으로 빛을 켜고 끄기",
+    "link": "chapters/photonics.html#sim-mzm"
+  },
+  {
+    "id": "networkbook/photonics/sim-ring",
+    "bookId": "networkbook",
+    "title": "링 공진기 변조기: 파장을 훑고, 전압으로 공진 옮기기",
+    "link": "chapters/photonics.html#sim-ring"
+  },
+  {
+    "id": "networkbook/photonics/sim-cpo",
+    "bookId": "networkbook",
+    "title": "스위치 한 대의 광 연결 전력: 플러그형 vs LPO vs CPO",
+    "link": "chapters/photonics.html#sim-cpo"
+  },
+  {
+    "id": "networkbook/radio/sim-wl",
+    "bookId": "networkbook",
+    "title": "주파수 → 파장 변환기",
+    "link": "chapters/radio.html#sim-wl"
+  },
+  {
+    "id": "networkbook/radio/sim-pat",
+    "bookId": "networkbook",
+    "title": "안테나 방사 패턴 (극좌표)",
+    "link": "chapters/radio.html#sim-pat"
+  },
+  {
+    "id": "networkbook/radio/sim-lb",
+    "bookId": "networkbook",
+    "title": "링크 버짓 계산기",
+    "link": "chapters/radio.html#sim-lb"
+  },
+  {
+    "id": "networkbook/radio/sim-mp",
+    "bookId": "networkbook",
+    "title": "다중 경로 페이딩: 수신기를 옮겨 보세요",
+    "link": "chapters/radio.html#sim-mp"
+  },
+  {
+    "id": "networkbook/radio/sim-dop",
+    "bookId": "networkbook",
+    "title": "도플러 이동 계산기",
+    "link": "chapters/radio.html#sim-dop"
+  },
+  {
+    "id": "networkbook/rfchips/sim-mx",
+    "bookId": "networkbook",
+    "title": "믹서: 합·차 주파수와 이미지 간섭",
+    "link": "chapters/rfchips.html#sim-mx"
+  },
+  {
+    "id": "networkbook/rfchips/sim-pl",
+    "bookId": "networkbook",
+    "title": "PLL: 분주비로 주파수 고르기, 위상 잡음으로 성좌도 번지기",
+    "link": "chapters/rfchips.html#sim-pl"
+  },
+  {
+    "id": "networkbook/rfchips/sim-pa",
+    "bookId": "networkbook",
+    "title": "PA: 입력을 키우면 무엇이 찌그러지는가",
+    "link": "chapters/rfchips.html#sim-pa"
+  },
+  {
+    "id": "networkbook/rfchips/sim-nf",
+    "bookId": "networkbook",
+    "title": "수신기 연쇄: 잡음 지수와 수신 감도",
+    "link": "chapters/rfchips.html#sim-nf"
+  },
+  {
+    "id": "networkbook/rfchips/sim-flt",
+    "bookId": "networkbook",
+    "title": "수신 필터 응답: 통과 대역, 삽입 손실, 이웃 대역 차단",
+    "link": "chapters/rfchips.html#sim-flt"
+  },
+  {
+    "id": "networkbook/routing/sim-lpm",
+    "bookId": "networkbook",
+    "title": "라우팅 테이블 조회: 가장 긴 일치를 찾아라",
+    "link": "chapters/routing.html#sim-lpm"
+  },
+  {
+    "id": "networkbook/routing/sim-conv",
+    "bookId": "networkbook",
+    "title": "경로 수렴: 링크를 눌러 끊고 복구하기",
+    "link": "chapters/routing.html#sim-conv"
+  },
+  {
+    "id": "networkbook/routing/sim-bgp",
+    "bookId": "networkbook",
+    "title": "BGP 하이재킹: 거짓 광고는 어디까지 퍼지나",
+    "link": "chapters/routing.html#sim-bgp"
+  },
+  {
+    "id": "networkbook/routing/sim-tr",
+    "bookId": "networkbook",
+    "title": "가상의 traceroute 실행하기",
+    "link": "chapters/routing.html#sim-tr"
+  },
+  {
+    "id": "networkbook/satellite/sim-orbit",
+    "bookId": "networkbook",
+    "title": "궤도 계산기: 고도를 바꾸면 무엇이 달라지나",
+    "link": "chapters/satellite.html#sim-orbit"
+  },
+  {
+    "id": "networkbook/satellite/sim-const",
+    "bookId": "networkbook",
+    "title": "위성 군집 설계: 지구를 빈틈없이 덮으려면",
+    "link": "chapters/satellite.html#sim-const"
+  },
+  {
+    "id": "networkbook/satellite/sim-isl",
+    "bookId": "networkbook",
+    "title": "광섬유 대 위성 레이저: 어느 쪽이 먼저 도착할까",
+    "link": "chapters/satellite.html#sim-isl"
+  },
+  {
+    "id": "networkbook/satellite/sim-rain",
+    "bookId": "networkbook",
+    "title": "비 감쇠: 소나기가 오면 신호가 얼마나 약해지나",
+    "link": "chapters/satellite.html#sim-rain"
+  },
+  {
+    "id": "networkbook/satellite/sim-gnss",
+    "bookId": "networkbook",
+    "title": "삼변측량: 시계가 틀리면 위치도 틀린다",
+    "link": "chapters/satellite.html#sim-gnss"
+  },
+  {
+    "id": "networkbook/security/sim-dh",
+    "bookId": "networkbook",
+    "title": "디피-헬먼 키 교환 : 앨리스, 밥, 그리고 이브",
+    "link": "chapters/security.html#sim-dh"
+  },
+  {
+    "id": "networkbook/security/sim-tls",
+    "bookId": "networkbook",
+    "title": "핸드셰이크 한 단계씩: TLS 1.2 vs TLS 1.3 vs QUIC",
+    "link": "chapters/security.html#sim-tls"
+  },
+  {
+    "id": "networkbook/security/sim-fw",
+    "bookId": "networkbook",
+    "title": "방화벽 규칙 편집기: 위에서부터 첫 일치",
+    "link": "chapters/security.html#sim-fw"
+  },
+  {
+    "id": "networkbook/security/sim-ddos",
+    "bookId": "networkbook",
+    "title": "증폭 공격의 규모와 방어 용량",
+    "link": "chapters/security.html#sim-ddos"
+  },
+  {
+    "id": "networkbook/serdes/sim-loss",
+    "bookId": "networkbook",
+    "title": "배선 길이와 속도에 따른 채널 손실",
+    "link": "chapters/serdes.html#sim-loss"
+  },
+  {
+    "id": "networkbook/serdes/sim-pam",
+    "bookId": "networkbook",
+    "title": "NRZ vs PAM4 눈 그림 비교",
+    "link": "chapters/serdes.html#sim-pam"
+  },
+  {
+    "id": "networkbook/serdes/sim-eq",
+    "bookId": "networkbook",
+    "title": "이퀄라이저 실험실: 펄스 응답과 눈 그림",
+    "link": "chapters/serdes.html#sim-eq"
+  },
+  {
+    "id": "networkbook/serdes/sim-cdr",
+    "bookId": "networkbook",
+    "title": "CDR이 샘플링 위치를 붙잡는 모습",
+    "link": "chapters/serdes.html#sim-cdr"
+  },
+  {
+    "id": "networkbook/serdes/sim-fec",
+    "bookId": "networkbook",
+    "title": "FEC 전후의 비트 오류율",
+    "link": "chapters/serdes.html#sim-fec"
+  },
+  {
+    "id": "networkbook/serdes/sim-refl",
+    "bookId": "networkbook",
+    "title": "종단 저항과 반사",
+    "link": "chapters/serdes.html#sim-refl"
+  },
+  {
+    "id": "networkbook/signal/sim-rep",
+    "bookId": "networkbook",
+    "title": "중계를 거듭할 때: 아날로그 증폭 vs 디지털 재생",
+    "link": "chapters/signal.html#sim-rep"
+  },
+  {
+    "id": "networkbook/signal/sim-sine",
+    "bookId": "networkbook",
+    "title": "사인파 만들기와 더하기",
+    "link": "chapters/signal.html#sim-sine"
+  },
+  {
+    "id": "networkbook/signal/sim-fourier",
+    "bookId": "networkbook",
+    "title": "사인파를 쌓아 비트 만들기: 채널이 통과시키는 고조파 수",
+    "link": "chapters/signal.html#sim-fourier"
+  },
+  {
+    "id": "networkbook/signal/sim-db",
+    "bookId": "networkbook",
+    "title": "손실 예산: 신호가 받는 쪽까지 살아남을까",
+    "link": "chapters/signal.html#sim-db"
+  },
+  {
+    "id": "networkbook/signal/sim-shannon",
+    "bookId": "networkbook",
+    "title": "섀넌 용량 계산기와 실제 기술",
+    "link": "chapters/signal.html#sim-shannon"
+  },
+  {
+    "id": "networkbook/signal/sim-ham",
+    "bookId": "networkbook",
+    "title": "해밍(7,4): 비트 하나를 뒤집어 보세요",
+    "link": "chapters/signal.html#sim-ham"
+  },
+  {
+    "id": "networkbook/tcp/sim-hs",
+    "bookId": "networkbook",
+    "title": "TCP 연결의 일생: 한 단계씩 진행하기",
+    "link": "chapters/tcp.html#sim-hs"
+  },
+  {
+    "id": "networkbook/tcp/sim-rel",
+    "bookId": "networkbook",
+    "title": "손실 복구: 빠른 재전송 vs 타임아웃",
+    "link": "chapters/tcp.html#sim-rel"
+  },
+  {
+    "id": "networkbook/tcp/sim-win",
+    "bookId": "networkbook",
+    "title": "슬라이딩 윈도우: 창 크기 · 손실 · RTT",
+    "link": "chapters/tcp.html#sim-win"
+  },
+  {
+    "id": "networkbook/tcp/sim-cc",
+    "bookId": "networkbook",
+    "title": "혼잡 윈도우의 톱니: Tahoe · Reno · CUBIC",
+    "link": "chapters/tcp.html#sim-cc"
+  },
+  {
+    "id": "networkbook/tcp/sim-hol",
+    "bookId": "networkbook",
+    "title": "패킷 하나를 잃으면: TCP 위 HTTP/2 vs QUIC 위 HTTP/3",
+    "link": "chapters/tcp.html#sim-hol"
+  },
+  {
+    "id": "networkbook/tcp/sim-rtt",
+    "bookId": "networkbook",
+    "title": "첫 응답까지 걸리는 시간: RTT가 길수록 왕복 수가 중요하다",
+    "link": "chapters/tcp.html#sim-rtt"
+  },
+  {
+    "id": "networkbook/wifi/sim-ch",
+    "bookId": "networkbook",
+    "title": "아파트 2.4 GHz 채널 고르기",
+    "link": "chapters/wifi.html#sim-ch"
+  },
+  {
+    "id": "networkbook/wifi/sim-csma",
+    "bookId": "networkbook",
+    "title": "단말이 늘면 충돌도 는다: 백오프 카운터 들여다보기",
+    "link": "chapters/wifi.html#sim-csma"
+  },
+  {
+    "id": "networkbook/wifi/sim-tp",
+    "bookId": "networkbook",
+    "title": "표시 속도에서 실제 속도까지: 손실 폭포",
+    "link": "chapters/wifi.html#sim-tp"
+  },
+  {
+    "id": "networkbook/wifi/sim-range",
+    "bookId": "networkbook",
+    "title": "거리 → RSSI → MCS → 속도",
+    "link": "chapters/wifi.html#sim-range"
+  },
+  {
+    "id": "networkbook/wifi/sim-pick",
+    "bookId": "networkbook",
+    "title": "무선 기술 고르기: 거리·속도·배터리 조건 → 추천",
+    "link": "chapters/wifi.html#sim-pick"
+  },
+  {
     "id": "aibook/agent/sim-bon",
     "bookId": "aibook",
     "title": "다수결 vs best-of-N: 샘플을 늘리면 얼마나 좋아지나",

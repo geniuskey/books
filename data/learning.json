@@ -402,6 +402,20 @@
         "design"
       ]
     },
+    "networkbook/sim-cc": {
+      "question": "TCP는 네트워크가 얼마나 붐비는지 모른 채 어떻게 보낼 양을 정할까요?",
+      "concepts": [
+        "computing",
+        "systems"
+      ]
+    },
+    "networkbook/sim-eq": {
+      "question": "고속 신호가 배선을 지나며 뭉개지면 칩은 어떻게 다시 0과 1을 가려낼까요?",
+      "concepts": [
+        "design",
+        "systems"
+      ]
+    },
     "aibook/sim-editor": {
       "question": "어텐션 점수를 바꾸면 어떤 정보가 더 섞일까요?",
       "concepts": [
@@ -925,6 +939,25 @@
           "bookId": "aibook",
           "focus": "신경망 학습 → 임베딩 → 어텐션 → LLM 추론 → RAG",
           "why": "학습으로 모델을 만드는 일과 모델로 답하는 일을 구분합니다. 문서 검색을 붙이면 무엇이 달라지는지도 확인하세요."
+        }
+      ]
+    },
+    {
+      "id": "computer-to-network",
+      "group": "컴퓨터·AI·제품",
+      "title": "패킷 하나는 어떻게 지구 반대편까지 갈까?",
+      "start": "컴퓨터 한 대의 동작을 알고 컴퓨터끼리 연결되는 방식을 이해하려는 독자",
+      "outcome": "신호·프로토콜·라우팅·혼잡 제어·통신 칩이 각각 어느 층에서 일하는지 설명합니다.",
+      "steps": [
+        {
+          "bookId": "computerbook",
+          "focus": "비트와 논리 → CPU·메모리 → 운영체제 → 네트워크·웹",
+          "why": "먼저 컴퓨터 한 대가 데이터를 어떻게 다루는지 익힙니다. 익숙한 독자는 NetworkBook부터 시작해도 됩니다."
+        },
+        {
+          "bookId": "networkbook",
+          "focus": "신호·계층 → 광통신·무선 → IP·라우팅 → TCP·QUIC → SerDes·데이터센터",
+          "why": "비트가 선과 전파를 지나 패킷이 되고, 길을 찾고, 손실과 혼잡을 견디는 과정을 따라갑니다. 느리거나 끊길 때 어느 층의 문제인지 구분하세요."
         }
       ]
     },

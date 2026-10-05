@@ -905,16 +905,42 @@
       "id": "networkbook",
       "code": "NET",
       "title": "NetworkBook",
-      "subtitle": "네트워크",
-      "description": "패킷이 지구 반대편까지 가는 길.",
-      "field": "computing",
-      "status": "planned",
-      "phase": 2,
-      "ideas": [
-        "TCP 혼잡 제어 창 크기",
-        "라우팅 테이블 수렴",
-        "패킷 캡처 해부"
-      ]
+      "subtitle": "누구나 읽는 네트워크 교과서",
+      "headline": "패킷이 지구 반대편까지 가는 길",
+      "description": "신호와 프로토콜에서 구리선·광섬유·전파·위성, IP와 라우팅, TCP, Wi-Fi와 5G, 데이터센터와 클라우드, 그리고 SerDes·스위치 ASIC·RF 칩·실리콘 포토닉스 같은 통신 반도체까지. 신호를 직접 보내고 망가뜨리며 네트워크의 모든 층을 이해하도록 썼습니다.",
+      "url": "https://networkbook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/networkbook",
+      "status": "published",
+      "level": "입문",
+      "chapters": 26,
+      "simulators": 134,
+      "color": "#0a6cc9",
+      "colorDark": "#4fa8ff",
+      "topics": [
+        "신호·계층",
+        "광통신·구리선",
+        "IP·라우팅",
+        "TCP·QUIC",
+        "무선·5G·위성",
+        "SerDes·통신 칩",
+        "데이터센터·클라우드"
+      ],
+      "motif": "network",
+      "featured": [
+        {
+          "title": "혼잡 윈도우의 톱니",
+          "desc": "Tahoe·Reno·CUBIC이 손실을 만날 때마다 창을 줄였다 키우는 모습을 라운드별로",
+          "link": "chapters/tcp.html#sim-cc",
+          "image": "img/sims/networkbook-sim-cc.jpg"
+        },
+        {
+          "title": "이퀄라이저로 눈 열기",
+          "desc": "FFE·CTLE·DFE를 더할수록 펄스 응답의 꼬리가 지워지고 닫힌 눈이 열린다",
+          "link": "chapters/serdes.html#sim-eq",
+          "image": "img/sims/networkbook-sim-eq.jpg"
+        }
+      ],
+      "field": "computing"
     },
     {
       "id": "databasebook",
