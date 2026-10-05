@@ -372,28 +372,6 @@
     },
     {
       "book": {
-        "id": "insurebook",
-        "code": "INS",
-        "title": "InsureBook",
-        "subtitle": "보험",
-        "description": "보험의 원리와 필요한 보장 고르기.",
-        "field": "money",
-        "status": "planned",
-        "phase": 2,
-        "ideas": [
-          "위험 풀링 시뮬레이션",
-          "보험료와 보장 비교",
-          "실손 보험 청구 흐름"
-        ]
-      },
-      "disposition": "merge",
-      "targets": [
-        "moneybook"
-      ],
-      "reason": "돈 교과서의 보험 장을 심화한다."
-    },
-    {
-      "book": {
         "id": "pensionbook",
         "code": "PEN",
         "title": "PensionBook",

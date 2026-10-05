@@ -1221,6 +1221,48 @@
       "motif": "candles"
     },
     {
+      "id": "insurebook",
+      "code": "INS",
+      "title": "InsureBook",
+      "subtitle": "보험이 복잡한 이유를 푸는 교과서",
+      "headline": "보험은 왜 이렇게 복잡할까",
+      "description": "위험을 나누는 수학에서 보험료 계산, 약관과 갱신, 실손·진단비·종신·저축성·자동차보험, 설계사와 수수료, 보험회사의 속사정, 청구와 분쟁, 보장 설계까지. 지우네 상담 노트를 따라 숫자를 직접 끌고 바꾸며 보험설계사가 왜 존재하는지도 정직하게 봅니다.",
+      "url": "https://insurebook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/insurebook",
+      "status": "published",
+      "level": "입문",
+      "chapters": 21,
+      "simulators": 128,
+      "color": "#2a5bd7",
+      "colorDark": "#82a8ff",
+      "topics": [
+        "대수의 법칙·위험 분산",
+        "보험료·책임준비금",
+        "역선택·고지의무",
+        "약관·갱신·무해지",
+        "실손·진단비·종신",
+        "설계사·수수료",
+        "청구·분쟁",
+        "보장 설계"
+      ],
+      "motif": "umbrella",
+      "featured": [
+        {
+          "title": "대수의 법칙 마을",
+          "desc": "함께 나누는 가구가 늘수록 한 집이 내는 몫의 흔들림이 1/√N로 줄어든다",
+          "link": "chapters/pooling.html#sim-ll",
+          "image": "img/sims/insurebook-sim-ll.jpg"
+        },
+        {
+          "title": "수수료 지급 일정과 해지 시점",
+          "desc": "첫해 12배 선지급과 분급을 비교하고, 해지 시점을 끌어 환수와 손실을 본다",
+          "link": "chapters/commission.html#sim-ru",
+          "image": "img/sims/insurebook-sim-ru.jpg"
+        }
+      ],
+      "field": "money"
+    },
+    {
       "id": "rentbook",
       "code": "RNT",
       "title": "RentBook",

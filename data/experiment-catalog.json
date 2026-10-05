@@ -19764,6 +19764,774 @@
     "link": "chapters/valuation.html#sim-tornado"
   },
   {
+    "id": "insurebook/advisor/sim-su",
+    "bookId": "insurebook",
+    "title": "제안별 적합성 진단",
+    "link": "chapters/advisor.html#sim-su"
+  },
+  {
+    "id": "insurebook/advisor/sim-ex",
+    "bookId": "insurebook",
+    "title": "설명의무 완성도",
+    "link": "chapters/advisor.html#sim-ex"
+  },
+  {
+    "id": "insurebook/advisor/sim-rt",
+    "bookId": "insurebook",
+    "title": "청약 후 며칠째인가: 열려 있는 권리",
+    "link": "chapters/advisor.html#sim-rt"
+  },
+  {
+    "id": "insurebook/advisor/sim-dg",
+    "bookId": "insurebook",
+    "title": "대화로 보는 상담: 공포 vs 질문",
+    "link": "chapters/advisor.html#sim-dg"
+  },
+  {
+    "id": "insurebook/advisor/sim-ec",
+    "bookId": "insurebook",
+    "title": "두 설계사의 10년",
+    "link": "chapters/advisor.html#sim-ec"
+  },
+  {
+    "id": "insurebook/advisor/sim-dl",
+    "bookId": "insurebook",
+    "title": "딜레마 카드",
+    "link": "chapters/advisor.html#sim-dl"
+  },
+  {
+    "id": "insurebook/agent/sim-gp",
+    "bookId": "insurebook",
+    "title": "스스로 사는 사람 vs 실제로 위험한 사람",
+    "link": "chapters/agent.html#sim-gp"
+  },
+  {
+    "id": "insurebook/agent/sim-sc",
+    "bookId": "insurebook",
+    "title": "몇 개를 비교할 것인가: 혼자 고르기 vs 맡기기",
+    "link": "chapters/agent.html#sim-sc"
+  },
+  {
+    "id": "insurebook/agent/sim-ch",
+    "bookId": "insurebook",
+    "title": "같은 보장, 채널별 보험료와 상담 깊이",
+    "link": "chapters/agent.html#sim-ch"
+  },
+  {
+    "id": "insurebook/agent/sim-cl",
+    "bookId": "insurebook",
+    "title": "20년 동안 놓치는 보험금",
+    "link": "chapters/agent.html#sim-cl"
+  },
+  {
+    "id": "insurebook/agent/sim-cr",
+    "bookId": "insurebook",
+    "title": "신뢰재 시장: 정직한 설계사는 살아남는가",
+    "link": "chapters/agent.html#sim-cr"
+  },
+  {
+    "id": "insurebook/agent/sim-co",
+    "bookId": "insurebook",
+    "title": "신입 설계사 100명의 3년과 고아계약",
+    "link": "chapters/agent.html#sim-co"
+  },
+  {
+    "id": "insurebook/asymmetry/sim-sp",
+    "bookId": "insurebook",
+    "title": "죽음의 나선: 떠나는 사람과 손해율",
+    "link": "chapters/asymmetry.html#sim-sp"
+  },
+  {
+    "id": "insurebook/asymmetry/sim-uw",
+    "bookId": "insurebook",
+    "title": "심사의 엄격함: 보험료와 받아 주는 사람",
+    "link": "chapters/asymmetry.html#sim-uw"
+  },
+  {
+    "id": "insurebook/asymmetry/sim-dq",
+    "bookId": "insurebook",
+    "title": "내 기록은 어느 질문에 걸리나",
+    "link": "chapters/asymmetry.html#sim-dq"
+  },
+  {
+    "id": "insurebook/asymmetry/sim-ez",
+    "bookId": "insurebook",
+    "title": "간편심사 보험료는 왜 비싼가",
+    "link": "chapters/asymmetry.html#sim-ez"
+  },
+  {
+    "id": "insurebook/asymmetry/sim-wt",
+    "bookId": "insurebook",
+    "title": "면책·감액 기간이 막는 것과 놓치는 것",
+    "link": "chapters/asymmetry.html#sim-wt"
+  },
+  {
+    "id": "insurebook/asymmetry/sim-lz",
+    "bookId": "insurebook",
+    "title": "보험금은 누구에게 몰리는가",
+    "link": "chapters/asymmetry.html#sim-lz"
+  },
+  {
+    "id": "insurebook/asymmetry/sim-br",
+    "bookId": "insurebook",
+    "title": "고지의무 위반 시간표: 해지되나, 보험금은 나오나",
+    "link": "chapters/asymmetry.html#sim-br"
+  },
+  {
+    "id": "insurebook/claim/sim-docs",
+    "bookId": "insurebook",
+    "title": "청구 서류 체크리스트",
+    "link": "chapters/claim.html#sim-docs"
+  },
+  {
+    "id": "insurebook/claim/sim-dl",
+    "bookId": "insurebook",
+    "title": "소멸시효 3년과 지급 기한 달력",
+    "link": "chapters/claim.html#sim-dl"
+  },
+  {
+    "id": "insurebook/claim/sim-s24",
+    "bookId": "insurebook",
+    "title": "귀찮아서 버려지는 보험금",
+    "link": "chapters/claim.html#sim-s24"
+  },
+  {
+    "id": "insurebook/claim/sim-split",
+    "bookId": "insurebook",
+    "title": "민서의 수술비, 누가 얼마를 내나",
+    "link": "chapters/claim.html#sim-split"
+  },
+  {
+    "id": "insurebook/claim/sim-disc",
+    "bookId": "insurebook",
+    "title": "고지의무 위반, 해지할 수 있나 보험금은 나오나",
+    "link": "chapters/claim.html#sim-disc"
+  },
+  {
+    "id": "insurebook/claim/sim-path",
+    "bookId": "insurebook",
+    "title": "재심사 · 분쟁조정 · 소송, 경로별 시간과 비용",
+    "link": "chapters/claim.html#sim-path"
+  },
+  {
+    "id": "insurebook/commission/sim-ld",
+    "bookId": "insurebook",
+    "title": "보험료 속 사업비, 언제 얼마나 쓰이나",
+    "link": "chapters/commission.html#sim-ld"
+  },
+  {
+    "id": "insurebook/commission/sim-ru",
+    "bookId": "insurebook",
+    "title": "수수료 지급 일정과 해지 시점",
+    "link": "chapters/commission.html#sim-ru"
+  },
+  {
+    "id": "insurebook/commission/sim-ps",
+    "bookId": "insurebook",
+    "title": "유지율이 바꾸는 계약 한 건의 값",
+    "link": "chapters/commission.html#sim-ps"
+  },
+  {
+    "id": "insurebook/commission/sim-sw",
+    "bookId": "insurebook",
+    "title": "승환 계산기: 갈아탈 때 vs 유지하고 더할 때",
+    "link": "chapters/commission.html#sim-sw"
+  },
+  {
+    "id": "insurebook/commission/sim-si",
+    "bookId": "insurebook",
+    "title": "시책과 절판이 만드는 판매의 파도",
+    "link": "chapters/commission.html#sim-si"
+  },
+  {
+    "id": "insurebook/commission/sim-sv",
+    "bookId": "insurebook",
+    "title": "해지환급금 예시표로 사업비 거꾸로 읽기",
+    "link": "chapters/commission.html#sim-sv"
+  },
+  {
+    "id": "insurebook/commission/sim-ca",
+    "bookId": "insurebook",
+    "title": "10년 뒤 누가 더 벌었나: 정직 모델 vs 승환 모델",
+    "link": "chapters/commission.html#sim-ca"
+  },
+  {
+    "id": "insurebook/company/sim-lr",
+    "bookId": "insurebook",
+    "title": "보험료 100원의 행방: 손해율·사업비율·합산비율",
+    "link": "chapters/company.html#sim-lr"
+  },
+  {
+    "id": "insurebook/company/sim-rate",
+    "bookId": "insurebook",
+    "title": "손해율이 보험료를 끌어올리는 과정",
+    "link": "chapters/company.html#sim-rate"
+  },
+  {
+    "id": "insurebook/company/sim-spread",
+    "bookId": "insurebook",
+    "title": "운용수익률 vs 부담금리: 역마진의 50년",
+    "link": "chapters/company.html#sim-spread"
+  },
+  {
+    "id": "insurebook/company/sim-csm",
+    "bookId": "insurebook",
+    "title": "CSM이 풀려나오는 속도",
+    "link": "chapters/company.html#sim-csm"
+  },
+  {
+    "id": "insurebook/company/sim-kics",
+    "bookId": "insurebook",
+    "title": "스트레스 시나리오와 지급여력비율",
+    "link": "chapters/company.html#sim-kics"
+  },
+  {
+    "id": "insurebook/company/sim-re",
+    "bookId": "insurebook",
+    "title": "초과손해액 재보험이 꼬리를 자르는 모습",
+    "link": "chapters/company.html#sim-re"
+  },
+  {
+    "id": "insurebook/company/sim-dp",
+    "bookId": "insurebook",
+    "title": "예금자보호 1억원은 어디까지 지켜 주나",
+    "link": "chapters/company.html#sim-dp"
+  },
+  {
+    "id": "insurebook/complexity/sim-rd",
+    "bookId": "insurebook",
+    "title": "특약 조합의 폭발",
+    "link": "chapters/complexity.html#sim-rd"
+  },
+  {
+    "id": "insurebook/complexity/sim-bd",
+    "bookId": "insurebook",
+    "title": "어느 묶음이 더 싸게 산 것인가",
+    "link": "chapters/complexity.html#sim-bd"
+  },
+  {
+    "id": "insurebook/complexity/sim-df",
+    "bookId": "insurebook",
+    "title": "정의가 넓으면 몇 배 더 받나",
+    "link": "chapters/complexity.html#sim-df"
+  },
+  {
+    "id": "insurebook/complexity/sim-cx",
+    "bookId": "insurebook",
+    "title": "같은 \"암 3,000만원\", 두 계약이 주는 돈",
+    "link": "chapters/complexity.html#sim-cx"
+  },
+  {
+    "id": "insurebook/complexity/sim-sc",
+    "bookId": "insurebook",
+    "title": "선택지가 많을수록 나빠지는 선택",
+    "link": "chapters/complexity.html#sim-sc"
+  },
+  {
+    "id": "insurebook/complexity/sim-tl",
+    "bookId": "insurebook",
+    "title": "표준 묶음 vs 맞춤 설계",
+    "link": "chapters/complexity.html#sim-tl"
+  },
+  {
+    "id": "insurebook/contract/sim-pp",
+    "bookId": "insurebook",
+    "title": "가상의 가입설계서: 줄마다 눌러 읽기",
+    "link": "chapters/contract.html#sim-pp"
+  },
+  {
+    "id": "insurebook/contract/sim-tl",
+    "bookId": "insurebook",
+    "title": "진단일을 끌어 보는 면책·감액 기간",
+    "link": "chapters/contract.html#sim-tl"
+  },
+  {
+    "id": "insurebook/contract/sim-df",
+    "bookId": "insurebook",
+    "title": "이 경우 보험금이 나올까: 정의 따라가기",
+    "link": "chapters/contract.html#sim-df"
+  },
+  {
+    "id": "insurebook/contract/sim-ud",
+    "bookId": "insurebook",
+    "title": "지금 되돌리면 얼마를 돌려받나",
+    "link": "chapters/contract.html#sim-ud"
+  },
+  {
+    "id": "insurebook/contract/sim-ia",
+    "bookId": "insurebook",
+    "title": "상령일 전후로 가입하면 얼마나 다른가",
+    "link": "chapters/contract.html#sim-ia"
+  },
+  {
+    "id": "insurebook/contract/sim-lp",
+    "bookId": "insurebook",
+    "title": "미납 기간에 따라 계약은 어떻게 되나",
+    "link": "chapters/contract.html#sim-lp"
+  },
+  {
+    "id": "insurebook/fixed/sim-vs",
+    "bookId": "insurebook",
+    "title": "암 치료 한 번: 무엇을 실손이, 무엇을 진단비가 메우나",
+    "link": "chapters/fixed.html#sim-vs"
+  },
+  {
+    "id": "insurebook/fixed/sim-gap",
+    "bookId": "insurebook",
+    "title": "진단 이후의 통장: 소득 공백과 적정 진단비",
+    "link": "chapters/fixed.html#sim-gap"
+  },
+  {
+    "id": "insurebook/fixed/sim-inc",
+    "bookId": "insurebook",
+    "title": "나이별 1년 발생률: 암·뇌졸중·급성심근경색",
+    "link": "chapters/fixed.html#sim-inc"
+  },
+  {
+    "id": "insurebook/fixed/sim-def",
+    "bookId": "insurebook",
+    "title": "정의의 폭: 보장 확률과 보험료",
+    "link": "chapters/fixed.html#sim-def"
+  },
+  {
+    "id": "insurebook/fixed/sim-thy",
+    "bookId": "insurebook",
+    "title": "암 진단 1건의 기대 지급액: 소액암 비중과 지급 비율",
+    "link": "chapters/fixed.html#sim-thy"
+  },
+  {
+    "id": "insurebook/fixed/sim-hosp",
+    "bookId": "insurebook",
+    "title": "입원 일당의 기댓값 vs 보험료",
+    "link": "chapters/fixed.html#sim-hosp"
+  },
+  {
+    "id": "insurebook/fixed/sim-over",
+    "bookId": "insurebook",
+    "title": "쌓은 진단비 vs 보험료 부담",
+    "link": "chapters/fixed.html#sim-over"
+  },
+  {
+    "id": "insurebook/health/sim-sp",
+    "bookId": "insurebook",
+    "title": "영수증 한 장 나누기",
+    "link": "chapters/health.html#sim-sp"
+  },
+  {
+    "id": "insurebook/health/sim-cp",
+    "bookId": "insurebook",
+    "title": "1년 동안 쌓이는 본인부담과 상한선",
+    "link": "chapters/health.html#sim-cp"
+  },
+  {
+    "id": "insurebook/health/sim-gn",
+    "bookId": "insurebook",
+    "title": "같은 입원, 다른 세대",
+    "link": "chapters/health.html#sim-gn"
+  },
+  {
+    "id": "insurebook/health/sim-sw",
+    "bookId": "insurebook",
+    "title": "2세대 유지 vs 4세대 전환: 누적 비용",
+    "link": "chapters/health.html#sim-sw"
+  },
+  {
+    "id": "insurebook/health/sim-sc",
+    "bookId": "insurebook",
+    "title": "비급여 보험금과 다음 해 보험료의 계단",
+    "link": "chapters/health.html#sim-sc"
+  },
+  {
+    "id": "insurebook/health/sim-dp",
+    "bookId": "insurebook",
+    "title": "실손이 두 개면 무엇이 두 배가 되나",
+    "link": "chapters/health.html#sim-dp"
+  },
+  {
+    "id": "insurebook/health/sim-st",
+    "bookId": "insurebook",
+    "title": "개인실손 중지와 재개",
+    "link": "chapters/health.html#sim-st"
+  },
+  {
+    "id": "insurebook/lab/sim-fam",
+    "bookId": "insurebook",
+    "title": "우리 가족 입력",
+    "link": "chapters/lab.html#sim-fam"
+  },
+  {
+    "id": "insurebook/lab/sim-gap",
+    "bookId": "insurebook",
+    "title": "필요 보장 vs 지금 보장",
+    "link": "chapters/lab.html#sim-gap"
+  },
+  {
+    "id": "insurebook/lab/sim-life",
+    "bookId": "insurebook",
+    "title": "평생 보험료: 갱신과 비갱신, 누적 총액",
+    "link": "chapters/lab.html#sim-life"
+  },
+  {
+    "id": "insurebook/lab/sim-mc",
+    "bookId": "insurebook",
+    "title": "1,000번의 인생: 보험 없음 vs 보장",
+    "link": "chapters/lab.html#sim-mc"
+  },
+  {
+    "id": "insurebook/lab/sim-card",
+    "bookId": "insurebook",
+    "title": "우리 가족 보장 설계 요약",
+    "link": "chapters/lab.html#sim-card"
+  },
+  {
+    "id": "insurebook/life/sim-nd",
+    "bookId": "insurebook",
+    "title": "지우가 오늘 사망한다면: 필요와 공백",
+    "link": "chapters/life.html#sim-nd"
+  },
+  {
+    "id": "insurebook/life/sim-dec",
+    "bookId": "insurebook",
+    "title": "줄어드는 필요 vs 정기보험 설계",
+    "link": "chapters/life.html#sim-dec"
+  },
+  {
+    "id": "insurebook/life/sim-tw",
+    "bookId": "insurebook",
+    "title": "정기 + 투자 vs 종신, 90세까지",
+    "link": "chapters/life.html#sim-tw"
+  },
+  {
+    "id": "insurebook/life/sim-irr",
+    "bookId": "insurebook",
+    "title": "환급률을 연 수익률로: 단기납 종신 vs 예금",
+    "link": "chapters/life.html#sim-irr"
+  },
+  {
+    "id": "insurebook/life/sim-lapse",
+    "bookId": "insurebook",
+    "title": "130%는 누가 만들어 주나: 해지율과 환급률",
+    "link": "chapters/life.html#sim-lapse"
+  },
+  {
+    "id": "insurebook/life/sim-tax",
+    "bookId": "insurebook",
+    "title": "누가 내고, 누가 사망하고, 누가 받나",
+    "link": "chapters/life.html#sim-tax"
+  },
+  {
+    "id": "insurebook/life/sim-grp",
+    "bookId": "insurebook",
+    "title": "단체보험이 사라지는 날: 지금 살까, 그때 살까",
+    "link": "chapters/life.html#sim-grp"
+  },
+  {
+    "id": "insurebook/overview/sim-vl",
+    "bookId": "insurebook",
+    "title": "100명 마을의 1년",
+    "link": "chapters/overview.html#sim-vl"
+  },
+  {
+    "id": "insurebook/overview/sim-wh",
+    "bookId": "insurebook",
+    "title": "보험료 1만원은 어디로 가는가",
+    "link": "chapters/overview.html#sim-wh"
+  },
+  {
+    "id": "insurebook/overview/sim-pl",
+    "bookId": "insurebook",
+    "title": "설계서 한 장의 숫자들",
+    "link": "chapters/overview.html#sim-pl"
+  },
+  {
+    "id": "insurebook/overview/sim-dm",
+    "bookId": "insurebook",
+    "title": "스스로 가입하는 사람은 몇 명일까",
+    "link": "chapters/overview.html#sim-dm"
+  },
+  {
+    "id": "insurebook/overview/sim-rd",
+    "bookId": "insurebook",
+    "title": "나에게 맞는 읽기 경로",
+    "link": "chapters/overview.html#sim-rd"
+  },
+  {
+    "id": "insurebook/overview/sim-dr",
+    "bookId": "insurebook",
+    "title": "지우네가 매달 내는 보험료",
+    "link": "chapters/overview.html#sim-dr"
+  },
+  {
+    "id": "insurebook/planning/sim-ls",
+    "bookId": "insurebook",
+    "title": "생애 단계에 따라 움직이는 우선순위",
+    "link": "chapters/planning.html#sim-ls"
+  },
+  {
+    "id": "insurebook/planning/sim-bd",
+    "bookId": "insurebook",
+    "title": "보험료 예산 띠",
+    "link": "chapters/planning.html#sim-bd"
+  },
+  {
+    "id": "insurebook/planning/sim-oc",
+    "bookId": "insurebook",
+    "title": "더 낸 보험료를 모았다면",
+    "link": "chapters/planning.html#sim-oc"
+  },
+  {
+    "id": "insurebook/planning/sim-tb",
+    "bookId": "insurebook",
+    "title": "지우네 보장 분석표",
+    "link": "chapters/planning.html#sim-tb"
+  },
+  {
+    "id": "insurebook/planning/sim-sw",
+    "bookId": "insurebook",
+    "title": "유지 vs 교체 계산기",
+    "link": "chapters/planning.html#sim-sw"
+  },
+  {
+    "id": "insurebook/planning/sim-fx",
+    "bookId": "insurebook",
+    "title": "보험료를 못 낼 때의 다섯 가지 길",
+    "link": "chapters/planning.html#sim-fx"
+  },
+  {
+    "id": "insurebook/pooling/sim-rk",
+    "bookId": "insurebook",
+    "title": "지우네 위험 카드 분류하기",
+    "link": "chapters/pooling.html#sim-rk"
+  },
+  {
+    "id": "insurebook/pooling/sim-ll",
+    "bookId": "insurebook",
+    "title": "대수의 법칙 마을",
+    "link": "chapters/pooling.html#sim-ll"
+  },
+  {
+    "id": "insurebook/pooling/sim-co",
+    "bookId": "insurebook",
+    "title": "상관계수와 흔들림의 바닥",
+    "link": "chapters/pooling.html#sim-co"
+  },
+  {
+    "id": "insurebook/pooling/sim-ld",
+    "bookId": "insurebook",
+    "title": "보험료 한 장 뜯어보기: 보험사가 적자를 보는 해",
+    "link": "chapters/pooling.html#sim-ld"
+  },
+  {
+    "id": "insurebook/pooling/sim-ut",
+    "bookId": "insurebook",
+    "title": "효용 곡선과 낼 용의가 있는 최대 보험료",
+    "link": "chapters/pooling.html#sim-ut"
+  },
+  {
+    "id": "insurebook/pooling/sim-rt",
+    "bookId": "insurebook",
+    "title": "지우네 보유 한도 긋기",
+    "link": "chapters/pooling.html#sim-rt"
+  },
+  {
+    "id": "insurebook/pricing/sim-lt",
+    "bookId": "insurebook",
+    "title": "나이별 1년 사망확률 q(x)",
+    "link": "chapters/pricing.html#sim-lt"
+  },
+  {
+    "id": "insurebook/pricing/sim-tr",
+    "bookId": "insurebook",
+    "title": "세 가지 예정률로 보험료 다시 계산하기",
+    "link": "chapters/pricing.html#sim-tr"
+  },
+  {
+    "id": "insurebook/pricing/sim-nl",
+    "bookId": "insurebook",
+    "title": "자연보험료 vs 평준보험료",
+    "link": "chapters/pricing.html#sim-nl"
+  },
+  {
+    "id": "insurebook/pricing/sim-rs",
+    "bookId": "insurebook",
+    "title": "책임준비금이 쌓이고 쓰이는 78년",
+    "link": "chapters/pricing.html#sim-rs"
+  },
+  {
+    "id": "insurebook/pricing/sim-ir",
+    "bookId": "insurebook",
+    "title": "예정이율과 종신보험료",
+    "link": "chapters/pricing.html#sim-ir"
+  },
+  {
+    "id": "insurebook/pricing/sim-sv",
+    "bookId": "insurebook",
+    "title": "낸 돈, 준비금, 해지환급금",
+    "link": "chapters/pricing.html#sim-sv"
+  },
+  {
+    "id": "insurebook/pricing/sim-dc",
+    "bookId": "insurebook",
+    "title": "같은 보험료, 해마다 다른 속",
+    "link": "chapters/pricing.html#sim-dc"
+  },
+  {
+    "id": "insurebook/property/sim-pi",
+    "bookId": "insurebook",
+    "title": "계약을 늘리면 받는 돈도 늘까",
+    "link": "chapters/property.html#sim-pi"
+  },
+  {
+    "id": "insurebook/property/sim-co",
+    "bookId": "insurebook",
+    "title": "가입금액을 줄이면 무엇을 잃는가",
+    "link": "chapters/property.html#sim-co"
+  },
+  {
+    "id": "insurebook/property/sim-du",
+    "bookId": "insurebook",
+    "title": "일배책 세 개, 누수 한 번",
+    "link": "chapters/property.html#sim-du"
+  },
+  {
+    "id": "insurebook/property/sim-lc",
+    "bookId": "insurebook",
+    "title": "이 사고, 일배책으로 보상될까",
+    "link": "chapters/property.html#sim-lc"
+  },
+  {
+    "id": "insurebook/property/sim-sc",
+    "bookId": "insurebook",
+    "title": "보험 처리의 손익분기점",
+    "link": "chapters/property.html#sim-sc"
+  },
+  {
+    "id": "insurebook/property/sim-dd",
+    "bookId": "insurebook",
+    "title": "자차 수리, 내가 실제로 내는 돈",
+    "link": "chapters/property.html#sim-dd"
+  },
+  {
+    "id": "insurebook/property/sim-dc",
+    "bookId": "insurebook",
+    "title": "갱신 보험료에 할인 쌓기",
+    "link": "chapters/property.html#sim-dc"
+  },
+  {
+    "id": "insurebook/renewal/sim-nl",
+    "bookId": "insurebook",
+    "title": "자연보험료를 평준보험료로 바꾸면",
+    "link": "chapters/renewal.html#sim-nl"
+  },
+  {
+    "id": "insurebook/renewal/sim-st",
+    "bookId": "insurebook",
+    "title": "갱신 보험료 계단과 비갱신 평준선",
+    "link": "chapters/renewal.html#sim-st"
+  },
+  {
+    "id": "insurebook/renewal/sim-cx",
+    "bookId": "insurebook",
+    "title": "갱신형 vs 비갱신형, 누적 보험료",
+    "link": "chapters/renewal.html#sim-cx"
+  },
+  {
+    "id": "insurebook/renewal/sim-dc",
+    "bookId": "insurebook",
+    "title": "갱신 인상 분해: 나이 · 위험률 추세 · 손해율",
+    "link": "chapters/renewal.html#sim-dc"
+  },
+  {
+    "id": "insurebook/renewal/sim-nh",
+    "bookId": "insurebook",
+    "title": "예정해지율과 무해지 할인, 그리고 9년째 해지의 대가",
+    "link": "chapters/renewal.html#sim-nh"
+  },
+  {
+    "id": "insurebook/renewal/sim-py",
+    "bookId": "insurebook",
+    "title": "납입기간별 총액 vs 기대 현재가치",
+    "link": "chapters/renewal.html#sim-py"
+  },
+  {
+    "id": "insurebook/savings/sim-sv",
+    "bookId": "insurebook",
+    "title": "낸 돈 vs 해지환급금",
+    "link": "chapters/savings.html#sim-sv"
+  },
+  {
+    "id": "insurebook/savings/sim-ir",
+    "bookId": "insurebook",
+    "title": "공시이율을 그리면 실질 수익률이 나온다",
+    "link": "chapters/savings.html#sim-ir"
+  },
+  {
+    "id": "insurebook/savings/sim-tx",
+    "bookId": "insurebook",
+    "title": "비과세 혜택 − 사업비, 언제 플러스가 되는가",
+    "link": "chapters/savings.html#sim-tx"
+  },
+  {
+    "id": "insurebook/savings/sim-va",
+    "bookId": "insurebook",
+    "title": "변액연금 100가지 시장 경로",
+    "link": "chapters/savings.html#sim-va"
+  },
+  {
+    "id": "insurebook/savings/sim-an",
+    "bookId": "insurebook",
+    "title": "종신 연금 vs 내 돈으로 인출",
+    "link": "chapters/savings.html#sim-an"
+  },
+  {
+    "id": "insurebook/savings/sim-dp",
+    "bookId": "insurebook",
+    "title": "보험사별 1억원 한도",
+    "link": "chapters/savings.html#sim-dp"
+  },
+  {
+    "id": "insurebook/social/sim-ps",
+    "bookId": "insurebook",
+    "title": "월급과 4대 보험료",
+    "link": "chapters/social.html#sim-ps"
+  },
+  {
+    "id": "insurebook/social/sim-nv",
+    "bookId": "insurebook",
+    "title": "평생 건강보험료 vs 기대 급여",
+    "link": "chapters/social.html#sim-nv"
+  },
+  {
+    "id": "insurebook/social/sim-np",
+    "bookId": "insurebook",
+    "title": "장애연금·유족연금 어림 계산기",
+    "link": "chapters/social.html#sim-np"
+  },
+  {
+    "id": "insurebook/social/sim-sj",
+    "bookId": "insurebook",
+    "title": "일을 쉬는 동안 들어오는 돈",
+    "link": "chapters/social.html#sim-sj"
+  },
+  {
+    "id": "insurebook/social/sim-ub",
+    "bookId": "insurebook",
+    "title": "실업급여: 60%라는 말과 상한",
+    "link": "chapters/social.html#sim-ub"
+  },
+  {
+    "id": "insurebook/social/sim-lt",
+    "bookId": "insurebook",
+    "title": "장기요양 한 달 비용",
+    "link": "chapters/social.html#sim-lt"
+  },
+  {
+    "id": "insurebook/social/sim-gp",
+    "bookId": "insurebook",
+    "title": "위험별 필요와 사회보험, 그리고 빈틈",
+    "link": "chapters/social.html#sim-gp"
+  },
+  {
     "id": "bodybook/breathing/sim-br-co2",
     "bookId": "bodybook",
     "title": "CO2 반응 곡선과 저산소",

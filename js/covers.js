@@ -379,6 +379,23 @@
       s += `<g class="cv-shear" style="transform-origin:${cx}px ${cy}px">${g}</g>`;
       return svg(s);
     },
+    // 보험: 우산이 집들을 가리고, 우산 밖으로만 빗방울이 떨어진다
+    umbrella() {
+      const r = rnd(5), cx = 128; let s = "";
+      range(14).forEach((k) => {
+        const x = 52 + k * 11 + r() * 4;
+        if (Math.abs(x - cx) < 54) return;
+        s += `<path class="cv-fall" style="animation-delay:${(r() * 1.8).toFixed(2)}s;animation-duration:${(1.4 + r() * 0.6).toFixed(2)}s" d="M${x.toFixed(1)} ${(8 + r() * 30).toFixed(1)}v9" stroke="#8ab4ff" stroke-width="1.6" stroke-linecap="round"/>`;
+      });
+      s += `<path d="M${cx - 52} 54Q${cx} -4 ${cx + 52} 54Q${cx + 39} 46 ${cx + 26} 54Q${cx + 13} 46 ${cx} 54Q${cx - 13} 46 ${cx - 26} 54Q${cx - 39} 46 ${cx - 52} 54Z" fill="${W}" fill-opacity=".85"/>`;
+      s += `<path d="M${cx} 54V110q0 7 -7 7" fill="none" stroke="${W}" stroke-width="2.2" stroke-linecap="round"/>`;
+      [-38, -19, 19, 38].forEach((dx, k) => {
+        const x = cx + dx, h = 14 + (k % 2) * 4;
+        s += `<path d="M${x - 8} 118V${118 - h}l8 -7 8 7V118Z" fill="${W}" fill-opacity=".28" stroke="${W}" stroke-opacity=".7" stroke-width="1.2"/>`;
+      });
+      s += `<path d="M44 118H212" stroke="${W}" stroke-opacity=".35"/>`;
+      return svg(s);
+    },
     // 기본: 다이 격자
     grid() {
       let s = "";
