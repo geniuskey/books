@@ -160,11 +160,11 @@
     card.classList.add("flash");
   });
 
-  /* 링크는 모두 새 탭으로 연다. 같은 페이지 안의 #이동만 현재 탭에 둔다. */
-  const here = () => location.origin + location.pathname + location.search;
+  /* 책 사이트(xxxbook.euiyun.com 등 다른 euiyun.com 하위 도메인)로 가는 링크만 새 탭으로 연다.
+     포털 안의 메뉴·페이지 이동은 현재 탭에 둔다. */
   const openInNewTab = (a) => {
-    if (a.hasAttribute("download") || a.protocol === "javascript:" || a.getAttribute("href").startsWith("#")) return;
-    if (a.origin + a.pathname + a.search === here() && a.hash) return;
+    if (a.hasAttribute("download") || !/^https?:$/.test(a.protocol)) return;
+    if (a.hostname === location.hostname || !a.hostname.endsWith(".euiyun.com")) return;
     a.target = "_blank";
     if (!a.relList.contains("noopener")) a.relList.add("noopener");
   };
