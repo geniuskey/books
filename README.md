@@ -16,7 +16,15 @@
 
 ## 독자 의견 접수
 
-모든 책의 상단 아이콘과 바닥글은 `feedback.html?book=<책 id>&page=<현재 URL>`로 연결됩니다. 로그인 없는 폼에서 오류 제보·의견·저자 응원을 받고, 닉네임은 선택 사항입니다. 글은 D1에 저장되며 저자만 확인합니다. 공개 조회 API는 없습니다. 책 ID와 URL의 출처는 브라우저와 Worker 양쪽에서 검증합니다. 전송에 실패하면 입력을 유지하고 같은 글의 재전송에는 같은 접수 ID를 사용합니다.
+모든 책의 상단 아이콘과 바닥글은 `feedback.html?book=<책 id>&page=<현재 URL>`로 연결됩니다. 로그인 없는 폼에서 오류 제보·의견·저자 응원을 받고, 닉네임은 선택 사항입니다. 공개 범위의 기본값은 비공개이며 공개를 선택한 글만 페이지의 독자 목록에 바로 표시합니다. 기존 접수 글과 공개 범위가 없는 구형 폼의 글은 비공개로 저장합니다. 책 ID와 URL의 출처는 브라우저와 Worker 양쪽에서 검증합니다. 전송에 실패하면 입력을 유지하고 같은 글의 재전송에는 같은 접수 ID를 사용합니다.
+
+관리자는 같은 페이지의 ‘관리자 로그인’에서 Google 로그인하고 전체·비공개·공개·안 읽은 글·숨긴 글을 조회합니다. 읽음/안 읽음 표시와 공개 글 숨기기/복원을 지원합니다. 관리자가 비공개 글을 공개로 바꾸는 기능은 제공하지 않습니다. 공개 조회 API는 페이지 URL과 관리자 상태를 반환하지 않으며 숨긴 글을 제외합니다. 관리자용 API는 모든 조회·수정마다 Google 서명·발급자·클라이언트 ID·만료·검증된 이메일을 서버에서 확인합니다. `geniuskey@gmail.com`만 허용합니다. 토큰은 브라우저 메모리에만 보관하며 새로고침이나 로그아웃 후 다시 로그인해야 합니다.
+
+### 관리자 Google 로그인 설정
+
+[Google Identity Services 설정 안내](https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid)에 따라 웹 애플리케이션 OAuth 클라이언트를 생성하거나 기존 클라이언트를 사용합니다. 승인된 JavaScript 원본에 `https://books.euiyun.com`을 등록합니다. 팝업 콜백 방식을 사용하므로 리디렉션 URI와 클라이언트 보안 비밀번호는 필요하지 않습니다. 동의 화면이 테스트 상태이면 관리자 계정을 테스트 사용자로 추가합니다.
+
+같은 클라이언트 ID를 `data/feedback-config.json`의 `googleClientId`와 `worker/wrangler.jsonc`의 `GOOGLE_CLIENT_ID`에 설정하고 Worker와 정적 사이트를 함께 배포합니다. 도메인 등록만으로는 클라이언트 ID가 만들어지지 않습니다. ID 미설정 시 관리자 API는 503을 반환하고 로그인 UI는 준비 중 안내를 표시합니다. Google ID 토큰 검증은 [공식 검증 지침](https://developers.google.com/identity/gsi/web/guides/verify-google-id-token)을 따르며 `jose`로 Google JWKS를 검증합니다. 프런트엔드에서 이메일을 읽어 권한을 결정하지 않습니다.
 
 기존 GitHub 창구도 유지합니다. 중앙 `geniuskey/books`의 `.github/ISSUE_TEMPLATE/` 양식에 책·페이지 입력란을 미리 채웁니다. GitHub 접수는 로그인과 공개 글 작성이 필요합니다. 개별 답변은 약속하지 않습니다.
 

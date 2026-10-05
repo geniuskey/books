@@ -6,11 +6,12 @@ import vm from 'node:vm';
 async function setup(responses, endpoint = 'https://feedback.example/api/feedback') {
   const handlers = {};
   const fields = [];
-  for (const name of ['type', 'nickname', 'message', 'bookId', 'website']) {
+  for (const name of ['type', 'nickname', 'message', 'bookId', 'website', 'visibility']) {
     const field = { value: '', disabled: false, add() {}, focus() {} };
     fields.push(field);
     fields[name] = field;
   }
+  fields.visibility.value = 'private';
   const form = { elements: fields, addEventListener: (name, fn) => { handlers[name] = fn; }, reportValidity: () => true };
   const nodes = { 'feedback-form': form, 'feedback-status': { dataset: {} }, 'feedback-submit': { disabled: true }, 'feedback-count': {} };
   const submissions = [];

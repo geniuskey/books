@@ -968,6 +968,20 @@ footer p { margin: 0; }
 .feedback-status[data-state="error"] { color: var(--text); font-weight: 600; }
 .feedback-honeypot { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 .feedback-alternative { font-size: 20px; margin: 0 0 18px; }
+.feedback-inbox { max-width: 760px; margin: 0 auto 48px; }
+.inbox-heading, .inbox-filters, .inbox-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+.inbox-heading { justify-content: space-between; }
+.feedback-inbox button { padding: 8px 12px; font: inherit; font-size: 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text); background: var(--bg-elev); cursor: pointer; }
+.feedback-inbox button:disabled { opacity: .5; cursor: default; }
+.admin-login { margin: 16px 0; padding: 16px; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+.admin-login summary { cursor: pointer; }
+.admin-login p { font-size: 14px; color: var(--text-dim); }
+.inbox-filters { margin: 20px 0; }
+.inbox-filters select { margin-left: 8px; padding: 8px; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm); font: inherit; }
+.inbox-item { padding: 20px; margin: 12px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-elev); }
+.inbox-meta, #inbox-status, #admin-session { font-size: 13px; color: var(--text-dim); }
+.inbox-message { white-space: pre-wrap; overflow-wrap: anywhere; }
+.inbox-actions { margin-top: 16px; }
 
 /* 실험 탐색과 문제별 학습 경로 */
 [hidden] { display: none !important; }

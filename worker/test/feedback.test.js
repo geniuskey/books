@@ -9,6 +9,7 @@ const payload = () => ({ id: crypto.randomUUID(), type: 'cheer', message: 'ì¢‹ì
 function setup() {
   const db = new DatabaseSync(':memory:');
   db.exec(readFileSync(new URL('../migrations/0001_feedback.sql', import.meta.url), 'utf8'));
+  db.exec(readFileSync(new URL('../migrations/0002_visibility.sql', import.meta.url), 'utf8'));
   const env = {
     ALLOWED_ORIGINS: origin,
     SUBMISSIONS: { limit: async () => ({ success: true }) },
@@ -36,7 +37,7 @@ test('all three types store correctly; retries do not duplicate a message', asyn
 test('invalid fields, book references, page URLs and honeypot are rejected', async () => {
   const { db, post } = setup();
   const variants = [
-    { type: 'admin' }, { id: 'invalid' }, { message: '  ' }, { message: 'x'.repeat(3001) },
+    { type: 'admin' }, { visibility: 'any' }, { id: 'invalid' }, { message: '  ' }, { message: 'x'.repeat(3001) },
     { nickname: 'x'.repeat(41) }, { message: 123 }, { bookId: 'unknown' },
     { pageUrl: 'https://memorybook.euiyun.com/' },
     { bookId: 'memorybook', pageUrl: 'https://evil.example/' },

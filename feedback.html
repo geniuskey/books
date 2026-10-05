@@ -18,6 +18,7 @@
 <script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
 <link rel="stylesheet" href="css/style.css">
 <script src="js/core.js" defer></script>
+<script src="js/feedback-inbox.js" defer></script>
 <script src="js/feedback.js" defer></script>
 <!-- Cloudflare Web Analytics -->
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3d6151a0abc94ede89285d462527fa80"}'></script>
@@ -37,18 +38,28 @@
       <div class="feedback-context" id="feedback-context" hidden></div>
       <form id="feedback-form" class="feedback-form">
         <h2>저자에게 한마디</h2>
-        <p class="feedback-note">글은 저자만 확인하며 사이트에 공개되지 않습니다. 개인 정보는 적지 마세요. 개별 답변은 어려울 수 있습니다.</p>
+        <p class="feedback-note">비공개 글은 저자만 확인합니다. 공개 글은 아래 목록에 바로 표시됩니다. 개인 정보는 적지 마세요. 개별 답변은 어려울 수 있습니다.</p>
         <div class="feedback-form-row">
           <label>글 종류<select name="type" required><option value="request">의견·건의</option><option value="error">오류 제보</option><option value="cheer">저자 응원</option></select></label>
           <label>닉네임 <span>(선택)</span><input name="nickname" maxlength="40" autocomplete="nickname" placeholder="비워 두면 익명으로 접수됩니다"></label>
         </div>
         <label>관련 책 <span>(선택)</span><select name="bookId" id="feedback-book"><option value="">시리즈 전체 / 선택하지 않음</option></select></label>
+        <label>공개 범위<select name="visibility" required><option value="private">비공개 · 저자에게만 보내기</option><option value="public">공개 · 다른 독자도 볼 수 있음</option></select></label>
         <label>내용<textarea name="message" required maxlength="3000" rows="7" placeholder="어떤 점이 좋았나요? 어려웠던 설명이나 개선 아이디어도 편하게 남겨 주세요." aria-describedby="feedback-count"></textarea></label>
         <div class="feedback-form-foot"><span id="feedback-count">0 / 3,000자</span><button id="feedback-submit" type="submit" disabled>보내기</button></div>
         <div class="feedback-honeypot" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
         <p id="feedback-status" class="feedback-status" role="status" aria-live="polite">접수 창구를 연결하는 중…</p>
       </form>
       <noscript><p>로그인 없는 접수에는 JavaScript가 필요합니다. 아래 GitHub 창구를 이용할 수도 있습니다.</p></noscript>
+      <section class="feedback-inbox" aria-labelledby="inbox-title">
+        <div class="inbox-heading"><h2 id="inbox-title">독자들이 남긴 글</h2><button id="inbox-refresh" type="button">새로고침</button></div>
+        <details id="admin-login" class="admin-login"><summary>관리자 로그인</summary><p>저자 계정으로 Google 로그인하면 비공개 글도 확인할 수 있습니다.</p><div id="google-signin"></div><p id="admin-status" role="status"></p></details>
+        <div id="admin-session" hidden><span>관리자로 로그인했습니다.</span> <button id="admin-logout" type="button">로그아웃</button></div>
+        <div class="inbox-filters"><label>글 종류<select id="inbox-type"><option value="">전체</option><option value="error">오류 제보</option><option value="request">의견·건의</option><option value="cheer">저자 응원</option></select></label><label id="inbox-scope-label" hidden>보기<select id="inbox-scope"><option value="all">전체</option><option value="unread">안 읽은 글</option><option value="private">비공개</option><option value="public">공개</option><option value="hidden">숨긴 글</option></select></label></div>
+        <p id="inbox-status" role="status" aria-live="polite">글을 불러오는 중…</p>
+        <div id="inbox-list"></div>
+        <button id="inbox-more" type="button" hidden>더 보기</button>
+      </section>
       <h2 class="feedback-alternative">GitHub으로 남기기</h2>
       <div class="feedback-grid">
         <article class="feedback-card" id="error">

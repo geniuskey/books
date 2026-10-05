@@ -63,6 +63,7 @@ EB.start("feedback", (data) => {
       const url = new URL(config.endpoint);
       if (url.protocol !== "https:" && !(url.protocol === "http:" && ["localhost", "127.0.0.1"].includes(url.hostname))) throw new Error();
       endpoint = url.href;
+      globalThis.FeedbackInbox?.start(config, data);
       submit.disabled = false;
       showStatus("로그인 없이 보낼 수 있습니다.");
     })
@@ -79,6 +80,7 @@ EB.start("feedback", (data) => {
       bookId: fields.bookId.value,
       pageUrl: book && fields.bookId.value === book.id ? pageUrl : "",
       website: fields.website.value,
+      visibility: fields.visibility.value,
     };
     const signature = JSON.stringify(payload);
     // Reuse the ID if a timed-out request is retried, avoiding duplicate storage.
@@ -101,6 +103,7 @@ EB.start("feedback", (data) => {
       fields.message.value = "";
       pending = null;
       updateCount();
+      globalThis.FeedbackInbox?.refresh();
       showStatus(payload.type === "cheer" ? "응원 감사합니다! 저자에게 잘 전달되었습니다." : "의견이 접수되었습니다. 남겨 주셔서 감사합니다.");
     } catch (error) {
       showStatus(error.name === "TimeoutError" || error instanceof TypeError ? "연결을 확인하지 못했습니다. 작성한 글은 그대로 있습니다. 잠시 후 다시 보내 주세요." : error.message, "error");

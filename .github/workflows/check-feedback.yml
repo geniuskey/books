@@ -5,6 +5,9 @@ on:
     paths:
       - 'worker/**'
       - 'js/feedback.js'
+      - 'js/feedback-inbox.js'
+      - 'feedback.html'
+      - 'data/feedback-config.json'
       - 'data/books.json'
       - '.github/workflows/check-feedback.yml'
   workflow_dispatch:
@@ -16,5 +19,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - run: npm ci
+        working-directory: worker
       - run: node --test worker/test/*.test.js
       - run: node --check js/feedback.js
+      - run: node --check js/feedback-inbox.js
