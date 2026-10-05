@@ -34,12 +34,39 @@ EB.start("home", (d) => {
     if (event.persisted) cancelBookOpening?.();
   });
 
+  // 펼친 책의 가운데 쪽: 대표 실험을 본문과 그림으로 보여 준다.
+  const textLines = (n) => `<span class="spread-text">${"<i></i>".repeat(n)}</span>`;
+  function spreadPages(book, title) {
+    const sim = (book.featured || [])[0];
+    const seed = [...book.id].reduce((n, ch) => (n * 31 + ch.charCodeAt(0)) % 997, 7);
+    const folio = 24 + (seed % 140) * 2;
+    const figure = sim
+      ? `<img src="${esc(sim.image)}" alt="" decoding="async">`
+      : `<span class="spread-art">${window.coverArt ? window.coverArt(book.motif) : ""}</span>`;
+    const left = `<header>${esc(title)}</header>
+      <small>${sim ? "직접 해 보는 실험" : esc(book.fieldObj.name)}</small>
+      <strong>${esc(sim ? sim.title : book.headline || book.subtitle)}</strong>
+      <p>${esc(sim ? sim.desc : book.description || book.subtitle)}</p>
+      ${textLines(9)}<footer>${folio}</footer>`;
+    const right = `<header>${esc(book.subtitle)}</header>
+      <figure>${figure}<figcaption>그림 ${(seed % 9) + 1}. ${esc(sim ? sim.title : book.headline || title)}</figcaption></figure>
+      ${textLines(7)}<footer>${folio + 1}</footer>`;
+    return { left, right };
+  }
+  // 펼치기 전에 대표 실험 썸네일을 미리 받아 둔다.
+  function preloadSpread(book) {
+    const sim = (book.featured || [])[0];
+    if (sim && !preloadSpread.done.has(sim.image)) { preloadSpread.done.add(sim.image); new Image().src = sim.image; }
+  }
+  preloadSpread.done = new Set();
+
   function openBook(event, link, book, title) {
     if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey ||
         matchMedia("(prefers-reduced-motion: reduce)").matches || !Element.prototype.animate) return;
     event.preventDefault();
     if (cancelBookOpening) return;
 
+    const spread = spreadPages(book, title);
     const layer = document.createElement("div");
     layer.className = "book-opening";
     layer.style.setProperty("--book-color", book.color);
@@ -69,8 +96,8 @@ EB.start("home", (d) => {
       <div class="book-opening-stage" aria-hidden="true"><div class="book-opening-model">
         <div class="opening-back"></div>
         <div class="opening-edge opening-edge-top"></div><div class="opening-edge opening-edge-bottom"></div><div class="opening-edge opening-edge-side"></div>
-        <div class="opening-paper opening-paper-base"><small>${esc(book.fieldObj.name)}</small><strong>${esc(title)}</strong><span>${esc(book.subtitle)}</span><i></i></div>
-        <div class="opening-paper opening-leaf leaf-one"></div><div class="opening-paper opening-leaf leaf-two"></div>
+        <div class="opening-paper opening-paper-base">${spread.right}</div>
+        <div class="opening-paper opening-leaf leaf-one"></div><div class="opening-paper opening-leaf leaf-two"><div class="opening-leaf-back">${spread.left}</div></div>
         <div class="opening-cover"><div class="opening-cover-front"><small>${esc(book.fieldObj.name)}</small><strong>${esc(title)}</strong><span>${esc(book.subtitle)}</span><em>${esc(book.code)} / GENIUSKEY</em></div><div class="opening-cover-inside"></div></div>
         <div class="opening-spine">${esc(title)}</div>
         <div class="opening-gutter"></div>
@@ -137,7 +164,8 @@ EB.start("home", (d) => {
       ], { delay: 650 + i * 70, duration: 650, easing: "ease-in-out" }));
       animate(".book-opening-shade", [{ opacity: 0 }, { opacity: 1 }], { duration: 250 });
       animate(".book-opening-caption", [{ opacity: 0 }, { opacity: 1 }], { delay: 150, duration: 250 });
-      timer = setTimeout(openDestination, 1500);
+      // Hold the open spread long enough to glimpse the featured experiment.
+      timer = setTimeout(openDestination, 2300);
     } catch (error) {
       openDestination();
     }
@@ -159,6 +187,7 @@ EB.start("home", (d) => {
       a.setAttribute("aria-label", `${spineName} · ${b.subtitle} 읽기`);
       a.title = `${spineName} · ${b.subtitle}`;
       a.addEventListener("click", (event) => openBook(event, a, b, spineName));
+      ["pointerenter", "focus", "touchstart"].forEach((type) => a.addEventListener(type, () => preloadSpread(b), { once: true, passive: true }));
       a.innerHTML = `<span class="spine-top">${esc(b.fieldObj.name)}</span><span class="spine-label"><span class="spine-title">${esc(spineName)}</span><span class="spine-topic">${esc(spineTopics[b.id] || b.subtitle.replace(/ 교과서$/, ""))}</span></span><span class="spine-foot">${esc(b.code)}</span>`;
       bookBox.appendChild(a);
     });

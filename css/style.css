@@ -253,11 +253,26 @@ a:hover { text-decoration: underline; }
 .opening-cover-front em { margin-top: auto; padding-top: 12px; font: 9px var(--mono); letter-spacing: .1em; }
 .opening-cover-inside { background: linear-gradient(90deg, #e8ddc6, #faf2de 75%, #c5b99e); transform: rotateY(180deg) translateZ(.5px); border: 1px solid #d9cfba; }
 .opening-paper { inset: 5px 3px 5px 0; background: linear-gradient(90deg, #c8bea8, #fff9ea 12%, #f4ecd9); transform-origin: left center; border: 1px solid #d9cfba; }
-.opening-paper-base { display: flex; flex-direction: column; padding: 18% 11%; transform: translateZ(var(--paper-front)); color: #443a30; }
-.opening-paper-base small { font-size: 9px; letter-spacing: .12em; }
-.opening-paper-base strong { margin-top: 20%; font-size: clamp(14px, 2.5vw, 23px); line-height: 1.3; overflow-wrap: anywhere; }
-.opening-paper-base span { margin-top: 12px; font-size: 10px; line-height: 1.6; }
-.opening-paper-base i { margin-top: 20%; height: 25%; background: repeating-linear-gradient(to bottom, #b9aa9066 0 1px, transparent 1px 10px); }
+.opening-paper-base, .opening-leaf-back { display: flex; flex-direction: column; gap: 6px; padding: 9% 9% 7% 11%; color: #443a30; font-size: 8px; line-height: 1.5; overflow: hidden; }
+.opening-paper-base { transform: translateZ(var(--paper-front)); }
+/* The topmost turned leaf's back is the left page; its gutter is on the right. */
+.opening-leaf-back { position: absolute; inset: 0; padding: 9% 11% 7% 9%; border-radius: 7px 2px 2px 7px; background: linear-gradient(270deg, #c8bea8, #fff9ea 12%, #f4ecd9); transform: rotateY(180deg) translateZ(.5px); backface-visibility: hidden; }
+.opening-leaf-back > header, .opening-paper-base > header { padding-bottom: 4px; border-bottom: 1px solid #b9aa9066; color: #8a7b66; font-size: 7px; letter-spacing: .08em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.opening-paper-base > header { text-align: right; }
+.opening-leaf-back > small { margin-top: 8%; color: var(--book-color); font-size: 7px; font-weight: 700; letter-spacing: .12em; }
+.opening-leaf-back > strong { flex: none; font-size: clamp(11px, 2vw, 15px); line-height: 1.3; overflow-wrap: anywhere; }
+.opening-leaf-back > p { flex: none; margin: 0; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; overflow: hidden; }
+.opening-paper-base figure { margin: 4% 0 2px; }
+.opening-paper-base img, .spread-art { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid #b9aa9088; border-radius: 2px; background: #e8ddc6; }
+.spread-art { display: flex; align-items: center; color: #fff4da; background: var(--book-color); }
+.spread-art svg { width: 100%; height: auto; }
+.opening-paper-base figcaption { margin-top: 4px; color: #6f6252; font-size: 7px; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.spread-text { display: flex; flex-direction: column; gap: 5px; min-height: 0; overflow: hidden; padding-top: 2px; }
+.spread-text i { flex: none; height: 2px; border-radius: 1px; background: #b9aa9077; }
+.spread-text i:nth-child(4n+1) { width: 100%; } .spread-text i:nth-child(4n+2) { width: 96%; } .spread-text i:nth-child(4n+3) { width: 99%; } .spread-text i:nth-child(4n) { width: 62%; margin-bottom: 4px; }
+.opening-leaf-back > footer, .opening-paper-base > footer { margin-top: auto; color: #8a7b66; font: 7px var(--mono); }
+.opening-paper-base > footer { text-align: right; }
+.leaf-two { transform-style: preserve-3d; }
 .opening-leaf { background: linear-gradient(90deg, #c8bea8, #fff9ea 12%, #f4ecd9); }
 .opening-edge { position: absolute; background: repeating-linear-gradient(90deg, #d1c5ac 0 1px, #f8efd9 1px 3px); backface-visibility: hidden; }
 /* Join the page block faces at the same front/back Z coordinates. The model's
