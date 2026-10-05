@@ -1019,6 +1019,8 @@ footer p { margin: 0; }
 .feedback-alternative .feedback-card h2 { font-size: 18px; margin-top: 12px; }
 .feedback-page .admin-login { padding: 0; border: 0; color: var(--text-dim); font-size: 13px; }
 .feedback-page #admin-session { margin-top: 20px; }
+.feedback-admin { margin-top: 40px; padding: 20px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-elev); }
+.feedback-admin h2 { margin: 0 0 16px; font-size: 18px; }
 @media (max-width: 600px) {
   .feedback-compose > summary { padding: 18px; }
   .compose-hint { display: block; margin: 5px 0 0; font-size: 12px; }

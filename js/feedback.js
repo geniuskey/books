@@ -1,6 +1,8 @@
 /* 로그인 없는 접수와 GitHub 양식에 책·페이지 위치를 연결한다. */
 EB.start("feedback", (data) => {
   const params = new URLSearchParams(location.search);
+  const adminPanel = document.getElementById("feedback-admin");
+  if (adminPanel) adminPanel.hidden = params.get("admin") !== "1";
   const bookId = params.get("book");
   const book = data.books.find((item) => item.id === bookId && item.status === "published");
   const page = params.get("page") || "";

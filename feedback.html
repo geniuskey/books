@@ -61,7 +61,7 @@
         <div class="inbox-filters"><label>글 종류<select id="inbox-type"><option value="">전체</option><option value="error">오류 제보</option><option value="request">의견·건의</option><option value="cheer">저자 응원</option></select></label><label id="inbox-scope-label" hidden>보기<select id="inbox-scope"><option value="all">전체</option><option value="unread">안 읽은 글</option><option value="private">비공개</option><option value="public">공개</option><option value="hidden">숨긴 글</option></select></label></div>
         <p id="inbox-status" role="status" aria-live="polite">글을 불러오는 중…</p>
         <div id="inbox-list"></div>
-        <button id="inbox-more" type="button" hidden>더 보기</button>
+        <button id="inbox-more" type="button" hidden>이전 글 더 보기 · 20개씩</button>
       </section>
       <details class="feedback-alternative"><summary>GitHub으로 제보하고 싶으신가요?</summary>
       <div class="feedback-grid">
@@ -78,9 +78,12 @@
           <a data-feedback-type="request" href="https://github.com/geniuskey/books/issues/new">건의하기 →</a>
         </article>
       </div>
-      <p class="feedback-note">위 GitHub 창구는 로그인이 필요하며 글이 공개됩니다. 로그인 없이 보내려면 ‘의견 남기기’를 이용해 주세요.</p>
+      <p class="feedback-note">위 창구는 GitHub 계정으로 로그인하며 글이 공개됩니다. 로그인 없이 보내려면 ‘의견 남기기’를 이용해 주세요.</p>
       </details>
+      <aside id="feedback-admin" class="feedback-admin" aria-label="게시판 관리" hidden>
+        <h2>게시판 관리</h2>
         <details id="admin-login" class="admin-login"><summary>관리자 로그인</summary><p>저자 계정으로 Google 로그인하면 비공개 글도 확인할 수 있습니다.</p><div id="google-signin"></div><p id="admin-status" role="status"></p></details>
+      </aside>
     </div>
   </section>
 </main>
