@@ -983,6 +983,51 @@ footer p { margin: 0; }
 .inbox-message { white-space: pre-wrap; overflow-wrap: anywhere; }
 .inbox-actions { margin-top: 16px; }
 
+/* 독자 게시판: 목록 중심, 필요할 때 펼치는 작성 영역 */
+.feedback-page .wrap { max-width: 920px; }
+.feedback-page .page-head { padding-bottom: 28px; }
+.feedback-page .lead { max-width: 650px; }
+.feedback-compose { margin-bottom: 36px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-elev); }
+.feedback-compose > summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 24px; cursor: pointer; list-style: none; }
+.feedback-compose > summary::-webkit-details-marker { display: none; }
+.feedback-compose > summary strong { color: var(--accent); font-size: 17px; }
+.compose-hint { margin-left: 16px; color: var(--text-dim); font-size: 14px; }
+.compose-icon { display: grid; place-items: center; flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-size: 22px; }
+.feedback-compose[open] .compose-icon { transform: rotate(45deg); }
+.feedback-compose[open] > summary { border-bottom: 1px solid var(--border); }
+.feedback-compose .feedback-form { max-width: none; margin: 0; border: 0; background: transparent; }
+.feedback-compose .feedback-form h2 { font-size: 21px; }
+.feedback-page .feedback-form button { background: var(--text); color: var(--bg); }
+.feedback-page :is(button, summary, input, select, textarea, a):focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.feedback-page .feedback-inbox { max-width: none; margin-bottom: 40px; }
+.feedback-page .inbox-heading h2 { margin: 0; font-size: 24px; letter-spacing: -.03em; }
+.feedback-page .inbox-heading p { margin: 8px 0 0; color: var(--text-dim); font-size: 14px; }
+.feedback-page .inbox-filters { padding: 16px 0; margin: 20px 0 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); font-size: 14px; }
+.feedback-page #inbox-status { margin: 18px 0; line-height: 1.8; }
+.feedback-page #inbox-list:empty { min-height: 100px; }
+.feedback-page .inbox-item { padding: 24px; margin: 0 0 12px; border-radius: var(--radius); }
+.feedback-page .inbox-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 0; }
+.inbox-type { display: inline-block; padding: 3px 9px; border-radius: 5px; color: var(--accent); background: var(--accent-soft); font-weight: 650; }
+.feedback-page .inbox-meta time { margin-left: auto; color: var(--text-faint); }
+.feedback-page .inbox-message { margin: 16px 0; line-height: 1.85; }
+.feedback-page .inbox-item > a { font-size: 13px; }
+.feedback-page #inbox-more { display: block; width: 100%; padding: 13px; }
+.feedback-page .feedback-alternative { border-top: 1px solid var(--border); padding-top: 20px; margin-bottom: 20px; font-size: 14px; color: var(--text-dim); }
+.feedback-alternative > summary { cursor: pointer; }
+.feedback-alternative .feedback-grid { margin-top: 20px; }
+.feedback-alternative .feedback-card { min-height: 0; padding: 20px; box-shadow: none; }
+.feedback-alternative .feedback-card h2 { font-size: 18px; margin-top: 12px; }
+.feedback-page .admin-login { padding: 0; border: 0; color: var(--text-dim); font-size: 13px; }
+.feedback-page #admin-session { margin-top: 20px; }
+@media (max-width: 600px) {
+  .feedback-compose > summary { padding: 18px; }
+  .compose-hint { display: block; margin: 5px 0 0; font-size: 12px; }
+  .feedback-page .inbox-heading h2 { font-size: 21px; }
+  .feedback-page .inbox-heading p { max-width: 220px; }
+  .feedback-page .inbox-item { padding: 18px; }
+  .feedback-page .inbox-meta { gap: 8px; }
+}
+
 /* 실험 탐색과 문제별 학습 경로 */
 [hidden] { display: none !important; }
 .book-path-count { margin: 0 0 12px; color: var(--text-dim); }

@@ -31,8 +31,21 @@ globalThis.FeedbackInbox = (() => {
       card.className = 'inbox-item';
       const meta = document.createElement('p');
       meta.className = 'inbox-meta';
-      const date = new Date(item.created_at).toLocaleString('ko-KR');
-      meta.textContent = `${types[item.type]} · ${item.nickname || '익명'} · ${date}${admin ? ` · ${item.visibility === 'public' ? '공개' : '비공개'} · ${item.read_at ? '읽음' : '안 읽음'}${item.is_hidden ? ' · 숨김' : ''}` : ''}`;
+      const badge = document.createElement('span');
+      badge.className = 'inbox-type';
+      badge.textContent = types[item.type] || '의견';
+      const author = document.createElement('span');
+      author.textContent = item.nickname || '익명';
+      const date = document.createElement('time');
+      date.dateTime = item.created_at;
+      date.textContent = new Date(item.created_at).toLocaleDateString('ko-KR');
+      date.title = new Date(item.created_at).toLocaleString('ko-KR');
+      meta.append(badge, author, date);
+      if (admin) {
+        const state = document.createElement('span');
+        state.textContent = `${item.visibility === 'public' ? '공개' : '비공개'} · ${item.read_at ? '읽음' : '안 읽음'}${item.is_hidden ? ' · 숨김' : ''}`;
+        meta.append(state);
+      }
       const message = document.createElement('p');
       message.className = 'inbox-message';
       message.textContent = item.message;
@@ -95,7 +108,7 @@ globalThis.FeedbackInbox = (() => {
         const result = await api(`${credential ? '/api/admin/feedback' : '/api/feedback/public'}?${query}`, {}, credential);
         if (current !== generation) return;
         result.items.forEach((item) => list.append(render(item, Boolean(credential))));
-        status.textContent = list.children.length ? (credential ? '관리자에게만 비공개 글이 표시됩니다.' : '독자가 공개로 남긴 글입니다.') : '아직 해당하는 글이 없습니다.';
+        status.textContent = list.children.length ? (credential ? '관리자에게만 비공개 글이 표시됩니다.' : '독자가 공개로 남긴 글입니다.') : ($('inbox-type').value || credential ? '이 조건에 맞는 글이 없습니다. 다른 조건으로 살펴보세요.' : '아직 공개된 글이 없습니다. ‘의견 남기기’에서 첫 이야기를 나눠 주세요.');
         $('inbox-more').hidden = !result.hasMore;
         page++;
       } catch (error) { if (current === generation) handleError(error); }

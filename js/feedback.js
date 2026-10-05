@@ -43,6 +43,9 @@ EB.start("feedback", (data) => {
   const submit = document.getElementById("feedback-submit");
   const count = document.getElementById("feedback-count");
   const fields = form.elements;
+  const composer = document.getElementById("feedback-compose");
+  // Book links arrive with writing intent; ordinary visitors see the board first.
+  if (composer && (book || ["error", "request", "cheer"].includes(type))) composer.open = true;
   data.books.filter((b) => b.status === "published").forEach((b) => {
     fields.bookId.add(new Option(`${b.title} · ${b.subtitle}`, b.id));
   });
@@ -67,7 +70,11 @@ EB.start("feedback", (data) => {
       submit.disabled = false;
       showStatus("로그인 없이 보낼 수 있습니다.");
     })
-    .catch(() => showStatus("접수 창구를 준비 중입니다. 지금은 아래 GitHub 창구를 이용해 주세요.", "error"));
+    .catch(() => {
+      showStatus("접수 창구에 연결하지 못했습니다. 잠시 후 다시 방문하거나 아래 GitHub 창구를 이용해 주세요.", "error");
+      const inboxStatus = document.getElementById("inbox-status");
+      if (inboxStatus) inboxStatus.textContent = "게시판에 연결하지 못했습니다. 페이지를 새로고침해 주세요.";
+    });
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();

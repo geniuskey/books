@@ -24,20 +24,22 @@
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3d6151a0abc94ede89285d462527fa80"}'></script>
 <!-- End Cloudflare Web Analytics -->
 </head>
-<body>
+<body class="feedback-page">
 <main>
   <section class="page-head">
     <div class="wrap">
       <div class="eyebrow">Feedback</div>
       <h1>독자 의견</h1>
-      <p class="lead">발견한 오류, 읽고 싶은 주제, 저자에게 전하고 싶은 응원을 남겨 주세요. 로그인 없이 보낼 수 있습니다.</p>
+      <p class="lead">함께 읽고, 더 나은 책을 만듭니다. 오류 제보부터 작은 응원까지 편하게 나눠 주세요.</p>
     </div>
   </section>
   <section class="block feedback-section">
     <div class="wrap">
       <div class="feedback-context" id="feedback-context" hidden></div>
+      <details id="feedback-compose" class="feedback-compose">
+        <summary><span><strong>의견 남기기</strong><span class="compose-hint">로그인 없이, 저자에게 전하는 한마디</span></span><span class="compose-icon" aria-hidden="true">＋</span></summary>
       <form id="feedback-form" class="feedback-form">
-        <h2>저자에게 한마디</h2>
+        <h2>어떤 이야기를 전하고 싶으신가요?</h2>
         <p class="feedback-note">비공개 글은 저자만 확인합니다. 공개 글은 아래 목록에 바로 표시됩니다. 개인 정보는 적지 마세요. 개별 답변은 어려울 수 있습니다.</p>
         <div class="feedback-form-row">
           <label>글 종류<select name="type" required><option value="request">의견·건의</option><option value="error">오류 제보</option><option value="cheer">저자 응원</option></select></label>
@@ -50,17 +52,18 @@
         <div class="feedback-honeypot" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
         <p id="feedback-status" class="feedback-status" role="status" aria-live="polite">접수 창구를 연결하는 중…</p>
       </form>
+      </details>
       <noscript><p>로그인 없는 접수에는 JavaScript가 필요합니다. 아래 GitHub 창구를 이용할 수도 있습니다.</p></noscript>
       <section class="feedback-inbox" aria-labelledby="inbox-title">
-        <div class="inbox-heading"><h2 id="inbox-title">독자들이 남긴 글</h2><button id="inbox-refresh" type="button">새로고침</button></div>
-        <details id="admin-login" class="admin-login"><summary>관리자 로그인</summary><p>저자 계정으로 Google 로그인하면 비공개 글도 확인할 수 있습니다.</p><div id="google-signin"></div><p id="admin-status" role="status"></p></details>
+        <div class="inbox-heading"><div><h2 id="inbox-title">독자들이 남긴 글</h2><p>책을 읽으며 발견한 것들, 함께 나누는 이야기.</p></div><button id="inbox-refresh" type="button">새로고침</button></div>
+
         <div id="admin-session" hidden><span>관리자로 로그인했습니다.</span> <button id="admin-logout" type="button">로그아웃</button></div>
         <div class="inbox-filters"><label>글 종류<select id="inbox-type"><option value="">전체</option><option value="error">오류 제보</option><option value="request">의견·건의</option><option value="cheer">저자 응원</option></select></label><label id="inbox-scope-label" hidden>보기<select id="inbox-scope"><option value="all">전체</option><option value="unread">안 읽은 글</option><option value="private">비공개</option><option value="public">공개</option><option value="hidden">숨긴 글</option></select></label></div>
         <p id="inbox-status" role="status" aria-live="polite">글을 불러오는 중…</p>
         <div id="inbox-list"></div>
         <button id="inbox-more" type="button" hidden>더 보기</button>
       </section>
-      <h2 class="feedback-alternative">GitHub으로 남기기</h2>
+      <details class="feedback-alternative"><summary>GitHub으로 제보하고 싶으신가요?</summary>
       <div class="feedback-grid">
         <article class="feedback-card" id="error">
           <span class="feedback-step">01 · Corrections</span>
@@ -75,7 +78,9 @@
           <a data-feedback-type="request" href="https://github.com/geniuskey/books/issues/new">건의하기 →</a>
         </article>
       </div>
-      <p class="feedback-note">위 GitHub 창구는 로그인이 필요하며 글이 공개됩니다. 로그인 없이 보내려면 상단 작성 폼을 이용해 주세요.</p>
+      <p class="feedback-note">위 GitHub 창구는 로그인이 필요하며 글이 공개됩니다. 로그인 없이 보내려면 ‘의견 남기기’를 이용해 주세요.</p>
+      </details>
+        <details id="admin-login" class="admin-login"><summary>관리자 로그인</summary><p>저자 계정으로 Google 로그인하면 비공개 글도 확인할 수 있습니다.</p><div id="google-signin"></div><p id="admin-status" role="status"></p></details>
     </div>
   </section>
 </main>
