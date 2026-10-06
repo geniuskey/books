@@ -3978,6 +3978,204 @@
     "link": "chapters/wet.html#sim-eb"
   },
   {
+    "id": "dopingbook/analyzer/sim-mag",
+    "bookId": "dopingbook",
+    "title": "분석 자석: 자기장과 이온 종별 궤적",
+    "link": "chapters/analyzer.html#sim-mag"
+  },
+  {
+    "id": "dopingbook/analyzer/sim-spec",
+    "bookId": "dopingbook",
+    "title": "자기장 훑기: 질량 스펙트럼",
+    "link": "chapters/analyzer.html#sim-spec"
+  },
+  {
+    "id": "dopingbook/anneal/sim-sol",
+    "bookId": "dopingbook",
+    "title": "고용 한계: 넣은 농도와 녹일 수 있는 농도",
+    "link": "chapters/anneal.html#sim-sol"
+  },
+  {
+    "id": "dopingbook/anneal/sim-sper",
+    "bookId": "dopingbook",
+    "title": "비정질층이 다시 결정이 되는 속도",
+    "link": "chapters/anneal.html#sim-sper"
+  },
+  {
+    "id": "dopingbook/anneal/sim-an",
+    "bookId": "dopingbook",
+    "title": "어닐: 온도·시간 → 분포와 활성화",
+    "link": "chapters/anneal.html#sim-an"
+  },
+  {
+    "id": "dopingbook/beamline/sim-env",
+    "bookId": "dopingbook",
+    "title": "공간 전하로 부푸는 빔",
+    "link": "chapters/beamline.html#sim-env"
+  },
+  {
+    "id": "dopingbook/beamline/sim-scan",
+    "bookId": "dopingbook",
+    "title": "스캔 피치와 도즈 균일도",
+    "link": "chapters/beamline.html#sim-scan"
+  },
+  {
+    "id": "dopingbook/budget/sim-dt",
+    "bookId": "dopingbook",
+    "title": "열 예산이 쌓이는 곳",
+    "link": "chapters/budget.html#sim-dt"
+  },
+  {
+    "id": "dopingbook/budget/sim-map",
+    "bookId": "dopingbook",
+    "title": "어닐 방식별 x j –R s 궤적",
+    "link": "chapters/budget.html#sim-map"
+  },
+  {
+    "id": "dopingbook/channeling/sim-ch",
+    "bookId": "dopingbook",
+    "title": "결정을 보는 각도와 분포의 꼬리",
+    "link": "chapters/channeling.html#sim-ch"
+  },
+  {
+    "id": "dopingbook/channeling/sim-psi",
+    "bookId": "dopingbook",
+    "title": "임계각과 스크린 산화막",
+    "link": "chapters/channeling.html#sim-psi"
+  },
+  {
+    "id": "dopingbook/damage/sim-am",
+    "bookId": "dopingbook",
+    "title": "손상 누적과 비정질층",
+    "link": "chapters/damage.html#sim-am"
+  },
+  {
+    "id": "dopingbook/damage/sim-pai",
+    "bookId": "dopingbook",
+    "title": "저마늄 PAI와 붕소 분포",
+    "link": "chapters/damage.html#sim-pai"
+  },
+  {
+    "id": "dopingbook/defects/sim-ec",
+    "bookId": "dopingbook",
+    "title": "감속 모드 에너지 오염과 접합 깊이",
+    "link": "chapters/defects.html#sim-ec"
+  },
+  {
+    "id": "dopingbook/defects/sim-sh",
+    "bookId": "dopingbook",
+    "title": "촘촘한 게이트 사이의 틸트 주입",
+    "link": "chapters/defects.html#sim-sh"
+  },
+  {
+    "id": "dopingbook/diffusion/sim-fe",
+    "bookId": "dopingbook",
+    "title": "농도 의존 확산",
+    "link": "chapters/diffusion.html#sim-fe"
+  },
+  {
+    "id": "dopingbook/diffusion/sim-ted",
+    "bookId": "dopingbook",
+    "title": "과도 확산: 손상, 온도, 탄소",
+    "link": "chapters/diffusion.html#sim-ted"
+  },
+  {
+    "id": "dopingbook/doping/sim-np",
+    "bookId": "dopingbook",
+    "title": "순 도핑과 캐리어 농도",
+    "link": "chapters/doping.html#sim-np"
+  },
+  {
+    "id": "dopingbook/doping/sim-sc",
+    "bookId": "dopingbook",
+    "title": "농도 자: 10¹⁴에서 10²¹까지",
+    "link": "chapters/doping.html#sim-sc"
+  },
+  {
+    "id": "dopingbook/dose/sim-pc",
+    "bookId": "dopingbook",
+    "title": "아웃개싱, 중성화, 압력 보정",
+    "link": "chapters/dose.html#sim-pc"
+  },
+  {
+    "id": "dopingbook/dose/sim-ch",
+    "bookId": "dopingbook",
+    "title": "게이트 위 전압: 안테나 비와 플러드 건",
+    "link": "chapters/dose.html#sim-ch"
+  },
+  {
+    "id": "dopingbook/flow/sim-flow",
+    "bookId": "dopingbook",
+    "title": "CMOS 한 주기의 도핑 스텝",
+    "link": "chapters/flow.html#sim-flow"
+  },
+  {
+    "id": "dopingbook/metrology/sim-rs",
+    "bookId": "dopingbook",
+    "title": "면저항 계산기: 분포 → R s",
+    "link": "chapters/metrology.html#sim-rs"
+  },
+  {
+    "id": "dopingbook/metrology/sim-sims",
+    "bookId": "dopingbook",
+    "title": "SIMS 깊이 분해능과 측정된 분포",
+    "link": "chapters/metrology.html#sim-sims"
+  },
+  {
+    "id": "dopingbook/nextgen/sim-fin",
+    "bookId": "dopingbook",
+    "title": "핀 등각 도핑: 빔 주입과 플라스마 도핑",
+    "link": "chapters/nextgen.html#sim-fin"
+  },
+  {
+    "id": "dopingbook/nextgen/sim-epi",
+    "bookId": "dopingbook",
+    "title": "에피 소스·드레인에서 옆으로 퍼지는 익스텐션",
+    "link": "chapters/nextgen.html#sim-epi"
+  },
+  {
+    "id": "dopingbook/source/sim-arc",
+    "bookId": "dopingbook",
+    "title": "자기장이 전자를 붙잡는다",
+    "link": "chapters/source.html#sim-arc"
+  },
+  {
+    "id": "dopingbook/source/sim-ex",
+    "bookId": "dopingbook",
+    "title": "추출 전압, 간격, 플라스마 밀도와 빔 모양",
+    "link": "chapters/source.html#sim-ex"
+  },
+  {
+    "id": "dopingbook/stopping/sim-sp",
+    "bookId": "dopingbook",
+    "title": "핵 저지와 전자 저지",
+    "link": "chapters/stopping.html#sim-sp"
+  },
+  {
+    "id": "dopingbook/stopping/sim-mc",
+    "bookId": "dopingbook",
+    "title": "몬테카를로 이온 궤적",
+    "link": "chapters/stopping.html#sim-mc"
+  },
+  {
+    "id": "dopingbook/stopping/sim-prof",
+    "bookId": "dopingbook",
+    "title": "주입 분포: 이온 종, 에너지, 도즈",
+    "link": "chapters/stopping.html#sim-prof"
+  },
+  {
+    "id": "dopingbook/tools/sim-map",
+    "bookId": "dopingbook",
+    "title": "에너지-도즈 지도 위의 장비와 용도",
+    "link": "chapters/tools.html#sim-map"
+  },
+  {
+    "id": "dopingbook/tools/sim-tp",
+    "bookId": "dopingbook",
+    "title": "도즈, 빔 전류, 처리량",
+    "link": "chapters/tools.html#sim-tp"
+  },
+  {
     "id": "yieldbook/classify/sim-sp",
     "bookId": "yieldbook",
     "title": "리뷰 샘플링: 일부만 보고 전체를 말하기",

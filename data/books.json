@@ -426,6 +426,33 @@
       "motif": "layers"
     },
     {
+      "id": "dopingbook",
+      "code": "DOP",
+      "title": "DopingBook",
+      "subtitle": "반도체 도핑 교과서",
+      "headline": "불순물로 전기를 설계한다",
+      "description": "도펀트와 접합부터 이온 소스·질량 분석기·빔라인, 저지와 채널링, 손상·비정질화, 어닐·확산·TED, 열 예산과 측정까지. 가상의 DB-20 pMOS 소스/드레인 확장을 따라 에너지·도즈·각도·어닐 조건을 바꾸며 xj와 면저항이 움직이는 과정을 직접 봅니다.",
+      "url": "https://dopingbook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/dopingbook",
+      "field": "semiconductor",
+      "stage": "process",
+      "status": "published",
+      "level": "공대 학부·현업 입문",
+      "chapters": 17,
+      "simulators": 33,
+      "color": "#7048e8",
+      "colorDark": "#9775fa",
+      "topics": [
+        "이온 주입·빔라인",
+        "저지·채널링",
+        "손상·비정질화",
+        "어닐·활성화",
+        "확산·TED",
+        "면저항·측정"
+      ],
+      "motif": "layers"
+    },
+    {
       "id": "yieldbook",
       "code": "YLD",
       "title": "YieldBook",
