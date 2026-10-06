@@ -27,7 +27,7 @@ EB.start("home", (d) => {
     memorybook: "메모리", opticsbook: "센서 광학", sensorbook: "이미지 센서", displaybook: "디스플레이",
     chipindustrybook: "반도체 산업", computerbook: "컴퓨터", aibook: "인공지능",
     carbook: "자동차", shipbook: "선박", phonebook: "스마트폰",
-    colorbook: "색채공학", moneybook: "돈과 금융", stockbook: "주식", camerabook: "카메라",
+    colorbook: "색채공학", moneybook: "돈과 금융", stockbook: "주식", insurebook: "보험", camerabook: "카메라",
   };
   let cancelBookOpening = null;
   window.addEventListener("pageshow", (event) => {
@@ -170,7 +170,117 @@ EB.start("home", (d) => {
       openDestination();
     }
   }
-  shelves.filter(([, books]) => books.length).forEach(([name, books], rowIndex) => {
+  const favoriteKey = "books:favorites:v1";
+  const bookIds = new Set(published.map((book) => book.id));
+  function readFavorites() {
+    try {
+      const saved = JSON.parse(localStorage.getItem(favoriteKey) || "[]");
+      return new Set(Array.isArray(saved) ? saved.filter((id) => bookIds.has(id)) : []);
+    } catch { return new Set(); }
+  }
+  let favorites = readFavorites();
+  const favoriteLinks = new Map();
+  const menu = document.createElement("div");
+  menu.className = "book-context-menu";
+  menu.setAttribute("role", "menu");
+  menu.setAttribute("aria-label", "책 메뉴");
+  menu.hidden = true;
+  const toggleFavorite = document.createElement("button");
+  toggleFavorite.type = "button";
+  toggleFavorite.setAttribute("role", "menuitem");
+  const resetOrder = document.createElement("button");
+  resetOrder.type = "button";
+  resetOrder.setAttribute("role", "menuitem");
+  resetOrder.textContent = "책장 순서 초기화";
+  menu.append(toggleFavorite, resetOrder);
+  document.body.appendChild(menu);
+  let menuBook = null;
+  function closeBookMenu(restoreFocus = false) {
+    const link = menuBook && favoriteLinks.get(menuBook);
+    menu.hidden = true;
+    menuBook = null;
+    if (restoreFocus) link?.focus({ preventScroll: true });
+  }
+  function updateFavorites() {
+    favoriteLinks.forEach((link, id) => {
+      const selected = favorites.has(id);
+      link.classList.toggle("is-favorite", selected);
+      link._favoriteSticker.hidden = !selected;
+      link.setAttribute("aria-label", link.dataset.readLabel + (selected ? " · 별 표시됨" : ""));
+    });
+  }
+  function showBookMenu(event, id, link) {
+    event.preventDefault();
+    menuBook = id;
+    toggleFavorite.textContent = favorites.has(id) ? "별 표시 해제" : "별 표시 추가";
+    menu.hidden = false;
+    const rect = link.getBoundingClientRect();
+    const x = event.clientX || rect.left;
+    const y = event.clientY || rect.top;
+    menu.style.left = Math.max(8, Math.min(x, innerWidth - menu.offsetWidth - 8)) + "px";
+    menu.style.top = Math.max(8, Math.min(y, innerHeight - menu.offsetHeight - 8)) + "px";
+    toggleFavorite.focus({ preventScroll: true });
+  }
+  toggleFavorite.addEventListener("click", () => {
+    if (!menuBook) return;
+    if (favorites.has(menuBook)) favorites.delete(menuBook);
+    else favorites.add(menuBook);
+    try {
+      localStorage.setItem(favoriteKey, JSON.stringify([...favorites]));
+    } catch {
+      // Keep the highlight for this visit if browser storage is unavailable.
+    }
+    updateFavorites();
+    closeBookMenu(true);
+  });
+  document.addEventListener("pointerdown", (event) => {
+    if (!menu.hidden && !menu.contains(event.target)) closeBookMenu();
+  });
+  document.addEventListener("focusin", (event) => {
+    if (!menu.hidden && !menu.contains(event.target)) closeBookMenu();
+  });
+  menu.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") { event.preventDefault(); closeBookMenu(true); }
+    if (["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) {
+      event.preventDefault();
+      const items = [toggleFavorite, resetOrder];
+      const index = items.indexOf(document.activeElement);
+      const next = event.key === "Home" ? 0 : event.key === "End" ? items.length - 1
+        : (index + (event.key === "ArrowDown" ? 1 : -1) + items.length) % items.length;
+      items[next].focus();
+    }
+  });
+  window.addEventListener("resize", () => closeBookMenu());
+  document.addEventListener("wheel", () => closeBookMenu(), { passive: true });
+  document.addEventListener("touchmove", () => closeBookMenu(), { passive: true });
+  window.addEventListener("blur", () => closeBookMenu());
+  window.addEventListener("storage", (event) => {
+    if (event.key === favoriteKey || event.key === null) {
+      favorites = readFavorites();
+      updateFavorites();
+      closeBookMenu();
+    }
+  });
+
+  const defaultRowSizes = shelves.map(([, books]) => books.length);
+  const shelfOrderKey = "books:shelf-order:v1";
+  try {
+    const saved = JSON.parse(localStorage.getItem(shelfOrderKey) || "null");
+    if (Array.isArray(saved) && saved.length === shelves.length && saved.every(Array.isArray)) {
+      const available = new Map(orderedBooks.map((book) => [book.id, book]));
+      saved.forEach((ids, index) => {
+        shelves[index][1] = ids.flatMap((id) => {
+          const book = available.get(id);
+          available.delete(id);
+          return book ? [book] : [];
+        });
+      });
+      // Newly published books still appear even when a personal arrangement is saved.
+      shelves[0][1].push(...available.values());
+    }
+  } catch { /* Use the original arrangement when storage is unavailable or invalid. */ }
+  const refreshStickers = [];
+  shelves.forEach(([name, books], rowIndex) => {
     const shelf = document.createElement("div");
     shelf.className = "home-shelf";
     shelf.innerHTML = `<div class="shelf-label"><span>${esc(String(rowIndex + 1).padStart(2, "0"))}</span>${esc(name)}</div><div class="shelf-books"></div>`;
@@ -178,6 +288,8 @@ EB.start("home", (d) => {
     books.forEach((b) => {
       const a = document.createElement("a");
       a.className = "book-spine";
+      a.dataset.bookId = b.id;
+      a.draggable = true;
       const spineName = b.title.replace(/Book$/, " Book").replace(/([a-z])([A-Z][a-z])/g, "$1 $2");
       if (spineName.length > 16) a.classList.add("long-title");
       a.href = b.url;
@@ -185,14 +297,259 @@ EB.start("home", (d) => {
       a.rel = "noopener";
       a.style.setProperty("--book-color", b.color);
       a.setAttribute("aria-label", `${spineName} · ${b.subtitle} 읽기`);
+      a.dataset.readLabel = a.getAttribute("aria-label");
+      favoriteLinks.set(b.id, a);
+      a.addEventListener("contextmenu", (event) => showBookMenu(event, b.id, a));
+      a.addEventListener("keydown", (event) => {
+        if (event.key === "ContextMenu" || (event.shiftKey && event.key === "F10")) {
+          showBookMenu(event, b.id, a);
+        }
+      });
       a.title = `${spineName} · ${b.subtitle}`;
       a.addEventListener("click", (event) => openBook(event, a, b, spineName));
       ["pointerenter", "focus", "touchstart"].forEach((type) => a.addEventListener(type, () => preloadSpread(b), { once: true, passive: true }));
       a.innerHTML = `<span class="spine-top">${esc(b.fieldObj.name)}</span><span class="spine-label"><span class="spine-title">${esc(spineName)}</span><span class="spine-topic">${esc(spineTopics[b.id] || b.subtitle.replace(/ 교과서$/, ""))}</span></span><span class="spine-foot">${esc(b.code)}</span>`;
       bookBox.appendChild(a);
     });
+    const stickers = document.createElement("div");
+    stickers.className = "shelf-stickers";
+    stickers.setAttribute("aria-hidden", "true");
+    const links = [...bookBox.querySelectorAll(".book-spine")];
+    links.forEach((link) => {
+      const sticker = document.createElement("span");
+      sticker.className = "shelf-sticker";
+      sticker.textContent = "★";
+      sticker.hidden = true;
+      link._favoriteSticker = sticker;
+      stickers.appendChild(sticker);
+    });
+    shelf.appendChild(stickers);
     shelfBox.appendChild(shelf);
+    function positionStickers() {
+      const base = stickers.getBoundingClientRect();
+      [...bookBox.querySelectorAll(".book-spine")].forEach((link) => {
+        stickers.appendChild(link._favoriteSticker);
+        const rect = link.getBoundingClientRect();
+        link._favoriteSticker.style.width = Math.max(20, rect.width * .55) + "px";
+        link._favoriteSticker.style.left = (rect.left + rect.width / 2 - base.left) + "px";
+      });
+    }
+    refreshStickers.push(positionStickers);
+    new ResizeObserver(positionStickers).observe(bookBox);
+    bookBox.addEventListener("scroll", positionStickers, { passive: true });
+    positionStickers();
   });
+
+  updateFavorites();
+
+  // Preview a real gap while keeping each shelf's original number of books.
+  const bookRows = [...shelfBox.querySelectorAll(".shelf-books")];
+  const rowSizes = bookRows.map((row) => row.children.length);
+  const motion = new Map();
+  let draggedBook = null;
+  let originalOrder = null;
+  let dropRow = null;
+  let suppressClickUntil = 0;
+  const currentOrder = () => bookRows.flatMap((row) => [...row.children]);
+  const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
+  function stopMotion(link) {
+    const running = motion.get(link);
+    if (!running) return;
+    running.animation.cancel();
+    running.ghost.remove();
+    link.style.visibility = "";
+    motion.delete(link);
+  }
+  function arrange(order, animate = true) {
+    const before = new Map(currentOrder().map((link) => [
+      link, (motion.get(link)?.ghost || link).getBoundingClientRect(),
+    ]));
+    [...motion.keys()].forEach(stopMotion);
+    let offset = 0;
+    bookRows.forEach((row, index) => {
+      order.slice(offset, offset + rowSizes[index]).forEach((link) => row.appendChild(link));
+      offset += rowSizes[index];
+    });
+    refreshStickers.forEach((refresh) => refresh());
+    if (!animate || reducedMotion.matches) return;
+    order.forEach((link) => {
+      if (link === draggedBook) return;
+      const first = before.get(link);
+      const last = link.getBoundingClientRect();
+      if (!first || (Math.abs(first.left - last.left) < 1 && Math.abs(first.top - last.top) < 1)) return;
+      // Fixed visual copies can travel between shelves without being clipped by the wood.
+      const ghost = link.cloneNode(true);
+      ghost.removeAttribute("href");
+      ghost.removeAttribute("data-book-id");
+      ghost.setAttribute("aria-hidden", "true");
+      ghost.classList.add("book-moving-copy");
+      Object.assign(ghost.style, {
+        left: last.left + "px", top: last.top + "px",
+        width: last.width + "px", height: last.height + "px",
+        visibility: "visible",
+      });
+      document.body.appendChild(ghost);
+      link.style.visibility = "hidden";
+      const dx = first.left - last.left;
+      const dy = first.top - last.top;
+      const animation = ghost.animate([
+        { transform: `translate(${dx}px, ${dy}px) scale(${first.width / last.width}, ${first.height / last.height})` },
+        { transform: "translate(0, 0) scale(1)" },
+      ], { duration: dy ? 380 : 240, easing: "cubic-bezier(.22,1,.36,1)" });
+      motion.set(link, { ghost, animation });
+      animation.onfinish = () => {
+        if (motion.get(link)?.animation === animation) stopMotion(link);
+      };
+    });
+  }
+  resetOrder.addEventListener("click", () => {
+    finishDragging();
+    closeBookMenu(true);
+    rowSizes.splice(0, rowSizes.length, ...defaultRowSizes);
+    arrange(orderedBooks.map((book) => favoriteLinks.get(book.id)));
+    try { localStorage.removeItem(shelfOrderKey); } catch { /* Reset this visit anyway. */ }
+  });
+  function saveArrangement() {
+    try {
+      localStorage.setItem(shelfOrderKey, JSON.stringify(
+        bookRows.map((row) => [...row.children].map((link) => link.dataset.bookId))
+      ));
+    } catch { /* Rearranging still works for the current visit. */ }
+  }
+  function finishDragging(commit = false) {
+    if (!draggedBook) return;
+    const link = draggedBook;
+    if (!commit && originalOrder) arrange(originalOrder);
+    link.classList.remove("book-dragging");
+    draggedBook = originalOrder = dropRow = null;
+    shelfBox.classList.remove("is-rearranging");
+    suppressClickUntil = performance.now() + 250;
+    if (commit) {
+      saveArrangement();
+      if (!reducedMotion.matches) link.animate([
+        { transform: "translateY(-9px)" }, { transform: "translateY(0)" },
+      ], { duration: 260, easing: "cubic-bezier(.22,1,.36,1)" });
+    }
+  }
+  shelfBox.addEventListener("click", (event) => {
+    if (draggedBook || performance.now() < suppressClickUntil) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+  }, true);
+  shelfBox.addEventListener("dragstart", (event) => {
+    const link = event.target.closest(".book-spine");
+    if (!link || cancelBookOpening) { event.preventDefault(); return; }
+    closeBookMenu();
+    [...motion.keys()].forEach(stopMotion);
+    draggedBook = link;
+    originalOrder = currentOrder();
+    event.dataTransfer.effectAllowed = "move";
+    event.dataTransfer.setData("text/plain", link.dataset.bookId);
+    link.classList.add("book-dragging");
+    shelfBox.classList.add("is-rearranging");
+  });
+  shelfBox.addEventListener("dragover", (event) => {
+    if (!draggedBook) return;
+    const row = event.target.closest(".home-shelf")?.querySelector(".shelf-books");
+    if (!row) return;
+    event.preventDefault();
+    event.dataTransfer.dropEffect = "move";
+    dropRow = row;
+    const bounds = row.getBoundingClientRect();
+    if (event.clientX < bounds.left + 32) row.scrollLeft -= 12;
+    if (event.clientX > bounds.right - 32) row.scrollLeft += 12;
+    const gap = draggedBook.getBoundingClientRect();
+    // Stay still over the open slot instead of repeatedly swapping at its edges.
+    if (draggedBook.parentElement === row && event.clientX >= gap.left - 4 && event.clientX <= gap.right + 4) return;
+    const candidates = [...row.children].filter((link) => link !== draggedBook);
+    const before = candidates.find((link) => {
+      const rect = link.getBoundingClientRect();
+      return event.clientX < rect.left + rect.width / 2;
+    });
+    const oldOrder = currentOrder();
+    const order = oldOrder.filter((link) => link !== draggedBook);
+    let index;
+    if (before) index = order.indexOf(before);
+    else if (candidates.length) index = order.indexOf(candidates.at(-1)) + 1;
+    else index = bookRows.slice(0, bookRows.indexOf(row)).reduce((n, r) => n + r.children.length, 0);
+    // A full upper shelf always keeps the incoming book; its previous rightmost book spills down.
+    if (draggedBook.parentElement !== row) {
+      const start = rowSizes.slice(0, bookRows.indexOf(row)).reduce((a, b) => a + b, 0);
+      index = Math.min(index, start + Math.max(0, rowSizes[bookRows.indexOf(row)] - 1));
+    }
+    order.splice(index, 0, draggedBook);
+    if (order.some((link, i) => link !== oldOrder[i])) arrange(order);
+  });
+  shelfBox.addEventListener("dragleave", (event) => {
+    if (!shelfBox.contains(event.relatedTarget)) dropRow = null;
+  });
+  shelfBox.addEventListener("drop", (event) => {
+    if (!draggedBook || !dropRow) return;
+    event.preventDefault();
+    finishDragging(true);
+  });
+  shelfBox.addEventListener("dragend", () => finishDragging());
+  window.addEventListener("blur", () => finishDragging());
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && draggedBook) finishDragging();
+  });
+  // Keyboard rearranging uses the same shelf balancing and animation.
+  shelfBox.addEventListener("keydown", (event) => {
+    const link = event.target.closest(".book-spine");
+    if (!link || !event.altKey || !["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(event.key)) return;
+    event.preventDefault();
+    const order = currentOrder();
+    const index = order.indexOf(link);
+    const rowIndex = bookRows.indexOf(link.parentElement);
+    let target = index;
+    if (event.key === "ArrowLeft") target = Math.max(0, index - 1);
+    if (event.key === "ArrowRight") target = Math.min(order.length - 1, index + 1);
+    if (event.key === "ArrowUp" && rowIndex > 0) target = index - rowSizes[rowIndex - 1];
+    if (event.key === "ArrowDown" && rowIndex < bookRows.length - 1) target = Math.min(order.length - 1, index + rowSizes[rowIndex]);
+    order.splice(index, 1);
+    order.splice(Math.max(0, target), 0, link);
+    arrange(order);
+    saveArrangement();
+    link.focus({ preventScroll: true });
+  });
+
+  // Pull out only the book under the pointer, using its untransformed shelf position.
+  const shelfHoverMedia = matchMedia("(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)");
+  let pulledBook = null;
+  function clearShelfHover() {
+    pulledBook?.classList.remove("book-pulled");
+    pulledBook = null;
+  }
+  bookRows.forEach((row) => {
+    new ResizeObserver(() => {
+      row.classList.toggle("shelf-hover-room", row.scrollWidth <= row.clientWidth);
+    }).observe(row);
+    row.addEventListener("pointermove", (event) => {
+      if (!shelfHoverMedia.matches || event.pointerType === "touch" || event.buttons ||
+          draggedBook || cancelBookOpening || !menu.hidden || motion.size) {
+        clearShelfHover();
+        return;
+      }
+      const origin = row.closest(".home-shelf").getBoundingClientRect().left;
+      const link = [...row.children].find((book) => {
+        const left = origin + book.offsetLeft - row.scrollLeft;
+        return event.clientX >= left && event.clientX <= left + book.offsetWidth;
+      });
+      if (link === pulledBook) return;
+      clearShelfHover();
+      if (link) {
+        pulledBook = link;
+        link.classList.add("book-pulled");
+      }
+    }, { passive: true });
+    row.addEventListener("pointerleave", clearShelfHover);
+  });
+  shelfBox.addEventListener("pointerdown", clearShelfHover, true);
+  shelfBox.addEventListener("dragstart", clearShelfHover, true);
+  shelfBox.addEventListener("contextmenu", clearShelfHover, true);
+  window.addEventListener("blur", clearShelfHover);
+  shelfHoverMedia.addEventListener("change", clearShelfHover);
 
   // 두 갈래: 분야 카드
   d.wings.forEach((w) => {

@@ -1159,3 +1159,58 @@ body[data-page="simulators"] .lib-filters { flex-direction: row; flex-wrap: wrap
 .search-choice { display: flex; align-items: center; gap: 8px; }
 .search-row select { padding: 10px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-elev); color: var(--text); font: inherit; max-width: 100%; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+
+/* Favorites keep the original shelf geometry; controls appear only on request. */
+/* Paper labels sit on the wood, independently of the moving books. */
+.home-shelf { position: relative; }
+.shelf-stickers {
+  position: absolute; bottom: -17px; left: 0; right: 0; height: 17px;
+  overflow: hidden; pointer-events: none;
+}
+.shelf-sticker {
+  position: absolute; top: 2px; width: 30px; height: 13px;
+  transform: translateX(-50%) rotate(-3deg); border-radius: 1px;
+  background: #173b65; color: #fff3d6;
+  font: 11px/13px var(--font); text-align: center;
+  box-shadow: 0 1px 2px #24170b66;
+}
+.shelf-sticker[hidden] { display: none; }
+.book-context-menu {
+  position: fixed; z-index: 1000; min-width: 168px; padding: 5px;
+  border: 1px solid #79654b; border-radius: 7px; background: #302724;
+  box-shadow: 0 8px 24px #0006;
+}
+.book-context-menu[hidden] { display: none; }
+.book-context-menu button {
+  display: block; width: 100%; min-height: 40px; padding: 8px 13px;
+  border: 0; border-radius: 3px; background: transparent; color: #f4dfbd;
+  font: 13px var(--font); text-align: left; cursor: pointer;
+}
+.book-context-menu button:hover, .book-context-menu button:focus-visible {
+  background: #ffffff12; outline: none;
+}
+
+/* The dragged book reserves a quiet gap while its neighbors slide aside. */
+.book-spine[draggable="true"] { cursor: grab; }
+.book-spine.book-dragging { opacity: .12; cursor: grabbing; filter: saturate(.4); }
+.is-rearranging .book-spine { transform: none; }
+.book-spine.book-moving-copy {
+  position: fixed; z-index: 1001; margin: 0; min-width: 0; max-width: none;
+  pointer-events: none; transition: none; transform-origin: top left;
+}
+/* A crowded shelf scrolls instead of squeezing book titles flat. */
+.shelf-books { overflow-x: auto; justify-content: safe center; scrollbar-width: thin; scrollbar-color: #a58967 #302019; }
+.book-spine { min-width: 34px; }
+@media (max-width: 700px) { .shelf-books { justify-content: flex-start; } }
+
+/* Lift the hovered book slightly from the shelf. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .shelf-books.shelf-hover-room { overflow: visible; }
+  .home-shelves .book-spine {
+    transition: transform .25s cubic-bezier(.2,.75,.25,1), filter .25s ease;
+  }
+  .home-shelves .book-spine:hover { transform: none; filter: none; }
+  .home-shelves:not(.is-rearranging) .book-spine.book-pulled {
+    transform: translateY(-16px) scale(1.08); filter: brightness(1.12); z-index: 5;
+  }
+}

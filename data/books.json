@@ -158,8 +158,8 @@
       "level": "공대 학부",
       "chapters": 14,
       "simulators": 89,
-      "color": "#495057",
-      "colorDark": "#adb5bd",
+      "color": "#0077b6",
+      "colorDark": "#62c9ff",
       "topics": [
         "결정·밴드",
         "캐리어 통계",
