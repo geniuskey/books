@@ -127,6 +127,28 @@
       [92, 108, 124, 140, 156].forEach((x) => { s += `<rect class="cv-grow" x="${x}" y="90" width="7" height="10" rx="1" fill="${W}" fill-opacity=".85"/>`; });
       return svg(s);
     },
+    // 이온 주입: 빔이 실리콘 격자로 쏟아지고, 박힌 도펀트가 깊이 방향 종 모양 분포를 이룬다
+    implant() {
+      const r = rnd(11); let s = "";
+      s += `<rect x="78" y="6" width="64" height="10" rx="3" fill="${W}" fill-opacity=".6"/>`;
+      s += `<path d="M84 16 L66 60 H154 L136 16 Z" fill="${W}" fill-opacity=".1"/>`;
+      range(5).forEach((k) => {
+        const x = 90 + k * 10;
+        s += `<path class="cv-flow" style="animation-delay:${k * 0.2}s" d="M${x} 18 L${x + (x - 110) * 0.8} 58" fill="none" stroke="${W}" stroke-opacity=".55" stroke-width="1.2" stroke-dasharray="4 6"/>`;
+      });
+      s += `<rect x="10" y="62" width="190" height="68" fill="${W}" fill-opacity=".12"/>`;
+      range(5).forEach((j) => range(14).forEach((i) => {
+        s += `<circle cx="${18 + i * 13.5}" cy="${70 + j * 12}" r="1.6" fill="${W}" fill-opacity=".35"/>`;
+      }));
+      range(26).forEach(() => {
+        const g = (r() + r() + r() - 1.5) * 2;
+        s += `<circle cx="${(62 + r() * 96).toFixed(1)}" cy="${(84 + g * 9).toFixed(1)}" r="2.6" fill="${W}" fill-opacity=".85"/>`;
+      });
+      [76, 98, 120, 142].forEach((x, k) => {
+        s += `<circle class="cv-fall" style="animation-delay:${k * 0.45}s" cx="${x}" cy="30" r="2.4" fill="${W}"/>`;
+      });
+      return svg(s);
+    },
     // 불량 분석: 배선 위를 훑는 돋보기와 빛나는 결함 한 점
     probe() {
       let s = "";
