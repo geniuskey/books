@@ -1,7 +1,7 @@
 /* Public and authenticated inbox on the same feedback page. Tokens stay in memory. */
 globalThis.FeedbackInbox = (() => {
   let refresh = () => {};
-  function start(config, catalog) {
+  function start(config, catalog, { onUnavailable = () => {} } = {}) {
     const $ = (id) => document.getElementById(id);
     const base = new URL(config.endpoint).origin;
     const books = new Map(catalog.books.map((book) => [book.id, book]));
@@ -89,6 +89,10 @@ globalThis.FeedbackInbox = (() => {
       return card;
     }
     function handleError(error) {
+      if (error instanceof TypeError || error.name === 'TimeoutError') {
+        onUnavailable();
+        return;
+      }
       if (error.status === 401) {
         session(false); list.replaceChildren(); generation++;
         $('inbox-more').hidden = true;

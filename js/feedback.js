@@ -46,6 +46,18 @@ EB.start("feedback", (data) => {
   const count = document.getElementById("feedback-count");
   const fields = form.elements;
   const composer = document.getElementById("feedback-compose");
+  let unavailable = false;
+  const showGitHubOnly = () => {
+    unavailable = true;
+    composer.hidden = true;
+    document.querySelector(".feedback-inbox").hidden = true;
+    if (adminPanel) adminPanel.hidden = true;
+    submit.disabled = true;
+    const alternative = document.querySelector(".feedback-alternative");
+    alternative.open = true;
+    alternative.querySelector("summary").textContent = "GitHub으로 제보하기";
+    alternative.querySelector(".feedback-note").textContent = "GitHub 계정으로 로그인하며 글이 공개됩니다.";
+  };
   // Book links arrive with writing intent; ordinary visitors see the board first.
   if (composer && (book || ["error", "request", "cheer"].includes(type))) composer.open = true;
   data.books.filter((b) => b.status === "published").forEach((b) => {
@@ -68,19 +80,17 @@ EB.start("feedback", (data) => {
       const url = new URL(config.endpoint);
       if (url.protocol !== "https:" && !(url.protocol === "http:" && ["localhost", "127.0.0.1"].includes(url.hostname))) throw new Error();
       endpoint = url.href;
-      globalThis.FeedbackInbox?.start(config, data);
+      globalThis.FeedbackInbox?.start(config, data, { onUnavailable: showGitHubOnly });
       submit.disabled = false;
       showStatus("로그인 없이 보낼 수 있습니다.");
     })
     .catch(() => {
-      showStatus("접수 창구에 연결하지 못했습니다. 잠시 후 다시 방문하거나 아래 GitHub 창구를 이용해 주세요.", "error");
-      const inboxStatus = document.getElementById("inbox-status");
-      if (inboxStatus) inboxStatus.textContent = "게시판에 연결하지 못했습니다. 페이지를 새로고침해 주세요.";
+      showGitHubOnly();
     });
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    if (sending || !endpoint || !form.reportValidity()) return;
+    if (unavailable || sending || !endpoint || !form.reportValidity()) return;
     if (!fields.message.value.trim()) { fields.message.focus(); showStatus("내용을 입력해 주세요.", "error"); return; }
     const payload = {
       type: fields.type.value,
@@ -115,11 +125,12 @@ EB.start("feedback", (data) => {
       globalThis.FeedbackInbox?.refresh();
       showStatus(payload.type === "cheer" ? "응원 감사합니다! 저자에게 잘 전달되었습니다." : "의견이 접수되었습니다. 남겨 주셔서 감사합니다.");
     } catch (error) {
-      showStatus(error.name === "TimeoutError" || error instanceof TypeError ? "연결을 확인하지 못했습니다. 작성한 글은 그대로 있습니다. 잠시 후 다시 보내 주세요." : error.message, "error");
+      if (error.name === "TimeoutError" || error instanceof TypeError) showGitHubOnly();
+      else showStatus(error.message, "error");
     } finally {
       sending = false;
       [...fields].forEach((field) => { field.disabled = false; });
-      submit.disabled = false;
+      submit.disabled = unavailable;
       submit.textContent = "보내기";
     }
   });
