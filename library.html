@@ -3,53 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>전체 책장 · Books</title>
-<meta name="description" content="Books의 모든 교과서 — 출간, 집필 중, 집필 예정인 책을 분야와 상태로 찾아보세요.">
-<link rel="canonical" href="https://books.euiyun.com/library.html">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#201c1f">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Books">
-<meta property="og:title" content="전체 책장 · Books">
-<meta property="og:description" content="Books의 모든 교과서 — 출간, 집필 중, 집필 예정인 책을 분야와 상태로 찾아보세요.">
-<meta property="og:url" content="https://books.euiyun.com/library.html">
-<meta property="og:image" content="https://books.euiyun.com/og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:locale" content="ko_KR">
-<meta name="twitter:card" content="summary_large_image">
-<script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
-<link rel="stylesheet" href="css/style.css">
-<script src="js/covers.js" defer></script>
-<script src="js/core.js" defer></script>
-<script src="js/library.js" defer></script>
-<!-- Cloudflare Web Analytics -->
-<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3d6151a0abc94ede89285d462527fa80"}'></script>
-<!-- End Cloudflare Web Analytics -->
+<title>페이지 이동 · Books</title>
+<link rel="canonical" href="https://books.euiyun.com/library/">
+<script>location.replace("/library/" + location.search + location.hash);</script>
+<noscript><meta http-equiv="refresh" content="0;url=/library/"></noscript>
 </head>
-<body>
-
-<main>
-  <section class="page-head library-head">
-    <div class="wrap">
-      <div class="library-heading">
-        <h1>전체 책장</h1>
-        <span class="library-count" id="lib-count"></span>
-      </div>
-      <p class="library-intro">출간된 교과서를 먼저 보여드립니다. 집필 계획은 상태 필터 또는 <a href="roadmap.html">로드맵</a>에서 볼 수 있습니다.</p>
-      <div class="lib-filters">
-        <input class="search" id="search" type="search" placeholder="주제 검색 (예: HBM, 전세, 연말정산)" aria-label="교과서 검색">
-        <label class="library-select">갈래 <select id="f-wing"></select></label>
-        <label class="library-select">분야 <select id="f-field"></select></label>
-        <label class="library-select">상태 <select id="f-status"></select></label>
-        <span class="shown" id="shown" aria-live="polite"></span>
-      </div>
-    </div>
-  </section>
-  <div class="wrap">
-    <div id="shelf-groups"></div>
-    <p class="no-result" id="no-result" hidden>조건에 맞는 교과서가 없습니다.</p>
-  </div>
-</main>
-</body>
+<body><p>페이지 주소가 바뀌었습니다. <a href="/library/">계속하기 →</a></p></body>
 </html>

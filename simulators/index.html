@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>실험 찾기 · Books</title>
+<meta name="description" content="출간된 교과서의 실험을 검색하고 직접 살펴보세요.">
+<link rel="canonical" href="https://books.euiyun.com/simulators/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#201c1f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Books">
+<meta property="og:title" content="실험 찾기 · Books">
+<meta property="og:description" content="출간된 교과서의 실험을 검색하고 직접 살펴보세요.">
+<meta property="og:url" content="https://books.euiyun.com/simulators/">
+<meta property="og:image" content="https://books.euiyun.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+<link rel="stylesheet" href="/css/style.css">
+<script src="/js/covers.js" defer>
+</script>
+<script src="/js/core.js" defer>
+</script>
+<script src="/js/discovery.js" defer>
+</script>
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3d6151a0abc94ede89285d462527fa80"}'></script>
+<!-- End Cloudflare Web Analytics -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "실험 찾기 · Books", "url": "https://books.euiyun.com/simulators/", "inLanguage": "ko", "isPartOf": {"@type": "WebSite", "name": "Books · 인터랙티브 교과서 시리즈", "url": "https://books.euiyun.com/"}}</script>
+</head>
+<body data-page="simulators">
+<main>
+<section class="page-head">
+<div class="wrap">
+<h1>실험 찾기</h1>
+<p class="experiment-caveat">실험의 계산 모델은 별도 검증이 필요합니다. “기준 사례 확인”은 표시된 범위의 계산만 확인했다는 뜻입니다.</p>
+<div class="lib-filters">
+<input class="search" id="search" type="search" aria-label="실험 검색" placeholder="실험 제목이나 책 이름 검색">
+<button class="btn" id="reset-filters" type="button">필터 초기화</button>
+<div class="experiment-results-bar">
+<p id="shown" aria-live="polite"></p>
+<label for="page-size">한 페이지 <select id="page-size"><option value="25">25행</option><option value="50">50행</option><option value="100">100행</option></select></label>
+</div>
+</div>
+</div>
+</section>
+<div class="wrap">
+<div id="experiment-table-wrap" class="experiment-table-wrap" role="region" aria-label="실험 검색 결과" tabindex="0">
+<table class="experiment-table">
+<thead><tr>
+<th scope="col">#</th>
+<th scope="col"><button class="column-filter-trigger" type="button" data-filter="field" aria-expanded="false" aria-controls="filter-fields">분야 <span class="filter-count"></span><svg class="dropdown-triangle" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4h10L6 10z"/></svg></button></th>
+<th scope="col"><button class="column-filter-trigger" type="button" data-filter="book" aria-expanded="false" aria-controls="filter-books">교과서 <span class="filter-count"></span><svg class="dropdown-triangle" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4h10L6 10z"/></svg></button></th>
+<th scope="col">실험</th>
+<th scope="col"><button class="column-filter-trigger" type="button" data-filter="level" aria-expanded="false" aria-controls="filter-levels">난이도 <span class="filter-count"></span><svg class="dropdown-triangle" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4h10L6 10z"/></svg></button></th>
+</tr></thead>
+<tbody id="experiments"></tbody>
+</table>
+</div>
+<div class="filter-popover" id="filter-fields" role="group" aria-label="분야 필터" hidden></div>
+<div class="filter-popover" id="filter-books" role="group" aria-label="교과서 필터" hidden></div>
+<div class="filter-popover" id="filter-levels" role="group" aria-label="난이도 필터" hidden></div>
+<p id="no-result" hidden>일치하는 실험이 없습니다. 다른 주제어를 쓰거나 필터를 초기화해 보세요.</p>
+<nav id="experiment-pages" class="experiment-pages" aria-label="실험 목록 페이지"></nav>
+</div>
+<noscript>
+<p class="wrap">목록을 보려면 JavaScript를 켜 주세요.</p>
+</noscript>
+</main>
+</body>
+</html>

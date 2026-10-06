@@ -62,7 +62,7 @@ EB.start("feedback", (data) => {
   let sending = false;
   const updateCount = () => { count.textContent = `${fields.message.value.length.toLocaleString("ko-KR")} / 3,000자`; };
   form.addEventListener("input", updateCount);
-  fetch("data/feedback-config.json", { cache: "no-cache" })
+  fetch("/data/feedback-config.json", { cache: "no-cache" })
     .then((response) => { if (!response.ok) throw new Error(); return response.json(); })
     .then((config) => {
       const url = new URL(config.endpoint);

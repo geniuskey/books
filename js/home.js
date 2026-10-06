@@ -296,7 +296,7 @@ EB.start("home", (d) => {
     $("#author-body").innerHTML = `<h2>${esc(au.title)}</h2>
       ${au.paragraphs.map((p) => `<p>${esc(p)}</p>`).join("")}
       <p class="closing">${esc(au.closing)}</p>
-      <p><a href="feedback.html?type=cheer">저자에게 응원 한마디 남기기 →</a></p>
+      <p><a href="/feedback/?type=cheer">저자에게 응원 한마디 남기기 →</a></p>
       <div class="sign"><span class="avatar" aria-hidden="true">${esc(au.name.slice(0, 1).toUpperCase())}</span><div><b>${esc(au.name)}</b><small>${esc(au.role)}</small></div>${au.contact ? `<a href="${esc(au.contact)}">GitHub →</a>` : ""}</div>`;
   } else {
     $("#author").hidden = true;

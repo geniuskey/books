@@ -211,7 +211,7 @@ a:hover { text-decoration: underline; }
 .library-room-head, .library-room-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 0 12px; }
 .library-room-head { min-height: 23px; color: #d5b990; font-size: 12px; letter-spacing: .06em; }
 .library-room-head strong { color: #f6dbb3; font-family: var(--mono); font-size: 12px; }
-.library-room-foot { min-height: 27px; color: #a99f95; font-size: 11px; }
+.library-room-foot { flex-wrap: wrap; min-height: 27px; color: #a99f95; font-size: 11px; }
 .home-shelves { display: grid; gap: 8px; }
 .home-shelf {
   display: flex; flex-direction: column; min-width: 0; padding: 3px 12px 0;

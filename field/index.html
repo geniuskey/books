@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<script>
+(function () {
+  const params = new URLSearchParams(location.search);
+  const id = params.get("f");
+  const fields = ["semiconductor", "computing", "ai", "electronics", "money", "housing", "health", "culture"];
+  if (!fields.includes(id)) return;
+  params.delete("f");
+  location.replace("/field/" + encodeURIComponent(id) + "/" + (params.size ? "?" + params : "") + location.hash);
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>분야 찾기 · Books</title>
+<meta name="description" content="관심 있는 분야를 골라 지식 지도와 교과서를 둘러보세요.">
+<link rel="canonical" href="https://books.euiyun.com/field/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#201c1f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Books">
+<meta property="og:title" content="분야 찾기 · Books">
+<meta property="og:description" content="관심 있는 분야를 골라 지식 지도와 교과서를 둘러보세요.">
+<meta property="og:url" content="https://books.euiyun.com/field/">
+<meta property="og:image" content="https://books.euiyun.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+<link rel="stylesheet" href="/css/style.css">
+<script src="/js/covers.js" defer></script>
+<script src="/js/core.js" defer></script>
+<script src="/js/field-index.js" defer></script>
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3d6151a0abc94ede89285d462527fa80"}'></script>
+<!-- End Cloudflare Web Analytics -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "분야 찾기 · Books", "description": "관심 있는 분야를 골라 지식 지도와 교과서를 둘러보세요.", "url": "https://books.euiyun.com/field/", "inLanguage": "ko", "isPartOf": {"@type": "WebSite", "name": "Books · 인터랙티브 교과서 시리즈", "url": "https://books.euiyun.com/"}}</script>
+</head>
+<body>
+
+<main><section class="page-head"><div class="wrap"><h1>분야 찾기</h1><p class="lead">관심 있는 분야를 골라 지식 지도와 교과서를 둘러보세요.</p></div></section><section class="block"><div class="wrap grid"><article class="card"><div class="body"><h2><a href="/field/semiconductor/">반도체 →</a></h2><p>칩이 설계되고, 만들어지고, 쓰이기까지. 이 시리즈의 출발점입니다.</p></div></article>
+<article class="card"><div class="body"><h2><a href="/field/computing/">컴퓨터·SW →</a></h2><p>컴퓨터의 기본 동작에서 운영체제, 네트워크, 데이터베이스의 내부까지.</p></div></article>
+<article class="card"><div class="body"><h2><a href="/field/ai/">AI·데이터 →</a></h2><p>통계와 데이터 해석에서 신경망과 LLM의 동작 원리까지.</p></div></article>
+<article class="card"><div class="body"><h2><a href="/field/electronics/">기기·시스템 →</a></h2><p>회로의 원리에서 스마트폰, 자동차, 선박, 색 재현까지.</p></div></article>
+<article class="card"><div class="body"><h2><a href="/field/money/">돈·금융 →</a></h2><p>복리, 금리, 주식, 보험, 연금. 월급을 받는 순간부터 필요한 지식.</p></div></article>
+<article class="card"><div class="body"><h2><a href="/field/housing/">집·부동산 →</a></h2><p>집 구하기, 전월세 계약과 보증금, 주거 비용과 내 집 마련의 기초.</p></div></article>
+<article class="card"><div class="body"><h2><a href="/field/health/">건강 →</a></h2><p>몸의 구조와 작동 원리. 심장, 폐, 근육과 호르몬을 연결합니다.</p></div></article>
+<article class="card"><div class="body"><h2><a href="/field/culture/">취미·교양 →</a></h2><p>카메라와 음악. 빛과 소리를 직접 조작하며 배우는 지식.</p></div></article>
+</div></section></main>
+</body>
+</html>

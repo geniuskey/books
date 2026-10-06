@@ -18,11 +18,11 @@
   EB.isPublished = (b) => b.status === "published";
   EB.readUrl = (b) => (EB.isPublished(b) && b.url ? b.url : "");
   EB.status = (b) => (EB.data.statusLabels || {})[b.status] || b.status;
-  EB.fieldUrl = (id) => `field.html?f=${encodeURIComponent(id)}`;
+  EB.fieldUrl = (id) => `/field/${encodeURIComponent(id)}/`;
 
   /* books.json을 읽고 서로 참조하기 쉽게 정리한다 */
   EB.load = async () => {
-    const res = await fetch("data/books.json", { cache: "no-cache" });
+    const res = await fetch("/data/books.json", { cache: "no-cache" });
     const d = await res.json();
     d.fieldById = Object.fromEntries(d.fields.map((f) => [f.id, f]));
     d.wingById = Object.fromEntries(d.wings.map((w) => [w.id, w]));
@@ -46,15 +46,15 @@
 
   /* ---------- 머리말·꼬리말 ---------- */
   const NAV = [
-    { href: "library.html", label: "교과서 찾기", key: "library" },
-    { href: "simulators.html", label: "실험 찾기", key: "simulators" },
-    { href: "feedback.html", label: "독자 의견", key: "feedback" },
+    { href: "/library/", label: "교과서 찾기", key: "library" },
+    { href: "/simulators/", label: "실험 찾기", key: "simulators" },
+    { href: "/feedback/", label: "독자 의견", key: "feedback" },
   ];
   EB.header = (active) => {
     const h = document.createElement("header");
     h.className = "topbar";
     h.innerHTML = `<div class="wrap">
-      <a class="brand" href="/"><img src="favicon.svg" alt=""> Books <small>인터랙티브 교과서 시리즈</small></a>
+      <a class="brand" href="/"><img src="/favicon.svg" alt=""> Books <small>인터랙티브 교과서 시리즈</small></a>
       <nav class="topnav" aria-label="주요 메뉴">
         <details class="nav-fields"><summary>분야 <svg class="dropdown-triangle" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4h10L6 10z"/></svg></summary><div class="nav-fields-menu"></div></details>
         ${NAV.map((n) => `<a href="${n.href}"${n.key === active ? ' aria-current="page"' : ""}>${n.label}</a>`).join("")}
@@ -98,7 +98,7 @@
     const f = document.createElement("footer");
     f.innerHTML = `<div class="wrap">
       <p>© euiyun · 본문 <a href="https://creativecommons.org/licenses/by/4.0/deed.ko">CC BY 4.0</a>, 코드 <a href="https://github.com/geniuskey/books/blob/main/LICENSE.md">MIT</a></p>
-      <p class="links"><a href="index.html">홈</a><a href="library.html">전체 책장</a><a href="roadmap.html">로드맵</a><a href="feedback.html">독자 의견</a><a href="https://github.com/geniuskey/books">이 사이트의 소스</a></p>
+      <p class="links"><a href="/">홈</a><a href="/library/">전체 책장</a><a href="/roadmap/">로드맵</a><a href="/feedback/">독자 의견</a><a href="https://github.com/geniuskey/books">이 사이트의 소스</a></p>
     </div>`;
     document.body.appendChild(f);
   };
@@ -189,7 +189,12 @@
         const main = $("main");
         const p = document.createElement("p");
         p.className = "wrap load-error";
-        p.textContent = "책 목록을 불러오지 못했습니다. 로컬에서는 python3 -m http.server로 실행하세요.";
+        p.textContent = "책 목록을 불러오지 못했습니다. 인터넷 연결을 확인한 뒤 다시 시도해 주세요.";
+        const retry = document.createElement("button");
+        retry.type = "button";
+        retry.textContent = "다시 시도";
+        retry.addEventListener("click", () => location.reload());
+        p.append(" ", retry);
         main.prepend(p);
       });
   };

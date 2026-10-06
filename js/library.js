@@ -52,7 +52,7 @@ EB.start("library", (d) => {
   const search = $("#search");
   search.addEventListener("input", sync);
 
-  // 주소로 필터 열기: library.html?status=planned&wing=life
+  // 주소로 필터 열기: /library/?status=planned&wing=life
   const qs = new URLSearchParams(location.search);
   ["wing", "field", "status"].forEach((k) => {
     if (groups[k].some((o) => o.v === qs.get(k))) state[k] = qs.get(k);
@@ -66,9 +66,11 @@ EB.start("library", (d) => {
     Object.keys(groups).forEach((key) => { $(`#f-${key}`).value = state[key]; });
     const q = search.value.trim().toLowerCase();
     const params = new URLSearchParams();
-    Object.entries(state).forEach(([k, v]) => params.set(k, v));
+    Object.entries(state).forEach(([k, v]) => {
+      if (v !== (k === "status" ? "published" : "all")) params.set(k, v);
+    });
     if (q) params.set("q", search.value.trim());
-    history.replaceState(null, "", `${location.pathname}?${params}${location.hash}`);
+    history.replaceState(null, "", `${location.pathname}${params.size ? "?" + params : ""}${location.hash}`);
     let shown = 0;
     EB.$$("#shelf-groups .group").forEach((sec) => {
       let n = 0;

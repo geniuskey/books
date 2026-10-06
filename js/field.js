@@ -1,9 +1,10 @@
-/* 분야 페이지 (field.html?f=semiconductor): 주제 관계 지도, 책장, 다른 분야 */
+/* 분야 페이지 (/field/semiconductor/): 주제 관계 지도, 책장, 다른 분야 */
 EB.start(null, (d) => {
   "use strict";
   const { $, esc } = EB;
-  const id = new URLSearchParams(location.search).get("f");
-  const f = d.fieldById[id] || d.fields[0];
+  const id = document.body.dataset.field;
+  const f = d.fieldById[id];
+  if (!f) throw new Error("Unknown field: " + id);
   const wing = d.wingById[f.wing];
 
   document.title = `${f.name} · Books`;
@@ -21,7 +22,7 @@ EB.start(null, (d) => {
   const remaining = f.books.filter((b) => !assigned.has(b.id));
   if (remaining.length) groups.push({ name: "더 넓게 탐색하기", en: "Explore", desc: "이 분야에서 이어지는 주제", books: remaining });
   // 분야별 문장을 첫 화면의 제목으로 쓰고, 책 현황은 짧은 진행 표시로 묶는다.
-  $("#f-wing").innerHTML = `<a href="index.html#${esc(f.wing)}">${esc(wing.name)}</a><span aria-hidden="true"> / </span>${esc(f.name)}<span class="field-en">${esc(f.en)}</span>`;
+  $("#f-wing").innerHTML = `<a href="/#${esc(f.wing)}">${esc(wing.name)}</a><span aria-hidden="true"> / </span>${esc(f.name)}<span class="field-en">${esc(f.en)}</span>`;
   $("#flow-title").textContent = map?.title || `${f.name} 지식 지도`;
   $("#flow-desc").textContent = map?.desc || f.desc;
   $("#f-map-label").textContent = `${f.name} 지식 지도`;
