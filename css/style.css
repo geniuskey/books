@@ -507,7 +507,7 @@ section.block { padding: 56px 0; border-top: 1px solid var(--border); }
 /* Compact library shelf; descriptions float above cards without moving the grid. */
 #shelf-groups .grid { gap: 14px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); }
 #shelf-groups .card { position: relative; overflow: visible; }
-#shelf-groups .card:hover, #shelf-groups .card:focus-within { z-index: 2; }
+#shelf-groups .card:hover, #shelf-groups .card:has(:focus-visible), #shelf-groups .card:focus-visible { z-index: 2; }
 #shelf-groups .card:focus-visible { outline: 2px solid var(--c); outline-offset: 3px; }
 #shelf-groups .cover { height: 110px; padding: 12px 14px; border-radius: var(--radius) var(--radius) 0 0; }
 #shelf-groups .cover.slim { height: 48px; }
@@ -524,8 +524,12 @@ section.block { padding: 56px 0; border-top: 1px solid var(--border); }
   font-size: 13px; line-height: 1.6; visibility: hidden;
 }
 #shelf-groups .book-description::after { content: ""; position: absolute; inset: 100% 0 -10px; }
-#shelf-groups .card:hover .book-description,
-#shelf-groups .card:focus-within .book-description { visibility: visible; }
+/* Open only after the pointer rests on a card, and close at once when it leaves. */
+@media (hover: hover) {
+  #shelf-groups .card:hover .book-description { visibility: visible; transition: visibility 0s .5s; }
+}
+#shelf-groups .card:focus-visible .book-description,
+#shelf-groups .card:has(:focus-visible) .book-description { visibility: visible; transition: none; }
 
 /* ---------- Cover art ---------- */
 .cover-art {
