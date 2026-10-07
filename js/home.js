@@ -60,10 +60,10 @@ EB.start("home", (d) => {
   }
   preloadSpread.done = new Set();
 
-  // 책 펼침 애니메이션은 책장 메뉴에서 끌 수 있다.
+  // 책 펼침 애니메이션은 기본으로 꺼 두고, 켜기를 고른 사람에게만 보여 준다.
   const openingAnimationKey = "books:opening-animation:v1";
   const readOpeningAnimation = () => {
-    try { return localStorage.getItem(openingAnimationKey) !== "off"; } catch { return true; }
+    try { return localStorage.getItem(openingAnimationKey) === "on"; } catch { return false; }
   };
   let openingAnimation = readOpeningAnimation();
   function openBook(event, link, book, title) {
@@ -229,6 +229,7 @@ EB.start("home", (d) => {
   document.body.appendChild(menu);
   const menuItems = () => [...menu.querySelectorAll("button")].filter((button) => !button.hidden);
   let menuBook = null;
+  let menuTargets = [];
   let menuAnchor = null;
   function closeBookMenu(restoreFocus = false) {
     const anchor = menuAnchor;
@@ -256,7 +257,12 @@ EB.start("home", (d) => {
     toggleFavorite.hidden = toggleHidden.hidden = menuDivider.hidden = !id;
     if (id) {
       toggleFavorite.textContent = favorites.has(id) ? "별 표시 해제" : "별 표시 추가";
-      toggleHidden.textContent = hiddenBooks.has(id) ? "숨기기 취소" : "이 책 숨기기";
+      // Right-clicking one of several selected books hides or restores them all.
+      const link = favoriteLinks.get(id);
+      menuTargets = selectedBooks.has(link) && selectedBooks.size > 1
+        ? currentOrder().filter((book) => selectedBooks.has(book)) : [link];
+      const many = menuTargets.length > 1 ? `선택한 ${menuTargets.length}권 ` : "";
+      toggleHidden.textContent = hiddenBooks.has(id) ? `${many}숨기기 취소` : many ? `${many}숨기기` : "이 책 숨기기";
     }
     toggleReveal.hidden = !hiddenBooks.size && !revealHidden;
     toggleReveal.textContent = revealHidden ? "숨긴 책 다시 감추기" : `숨긴 책 보기 (${hiddenBooks.size}권)`;
@@ -283,8 +289,8 @@ EB.start("home", (d) => {
     openingAnimation = on;
     showOpeningSwitch();
     try {
-      if (on) localStorage.removeItem(openingAnimationKey);
-      else localStorage.setItem(openingAnimationKey, "off");
+      if (on) localStorage.setItem(openingAnimationKey, "on");
+      else localStorage.removeItem(openingAnimationKey);
     } catch { /* Apply the choice for this visit anyway. */ }
   }
   openingSwitch.addEventListener("click", () => setOpeningAnimation(!openingAnimation));
@@ -503,13 +509,17 @@ EB.start("home", (d) => {
     const id = menuBook;
     if (!id) return;
     const link = favoriteLinks.get(id);
+    const targets = menuTargets;
     const hiding = !hiddenBooks.has(id);
     // Keyboard focus moves to the next book still on the shelf.
     const order = currentOrder();
     const next = order.slice(order.indexOf(link) + 1).concat(order.slice(0, order.indexOf(link)))
-      .find((book) => !book.hidden && (revealHidden || !hiddenBooks.has(book.dataset.bookId)));
+      .find((book) => !book.hidden && !targets.includes(book) && (revealHidden || !hiddenBooks.has(book.dataset.bookId)));
     closeBookMenu(!hiding || revealHidden);
-    setHidden(() => { if (hiding) hiddenBooks.add(id); else hiddenBooks.delete(id); });
+    setHidden(() => targets.forEach((book) => {
+      if (hiding) hiddenBooks.add(book.dataset.bookId);
+      else hiddenBooks.delete(book.dataset.bookId);
+    }));
     saveHidden();
     // Rearranging re-inserts the books, so move focus only afterwards.
     if (hiding && !revealHidden) (next || shelfBox).focus({ preventScroll: true });
