@@ -217,6 +217,17 @@ EB.start("home", (d) => {
     button.setAttribute("role", "menuitem");
     return button;
   };
+  // 메뉴 왼쪽의 줄 아이콘. 끄거나 없애는 동작은 같은 그림에 빗금을 긋는다.
+  const menuIcons = {
+    star: `<path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z"/>`,
+    eye: `<path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>`,
+    book: `<path d="M2 5h6a4 4 0 0 1 4 4v11a3 3 0 0 0-3-3H2z"/><path d="M22 5h-6a4 4 0 0 0-4 4v11a3 3 0 0 1 3-3h7z"/>`,
+    reset: `<path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/>`,
+  };
+  function setMenuItem(button, icon, label, slashed = false) {
+    button.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true">${menuIcons[icon]}${slashed ? `<path d="M4 4l16 16"/>` : ""}</svg>`;
+    button.append(label);
+  }
   const toggleFavorite = menuItem();
   const toggleHidden = menuItem();
   const menuDivider = document.createElement("hr");
@@ -224,7 +235,7 @@ EB.start("home", (d) => {
   const toggleReveal = menuItem();
   const toggleOpening = menuItem();
   const resetOrder = menuItem();
-  resetOrder.textContent = "책장 순서 초기화";
+  setMenuItem(resetOrder, "reset", "책장 순서 초기화");
   menu.append(toggleFavorite, toggleHidden, menuDivider, toggleReveal, toggleOpening, resetOrder);
   document.body.appendChild(menu);
   const menuItems = () => [...menu.querySelectorAll("button")].filter((button) => !button.hidden);
@@ -256,17 +267,17 @@ EB.start("home", (d) => {
     menuAnchor = anchor;
     toggleFavorite.hidden = toggleHidden.hidden = menuDivider.hidden = !id;
     if (id) {
-      toggleFavorite.textContent = favorites.has(id) ? "별 표시 해제" : "별 표시 추가";
-      // Right-clicking one of several selected books hides or restores them all.
+      // Right-clicking one of several selected books stars, hides or restores them all.
       const link = favoriteLinks.get(id);
       menuTargets = selectedBooks.has(link) && selectedBooks.size > 1
         ? currentOrder().filter((book) => selectedBooks.has(book)) : [link];
       const many = menuTargets.length > 1 ? `선택한 ${menuTargets.length}권 ` : "";
-      toggleHidden.textContent = hiddenBooks.has(id) ? `${many}숨기기 취소` : many ? `${many}숨기기` : "이 책 숨기기";
+      setMenuItem(toggleFavorite, "star", many + (favorites.has(id) ? "별 표시 해제" : "별 표시 추가"), favorites.has(id));
+      setMenuItem(toggleHidden, "eye", hiddenBooks.has(id) ? `${many}숨기기 취소` : many ? `${many}숨기기` : "이 책 숨기기", !hiddenBooks.has(id));
     }
     toggleReveal.hidden = !hiddenBooks.size && !revealHidden;
-    toggleReveal.textContent = revealHidden ? "숨긴 책 다시 감추기" : `숨긴 책 보기 (${hiddenBooks.size}권)`;
-    toggleOpening.textContent = openingAnimation ? "책 펼침 애니메이션 끄기" : "책 펼침 애니메이션 켜기";
+    setMenuItem(toggleReveal, "eye", revealHidden ? "숨긴 책 다시 감추기" : `숨긴 책 보기 (${hiddenBooks.size}권)`, revealHidden);
+    setMenuItem(toggleOpening, "book", openingAnimation ? "책 펼침 애니메이션 끄기" : "책 펼침 애니메이션 켜기", openingAnimation);
     menu.hidden = false;
     const rect = anchor.getBoundingClientRect();
     const x = event.clientX || rect.left;
@@ -300,8 +311,11 @@ EB.start("home", (d) => {
   });
   toggleFavorite.addEventListener("click", () => {
     if (!menuBook) return;
-    if (favorites.has(menuBook)) favorites.delete(menuBook);
-    else favorites.add(menuBook);
+    const starring = !favorites.has(menuBook);
+    menuTargets.forEach((book) => {
+      if (starring) favorites.add(book.dataset.bookId);
+      else favorites.delete(book.dataset.bookId);
+    });
     try {
       localStorage.setItem(favoriteKey, JSON.stringify([...favorites]));
     } catch {
