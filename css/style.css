@@ -1204,6 +1204,41 @@ body[data-page="simulators"] .lib-filters { flex-direction: row; flex-wrap: wrap
   position: fixed; z-index: 1001; margin: 0; min-width: 0; max-width: none;
   pointer-events: none; transition: none; transform-origin: top left;
 }
+/* A small switch beside the book count turns the opening animation off. */
+.opening-switch {
+  display: inline-flex; align-items: center; gap: 5px; margin-left: auto; padding: 2px 0;
+  border: 0; background: none; color: #a99f95; font: 11px var(--font); letter-spacing: .02em; cursor: pointer;
+}
+.opening-switch:hover { color: #dfc5a0; }
+.opening-switch i {
+  position: relative; width: 20px; height: 11px; border-radius: 6px; background: #4a3c33; transition: background .15s ease;
+}
+.opening-switch i::after {
+  content: ""; position: absolute; top: 2px; left: 2px; width: 7px; height: 7px; border-radius: 50%;
+  background: #a99f95; transition: transform .15s ease, background .15s ease;
+}
+.opening-switch[aria-checked="true"] i { background: #8a6a3f; }
+.opening-switch[aria-checked="true"] i::after { transform: translateX(9px); background: #ffdc91; }
+.opening-switch:focus-visible { outline: 2px solid #ffdc91; outline-offset: 2px; }
+/* Books caught by the rubber band glow and travel together. */
+.book-spine.book-selected {
+  box-shadow: inset 0 0 0 2px #ffdc91, inset 3px 0 rgba(255,255,255,.12), 0 0 12px #ffdc9166, 4px 3px 5px rgba(0,0,0,.45);
+  filter: brightness(1.12);
+}
+.is-selecting .book-spine { transform: none; }
+.shelf-marquee {
+  position: fixed; z-index: 1000; pointer-events: none;
+  border: 1px solid #ffdc91; border-radius: 2px; background: #ffdc9120;
+}
+.shelf-marquee[hidden] { display: none; }
+.book-drag-stack {
+  position: fixed; top: -1000px; left: 0; display: flex; align-items: flex-end; gap: 2px; padding-right: 22px;
+}
+.book-drag-stack .book-spine { flex: none; max-width: none; transform: none; }
+.book-drag-count {
+  position: absolute; top: 0; right: 0; min-width: 28px; padding: 2px 6px; border-radius: 10px;
+  background: #ffdc91; color: #302019; font: 600 12px/16px var(--font); text-align: center;
+}
 /* A crowded shelf scrolls instead of squeezing book titles flat. */
 .shelf-books { overflow-x: auto; justify-content: safe center; scrollbar-width: thin; scrollbar-color: #a58967 #302019; }
 .book-spine { min-width: 34px; }

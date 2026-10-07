@@ -196,6 +196,16 @@ EB.start("home", (d) => {
   let hiddenBooks = readHidden();
   let revealHidden = false;
   const favoriteLinks = new Map();
+  // 빈 책장에서 마우스로 끌어 고른 책들은 하나를 끌면 함께 옮겨진다.
+  const selectedBooks = new Set();
+  function deselectBook(link) {
+    selectedBooks.delete(link);
+    link.classList.remove("book-selected");
+  }
+  function selectBooks(links) {
+    [...selectedBooks].forEach(deselectBook);
+    links.forEach((link) => { selectedBooks.add(link); link.classList.add("book-selected"); });
+  }
   const menu = document.createElement("div");
   menu.className = "book-context-menu";
   menu.setAttribute("role", "menu");
@@ -234,6 +244,7 @@ EB.start("home", (d) => {
       link.classList.toggle("is-favorite", selected);
       link.classList.toggle("is-hidden-book", hidden);
       link._favoriteSticker.hidden = !selected || link.hidden;
+      if (link.hidden) deselectBook(link);
       link.setAttribute("aria-label", link.dataset.readLabel + (selected ? " · 별 표시됨" : "") + (hidden ? " · 숨긴 책" : ""));
     });
   }
@@ -258,12 +269,27 @@ EB.start("home", (d) => {
     menu.style.top = Math.max(8, Math.min(y, innerHeight - menu.offsetHeight - 8)) + "px";
     menuItems()[0].focus({ preventScroll: true });
   }
-  toggleOpening.addEventListener("click", () => {
-    openingAnimation = !openingAnimation;
+  // 우클릭 메뉴를 모르는 사람도 찾도록 책장 머리에 작은 스위치를 둔다.
+  const openingSwitch = document.createElement("button");
+  openingSwitch.type = "button";
+  openingSwitch.className = "opening-switch";
+  openingSwitch.setAttribute("role", "switch");
+  openingSwitch.innerHTML = `<span>펼침 효과</span><i aria-hidden="true"></i>`;
+  const shelfHead = shelfBox.parentElement.querySelector(".library-room-head");
+  shelfHead?.insertBefore(openingSwitch, shelfHead.lastElementChild);
+  const showOpeningSwitch = () => openingSwitch.setAttribute("aria-checked", String(openingAnimation));
+  showOpeningSwitch();
+  function setOpeningAnimation(on) {
+    openingAnimation = on;
+    showOpeningSwitch();
     try {
-      if (openingAnimation) localStorage.removeItem(openingAnimationKey);
+      if (on) localStorage.removeItem(openingAnimationKey);
       else localStorage.setItem(openingAnimationKey, "off");
     } catch { /* Apply the choice for this visit anyway. */ }
+  }
+  openingSwitch.addEventListener("click", () => setOpeningAnimation(!openingAnimation));
+  toggleOpening.addEventListener("click", () => {
+    setOpeningAnimation(!openingAnimation);
     closeBookMenu(true);
   });
   toggleFavorite.addEventListener("click", () => {
@@ -300,7 +326,7 @@ EB.start("home", (d) => {
   document.addEventListener("touchmove", () => closeBookMenu(), { passive: true });
   window.addEventListener("blur", () => closeBookMenu());
   window.addEventListener("storage", (event) => {
-    if (event.key === openingAnimationKey || event.key === null) openingAnimation = readOpeningAnimation();
+    if (event.key === openingAnimationKey || event.key === null) { openingAnimation = readOpeningAnimation(); showOpeningSwitch(); }
     if ([favoriteKey, hiddenKey, null].includes(event.key)) {
       favorites = readFavorites();
       const changed = readHidden();
@@ -393,6 +419,7 @@ EB.start("home", (d) => {
   const rowSizes = [];
   const motion = new Map();
   let draggedBook = null;
+  let draggedBooks = [];
   let originalOrder = null;
   let dropRow = null;
   let suppressClickUntil = 0;
@@ -432,7 +459,7 @@ EB.start("home", (d) => {
     refreshStickers.forEach((refresh) => refresh());
     if (!animate || reducedMotion.matches) return;
     order.forEach((link) => {
-      if (link === draggedBook || link.hidden) return;
+      if (draggedBooks.includes(link) || link.hidden) return;
       const first = before.get(link);
       const last = link.getBoundingClientRect();
       // A book that was hidden a moment ago has no earlier position to travel from.
@@ -510,17 +537,18 @@ EB.start("home", (d) => {
   }
   function finishDragging(commit = false) {
     if (!draggedBook) return;
-    const link = draggedBook;
+    const group = draggedBooks;
     if (!commit && originalOrder) arrange(originalOrder);
-    link.classList.remove("book-dragging");
+    group.forEach((link) => link.classList.remove("book-dragging"));
     draggedBook = originalOrder = dropRow = null;
+    draggedBooks = [];
     shelfBox.classList.remove("is-rearranging");
     suppressClickUntil = performance.now() + 250;
     if (commit) {
       saveArrangement();
-      if (!reducedMotion.matches) link.animate([
+      if (!reducedMotion.matches) group.forEach((link) => link.animate([
         { transform: "translateY(-9px)" }, { transform: "translateY(0)" },
-      ], { duration: 260, easing: "cubic-bezier(.22,1,.36,1)" });
+      ], { duration: 260, easing: "cubic-bezier(.22,1,.36,1)" }));
     }
   }
   shelfBox.addEventListener("click", (event) => {
@@ -534,11 +562,15 @@ EB.start("home", (d) => {
     if (!link || cancelBookOpening) { event.preventDefault(); return; }
     closeBookMenu();
     [...motion.keys()].forEach(stopMotion);
-    draggedBook = link;
+    // Dragging a selected book carries the whole selection; any other book goes alone.
+    if (!selectedBooks.has(link)) selectBooks([]);
     originalOrder = currentOrder();
+    draggedBook = link;
+    draggedBooks = selectedBooks.size > 1 ? originalOrder.filter((book) => selectedBooks.has(book)) : [link];
     event.dataTransfer.effectAllowed = "move";
-    event.dataTransfer.setData("text/plain", link.dataset.bookId);
-    link.classList.add("book-dragging");
+    event.dataTransfer.setData("text/plain", draggedBooks.map((book) => book.dataset.bookId).join("\n"));
+    if (draggedBooks.length > 1) setStackImage(event, link);
+    draggedBooks.forEach((book) => book.classList.add("book-dragging"));
     shelfBox.classList.add("is-rearranging");
   });
   shelfBox.addEventListener("dragover", (event) => {
@@ -551,27 +583,35 @@ EB.start("home", (d) => {
     const bounds = row.getBoundingClientRect();
     if (event.clientX < bounds.left + 32) row.scrollLeft -= 12;
     if (event.clientX > bounds.right - 32) row.scrollLeft += 12;
-    const gap = draggedBook.getBoundingClientRect();
+    const group = draggedBooks;
+    const oldOrder = currentOrder();
     // Stay still over the open slot instead of repeatedly swapping at its edges.
-    if (draggedBook.parentElement === row && event.clientX >= gap.left - 4 && event.clientX <= gap.right + 4) return;
-    const candidates = [...row.children].filter((link) => link !== draggedBook);
+    // Scattered selections first gather beside the pointer.
+    const visibleOrder = oldOrder.filter((link) => !link.hidden);
+    const start = visibleOrder.indexOf(group[0]);
+    const gathered = group.every((link, i) => visibleOrder[start + i] === link);
+    const inRow = group.filter((link) => link.parentElement === row);
+    if (gathered && inRow.length) {
+      const first = inRow[0].getBoundingClientRect();
+      const last = inRow.at(-1).getBoundingClientRect();
+      if (event.clientX >= first.left - 4 && event.clientX <= last.right + 4) return;
+    }
+    const candidates = [...row.children].filter((link) => !group.includes(link));
     const before = candidates.find((link) => {
       const rect = link.getBoundingClientRect();
       return event.clientX < rect.left + rect.width / 2;
     });
-    const oldOrder = currentOrder();
-    const order = oldOrder.filter((link) => link !== draggedBook);
+    const order = oldOrder.filter((link) => !group.includes(link));
+    const rowIndex = bookRows.indexOf(row);
     let index;
     if (before) index = order.indexOf(before);
     else if (candidates.length) index = order.indexOf(candidates.at(-1)) + 1;
-    else index = bookRows.slice(0, bookRows.indexOf(row)).reduce((n, r) => n + r.children.length, 0);
-    // A full upper shelf always keeps the incoming book; its previous rightmost book spills down.
-    if (draggedBook.parentElement !== row) {
-      const shelfVisible = order.filter((link) => link.parentElement === row && !link.hidden);
-      const last = shelfVisible[rowSizes[bookRows.indexOf(row)] - 1];
-      if (last) index = Math.min(index, order.indexOf(last));
-    }
-    order.splice(index, 0, draggedBook);
+    else index = order.filter((link) => bookRows.indexOf(link.parentElement) < rowIndex).length;
+    // A full upper shelf always keeps the incoming books; its previous rightmost books spill down.
+    const shelfVisible = order.filter((link) => link.parentElement === row && !link.hidden);
+    const cut = shelfVisible[Math.max(0, rowSizes[rowIndex] - group.length)];
+    if (cut) index = Math.min(index, order.indexOf(cut));
+    order.splice(index, 0, ...group);
     if (order.some((link, i) => link !== oldOrder[i])) arrange(order);
   });
   shelfBox.addEventListener("dragleave", (event) => {
@@ -585,8 +625,78 @@ EB.start("home", (d) => {
   shelfBox.addEventListener("dragend", () => finishDragging());
   window.addEventListener("blur", () => finishDragging());
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && draggedBook) finishDragging();
+    if (event.key !== "Escape" || event.defaultPrevented) return;
+    if (draggedBook) finishDragging();
+    else selectBooks([]);
   });
+  // The drag image shows the carried books side by side with their count.
+  function setStackImage(event, anchor) {
+    const stack = document.createElement("div");
+    stack.className = "book-drag-stack";
+    const shown = [anchor, ...draggedBooks.filter((book) => book !== anchor)].slice(0, 5);
+    const rects = shown.map((book) => book.getBoundingClientRect());
+    shown.forEach((book, i) => {
+      const copy = book.cloneNode(true);
+      copy.removeAttribute("href");
+      copy.removeAttribute("data-book-id");
+      copy.classList.remove("book-selected", "book-pulled");
+      Object.assign(copy.style, { width: rects[i].width + "px", height: rects[i].height + "px" });
+      stack.appendChild(copy);
+    });
+    const count = document.createElement("span");
+    count.className = "book-drag-count";
+    count.textContent = `${draggedBooks.length}권`;
+    stack.appendChild(count);
+    document.body.appendChild(stack);
+    const tallest = Math.max(...rects.map((rect) => rect.height));
+    event.dataTransfer.setDragImage(stack, event.clientX - rects[0].left, event.clientY - rects[0].top + tallest - rects[0].height);
+    setTimeout(() => stack.remove());
+  }
+  // Rubber-band selection starts on empty shelf space so book dragging stays as it was.
+  const marquee = document.createElement("div");
+  marquee.className = "shelf-marquee";
+  marquee.hidden = true;
+  document.body.appendChild(marquee);
+  let selecting = null;
+  shelfBox.addEventListener("pointerdown", (event) => {
+    if (event.pointerType !== "mouse" || event.button !== 0 || event.target.closest(".book-spine") ||
+        draggedBook || cancelBookOpening) return;
+    // Leave a crowded shelf's scrollbar to scroll.
+    const row = event.target.closest(".shelf-books");
+    if (row && event.offsetY >= row.clientHeight) return;
+    event.preventDefault();
+    const additive = event.shiftKey || event.metaKey || event.ctrlKey;
+    selecting = { x: event.clientX, y: event.clientY, id: event.pointerId, moved: false, base: additive ? [...selectedBooks] : [] };
+    shelfBox.setPointerCapture(event.pointerId);
+  });
+  shelfBox.addEventListener("pointermove", (event) => {
+    if (event.pointerId !== selecting?.id) return;
+    if (!selecting.moved && Math.hypot(event.clientX - selecting.x, event.clientY - selecting.y) < 4) return;
+    selecting.moved = true;
+    shelfBox.classList.add("is-selecting");
+    const left = Math.min(selecting.x, event.clientX);
+    const right = Math.max(selecting.x, event.clientX);
+    const top = Math.min(selecting.y, event.clientY);
+    const bottom = Math.max(selecting.y, event.clientY);
+    Object.assign(marquee.style, { left: left + "px", top: top + "px", width: right - left + "px", height: bottom - top + "px" });
+    marquee.hidden = false;
+    const caught = currentOrder().filter((link) => {
+      if (link.hidden) return false;
+      const rect = link.getBoundingClientRect();
+      return rect.right > left && rect.left < right && rect.bottom > top && rect.top < bottom;
+    });
+    selectBooks([...new Set([...selecting.base, ...caught])]);
+  });
+  function finishSelecting(event) {
+    if (event.pointerId !== selecting?.id) return;
+    // A plain click on empty shelf space clears the selection.
+    if (!selecting.moved) selectBooks(selecting.base);
+    else suppressClickUntil = performance.now() + 250;
+    selecting = null;
+    marquee.hidden = true;
+    shelfBox.classList.remove("is-selecting");
+  }
+  ["pointerup", "pointercancel", "lostpointercapture"].forEach((type) => shelfBox.addEventListener(type, finishSelecting));
   // Keyboard rearranging uses the same shelf balancing and animation.
   shelfBox.addEventListener("keydown", (event) => {
     const link = event.target.closest(".book-spine");
