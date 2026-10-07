@@ -12396,6 +12396,270 @@
     "link": "chapters/vector.html#sim-vc-pca"
   },
   {
+    "id": "axbook/agents/sim-auto",
+    "bookId": "axbook",
+    "title": "자율성 단계 슬라이더 — 8D 업무에서 AI와 사람의 역할",
+    "link": "chapters/agents.html#sim-auto"
+  },
+  {
+    "id": "axbook/agents/sim-err",
+    "bookId": "axbook",
+    "title": "오류 누적 계산기 — 단계 수, 정확도, 체크포인트",
+    "link": "chapters/agents.html#sim-err"
+  },
+  {
+    "id": "axbook/agents/sim-trace",
+    "bookId": "axbook",
+    "title": "에이전트 실행 트레이스 재생 — 새벽 2시의 설비 알람",
+    "link": "chapters/agents.html#sim-trace"
+  },
+  {
+    "id": "axbook/cases/sim-rp",
+    "bookId": "axbook",
+    "title": "이슈 발생! — 같은 클레임을 두 방식으로 대응하기",
+    "link": "chapters/cases.html#sim-rp"
+  },
+  {
+    "id": "axbook/cases/sim-metrics",
+    "bookId": "axbook",
+    "title": "사례별 전후 지표 비교",
+    "link": "chapters/cases.html#sim-metrics"
+  },
+  {
+    "id": "axbook/cases/sim-lessons",
+    "bookId": "axbook",
+    "title": "교훈 매칭 카드 — 이 상황에 필요한 원칙은?",
+    "link": "chapters/cases.html#sim-lessons"
+  },
+  {
+    "id": "axbook/foundation/sim-dq",
+    "bookId": "axbook",
+    "title": "데이터 품질 스코어카드 — 오류를 주입해 보자",
+    "link": "chapters/foundation.html#sim-dq"
+  },
+  {
+    "id": "axbook/foundation/sim-med",
+    "bookId": "axbook",
+    "title": "메달리온 파이프라인 단계별 변환",
+    "link": "chapters/foundation.html#sim-med"
+  },
+  {
+    "id": "axbook/foundation/sim-noise",
+    "bookId": "axbook",
+    "title": "라벨 오류 → 모델 성능 실험",
+    "link": "chapters/foundation.html#sim-noise"
+  },
+  {
+    "id": "axbook/goals/sim-trap",
+    "bookId": "axbook",
+    "title": "취합의 함정 시뮬레이터: 36개월 누적 가치",
+    "link": "chapters/goals.html#sim-trap"
+  },
+  {
+    "id": "axbook/goals/sim-designer",
+    "bookId": "axbook",
+    "title": "계층별 목표 설계기: 취합형과 계층형 비교",
+    "link": "chapters/goals.html#sim-designer"
+  },
+  {
+    "id": "axbook/goals/sim-tree",
+    "bookId": "axbook",
+    "title": "캐스케이드 트리: 사업부 결과에서 파트 실행까지",
+    "link": "chapters/goals.html#sim-tree"
+  },
+  {
+    "id": "axbook/goals/sim-check",
+    "bookId": "axbook",
+    "title": "목표 문장 점검기",
+    "link": "chapters/goals.html#sim-check"
+  },
+  {
+    "id": "axbook/governance/sim-risk",
+    "bookId": "axbook",
+    "title": "유스케이스 리스크 분류 마법사",
+    "link": "chapters/governance.html#sim-risk"
+  },
+  {
+    "id": "axbook/governance/sim-matrix",
+    "bookId": "axbook",
+    "title": "데이터 등급 × 배포 방식 허용 매트릭스",
+    "link": "chapters/governance.html#sim-matrix"
+  },
+  {
+    "id": "axbook/governance/sim-hallu",
+    "bookId": "axbook",
+    "title": "환각·검증 시뮬레이터: 오답이 사용자에게 도달하는 확률",
+    "link": "chapters/governance.html#sim-hallu"
+  },
+  {
+    "id": "axbook/knowledge/sim-chunk",
+    "bookId": "axbook",
+    "title": "청크 크기 실험 — 맥락 완결성 vs 집중도",
+    "link": "chapters/knowledge.html#sim-chunk"
+  },
+  {
+    "id": "axbook/knowledge/sim-rag",
+    "bookId": "axbook",
+    "title": "미니 RAG — 검색, 근거, 권한",
+    "link": "chapters/knowledge.html#sim-rag"
+  },
+  {
+    "id": "axbook/knowledge/sim-bench",
+    "bookId": "axbook",
+    "title": "검색 평가 벤치 — 토크나이저와 점수 함수 비교",
+    "link": "chapters/knowledge.html#sim-bench"
+  },
+  {
+    "id": "axbook/legacy/sim-res",
+    "bookId": "axbook",
+    "title": "정보 거주지 지도",
+    "link": "chapters/legacy.html#sim-res"
+  },
+  {
+    "id": "axbook/legacy/sim-ver",
+    "bookId": "axbook",
+    "title": "파일 버전 혼돈 시뮬레이터",
+    "link": "chapters/legacy.html#sim-ver"
+  },
+  {
+    "id": "axbook/legacy/sim-mail",
+    "bookId": "axbook",
+    "title": "메일 스레드 구조화 실습",
+    "link": "chapters/legacy.html#sim-mail"
+  },
+  {
+    "id": "axbook/people/sim-om",
+    "bookId": "axbook",
+    "title": "운영 모델 선택기",
+    "link": "chapters/people.html#sim-om"
+  },
+  {
+    "id": "axbook/people/sim-pyr",
+    "bookId": "axbook",
+    "title": "역량 피라미드와 교육 필요량 계산",
+    "link": "chapters/people.html#sim-pyr"
+  },
+  {
+    "id": "axbook/people/sim-bass",
+    "bookId": "axbook",
+    "title": "채택 확산 시뮬레이터 (Bass 모델)",
+    "link": "chapters/people.html#sim-bass"
+  },
+  {
+    "id": "axbook/playbook/sim-pb",
+    "bookId": "axbook",
+    "title": "AX 플래너 — 진단에서 90일 계획까지",
+    "link": "chapters/playbook.html#sim-pb"
+  },
+  {
+    "id": "axbook/process/sim-pm",
+    "bookId": "axbook",
+    "title": "프로세스 마이닝 체험: 이슈 대응 로그",
+    "link": "chapters/process.html#sim-pm"
+  },
+  {
+    "id": "axbook/process/sim-8d",
+    "bookId": "axbook",
+    "title": "8D 단계 탐색기: 산출물 · 데이터 · AI 지원 포인트",
+    "link": "chapters/process.html#sim-8d"
+  },
+  {
+    "id": "axbook/process/sim-exp",
+    "bookId": "axbook",
+    "title": "산출물 폭발 계산기",
+    "link": "chapters/process.html#sim-exp"
+  },
+  {
+    "id": "axbook/roadmap/sim-stage",
+    "bookId": "axbook",
+    "title": "단계 판정기: 현재 단계와 다음 졸업 조건",
+    "link": "chapters/roadmap.html#sim-stage"
+  },
+  {
+    "id": "axbook/roadmap/sim-roadmap",
+    "bookId": "axbook",
+    "title": "로드맵 빌더: 이니셔티브 15개 배치와 의존성 검사",
+    "link": "chapters/roadmap.html#sim-roadmap"
+  },
+  {
+    "id": "axbook/roadmap/sim-invest",
+    "bookId": "axbook",
+    "title": "투자 배분 시뮬레이터: 누적 가치 곡선",
+    "link": "chapters/roadmap.html#sim-invest"
+  },
+  {
+    "id": "axbook/semantics/sim-mapping",
+    "bookId": "axbook",
+    "title": "불량 이름 매핑 실습 — 12개 이름, 하나의 언어",
+    "link": "chapters/semantics.html#sim-mapping"
+  },
+  {
+    "id": "axbook/semantics/sim-isa",
+    "bookId": "axbook",
+    "title": "ISA-95 계층 탐색기",
+    "link": "chapters/semantics.html#sim-isa"
+  },
+  {
+    "id": "axbook/semantics/sim-hub",
+    "bookId": "axbook",
+    "title": "점대점 vs 정준 모델(허브) 매핑 수 비교",
+    "link": "chapters/semantics.html#sim-hub"
+  },
+  {
+    "id": "axbook/shopfloor/sim-spc",
+    "bookId": "axbook",
+    "title": "관리도 시뮬레이터 — 이동과 산포를 주입하고 규칙으로 잡기",
+    "link": "chapters/shopfloor.html#sim-spc"
+  },
+  {
+    "id": "axbook/shopfloor/sim-thr",
+    "bookId": "axbook",
+    "title": "이상 탐지 임계값 — 혼동행렬·정밀도·재현율·비용",
+    "link": "chapters/shopfloor.html#sim-thr"
+  },
+  {
+    "id": "axbook/shopfloor/sim-pm",
+    "bookId": "axbook",
+    "title": "보전 전략 비용 비교 — 사후 · 예방 · 예지",
+    "link": "chapters/shopfloor.html#sim-pm"
+  },
+  {
+    "id": "axbook/usecases/sim-decomp",
+    "bookId": "axbook",
+    "title": "업무 분해기 — 어디까지 AI가 맡을 수 있나",
+    "link": "chapters/usecases.html#sim-decomp"
+  },
+  {
+    "id": "axbook/usecases/sim-matrix",
+    "bookId": "axbook",
+    "title": "유스케이스 포트폴리오 매트릭스",
+    "link": "chapters/usecases.html#sim-matrix"
+  },
+  {
+    "id": "axbook/usecases/sim-roi",
+    "bookId": "axbook",
+    "title": "ROI 계산기 — 손익분기와 3년 NPV",
+    "link": "chapters/usecases.html#sim-roi"
+  },
+  {
+    "id": "axbook/why/sim-funnel",
+    "bookId": "axbook",
+    "title": "파일럿 → 확산 깔때기",
+    "link": "chapters/why.html#sim-funnel"
+  },
+  {
+    "id": "axbook/why/sim-amp",
+    "bookId": "axbook",
+    "title": "\"AI는 증폭기\" 시뮬레이터",
+    "link": "chapters/why.html#sim-amp"
+  },
+  {
+    "id": "axbook/why/sim-assess",
+    "bookId": "axbook",
+    "title": "AX 성숙도 자가진단",
+    "link": "chapters/why.html#sim-assess"
+  },
+  {
     "id": "carbook/adas/sim-lv",
     "bookId": "carbook",
     "title": "자동화 레벨 탐색기",

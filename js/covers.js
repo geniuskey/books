@@ -371,6 +371,24 @@
       return svg(s);
     },
     // 네트워크: 라우터 그물망의 링크를 따라 패킷이 흐른다
+    // AI 전환: 흩어진 파일·메일이 표 한 장으로 정리되고, 그 위 AI 노드로 신호가 흐른다
+    transform() {
+      const r = rnd(11); let s = "";
+      range(7).forEach((k) => {
+        const x = 10 + r() * 46, y = 14 + k * 15 + r() * 4, a = (r() - 0.5) * 30;
+        s += `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="22" height="10" rx="2" fill="${W}" fill-opacity=".14" stroke="${W}" stroke-opacity=".55" transform="rotate(${a.toFixed(1)} ${(x + 11).toFixed(1)} ${(y + 5).toFixed(1)})"/>`;
+      });
+      s += `<path class="cv-flow" d="M74 70H96" stroke="${W}" stroke-width="2" stroke-dasharray="4 4" fill="none"/><path d="M94 65l6 5-6 5" fill="none" stroke="${W}" stroke-width="2"/>`;
+      s += `<rect x="108" y="56" width="84" height="64" rx="4" fill="none" stroke="${W}" stroke-opacity=".5"/>`;
+      range(4).forEach((j) => range(3).forEach((i) => {
+        s += `<rect x="${113 + i * 26}" y="${61 + j * 14.5}" width="22" height="10" rx="2" fill="${W}" fill-opacity="${0.35 + 0.15 * ((i + j) % 3)}"${(i + j) % 4 === 0 ? ` class="cv-blink" style="animation-delay:${((i + j) * 0.3).toFixed(1)}s"` : ""}/>`;
+      }));
+      [124, 150, 176].forEach((x, k) => {
+        s += `<path class="cv-flow" style="animation-delay:-${(k * 0.3).toFixed(1)}s" d="M150 26L${x} 56" stroke="${W}" stroke-width="1.6" stroke-dasharray="3 6" fill="none"/>`;
+      });
+      s += `<circle class="cv-pulse" cx="150" cy="22" r="13" fill="${W}" fill-opacity=".85"/><text x="150" y="26.5" text-anchor="middle" font-size="12" font-weight="700" fill="#000" fill-opacity=".55" font-family="sans-serif">AI</text>`;
+      return svg(s);
+    },
     network() {
       const N = [[28, 34], [30, 98], [74, 64], [116, 26], [118, 104], [160, 62], [186, 24], [184, 106]];
       const L = [[0, 2], [1, 2], [2, 3], [2, 4], [3, 5], [4, 5], [3, 4], [5, 6], [5, 7], [0, 3], [1, 4]];

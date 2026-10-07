@@ -1024,6 +1024,45 @@
       "field": "ai"
     },
     {
+      "id": "axbook",
+      "code": "AX",
+      "title": "AXBook",
+      "subtitle": "제조업 AI 전환 교과서",
+      "headline": "레거시 파일과 메일 더미에서 AI가 일하는 조직까지",
+      "description": "공유 폴더의 엑셀, 메일 속 결정, 이슈마다 달라지는 프로세스와 팀마다 다른 용어에서 출발합니다. 데이터·프로세스·공통 언어·사람을 정리하고 그 위에 AI를 올리는 길을, 미니 RAG와 프로세스 마이닝, 계층별 목표 설계기로 직접 만지며 따라갑니다.",
+      "url": "https://axbook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/axbook",
+      "status": "published",
+      "level": "실무자·관리자",
+      "chapters": 16,
+      "simulators": 44,
+      "color": "#0d8a72",
+      "colorDark": "#2fd4ad",
+      "topics": [
+        "레거시·다크 데이터",
+        "프로세스 마이닝",
+        "기준정보·온톨로지",
+        "RAG·에이전트",
+        "계층별 AX 목표"
+      ],
+      "motif": "transform",
+      "featured": [
+        {
+          "title": "사내 문서 미니 RAG",
+          "desc": "질문을 넣으면 근거 문단과 출처가 뜨고, 권한에 따라 결과가 달라진다",
+          "link": "chapters/knowledge.html#sim-rag",
+          "image": "img/sims/axbook-sim-rag.jpg"
+        },
+        {
+          "title": "취합형 목표의 함정",
+          "desc": "팀 목표만 더한 조직과 계층별 목표를 가진 조직의 36개월 가치를 비교",
+          "link": "chapters/goals.html#sim-trap",
+          "image": "img/sims/axbook-sim-trap.jpg"
+        }
+      ],
+      "field": "ai"
+    },
+    {
       "id": "statbook",
       "code": "STA",
       "title": "StatBook",
