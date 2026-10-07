@@ -1,0 +1,123 @@
+<!doctype html>
+<!-- og.png 원본. tools/build-og.py 가 1200×630 으로 캡처한다. 숫자와 책등은 data/books.json·experiment-catalog.json 에서 읽는다. -->
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Books OG</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap">
+<style>
+  :root {
+    --font: "Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    width: 1200px; height: 630px; overflow: hidden; position: relative;
+    font-family: var(--font); color: #f7f0e3;
+    background:
+      radial-gradient(ellipse 55% 70% at 72% -10%, rgba(233, 182, 105, .26), transparent 72%),
+      radial-gradient(ellipse 40% 50% at 8% 110%, rgba(233, 182, 105, .08), transparent 70%),
+      repeating-linear-gradient(90deg, transparent 0 118px, rgba(255,255,255,.018) 119px 120px),
+      linear-gradient(130deg, #25202a, #171b26 55%, #222029);
+  }
+  .copy { position: absolute; left: 64px; top: 0; bottom: 0; width: 420px; display: flex; flex-direction: column; justify-content: center; }
+  .eyebrow { font: 600 14px var(--mono); letter-spacing: .16em; color: #d5af7a; }
+  h1 { margin: 18px 0 0; font-size: 58px; line-height: 1.16; letter-spacing: -.045em; font-weight: 800; }
+  h1 em { font-style: normal; color: #f5ce92; }
+  .lede { margin: 22px 0 0; color: #c9c2bb; font-size: 20px; line-height: 1.55; letter-spacing: -.01em; }
+  .stats { display: flex; gap: 0; margin-top: 34px; border-top: 1px solid rgba(213,175,122,.28); padding-top: 18px; }
+  .stats div { flex: 1; }
+  .stats div + div { padding-left: 16px; border-left: 1px solid rgba(213,175,122,.18); }
+  .stats b { display: block; font: 700 30px var(--mono); color: #f6dbb3; letter-spacing: -.02em; }
+  .stats span { display: block; margin-top: 2px; color: #a99f95; font-size: 15px; }
+  .url { position: absolute; left: 64px; bottom: 34px; font: 500 15px var(--mono); color: #8f857c; letter-spacing: .04em; }
+
+  /* 책장: 사이트 홈의 .library-room / .home-shelf / .book-spine 을 축소한 것 */
+  .room {
+    position: absolute; right: 48px; top: 54px; width: 626px; height: 522px;
+    padding: 14px 24px 12px; border: 1px solid #6b4c32; border-radius: 10px;
+    background: linear-gradient(90deg, #1c1515, #302522 50%, #1c1515);
+    box-shadow: inset 0 0 0 5px rgba(173,117,60,.09), inset 0 18px 30px rgba(0,0,0,.35), 0 24px 60px rgba(0,0,0,.45);
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .room::before, .room::after { content: ""; position: absolute; top: 0; bottom: 0; width: 16px; background: linear-gradient(90deg, #61442c, #9a6c42 30%, #38271f 75%, #201715); }
+  .room::before { left: 0; border-radius: 10px 0 0 10px; }
+  .room::after { right: 0; border-radius: 0 10px 10px 0; }
+  .room-head { display: flex; justify-content: space-between; color: #d5b990; font-size: 14px; letter-spacing: .05em; padding: 0 6px; }
+  .room-head strong { color: #f6dbb3; font: 700 14px var(--mono); }
+  .shelf {
+    flex: 1; display: flex; align-items: flex-end; justify-content: center; gap: 3px; padding: 0 8px;
+    border-bottom: 17px solid #744d30;
+    background: radial-gradient(ellipse 70% 110% at 50% 5%, rgba(239,182,107,.1), transparent 65%), linear-gradient(90deg, #211a1b, #2d2423 50%, #211a1b);
+    box-shadow: 0 7px 0 #302019, 0 10px 12px rgba(0,0,0,.5), inset 0 18px 22px rgba(0,0,0,.35);
+  }
+  .spine {
+    position: relative; flex: 1 1 0; min-width: 0; max-width: 40px; height: 196px;
+    display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 9px 2px 8px;
+    color: #fff9ec; border: 1px solid rgba(255,255,255,.16); border-bottom: 0; border-radius: 3px 4px 0 0;
+    background: linear-gradient(90deg, rgba(0,0,0,.42), rgba(255,255,255,.15) 9%, transparent 19%, rgba(0,0,0,.08) 75%, rgba(0,0,0,.45) 95%), repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 5px), var(--c);
+    box-shadow: inset 3px 0 rgba(255,255,255,.12), inset -3px 0 rgba(0,0,0,.2), 3px 3px 5px rgba(0,0,0,.45);
+  }
+  .spine:nth-child(4n+2) { height: 206px; }
+  .spine:nth-child(5n+3) { height: 186px; }
+  .spine.tall { height: 214px; }
+  .spine::before, .spine::after { content: ""; position: absolute; left: 3px; right: 3px; height: 3px; border-block: 1px solid rgba(255,241,210,.55); }
+  .spine::before { top: 24px; } .spine::after { bottom: 24px; }
+  .spine .t { margin-top: 22px; font: 600 15px/1 var(--font); writing-mode: vertical-rl; white-space: nowrap; letter-spacing: .01em; text-shadow: 0 1px 2px rgba(0,0,0,.5); }
+  .spine .f { font: 600 9px var(--mono); letter-spacing: .06em; opacity: .9; }
+  .spine.pulled { transform: translateY(-14px); filter: brightness(1.15); }
+</style>
+</head>
+<body>
+  <section class="copy">
+    <div class="eyebrow">THE INTERACTIVE LIBRARY</div>
+    <h1>궁금한 세계마다,<br><em>열어 볼 책이<br>있습니다.</em></h1>
+    <p class="lede">직접 만지며 배우는<br>한국어 인터랙티브 교과서 시리즈</p>
+    <div class="stats">
+      <div><b id="s-books">–</b><span>권 출간</span></div>
+      <div><b id="s-sims">–</b><span>개 실험</span></div>
+      <div><b id="s-fields">–</b><span>개 분야</span></div>
+    </div>
+  </section>
+  <div class="url">books.euiyun.com</div>
+  <div class="room">
+    <div class="room-head"><span>지금 바로 펼칠 수 있는 책</span><strong id="s-head">–</strong></div>
+    <div class="shelf" id="row1"></div>
+    <div class="shelf" id="row2"></div>
+  </div>
+<script>
+(async () => {
+  const data = await (await fetch("../data/books.json")).json();
+  const pub = data.books.filter((b) => b.status === "published");
+  const fieldsUsed = new Set(pub.map((b) => b.field));
+  // /simulators/ 와 같은 수: 출간된 책에서 수집한 실험 목록.
+  const sims = (await (await fetch("../data/experiment-catalog.json")).json()).length;
+  document.getElementById("s-books").textContent = pub.length;
+  document.getElementById("s-sims").textContent = sims.toLocaleString("en-US");
+  document.getElementById("s-fields").textContent = fieldsUsed.size;
+  document.getElementById("s-head").textContent = `${pub.length}권 출간`;
+  // 홈 책장처럼 첫 칸은 더 넓은 세계, 둘째 칸은 반도체.
+  const rows = [pub.filter((b) => b.field !== "semiconductor"), pub.filter((b) => b.field === "semiconductor")];
+  const pulled = new Set(["aibook", "moneybook", "devicebook"]);
+  rows.forEach((books, i) => {
+    const row = document.getElementById(`row${i + 1}`);
+    books.forEach((b) => {
+      const el = document.createElement("div");
+      const name = b.title.replace(/Book$/, "");
+      el.className = "spine" + (name.length > 8 ? " tall" : "") + (pulled.has(b.id) ? " pulled" : "");
+      el.style.setProperty("--c", b.color);
+      el.innerHTML = `<span class="t"></span><span class="f"></span>`;
+      el.querySelector(".t").textContent = b.title.replace(/Book$/, " Book").replace(/([a-z])([A-Z][a-z])/g, "$1 $2");
+      el.querySelector(".f").textContent = b.code;
+      row.appendChild(el);
+    });
+  });
+  await document.fonts.ready;
+  document.body.dataset.ready = "1";
+})();
+</script>
+</body>
+</html>

@@ -115,7 +115,7 @@ python3 -m http.server 8000   # → http://localhost:8000
 
 OpticsBook을 출간해 반도체 분야의 기초 물리로 분류했습니다. 이미지 센서 개발에 필요한 회절·PSF·MTF, 박막, 마이크로렌즈·픽셀 광학 스택·입사각·광학 크로스토크를 다루며, SensorBook의 센서 구조·회로·신호 처리 설명을 광학 원리와 설계 변수로 보완합니다. 읽기 경로 `lens-to-pixel`은 OpticsBook에서 SensorBook으로 이어집니다. 현재 다음 차례(1단계)에는 책이 없고, ElectricBook·StatBook 등은 후속 후보입니다.
 
-`og.png`(공유 미리보기 이미지)와 `img/sims/`의 시뮬레이터 화면은 캡처 이미지라 책이 늘거나 시뮬레이터가 바뀌면 다시 캡처해 주세요. 시뮬레이터 캡처는 각 책 페이지에서 `#sim-… .sim-view` 영역을 가로 720px JPEG로 저장한 것입니다.
+`og.png`(공유 미리보기 이미지)는 `tools/og.html`을 `python3 tools/build-og.py`(Playwright 필요)로 캡처한 것입니다. 책장과 숫자를 `data/books.json`·`data/experiment-catalog.json`에서 읽으므로 책을 출간한 뒤 다시 실행해 주세요. `img/sims/`의 시뮬레이터 화면은 캡처 이미지라 시뮬레이터가 바뀌면 다시 캡처해 주세요. 시뮬레이터 캡처는 각 책 페이지에서 `#sim-… .sim-view` 영역을 가로 720px JPEG로 저장한 것입니다.
 
 ## 실험 탐색 데이터
 
