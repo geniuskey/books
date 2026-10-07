@@ -137,7 +137,7 @@
         <p>${esc(b.description)}</p>
         ${meta}
       </div>
-      <div class="links">${read}${b.repo ? `<a class="gh" href="${esc(b.repo)}">GitHub</a>` : ""}</div>`;
+      <div class="links">${read}</div>`;
     return card;
   };
 

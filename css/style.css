@@ -501,7 +501,6 @@ section.block { padding: 56px 0; border-top: 1px solid var(--border); }
 .card .links { display: flex; gap: 8px; border-top: 1px solid var(--border); padding: 12px 18px; }
 .card .links a { font-size: 14px; font-weight: 600; }
 .card .links a.read { color: var(--c); }
-.card .links a.gh { color: var(--text-dim); margin-left: auto; font-weight: 500; }
 .no-result { color: var(--text-dim); padding: 30px 0; text-align: center; }
 
 /* Compact library shelf; descriptions float above cards without moving the grid. */
