@@ -1189,6 +1189,12 @@ body[data-page="simulators"] .lib-filters { flex-direction: row; flex-wrap: wrap
 .book-context-menu button:hover, .book-context-menu button:focus-visible {
   background: #ffffff12; outline: none;
 }
+.book-context-menu button[hidden], .book-context-menu hr[hidden] { display: none; }
+.book-context-menu hr { margin: 5px 6px; border: 0; border-top: 1px solid #79654b; }
+/* Hidden books leave the shelf; when revealed they stand faded until restored. */
+.book-spine[hidden] { display: none; }
+.book-spine.is-hidden-book { opacity: .38; filter: grayscale(.7); }
+.home-shelves:focus { outline: none; }
 
 /* The dragged book reserves a quiet gap while its neighbors slide aside. */
 .book-spine[draggable="true"] { cursor: grab; }

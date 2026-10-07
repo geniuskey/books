@@ -60,9 +60,15 @@ EB.start("home", (d) => {
   }
   preloadSpread.done = new Set();
 
+  // 책 펼침 애니메이션은 책장 메뉴에서 끌 수 있다.
+  const openingAnimationKey = "books:opening-animation:v1";
+  const readOpeningAnimation = () => {
+    try { return localStorage.getItem(openingAnimationKey) !== "off"; } catch { return true; }
+  };
+  let openingAnimation = readOpeningAnimation();
   function openBook(event, link, book, title) {
     if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey ||
-        matchMedia("(prefers-reduced-motion: reduce)").matches || !Element.prototype.animate) return;
+        !openingAnimation || matchMedia("(prefers-reduced-motion: reduce)").matches || !Element.prototype.animate) return;
     event.preventDefault();
     if (cancelBookOpening) return;
 
@@ -179,48 +185,87 @@ EB.start("home", (d) => {
     } catch { return new Set(); }
   }
   let favorites = readFavorites();
+  // 관심 없는 책은 내 책장에서 숨긴다. 숨긴 책 보기를 켜면 흐리게 다시 나타난다.
+  const hiddenKey = "books:hidden:v1";
+  function readHidden() {
+    try {
+      const saved = JSON.parse(localStorage.getItem(hiddenKey) || "[]");
+      return new Set(Array.isArray(saved) ? saved.filter((id) => bookIds.has(id)) : []);
+    } catch { return new Set(); }
+  }
+  let hiddenBooks = readHidden();
+  let revealHidden = false;
   const favoriteLinks = new Map();
   const menu = document.createElement("div");
   menu.className = "book-context-menu";
   menu.setAttribute("role", "menu");
   menu.setAttribute("aria-label", "책 메뉴");
   menu.hidden = true;
-  const toggleFavorite = document.createElement("button");
-  toggleFavorite.type = "button";
-  toggleFavorite.setAttribute("role", "menuitem");
-  const resetOrder = document.createElement("button");
-  resetOrder.type = "button";
-  resetOrder.setAttribute("role", "menuitem");
+  const menuItem = () => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.setAttribute("role", "menuitem");
+    return button;
+  };
+  const toggleFavorite = menuItem();
+  const toggleHidden = menuItem();
+  const menuDivider = document.createElement("hr");
+  menuDivider.setAttribute("role", "separator");
+  const toggleReveal = menuItem();
+  const toggleOpening = menuItem();
+  const resetOrder = menuItem();
   resetOrder.textContent = "책장 순서 초기화";
-  menu.append(toggleFavorite, resetOrder);
+  menu.append(toggleFavorite, toggleHidden, menuDivider, toggleReveal, toggleOpening, resetOrder);
   document.body.appendChild(menu);
+  const menuItems = () => [...menu.querySelectorAll("button")].filter((button) => !button.hidden);
   let menuBook = null;
+  let menuAnchor = null;
   function closeBookMenu(restoreFocus = false) {
-    const link = menuBook && favoriteLinks.get(menuBook);
+    const anchor = menuAnchor;
     menu.hidden = true;
-    menuBook = null;
-    if (restoreFocus) link?.focus({ preventScroll: true });
+    menuBook = menuAnchor = null;
+    if (restoreFocus && anchor && !anchor.hidden) anchor.focus({ preventScroll: true });
   }
   function updateFavorites() {
     favoriteLinks.forEach((link, id) => {
       const selected = favorites.has(id);
+      const hidden = hiddenBooks.has(id);
+      link.hidden = hidden && !revealHidden;
       link.classList.toggle("is-favorite", selected);
-      link._favoriteSticker.hidden = !selected;
-      link.setAttribute("aria-label", link.dataset.readLabel + (selected ? " · 별 표시됨" : ""));
+      link.classList.toggle("is-hidden-book", hidden);
+      link._favoriteSticker.hidden = !selected || link.hidden;
+      link.setAttribute("aria-label", link.dataset.readLabel + (selected ? " · 별 표시됨" : "") + (hidden ? " · 숨긴 책" : ""));
     });
   }
-  function showBookMenu(event, id, link) {
+  // id가 없으면 책장 빈 곳에서 연 메뉴라 책장 전체 항목만 보인다.
+  function showBookMenu(event, id, anchor) {
     event.preventDefault();
     menuBook = id;
-    toggleFavorite.textContent = favorites.has(id) ? "별 표시 해제" : "별 표시 추가";
+    menuAnchor = anchor;
+    toggleFavorite.hidden = toggleHidden.hidden = menuDivider.hidden = !id;
+    if (id) {
+      toggleFavorite.textContent = favorites.has(id) ? "별 표시 해제" : "별 표시 추가";
+      toggleHidden.textContent = hiddenBooks.has(id) ? "숨기기 취소" : "이 책 숨기기";
+    }
+    toggleReveal.hidden = !hiddenBooks.size && !revealHidden;
+    toggleReveal.textContent = revealHidden ? "숨긴 책 다시 감추기" : `숨긴 책 보기 (${hiddenBooks.size}권)`;
+    toggleOpening.textContent = openingAnimation ? "책 펼침 애니메이션 끄기" : "책 펼침 애니메이션 켜기";
     menu.hidden = false;
-    const rect = link.getBoundingClientRect();
+    const rect = anchor.getBoundingClientRect();
     const x = event.clientX || rect.left;
     const y = event.clientY || rect.top;
     menu.style.left = Math.max(8, Math.min(x, innerWidth - menu.offsetWidth - 8)) + "px";
     menu.style.top = Math.max(8, Math.min(y, innerHeight - menu.offsetHeight - 8)) + "px";
-    toggleFavorite.focus({ preventScroll: true });
+    menuItems()[0].focus({ preventScroll: true });
   }
+  toggleOpening.addEventListener("click", () => {
+    openingAnimation = !openingAnimation;
+    try {
+      if (openingAnimation) localStorage.removeItem(openingAnimationKey);
+      else localStorage.setItem(openingAnimationKey, "off");
+    } catch { /* Apply the choice for this visit anyway. */ }
+    closeBookMenu(true);
+  });
   toggleFavorite.addEventListener("click", () => {
     if (!menuBook) return;
     if (favorites.has(menuBook)) favorites.delete(menuBook);
@@ -243,7 +288,7 @@ EB.start("home", (d) => {
     if (event.key === "Escape") { event.preventDefault(); closeBookMenu(true); }
     if (["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) {
       event.preventDefault();
-      const items = [toggleFavorite, resetOrder];
+      const items = menuItems();
       const index = items.indexOf(document.activeElement);
       const next = event.key === "Home" ? 0 : event.key === "End" ? items.length - 1
         : (index + (event.key === "ArrowDown" ? 1 : -1) + items.length) % items.length;
@@ -255,10 +300,12 @@ EB.start("home", (d) => {
   document.addEventListener("touchmove", () => closeBookMenu(), { passive: true });
   window.addEventListener("blur", () => closeBookMenu());
   window.addEventListener("storage", (event) => {
-    if (event.key === favoriteKey || event.key === null) {
+    if (event.key === openingAnimationKey || event.key === null) openingAnimation = readOpeningAnimation();
+    if ([favoriteKey, hiddenKey, null].includes(event.key)) {
       favorites = readFavorites();
-      updateFavorites();
+      const changed = readHidden();
       closeBookMenu();
+      setHidden(() => { hiddenBooks = changed; });
     }
   });
 
@@ -299,7 +346,7 @@ EB.start("home", (d) => {
       a.setAttribute("aria-label", `${spineName} · ${b.subtitle} 읽기`);
       a.dataset.readLabel = a.getAttribute("aria-label");
       favoriteLinks.set(b.id, a);
-      a.addEventListener("contextmenu", (event) => showBookMenu(event, b.id, a));
+      a.addEventListener("contextmenu", (event) => { event.stopPropagation(); showBookMenu(event, b.id, a); });
       a.addEventListener("keydown", (event) => {
         if (event.key === "ContextMenu" || (event.shiftKey && event.key === "F10")) {
           showBookMenu(event, b.id, a);
@@ -357,14 +404,15 @@ EB.start("home", (d) => {
     if (!running) return;
     running.animation.cancel();
     running.ghost.remove();
-    link.style.visibility = "";
+    link.style.opacity = "";
     motion.delete(link);
   }
-  function arrange(order, animate = true) {
+  function arrange(order, animate = true, change) {
     const before = new Map(currentOrder().map((link) => [
       link, (motion.get(link)?.ghost || link).getBoundingClientRect(),
     ]));
     [...motion.keys()].forEach(stopMotion);
+    change?.();
     let offset = 0;
     bookRows.forEach((row, index) => {
       order.slice(offset, offset + rowSizes[index]).forEach((link) => row.appendChild(link));
@@ -373,10 +421,11 @@ EB.start("home", (d) => {
     refreshStickers.forEach((refresh) => refresh());
     if (!animate || reducedMotion.matches) return;
     order.forEach((link) => {
-      if (link === draggedBook) return;
+      if (link === draggedBook || link.hidden) return;
       const first = before.get(link);
       const last = link.getBoundingClientRect();
-      if (!first || (Math.abs(first.left - last.left) < 1 && Math.abs(first.top - last.top) < 1)) return;
+      // A book that was hidden a moment ago has no earlier position to travel from.
+      if (!first || !first.width || (Math.abs(first.left - last.left) < 1 && Math.abs(first.top - last.top) < 1)) return;
       // Fixed visual copies can travel between shelves without being clipped by the wood.
       const ghost = link.cloneNode(true);
       ghost.removeAttribute("href");
@@ -386,10 +435,10 @@ EB.start("home", (d) => {
       Object.assign(ghost.style, {
         left: last.left + "px", top: last.top + "px",
         width: last.width + "px", height: last.height + "px",
-        visibility: "visible",
+        visibility: "visible", opacity: "",
       });
       document.body.appendChild(ghost);
-      link.style.visibility = "hidden";
+      link.style.opacity = "0";
       const dx = first.left - last.left;
       const dy = first.top - last.top;
       const animation = ghost.animate([
@@ -402,6 +451,37 @@ EB.start("home", (d) => {
       };
     });
   }
+  // Neighbors slide into the space a hidden book leaves, like the drag rearranging.
+  function setHidden(change) {
+    arrange(currentOrder(), true, () => { change(); updateFavorites(); });
+  }
+  function saveHidden() {
+    try {
+      if (hiddenBooks.size) localStorage.setItem(hiddenKey, JSON.stringify([...hiddenBooks]));
+      else localStorage.removeItem(hiddenKey);
+    } catch { /* Keep the shelf as chosen for this visit. */ }
+  }
+  toggleHidden.addEventListener("click", () => {
+    const id = menuBook;
+    if (!id) return;
+    const link = favoriteLinks.get(id);
+    const hiding = !hiddenBooks.has(id);
+    // Keyboard focus moves to the next book still on the shelf.
+    const order = currentOrder();
+    const next = order.slice(order.indexOf(link) + 1).concat(order.slice(0, order.indexOf(link)))
+      .find((book) => !book.hidden && (revealHidden || !hiddenBooks.has(book.dataset.bookId)));
+    closeBookMenu(!hiding || revealHidden);
+    setHidden(() => { if (hiding) hiddenBooks.add(id); else hiddenBooks.delete(id); });
+    saveHidden();
+    // Rearranging re-inserts the books, so move focus only afterwards.
+    if (hiding && !revealHidden) (next || shelfBox).focus({ preventScroll: true });
+  });
+  toggleReveal.addEventListener("click", () => {
+    closeBookMenu(true);
+    setHidden(() => { revealHidden = !revealHidden; });
+  });
+  shelfBox.tabIndex = -1;
+  shelfBox.addEventListener("contextmenu", (event) => showBookMenu(event, null, shelfBox));
   resetOrder.addEventListener("click", () => {
     finishDragging();
     closeBookMenu(true);
@@ -503,8 +583,13 @@ EB.start("home", (d) => {
     const index = order.indexOf(link);
     const rowIndex = bookRows.indexOf(link.parentElement);
     let target = index;
-    if (event.key === "ArrowLeft") target = Math.max(0, index - 1);
-    if (event.key === "ArrowRight") target = Math.min(order.length - 1, index + 1);
+    const step = (direction) => {
+      let i = index + direction;
+      while (order[i]?.hidden) i += direction;
+      return Math.max(0, Math.min(order.length - 1, i));
+    };
+    if (event.key === "ArrowLeft") target = step(-1);
+    if (event.key === "ArrowRight") target = step(1);
     if (event.key === "ArrowUp" && rowIndex > 0) target = index - rowSizes[rowIndex - 1];
     if (event.key === "ArrowDown" && rowIndex < bookRows.length - 1) target = Math.min(order.length - 1, index + rowSizes[rowIndex]);
     order.splice(index, 1);
