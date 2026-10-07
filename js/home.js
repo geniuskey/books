@@ -309,7 +309,6 @@ EB.start("home", (d) => {
     }
   });
 
-  const defaultRowSizes = shelves.map(([, books]) => books.length);
   const shelfOrderKey = "books:shelf-order:v1";
   try {
     const saved = JSON.parse(localStorage.getItem(shelfOrderKey) || "null");
@@ -389,15 +388,22 @@ EB.start("home", (d) => {
 
   updateFavorites();
 
-  // Preview a real gap while keeping each shelf's original number of books.
+  // Preview a real gap while keeping each shelf's number of visible books.
   const bookRows = [...shelfBox.querySelectorAll(".shelf-books")];
-  const rowSizes = bookRows.map((row) => row.children.length);
+  const rowSizes = [];
   const motion = new Map();
   let draggedBook = null;
   let originalOrder = null;
   let dropRow = null;
   let suppressClickUntil = 0;
   const currentOrder = () => bookRows.flatMap((row) => [...row.children]);
+  // Visible books split evenly across the shelves, so hiding books from one
+  // shelf pulls books up from the next instead of leaving it sparse.
+  function balanceRows() {
+    const visible = currentOrder().filter((link) => !link.hidden).length;
+    const perRow = Math.ceil(visible / bookRows.length);
+    rowSizes.splice(0, rowSizes.length, ...bookRows.map((_, i) => Math.max(0, Math.min(perRow, visible - perRow * i))));
+  }
   const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
   function stopMotion(link) {
     const running = motion.get(link);
@@ -413,10 +419,15 @@ EB.start("home", (d) => {
     ]));
     [...motion.keys()].forEach(stopMotion);
     change?.();
-    let offset = 0;
-    bookRows.forEach((row, index) => {
-      order.slice(offset, offset + rowSizes[index]).forEach((link) => row.appendChild(link));
-      offset += rowSizes[index];
+    // Only visible books fill a shelf; hidden ones stay beside their neighbors.
+    let rowIndex = 0;
+    let filled = 0;
+    order.forEach((link) => {
+      if (!link.hidden) {
+        if (filled >= rowSizes[rowIndex] && rowIndex < bookRows.length - 1) { rowIndex++; filled = 0; }
+        filled++;
+      }
+      bookRows[rowIndex].appendChild(link);
     });
     refreshStickers.forEach((refresh) => refresh());
     if (!animate || reducedMotion.matches) return;
@@ -453,7 +464,7 @@ EB.start("home", (d) => {
   }
   // Neighbors slide into the space a hidden book leaves, like the drag rearranging.
   function setHidden(change) {
-    arrange(currentOrder(), true, () => { change(); updateFavorites(); });
+    arrange(currentOrder(), true, () => { change(); updateFavorites(); balanceRows(); });
   }
   function saveHidden() {
     try {
@@ -482,10 +493,11 @@ EB.start("home", (d) => {
   });
   shelfBox.tabIndex = -1;
   shelfBox.addEventListener("contextmenu", (event) => showBookMenu(event, null, shelfBox));
+  balanceRows();
+  arrange(currentOrder(), false);
   resetOrder.addEventListener("click", () => {
     finishDragging();
     closeBookMenu(true);
-    rowSizes.splice(0, rowSizes.length, ...defaultRowSizes);
     arrange(orderedBooks.map((book) => favoriteLinks.get(book.id)));
     try { localStorage.removeItem(shelfOrderKey); } catch { /* Reset this visit anyway. */ }
   });
@@ -555,8 +567,9 @@ EB.start("home", (d) => {
     else index = bookRows.slice(0, bookRows.indexOf(row)).reduce((n, r) => n + r.children.length, 0);
     // A full upper shelf always keeps the incoming book; its previous rightmost book spills down.
     if (draggedBook.parentElement !== row) {
-      const start = rowSizes.slice(0, bookRows.indexOf(row)).reduce((a, b) => a + b, 0);
-      index = Math.min(index, start + Math.max(0, rowSizes[bookRows.indexOf(row)] - 1));
+      const shelfVisible = order.filter((link) => link.parentElement === row && !link.hidden);
+      const last = shelfVisible[rowSizes[bookRows.indexOf(row)] - 1];
+      if (last) index = Math.min(index, order.indexOf(last));
     }
     order.splice(index, 0, draggedBook);
     if (order.some((link, i) => link !== oldOrder[i])) arrange(order);
@@ -579,21 +592,21 @@ EB.start("home", (d) => {
     const link = event.target.closest(".book-spine");
     if (!link || !event.altKey || !["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(event.key)) return;
     event.preventDefault();
+    // Count positions among visible books so hidden ones never take a step.
     const order = currentOrder();
-    const index = order.indexOf(link);
+    const visible = order.filter((book) => !book.hidden);
+    const index = visible.indexOf(link);
     const rowIndex = bookRows.indexOf(link.parentElement);
     let target = index;
-    const step = (direction) => {
-      let i = index + direction;
-      while (order[i]?.hidden) i += direction;
-      return Math.max(0, Math.min(order.length - 1, i));
-    };
-    if (event.key === "ArrowLeft") target = step(-1);
-    if (event.key === "ArrowRight") target = step(1);
+    if (event.key === "ArrowLeft") target = index - 1;
+    if (event.key === "ArrowRight") target = index + 1;
     if (event.key === "ArrowUp" && rowIndex > 0) target = index - rowSizes[rowIndex - 1];
-    if (event.key === "ArrowDown" && rowIndex < bookRows.length - 1) target = Math.min(order.length - 1, index + rowSizes[rowIndex]);
-    order.splice(index, 1);
-    order.splice(Math.max(0, target), 0, link);
+    if (event.key === "ArrowDown" && rowIndex < bookRows.length - 1) target = index + rowSizes[rowIndex];
+    target = Math.max(0, Math.min(visible.length - 1, target));
+    if (target === index) return;
+    const anchor = visible[target];
+    order.splice(order.indexOf(link), 1);
+    order.splice(order.indexOf(anchor) + (target > index ? 1 : 0), 0, link);
     arrange(order);
     saveArrangement();
     link.focus({ preventScroll: true });
