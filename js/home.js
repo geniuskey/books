@@ -676,14 +676,18 @@ EB.start("home", (d) => {
     event.dataTransfer.setDragImage(stack, event.clientX - rects[0].left, event.clientY - rects[0].top + tallest - rects[0].height);
     setTimeout(() => stack.remove());
   }
-  // Rubber-band selection starts on empty shelf space so book dragging stays as it was.
+  // Rubber-band selection starts on empty space anywhere around the bookcase, including
+  // the margins beside it, so book dragging, links and the heading text stay as they were.
+  const selectArea = shelfBox.closest(".home-library") || shelfBox;
+  const selectStart = ".home-library, .home-library > .wrap, .library-welcome, .library-welcome > div, " +
+    ".library-room, .library-room-head, .library-room-foot, .home-shelves, .home-shelf, .shelf-books, .shelf-label, .shelf-label span";
   const marquee = document.createElement("div");
   marquee.className = "shelf-marquee";
   marquee.hidden = true;
   document.body.appendChild(marquee);
   let selecting = null;
-  shelfBox.addEventListener("pointerdown", (event) => {
-    if (event.pointerType !== "mouse" || event.button !== 0 || event.target.closest(".book-spine") ||
+  selectArea.addEventListener("pointerdown", (event) => {
+    if (event.pointerType !== "mouse" || event.button !== 0 || !event.target.matches(selectStart) ||
         draggedBook || cancelBookOpening) return;
     // Leave a crowded shelf's scrollbar to scroll.
     const row = event.target.closest(".shelf-books");
@@ -691,9 +695,9 @@ EB.start("home", (d) => {
     event.preventDefault();
     const additive = event.shiftKey || event.metaKey || event.ctrlKey;
     selecting = { x: event.clientX, y: event.clientY, id: event.pointerId, moved: false, base: additive ? [...selectedBooks] : [] };
-    shelfBox.setPointerCapture(event.pointerId);
+    selectArea.setPointerCapture(event.pointerId);
   });
-  shelfBox.addEventListener("pointermove", (event) => {
+  selectArea.addEventListener("pointermove", (event) => {
     if (event.pointerId !== selecting?.id) return;
     if (!selecting.moved && Math.hypot(event.clientX - selecting.x, event.clientY - selecting.y) < 4) return;
     selecting.moved = true;
@@ -720,7 +724,7 @@ EB.start("home", (d) => {
     marquee.hidden = true;
     shelfBox.classList.remove("is-selecting");
   }
-  ["pointerup", "pointercancel", "lostpointercapture"].forEach((type) => shelfBox.addEventListener(type, finishSelecting));
+  ["pointerup", "pointercancel", "lostpointercapture"].forEach((type) => selectArea.addEventListener(type, finishSelecting));
   // Keyboard rearranging uses the same shelf balancing and animation.
   shelfBox.addEventListener("keydown", (event) => {
     const link = event.target.closest(".book-spine");
