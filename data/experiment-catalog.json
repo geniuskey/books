@@ -20994,6 +20994,936 @@
     "link": "chapters/social.html#sim-gp"
   },
   {
+    "id": "estatebook/beyond/sim-yr",
+    "bookId": "estatebook",
+    "title": "광고의 5%는 통장에 몇 %로 남는가",
+    "link": "chapters/beyond.html#sim-yr"
+  },
+  {
+    "id": "estatebook/beyond/sim-vac",
+    "bookId": "estatebook",
+    "title": "공실 기간을 끌면 내 돈의 수익률은",
+    "link": "chapters/beyond.html#sim-vac"
+  },
+  {
+    "id": "estatebook/beyond/sim-ot",
+    "bookId": "estatebook",
+    "title": "오피스텔 한 채가 아파트의 세금을 바꾼다",
+    "link": "chapters/beyond.html#sim-ot"
+  },
+  {
+    "id": "estatebook/beyond/sim-st",
+    "bookId": "estatebook",
+    "title": "핵심 시설이 옮겨 가면 내 상가는",
+    "link": "chapters/beyond.html#sim-st"
+  },
+  {
+    "id": "estatebook/beyond/sim-lq",
+    "bookId": "estatebook",
+    "title": "깎아서 빨리 팔까, 버티며 기다릴까",
+    "link": "chapters/beyond.html#sim-lq"
+  },
+  {
+    "id": "estatebook/beyond/sim-rt",
+    "bookId": "estatebook",
+    "title": "상장 리츠의 10년: 배당과 가격",
+    "link": "chapters/beyond.html#sim-rt"
+  },
+  {
+    "id": "estatebook/beyond/sim-ps",
+    "bookId": "estatebook",
+    "title": "보장 기간이 끝나는 날",
+    "link": "chapters/beyond.html#sim-ps"
+  },
+  {
+    "id": "estatebook/beyond/sim-fa",
+    "bookId": "estatebook",
+    "title": "아버지의 노후 자금, 10년 뒤 무엇이 남는가",
+    "link": "chapters/beyond.html#sim-fa"
+  },
+  {
+    "id": "estatebook/bubble/sim-herd",
+    "bookId": "estatebook",
+    "title": "추격 매수가 만드는 거품",
+    "link": "chapters/bubble.html#sim-herd"
+  },
+  {
+    "id": "estatebook/bubble/sim-ceil",
+    "bookId": "estatebook",
+    "title": "사람들이 낼 수 있는 값의 천장",
+    "link": "chapters/bubble.html#sim-ceil"
+  },
+  {
+    "id": "estatebook/bubble/sim-spiral",
+    "bookId": "estatebook",
+    "title": "빚 구조가 정하는 하락의 깊이",
+    "link": "chapters/bubble.html#sim-spiral"
+  },
+  {
+    "id": "estatebook/bubble/sim-rec",
+    "bookId": "estatebook",
+    "title": "본전까지 몇 년인가",
+    "link": "chapters/bubble.html#sim-rec"
+  },
+  {
+    "id": "estatebook/bubble/sim-check",
+    "bookId": "estatebook",
+    "title": "과열·냉각 점검 계기판",
+    "link": "chapters/bubble.html#sim-check"
+  },
+  {
+    "id": "estatebook/bubble/sim-stress",
+    "bookId": "estatebook",
+    "title": "스트레스 테스트: 하늘네가 C아파트를 산다면",
+    "link": "chapters/bubble.html#sim-stress"
+  },
+  {
+    "id": "estatebook/buy/sim-tl",
+    "bookId": "estatebook",
+    "title": "잔금일을 전세 만기에 맞추기",
+    "link": "chapters/buy.html#sim-tl"
+  },
+  {
+    "id": "estatebook/buy/sim-cx",
+    "bookId": "estatebook",
+    "title": "시세가 움직이면 누가 계약을 깨고 싶어지나",
+    "link": "chapters/buy.html#sim-cx"
+  },
+  {
+    "id": "estatebook/buy/sim-br",
+    "bookId": "estatebook",
+    "title": "중개보수 상한: 거래 금액에 따른 계단",
+    "link": "chapters/buy.html#sim-br"
+  },
+  {
+    "id": "estatebook/buy/sim-acq",
+    "bookId": "estatebook",
+    "title": "취득세율, 낼 세금, 1억원을 더 낼 때 느는 세금",
+    "link": "chapters/buy.html#sim-acq"
+  },
+  {
+    "id": "estatebook/buy/sim-bd",
+    "bookId": "estatebook",
+    "title": "국민주택채권을 사서 바로 팔면 남는 비용",
+    "link": "chapters/buy.html#sim-bd"
+  },
+  {
+    "id": "estatebook/buy/sim-sl",
+    "bookId": "estatebook",
+    "title": "남궁현이 C아파트를 팔면 손에 남는 돈",
+    "link": "chapters/buy.html#sim-sl"
+  },
+  {
+    "id": "estatebook/buy/sim-rc",
+    "bookId": "estatebook",
+    "title": "매수 영수증: 집값 말고 드는 돈 전부",
+    "link": "chapters/buy.html#sim-rc"
+  },
+  {
+    "id": "estatebook/contract/sim-reg",
+    "bookId": "estatebook",
+    "title": "등기부에서 위험 신호 찾기",
+    "link": "chapters/contract.html#sim-reg"
+  },
+  {
+    "id": "estatebook/contract/sim-wf",
+    "bookId": "estatebook",
+    "title": "경매 대금은 누구에게 먼저 가는가",
+    "link": "chapters/contract.html#sim-wf"
+  },
+  {
+    "id": "estatebook/contract/sim-tl",
+    "bookId": "estatebook",
+    "title": "순위 타임라인: 같은 날이면 누가 먼저인가",
+    "link": "chapters/contract.html#sim-tl"
+  },
+  {
+    "id": "estatebook/contract/sim-st",
+    "bookId": "estatebook",
+    "title": "최우선변제의 절벽",
+    "link": "chapters/contract.html#sim-st"
+  },
+  {
+    "id": "estatebook/contract/sim-hug",
+    "bookId": "estatebook",
+    "title": "보증 가입 요건 점검기",
+    "link": "chapters/contract.html#sim-hug"
+  },
+  {
+    "id": "estatebook/contract/sim-case",
+    "bookId": "estatebook",
+    "title": "하늘네 보증금 종합 점검",
+    "link": "chapters/contract.html#sim-case"
+  },
+  {
+    "id": "estatebook/data/sim-ask",
+    "bookId": "estatebook",
+    "title": "호가와 실거래가 사이",
+    "link": "chapters/data.html#sim-ask"
+  },
+  {
+    "id": "estatebook/data/sim-lag",
+    "bookId": "estatebook",
+    "title": "오늘 보이는 거래량, 나중에 확정될 거래량",
+    "link": "chapters/data.html#sim-lag"
+  },
+  {
+    "id": "estatebook/data/sim-idx",
+    "bookId": "estatebook",
+    "title": "같은 거래로 만든 네 개의 지수",
+    "link": "chapters/data.html#sim-idx"
+  },
+  {
+    "id": "estatebook/data/sim-med",
+    "bookId": "estatebook",
+    "title": "고가 거래 한 건이 평균을 끈다",
+    "link": "chapters/data.html#sim-med"
+  },
+  {
+    "id": "estatebook/data/sim-mix",
+    "bookId": "estatebook",
+    "title": "어느 동네가 많이 팔렸나",
+    "link": "chapters/data.html#sim-mix"
+  },
+  {
+    "id": "estatebook/data/sim-cum",
+    "bookId": "estatebook",
+    "title": "구간을 고르면 숫자가 바뀐다",
+    "link": "chapters/data.html#sim-cum"
+  },
+  {
+    "id": "estatebook/data/sim-news",
+    "bookId": "estatebook",
+    "title": "\"B시 집값 반등\" 다시 계산하기",
+    "link": "chapters/data.html#sim-news"
+  },
+  {
+    "id": "estatebook/data/sim-case",
+    "bookId": "estatebook",
+    "title": "C아파트: 실거래, 호가, 하늘이 보던 지수",
+    "link": "chapters/data.html#sim-case"
+  },
+  {
+    "id": "estatebook/decision/sim-an",
+    "bookId": "estatebook",
+    "title": "세 길의 한 해 비용",
+    "link": "chapters/decision.html#sim-an"
+  },
+  {
+    "id": "estatebook/decision/sim-cum",
+    "bookId": "estatebook",
+    "title": "누적 비용과 손익분기점",
+    "link": "chapters/decision.html#sim-cum"
+  },
+  {
+    "id": "estatebook/decision/sim-map",
+    "bookId": "estatebook",
+    "title": "사는 쪽이 유리한 영역",
+    "link": "chapters/decision.html#sim-map"
+  },
+  {
+    "id": "estatebook/decision/sim-opp",
+    "bookId": "estatebook",
+    "title": "아낀 돈을 정말 굴릴 수 있는가",
+    "link": "chapters/decision.html#sim-opp"
+  },
+  {
+    "id": "estatebook/decision/sim-st",
+    "bookId": "estatebook",
+    "title": "안정성과 비유동성을 돈으로 바꾸면",
+    "link": "chapters/decision.html#sim-st"
+  },
+  {
+    "id": "estatebook/decision/sim-all",
+    "bookId": "estatebook",
+    "title": "내 숫자로 하는 사느냐 빌리느냐",
+    "link": "chapters/decision.html#sim-all"
+  },
+  {
+    "id": "estatebook/future/sim-pyr",
+    "bookId": "estatebook",
+    "title": "인구 피라미드를 미래로 밀어 보기",
+    "link": "chapters/future.html#sim-pyr"
+  },
+  {
+    "id": "estatebook/future/sim-hh",
+    "bookId": "estatebook",
+    "title": "인구와 가구 사이의 틈",
+    "link": "chapters/future.html#sim-hh"
+  },
+  {
+    "id": "estatebook/future/sim-vc",
+    "bookId": "estatebook",
+    "title": "가구는 줄고 집은 지어질 때",
+    "link": "chapters/future.html#sim-vc"
+  },
+  {
+    "id": "estatebook/future/sim-rg",
+    "bookId": "estatebook",
+    "title": "젊은 사람이 일자리를 따라가면",
+    "link": "chapters/future.html#sim-rg"
+  },
+  {
+    "id": "estatebook/future/sim-hp",
+    "bookId": "estatebook",
+    "title": "주택연금의 빚과 집값이 만나는 나이",
+    "link": "chapters/future.html#sim-hp"
+  },
+  {
+    "id": "estatebook/future/sim-rr",
+    "bookId": "estatebook",
+    "title": "같은 인구, 다른 금리",
+    "link": "chapters/future.html#sim-rr"
+  },
+  {
+    "id": "estatebook/future/sim-sc",
+    "bookId": "estatebook",
+    "title": "30년 지역 수요 시나리오",
+    "link": "chapters/future.html#sim-sc"
+  },
+  {
+    "id": "estatebook/holdingtax/sim-pub",
+    "bookId": "estatebook",
+    "title": "시세에서 과세표준까지",
+    "link": "chapters/holdingtax.html#sim-pub"
+  },
+  {
+    "id": "estatebook/holdingtax/sim-prop",
+    "bookId": "estatebook",
+    "title": "재산세 누진 계단",
+    "link": "chapters/holdingtax.html#sim-prop"
+  },
+  {
+    "id": "estatebook/holdingtax/sim-steps",
+    "bookId": "estatebook",
+    "title": "보유세가 만들어지는 계단(1세대 1주택)",
+    "link": "chapters/holdingtax.html#sim-steps"
+  },
+  {
+    "id": "estatebook/holdingtax/sim-curve",
+    "bookId": "estatebook",
+    "title": "공시가격이 오르면 세금은 얼마나 빨리 오르나",
+    "link": "chapters/holdingtax.html#sim-curve"
+  },
+  {
+    "id": "estatebook/holdingtax/sim-joint",
+    "bookId": "estatebook",
+    "title": "단독명의 vs 부부 공동명의(1주택 종부세)",
+    "link": "chapters/holdingtax.html#sim-joint"
+  },
+  {
+    "id": "estatebook/holdingtax/sim-case",
+    "bookId": "estatebook",
+    "title": "하늘네와 남궁현의 10년 보유세",
+    "link": "chapters/holdingtax.html#sim-case"
+  },
+  {
+    "id": "estatebook/jeonse/sim-loan",
+    "bookId": "estatebook",
+    "title": "보증금 1억의 값은 누구에게 얼마인가",
+    "link": "chapters/jeonse.html#sim-loan"
+  },
+  {
+    "id": "estatebook/jeonse/sim-own",
+    "bookId": "estatebook",
+    "title": "전세를 놓을까, 월세를 놓을까",
+    "link": "chapters/jeonse.html#sim-own"
+  },
+  {
+    "id": "estatebook/jeonse/sim-rate",
+    "bookId": "estatebook",
+    "title": "금리가 오르면 같은 집의 전세가는",
+    "link": "chapters/jeonse.html#sim-rate"
+  },
+  {
+    "id": "estatebook/jeonse/sim-gap",
+    "bookId": "estatebook",
+    "title": "갭은 집값 하락을 몇 배로 받는가",
+    "link": "chapters/jeonse.html#sim-gap"
+  },
+  {
+    "id": "estatebook/jeonse/sim-chain",
+    "bookId": "estatebook",
+    "title": "보증금의 사슬이 끊어지는 곳",
+    "link": "chapters/jeonse.html#sim-chain"
+  },
+  {
+    "id": "estatebook/jeonse/sim-risk",
+    "bookId": "estatebook",
+    "title": "깡통전세: 낙찰가가 보증금을 자르는 선",
+    "link": "chapters/jeonse.html#sim-risk"
+  },
+  {
+    "id": "estatebook/jeonse/sim-case",
+    "bookId": "estatebook",
+    "title": "같은 집, 두 사람의 장부: 남궁현과 하늘네",
+    "link": "chapters/jeonse.html#sim-case"
+  },
+  {
+    "id": "estatebook/lab/sim-in",
+    "bookId": "estatebook",
+    "title": "우리 집 입력",
+    "link": "chapters/lab.html#sim-in"
+  },
+  {
+    "id": "estatebook/lab/sim-ln",
+    "bookId": "estatebook",
+    "title": "대출 한도와 DSR 게이지",
+    "link": "chapters/lab.html#sim-ln"
+  },
+  {
+    "id": "estatebook/lab/sim-rt",
+    "bookId": "estatebook",
+    "title": "금리 곡선 끌기와 집값·전세가 시나리오",
+    "link": "chapters/lab.html#sim-rt"
+  },
+  {
+    "id": "estatebook/lab/sim-pa",
+    "bookId": "estatebook",
+    "title": "30년 순자산 경로 비교",
+    "link": "chapters/lab.html#sim-pa"
+  },
+  {
+    "id": "estatebook/lab/sim-co",
+    "bookId": "estatebook",
+    "title": "연도별 주거비",
+    "link": "chapters/lab.html#sim-co"
+  },
+  {
+    "id": "estatebook/lab/sim-dp",
+    "bookId": "estatebook",
+    "title": "보증금 위험: 집값이 빠지면 얼마가 돌아오나",
+    "link": "chapters/lab.html#sim-dp"
+  },
+  {
+    "id": "estatebook/lab/sim-mc",
+    "bookId": "estatebook",
+    "title": "몬테카를로: 300번 돌린 순자산의 분포",
+    "link": "chapters/lab.html#sim-mc"
+  },
+  {
+    "id": "estatebook/lab/sim-bk",
+    "bookId": "estatebook",
+    "title": "스트레스 지도: 금리 급등 × 집값 하락 × 소득 감소",
+    "link": "chapters/lab.html#sim-bk"
+  },
+  {
+    "id": "estatebook/leverage/sim-eq",
+    "bookId": "estatebook",
+    "title": "집값 막대를 대출과 내 돈으로 쪼개기",
+    "link": "chapters/leverage.html#sim-eq"
+  },
+  {
+    "id": "estatebook/leverage/sim-gap",
+    "bookId": "estatebook",
+    "title": "갭투자의 2년: 이자는 없고 만기는 있다",
+    "link": "chapters/leverage.html#sim-gap"
+  },
+  {
+    "id": "estatebook/leverage/sim-asy",
+    "bookId": "estatebook",
+    "title": "빨간 선은 확실하고, 청록 띠는 넓다",
+    "link": "chapters/leverage.html#sim-asy"
+  },
+  {
+    "id": "estatebook/leverage/sim-mc",
+    "bookId": "estatebook",
+    "title": "3,000개의 미래에서 내 돈은",
+    "link": "chapters/leverage.html#sim-mc"
+  },
+  {
+    "id": "estatebook/leverage/sim-shock",
+    "bookId": "estatebook",
+    "title": "세 가지 충격이 겹칠 때의 현금",
+    "link": "chapters/leverage.html#sim-shock"
+  },
+  {
+    "id": "estatebook/leverage/sim-liq",
+    "bookId": "estatebook",
+    "title": "빨리 팔까, 기다릴까",
+    "link": "chapters/leverage.html#sim-liq"
+  },
+  {
+    "id": "estatebook/leverage/sim-auc",
+    "bookId": "estatebook",
+    "title": "경매로 넘어가면 남는 것",
+    "link": "chapters/leverage.html#sim-auc"
+  },
+  {
+    "id": "estatebook/leverage/sim-st",
+    "bookId": "estatebook",
+    "title": "하늘네 스트레스 테스트",
+    "link": "chapters/leverage.html#sim-st"
+  },
+  {
+    "id": "estatebook/location/sim-br",
+    "bookId": "estatebook",
+    "title": "지불 의사 지대 곡선",
+    "link": "chapters/location.html#sim-br"
+  },
+  {
+    "id": "estatebook/location/sim-tm",
+    "bookId": "estatebook",
+    "title": "1년 통근을 근무일과 집값으로",
+    "link": "chapters/location.html#sim-tm"
+  },
+  {
+    "id": "estatebook/location/sim-st",
+    "bookId": "estatebook",
+    "title": "역에서 멀어지면",
+    "link": "chapters/location.html#sim-st"
+  },
+  {
+    "id": "estatebook/location/sim-hd",
+    "bookId": "estatebook",
+    "title": "집값 폭포: 속성별 몫",
+    "link": "chapters/location.html#sim-hd"
+  },
+  {
+    "id": "estatebook/location/sim-ex",
+    "bookId": "estatebook",
+    "title": "새 노선 발표에서 개통까지",
+    "link": "chapters/location.html#sim-ex"
+  },
+  {
+    "id": "estatebook/location/sim-case",
+    "bookId": "estatebook",
+    "title": "세 지역의 가격 차이와 '시간값'",
+    "link": "chapters/location.html#sim-case"
+  },
+  {
+    "id": "estatebook/mortgage/sim-lim",
+    "bookId": "estatebook",
+    "title": "세 한도의 경주: 가장 짧은 막대가 한도",
+    "link": "chapters/mortgage.html#sim-lim"
+  },
+  {
+    "id": "estatebook/mortgage/sim-st",
+    "bookId": "estatebook",
+    "title": "가산 금리가 한도를 깎는 폭",
+    "link": "chapters/mortgage.html#sim-st"
+  },
+  {
+    "id": "estatebook/mortgage/sim-af",
+    "bookId": "estatebook",
+    "title": "금리 상승과 지불 가능 집값의 무너짐",
+    "link": "chapters/mortgage.html#sim-af"
+  },
+  {
+    "id": "estatebook/mortgage/sim-pay",
+    "bookId": "estatebook",
+    "title": "30년의 달력: 매달 내는 돈의 이자와 원금",
+    "link": "chapters/mortgage.html#sim-pay"
+  },
+  {
+    "id": "estatebook/mortgage/sim-path",
+    "bookId": "estatebook",
+    "title": "금리의 길을 그리면: 변동·혼합·주기형·고정",
+    "link": "chapters/mortgage.html#sim-path"
+  },
+  {
+    "id": "estatebook/mortgage/sim-pre",
+    "bookId": "estatebook",
+    "title": "지금 갚을까, 수수료가 없어질 때까지 기다릴까",
+    "link": "chapters/mortgage.html#sim-pre"
+  },
+  {
+    "id": "estatebook/mortgage/sim-case",
+    "bookId": "estatebook",
+    "title": "하늘네 주담대 종합: 한도, 필요한 대출, 월 상환",
+    "link": "chapters/mortgage.html#sim-case"
+  },
+  {
+    "id": "estatebook/overview/sim-bs",
+    "bookId": "estatebook",
+    "title": "집값이 움직이면 우리 집 재산은",
+    "link": "chapters/overview.html#sim-bs"
+  },
+  {
+    "id": "estatebook/overview/sim-map",
+    "bookId": "estatebook",
+    "title": "지도 위에서 집을 옮기면",
+    "link": "chapters/overview.html#sim-map"
+  },
+  {
+    "id": "estatebook/overview/sim-cost",
+    "bookId": "estatebook",
+    "title": "사고팔 때 드는 돈, 몇 년에 나눠 낼까",
+    "link": "chapters/overview.html#sim-cost"
+  },
+  {
+    "id": "estatebook/overview/sim-lev",
+    "bookId": "estatebook",
+    "title": "레버리지 확대경",
+    "link": "chapters/overview.html#sim-lev"
+  },
+  {
+    "id": "estatebook/overview/sim-dual",
+    "bookId": "estatebook",
+    "title": "집 한 채의 한 해 손익",
+    "link": "chapters/overview.html#sim-dual"
+  },
+  {
+    "id": "estatebook/overview/sim-force",
+    "bookId": "estatebook",
+    "title": "다섯 힘으로 만든 12년의 가격 지수",
+    "link": "chapters/overview.html#sim-force"
+  },
+  {
+    "id": "estatebook/overview/sim-rd",
+    "bookId": "estatebook",
+    "title": "나에게 맞는 읽기 경로",
+    "link": "chapters/overview.html#sim-rd"
+  },
+  {
+    "id": "estatebook/overview/sim-case",
+    "bookId": "estatebook",
+    "title": "하늘네의 출발점",
+    "link": "chapters/overview.html#sim-case"
+  },
+  {
+    "id": "estatebook/plan/sim-fund",
+    "bookId": "estatebook",
+    "title": "잔금일의 자금 폭포",
+    "link": "chapters/plan.html#sim-fund"
+  },
+  {
+    "id": "estatebook/plan/sim-aff",
+    "bookId": "estatebook",
+    "title": "월 상환 한도에서 집값을 거꾸로",
+    "link": "chapters/plan.html#sim-aff"
+  },
+  {
+    "id": "estatebook/plan/sim-time",
+    "bookId": "estatebook",
+    "title": "시점을 맞히려 할 때",
+    "link": "chapters/plan.html#sim-time"
+  },
+  {
+    "id": "estatebook/plan/sim-close",
+    "bookId": "estatebook",
+    "title": "잔금일 타임라인",
+    "link": "chapters/plan.html#sim-close"
+  },
+  {
+    "id": "estatebook/plan/sim-two",
+    "bookId": "estatebook",
+    "title": "종전 주택을 언제 파는가",
+    "link": "chapters/plan.html#sim-two"
+  },
+  {
+    "id": "estatebook/plan/sim-st",
+    "bookId": "estatebook",
+    "title": "계획 스트레스 시험",
+    "link": "chapters/plan.html#sim-st"
+  },
+  {
+    "id": "estatebook/plan/sim-two-path",
+    "bookId": "estatebook",
+    "title": "(가) 2년 뒤 사기 vs (나) 지금 사기",
+    "link": "chapters/plan.html#sim-two-path"
+  },
+  {
+    "id": "estatebook/policy/sim-zone",
+    "bookId": "estatebook",
+    "title": "같은 집, 규제지역 스위치",
+    "link": "chapters/policy.html#sim-zone"
+  },
+  {
+    "id": "estatebook/policy/sim-gap",
+    "bookId": "estatebook",
+    "title": "허가제가 막는 것: 갭과 실거주",
+    "link": "chapters/policy.html#sim-gap"
+  },
+  {
+    "id": "estatebook/policy/sim-dem",
+    "bookId": "estatebook",
+    "title": "살 수 있는 사람은 몇 명인가",
+    "link": "chapters/policy.html#sim-dem"
+  },
+  {
+    "id": "estatebook/policy/sim-lag",
+    "bookId": "estatebook",
+    "title": "발표에서 입주까지",
+    "link": "chapters/policy.html#sim-lag"
+  },
+  {
+    "id": "estatebook/policy/sim-bal",
+    "bookId": "estatebook",
+    "title": "두 지역 풍선 시뮬레이터",
+    "link": "chapters/policy.html#sim-bal"
+  },
+  {
+    "id": "estatebook/policy/sim-rent",
+    "bookId": "estatebook",
+    "title": "갱신 상한의 두 얼굴",
+    "link": "chapters/policy.html#sim-rent"
+  },
+  {
+    "id": "estatebook/policy/sim-case",
+    "bookId": "estatebook",
+    "title": "후보지 세 곳의 규제 지도",
+    "link": "chapters/policy.html#sim-case"
+  },
+  {
+    "id": "estatebook/redevelop/sim-far",
+    "bookId": "estatebook",
+    "title": "용적률을 끌어 올리면",
+    "link": "chapters/redevelop.html#sim-far"
+  },
+  {
+    "id": "estatebook/redevelop/sim-ratio",
+    "bookId": "estatebook",
+    "title": "비례율이 만들어지는 폭포",
+    "link": "chapters/redevelop.html#sim-ratio"
+  },
+  {
+    "id": "estatebook/redevelop/sim-contrib",
+    "bookId": "estatebook",
+    "title": "내 헌 집으로 새 집을 받으면",
+    "link": "chapters/redevelop.html#sim-contrib"
+  },
+  {
+    "id": "estatebook/redevelop/sim-time",
+    "bookId": "estatebook",
+    "title": "단계가 늘어지면",
+    "link": "chapters/redevelop.html#sim-time"
+  },
+  {
+    "id": "estatebook/redevelop/sim-cost",
+    "bookId": "estatebook",
+    "title": "공사비 상승과 분담금",
+    "link": "chapters/redevelop.html#sim-cost"
+  },
+  {
+    "id": "estatebook/redevelop/sim-who",
+    "bookId": "estatebook",
+    "title": "입주 때 시세가 정하는 세 사람의 손익",
+    "link": "chapters/redevelop.html#sim-who"
+  },
+  {
+    "id": "estatebook/redevelop/sim-case",
+    "bookId": "estatebook",
+    "title": "하늘네 몸테크 계산기",
+    "link": "chapters/redevelop.html#sim-case"
+  },
+  {
+    "id": "estatebook/rent/sim-see",
+    "bookId": "estatebook",
+    "title": "보증금과 월세의 시소",
+    "link": "chapters/rent.html#sim-see"
+  },
+  {
+    "id": "estatebook/rent/sim-cap",
+    "bookId": "estatebook",
+    "title": "기준금리를 따라 움직이는 전환율 상한",
+    "link": "chapters/rent.html#sim-cap"
+  },
+  {
+    "id": "estatebook/rent/sim-zone",
+    "bookId": "estatebook",
+    "title": "두 사람의 돈값과 합의 구간",
+    "link": "chapters/rent.html#sim-zone"
+  },
+  {
+    "id": "estatebook/rent/sim-ren",
+    "bookId": "estatebook",
+    "title": "갱신 가격과 신규 계약 가격, 이중 가격",
+    "link": "chapters/rent.html#sim-ren"
+  },
+  {
+    "id": "estatebook/rent/sim-cost",
+    "bookId": "estatebook",
+    "title": "보증금을 늘릴까, 월세를 늘릴까",
+    "link": "chapters/rent.html#sim-cost"
+  },
+  {
+    "id": "estatebook/rent/sim-tax",
+    "bookId": "estatebook",
+    "title": "월세 세액공제로 줄어드는 월세",
+    "link": "chapters/rent.html#sim-tax"
+  },
+  {
+    "id": "estatebook/rent/sim-case",
+    "bookId": "estatebook",
+    "title": "하늘네 만기의 세 갈래: 한 해 주거비",
+    "link": "chapters/rent.html#sim-case"
+  },
+  {
+    "id": "estatebook/subscription/sim-acct",
+    "bookId": "estatebook",
+    "title": "매달 얼마를 넣을까",
+    "link": "chapters/subscription.html#sim-acct"
+  },
+  {
+    "id": "estatebook/subscription/sim-score",
+    "bookId": "estatebook",
+    "title": "청약 가점 계산기",
+    "link": "chapters/subscription.html#sim-score"
+  },
+  {
+    "id": "estatebook/subscription/sim-split",
+    "bookId": "estatebook",
+    "title": "100가구는 어떻게 나뉘나",
+    "link": "chapters/subscription.html#sim-split"
+  },
+  {
+    "id": "estatebook/subscription/sim-sp",
+    "bookId": "estatebook",
+    "title": "특별공급 자격 점검표",
+    "link": "chapters/subscription.html#sim-sp"
+  },
+  {
+    "id": "estatebook/subscription/sim-cap",
+    "bookId": "estatebook",
+    "title": "분양가를 끌어 내리면 몰려드는 사람들",
+    "link": "chapters/subscription.html#sim-cap"
+  },
+  {
+    "id": "estatebook/subscription/sim-odds",
+    "bookId": "estatebook",
+    "title": "커트라인과 내 점수",
+    "link": "chapters/subscription.html#sim-odds"
+  },
+  {
+    "id": "estatebook/subscription/sim-fund",
+    "bookId": "estatebook",
+    "title": "입주 시점과 전세 만기 맞추기",
+    "link": "chapters/subscription.html#sim-fund"
+  },
+  {
+    "id": "estatebook/subscription/sim-plan",
+    "bookId": "estatebook",
+    "title": "하늘네 청약 6년 시나리오",
+    "link": "chapters/subscription.html#sim-plan"
+  },
+  {
+    "id": "estatebook/supply/sim-tl",
+    "bookId": "estatebook",
+    "title": "착공을 언제 하느냐, 입주는 언제 떨어지느냐",
+    "link": "chapters/supply.html#sim-tl"
+  },
+  {
+    "id": "estatebook/supply/sim-hh",
+    "bookId": "estatebook",
+    "title": "가구와 멸실: 얼마나 지어야 제자리인가",
+    "link": "chapters/supply.html#sim-hh"
+  },
+  {
+    "id": "estatebook/supply/sim-cw",
+    "bookId": "estatebook",
+    "title": "거미집 모형: 시차와 반응 세기",
+    "link": "chapters/supply.html#sim-cw"
+  },
+  {
+    "id": "estatebook/supply/sim-sp",
+    "bookId": "estatebook",
+    "title": "거미줄이 감기느냐 풀리느냐",
+    "link": "chapters/supply.html#sim-sp"
+  },
+  {
+    "id": "estatebook/supply/sim-jo",
+    "bookId": "estatebook",
+    "title": "입주장이 내 만기에 겹치면",
+    "link": "chapters/supply.html#sim-jo"
+  },
+  {
+    "id": "estatebook/supply/sim-pl",
+    "bookId": "estatebook",
+    "title": "공급 대책 100호의 시간표",
+    "link": "chapters/supply.html#sim-pl"
+  },
+  {
+    "id": "estatebook/supply/sim-case",
+    "bookId": "estatebook",
+    "title": "B시 인근 입주 물량과 2027년 4월의 전세가",
+    "link": "chapters/supply.html#sim-case"
+  },
+  {
+    "id": "estatebook/tradetax/sim-fl",
+    "bookId": "estatebook",
+    "title": "양도세 계단 내려가기",
+    "link": "chapters/tradetax.html#sim-fl"
+  },
+  {
+    "id": "estatebook/tradetax/sim-cap",
+    "bookId": "estatebook",
+    "title": "12억원 선을 넘으면",
+    "link": "chapters/tradetax.html#sim-cap"
+  },
+  {
+    "id": "estatebook/tradetax/sim-ltd",
+    "bookId": "estatebook",
+    "title": "오래 살수록 줄어드는 세금",
+    "link": "chapters/tradetax.html#sim-ltd"
+  },
+  {
+    "id": "estatebook/tradetax/sim-sh",
+    "bookId": "estatebook",
+    "title": "보유 기간의 절벽",
+    "link": "chapters/tradetax.html#sim-sh"
+  },
+  {
+    "id": "estatebook/tradetax/sim-ord",
+    "bookId": "estatebook",
+    "title": "어느 집을 먼저 팔까",
+    "link": "chapters/tradetax.html#sim-ord"
+  },
+  {
+    "id": "estatebook/tradetax/sim-gi",
+    "bookId": "estatebook",
+    "title": "같은 재산, 상속과 증여",
+    "link": "chapters/tradetax.html#sim-gi"
+  },
+  {
+    "id": "estatebook/tradetax/sim-life",
+    "bookId": "estatebook",
+    "title": "하늘네 집 한 채의 세금 일생",
+    "link": "chapters/tradetax.html#sim-life"
+  },
+  {
+    "id": "estatebook/value/sim-yd",
+    "bookId": "estatebook",
+    "title": "임대수익률 계산기",
+    "link": "chapters/value.html#sim-yd"
+  },
+  {
+    "id": "estatebook/value/sim-cv",
+    "bookId": "estatebook",
+    "title": "금리 곡선 위의 집값",
+    "link": "chapters/value.html#sim-cv"
+  },
+  {
+    "id": "estatebook/value/sim-gr",
+    "bookId": "estatebook",
+    "title": "성장 기대와 가격의 폭발",
+    "link": "chapters/value.html#sim-gr"
+  },
+  {
+    "id": "estatebook/value/sim-af",
+    "bookId": "estatebook",
+    "title": "금리가 바꾸는 살 수 있는 가격",
+    "link": "chapters/value.html#sim-af"
+  },
+  {
+    "id": "estatebook/value/sim-pir",
+    "bookId": "estatebook",
+    "title": "같은 PIR, 다른 부담",
+    "link": "chapters/value.html#sim-pir"
+  },
+  {
+    "id": "estatebook/value/sim-nx",
+    "bookId": "estatebook",
+    "title": "금리를 내렸는데 집값이 내린다면",
+    "link": "chapters/value.html#sim-nx"
+  },
+  {
+    "id": "estatebook/value/sim-case",
+    "bookId": "estatebook",
+    "title": "C아파트의 이론 가격과 하늘네 PIR",
+    "link": "chapters/value.html#sim-case"
+  },
+  {
     "id": "bodybook/breathing/sim-br-co2",
     "bookId": "bodybook",
     "title": "CO2 반응 곡선과 저산소",
