@@ -410,7 +410,7 @@
       },
       "disposition": "merge",
       "targets": [
-        "rentbook"
+        "estatebook"
       ],
       "reason": "주거 입문서에 집 선택과 거래 비용의 기초를 포함한다."
     },
@@ -432,7 +432,7 @@
       },
       "disposition": "merge",
       "targets": [
-        "rentbook"
+        "estatebook"
       ],
       "reason": "주거 입문서에 대출 구조와 상환 부담의 기초를 포함한다."
     },
@@ -454,7 +454,7 @@
       },
       "disposition": "merge",
       "targets": [
-        "rentbook"
+        "estatebook"
       ],
       "reason": "주거 입문서에 청약과 구매 자금 계획의 기초를 포함한다."
     },

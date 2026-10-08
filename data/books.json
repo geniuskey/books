@@ -121,7 +121,7 @@
       "en": "Housing",
       "color": "#0f766e",
       "colorDark": "#2dd4bf",
-      "desc": "집 구하기, 전월세 계약과 보증금, 주거 비용과 내 집 마련의 기초."
+      "desc": "집값의 원리, 전월세 계약과 보증금, 대출과 세금, 내 집 마련의 판단."
     },
     {
       "id": "health",
@@ -1329,20 +1329,47 @@
       "field": "money"
     },
     {
-      "id": "rentbook",
-      "code": "RNT",
-      "title": "RentBook",
-      "subtitle": "집 구하기와 주거 비용",
-      "description": "전월세와 계약, 보증금, 집 선택과 주거 비용을 중심으로 배웁니다. 내 집 마련에 필요한 대출·청약·거래 비용의 기초도 연결합니다.",
-      "field": "housing",
-      "status": "planned",
-      "phase": 2,
-      "ideas": [
-        "전세·월세·매매의 주거 비용 비교",
-        "등기부등본과 계약 위험 찾기",
-        "금리와 대출 상환 부담",
-        "청약과 구매 자금 계획"
-      ]
+      "id": "estatebook",
+      "code": "EST",
+      "title": "EstateBook",
+      "subtitle": "집값과 전세를 숫자로 푸는 부동산 교과서",
+      "headline": "집값은 무엇이 정하고, 전세는 왜 위험해질까",
+      "description": "입지와 금리, 공급의 시차에서 시작해 전세·월세와 계약, 매매와 거래 비용, 주택담보대출과 레버리지, 청약과 재건축, 보유세와 양도세, 정책과 통계, 사느냐 빌리느냐까지. 하늘네 집 노트를 따라 숫자를 직접 끌고 바꾸며 내 집 문제를 내 숫자로 판단합니다.",
+      "url": "https://estatebook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/estatebook",
+      "status": "published",
+      "level": "입문",
+      "chapters": 23,
+      "simulators": 155,
+      "color": "#0f766e",
+      "colorDark": "#2dd4bf",
+      "topics": [
+        "입지·헤도닉 가격",
+        "금리·자본환원율",
+        "공급 시차·거미집",
+        "전세가율·역전세·깡통전세",
+        "등기부·대항력·보증",
+        "LTV·DSR·레버리지",
+        "청약·재건축",
+        "보유세·양도세",
+        "사느냐 빌리느냐"
+      ],
+      "motif": "house",
+      "featured": [
+        {
+          "title": "깡통전세: 낙찰가가 보증금을 자르는 선",
+          "desc": "집값 하락률을 끌어 경매 배당 재원이 보증금을 얼마나 돌려주는지, 전세가율이 높을수록 무너지는 지점을 본다",
+          "link": "chapters/jeonse.html#sim-risk",
+          "image": "img/sims/estatebook-sim-risk.jpg"
+        },
+        {
+          "title": "금리 상승과 지불 가능 집값의 무너짐",
+          "desc": "금리 손잡이를 끌면 DSR 한도가 줄어 살 수 있는 집값 상한이 내려가고, 같은 집을 못 사는 금리가 드러난다",
+          "link": "chapters/mortgage.html#sim-af",
+          "image": "img/sims/estatebook-sim-af.jpg"
+        }
+      ],
+      "field": "housing"
     },
     {
       "id": "bodybook",

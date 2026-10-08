@@ -420,6 +420,21 @@
       return svg(s);
     },
     // 보험: 우산이 집들을 가리고, 우산 밖으로만 빗방울이 떨어진다
+    house() {
+      const r = rnd(7); let s = "";
+      s += `<path d="M40 118H216" stroke="${W}" stroke-opacity=".4"/>`;
+      [[52, 46], [74, 70], [168, 58], [192, 40]].forEach(([x, h]) => {
+        s += `<rect x="${x}" y="${118 - h}" width="18" height="${h}" fill="${W}" fill-opacity=".22" stroke="${W}" stroke-opacity=".6" stroke-width="1.1"/>`;
+        range(Math.floor(h / 12)).forEach((j) => [0, 1].forEach((i) => {
+          s += `<rect x="${x + 4 + i * 6}" y="${118 - h + 5 + j * 12}" width="3.5" height="5" fill="#ffe7a8" fill-opacity="${(0.35 + r() * 0.5).toFixed(2)}"/>`;
+        }));
+      });
+      s += `<path d="M100 118V78l28 -24 28 24V118Z" fill="${W}" fill-opacity=".85"/>`;
+      s += `<path d="M94 82l34 -30 34 30" fill="none" stroke="${W}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>`;
+      s += `<path d="M121 118V96h14V118Z" fill="#000" fill-opacity=".22"/>`;
+      s += `<path d="M44 22C90 26 120 40 150 62S200 96 214 100" fill="none" stroke="#ffd27a" stroke-width="2" stroke-dasharray="4 4" stroke-opacity=".8"/>`;
+      return svg(s);
+    },
     umbrella() {
       const r = rnd(5), cx = 128; let s = "";
       range(14).forEach((k) => {
