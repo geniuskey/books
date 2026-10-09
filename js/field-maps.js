@@ -36,6 +36,7 @@ window.FIELD_MAPS = {
     groups: [
       ["돈과 경제", "Understand", "금리·물가·경제 뉴스의 기본 언어", ["moneybook"]],
       ["신용과 투자", "Manage", "빌리는 돈과 투자하는 돈의 구조", ["stockbook"]],
+      ["세금", "Tax", "월급·투자·상속에 붙는 세금과 연말정산", ["taxbook"]],
     ],
   },
   housing: {

@@ -480,26 +480,6 @@
     },
     {
       "book": {
-        "id": "taxbook",
-        "code": "TAX",
-        "title": "TaxBook",
-        "subtitle": "세금·연말정산",
-        "description": "소득세 구조와 연말정산 제대로 하기.",
-        "field": "law",
-        "status": "planned",
-        "phase": 1,
-        "ideas": [
-          "누진세율 구간 시각화",
-          "공제 항목별 환급액",
-          "종합소득세 신고 흐름"
-        ]
-      },
-      "disposition": "removed-field",
-      "targets": [],
-      "reason": "세금·법 분야 확장을 중단한다."
-    },
-    {
-      "book": {
         "id": "workbook",
         "code": "JOB",
         "title": "WorkBook",
@@ -554,9 +534,11 @@
           "10년 합산 규칙"
         ]
       },
-      "disposition": "removed-field",
-      "targets": [],
-      "reason": "세금·법 분야 확장을 중단한다."
+      "disposition": "merge",
+      "targets": [
+        "taxbook"
+      ],
+      "reason": "증여세·10년 합산·상속세 계산은 TaxBook 3부(상속·증여)가 다룬다. 상속 순위·유류분 같은 법률 주제는 다루지 않으며 독립 출간을 약속하지 않는다."
     },
     {
       "book": {

@@ -27,7 +27,7 @@ EB.start("home", (d) => {
     memorybook: "메모리", opticsbook: "센서 광학", sensorbook: "이미지 센서", displaybook: "디스플레이",
     chipindustrybook: "반도체 산업", computerbook: "컴퓨터", aibook: "인공지능",
     carbook: "자동차", shipbook: "선박", phonebook: "스마트폰",
-    colorbook: "색채공학", moneybook: "돈과 금융", stockbook: "주식", insurebook: "보험", camerabook: "카메라",
+    colorbook: "색채공학", moneybook: "돈과 금융", stockbook: "주식", insurebook: "보험", taxbook: "세금", camerabook: "카메라",
   };
   let cancelBookOpening = null;
   window.addEventListener("pageshow", (event) => {
