@@ -17856,6 +17856,510 @@
     "link": "chapters/tax.html#sim-cmp"
   },
   {
+    "id": "economicsbook/bok/sim-corridor",
+    "bookId": "economicsbook",
+    "title": "금리 회랑: 콜금리를 기준금리에 붙잡는 두 도구",
+    "link": "chapters/bok.html#sim-corridor"
+  },
+  {
+    "id": "economicsbook/bok/sim-multiplier",
+    "bookId": "economicsbook",
+    "title": "예금은 몇 번 불어나는가: 교과서 승수와 대출 수요",
+    "link": "chapters/bok.html#sim-multiplier"
+  },
+  {
+    "id": "economicsbook/bok/sim-taylor",
+    "bookId": "economicsbook",
+    "title": "테일러 준칙 평면: 물가와 경기를 끌면 권장 금리가 나온다",
+    "link": "chapters/bok.html#sim-taylor"
+  },
+  {
+    "id": "economicsbook/bok/sim-history",
+    "bookId": "economicsbook",
+    "title": "실제 기준금리와 테일러 준칙: 2021~2026",
+    "link": "chapters/bok.html#sim-history"
+  },
+  {
+    "id": "economicsbook/bok/sim-zlb",
+    "bookId": "economicsbook",
+    "title": "큰 충격이 오면: 0%의 벽과 그 너머의 도구",
+    "link": "chapters/bok.html#sim-zlb"
+  },
+  {
+    "id": "economicsbook/bok/sim-chair",
+    "bookId": "economicsbook",
+    "title": "금통위 의자에 앉기: 2년 동안의 기준금리를 정하라",
+    "link": "chapters/bok.html#sim-chair"
+  },
+  {
+    "id": "economicsbook/crisis/sim-leverage",
+    "bookId": "economicsbook",
+    "title": "은행의 대차대조표: 몇 %의 손실에 자본이 사라지나",
+    "link": "chapters/crisis.html#sim-leverage"
+  },
+  {
+    "id": "economicsbook/crisis/sim-run",
+    "bookId": "economicsbook",
+    "title": "뱅크런: 소문이 스스로를 실현할 때",
+    "link": "chapters/crisis.html#sim-run"
+  },
+  {
+    "id": "economicsbook/crisis/sim-firesale",
+    "bookId": "economicsbook",
+    "title": "투매의 악순환: 팔수록 내리고, 내릴수록 판다",
+    "link": "chapters/crisis.html#sim-firesale"
+  },
+  {
+    "id": "economicsbook/crisis/sim-fx97",
+    "bookId": "economicsbook",
+    "title": "단기 외채와 통화 불일치: 외환보유액이 바닥나는 길",
+    "link": "chapters/crisis.html#sim-fx97"
+  },
+  {
+    "id": "economicsbook/crisis/sim-ltv",
+    "bookId": "economicsbook",
+    "title": "LTV 상한: 집값이 떨어지면 몇 명이 깡통이 되나",
+    "link": "chapters/crisis.html#sim-ltv"
+  },
+  {
+    "id": "economicsbook/crisis/sim-contagion",
+    "bookId": "economicsbook",
+    "title": "위기 전염 판: 레버리지·단기 자금·충격과 안전망",
+    "link": "chapters/crisis.html#sim-contagion"
+  },
+  {
+    "id": "economicsbook/cycle/sim-phase",
+    "bookId": "economicsbook",
+    "title": "성장률이 플러스인데 수축 국면? 추세와 순환 나누기",
+    "link": "chapters/cycle.html#sim-phase"
+  },
+  {
+    "id": "economicsbook/cycle/sim-gap",
+    "bookId": "economicsbook",
+    "title": "수요 충격 하나가 산출 갭·실업률·물가로 번지는 길",
+    "link": "chapters/cycle.html#sim-gap"
+  },
+  {
+    "id": "economicsbook/cycle/sim-cli",
+    "bookId": "economicsbook",
+    "title": "선행지수는 얼마나 먼저, 얼마나 정확히 꺾이나",
+    "link": "chapters/cycle.html#sim-cli"
+  },
+  {
+    "id": "economicsbook/cycle/sim-bsi",
+    "bookId": "economicsbook",
+    "title": "BSI 계산기: 100이라는 숫자 뒤의 응답 분포",
+    "link": "chapters/cycle.html#sim-bsi"
+  },
+  {
+    "id": "economicsbook/cycle/sim-sam",
+    "bookId": "economicsbook",
+    "title": "새뮤얼슨의 승수-가속도 모형: 수렴·진동·폭발",
+    "link": "chapters/cycle.html#sim-sam"
+  },
+  {
+    "id": "economicsbook/cycle/sim-board",
+    "bookId": "economicsbook",
+    "title": "경기 순환 실험: 충격 · 승수 · 가속도 · 정책 대응과 선행·동행 지표",
+    "link": "chapters/cycle.html#sim-board"
+  },
+  {
+    "id": "economicsbook/fiscal/sim-balance",
+    "bookId": "economicsbook",
+    "title": "두 개의 적자: 사회보장성기금을 빼면",
+    "link": "chapters/fiscal.html#sim-balance"
+  },
+  {
+    "id": "economicsbook/fiscal/sim-multiplier",
+    "bookId": "economicsbook",
+    "title": "10조원이 몇 바퀴를 도는가: 재정 승수",
+    "link": "chapters/fiscal.html#sim-multiplier"
+  },
+  {
+    "id": "economicsbook/fiscal/sim-stabilizer",
+    "bookId": "economicsbook",
+    "title": "자동안정장치: 적자가 늘어나는 만큼 침체가 얕아진다",
+    "link": "chapters/fiscal.html#sim-stabilizer"
+  },
+  {
+    "id": "economicsbook/fiscal/sim-debt",
+    "bookId": "economicsbook",
+    "title": "부채 비율의 30년: 눈덩이 효과",
+    "link": "chapters/fiscal.html#sim-debt"
+  },
+  {
+    "id": "economicsbook/fiscal/sim-rg",
+    "bookId": "economicsbook",
+    "title": "r − g 지도: 대각선의 어느 쪽에 서 있나",
+    "link": "chapters/fiscal.html#sim-rg"
+  },
+  {
+    "id": "economicsbook/fiscal/sim-road",
+    "bookId": "economicsbook",
+    "title": "국가채무 30년 길: 금리·성장·적자·침체",
+    "link": "chapters/fiscal.html#sim-road"
+  },
+  {
+    "id": "economicsbook/fx/sim-quote",
+    "bookId": "economicsbook",
+    "title": "환율을 원화 가치로 뒤집기",
+    "link": "chapters/fx.html#sim-quote"
+  },
+  {
+    "id": "economicsbook/fx/sim-fxmarket",
+    "bookId": "economicsbook",
+    "title": "달러의 수요와 공급: 곡선을 끌어 환율을 옮긴다",
+    "link": "chapters/fx.html#sim-fxmarket"
+  },
+  {
+    "id": "economicsbook/fx/sim-parity",
+    "bookId": "economicsbook",
+    "title": "원화 채권과 달러 채권: 1년 뒤 환율에 따라 갈리는 승부",
+    "link": "chapters/fx.html#sim-parity"
+  },
+  {
+    "id": "economicsbook/fx/sim-ppp",
+    "bookId": "economicsbook",
+    "title": "햄버거로 잰 환율: 구매력평가와 고평가·저평가",
+    "link": "chapters/fx.html#sim-ppp"
+  },
+  {
+    "id": "economicsbook/fx/sim-cost",
+    "bookId": "economicsbook",
+    "title": "D식품의 원가표: 환율·밀값·판매가와 이익률",
+    "link": "chapters/fx.html#sim-cost"
+  },
+  {
+    "id": "economicsbook/fx/sim-fxboard",
+    "bookId": "economicsbook",
+    "title": "환율 결정 판: 경상수지·금리 차·위험 회피·해외투자",
+    "link": "chapters/fx.html#sim-fxboard"
+  },
+  {
+    "id": "economicsbook/gdp/sim-chain",
+    "bookId": "economicsbook",
+    "title": "빵 한 봉지의 GDP: 판매액이 아니라 부가가치를 더한다",
+    "link": "chapters/gdp.html#sim-chain"
+  },
+  {
+    "id": "economicsbook/gdp/sim-deflator",
+    "bookId": "economicsbook",
+    "title": "빵과 반도체 두 가지만 만드는 나라의 명목·실질 GDP",
+    "link": "chapters/gdp.html#sim-deflator"
+  },
+  {
+    "id": "economicsbook/gdp/sim-three",
+    "bookId": "economicsbook",
+    "title": "같은 분기를 세 가지로 읽기: 전기비·전년동기비·연율",
+    "link": "chapters/gdp.html#sim-three"
+  },
+  {
+    "id": "economicsbook/gdp/sim-contrib",
+    "bookId": "economicsbook",
+    "title": "성장률을 쌓아 올린 블록: 지출 항목별 성장 기여도",
+    "link": "chapters/gdp.html#sim-contrib"
+  },
+  {
+    "id": "economicsbook/gdp/sim-gni",
+    "bookId": "economicsbook",
+    "title": "1인당 국민소득 4만 달러는 환율에 달렸나",
+    "link": "chapters/gdp.html#sim-gni"
+  },
+  {
+    "id": "economicsbook/gdp/sim-board",
+    "bookId": "economicsbook",
+    "title": "성장률 읽기 판: 분기 수준을 끌어 전기비·전년동기비·연율·연간 성장률을 함께 본다",
+    "link": "chapters/gdp.html#sim-board"
+  },
+  {
+    "id": "economicsbook/inflation/sim-basket",
+    "bookId": "economicsbook",
+    "title": "장바구니 채우기: 가격과 가중치가 만드는 물가",
+    "link": "chapters/inflation.html#sim-basket"
+  },
+  {
+    "id": "economicsbook/inflation/sim-level",
+    "bookId": "economicsbook",
+    "title": "상승률이 내려가도 물가는 오른다: 변화율과 수준",
+    "link": "chapters/inflation.html#sim-level"
+  },
+  {
+    "id": "economicsbook/inflation/sim-adas",
+    "bookId": "economicsbook",
+    "title": "총수요·총공급: 같은 물가 상승, 다른 원인",
+    "link": "chapters/inflation.html#sim-adas"
+  },
+  {
+    "id": "economicsbook/inflation/sim-expect",
+    "bookId": "economicsbook",
+    "title": "붙잡힌 기대와 풀린 기대: 같은 충격, 다른 물가",
+    "link": "chapters/inflation.html#sim-expect"
+  },
+  {
+    "id": "economicsbook/inflation/sim-wage",
+    "bookId": "economicsbook",
+    "title": "지우의 연봉, 오늘의 돈으로 다시 세기",
+    "link": "chapters/inflation.html#sim-wage"
+  },
+  {
+    "id": "economicsbook/inflation/sim-decomp",
+    "bookId": "economicsbook",
+    "title": "물가 분해 판: 유가·환율·임금·수요가 만드는 헤드라인과 근원물가",
+    "link": "chapters/inflation.html#sim-decomp"
+  },
+  {
+    "id": "economicsbook/jobs/sim-pop",
+    "bookId": "economicsbook",
+    "title": "사람을 옮기면 실업률과 고용률은 어떻게 움직이나",
+    "link": "chapters/jobs.html#sim-pop"
+  },
+  {
+    "id": "economicsbook/jobs/sim-base",
+    "bookId": "economicsbook",
+    "title": "기저효과: 작년 숫자를 끌면 올해의 헤드라인이 바뀐다",
+    "link": "chapters/jobs.html#sim-base"
+  },
+  {
+    "id": "economicsbook/jobs/sim-wide",
+    "bookId": "economicsbook",
+    "title": "같은 달, 네 개의 실업률",
+    "link": "chapters/jobs.html#sim-wide"
+  },
+  {
+    "id": "economicsbook/jobs/sim-okun",
+    "bookId": "economicsbook",
+    "title": "경기가 식으면 실업률은 얼마나 오르나",
+    "link": "chapters/jobs.html#sim-okun"
+  },
+  {
+    "id": "economicsbook/jobs/sim-flow",
+    "bookId": "economicsbook",
+    "title": "들어오는 흐름과 나가는 흐름이 정하는 실업률",
+    "link": "chapters/jobs.html#sim-flow"
+  },
+  {
+    "id": "economicsbook/jobs/sim-recalc",
+    "bookId": "economicsbook",
+    "title": "고용 동향 다시 계산하기: 한 달, 여러 개의 헤드라인",
+    "link": "chapters/jobs.html#sim-recalc"
+  },
+  {
+    "id": "economicsbook/lab/sim-clock",
+    "bookId": "economicsbook",
+    "title": "숫자의 나이: 잰 기간과 발표일",
+    "link": "chapters/lab.html#sim-clock"
+  },
+  {
+    "id": "economicsbook/lab/sim-taylor",
+    "bookId": "economicsbook",
+    "title": "테일러 준칙 계산판: 물가와 경기로 정하는 금리",
+    "link": "chapters/lab.html#sim-taylor"
+  },
+  {
+    "id": "economicsbook/lab/sim-phase",
+    "bookId": "economicsbook",
+    "title": "경기와 물가의 길: 금리를 움직일 때와 그대로 둘 때",
+    "link": "chapters/lab.html#sim-phase"
+  },
+  {
+    "id": "economicsbook/lab/sim-economy",
+    "bookId": "economicsbook",
+    "title": "작은 경제 실험실: 충격 × 금리 결정 → 3년",
+    "link": "chapters/lab.html#sim-economy"
+  },
+  {
+    "id": "economicsbook/lab/sim-headline",
+    "bookId": "economicsbook",
+    "title": "모형이 만든 가상 헤드라인: 빠진 것을 찾아라",
+    "link": "chapters/lab.html#sim-headline"
+  },
+  {
+    "id": "economicsbook/lab/sim-wallet",
+    "bookId": "economicsbook",
+    "title": "실험실의 경로를 내 가계부로: 이자 · ETF · 달러 지출 · 구매력",
+    "link": "chapters/lab.html#sim-wallet"
+  },
+  {
+    "id": "economicsbook/market/sim-price",
+    "bookId": "economicsbook",
+    "title": "가격선을 끌면: 남는 물건과 모자라는 물건",
+    "link": "chapters/market.html#sim-price"
+  },
+  {
+    "id": "economicsbook/market/sim-shift",
+    "bookId": "economicsbook",
+    "title": "사건이 일어나면 어느 곡선이 움직이나",
+    "link": "chapters/market.html#sim-shift"
+  },
+  {
+    "id": "economicsbook/market/sim-harvest",
+    "bookId": "economicsbook",
+    "title": "풍년의 역설: 수확이 늘었는데 농가 수입이 준다",
+    "link": "chapters/market.html#sim-harvest"
+  },
+  {
+    "id": "economicsbook/market/sim-stock",
+    "bookId": "economicsbook",
+    "title": "정부 양곡을 풀면: 판매와 대여, 두 시점의 값",
+    "link": "chapters/market.html#sim-stock"
+  },
+  {
+    "id": "economicsbook/market/sim-ceiling",
+    "bookId": "economicsbook",
+    "title": "가격 상한을 끌어내리면: 품귀, 줄, 암시장",
+    "link": "chapters/market.html#sim-ceiling"
+  },
+  {
+    "id": "economicsbook/market/sim-tax",
+    "bookId": "economicsbook",
+    "title": "세금·원가 상승의 귀착: 누가 얼마를 내나",
+    "link": "chapters/market.html#sim-tax"
+  },
+  {
+    "id": "economicsbook/market/sim-market",
+    "bookId": "economicsbook",
+    "title": "시장 종합판: 수요·공급·탄력성·세금·상한·비축 방출",
+    "link": "chapters/market.html#sim-market"
+  },
+  {
+    "id": "economicsbook/overview/sim-base",
+    "bookId": "economicsbook",
+    "title": "수준, 전월비, 전년동월비: 같은 자료의 세 얼굴",
+    "link": "chapters/overview.html#sim-base"
+  },
+  {
+    "id": "economicsbook/overview/sim-units",
+    "bookId": "economicsbook",
+    "title": "큰 숫자 자: 조원·억 달러를 1인당과 내 연봉으로",
+    "link": "chapters/overview.html#sim-units"
+  },
+  {
+    "id": "economicsbook/overview/sim-release",
+    "bookId": "economicsbook",
+    "title": "오늘 볼 수 있는 가장 최근 숫자는 몇 월분인가",
+    "link": "chapters/overview.html#sim-release"
+  },
+  {
+    "id": "economicsbook/overview/sim-calendar",
+    "bookId": "economicsbook",
+    "title": "지우의 1년: 달을 끌어 헤드라인과 순환도를 본다",
+    "link": "chapters/overview.html#sim-calendar"
+  },
+  {
+    "id": "economicsbook/overview/sim-flow",
+    "bookId": "economicsbook",
+    "title": "경제 순환도: 소비·수출·정부지출을 바꾸면 원 전체가 움직인다",
+    "link": "chapters/overview.html#sim-flow"
+  },
+  {
+    "id": "economicsbook/rates/sim-fisher",
+    "bookId": "economicsbook",
+    "title": "통장의 숫자와 장바구니: 실질금리 계산기",
+    "link": "chapters/rates.html#sim-fisher"
+  },
+  {
+    "id": "economicsbook/rates/sim-seesaw",
+    "bookId": "economicsbook",
+    "title": "금리를 끌면 채권 가격이 움직인다: 만기 3년·10년·30년",
+    "link": "chapters/rates.html#sim-seesaw"
+  },
+  {
+    "id": "economicsbook/rates/sim-curve",
+    "bookId": "economicsbook",
+    "title": "수익률 곡선 그리기: 점을 끌어 시장의 예상을 바꾼다",
+    "link": "chapters/rates.html#sim-curve"
+  },
+  {
+    "id": "economicsbook/rates/sim-spread",
+    "bookId": "economicsbook",
+    "title": "위험의 값: 부도 확률이 회사채 금리를 끌어올린다",
+    "link": "chapters/rates.html#sim-spread"
+  },
+  {
+    "id": "economicsbook/rates/sim-fixvar",
+    "bookId": "economicsbook",
+    "title": "고정형이냐 변동형이냐: 5년 동안의 지표금리 길을 그려 본다",
+    "link": "chapters/rates.html#sim-fixvar"
+  },
+  {
+    "id": "economicsbook/rates/sim-stairs",
+    "bookId": "economicsbook",
+    "title": "금리 계단: 다섯 조각을 쌓아 1억원 대출의 월 상환액을 본다",
+    "link": "chapters/rates.html#sim-stairs"
+  },
+  {
+    "id": "economicsbook/trade/sim-ricardo",
+    "bookId": "economicsbook",
+    "title": "비교우위: 교역 가격을 끌어 두 나라의 몫을 정한다",
+    "link": "chapters/trade.html#sim-ricardo"
+  },
+  {
+    "id": "economicsbook/trade/sim-caparts",
+    "bookId": "economicsbook",
+    "title": "경상수지 장부: 네 갈래의 막대를 끌어 합계를 바꾼다",
+    "link": "chapters/trade.html#sim-caparts"
+  },
+  {
+    "id": "economicsbook/trade/sim-base",
+    "bookId": "economicsbook",
+    "title": "증가율 분해: 기저·단가·물량·조업일수",
+    "link": "chapters/trade.html#sim-base"
+  },
+  {
+    "id": "economicsbook/trade/sim-conc",
+    "bookId": "economicsbook",
+    "title": "한 품목의 무게: 반도체가 꺾이면 수출 전체는",
+    "link": "chapters/trade.html#sim-conc"
+  },
+  {
+    "id": "economicsbook/trade/sim-tariff",
+    "bookId": "economicsbook",
+    "title": "작은 나라의 수입 관세: 가격·물량·관세 수입·사중손실",
+    "link": "chapters/trade.html#sim-tariff"
+  },
+  {
+    "id": "economicsbook/trade/sim-caboard",
+    "bookId": "economicsbook",
+    "title": "경상수지 판: 반도체·세계 수요·환율·유가·해외 배당",
+    "link": "chapters/trade.html#sim-caboard"
+  },
+  {
+    "id": "economicsbook/transmission/sim-pass",
+    "bookId": "economicsbook",
+    "title": "기준금리에서 내 대출금리까지: 두 번의 시차",
+    "link": "chapters/transmission.html#sim-pass"
+  },
+  {
+    "id": "economicsbook/transmission/sim-surprise",
+    "bookId": "economicsbook",
+    "title": "발표일의 반응: 결정이 아니라 예상과의 차이",
+    "link": "chapters/transmission.html#sim-surprise"
+  },
+  {
+    "id": "economicsbook/transmission/sim-assets",
+    "bookId": "economicsbook",
+    "title": "할인율과 대출 한도: 금리 1%p가 주가와 집값을 누르는 힘",
+    "link": "chapters/transmission.html#sim-assets"
+  },
+  {
+    "id": "economicsbook/transmission/sim-gap",
+    "bookId": "economicsbook",
+    "title": "한국이 올리고 미국도 올리면: 금리 차와 환율",
+    "link": "chapters/transmission.html#sim-gap"
+  },
+  {
+    "id": "economicsbook/transmission/sim-lag",
+    "bookId": "economicsbook",
+    "title": "성장은 먼저, 물가는 나중에: 3년의 반응 곡선",
+    "link": "chapters/transmission.html#sim-lag"
+  },
+  {
+    "id": "economicsbook/transmission/sim-ripple",
+    "bookId": "economicsbook",
+    "title": "기준금리 연결판: 대출·주식·집값·환율·성장·물가",
+    "link": "chapters/transmission.html#sim-ripple"
+  },
+  {
     "id": "stockbook/backtest/sim-engine",
     "bookId": "stockbook",
     "title": "백테스트 엔진: 이동평균 교차 규칙",
