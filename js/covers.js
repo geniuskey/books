@@ -419,6 +419,23 @@
       s += `<g class="cv-shear" style="transform-origin:${cx}px ${cy}px">${g}</g>`;
       return svg(s);
     },
+    // 세금: 누진세율의 계단 위로 소득 막대가 차오르고, 옆의 원천징수 영수증에 줄이 그어진다
+    brackets() {
+      const steps = [[60, 6], [74, 15], [90, 24], [106, 35], [122, 38], [136, 42], [150, 45]]; let s = "";
+      s += `<path d="M52 118H160M52 118V14" stroke="${W}" stroke-opacity=".45" stroke-width="1.1"/>`;
+      let x0 = 52;
+      steps.forEach(([x1, r], k) => {
+        const h = r * 2.1;
+        s += `<rect x="${x0 + 0.8}" y="${118 - h}" width="${x1 - x0 - 1.6}" height="${h}" fill="${W}" fill-opacity=".18" stroke="${W}" stroke-opacity=".55" stroke-width=".9"/>`;
+        s += `<rect class="cv-blink" style="animation-delay:${(k * 0.22).toFixed(2)}s" x="${x0 + 0.8}" y="${118 - h}" width="${x1 - x0 - 1.6}" height="${h}" fill="#ffd27a" fill-opacity=".7"/>`;
+        x0 = x1;
+      });
+      s += `<path class="cv-draw" pathLength="1" d="M54 112 C80 104 104 86 150 64" fill="none" stroke="${W}" stroke-width="1.8" stroke-dasharray="1"/>`;
+      s += `<rect x="168" y="20" width="28" height="92" rx="3" fill="${W}" fill-opacity=".85"/>`;
+      range(7).forEach((j) => { s += `<path d="M173 ${34 + j * 10}h${j % 3 === 2 ? 12 : 18}" stroke="#000" stroke-opacity=".28" stroke-width="1.6" stroke-linecap="round"/>`; });
+      s += `<circle cx="188" cy="100" r="6" fill="none" stroke="#ff8a8a" stroke-width="1.6"/>`;
+      return svg(s);
+    },
     // 보험: 우산이 집들을 가리고, 우산 밖으로만 빗방울이 떨어진다
     house() {
       const r = rnd(7); let s = "";
