@@ -344,9 +344,11 @@
           "물가 지수 계산"
         ]
       },
-      "disposition": "idea",
-      "targets": [],
-      "reason": "독립 출간을 약속하지 않고 수요와 차별화된 실험이 확인될 때 재검토한다."
+      "disposition": "merge",
+      "targets": [
+        "economicsbook"
+      ],
+      "reason": "경제 뉴스 읽기 교과서 EconomicsBook으로 출간했다. 기준금리와 대출 이자는 9장 연결판, 환율과 해외 가격은 10장, 물가 지수 계산은 6장이 맡는다."
     },
     {
       "book": {

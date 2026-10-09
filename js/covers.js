@@ -435,6 +435,23 @@
       s += `<path d="M44 22C90 26 120 40 150 62S200 96 214 100" fill="none" stroke="#ffd27a" stroke-width="2" stroke-dasharray="4 4" stroke-opacity=".8"/>`;
       return svg(s);
     },
+    // 경제 뉴스: 가운데 기준금리에서 물결이 퍼지고, 점선을 따라 대출·주가·집값·환율 칸으로 신호가 번진다
+    ripple() {
+      const cx = 68, cy = 66; let s = "";
+      [0, 0.6, 1.2].forEach((d) => { s += `<circle class="cv-ping" style="animation-delay:${d}s;transform-box:fill-box;transform-origin:center" cx="${cx}" cy="${cy}" r="14" fill="none" stroke="${W}" stroke-opacity=".7"/>`; });
+      const nodes = [[150, 22, "loan"], [176, 54, "stock"], [168, 92, "house"], [132, 116, "fx"]];
+      nodes.forEach(([x, y]) => { s += `<path class="cv-flow" d="M${cx + 16} ${cy}L${x - 14} ${y}" stroke="${W}" stroke-opacity=".55" stroke-width="1.3" stroke-dasharray="3 3"/>`; });
+      nodes.forEach(([x, y, k]) => {
+        s += `<rect x="${x - 14}" y="${y - 11}" width="28" height="22" rx="5" fill="${W}" fill-opacity=".14" stroke="${W}" stroke-opacity=".6"/>`;
+        if (k === "loan") s += `<text x="${x}" y="${y + 4.5}" text-anchor="middle" font-size="12" font-weight="700" fill="#ffe7a8">%</text>`;
+        if (k === "stock") s += `<path d="M${x - 9} ${y + 5}l5 -5 4 3 8 -8" fill="none" stroke="#7deaa0" stroke-width="1.8" stroke-linejoin="round"/>`;
+        if (k === "house") s += `<path d="M${x - 8} ${y + 6}V${y - 1}l8 -6 8 6V${y + 6}Z" fill="${W}" fill-opacity=".85"/>`;
+        if (k === "fx") s += `<text x="${x}" y="${y + 4.5}" text-anchor="middle" font-size="11" font-weight="700" fill="#ffd27a">₩$</text>`;
+      });
+      s += `<circle cx="${cx}" cy="${cy}" r="15" fill="${W}" fill-opacity=".9"/><text x="${cx}" y="${cy + 4.5}" text-anchor="middle" font-size="12.5" font-weight="800" fill="#000" fill-opacity=".55">%</text>`;
+      s += `<path d="M14 112H44M14 112V88" stroke="${W}" stroke-opacity=".35"/><path class="cv-draw" pathLength="1" stroke-dasharray="1" d="M16 106l7 -4 6 3 7 -9 7 2" fill="none" stroke="${W}" stroke-width="1.5" stroke-linejoin="round"/>`;
+      return svg(s);
+    },
     umbrella() {
       const r = rnd(5), cx = 128; let s = "";
       range(14).forEach((k) => {

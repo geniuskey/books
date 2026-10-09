@@ -34,7 +34,7 @@ window.FIELD_MAPS = {
     title: "돈의 흐름을 이해하고 미래를 준비하기",
     desc: "금융의 기본 개념을 자산 운용과 위험 대비에 연결합니다.",
     groups: [
-      ["돈과 경제", "Understand", "금리·물가·경제 뉴스의 기본 언어", ["moneybook"]],
+      ["돈과 경제", "Understand", "금리·물가·경제 뉴스의 기본 언어", ["moneybook", "economicsbook"]],
       ["신용과 투자", "Manage", "빌리는 돈과 투자하는 돈의 구조", ["stockbook"]],
     ],
   },

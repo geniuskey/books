@@ -112,7 +112,7 @@
       "en": "Money",
       "color": "#b45309",
       "colorDark": "#fbbf24",
-      "desc": "복리, 금리, 주식, 보험, 연금. 월급을 받는 순간부터 필요한 지식."
+      "desc": "복리, 금리, 주식, 보험, 연금, 경제 뉴스. 월급을 받는 순간부터 필요한 지식."
     },
     {
       "id": "housing",
@@ -1259,6 +1259,45 @@
           "image": "img/sims/moneybook-sim-life.jpg"
         }
       ]
+    },
+    {
+      "id": "economicsbook",
+      "code": "ECO",
+      "title": "EconomicsBook",
+      "subtitle": "경제 뉴스 읽는 교과서",
+      "headline": "기준금리를 올리면 대출·주식·집값·환율은 어떻게 움직일까",
+      "description": "수요와 공급, GDP와 경기 순환, 고용, 물가와 금리, 중앙은행과 통화정책, 환율과 무역, 재정과 국가부채, 금융위기까지. 지우가 1년 동안 경제 뉴스 헤드라인을 하나씩 해석하는 노트를 따라 변수를 직접 바꾸며, 공식 통계의 기준 시점과 비교 기준을 읽는 법을 배웁니다.",
+      "url": "https://economicsbook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/economicsbook",
+      "status": "published",
+      "level": "입문",
+      "chapters": 15,
+      "simulators": 0,
+      "color": "#be123c",
+      "colorDark": "#fb7185",
+      "topics": [
+        "수요·공급·탄력성",
+        "GDP·성장률 읽기",
+        "경기 순환·경기 지표",
+        "고용·실업률",
+        "물가·근원물가",
+        "금리·채권·수익률 곡선",
+        "통화정책·테일러 준칙",
+        "기준금리 파급 경로",
+        "환율·경상수지",
+        "재정·국가채무",
+        "금융위기"
+      ],
+      "motif": "ripple",
+      "featured": [
+        {
+          "title": "기준금리 연결판: 대출·주식·집값·환율",
+          "desc": "기준금리와 미국 금리, 예상하지 못한 몫을 바꾸면 대출금리·주가·집값·환율·성장·물가가 서로 다른 시차로 번지는 모습을 2년 동안 재생한다",
+          "link": "chapters/transmission.html#sim-board",
+          "image": "img/sims/economicsbook-sim-board.jpg"
+        }
+      ],
+      "field": "money"
     },
     {
       "id": "stockbook",
