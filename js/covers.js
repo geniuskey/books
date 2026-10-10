@@ -485,6 +485,17 @@
       s += `<path d="M44 118H212" stroke="${W}" stroke-opacity=".35"/>`;
       return svg(s);
     },
+    // 디지털: CMOS 인버터(pMOS 위·nMOS 아래)와 뒤집혀 나오는 사각파
+    digital() {
+      let s = `<path d="M110 14V30M110 116V100M110 58V72M84 65H96M96 46V84" stroke="${W}" stroke-opacity=".7" stroke-width="1.6"/>`;
+      s += `<path d="M98 14H122M98 116H122" stroke="${W}" stroke-width="2"/>`;
+      s += `<rect x="102" y="30" width="16" height="28" rx="2" fill="${W}" fill-opacity=".22" stroke="${W}" stroke-opacity=".6"/>`;
+      s += `<rect x="102" y="72" width="16" height="28" rx="2" fill="${W}" fill-opacity=".55" stroke="${W}" stroke-opacity=".6"/>`;
+      s += `<path d="M110 65H124" stroke="${W}" stroke-opacity=".7" stroke-width="1.6"/>`;
+      s += `<path class="cv-flow" d="M44 82H54V48H64V82H74V48H84" fill="none" stroke="${W}" stroke-opacity=".8" stroke-width="1.6" stroke-dasharray="5 4"/>`;
+      s += `<path class="cv-flow" style="animation-delay:.2s" d="M124 48H140V82H158V48H172V82H190" fill="none" stroke="${W}" stroke-opacity=".8" stroke-width="1.6" stroke-dasharray="5 4"/>`;
+      return svg(s);
+    },
     // 기본: 다이 격자
     grid() {
       let s = "";

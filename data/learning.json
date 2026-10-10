@@ -289,6 +289,14 @@
       "question": "시뮬레이터는 I-V 곡선을 어떻게 한 점씩 계산할까요?",
       "concepts": ["device", "structure"]
     },
+    "digitalbook/sim-chain": {
+      "question": "잡음이 낀 신호가 수십 단을 지나도 디지털 회로는 왜 틀리지 않을까요?",
+      "concepts": ["design", "computing"]
+    },
+    "digitalbook/sim-vtc": {
+      "question": "인버터의 전달 곡선은 왜 가파를수록 노이즈에 강할까요?",
+      "concepts": ["device", "design"]
+    },
     "analogbook/sim-pm": {
       "question": "피드백 증폭기는 왜 울리고, 위상 여유는 그걸 어떻게 막을까요?",
       "concepts": ["design", "systems"]
@@ -822,12 +830,17 @@
       "group": "반도체",
       "title": "코드가 실제 칩에서 실행되기까지 무엇이 필요할까?",
       "start": "컴퓨터 동작부터 칩 설계까지 순서대로 연결하고 싶은 독자",
-      "outcome": "논리·CPU·RTL·레이아웃·SoC의 역할을 구분합니다.",
+      "outcome": "논리·CPU·트랜지스터 회로·RTL·레이아웃·SoC의 역할을 구분합니다.",
       "steps": [
         {
           "bookId": "computerbook",
           "focus": "논리 게이트 → 장난감 CPU → 캐시와 메모리",
           "why": "스위치와 명령 실행부터 시작합니다. CPU가 어떤 일을 해야 하는지 알면 설계 단계의 목적이 보입니다."
+        },
+        {
+          "bookId": "digitalbook",
+          "focus": "CMOS 인버터 → 정적 게이트·지연 → 플립플롭·타이밍 → 덧셈기",
+          "why": "논리 게이트 한 개가 트랜지스터 몇 개로 어떻게 만들어지는지 내려가 봅니다. 게이트 지연과 setup·hold를 알면 설계 단계의 타이밍 검사가 무엇을 재는지 보입니다."
         },
         {
           "bookId": "designbook",

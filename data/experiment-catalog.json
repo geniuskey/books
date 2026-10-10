@@ -534,6 +534,264 @@
     "link": "chapters/transport.html#sim-hall"
   },
   {
+    "id": "digitalbook/adder/sim-ripple",
+    "bookId": "digitalbook",
+    "title": "캐리가 번지는 리플 캐리 덧셈기",
+    "link": "chapters/adder.html#sim-ripple"
+  },
+  {
+    "id": "digitalbook/adder/sim-prefix",
+    "bookId": "digitalbook",
+    "title": "접두사 네트워크 탐험기",
+    "link": "chapters/adder.html#sim-prefix"
+  },
+  {
+    "id": "digitalbook/adder/sim-compare",
+    "bookId": "digitalbook",
+    "title": "덧셈기 구조 비교",
+    "link": "chapters/adder.html#sim-compare"
+  },
+  {
+    "id": "digitalbook/boolean/sim-kmap",
+    "bookId": "digitalbook",
+    "title": "카르노 맵 최소화기 (Quine–McCluskey + 최소 피복)",
+    "link": "chapters/boolean.html#sim-kmap"
+  },
+  {
+    "id": "digitalbook/boolean/sim-hazard",
+    "bookId": "digitalbook",
+    "title": "게이트 지연과 정적 해저드 (DG.Circuit 이벤트 시뮬레이션)",
+    "link": "chapters/boolean.html#sim-hazard"
+  },
+  {
+    "id": "digitalbook/datapath/sim-tree",
+    "bookId": "digitalbook",
+    "title": "점 다이어그램으로 보는 부분곱 축소",
+    "link": "chapters/datapath.html#sim-tree"
+  },
+  {
+    "id": "digitalbook/datapath/sim-alu",
+    "bookId": "digitalbook",
+    "title": "플래그를 내는 ALU",
+    "link": "chapters/datapath.html#sim-alu"
+  },
+  {
+    "id": "digitalbook/delay/sim-elmore",
+    "bookId": "digitalbook",
+    "title": "RC 트리 편집기: 엘모어 지연 vs 수치 해석",
+    "link": "chapters/delay.html#sim-elmore"
+  },
+  {
+    "id": "digitalbook/delay/sim-path",
+    "bookId": "digitalbook",
+    "title": "경로 크기 맞추기 게임",
+    "link": "chapters/delay.html#sim-path"
+  },
+  {
+    "id": "digitalbook/fsm/sim-ripple",
+    "bookId": "digitalbook",
+    "title": "리플 카운터 vs 동기 카운터: 게이트 수준 시뮬레이션",
+    "link": "chapters/fsm.html#sim-ripple"
+  },
+  {
+    "id": "digitalbook/fsm/sim-fsm",
+    "bookId": "digitalbook",
+    "title": "FSM 놀이터: 상태도 · 상태 레지스터 · 파형",
+    "link": "chapters/fsm.html#sim-fsm"
+  },
+  {
+    "id": "digitalbook/fsm/sim-enc",
+    "bookId": "digitalbook",
+    "title": "인코딩별 비용 비교: 플립플롭 · 리터럴 · LUT",
+    "link": "chapters/fsm.html#sim-enc"
+  },
+  {
+    "id": "digitalbook/gates/sim-complex",
+    "bookId": "digitalbook",
+    "title": "복합 게이트 생성기: \\(Y=\\overline{F}\\)의 PDN·PUN",
+    "link": "chapters/gates.html#sim-complex"
+  },
+  {
+    "id": "digitalbook/gates/sim-euler",
+    "bookId": "digitalbook",
+    "title": "오일러 경로로 셀 레이아웃 짓기",
+    "link": "chapters/gates.html#sim-euler"
+  },
+  {
+    "id": "digitalbook/hdl/sim-synth",
+    "bookId": "digitalbook",
+    "title": "미니 합성기: 파싱 → 넷리스트 → 최적화 → 기술 매핑",
+    "link": "chapters/hdl.html#sim-synth"
+  },
+  {
+    "id": "digitalbook/hdl/sim-tb",
+    "bookId": "digitalbook",
+    "title": "테스트벤치: BCD 카운터 검증과 버그 주입",
+    "link": "chapters/hdl.html#sim-tb"
+  },
+  {
+    "id": "digitalbook/inverter/sim-vtc",
+    "bookId": "digitalbook",
+    "title": "인버터 VTC · 이득 · 단락 전류",
+    "link": "chapters/inverter.html#sim-vtc"
+  },
+  {
+    "id": "digitalbook/inverter/sim-tran",
+    "bookId": "digitalbook",
+    "title": "인버터 과도 응답 · 전파 지연 · 단락 전류",
+    "link": "chapters/inverter.html#sim-tran"
+  },
+  {
+    "id": "digitalbook/lab/sim-lab",
+    "bookId": "digitalbook",
+    "title": "게이트 수준 회로 실험실",
+    "link": "chapters/lab.html#sim-lab"
+  },
+  {
+    "id": "digitalbook/lab/sim-tt",
+    "bookId": "digitalbook",
+    "title": "진리표 자동 생성",
+    "link": "chapters/lab.html#sim-tt"
+  },
+  {
+    "id": "digitalbook/lab/sim-wave",
+    "bookId": "digitalbook",
+    "title": "파형 뷰",
+    "link": "chapters/lab.html#sim-wave"
+  },
+  {
+    "id": "digitalbook/lab/sim-chal",
+    "bookId": "digitalbook",
+    "title": "도전 과제 6개",
+    "link": "chapters/lab.html#sim-chal"
+  },
+  {
+    "id": "digitalbook/latch/sim-msff",
+    "bookId": "digitalbook",
+    "title": "마스터-슬레이브 플립플롭 vs D 래치",
+    "link": "chapters/latch.html#sim-msff"
+  },
+  {
+    "id": "digitalbook/latch/sim-setup",
+    "bookId": "digitalbook",
+    "title": "clk→Q 지연 vs 데이터 도착 시각",
+    "link": "chapters/latch.html#sim-setup"
+  },
+  {
+    "id": "digitalbook/memory/sim-snm",
+    "bookId": "digitalbook",
+    "title": "나비 곡선과 SNM",
+    "link": "chapters/memory.html#sim-snm"
+  },
+  {
+    "id": "digitalbook/memory/sim-sense",
+    "bookId": "digitalbook",
+    "title": "비트라인 방전과 센스 시점",
+    "link": "chapters/memory.html#sim-sense"
+  },
+  {
+    "id": "digitalbook/mosfet/sim-iv",
+    "bookId": "digitalbook",
+    "title": "MOSFET 곡선 실험실: 출력 특성과 전달 특성",
+    "link": "chapters/mosfet.html#sim-iv"
+  },
+  {
+    "id": "digitalbook/mosfet/sim-vt",
+    "bookId": "digitalbook",
+    "title": "문턱 전압 손잡이: 속도와 누설의 줄다리기",
+    "link": "chapters/mosfet.html#sim-vt"
+  },
+  {
+    "id": "digitalbook/mosfet/sim-pass",
+    "bookId": "digitalbook",
+    "title": "패스 게이트로 커패시터 충·방전하기",
+    "link": "chapters/mosfet.html#sim-pass"
+  },
+  {
+    "id": "digitalbook/overview/sim-chain",
+    "bookId": "digitalbook",
+    "title": "N단 사슬: 아날로그 증폭기 vs 디지털 버퍼",
+    "link": "chapters/overview.html#sim-chain"
+  },
+  {
+    "id": "digitalbook/overview/sim-sync",
+    "bookId": "digitalbook",
+    "title": "4비트 누산기: 레지스터 → 덧셈기 → 레지스터",
+    "link": "chapters/overview.html#sim-sync"
+  },
+  {
+    "id": "digitalbook/power/sim-glitch",
+    "bookId": "digitalbook",
+    "title": "글리치 세기: 리플 덧셈기와 배열 곱셈기",
+    "link": "chapters/power.html#sim-glitch"
+  },
+  {
+    "id": "digitalbook/power/sim-budget",
+    "bookId": "digitalbook",
+    "title": "코어 하나의 전력 예산 짜기",
+    "link": "chapters/power.html#sim-budget"
+  },
+  {
+    "id": "digitalbook/power/sim-mep",
+    "bookId": "digitalbook",
+    "title": "에너지-지연 곡선과 최소 에너지점",
+    "link": "chapters/power.html#sim-mep"
+  },
+  {
+    "id": "digitalbook/robust/sim-mc",
+    "bookId": "digitalbook",
+    "title": "경로 지연 분포와 수율, 클럭 binning",
+    "link": "chapters/robust.html#sim-mc"
+  },
+  {
+    "id": "digitalbook/robust/sim-ecc",
+    "bookId": "digitalbook",
+    "title": "해밍(7,4)과 SECDED(8,4): 인코딩·오류 주입·신드롬·정정",
+    "link": "chapters/robust.html#sim-ecc"
+  },
+  {
+    "id": "digitalbook/robust/sim-fault",
+    "bookId": "digitalbook",
+    "title": "고장 주입과 테스트 벡터, 고장 검출률",
+    "link": "chapters/robust.html#sim-fault"
+  },
+  {
+    "id": "digitalbook/styles/sim-dyn",
+    "bookId": "digitalbook",
+    "title": "동적 게이트: 프리차지·평가와 누설",
+    "link": "chapters/styles.html#sim-dyn"
+  },
+  {
+    "id": "digitalbook/styles/sim-share",
+    "bookId": "digitalbook",
+    "title": "동적 NAND3의 전하 공유",
+    "link": "chapters/styles.html#sim-share"
+  },
+  {
+    "id": "digitalbook/timing/sim-sta",
+    "bookId": "digitalbook",
+    "title": "STA를 손으로: 도착·요구·여유",
+    "link": "chapters/timing.html#sim-sta"
+  },
+  {
+    "id": "digitalbook/timing/sim-pipe",
+    "bookId": "digitalbook",
+    "title": "몇 단으로 자를까",
+    "link": "chapters/timing.html#sim-pipe"
+  },
+  {
+    "id": "digitalbook/wire/sim-rcline",
+    "bookId": "digitalbook",
+    "title": "분산 RC 선: 계단 입력이 퍼져 나가는 모습",
+    "link": "chapters/wire.html#sim-rcline"
+  },
+  {
+    "id": "digitalbook/wire/sim-rep",
+    "bookId": "digitalbook",
+    "title": "리피터 삽입 최적화: 지연과 에너지",
+    "link": "chapters/wire.html#sim-rep"
+  },
+  {
     "id": "designbook/arcade/sim-tm",
     "bookId": "designbook",
     "title": "면적 예산 안에서 슬랙 맞추기",

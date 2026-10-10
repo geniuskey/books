@@ -187,6 +187,49 @@
       ]
     },
     {
+      "id": "digitalbook",
+      "code": "DIG",
+      "title": "DigitalBook",
+      "subtitle": "디지털 회로 설계 교과서",
+      "headline": "0과 1을 만드는 트랜지스터",
+      "description": "MOSFET 스위치와 CMOS 인버터에서 정적 게이트, 지연과 논리적 노력, 동적 논리, 래치·플립플롭과 타이밍, 덧셈기·곱셈기, SRAM, 배선, 전력과 신뢰성, HDL 합성까지. 교육용 기준 공정 DG-7 위에서 게이트 하나, 플립플롭 하나를 직접 켜고 끄고 재 보며 디지털 회로를 배웁니다.",
+      "url": "https://digitalbook.euiyun.com/",
+      "repo": "https://github.com/geniuskey/digitalbook",
+      "field": "semiconductor",
+      "stage": "design",
+      "status": "published",
+      "level": "공대 학부",
+      "chapters": 19,
+      "simulators": 43,
+      "color": "#087f5b",
+      "colorDark": "#38d9a9",
+      "topics": [
+        "CMOS 인버터",
+        "정적 CMOS 게이트",
+        "지연·논리적 노력",
+        "래치·플립플롭",
+        "타이밍·STA",
+        "덧셈기·곱셈기",
+        "SRAM",
+        "전력·신뢰성"
+      ],
+      "motif": "digital",
+      "featured": [
+        {
+          "title": "아날로그 사슬 vs 디지털 버퍼",
+          "desc": "잡음이 낀 신호를 12단 통과시키면 증폭기는 오차를 쌓고 버퍼는 0과 1로 되살린다",
+          "link": "chapters/overview.html#sim-chain",
+          "image": "img/sims/digitalbook-sim-chain.jpg"
+        },
+        {
+          "title": "인버터 VTC와 노이즈 마진",
+          "desc": "크기 비와 VDD를 바꾸면 스위칭 임계·이득·노이즈 마진과 단락 전류가 함께 움직인다",
+          "link": "chapters/inverter.html#sim-vtc",
+          "image": "img/sims/digitalbook-sim-vtc.jpg"
+        }
+      ]
+    },
+    {
       "id": "designbook",
       "code": "DSN",
       "title": "DesignBook",

@@ -20,7 +20,7 @@ EB.start("home", (d) => {
   }
   const shelfBox = $("#home-shelves");
   const spineTopics = {
-    devicebook: "반도체 소자", designbook: "반도체 설계", socbook: "시스템 온 칩",
+    devicebook: "반도체 소자", digitalbook: "디지털 회로", designbook: "반도체 설계", socbook: "시스템 온 칩",
     analogbook: "아날로그 회로", processbook: "제조 공정", lithobook: "노광",
     etchbook: "식각", dopingbook: "도핑", yieldbook: "수율 분석", failurebook: "불량 분석",
     tcadbook: "소자 시뮬레이션", packagingbook: "패키징", testbook: "반도체 검사",
