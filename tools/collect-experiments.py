@@ -25,7 +25,8 @@ def collect():
     for book in books:
         if book['status'] != 'published':
             continue
-        chapters = ROOT.parent / book['id'] / 'chapters'
+        # 서가 저장소의 한 권은 checkout에 하위 경로를 적는다(예: artbook/color). 없으면 책 ID 폴더.
+        chapters = ROOT.parent / book.get('checkout', book['id']) / 'chapters'
         if not chapters.is_dir():
             raise FileNotFoundError(f'Book checkout is required: {chapters}')
         for path in sorted(chapters.glob('*.html')):

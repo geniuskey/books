@@ -1656,10 +1656,12 @@
       "description": "빛과 지각, 색을 숫자로 적는 법, 혼색, 색상환과 조화, 명도·채도·대비, 색의 상대성, 그림 속 색, 접근성, 팔레트, 인쇄까지. 직접 끌고 섞고 흑백으로 바꿔 비교하며 배우는 ArtBook 서가의 첫 권(ColorBook)입니다.",
       "url": "https://artbook.euiyun.com/color/",
       "repo": "https://github.com/geniuskey/artbook",
+      "checkout": "artbook/color",
       "field": "art",
-      "status": "writing",
-      "phase": 1,
+      "status": "published",
       "level": "입문",
+      "chapters": 17,
+      "simulators": 108,
       "color": "#b5179e",
       "colorDark": "#f27ad8",
       "topics": [
@@ -1671,7 +1673,21 @@
         "접근성",
         "팔레트"
       ],
-      "motif": "palette"
+      "motif": "palette",
+      "featured": [
+        {
+          "title": "한 색을 두 색으로",
+          "desc": "같은 색 견본이 두 바탕 위에서 서로 다른 두 색처럼 보이게 만든다",
+          "link": "chapters/relativity.html#sim-one",
+          "image": "img/sims/artbook-color-sim-one.jpg"
+        },
+        {
+          "title": "세 물감의 색 지도",
+          "desc": "수채 물감 세 개로 섞어 낼 수 있는 색의 범위를 지도로 그린다",
+          "link": "chapters/mixing.html#sim-mi-gamut",
+          "image": "img/sims/artbook-color-sim-mi-gamut.jpg"
+        }
+      ]
     },
     {
       "id": "artbook-composition",

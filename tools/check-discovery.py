@@ -67,7 +67,7 @@ def anchor(book_id, link):
     parts = urlsplit(link)
     check(not parts.scheme and not parts.netloc and parts.path.startswith('chapters/')
           and '..' not in parts.path.split('/'), f'Invalid chapter path: {link}')
-    book_root = ROOT.parent / book_id
+    book_root = ROOT.parent / books.get(book_id, {}).get('checkout', book_id)
     if not book_root.is_dir():
         skipped_anchors += 1
         return
@@ -157,7 +157,7 @@ for name, data in builder.build().items():
           f'Generated {name} is stale; run tools/build-discovery.py')
 model_check = subprocess.run(['node', str(ROOT / 'tools/check-models.cjs')], capture_output=True, text=True)
 check(model_check.returncode == 0, 'Model reference checks failed: ' + (model_check.stderr or model_check.stdout).strip())
-if all((ROOT.parent / b['id'] / 'chapters').is_dir() for b in catalog['books'] if b['status'] == 'published'):
+if all((ROOT.parent / b.get('checkout', b['id']) / 'chapters').is_dir() for b in catalog['books'] if b['status'] == 'published'):
     spec = importlib.util.spec_from_file_location('collector', ROOT / 'tools/collect-experiments.py')
     collector = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(collector)
