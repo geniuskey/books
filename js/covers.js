@@ -497,6 +497,21 @@
       return svg(s);
     },
     // 기본: 다이 격자
+    // 팔레트: 색상환 고리 위에 손잡이가 맥동하고, 가운데 같은 회색 두 칸이 서로 다른 바탕에 놓인다(ArtBook 색채)
+    palette() {
+      let s = "";
+      const cx = 132, cy = 65, R = 48, r = 30, n = 18;
+      range(n).forEach((i) => {
+        const a0 = (i / n) * Math.PI * 2 - Math.PI / 2, a1 = ((i + 1) / n) * Math.PI * 2 - Math.PI / 2;
+        const p = (rr, a) => `${(cx + rr * Math.cos(a)).toFixed(1)} ${(cy + rr * Math.sin(a)).toFixed(1)}`;
+        s += `<path d="M${p(r, a0)}L${p(R, a0)}A${R} ${R} 0 0 1 ${p(R, a1)}L${p(r, a1)}A${r} ${r} 0 0 0 ${p(r, a0)}Z" fill="hsl(${Math.round((i / n) * 360)} 70% 62%)" fill-opacity=".9"/>`;
+      });
+      s += `<circle class="cv-pulse" cx="${cx + ((R + r) / 2) * Math.cos(-0.5)}" cy="${cy + ((R + r) / 2) * Math.sin(-0.5)}" r="7" fill="none" stroke="${W}" stroke-width="2.4"/>`;
+      s += `<rect x="${cx - 18}" y="${cy - 10}" width="18" height="20" fill="#2a2a2a"/><rect x="${cx}" y="${cy - 10}" width="18" height="20" fill="#e6e6e6"/>`;
+      s += `<rect x="${cx - 13}" y="${cy - 5}" width="8" height="10" fill="#808080"/><rect x="${cx + 5}" y="${cy - 5}" width="8" height="10" fill="#808080"/>`;
+      [0.92, 0.7, 0.48, 0.26].forEach((l, k) => { s += `<rect x="36" y="${22 + k * 22}" width="18" height="18" rx="3" fill="${W}" fill-opacity="${l}"/>`; });
+      return svg(s);
+    },
     grid() {
       let s = "";
       range(4).forEach((j) => range(8).forEach((i) => { s += `<rect x="${36 + i * 20}" y="${14 + j * 26}" width="16" height="22" rx="2" fill="${W}" fill-opacity=".2" stroke="${W}" stroke-opacity=".4"/>`; }));

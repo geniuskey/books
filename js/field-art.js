@@ -44,6 +44,9 @@
       <path d="M22 59h15l6-10h24l6 10h22a6 6 0 0 1 6 6v32a6 6 0 0 1-6 6H22a6 6 0 0 1-6-6V65a6 6 0 0 1 6-6Z" class="fa-paper"/>
       <circle cx="59" cy="80" r="17" class="fa-tint"/><circle cx="59" cy="80" r="10"/>
       <path d="M85 68h7M28 28v12m-6-6h12m9-15v8m-4-4h8" class="fa-accent"/>`,
+    art: `<path d="M60 22c-26 0-42 19-42 40 0 22 17 42 40 42 9 0 10-8 6-13-4-6 0-12 7-12h12c13 0 23-9 23-22 0-20-20-35-46-35Z" class="fa-paper"/>
+      <circle cx="40" cy="58" r="6" class="fa-tint"/><circle cx="50" cy="40" r="6" class="fa-accent"/><circle cx="70" cy="36" r="6" class="fa-tint"/><circle cx="87" cy="48" r="6" class="fa-accent"/>
+      <path d="m78 96 30-34m-30 34-6 9 9-5" class="fa-accent"/>`,
   };
   EB.fieldArt = (field) => {
     if (field.id === "semiconductor") return EB.miniWafer(field.books);

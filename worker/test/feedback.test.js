@@ -50,6 +50,17 @@ test('invalid fields, book references, page URLs and honeypot are rejected', asy
   db.close();
 });
 
+test('books under a shared host only accept pages inside their own path', async () => {
+  const { db, post } = setup();
+  for (const pageUrl of ['https://artbook.euiyun.com/', 'https://artbook.euiyun.com/composition/chapters/balance.html', 'https://artbook.euiyun.com/colorful/']) {
+    assert.equal((await post({ ...payload(), bookId: 'artbook-color', pageUrl })).status, 400);
+  }
+  assert.equal((await post({ ...payload(), bookId: 'artbook-color', pageUrl: 'https://artbook.euiyun.com/color/chapters/overview.html#sim-map' })).status, 201);
+  assert.equal((await post({ ...payload(), bookId: 'artbook-composition' })).status, 400);
+  assert.equal(db.prepare('SELECT count(*) AS count FROM feedback').get().count, 1);
+  db.close();
+});
+
 test('origin, content-type, method, route and body size boundaries', async () => {
   const { db, env, post } = setup();
   assert.equal((await post(payload(), { Origin: 'https://evil.example' })).status, 403);

@@ -140,6 +140,15 @@
       "color": "#c2410c",
       "colorDark": "#fb923c",
       "desc": "카메라와 음악. 빛과 소리를 직접 조작하며 배우는 지식."
+    },
+    {
+      "id": "art",
+      "wing": "life",
+      "name": "미술·디자인",
+      "en": "Art & Design",
+      "color": "#b5179e",
+      "colorDark": "#f27ad8",
+      "desc": "색, 형태와 구도, 드로잉, 타이포그래피, 미술사. 보고 만지고 그려 보며 배우는 미술과 시각 디자인."
     }
   ],
   "books": [
@@ -1637,6 +1646,117 @@
         }
       ],
       "field": "culture"
+    },
+    {
+      "id": "artbook-color",
+      "code": "ART",
+      "title": "ArtBook 색채",
+      "subtitle": "미술·디자인 색채 교과서",
+      "headline": "색은 이름이 아니라 관계다",
+      "description": "빛과 지각, 색을 숫자로 적는 법, 혼색, 색상환과 조화, 명도·채도·대비, 색의 상대성, 그림 속 색, 접근성, 팔레트, 인쇄까지. 직접 끌고 섞고 흑백으로 바꿔 비교하며 배우는 ArtBook 서가의 첫 권(ColorBook)입니다.",
+      "url": "https://artbook.euiyun.com/color/",
+      "repo": "https://github.com/geniuskey/artbook",
+      "field": "art",
+      "status": "writing",
+      "phase": 1,
+      "level": "입문",
+      "color": "#b5179e",
+      "colorDark": "#f27ad8",
+      "topics": [
+        "빛과 지각",
+        "색 모델",
+        "혼색",
+        "색상환과 조화",
+        "명도·채도·대비",
+        "접근성",
+        "팔레트"
+      ],
+      "motif": "palette"
+    },
+    {
+      "id": "artbook-composition",
+      "code": "CMP",
+      "title": "ArtBook 구도",
+      "subtitle": "형태와 구도",
+      "field": "art",
+      "status": "planned",
+      "phase": 2,
+      "repo": "https://github.com/geniuskey/artbook",
+      "description": "점·선·면, 게슈탈트, 균형과 리듬, 3분할과 황금비의 실제, 시선의 흐름, 여백. 그림 위 격자를 끌며 규칙이 통하는 순간과 깨지는 순간을 함께 봅니다.",
+      "ideas": [
+        "그림 위 3분할·황금비 격자 끌기",
+        "게슈탈트 묶음 실험",
+        "시선 경로와 초점 이동",
+        "여백을 줄였다 늘렸다 하는 포스터"
+      ]
+    },
+    {
+      "id": "artbook-drawing",
+      "code": "DRW",
+      "title": "ArtBook 드로잉",
+      "subtitle": "투시·빛·비례",
+      "field": "art",
+      "status": "planned",
+      "phase": 2,
+      "repo": "https://github.com/geniuskey/artbook",
+      "description": "1·2·3점 투시, 빛과 그림자, 비례, 인체의 구조, 제스처. 소실점과 광원을 직접 끌어 공간과 형태가 생기는 원리를 배웁니다.",
+      "ideas": [
+        "소실점을 끄는 투시 상자",
+        "광원을 옮기는 그림자 투영",
+        "인체 비례 마네킹",
+        "제스처 선 따라 그리기"
+      ]
+    },
+    {
+      "id": "artbook-type",
+      "code": "TYP",
+      "title": "ArtBook 타이포",
+      "subtitle": "타이포그래피",
+      "field": "art",
+      "status": "planned",
+      "phase": 2,
+      "repo": "https://github.com/geniuskey/artbook",
+      "description": "글자의 구조, 한글 타이포그래피, 자간과 행간, 위계, 그리드. 글줄을 조절하며 읽기 쉬운 화면이 만들어지는 이유를 봅니다.",
+      "ideas": [
+        "한글 자소의 구조 해부",
+        "자간·행간 슬라이더와 가독성",
+        "위계 만들기",
+        "그리드 위 지면 배치"
+      ]
+    },
+    {
+      "id": "artbook-history",
+      "code": "AHI",
+      "title": "ArtBook 미술사",
+      "subtitle": "색·구도·기법으로 읽는 미술사",
+      "field": "art",
+      "status": "planned",
+      "phase": 2,
+      "repo": "https://github.com/geniuskey/artbook",
+      "description": "사조의 흐름을 색·구도·기법의 변화로 읽습니다. 공공 도메인 작품 위에 분석 그림을 얹어 시대마다 달라진 눈을 비교합니다.",
+      "ideas": [
+        "시대별 팔레트 변화",
+        "원근법의 등장",
+        "수묵의 농담과 여백",
+        "인상주의의 붓질"
+      ]
+    },
+    {
+      "id": "artbook-image",
+      "code": "IMG",
+      "title": "ArtBook 이미지",
+      "subtitle": "사진과 디지털 이미지",
+      "field": "art",
+      "status": "planned",
+      "phase": 2,
+      "repo": "https://github.com/geniuskey/artbook",
+      "description": "노출, 렌즈와 원근, 색 보정, 디지털 이미지의 구조. 사진 한 장을 고쳐 가며 이미지가 보이는 방식을 배웁니다.",
+      "ideas": [
+        "노출과 히스토그램",
+        "초점거리와 원근 왜곡",
+        "커브로 색 보정하기",
+        "화소와 압축의 구조"
+      ]
     }
   ],
   "tools": [
