@@ -28672,5 +28672,521 @@
     "bookId": "artbook-history",
     "title": "읽기 카드 만들기",
     "link": "chapters/romantic.html#sim-rm-card"
+  },
+  {
+    "id": "artbook-image/color/sim-wb",
+    "bookId": "artbook-image",
+    "title": "광원과 화이트 밸런스 설정이 어긋날 때",
+    "link": "chapters/color.html#sim-wb"
+  },
+  {
+    "id": "artbook-image/color/sim-picker",
+    "bookId": "artbook-image",
+    "title": "스포이트와 자동 화이트 밸런스",
+    "link": "chapters/color.html#sim-picker"
+  },
+  {
+    "id": "artbook-image/color/sim-levels",
+    "bookId": "artbook-image",
+    "title": "레벨: 히스토그램 위의 세 손잡이",
+    "link": "chapters/color.html#sim-levels"
+  },
+  {
+    "id": "artbook-image/color/sim-curve",
+    "bookId": "artbook-image",
+    "title": "톤 커브: 점을 끌어 밝기를 다시 배치한다",
+    "link": "chapters/color.html#sim-curve"
+  },
+  {
+    "id": "artbook-image/color/sim-hsl",
+    "bookId": "artbook-image",
+    "title": "채도·생동감·빨강만: 색역 끝에서 생기는 일",
+    "link": "chapters/color.html#sim-hsl"
+  },
+  {
+    "id": "artbook-image/color/sim-undo",
+    "bookId": "artbook-image",
+    "title": "어둡게 저장했다가 다시 밝게: 8비트와 RAW",
+    "link": "chapters/color.html#sim-undo"
+  },
+  {
+    "id": "artbook-image/color/sim-bench",
+    "bookId": "artbook-image",
+    "title": "작품 사진 보정 작업대",
+    "link": "chapters/color.html#sim-bench"
+  },
+  {
+    "id": "artbook-image/composition/sim-merge",
+    "bookId": "artbook-image",
+    "title": "한 걸음 옆으로: 머리 뒤의 가로등",
+    "link": "chapters/composition.html#sim-merge"
+  },
+  {
+    "id": "artbook-image/composition/sim-height",
+    "bookId": "artbook-image",
+    "title": "카메라 높이와 지평선",
+    "link": "chapters/composition.html#sim-height"
+  },
+  {
+    "id": "artbook-image/composition/sim-lead",
+    "bookId": "artbook-image",
+    "title": "시선 앞의 공간",
+    "link": "chapters/composition.html#sim-lead"
+  },
+  {
+    "id": "artbook-image/composition/sim-level",
+    "bookId": "artbook-image",
+    "title": "수평 보정의 대가",
+    "link": "chapters/composition.html#sim-level"
+  },
+  {
+    "id": "artbook-image/composition/sim-burst",
+    "bookId": "artbook-image",
+    "title": "연사에서 한 장 고르기",
+    "link": "chapters/composition.html#sim-burst"
+  },
+  {
+    "id": "artbook-image/composition/sim-field",
+    "bookId": "artbook-image",
+    "title": "책방 앞에서 한 장 만들기",
+    "link": "chapters/composition.html#sim-field"
+  },
+  {
+    "id": "artbook-image/compression/sim-ppi",
+    "bookId": "artbook-image",
+    "title": "화소 수와 인쇄 크기, 그리고 ppi",
+    "link": "chapters/compression.html#sim-ppi"
+  },
+  {
+    "id": "artbook-image/compression/sim-resample",
+    "bookId": "artbook-image",
+    "title": "리샘플링: 무아레와 흐림",
+    "link": "chapters/compression.html#sim-resample"
+  },
+  {
+    "id": "artbook-image/compression/sim-dct",
+    "bookId": "artbook-image",
+    "title": "8×8 블록 하나: DCT와 양자화",
+    "link": "chapters/compression.html#sim-dct"
+  },
+  {
+    "id": "artbook-image/compression/sim-jpeg",
+    "bookId": "artbook-image",
+    "title": "JPEG 품질과 다시 저장할 때의 손실",
+    "link": "chapters/compression.html#sim-jpeg"
+  },
+  {
+    "id": "artbook-image/compression/sim-format",
+    "bookId": "artbook-image",
+    "title": "내용과 형식: 사진, 안내판, 선화",
+    "link": "chapters/compression.html#sim-format"
+  },
+  {
+    "id": "artbook-image/compression/sim-export",
+    "bookId": "artbook-image",
+    "title": "용도별 내보내기 작업대",
+    "link": "chapters/compression.html#sim-export"
+  },
+  {
+    "id": "artbook-image/exposure/sim-ap",
+    "bookId": "artbook-image",
+    "title": "f값과 구멍의 넓이",
+    "link": "chapters/exposure.html#sim-ap"
+  },
+  {
+    "id": "artbook-image/exposure/sim-rec",
+    "bookId": "artbook-image",
+    "title": "같은 노출, 다른 조합",
+    "link": "chapters/exposure.html#sim-rec"
+  },
+  {
+    "id": "artbook-image/exposure/sim-sh",
+    "bookId": "artbook-image",
+    "title": "셔터 속도와 번짐",
+    "link": "chapters/exposure.html#sim-sh"
+  },
+  {
+    "id": "artbook-image/exposure/sim-iso",
+    "bookId": "artbook-image",
+    "title": "같은 밝기, 다른 감도",
+    "link": "chapters/exposure.html#sim-iso"
+  },
+  {
+    "id": "artbook-image/exposure/sim-dof",
+    "bookId": "artbook-image",
+    "title": "조리개를 열면 앞뒤가 녹는다",
+    "link": "chapters/exposure.html#sim-dof"
+  },
+  {
+    "id": "artbook-image/exposure/sim-mt",
+    "bookId": "artbook-image",
+    "title": "노출계는 모든 것을 회색으로 본다",
+    "link": "chapters/exposure.html#sim-mt"
+  },
+  {
+    "id": "artbook-image/exposure/sim-lab",
+    "bookId": "artbook-image",
+    "title": "서가 사진 노출 실험실",
+    "link": "chapters/exposure.html#sim-lab"
+  },
+  {
+    "id": "artbook-image/focus/sim-fc-lens",
+    "bookId": "artbook-image",
+    "title": "상이 맺히는 자리와 흐림 원",
+    "link": "chapters/focus.html#sim-fc-lens"
+  },
+  {
+    "id": "artbook-image/focus/sim-fc-coc",
+    "bookId": "artbook-image",
+    "title": "얼마나 흐려야 흐려 보이나",
+    "link": "chapters/focus.html#sim-fc-coc"
+  },
+  {
+    "id": "artbook-image/focus/sim-fc-dof",
+    "bookId": "artbook-image",
+    "title": "그림 읽기 모임의 피사계 심도",
+    "link": "chapters/focus.html#sim-fc-dof"
+  },
+  {
+    "id": "artbook-image/focus/sim-fc-hyper",
+    "bookId": "artbook-image",
+    "title": "과초점 거리와 센서 크기",
+    "link": "chapters/focus.html#sim-fc-hyper"
+  },
+  {
+    "id": "artbook-image/focus/sim-fc-bokeh",
+    "bookId": "artbook-image",
+    "title": "빛망울의 모양",
+    "link": "chapters/focus.html#sim-fc-bokeh"
+  },
+  {
+    "id": "artbook-image/focus/sim-fc-portrait",
+    "bookId": "artbook-image",
+    "title": "광학 흐림과 합성 흐림",
+    "link": "chapters/focus.html#sim-fc-portrait"
+  },
+  {
+    "id": "artbook-image/focus/sim-fc-plan",
+    "bookId": "artbook-image",
+    "title": "종합: 초점 위치와 조리개 고르기",
+    "link": "chapters/focus.html#sim-fc-plan"
+  },
+  {
+    "id": "artbook-image/glossary/sim-score",
+    "bookId": "artbook-image",
+    "title": "나의 점수",
+    "link": "chapters/glossary.html#sim-score"
+  },
+  {
+    "id": "artbook-image/histogram/sim-hg-map",
+    "bookId": "artbook-image",
+    "title": "막대의 어디가 사진의 어디인가",
+    "link": "chapters/histogram.html#sim-hg-map"
+  },
+  {
+    "id": "artbook-image/histogram/sim-hg-shape",
+    "bookId": "artbook-image",
+    "title": "산의 모양은 장면의 성격이다",
+    "link": "chapters/histogram.html#sim-hg-shape"
+  },
+  {
+    "id": "artbook-image/histogram/sim-hg-fix",
+    "bookId": "artbook-image",
+    "title": "잘못 찍고 나중에 고치면",
+    "link": "chapters/histogram.html#sim-hg-fix"
+  },
+  {
+    "id": "artbook-image/histogram/sim-hg-meter",
+    "bookId": "artbook-image",
+    "title": "노출계가 고른 노출과 노출 보정",
+    "link": "chapters/histogram.html#sim-hg-meter"
+  },
+  {
+    "id": "artbook-image/histogram/sim-hg-dr",
+    "bookId": "artbook-image",
+    "title": "센서의 창을 장면 위에 놓기",
+    "link": "chapters/histogram.html#sim-hg-dr"
+  },
+  {
+    "id": "artbook-image/histogram/sim-hg-hdr",
+    "bookId": "artbook-image",
+    "title": "세 장을 한 장으로",
+    "link": "chapters/histogram.html#sim-hg-hdr"
+  },
+  {
+    "id": "artbook-image/histogram/sim-hg-plan",
+    "bookId": "artbook-image",
+    "title": "책방 E 창가 사진 노출 설계기",
+    "link": "chapters/histogram.html#sim-hg-plan"
+  },
+  {
+    "id": "artbook-image/history/sim-pinhole",
+    "bookId": "artbook-image",
+    "title": "바늘구멍의 크기",
+    "link": "chapters/history.html#sim-pinhole"
+  },
+  {
+    "id": "artbook-image/history/sim-exposure",
+    "bookId": "artbook-image",
+    "title": "사라지는 행인",
+    "link": "chapters/history.html#sim-exposure"
+  },
+  {
+    "id": "artbook-image/history/sim-negative",
+    "bookId": "artbook-image",
+    "title": "음화에서 양화로",
+    "link": "chapters/history.html#sim-negative"
+  },
+  {
+    "id": "artbook-image/history/sim-spectral",
+    "bookId": "artbook-image",
+    "title": "무슨 색에 반응하는가",
+    "link": "chapters/history.html#sim-spectral"
+  },
+  {
+    "id": "artbook-image/history/sim-timeline",
+    "bookId": "artbook-image",
+    "title": "연대표 위의 노출 시간",
+    "link": "chapters/history.html#sim-timeline"
+  },
+  {
+    "id": "artbook-image/history/sim-eras",
+    "bookId": "artbook-image",
+    "title": "시대의 카메라로 책방 앞 찍기",
+    "link": "chapters/history.html#sim-eras"
+  },
+  {
+    "id": "artbook-image/lab/sim-read",
+    "bookId": "artbook-image",
+    "title": "원본 읽기: RGB와 휘도 히스토그램",
+    "link": "chapters/lab.html#sim-read"
+  },
+  {
+    "id": "artbook-image/lab/sim-ev",
+    "bookId": "artbook-image",
+    "title": "노출 보정과 되돌릴 수 없는 클리핑",
+    "link": "chapters/lab.html#sim-ev"
+  },
+  {
+    "id": "artbook-image/lab/sim-wb",
+    "bookId": "artbook-image",
+    "title": "회색 스포이트와 화이트 밸런스",
+    "link": "chapters/lab.html#sim-wb"
+  },
+  {
+    "id": "artbook-image/lab/sim-tone",
+    "bookId": "artbook-image",
+    "title": "레벨과 커브, 그리고 빗살 히스토그램",
+    "link": "chapters/lab.html#sim-tone"
+  },
+  {
+    "id": "artbook-image/lab/sim-sat",
+    "bookId": "artbook-image",
+    "title": "채도와 색역의 끝",
+    "link": "chapters/lab.html#sim-sat"
+  },
+  {
+    "id": "artbook-image/lab/sim-crop",
+    "bookId": "artbook-image",
+    "title": "크롭 비율과 인쇄 가능한 크기",
+    "link": "chapters/lab.html#sim-crop"
+  },
+  {
+    "id": "artbook-image/lab/sim-jpeg",
+    "bookId": "artbook-image",
+    "title": "품질, 블록, 파일 크기",
+    "link": "chapters/lab.html#sim-jpeg"
+  },
+  {
+    "id": "artbook-image/lab/sim-lab",
+    "bookId": "artbook-image",
+    "title": "이미지 실험실",
+    "link": "chapters/lab.html#sim-lab"
+  },
+  {
+    "id": "artbook-image/lens/sim-pin",
+    "bookId": "artbook-image",
+    "title": "초점거리와 상의 크기",
+    "link": "chapters/lens.html#sim-pin"
+  },
+  {
+    "id": "artbook-image/lens/sim-fov",
+    "bookId": "artbook-image",
+    "title": "평면도 위의 화각",
+    "link": "chapters/lens.html#sim-fov"
+  },
+  {
+    "id": "artbook-image/lens/sim-crop",
+    "bookId": "artbook-image",
+    "title": "같은 렌즈, 다른 센서",
+    "link": "chapters/lens.html#sim-crop"
+  },
+  {
+    "id": "artbook-image/lens/sim-zoom",
+    "bookId": "artbook-image",
+    "title": "잘라 키우기와 광학 줌",
+    "link": "chapters/lens.html#sim-zoom"
+  },
+  {
+    "id": "artbook-image/lens/sim-plan",
+    "bookId": "artbook-image",
+    "title": "서점 촬영 계획기",
+    "link": "chapters/lens.html#sim-plan"
+  },
+  {
+    "id": "artbook-image/light/sim-lt-size",
+    "bookId": "artbook-image",
+    "title": "광원의 겉보기 크기와 그림자 경계",
+    "link": "chapters/light.html#sim-lt-size"
+  },
+  {
+    "id": "artbook-image/light/sim-lt-dir",
+    "bookId": "artbook-image",
+    "title": "빛의 방향과 종이의 결",
+    "link": "chapters/light.html#sim-lt-dir"
+  },
+  {
+    "id": "artbook-image/light/sim-lt-inv",
+    "bookId": "artbook-image",
+    "title": "조명의 거리와 그림 위의 밝기 차이",
+    "link": "chapters/light.html#sim-lt-inv"
+  },
+  {
+    "id": "artbook-image/light/sim-lt-fill",
+    "bookId": "artbook-image",
+    "title": "반사판으로 그림자 채우기",
+    "link": "chapters/light.html#sim-lt-fill"
+  },
+  {
+    "id": "artbook-image/light/sim-lt-mix",
+    "bookId": "artbook-image",
+    "title": "창빛과 실내등이 섞이는 방",
+    "link": "chapters/light.html#sim-lt-mix"
+  },
+  {
+    "id": "artbook-image/light/sim-lt-glass",
+    "bookId": "artbook-image",
+    "title": "유리 액자에 조명이 비치는 자리",
+    "link": "chapters/light.html#sim-lt-glass"
+  },
+  {
+    "id": "artbook-image/light/sim-lt-plan",
+    "bookId": "artbook-image",
+    "title": "도록 작품 촬영 조명 설계기",
+    "link": "chapters/light.html#sim-lt-plan"
+  },
+  {
+    "id": "artbook-image/overview/sim-first",
+    "bookId": "artbook-image",
+    "title": "서윤의 첫 사진: 어디에 노출을 맞출까",
+    "link": "chapters/overview.html#sim-first"
+  },
+  {
+    "id": "artbook-image/overview/sim-eye",
+    "bookId": "artbook-image",
+    "title": "눈이 본 장면, 카메라가 적은 장면",
+    "link": "chapters/overview.html#sim-eye"
+  },
+  {
+    "id": "artbook-image/overview/sim-pinhole",
+    "bookId": "artbook-image",
+    "title": "바늘구멍: 밝기와 선명함의 거래",
+    "link": "chapters/overview.html#sim-pinhole"
+  },
+  {
+    "id": "artbook-image/overview/sim-pixel",
+    "bookId": "artbook-image",
+    "title": "사진을 끝까지 확대하면",
+    "link": "chapters/overview.html#sim-pixel"
+  },
+  {
+    "id": "artbook-image/overview/sim-wb",
+    "bookId": "artbook-image",
+    "title": "두 가지 빛, 하나의 흰색",
+    "link": "chapters/overview.html#sim-wb"
+  },
+  {
+    "id": "artbook-image/overview/sim-print",
+    "bookId": "artbook-image",
+    "title": "같은 파일, 화면과 종이",
+    "link": "chapters/overview.html#sim-print"
+  },
+  {
+    "id": "artbook-image/overview/sim-map",
+    "bookId": "artbook-image",
+    "title": "한 장의 사진이 지나는 길",
+    "link": "chapters/overview.html#sim-map"
+  },
+  {
+    "id": "artbook-image/perspective/sim-same",
+    "bookId": "artbook-image",
+    "title": "같은 자리, 다른 초점거리",
+    "link": "chapters/perspective.html#sim-same"
+  },
+  {
+    "id": "artbook-image/perspective/sim-dolly",
+    "bookId": "artbook-image",
+    "title": "주인은 그대로, 카메라만 물러서기",
+    "link": "chapters/perspective.html#sim-dolly"
+  },
+  {
+    "id": "artbook-image/perspective/sim-face",
+    "bookId": "artbook-image",
+    "title": "거리에 따라 바뀌는 얼굴",
+    "link": "chapters/perspective.html#sim-face"
+  },
+  {
+    "id": "artbook-image/perspective/sim-tilt",
+    "bookId": "artbook-image",
+    "title": "카메라를 기울이면 수직선이 모인다",
+    "link": "chapters/perspective.html#sim-tilt"
+  },
+  {
+    "id": "artbook-image/perspective/sim-shift",
+    "bookId": "artbook-image",
+    "title": "수직선을 세우는 세 가지 방법",
+    "link": "chapters/perspective.html#sim-shift"
+  },
+  {
+    "id": "artbook-image/perspective/sim-plan",
+    "bookId": "artbook-image",
+    "title": "주인 인물 사진 계획기",
+    "link": "chapters/perspective.html#sim-plan"
+  },
+  {
+    "id": "artbook-image/pixel/sim-px-photon",
+    "bookId": "artbook-image",
+    "title": "광자를 세는 격자",
+    "link": "chapters/pixel.html#sim-px-photon"
+  },
+  {
+    "id": "artbook-image/pixel/sim-px-bayer",
+    "bookId": "artbook-image",
+    "title": "모자이크에서 색을 복원하기",
+    "link": "chapters/pixel.html#sim-px-bayer"
+  },
+  {
+    "id": "artbook-image/pixel/sim-px-bits",
+    "bookId": "artbook-image",
+    "title": "비트 깊이와 밴딩",
+    "link": "chapters/pixel.html#sim-px-bits"
+  },
+  {
+    "id": "artbook-image/pixel/sim-px-gamma",
+    "bookId": "artbook-image",
+    "title": "선형 눈금과 감마 눈금",
+    "link": "chapters/pixel.html#sim-px-gamma"
+  },
+  {
+    "id": "artbook-image/pixel/sim-px-raw",
+    "bookId": "artbook-image",
+    "title": "그림자 끌어올리기: JPEG과 RAW",
+    "link": "chapters/pixel.html#sim-px-raw"
+  },
+  {
+    "id": "artbook-image/pixel/sim-px-pipe",
+    "bookId": "artbook-image",
+    "title": "종합: 장면에 맞는 카메라와 저장 형식",
+    "link": "chapters/pixel.html#sim-px-pipe"
   }
 ]

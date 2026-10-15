@@ -1861,17 +1861,42 @@
       "id": "artbook-image",
       "code": "IMG",
       "title": "ArtBook 이미지",
-      "subtitle": "사진과 디지털 이미지",
-      "field": "art",
-      "status": "planned",
-      "phase": 2,
+      "subtitle": "사진과 이미지",
+      "headline": "사진은 빛을 숫자로 받아 적는 일이다",
+      "description": "노출과 히스토그램, 사진의 빛, 초점거리와 원근, 초점과 심도, 화소와 센서, 색 보정, 해상도와 압축, 사진의 구도와 역사까지. 셔터를 누르고 화소를 들여다보며 각 손잡이가 무엇을 바꾸고 무엇을 대가로 치르는지 보는 ArtBook 서가의 여섯 번째 권(ImageBook)입니다.",
+      "url": "https://artbook.euiyun.com/image/",
       "repo": "https://github.com/geniuskey/artbook",
-      "description": "노출, 렌즈와 원근, 색 보정, 디지털 이미지의 구조. 사진 한 장을 고쳐 가며 이미지가 보이는 방식을 배웁니다.",
-      "ideas": [
-        "노출과 히스토그램",
-        "초점거리와 원근 왜곡",
-        "커브로 색 보정하기",
-        "화소와 압축의 구조"
+      "checkout": "artbook/image",
+      "field": "art",
+      "status": "published",
+      "level": "입문",
+      "chapters": 14,
+      "simulators": 86,
+      "color": "#b5179e",
+      "colorDark": "#f27ad8",
+      "topics": [
+        "노출",
+        "히스토그램",
+        "초점거리와 원근",
+        "심도",
+        "센서와 화소",
+        "색 보정",
+        "압축"
+      ],
+      "motif": "histogram",
+      "featured": [
+        {
+          "title": "센서의 창을 장면 위에 놓기",
+          "desc": "밝은 창과 어두운 서가가 함께 있는 장면에서 노출을 옮기며 하이라이트가 날아가고 그림자가 노이즈에 묻히는 경계를 본다",
+          "link": "chapters/histogram.html#sim-hg-dr",
+          "image": "img/sims/artbook-image-sim-hg-dr.jpg"
+        },
+        {
+          "title": "그림 읽기 모임의 피사계 심도",
+          "desc": "초점 막대와 조리개를 옮기며 앞뒤로 앉은 여섯 사람이 모두 선명해지는 조합을 찾는다",
+          "link": "chapters/focus.html#sim-fc-dof",
+          "image": "img/sims/artbook-image-sim-fc-dof.jpg"
+        }
       ]
     }
   ],
