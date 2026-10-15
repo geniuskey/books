@@ -1694,16 +1694,41 @@
       "code": "CMP",
       "title": "ArtBook 구도",
       "subtitle": "형태와 구도",
-      "field": "art",
-      "status": "planned",
-      "phase": 2,
+      "headline": "같은 것도 어디에 놓느냐에 따라 다른 그림이 된다",
+      "description": "점·선·면, 형과 바탕, 게슈탈트, 시선의 흐름, 깊이, 균형, 리듬, 3분할과 황금비의 실제와 신화, 여백, 프레임과 자르기, 지면 구성, 명작의 구도 읽기까지. 그림 위 격자를 끌고 자르기 상자를 옮기며 규칙이 통하는 순간과 깨지는 순간을 함께 보는 ArtBook 서가의 두 번째 권(CompositionBook)입니다.",
+      "url": "https://artbook.euiyun.com/composition/",
       "repo": "https://github.com/geniuskey/artbook",
-      "description": "점·선·면, 게슈탈트, 균형과 리듬, 3분할과 황금비의 실제, 시선의 흐름, 여백. 그림 위 격자를 끌며 규칙이 통하는 순간과 깨지는 순간을 함께 봅니다.",
-      "ideas": [
-        "그림 위 3분할·황금비 격자 끌기",
-        "게슈탈트 묶음 실험",
-        "시선 경로와 초점 이동",
-        "여백을 줄였다 늘렸다 하는 포스터"
+      "checkout": "artbook/composition",
+      "field": "art",
+      "status": "published",
+      "level": "입문",
+      "chapters": 15,
+      "simulators": 95,
+      "color": "#b5179e",
+      "colorDark": "#f27ad8",
+      "topics": [
+        "점·선·면",
+        "형과 바탕",
+        "게슈탈트",
+        "시선의 흐름",
+        "균형과 리듬",
+        "3분할·황금비",
+        "여백과 자르기"
+      ],
+      "motif": "spiral",
+      "featured": [
+        {
+          "title": "명작 위에 격자 대 보기",
+          "desc": "3분할 격자와 황금 나선을 명작 위로 끌어 맞는 곳과 안 맞는 곳을 직접 잰다",
+          "link": "chapters/proportion.html#sim-pf",
+          "image": "img/sims/artbook-composition-sim-pf.jpg"
+        },
+        {
+          "title": "명작 위의 자르기 상자",
+          "desc": "드가의 그림을 여러 비율로 잘라 보며 주인공과 가장자리의 긴장이 어떻게 바뀌는지 본다",
+          "link": "chapters/frame.html#sim-crop",
+          "image": "img/sims/artbook-composition-sim-crop.jpg"
+        }
       ]
     },
     {

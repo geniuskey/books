@@ -26506,5 +26506,575 @@
     "bookId": "artbook-color",
     "title": "책방 E 배색 실험실",
     "link": "chapters/wheel.html#sim-wh-lab"
+  },
+  {
+    "id": "artbook-composition/balance/sim-ba-sym",
+    "bookId": "artbook-composition",
+    "title": "대칭을 깨뜨리기",
+    "link": "chapters/balance.html#sim-ba-sym"
+  },
+  {
+    "id": "artbook-composition/balance/sim-ba-scale",
+    "bookId": "artbook-composition",
+    "title": "시각적 무게 저울",
+    "link": "chapters/balance.html#sim-ba-scale"
+  },
+  {
+    "id": "artbook-composition/balance/sim-ba-lever",
+    "bookId": "artbook-composition",
+    "title": "무게중심 찾기",
+    "link": "chapters/balance.html#sim-ba-lever"
+  },
+  {
+    "id": "artbook-composition/balance/sim-ba-art",
+    "bookId": "artbook-composition",
+    "title": "그림의 무게중심 재기",
+    "link": "chapters/balance.html#sim-ba-art"
+  },
+  {
+    "id": "artbook-composition/balance/sim-ba-broken",
+    "bookId": "artbook-composition",
+    "title": "균형을 일부러 깨뜨리기",
+    "link": "chapters/balance.html#sim-ba-broken"
+  },
+  {
+    "id": "artbook-composition/balance/sim-ba-wall",
+    "bookId": "artbook-composition",
+    "title": "벽에 세 점 걸기",
+    "link": "chapters/balance.html#sim-ba-wall"
+  },
+  {
+    "id": "artbook-composition/depth/sim-cues",
+    "bookId": "artbook-composition",
+    "title": "깊이 단서 켜고 끄기",
+    "link": "chapters/depth.html#sim-cues"
+  },
+  {
+    "id": "artbook-composition/depth/sim-overlap",
+    "bookId": "artbook-composition",
+    "title": "겹침과 접선",
+    "link": "chapters/depth.html#sim-overlap"
+  },
+  {
+    "id": "artbook-composition/depth/sim-size",
+    "bookId": "artbook-composition",
+    "title": "사람을 땅 위에 세우기: 크기와 높이",
+    "link": "chapters/depth.html#sim-size"
+  },
+  {
+    "id": "artbook-composition/depth/sim-aerial",
+    "bookId": "artbook-composition",
+    "title": "다섯 겹의 산과 공기",
+    "link": "chapters/depth.html#sim-aerial"
+  },
+  {
+    "id": "artbook-composition/depth/sim-texture",
+    "bookId": "artbook-composition",
+    "title": "무늬가 땅을 눕힌다",
+    "link": "chapters/depth.html#sim-texture"
+  },
+  {
+    "id": "artbook-composition/depth/sim-east",
+    "bookId": "artbook-composition",
+    "title": "삼원: 높이·겹침·여백으로 짜는 공간",
+    "link": "chapters/depth.html#sim-east"
+  },
+  {
+    "id": "artbook-composition/depth/sim-stage",
+    "bookId": "artbook-composition",
+    "title": "쇼윈도 세 켜 무대",
+    "link": "chapters/depth.html#sim-stage"
+  },
+  {
+    "id": "artbook-composition/elements/sim-size",
+    "bookId": "artbook-composition",
+    "title": "점이 면이 되는 순간",
+    "link": "chapters/elements.html#sim-size"
+  },
+  {
+    "id": "artbook-composition/elements/sim-pair",
+    "bookId": "artbook-composition",
+    "title": "두 점 사이의 보이지 않는 선",
+    "link": "chapters/elements.html#sim-pair"
+  },
+  {
+    "id": "artbook-composition/elements/sim-rain",
+    "bookId": "artbook-composition",
+    "title": "빗줄기의 각도와 길이",
+    "link": "chapters/elements.html#sim-rain"
+  },
+  {
+    "id": "artbook-composition/elements/sim-speed",
+    "bookId": "artbook-composition",
+    "title": "빠른 선, 느린 선",
+    "link": "chapters/elements.html#sim-speed"
+  },
+  {
+    "id": "artbook-composition/elements/sim-weight",
+    "bookId": "artbook-composition",
+    "title": "면의 무게: 크기와 명도",
+    "link": "chapters/elements.html#sim-weight"
+  },
+  {
+    "id": "artbook-composition/elements/sim-layers",
+    "bookId": "artbook-composition",
+    "title": "소나기를 점·선·면으로 읽기",
+    "link": "chapters/elements.html#sim-layers"
+  },
+  {
+    "id": "artbook-composition/elements/sim-poster",
+    "bookId": "artbook-composition",
+    "title": "썸네일 세 장: 점, 선, 면",
+    "link": "chapters/elements.html#sim-poster"
+  },
+  {
+    "id": "artbook-composition/eye/sim-fovea",
+    "bookId": "artbook-composition",
+    "title": "중심와로 포스터 읽기",
+    "link": "chapters/eye.html#sim-fovea"
+  },
+  {
+    "id": "artbook-composition/eye/sim-pop",
+    "bookId": "artbook-composition",
+    "title": "튀어나오는 하나, 묻히는 하나",
+    "link": "chapters/eye.html#sim-pop"
+  },
+  {
+    "id": "artbook-composition/eye/sim-sal",
+    "bookId": "artbook-composition",
+    "title": "명도·색·윤곽으로 만든 현저성 지도",
+    "link": "chapters/eye.html#sim-sal"
+  },
+  {
+    "id": "artbook-composition/eye/sim-lines",
+    "bookId": "artbook-composition",
+    "title": "선이 모이는 곳과 주인공",
+    "link": "chapters/eye.html#sim-lines"
+  },
+  {
+    "id": "artbook-composition/eye/sim-gaze",
+    "bookId": "artbook-composition",
+    "title": "인물의 시선이 닿는 곳",
+    "link": "chapters/eye.html#sim-gaze"
+  },
+  {
+    "id": "artbook-composition/eye/sim-task",
+    "bookId": "artbook-composition",
+    "title": "과제가 바뀌면 시선이 바뀐다(장난감 모델)",
+    "link": "chapters/eye.html#sim-task"
+  },
+  {
+    "id": "artbook-composition/eye/sim-poster",
+    "bookId": "artbook-composition",
+    "title": "낭독회 포스터의 시선 경로 실험실",
+    "link": "chapters/eye.html#sim-poster"
+  },
+  {
+    "id": "artbook-composition/frame/sim-ratio",
+    "bookId": "artbook-composition",
+    "title": "비율을 바꾸면 남는 것",
+    "link": "chapters/frame.html#sim-ratio"
+  },
+  {
+    "id": "artbook-composition/frame/sim-crop",
+    "bookId": "artbook-composition",
+    "title": "명작 위의 자르기 상자",
+    "link": "chapters/frame.html#sim-crop"
+  },
+  {
+    "id": "artbook-composition/frame/sim-tension",
+    "bookId": "artbook-composition",
+    "title": "가장자리로 다가가는 귤",
+    "link": "chapters/frame.html#sim-tension"
+  },
+  {
+    "id": "artbook-composition/frame/sim-limbs",
+    "bookId": "artbook-composition",
+    "title": "어디서 자를까",
+    "link": "chapters/frame.html#sim-limbs"
+  },
+  {
+    "id": "artbook-composition/frame/sim-inner",
+    "bookId": "artbook-composition",
+    "title": "문틀 너머의 골목",
+    "link": "chapters/frame.html#sim-inner"
+  },
+  {
+    "id": "artbook-composition/frame/sim-shop",
+    "bookId": "artbook-composition",
+    "title": "쇼윈도 사진을 네 비율로",
+    "link": "chapters/frame.html#sim-shop"
+  },
+  {
+    "id": "artbook-composition/gestalt/sim-prox",
+    "bookId": "artbook-composition",
+    "title": "가까움: 점을 끌어 무리 만들기",
+    "link": "chapters/gestalt.html#sim-prox"
+  },
+  {
+    "id": "artbook-composition/gestalt/sim-vs",
+    "bookId": "artbook-composition",
+    "title": "가까움 대 닮음: 줄인가 열인가",
+    "link": "chapters/gestalt.html#sim-vs"
+  },
+  {
+    "id": "artbook-composition/gestalt/sim-cont",
+    "bookId": "artbook-composition",
+    "title": "연속: 엇갈린 두 곡선, 맞닿은 두 V",
+    "link": "chapters/gestalt.html#sim-cont"
+  },
+  {
+    "id": "artbook-composition/gestalt/sim-close",
+    "bookId": "artbook-composition",
+    "title": "폐합: 끊긴 원과 카니자 삼각형",
+    "link": "chapters/gestalt.html#sim-close"
+  },
+  {
+    "id": "artbook-composition/gestalt/sim-fate",
+    "bookId": "artbook-composition",
+    "title": "공통 운명: 함께 움직일 때 나타나는 모양",
+    "link": "chapters/gestalt.html#sim-fate"
+  },
+  {
+    "id": "artbook-composition/gestalt/sim-region",
+    "bookId": "artbook-composition",
+    "title": "공통 영역과 연결: 가까움을 이기는 묶음",
+    "link": "chapters/gestalt.html#sim-region"
+  },
+  {
+    "id": "artbook-composition/gestalt/sim-web",
+    "bookId": "artbook-composition",
+    "title": "책방 E 첫 화면: 세 무리로 묶기",
+    "link": "chapters/gestalt.html#sim-web"
+  },
+  {
+    "id": "artbook-composition/glossary/sim-score",
+    "bookId": "artbook-composition",
+    "title": "나의 점수",
+    "link": "chapters/glossary.html#sim-score"
+  },
+  {
+    "id": "artbook-composition/lab/sim-in",
+    "bookId": "artbook-composition",
+    "title": "실험실 입구: 이미지와 분석 해상도",
+    "link": "chapters/lab.html#sim-in"
+  },
+  {
+    "id": "artbook-composition/lab/sim-nt",
+    "bookId": "artbook-composition",
+    "title": "덩어리 패널: 노탄 세 단계",
+    "link": "chapters/lab.html#sim-nt"
+  },
+  {
+    "id": "artbook-composition/lab/sim-wt",
+    "bookId": "artbook-composition",
+    "title": "무게 패널: 무게중심과 지렛대",
+    "link": "chapters/lab.html#sim-wt"
+  },
+  {
+    "id": "artbook-composition/lab/sim-pt",
+    "bookId": "artbook-composition",
+    "title": "시선 패널: 현저성 지도와 고정 순서",
+    "link": "chapters/lab.html#sim-pt"
+  },
+  {
+    "id": "artbook-composition/lab/sim-gd",
+    "bookId": "artbook-composition",
+    "title": "격자 패널: 격자선 거리와 세 가지 극단",
+    "link": "chapters/lab.html#sim-gd"
+  },
+  {
+    "id": "artbook-composition/lab/sim-sp",
+    "bookId": "artbook-composition",
+    "title": "여백 패널: 여백률과 가장 큰 빈 덩어리",
+    "link": "chapters/lab.html#sim-sp"
+  },
+  {
+    "id": "artbook-composition/lab/sim-cr",
+    "bookId": "artbook-composition",
+    "title": "자르기 패널: 담긴 것과 걸린 것",
+    "link": "chapters/lab.html#sim-cr"
+  },
+  {
+    "id": "artbook-composition/lab/sim-lab",
+    "bookId": "artbook-composition",
+    "title": "구도 실험실",
+    "link": "chapters/lab.html#sim-lab"
+  },
+  {
+    "id": "artbook-composition/layout/sim-hier",
+    "bookId": "artbook-composition",
+    "title": "크기 단계로 세우는 위계",
+    "link": "chapters/layout.html#sim-hier"
+  },
+  {
+    "id": "artbook-composition/layout/sim-align",
+    "bookId": "artbook-composition",
+    "title": "보이지 않는 정렬선",
+    "link": "chapters/layout.html#sim-align"
+  },
+  {
+    "id": "artbook-composition/layout/sim-group",
+    "bookId": "artbook-composition",
+    "title": "간격으로 묶이는 행사 목록",
+    "link": "chapters/layout.html#sim-group"
+  },
+  {
+    "id": "artbook-composition/layout/sim-scan",
+    "bookId": "artbook-composition",
+    "title": "가정이 바뀌면 순서도 바뀐다",
+    "link": "chapters/layout.html#sim-scan"
+  },
+  {
+    "id": "artbook-composition/layout/sim-poster",
+    "bookId": "artbook-composition",
+    "title": "낭독회 포스터 짜기",
+    "link": "chapters/layout.html#sim-poster"
+  },
+  {
+    "id": "artbook-composition/layout/sim-web",
+    "bookId": "artbook-composition",
+    "title": "책방 E 웹 첫 화면",
+    "link": "chapters/layout.html#sim-web"
+  },
+  {
+    "id": "artbook-composition/overview/sim-win",
+    "bookId": "artbook-composition",
+    "title": "줄 세우기에서 무리로",
+    "link": "chapters/overview.html#sim-win"
+  },
+  {
+    "id": "artbook-composition/overview/sim-dot",
+    "bookId": "artbook-composition",
+    "title": "점 하나의 자리",
+    "link": "chapters/overview.html#sim-dot"
+  },
+  {
+    "id": "artbook-composition/overview/sim-notan",
+    "bookId": "artbook-composition",
+    "title": "큰 파도를 덩어리로 보기",
+    "link": "chapters/overview.html#sim-notan"
+  },
+  {
+    "id": "artbook-composition/overview/sim-hz",
+    "bookId": "artbook-composition",
+    "title": "지평선을 어디에",
+    "link": "chapters/overview.html#sim-hz"
+  },
+  {
+    "id": "artbook-composition/overview/sim-fit",
+    "bookId": "artbook-composition",
+    "title": "격자 끼워 맞추기",
+    "link": "chapters/overview.html#sim-fit"
+  },
+  {
+    "id": "artbook-composition/overview/sim-scene",
+    "bookId": "artbook-composition",
+    "title": "한 장면, 여러 구도",
+    "link": "chapters/overview.html#sim-scene"
+  },
+  {
+    "id": "artbook-composition/proportion/sim-pp",
+    "bookId": "artbook-composition",
+    "title": "점 하나의 자리: 가운데, 가장자리, 그 사이",
+    "link": "chapters/proportion.html#sim-pp"
+  },
+  {
+    "id": "artbook-composition/proportion/sim-pg",
+    "bookId": "artbook-composition",
+    "title": "정사각형을 떼어 내면 무엇이 남나",
+    "link": "chapters/proportion.html#sim-pg"
+  },
+  {
+    "id": "artbook-composition/proportion/sim-pf",
+    "bookId": "artbook-composition",
+    "title": "명작 위에 격자와 나선을 끌어 대 보기",
+    "link": "chapters/proportion.html#sim-pf"
+  },
+  {
+    "id": "artbook-composition/proportion/sim-pr",
+    "bookId": "artbook-composition",
+    "title": "무작위 점에도 나선이 맞는다",
+    "link": "chapters/proportion.html#sim-pr"
+  },
+  {
+    "id": "artbook-composition/proportion/sim-pv",
+    "bookId": "artbook-composition",
+    "title": "가장 마음에 드는 직사각형 고르기",
+    "link": "chapters/proportion.html#sim-pv"
+  },
+  {
+    "id": "artbook-composition/proportion/sim-pc",
+    "bookId": "artbook-composition",
+    "title": "3분할에 놓기와 가운데에 놓기",
+    "link": "chapters/proportion.html#sim-pc"
+  },
+  {
+    "id": "artbook-composition/proportion/sim-pl",
+    "bookId": "artbook-composition",
+    "title": "비례 작업대: 배치를 끌고 격자로 점검하기",
+    "link": "chapters/proportion.html#sim-pl"
+  },
+  {
+    "id": "artbook-composition/reading/sim-mass",
+    "bookId": "artbook-composition",
+    "title": "덩어리 레이어: 원본과 노탄",
+    "link": "chapters/reading.html#sim-mass"
+  },
+  {
+    "id": "artbook-composition/reading/sim-weight",
+    "bookId": "artbook-composition",
+    "title": "무게중심 맞히기",
+    "link": "chapters/reading.html#sim-weight"
+  },
+  {
+    "id": "artbook-composition/reading/sim-lines",
+    "bookId": "artbook-composition",
+    "title": "구도선 긋기: 경계선인가, 함축선인가",
+    "link": "chapters/reading.html#sim-lines"
+  },
+  {
+    "id": "artbook-composition/reading/sim-path",
+    "bookId": "artbook-composition",
+    "title": "시선 경로 모형: 현저성과 억제",
+    "link": "chapters/reading.html#sim-path"
+  },
+  {
+    "id": "artbook-composition/reading/sim-grid",
+    "bookId": "artbook-composition",
+    "title": "격자는 무엇에든 맞는다",
+    "link": "chapters/reading.html#sim-grid"
+  },
+  {
+    "id": "artbook-composition/reading/sim-scroll",
+    "bookId": "artbook-composition",
+    "title": "두루마리 펼치기: 시간 속의 구도",
+    "link": "chapters/reading.html#sim-scroll"
+  },
+  {
+    "id": "artbook-composition/reading/sim-read",
+    "bookId": "artbook-composition",
+    "title": "명작 읽기 판: 다섯 레이어",
+    "link": "chapters/reading.html#sim-read"
+  },
+  {
+    "id": "artbook-composition/rhythm/sim-rh-int",
+    "bookId": "artbook-composition",
+    "title": "울타리의 박자",
+    "link": "chapters/rhythm.html#sim-rh-int"
+  },
+  {
+    "id": "artbook-composition/rhythm/sim-rh-alt",
+    "bookId": "artbook-composition",
+    "title": "교대로 박자 짜기",
+    "link": "chapters/rhythm.html#sim-rh-alt"
+  },
+  {
+    "id": "artbook-composition/rhythm/sim-rh-prog",
+    "bookId": "artbook-composition",
+    "title": "점진의 비율",
+    "link": "chapters/rhythm.html#sim-rh-prog"
+  },
+  {
+    "id": "artbook-composition/rhythm/sim-rh-pat",
+    "bookId": "artbook-composition",
+    "title": "단위 무늬로 면 채우기",
+    "link": "chapters/rhythm.html#sim-rh-pat"
+  },
+  {
+    "id": "artbook-composition/rhythm/sim-rh-acc",
+    "bookId": "artbook-composition",
+    "title": "박자를 깨는 강세",
+    "link": "chapters/rhythm.html#sim-rh-acc"
+  },
+  {
+    "id": "artbook-composition/rhythm/sim-rh-win",
+    "bookId": "artbook-composition",
+    "title": "쇼윈도 진열의 박자",
+    "link": "chapters/rhythm.html#sim-rh-win"
+  },
+  {
+    "id": "artbook-composition/shape/sim-neg",
+    "bookId": "artbook-composition",
+    "title": "음형 보기: 물건 사이에 남는 모양",
+    "link": "chapters/shape.html#sim-neg"
+  },
+  {
+    "id": "artbook-composition/shape/sim-rubin",
+    "bookId": "artbook-composition",
+    "title": "꽃병과 두 얼굴: 반전 도형 고쳐 그리기",
+    "link": "chapters/shape.html#sim-rubin"
+  },
+  {
+    "id": "artbook-composition/shape/sim-cues",
+    "bookId": "artbook-composition",
+    "title": "어느 쪽이 형이 되나: 크기·볼록함·자리",
+    "link": "chapters/shape.html#sim-cues"
+  },
+  {
+    "id": "artbook-composition/shape/sim-sil",
+    "bookId": "artbook-composition",
+    "title": "실루엣 점검: 손을 어디에 둘 것인가",
+    "link": "chapters/shape.html#sim-sil"
+  },
+  {
+    "id": "artbook-composition/shape/sim-notan",
+    "bookId": "artbook-composition",
+    "title": "종이 노탄: 오려서 바깥으로 펼치기",
+    "link": "chapters/shape.html#sim-notan"
+  },
+  {
+    "id": "artbook-composition/shape/sim-ink",
+    "bookId": "artbook-composition",
+    "title": "「풍죽」의 형과 바탕 나누기",
+    "link": "chapters/shape.html#sim-ink"
+  },
+  {
+    "id": "artbook-composition/shape/sim-window",
+    "bookId": "artbook-composition",
+    "title": "책방 E 겨울 쇼윈도: 거리에서 본 실루엣",
+    "link": "chapters/shape.html#sim-window"
+  },
+  {
+    "id": "artbook-composition/space/sim-sc",
+    "bookId": "artbook-composition",
+    "title": "같은 내용, 다른 여백",
+    "link": "chapters/space.html#sim-sc"
+  },
+  {
+    "id": "artbook-composition/space/sim-si",
+    "bookId": "artbook-composition",
+    "title": "둘레를 비우면 주인공이 된다",
+    "link": "chapters/space.html#sim-si"
+  },
+  {
+    "id": "artbook-composition/space/sim-sd",
+    "bookId": "artbook-composition",
+    "title": "같은 수의 획, 다른 밀도 대비",
+    "link": "chapters/space.html#sim-sd"
+  },
+  {
+    "id": "artbook-composition/space/sim-sl",
+    "bookId": "artbook-composition",
+    "title": "새가 보는 쪽을 비울까, 등 뒤를 비울까",
+    "link": "chapters/space.html#sim-sl"
+  },
+  {
+    "id": "artbook-composition/space/sim-sm",
+    "bookId": "artbook-composition",
+    "title": "수묵화의 여백 지도",
+    "link": "chapters/space.html#sim-sm"
+  },
+  {
+    "id": "artbook-composition/space/sim-sg",
+    "bookId": "artbook-composition",
+    "title": "여백을 늘리면 무엇을 내줘야 하나",
+    "link": "chapters/space.html#sim-sg"
+  },
+  {
+    "id": "artbook-composition/space/sim-sw",
+    "bookId": "artbook-composition",
+    "title": "여백 작업대: 낭독회 포스터 다시 짜기",
+    "link": "chapters/space.html#sim-sw"
   }
 ]

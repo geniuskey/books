@@ -512,6 +512,71 @@
       [0.92, 0.7, 0.48, 0.26].forEach((l, k) => { s += `<rect x="36" y="${22 + k * 22}" width="18" height="18" rx="3" fill="${W}" fill-opacity="${l}"/>`; });
       return svg(s);
     },
+    // 황금 직사각형을 정사각형으로 나누고 나선을 잇는다, 초점이 맥동한다(ArtBook 구도)
+    spiral() {
+      const phi = (1 + Math.sqrt(5)) / 2, H = 96, Wd = H * phi, x0 = (200 - Wd) / 2, y0 = 17;
+      let s = `<rect x="${x0.toFixed(1)}" y="${y0}" width="${Wd.toFixed(1)}" height="${H}" fill="none" stroke="${W}" stroke-opacity=".7"/>`, d = "";
+      let x = x0, y = y0, w = Wd, h = H;
+      range(8).forEach((i) => {
+        const k = i % 4; let q, rx, ry, ex, ey;
+        if (k === 0) { q = h; rx = x; ry = y; d += (i ? "" : `M${x} ${y + q}`) + ` A${q} ${q} 0 0 1 ${x + q} ${y}`; x += q; w -= q; }
+        else if (k === 1) { q = w; rx = x; ry = y; d += ` A${q} ${q} 0 0 1 ${x + q} ${y + q}`; y += q; h -= q; }
+        else if (k === 2) { q = h; rx = x + w - q; ry = y; d += ` A${q} ${q} 0 0 1 ${x + w - q} ${y + q}`; w -= q; }
+        else { q = w; rx = x; ry = y + h - q; d += ` A${q} ${q} 0 0 1 ${x} ${y + h - q}`; h -= q; }
+        s += `<rect x="${rx.toFixed(1)}" y="${ry.toFixed(1)}" width="${q.toFixed(1)}" height="${q.toFixed(1)}" fill="none" stroke="${W}" stroke-opacity=".28"/>`;
+      });
+      s += `<path d="${d}" fill="none" stroke="#ffc46b" stroke-width="2"/>`;
+      s += `<circle class="cv-pulse" cx="${(x0 + Wd * 0.618).toFixed(1)}" cy="${(y0 + H * 0.382).toFixed(1)}" r="5" fill="#ffc46b"/>`;
+      return svg(s);
+    },
+    // 2점 투시 상자: 눈높이 위 두 소실점으로 모서리가 모인다(ArtBook 드로잉)
+    vanish() {
+      const hy = 52, L = [8, hy], R = [192, hy], t = [100, 22], b = [100, 112];
+      const on = (p, q, u) => [p[0] + (q[0] - p[0]) * u, p[1] + (q[1] - p[1]) * u];
+      const lt = on(t, L, 0.42), lb = on(b, L, 0.42), rt = on(t, R, 0.38), rb = on(b, R, 0.38);
+      const P = (a) => `${a[0].toFixed(1)} ${a[1].toFixed(1)}`;
+      let s = `<line x1="0" x2="200" y1="${hy}" y2="${hy}" stroke="${W}" stroke-opacity=".55" stroke-dasharray="4 3"/>`;
+      [t, b, lt, lb, rt, rb].forEach((p) => { const v = p[0] < 100 || p === t || p === b ? L : R; s += `<line x1="${p[0]}" y1="${p[1]}" x2="${v[0]}" y2="${v[1]}" stroke="${W}" stroke-opacity=".18"/>`; });
+      [t, b].forEach((p) => { s += `<line x1="${p[0]}" y1="${p[1]}" x2="${R[0]}" y2="${R[1]}" stroke="${W}" stroke-opacity=".18"/>`; });
+      s += `<path d="M${P(lt)}L${P(t)}L${P(rt)}L${P(rb)}L${P(b)}L${P(lb)}Z M${P(t)}L${P(b)}" fill="${W}" fill-opacity=".12" stroke="${W}" stroke-width="1.8" stroke-linejoin="round"/>`;
+      s += `<circle class="cv-pulse" cx="${L[0]}" cy="${hy}" r="4" fill="#ffc46b"/><circle class="cv-pulse" style="animation-delay:.6s" cx="${R[0]}" cy="${hy}" r="4" fill="#ffc46b"/>`;
+      return svg(s);
+    },
+    // 글자의 뼈대: 기준선·x높이·어센더 선 위의 큰 글자와 한글 한 자(ArtBook 타이포그래피)
+    letter() {
+      let s = "";
+      [[30, ".35"], [52, ".55"], [96, ".8"], [112, ".35"]].forEach(([y, o]) => { s += `<line x1="10" x2="190" y1="${y}" y2="${y}" stroke="${W}" stroke-opacity="${o}" stroke-dasharray="${y === 96 ? "" : "3 3"}"/>`; });
+      s += `<text x="22" y="96" font-family="Georgia, serif" font-size="86" fill="${W}" fill-opacity=".9">Ag</text>`;
+      s += `<text x="122" y="96" font-family="sans-serif" font-weight="700" font-size="62" fill="#ffc46b">&#xD55C;</text>`;
+      s += `<rect class="cv-pulse" x="118" y="40" width="66" height="60" fill="none" stroke="${W}" stroke-opacity=".6" stroke-dasharray="2 3"/>`;
+      return svg(s);
+    },
+    // 연대표 위의 작품들: 시대마다 색과 크기가 다른 화면이 늘어선다(ArtBook 미술사)
+    timeline() {
+      let s = `<line x1="8" x2="192" y1="100" y2="100" stroke="${W}" stroke-opacity=".7"/>`;
+      const F = [["#c9a227", 26, 34], ["#8a5a3c", 22, 30], ["#3f6e8c", 30, 24], ["#a8442e", 20, 28], ["#e2b04a", 28, 22], ["#4f8a62", 24, 30], ["#d06a8c", 22, 22]];
+      let x = 12;
+      F.forEach(([c, w, h], i) => {
+        s += `<line x1="${x + w / 2}" x2="${x + w / 2}" y1="${96 - h}" y2="100" stroke="${W}" stroke-opacity=".3"/><rect x="${x}" y="${88 - h - (i % 2) * 14}" width="${w}" height="${h}" fill="${c}" fill-opacity=".85" stroke="${W}" stroke-opacity=".6"/>`;
+        s += `<circle cx="${x + w / 2}" cy="100" r="2.5" fill="${W}"/>`;
+        x += w + 4;
+      });
+      s += `<circle class="cv-pulse" cx="${12 + 26 + 4 + 22 + 4 + 15}" cy="100" r="6" fill="none" stroke="#ffc46b" stroke-width="2"/>`;
+      return svg(s);
+    },
+    // 히스토그램과 조리개: 노출을 바꾸면 봉우리가 옮겨 간다(ArtBook 사진과 이미지)
+    histogram() {
+      let s = "";
+      range(40).forEach((i) => {
+        const u = i / 39, h = 70 * Math.exp(-((u - 0.42) ** 2) / 0.03) + 18 * Math.exp(-((u - 0.85) ** 2) / 0.004) + 4;
+        s += `<rect x="${14 + i * 3.4}" y="${(108 - h).toFixed(1)}" width="2.6" height="${h.toFixed(1)}" fill="${W}" fill-opacity="${(0.35 + 0.5 * u).toFixed(2)}"/>`;
+      });
+      s += `<line x1="12" x2="152" y1="108" y2="108" stroke="${W}" stroke-opacity=".6"/>`;
+      const cx = 172, cy = 40, R = 20; let d = "";
+      range(6).forEach((k) => { const a = (k / 6) * Math.PI * 2, b = a + Math.PI / 3; d += `M${(cx + R * Math.cos(a)).toFixed(1)} ${(cy + R * Math.sin(a)).toFixed(1)}L${(cx + 9 * Math.cos(b + 0.5)).toFixed(1)} ${(cy + 9 * Math.sin(b + 0.5)).toFixed(1)}`; });
+      s += `<circle cx="${cx}" cy="${cy}" r="${R}" fill="none" stroke="${W}" stroke-width="1.6"/><path class="cv-pulse" d="${d}" stroke="#ffc46b" stroke-width="1.6" fill="none"/>`;
+      return svg(s);
+    },
     grid() {
       let s = "";
       range(4).forEach((j) => range(8).forEach((i) => { s += `<rect x="${36 + i * 20}" y="${14 + j * 26}" width="16" height="22" rx="2" fill="${W}" fill-opacity=".2" stroke="${W}" stroke-opacity=".4"/>`; }));
