@@ -25858,5 +25858,653 @@
     "bookId": "mathbook",
     "title": "KOH 이방성 식각 단면",
     "link": "chapters/symmetry.html#sim-sym-koh"
+  },
+  {
+    "id": "artbook-color/access/sim-ac-web",
+    "bookId": "artbook-color",
+    "title": "책방 E 웹사이트, 다른 눈으로",
+    "link": "chapters/access.html#sim-ac-web"
+  },
+  {
+    "id": "artbook-color/access/sim-ac-contrast",
+    "bookId": "artbook-color",
+    "title": "대비 측정기: 글자색과 바탕색 끌기",
+    "link": "chapters/access.html#sim-ac-contrast"
+  },
+  {
+    "id": "artbook-color/access/sim-ac-size",
+    "bookId": "artbook-color",
+    "title": "글자 크기와 필요한 대비",
+    "link": "chapters/access.html#sim-ac-size"
+  },
+  {
+    "id": "artbook-color/access/sim-ac-chart",
+    "bookId": "artbook-color",
+    "title": "범례만 있는 차트 고치기",
+    "link": "chapters/access.html#sim-ac-chart"
+  },
+  {
+    "id": "artbook-color/access/sim-ac-pal",
+    "bookId": "artbook-color",
+    "title": "팔레트 구분도 검사",
+    "link": "chapters/access.html#sim-ac-pal"
+  },
+  {
+    "id": "artbook-color/access/sim-ac-fix",
+    "bookId": "artbook-color",
+    "title": "예약 화면 고치기: 네 가지 점검",
+    "link": "chapters/access.html#sim-ac-fix"
+  },
+  {
+    "id": "artbook-color/chroma/sim-cslider",
+    "bookId": "artbook-color",
+    "title": "채도만 움직이기",
+    "link": "chapters/chroma.html#sim-cslider"
+  },
+  {
+    "id": "artbook-color/chroma/sim-gamut",
+    "bookId": "artbook-color",
+    "title": "색상마다 다른 채도의 산",
+    "link": "chapters/chroma.html#sim-gamut"
+  },
+  {
+    "id": "artbook-color/chroma/sim-accent",
+    "bookId": "artbook-color",
+    "title": "탁한 바탕이 선명한 하나를 살린다",
+    "link": "chapters/chroma.html#sim-accent"
+  },
+  {
+    "id": "artbook-color/chroma/sim-gray",
+    "bookId": "artbook-color",
+    "title": "보색으로 섞은 회색과 무채색 회색",
+    "link": "chapters/chroma.html#sim-gray"
+  },
+  {
+    "id": "artbook-color/chroma/sim-tone",
+    "bookId": "artbook-color",
+    "title": "틴트·톤·셰이드와 톤 스케일",
+    "link": "chapters/chroma.html#sim-tone"
+  },
+  {
+    "id": "artbook-color/chroma/sim-cmap",
+    "bookId": "artbook-color",
+    "title": "그림 속 선명한 색은 몇 퍼센트인가",
+    "link": "chapters/chroma.html#sim-cmap"
+  },
+  {
+    "id": "artbook-color/chroma/sim-budget",
+    "bookId": "artbook-color",
+    "title": "「비 오는 골목」 채도 예산 설계기",
+    "link": "chapters/chroma.html#sim-budget"
+  },
+  {
+    "id": "artbook-color/contrast/sim-tour",
+    "bookId": "artbook-color",
+    "title": "일곱 대비 탐색기",
+    "link": "chapters/contrast.html#sim-tour"
+  },
+  {
+    "id": "artbook-color/contrast/sim-equi",
+    "bookId": "artbook-color",
+    "title": "색상만 다를 때, 명도도 다를 때",
+    "link": "chapters/contrast.html#sim-equi"
+  },
+  {
+    "id": "artbook-color/contrast/sim-after",
+    "bookId": "artbook-color",
+    "title": "잔상으로 보는 보색",
+    "link": "chapters/contrast.html#sim-after"
+  },
+  {
+    "id": "artbook-color/contrast/sim-area",
+    "bookId": "artbook-color",
+    "title": "면적 대비: 괴테의 균형과 내 눈의 균형",
+    "link": "chapters/contrast.html#sim-area"
+  },
+  {
+    "id": "artbook-color/contrast/sim-focus",
+    "bookId": "artbook-color",
+    "title": "초점 만들기: 대비 하나로",
+    "link": "chapters/contrast.html#sim-focus"
+  },
+  {
+    "id": "artbook-color/contrast/sim-many",
+    "bookId": "artbook-color",
+    "title": "강조를 하나씩 더하면",
+    "link": "chapters/contrast.html#sim-many"
+  },
+  {
+    "id": "artbook-color/contrast/sim-lab",
+    "bookId": "artbook-color",
+    "title": "포스터 시안을 일곱 대비로 읽기",
+    "link": "chapters/contrast.html#sim-lab"
+  },
+  {
+    "id": "artbook-color/glossary/sim-score",
+    "bookId": "artbook-color",
+    "title": "나의 점수",
+    "link": "chapters/glossary.html#sim-score"
+  },
+  {
+    "id": "artbook-color/lab/sim-in",
+    "bookId": "artbook-color",
+    "title": "실험실 입구: 이미지와 분석 해상도",
+    "link": "chapters/lab.html#sim-in"
+  },
+  {
+    "id": "artbook-color/lab/sim-val",
+    "bookId": "artbook-color",
+    "title": "명도 분포와 노탄 세 단계",
+    "link": "chapters/lab.html#sim-val"
+  },
+  {
+    "id": "artbook-color/lab/sim-chr",
+    "bookId": "artbook-color",
+    "title": "채도 지도와 채도 예산",
+    "link": "chapters/lab.html#sim-chr"
+  },
+  {
+    "id": "artbook-color/lab/sim-hue",
+    "bookId": "artbook-color",
+    "title": "색상–채도 산점도와 색상 쐐기",
+    "link": "chapters/lab.html#sim-hue"
+  },
+  {
+    "id": "artbook-color/lab/sim-pal",
+    "bookId": "artbook-color",
+    "title": "주요 색 팔레트와 비율",
+    "link": "chapters/lab.html#sim-pal"
+  },
+  {
+    "id": "artbook-color/lab/sim-con",
+    "bookId": "artbook-color",
+    "title": "팔레트 대비 격자",
+    "link": "chapters/lab.html#sim-con"
+  },
+  {
+    "id": "artbook-color/lab/sim-cvd",
+    "bookId": "artbook-color",
+    "title": "색각 미리보기와 팔레트 구분도",
+    "link": "chapters/lab.html#sim-cvd"
+  },
+  {
+    "id": "artbook-color/lab/sim-lab",
+    "bookId": "artbook-color",
+    "title": "색 실험실",
+    "link": "chapters/lab.html#sim-lab"
+  },
+  {
+    "id": "artbook-color/light/sim-spectrum",
+    "bookId": "artbook-color",
+    "title": "파장 하나의 색",
+    "link": "chapters/light.html#sim-spectrum"
+  },
+  {
+    "id": "artbook-color/light/sim-cones",
+    "bookId": "artbook-color",
+    "title": "세 원뿔세포가 보내는 숫자",
+    "link": "chapters/light.html#sim-cones"
+  },
+  {
+    "id": "artbook-color/light/sim-match",
+    "bookId": "artbook-color",
+    "title": "노랑 빛을 빨강과 초록으로 만들기",
+    "link": "chapters/light.html#sim-match"
+  },
+  {
+    "id": "artbook-color/light/sim-sources",
+    "bookId": "artbook-color",
+    "title": "여섯 가지 빛, 여섯 가지 견본",
+    "link": "chapters/light.html#sim-sources"
+  },
+  {
+    "id": "artbook-color/light/sim-metamer",
+    "bookId": "artbook-color",
+    "title": "메타머 만들기",
+    "link": "chapters/light.html#sim-metamer"
+  },
+  {
+    "id": "artbook-color/light/sim-purkinje",
+    "bookId": "artbook-color",
+    "title": "해가 지면 빨강이 먼저 어두워진다",
+    "link": "chapters/light.html#sim-purkinje"
+  },
+  {
+    "id": "artbook-color/light/sim-shop",
+    "bookId": "artbook-color",
+    "title": "책방 E의 조명 지도",
+    "link": "chapters/light.html#sim-shop"
+  },
+  {
+    "id": "artbook-color/meaning/sim-mn-ctx",
+    "bookId": "artbook-color",
+    "title": "같은 색, 다른 자리",
+    "link": "chapters/meaning.html#sim-mn-ctx"
+  },
+  {
+    "id": "artbook-color/meaning/sim-mn-names",
+    "bookId": "artbook-color",
+    "title": "초록과 파랑 사이, 나의 경계",
+    "link": "chapters/meaning.html#sim-mn-names"
+  },
+  {
+    "id": "artbook-color/meaning/sim-mn-assoc",
+    "bookId": "artbook-color",
+    "title": "내가 고른 단어의 색",
+    "link": "chapters/meaning.html#sim-mn-assoc"
+  },
+  {
+    "id": "artbook-color/meaning/sim-mn-claim",
+    "bookId": "artbook-color",
+    "title": "통설 검사기",
+    "link": "chapters/meaning.html#sim-mn-claim"
+  },
+  {
+    "id": "artbook-color/meaning/sim-mn-pop",
+    "bookId": "artbook-color",
+    "title": "서가 위의 행사 스티커",
+    "link": "chapters/meaning.html#sim-mn-pop"
+  },
+  {
+    "id": "artbook-color/meaning/sim-mn-story",
+    "bookId": "artbook-color",
+    "title": "이야기에서 색 뽑기: 책방 E 가을 낭독회",
+    "link": "chapters/meaning.html#sim-mn-story"
+  },
+  {
+    "id": "artbook-color/mixing/sim-mi-light",
+    "bookId": "artbook-color",
+    "title": "빛 세 개, 필터 세 장",
+    "link": "chapters/mixing.html#sim-mi-light"
+  },
+  {
+    "id": "artbook-color/mixing/sim-mi-curve",
+    "bookId": "artbook-color",
+    "title": "반사율 곡선으로 섞기",
+    "link": "chapters/mixing.html#sim-mi-curve"
+  },
+  {
+    "id": "artbook-color/mixing/sim-mi-ratio",
+    "bookId": "artbook-color",
+    "title": "섞는 비율 띠와 착색력",
+    "link": "chapters/mixing.html#sim-mi-ratio"
+  },
+  {
+    "id": "artbook-color/mixing/sim-mi-tint",
+    "bookId": "artbook-color",
+    "title": "틴트·셰이드·톤",
+    "link": "chapters/mixing.html#sim-mi-tint"
+  },
+  {
+    "id": "artbook-color/mixing/sim-mi-path",
+    "bookId": "artbook-color",
+    "title": "보색 사이의 길",
+    "link": "chapters/mixing.html#sim-mi-path"
+  },
+  {
+    "id": "artbook-color/mixing/sim-mi-glaze",
+    "bookId": "artbook-color",
+    "title": "겹쳐 칠하기와 섞어 칠하기",
+    "link": "chapters/mixing.html#sim-mi-glaze"
+  },
+  {
+    "id": "artbook-color/mixing/sim-mi-gamut",
+    "bookId": "artbook-color",
+    "title": "세 물감의 색 지도",
+    "link": "chapters/mixing.html#sim-mi-gamut"
+  },
+  {
+    "id": "artbook-color/models/sim-cube",
+    "bookId": "artbook-color",
+    "title": "RGB 정육면체의 한 단면",
+    "link": "chapters/models.html#sim-cube"
+  },
+  {
+    "id": "artbook-color/models/sim-stripe",
+    "bookId": "artbook-color",
+    "title": "줄무늬의 회색은 몇일까",
+    "link": "chapters/models.html#sim-stripe"
+  },
+  {
+    "id": "artbook-color/models/sim-grad",
+    "bookId": "artbook-color",
+    "title": "두 색 사이의 네 갈래 길",
+    "link": "chapters/models.html#sim-grad"
+  },
+  {
+    "id": "artbook-color/models/sim-steps",
+    "bookId": "artbook-color",
+    "title": "HSL 계단과 OKLCH 계단",
+    "link": "chapters/models.html#sim-steps"
+  },
+  {
+    "id": "artbook-color/models/sim-pick",
+    "bookId": "artbook-color",
+    "title": "OKLCH 단면에서 고르기",
+    "link": "chapters/models.html#sim-pick"
+  },
+  {
+    "id": "artbook-color/models/sim-gamut",
+    "bookId": "artbook-color",
+    "title": "sRGB 삼각형과 P3 삼각형",
+    "link": "chapters/models.html#sim-gamut"
+  },
+  {
+    "id": "artbook-color/models/sim-record",
+    "bookId": "artbook-color",
+    "title": "로고 초록 기록 카드",
+    "link": "chapters/models.html#sim-record"
+  },
+  {
+    "id": "artbook-color/overview/sim-chain",
+    "bookId": "artbook-color",
+    "title": "같은 레몬, 다른 빛",
+    "link": "chapters/overview.html#sim-chain"
+  },
+  {
+    "id": "artbook-color/overview/sim-mix",
+    "bookId": "artbook-color",
+    "title": "빛으로, 점으로, 물감으로 섞기",
+    "link": "chapters/overview.html#sim-mix"
+  },
+  {
+    "id": "artbook-color/overview/sim-dots",
+    "bookId": "artbook-color",
+    "title": "점묘: 멀어지면 섞인다",
+    "link": "chapters/overview.html#sim-dots"
+  },
+  {
+    "id": "artbook-color/overview/sim-sc",
+    "bookId": "artbook-color",
+    "title": "같은 회색, 다른 회색",
+    "link": "chapters/overview.html#sim-sc"
+  },
+  {
+    "id": "artbook-color/overview/sim-meta",
+    "bookId": "artbook-color",
+    "title": "낮에는 같고 밤에는 다른 두 견본",
+    "link": "chapters/overview.html#sim-meta"
+  },
+  {
+    "id": "artbook-color/overview/sim-screen",
+    "bookId": "artbook-color",
+    "title": "내 화면 점검: 어두운 계단, 밝은 계단",
+    "link": "chapters/overview.html#sim-screen"
+  },
+  {
+    "id": "artbook-color/overview/sim-hsl",
+    "bookId": "artbook-color",
+    "title": "HSL의 함정: 같은 \"명도 50%\", 다른 밝기",
+    "link": "chapters/overview.html#sim-hsl"
+  },
+  {
+    "id": "artbook-color/overview/sim-map",
+    "bookId": "artbook-color",
+    "title": "색 하나의 지도",
+    "link": "chapters/overview.html#sim-map"
+  },
+  {
+    "id": "artbook-color/painting/sim-km",
+    "bookId": "artbook-color",
+    "title": "k개의 색으로 다시 칠하기",
+    "link": "chapters/painting.html#sim-km"
+  },
+  {
+    "id": "artbook-color/painting/sim-hue",
+    "bookId": "artbook-color",
+    "title": "그림의 색상 꽃잎",
+    "link": "chapters/painting.html#sim-hue"
+  },
+  {
+    "id": "artbook-color/painting/sim-loupe",
+    "bookId": "artbook-color",
+    "title": "돋보기: 회색 속의 붓질",
+    "link": "chapters/painting.html#sim-loupe"
+  },
+  {
+    "id": "artbook-color/painting/sim-ink",
+    "bookId": "artbook-color",
+    "title": "먹의 다섯 단계와 여백",
+    "link": "chapters/painting.html#sim-ink"
+  },
+  {
+    "id": "artbook-color/painting/sim-obang",
+    "bookId": "artbook-color",
+    "title": "오방색 예시값과 그림 속 색",
+    "link": "chapters/painting.html#sim-obang"
+  },
+  {
+    "id": "artbook-color/painting/sim-lab",
+    "bookId": "artbook-color",
+    "title": "두 그림의 팔레트 비교",
+    "link": "chapters/painting.html#sim-lab"
+  },
+  {
+    "id": "artbook-color/palette/sim-scale",
+    "bookId": "artbook-color",
+    "title": "톤 스케일: HSL 사다리와 OKLCH 사다리",
+    "link": "chapters/palette.html#sim-scale"
+  },
+  {
+    "id": "artbook-color/palette/sim-ui",
+    "bookId": "artbook-color",
+    "title": "중립색과 어두운 화면: 같은 토큰, 다른 칸",
+    "link": "chapters/palette.html#sim-ui"
+  },
+  {
+    "id": "artbook-color/palette/sim-status",
+    "bookId": "artbook-color",
+    "title": "상태색: 브랜드 초록과 성공 초록",
+    "link": "chapters/palette.html#sim-status"
+  },
+  {
+    "id": "artbook-color/palette/sim-viz",
+    "bookId": "artbook-color",
+    "title": "책방 E의 10월: 순차·발산·범주",
+    "link": "chapters/palette.html#sim-viz"
+  },
+  {
+    "id": "artbook-color/palette/sim-rainbow",
+    "bookId": "artbook-color",
+    "title": "무지개 색지도와 가짜 경계",
+    "link": "chapters/palette.html#sim-rainbow"
+  },
+  {
+    "id": "artbook-color/palette/sim-extract",
+    "bookId": "artbook-color",
+    "title": "책방 사진에서 주요 색 뽑기",
+    "link": "chapters/palette.html#sim-extract"
+  },
+  {
+    "id": "artbook-color/palette/sim-bench",
+    "bookId": "artbook-color",
+    "title": "팔레트 작업대: 색 하나에서 한 벌까지",
+    "link": "chapters/palette.html#sim-bench"
+  },
+  {
+    "id": "artbook-color/print/sim-naive",
+    "bookId": "artbook-color",
+    "title": "공식으로 바꾼 CMYK, 프로파일로 바꾼 CMYK",
+    "link": "chapters/print.html#sim-naive"
+  },
+  {
+    "id": "artbook-color/print/sim-gamut",
+    "bookId": "artbook-color",
+    "title": "색역 단면: 화면이 내는 색, 잉크가 내는 색",
+    "link": "chapters/print.html#sim-gamut"
+  },
+  {
+    "id": "artbook-color/print/sim-intent",
+    "bookId": "artbook-color",
+    "title": "렌더링 의도: 자르기와 줄이기",
+    "link": "chapters/print.html#sim-intent"
+  },
+  {
+    "id": "artbook-color/print/sim-halftone",
+    "bookId": "artbook-color",
+    "title": "망점 확대경",
+    "link": "chapters/print.html#sim-halftone"
+  },
+  {
+    "id": "artbook-color/print/sim-paper",
+    "bookId": "artbook-color",
+    "title": "같은 파일, 세 가지 종이",
+    "link": "chapters/print.html#sim-paper"
+  },
+  {
+    "id": "artbook-color/print/sim-proof",
+    "bookId": "artbook-color",
+    "title": "소프트 프루프: 포스터를 인쇄하기 전에",
+    "link": "chapters/print.html#sim-proof"
+  },
+  {
+    "id": "artbook-color/relativity/sim-one",
+    "bookId": "artbook-color",
+    "title": "한 색을 두 색으로",
+    "link": "chapters/relativity.html#sim-one"
+  },
+  {
+    "id": "artbook-color/relativity/sim-two",
+    "bookId": "artbook-color",
+    "title": "두 색을 한 색으로",
+    "link": "chapters/relativity.html#sim-two"
+  },
+  {
+    "id": "artbook-color/relativity/sim-asm",
+    "bookId": "artbook-color",
+    "title": "가는 줄 사이의 색",
+    "link": "chapters/relativity.html#sim-asm"
+  },
+  {
+    "id": "artbook-color/relativity/sim-const",
+    "bookId": "artbook-color",
+    "title": "장면을 가리면 사라지는 항상성",
+    "link": "chapters/relativity.html#sim-const"
+  },
+  {
+    "id": "artbook-color/relativity/sim-trans",
+    "bookId": "artbook-color",
+    "title": "세 조각으로 만드는 투명",
+    "link": "chapters/relativity.html#sim-trans"
+  },
+  {
+    "id": "artbook-color/relativity/sim-logo",
+    "bookId": "artbook-color",
+    "title": "로고 초록을 바탕마다 같아 보이게",
+    "link": "chapters/relativity.html#sim-logo"
+  },
+  {
+    "id": "artbook-color/temperature/sim-kelvin",
+    "bookId": "artbook-color",
+    "title": "켈빈 자와 마이어드 자",
+    "link": "chapters/temperature.html#sim-kelvin"
+  },
+  {
+    "id": "artbook-color/temperature/sim-wb",
+    "bookId": "artbook-color",
+    "title": "카메라의 화이트밸런스",
+    "link": "chapters/temperature.html#sim-wb"
+  },
+  {
+    "id": "artbook-color/temperature/sim-day",
+    "bookId": "artbook-color",
+    "title": "하루의 빛: 햇빛과 하늘빛",
+    "link": "chapters/temperature.html#sim-day"
+  },
+  {
+    "id": "artbook-color/temperature/sim-shadow",
+    "bookId": "artbook-color",
+    "title": "빛 두 개, 그림자 하나",
+    "link": "chapters/temperature.html#sim-shadow"
+  },
+  {
+    "id": "artbook-color/temperature/sim-garden",
+    "bookId": "artbook-color",
+    "title": "같은 정원, 다른 빛",
+    "link": "chapters/temperature.html#sim-garden"
+  },
+  {
+    "id": "artbook-color/temperature/sim-dusk",
+    "bookId": "artbook-color",
+    "title": "「해 질 녘 서점 앞」 색 계획",
+    "link": "chapters/temperature.html#sim-dusk"
+  },
+  {
+    "id": "artbook-color/value/sim-legible",
+    "bookId": "artbook-color",
+    "title": "색상 차이와 명도 차이, 어느 쪽이 읽히게 하나",
+    "link": "chapters/value.html#sim-legible"
+  },
+  {
+    "id": "artbook-color/value/sim-scale",
+    "bookId": "artbook-color",
+    "title": "명도 단계표 만들기: 같은 비율과 같은 명도",
+    "link": "chapters/value.html#sim-scale"
+  },
+  {
+    "id": "artbook-color/value/sim-notan",
+    "bookId": "artbook-color",
+    "title": "노탄: 작품을 2·3·5단계로",
+    "link": "chapters/value.html#sim-notan"
+  },
+  {
+    "id": "artbook-color/value/sim-squint",
+    "bookId": "artbook-color",
+    "title": "눈을 가늘게 뜨면 남는 것",
+    "link": "chapters/value.html#sim-squint"
+  },
+  {
+    "id": "artbook-color/value/sim-ink",
+    "bookId": "artbook-color",
+    "title": "가장 짙은 먹은 가까운 곳에",
+    "link": "chapters/value.html#sim-ink"
+  },
+  {
+    "id": "artbook-color/value/sim-poster",
+    "bookId": "artbook-color",
+    "title": "책방 E 가을 행사 포스터: 명도만 고치기",
+    "link": "chapters/value.html#sim-poster"
+  },
+  {
+    "id": "artbook-color/value/sim-plan",
+    "bookId": "artbook-color",
+    "title": "「창가의 책」 명도 구조 설계기",
+    "link": "chapters/value.html#sim-plan"
+  },
+  {
+    "id": "artbook-color/wheel/sim-wh-two",
+    "bookId": "artbook-color",
+    "title": "두 색상환, 두 보색",
+    "link": "chapters/wheel.html#sim-wh-two"
+  },
+  {
+    "id": "artbook-color/wheel/sim-wh-after",
+    "bookId": "artbook-color",
+    "title": "잔상으로 보는 보색",
+    "link": "chapters/wheel.html#sim-wh-after"
+  },
+  {
+    "id": "artbook-color/wheel/sim-wh-same",
+    "bookId": "artbook-color",
+    "title": "같은 공식, 세 색상환",
+    "link": "chapters/wheel.html#sim-wh-same"
+  },
+  {
+    "id": "artbook-color/wheel/sim-wh-push",
+    "bookId": "artbook-color",
+    "title": "공식이 무너지는 자리",
+    "link": "chapters/wheel.html#sim-wh-push"
+  },
+  {
+    "id": "artbook-color/wheel/sim-wh-obang",
+    "bookId": "artbook-color",
+    "title": "오방색: 방위의 지도와 색상의 지도",
+    "link": "chapters/wheel.html#sim-wh-obang"
+  },
+  {
+    "id": "artbook-color/wheel/sim-wh-lab",
+    "bookId": "artbook-color",
+    "title": "책방 E 배색 실험실",
+    "link": "chapters/wheel.html#sim-wh-lab"
   }
 ]

@@ -4,13 +4,17 @@ EB.start("feedback", (data) => {
   const adminPanel = document.getElementById("feedback-admin");
   if (adminPanel) adminPanel.hidden = params.get("admin") !== "1";
   const bookId = params.get("book");
-  const book = data.books.find((item) => item.id === bookId && item.status === "published");
+  // 출간된 책과, 주소가 있는 집필 중인 책(일부 장을 공개한 책)에서 의견을 받는다.
+  const acceptsFeedback = (item) => item.url && (item.status === "published" || item.status === "writing");
+  // 책 하나가 서브도메인 전체일 수도(xxxbook.euiyun.com/), 서가의 하위 경로일 수도(artbook.euiyun.com/color/) 있다.
+  const inBook = (url, item) => { const base = new URL(item.url); return url.protocol === "https:" && url.origin === base.origin && url.pathname.startsWith(base.pathname); };
+  const book = data.books.find((item) => item.id === bookId && acceptsFeedback(item));
   const page = params.get("page") || "";
   let pageUrl = "";
   if (book && page) {
     try {
       const candidate = new URL(page);
-      if (candidate.protocol === "https:" && candidate.hostname === new URL(book.url).hostname) pageUrl = candidate.href;
+      if (inBook(candidate, book)) pageUrl = candidate.href;
     } catch (e) {}
   }
 
@@ -60,7 +64,7 @@ EB.start("feedback", (data) => {
   };
   // Book links arrive with writing intent; ordinary visitors see the board first.
   if (composer && (book || ["error", "request", "cheer"].includes(type))) composer.open = true;
-  data.books.filter((b) => b.status === "published").forEach((b) => {
+  data.books.filter(acceptsFeedback).forEach((b) => {
     fields.bookId.add(new Option(`${b.title} · ${b.subtitle}`, b.id));
   });
   if (book) fields.bookId.value = book.id;

@@ -59,7 +59,8 @@ globalThis.FeedbackInbox = (() => {
         if (admin && item.page_url) {
           try {
             const url = new URL(item.page_url);
-            if (url.protocol === 'https:' && url.origin === new URL(book.url).origin && !url.username && !url.password) {
+            const base = new URL(book.url);
+            if (url.protocol === 'https:' && url.origin === base.origin && url.pathname.startsWith(base.pathname) && !url.username && !url.password) {
               const pageLink = document.createElement('a');
               pageLink.href = url.href; pageLink.textContent = '제보 페이지';
               pageLink.target = '_blank'; pageLink.rel = 'noopener'; card.append(' · ', pageLink);

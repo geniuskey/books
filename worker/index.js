@@ -1,7 +1,9 @@
 import catalog from '../data/books.json' with { type: 'json' };
 import { inbox } from './inbox.js';
 
-const books = new Map(catalog.books.filter(b => b.status === 'published' && b.url).map(b => [b.id, b]));
+// 출간된 책과 일부 장을 공개한 집필 중인 책. 책의 주소는 서브도메인 전체이거나 서가의 하위 경로다.
+const books = new Map(catalog.books.filter(b => (b.status === 'published' || b.status === 'writing') && b.url).map(b => [b.id, b]));
+const inBook = (url, book) => { const base = new URL(book.url); return url.origin === base.origin && url.pathname.startsWith(base.pathname); };
 const MAX_BYTES = 16384;
 const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 
@@ -16,7 +18,7 @@ function validate(data) {
   if (pageUrl) {
     try {
       const url = new URL(pageUrl);
-      if (!bookId || url.protocol !== 'https:' || url.origin !== new URL(books.get(bookId).url).origin || url.username || url.password) return null;
+      if (!bookId || url.protocol !== 'https:' || !inBook(url, books.get(bookId)) || url.username || url.password) return null;
     } catch { return null; }
   }
   return { id, type, nickname: nickname.trim(), message: message.trim(), bookId, pageUrl, website, visibility };

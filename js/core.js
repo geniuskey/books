@@ -128,7 +128,10 @@
     const meta = EB.isPublished(b)
       ? `<div class="meta"><span><b>${b.chapters}</b> 챕터</span><span><b>${b.simulators}+</b> 시뮬레이터</span>${b.level ? `<span>${esc(b.level)}</span>` : ""}</div>`
       : "";
-    const read = EB.readUrl(b) ? `<a class="read" href="${esc(b.url)}">읽기 →</a>` : `<span class="badge">${esc(EB.status(b))}</span>`;
+    // 집필 중이라도 일부 장을 공개한 책은 미리 읽을 수 있게 연결한다.
+    const read = EB.readUrl(b) ? `<a class="read" href="${esc(b.url)}">읽기 →</a>`
+      : b.status === "writing" && b.url ? `<span class="badge">${esc(EB.status(b))}</span> <a class="read" href="${esc(b.url)}">미리 읽기 →</a>`
+      : `<span class="badge">${esc(EB.status(b))}</span>`;
     card.innerHTML = `
       <div class="cover">${window.coverArt ? window.coverArt(b.motif) : ""}<span class="code">${esc(b.code)}</span><span class="headline">${esc(b.headline || EB.status(b))}</span></div>
       <div class="body">

@@ -61,4 +61,13 @@ window.FIELD_MAPS = {
       ["감각과 표현", "Create", "음·화음·리듬을 직접 듣고 구성하기", ["musicbook"]],
     ],
   },
+  art: {
+    title: "보는 눈에서 그리는 손까지",
+    desc: "색과 형태가 지각되는 원리에서 구도·드로잉·글자로 화면을 짜는 법, 미술사와 사진으로 이미지를 읽는 법으로 이어집니다.",
+    groups: [
+      ["보기", "See", "색이 생기고 달라 보이는 원리", ["artbook-color"]],
+      ["짜기와 그리기", "Make", "구도와 드로잉, 글자로 화면을 구성하기", ["artbook-composition", "artbook-drawing", "artbook-type"]],
+      ["읽기", "Read", "미술사와 사진으로 이미지를 읽기", ["artbook-history", "artbook-image"]],
+    ],
+  },
 };
