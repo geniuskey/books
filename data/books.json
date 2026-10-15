@@ -1735,17 +1735,42 @@
       "id": "artbook-drawing",
       "code": "DRW",
       "title": "ArtBook 드로잉",
-      "subtitle": "투시·빛·비례",
-      "field": "art",
-      "status": "planned",
-      "phase": 2,
+      "subtitle": "드로잉",
+      "headline": "그리기는 손보다 먼저 보기의 기술이다",
+      "description": "윤곽과 측정, 선과 해칭, 1·2·3점 투시, 원과 타원, 상자로 생각하기, 명암의 단계, 그림자 투영, 풍경과 대기, 인체의 비례와 구조, 제스처와 크로키까지. 소실점을 끌고 해를 옮기고 관절을 굽혀 보며 배우는 ArtBook 서가의 세 번째 권(DrawingBook)입니다.",
+      "url": "https://artbook.euiyun.com/drawing/",
       "repo": "https://github.com/geniuskey/artbook",
-      "description": "1·2·3점 투시, 빛과 그림자, 비례, 인체의 구조, 제스처. 소실점과 광원을 직접 끌어 공간과 형태가 생기는 원리를 배웁니다.",
-      "ideas": [
-        "소실점을 끄는 투시 상자",
-        "광원을 옮기는 그림자 투영",
-        "인체 비례 마네킹",
-        "제스처 선 따라 그리기"
+      "checkout": "artbook/drawing",
+      "field": "art",
+      "status": "published",
+      "level": "입문",
+      "chapters": 15,
+      "simulators": 93,
+      "color": "#b5179e",
+      "colorDark": "#f27ad8",
+      "topics": [
+        "보이는 대로 보기",
+        "선과 해칭",
+        "1·2·3점 투시",
+        "타원",
+        "명암과 그림자",
+        "인체 비례",
+        "제스처"
+      ],
+      "motif": "vanish",
+      "featured": [
+        {
+          "title": "드로잉 실험실",
+          "desc": "눈높이, 두 소실점, 해의 방향, 사람의 키를 함께 옮기며 건물 밑그림을 세운다",
+          "link": "chapters/lab.html#sim-lb-lab",
+          "image": "img/sims/artbook-drawing-sim-lb-lab.jpg"
+        },
+        {
+          "title": "날짜와 시각으로 그림자 정하기",
+          "desc": "서울의 해 위치를 날짜와 시각으로 계산해 막대 그림자의 방향과 길이를 읽는다",
+          "link": "chapters/shadow.html#sim-sh-sun",
+          "image": "img/sims/artbook-drawing-sim-sh-sun.jpg"
+        }
       ]
     },
     {

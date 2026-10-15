@@ -27076,5 +27076,563 @@
     "bookId": "artbook-composition",
     "title": "여백 작업대: 낭독회 포스터 다시 짜기",
     "link": "chapters/space.html#sim-sw"
+  },
+  {
+    "id": "artbook-drawing/anatomy/sim-torso",
+    "bookId": "artbook-drawing",
+    "title": "흉곽과 골반: 척추로 이어진 두 상자",
+    "link": "chapters/anatomy.html#sim-torso"
+  },
+  {
+    "id": "artbook-drawing/anatomy/sim-arm",
+    "bookId": "artbook-drawing",
+    "title": "팔꿈치는 한쪽으로만 접힌다",
+    "link": "chapters/anatomy.html#sim-arm"
+  },
+  {
+    "id": "artbook-drawing/anatomy/sim-forearm",
+    "bookId": "artbook-drawing",
+    "title": "요골이 척골을 넘어간다",
+    "link": "chapters/anatomy.html#sim-forearm"
+  },
+  {
+    "id": "artbook-drawing/anatomy/sim-muscle",
+    "bookId": "artbook-drawing",
+    "title": "근육은 짧아지며 부푼다",
+    "link": "chapters/anatomy.html#sim-muscle"
+  },
+  {
+    "id": "artbook-drawing/anatomy/sim-head",
+    "bookId": "artbook-drawing",
+    "title": "공과 턱: 안내선은 머리를 감싼다",
+    "link": "chapters/anatomy.html#sim-head"
+  },
+  {
+    "id": "artbook-drawing/anatomy/sim-hand",
+    "bookId": "artbook-drawing",
+    "title": "상자와 원통으로 세운 손",
+    "link": "chapters/anatomy.html#sim-hand"
+  },
+  {
+    "id": "artbook-drawing/anatomy/sim-reach",
+    "bookId": "artbook-drawing",
+    "title": "서가 맨 위 칸의 책: 관절로 세운 구조 스케치",
+    "link": "chapters/anatomy.html#sim-reach"
+  },
+  {
+    "id": "artbook-drawing/ellipse/sim-el-tilt",
+    "bookId": "artbook-drawing",
+    "title": "보는 각과 타원의 폭",
+    "link": "chapters/ellipse.html#sim-el-tilt"
+  },
+  {
+    "id": "artbook-drawing/ellipse/sim-el-eye",
+    "bookId": "artbook-drawing",
+    "title": "눈높이를 옮기면 타원의 폭이 바뀐다",
+    "link": "chapters/ellipse.html#sim-el-eye"
+  },
+  {
+    "id": "artbook-drawing/ellipse/sim-el-axis",
+    "bookId": "artbook-drawing",
+    "title": "바퀴의 축과 타원의 단축",
+    "link": "chapters/ellipse.html#sim-el-axis"
+  },
+  {
+    "id": "artbook-drawing/ellipse/sim-el-sq",
+    "bookId": "artbook-drawing",
+    "title": "투시 정사각형 안의 원: 8점 작도",
+    "link": "chapters/ellipse.html#sim-el-sq"
+  },
+  {
+    "id": "artbook-drawing/ellipse/sim-el-free",
+    "bookId": "artbook-drawing",
+    "title": "손으로 그린 타원 진단",
+    "link": "chapters/ellipse.html#sim-el-free"
+  },
+  {
+    "id": "artbook-drawing/ellipse/sim-el-cz",
+    "bookId": "artbook-drawing",
+    "title": "세잔의 입구 타원 재기",
+    "link": "chapters/ellipse.html#sim-el-cz"
+  },
+  {
+    "id": "artbook-drawing/ellipse/sim-el-still",
+    "bookId": "artbook-drawing",
+    "title": "창가의 컵과 화분: 타원 각도 계획",
+    "link": "chapters/ellipse.html#sim-el-still"
+  },
+  {
+    "id": "artbook-drawing/form/sim-prim",
+    "bookId": "artbook-drawing",
+    "title": "네 가지 기본 입체 돌려 보기",
+    "link": "chapters/form.html#sim-prim"
+  },
+  {
+    "id": "artbook-drawing/form/sim-boxc",
+    "bookId": "artbook-drawing",
+    "title": "대각선으로 가운데 찾고 원 넣기",
+    "link": "chapters/form.html#sim-boxc"
+  },
+  {
+    "id": "artbook-drawing/form/sim-cross",
+    "bookId": "artbook-drawing",
+    "title": "같은 윤곽, 다른 부피",
+    "link": "chapters/form.html#sim-cross"
+  },
+  {
+    "id": "artbook-drawing/form/sim-axis",
+    "bookId": "artbook-drawing",
+    "title": "축을 기울이면 타원도 돈다",
+    "link": "chapters/form.html#sim-axis"
+  },
+  {
+    "id": "artbook-drawing/form/sim-build",
+    "bookId": "artbook-drawing",
+    "title": "우체통을 다섯 단계로 세우기",
+    "link": "chapters/form.html#sim-build"
+  },
+  {
+    "id": "artbook-drawing/form/sim-lab",
+    "bookId": "artbook-drawing",
+    "title": "서점 앞 소품 구조 스케치",
+    "link": "chapters/form.html#sim-lab"
+  },
+  {
+    "id": "artbook-drawing/gesture/sim-gs-cmp",
+    "bookId": "artbook-drawing",
+    "title": "같은 30초, 다른 출발점",
+    "link": "chapters/gesture.html#sim-gs-cmp"
+  },
+  {
+    "id": "artbook-drawing/gesture/sim-gs-loa",
+    "bookId": "artbook-drawing",
+    "title": "동작선 하나로 서는 몸",
+    "link": "chapters/gesture.html#sim-gs-loa"
+  },
+  {
+    "id": "artbook-drawing/gesture/sim-gs-cog",
+    "bookId": "artbook-drawing",
+    "title": "무게중심 위에 서기",
+    "link": "chapters/gesture.html#sim-gs-cog"
+  },
+  {
+    "id": "artbook-drawing/gesture/sim-gs-contra",
+    "bookId": "artbook-drawing",
+    "title": "콘트라포스토: 골반과 어깨의 엇갈림",
+    "link": "chapters/gesture.html#sim-gs-contra"
+  },
+  {
+    "id": "artbook-drawing/gesture/sim-gs-moment",
+    "bookId": "artbook-drawing",
+    "title": "움직임의 어느 순간을 고를까",
+    "link": "chapters/gesture.html#sim-gs-moment"
+  },
+  {
+    "id": "artbook-drawing/gesture/sim-gs-time",
+    "bookId": "artbook-drawing",
+    "title": "시간 예산과 그리는 순서",
+    "link": "chapters/gesture.html#sim-gs-time"
+  },
+  {
+    "id": "artbook-drawing/gesture/sim-gs-lab",
+    "bookId": "artbook-drawing",
+    "title": "제스처 실험대: 자세 잡기와 크로키",
+    "link": "chapters/gesture.html#sim-gs-lab"
+  },
+  {
+    "id": "artbook-drawing/glossary/sim-score",
+    "bookId": "artbook-drawing",
+    "title": "나의 점수",
+    "link": "chapters/glossary.html#sim-score"
+  },
+  {
+    "id": "artbook-drawing/lab/sim-lb-eye",
+    "bookId": "artbook-drawing",
+    "title": "눈높이 패널",
+    "link": "chapters/lab.html#sim-lb-eye"
+  },
+  {
+    "id": "artbook-drawing/lab/sim-lb-vp",
+    "bookId": "artbook-drawing",
+    "title": "소실점 패널",
+    "link": "chapters/lab.html#sim-lb-vp"
+  },
+  {
+    "id": "artbook-drawing/lab/sim-lb-sun",
+    "bookId": "artbook-drawing",
+    "title": "해 패널",
+    "link": "chapters/lab.html#sim-lb-sun"
+  },
+  {
+    "id": "artbook-drawing/lab/sim-lb-people",
+    "bookId": "artbook-drawing",
+    "title": "사람 패널",
+    "link": "chapters/lab.html#sim-lb-people"
+  },
+  {
+    "id": "artbook-drawing/lab/sim-lb-cmp",
+    "bookId": "artbook-drawing",
+    "title": "첫 스케치의 선택들과 최종 밑그림",
+    "link": "chapters/lab.html#sim-lb-cmp"
+  },
+  {
+    "id": "artbook-drawing/lab/sim-lb-lab",
+    "bookId": "artbook-drawing",
+    "title": "드로잉 실험실: 서점 외관의 밑그림",
+    "link": "chapters/lab.html#sim-lb-lab"
+  },
+  {
+    "id": "artbook-drawing/landscape/sim-ls-air",
+    "bookId": "artbook-drawing",
+    "title": "거리와 대비: 가시거리가 깊이를 정한다",
+    "link": "chapters/landscape.html#sim-ls-air"
+  },
+  {
+    "id": "artbook-drawing/landscape/sim-ls-hatch",
+    "bookId": "artbook-drawing",
+    "title": "목표 명도에 맞는 해칭 고르기",
+    "link": "chapters/landscape.html#sim-ls-hatch"
+  },
+  {
+    "id": "artbook-drawing/landscape/sim-ls-tree",
+    "bookId": "artbook-drawing",
+    "title": "나무를 덩어리로 세우기",
+    "link": "chapters/landscape.html#sim-ls-tree"
+  },
+  {
+    "id": "artbook-drawing/landscape/sim-ls-cloud",
+    "bookId": "artbook-drawing",
+    "title": "구름 바닥면의 투시",
+    "link": "chapters/landscape.html#sim-ls-cloud"
+  },
+  {
+    "id": "artbook-drawing/landscape/sim-ls-sanwon",
+    "bookId": "artbook-drawing",
+    "title": "눈높이로 보는 삼원",
+    "link": "chapters/landscape.html#sim-ls-sanwon"
+  },
+  {
+    "id": "artbook-drawing/landscape/sim-ls-lab",
+    "bookId": "artbook-drawing",
+    "title": "펜 풍경 무대: 세 켜의 선과 해칭",
+    "link": "chapters/landscape.html#sim-ls-lab"
+  },
+  {
+    "id": "artbook-drawing/light/sim-sphere",
+    "bookId": "artbook-drawing",
+    "title": "구에 빛 옮기기",
+    "link": "chapters/light.html#sim-sphere"
+  },
+  {
+    "id": "artbook-drawing/light/sim-cos",
+    "bookId": "artbook-drawing",
+    "title": "비스듬할수록 성기게 떨어지는 빛",
+    "link": "chapters/light.html#sim-cos"
+  },
+  {
+    "id": "artbook-drawing/light/sim-bounce",
+    "bookId": "artbook-drawing",
+    "title": "가장 어두운 곳은 경계 바로 안쪽",
+    "link": "chapters/light.html#sim-bounce"
+  },
+  {
+    "id": "artbook-drawing/light/sim-cast",
+    "bookId": "artbook-drawing",
+    "title": "접촉 그림자는 가장 짙고, 그림자 끝은 흐리다",
+    "link": "chapters/light.html#sim-cast"
+  },
+  {
+    "id": "artbook-drawing/light/sim-steps",
+    "bookId": "artbook-drawing",
+    "title": "다섯 단계로 줄이기: 명도로, 무리로",
+    "link": "chapters/light.html#sim-steps"
+  },
+  {
+    "id": "artbook-drawing/light/sim-plan",
+    "bookId": "artbook-drawing",
+    "title": "창가 정물 명암 설계기",
+    "link": "chapters/light.html#sim-plan"
+  },
+  {
+    "id": "artbook-drawing/line/sim-ln-stroke",
+    "bookId": "artbook-drawing",
+    "title": "같은 손놀림, 세 가지 도구",
+    "link": "chapters/line.html#sim-ln-stroke"
+  },
+  {
+    "id": "artbook-drawing/line/sim-ln-hatch",
+    "bookId": "artbook-drawing",
+    "title": "선 굵기·간격·방향으로 명도 만들기",
+    "link": "chapters/line.html#sim-ln-hatch"
+  },
+  {
+    "id": "artbook-drawing/line/sim-ln-form",
+    "bookId": "artbook-drawing",
+    "title": "해칭의 방향이 형태를 말한다",
+    "link": "chapters/line.html#sim-ln-form"
+  },
+  {
+    "id": "artbook-drawing/line/sim-ln-dots",
+    "bookId": "artbook-drawing",
+    "title": "점으로 쌓는 명도와 그 비용",
+    "link": "chapters/line.html#sim-ln-dots"
+  },
+  {
+    "id": "artbook-drawing/line/sim-ln-cun",
+    "bookId": "artbook-drawing",
+    "title": "같은 바위, 다른 준법",
+    "link": "chapters/line.html#sim-ln-cun"
+  },
+  {
+    "id": "artbook-drawing/line/sim-ln-print",
+    "bookId": "artbook-drawing",
+    "title": "원화와 인쇄물: 다섯 단계 해칭은 살아남는가",
+    "link": "chapters/line.html#sim-ln-print"
+  },
+  {
+    "id": "artbook-drawing/overview/sim-ov-known",
+    "bookId": "artbook-drawing",
+    "title": "책 한 권의 두 얼굴",
+    "link": "chapters/overview.html#sim-ov-known"
+  },
+  {
+    "id": "artbook-drawing/overview/sim-ov-flat",
+    "bookId": "artbook-drawing",
+    "title": "납작한 외관, 서 있는 외관",
+    "link": "chapters/overview.html#sim-ov-flat"
+  },
+  {
+    "id": "artbook-drawing/overview/sim-ov-proj",
+    "bookId": "artbook-drawing",
+    "title": "한 점으로 모일까, 나란히 갈까",
+    "link": "chapters/overview.html#sim-ov-proj"
+  },
+  {
+    "id": "artbook-drawing/overview/sim-ov-light",
+    "bookId": "artbook-drawing",
+    "title": "원 하나가 공이 되기까지",
+    "link": "chapters/overview.html#sim-ov-light"
+  },
+  {
+    "id": "artbook-drawing/overview/sim-ov-body",
+    "bookId": "artbook-drawing",
+    "title": "머리 몇 개 키",
+    "link": "chapters/overview.html#sim-ov-body"
+  },
+  {
+    "id": "artbook-drawing/overview/sim-ov-map",
+    "bookId": "artbook-drawing",
+    "title": "한 장면, 네 갈래",
+    "link": "chapters/overview.html#sim-ov-map"
+  },
+  {
+    "id": "artbook-drawing/perspective1/sim-p1-eye",
+    "bookId": "artbook-drawing",
+    "title": "눈을 올리고 내리면 수평선이 물체를 자르는 높이가 바뀐다",
+    "link": "chapters/perspective1.html#sim-p1-eye"
+  },
+  {
+    "id": "artbook-drawing/perspective1/sim-p1-vp",
+    "bookId": "artbook-drawing",
+    "title": "소실점을 끌면 내가 선 자리가 바뀐다",
+    "link": "chapters/perspective1.html#sim-p1-vp"
+  },
+  {
+    "id": "artbook-drawing/perspective1/sim-p1-tile",
+    "bookId": "artbook-drawing",
+    "title": "바닥 타일 깔기: 거리점과 흔한 실수",
+    "link": "chapters/perspective1.html#sim-p1-tile"
+  },
+  {
+    "id": "artbook-drawing/perspective1/sim-p1-div",
+    "bookId": "artbook-drawing",
+    "title": "대각선 하나로 같은 간격 이어 가기",
+    "link": "chapters/perspective1.html#sim-p1-div"
+  },
+  {
+    "id": "artbook-drawing/perspective1/sim-p1-fov",
+    "bookId": "artbook-drawing",
+    "title": "시야각을 넓히면 가장자리가 늘어난다",
+    "link": "chapters/perspective1.html#sim-p1-fov"
+  },
+  {
+    "id": "artbook-drawing/perspective1/sim-p1-durer",
+    "bookId": "artbook-drawing",
+    "title": "뒤러의 서재에서 소실점 찾기",
+    "link": "chapters/perspective1.html#sim-p1-durer"
+  },
+  {
+    "id": "artbook-drawing/perspective1/sim-p1-aisle",
+    "bookId": "artbook-drawing",
+    "title": "서가 통로: 눈높이와 소실점으로 그림 칸 세우기",
+    "link": "chapters/perspective1.html#sim-p1-aisle"
+  },
+  {
+    "id": "artbook-drawing/perspective2/sim-p2-turn",
+    "bookId": "artbook-drawing",
+    "title": "상자를 돌리면 소실점이 둘이 된다",
+    "link": "chapters/perspective2.html#sim-p2-turn"
+  },
+  {
+    "id": "artbook-drawing/perspective2/sim-p2-dist",
+    "bookId": "artbook-drawing",
+    "title": "소실점 간격과 찌그러짐",
+    "link": "chapters/perspective2.html#sim-p2-dist"
+  },
+  {
+    "id": "artbook-drawing/perspective2/sim-p2-mp",
+    "bookId": "artbook-drawing",
+    "title": "측정점으로 울타리 기둥 세우기",
+    "link": "chapters/perspective2.html#sim-p2-mp"
+  },
+  {
+    "id": "artbook-drawing/perspective2/sim-p2-ladder",
+    "bookId": "artbook-drawing",
+    "title": "비례 사다리: 소실점 없이 소실점으로 긋기",
+    "link": "chapters/perspective2.html#sim-p2-ladder"
+  },
+  {
+    "id": "artbook-drawing/perspective2/sim-p2-stair",
+    "bookId": "artbook-drawing",
+    "title": "계단의 경사 소실점",
+    "link": "chapters/perspective2.html#sim-p2-stair"
+  },
+  {
+    "id": "artbook-drawing/perspective2/sim-p2-three",
+    "bookId": "artbook-drawing",
+    "title": "올려다본 탑과 셋째 소실점",
+    "link": "chapters/perspective2.html#sim-p2-three"
+  },
+  {
+    "id": "artbook-drawing/perspective2/sim-p2-pir",
+    "bookId": "artbook-drawing",
+    "title": "피라네시의 궁전에서 소실점 찾기",
+    "link": "chapters/perspective2.html#sim-p2-pir"
+  },
+  {
+    "id": "artbook-drawing/perspective2/sim-p2-fac",
+    "bookId": "artbook-drawing",
+    "title": "골목 모퉁이 서점 외관: 소실점 간격 정하기",
+    "link": "chapters/perspective2.html#sim-p2-fac"
+  },
+  {
+    "id": "artbook-drawing/proportion/sim-heads",
+    "bookId": "artbook-drawing",
+    "title": "키는 그대로, 머리 수만 바꾸기",
+    "link": "chapters/proportion.html#sim-heads"
+  },
+  {
+    "id": "artbook-drawing/proportion/sim-vitruv",
+    "bookId": "artbook-drawing",
+    "title": "비트루비우스의 원과 정사각형",
+    "link": "chapters/proportion.html#sim-vitruv"
+  },
+  {
+    "id": "artbook-drawing/proportion/sim-real",
+    "bookId": "artbook-drawing",
+    "title": "규범과 실제 사람 겹쳐 보기",
+    "link": "chapters/proportion.html#sim-real"
+  },
+  {
+    "id": "artbook-drawing/proportion/sim-age",
+    "bookId": "artbook-drawing",
+    "title": "나이에 따라 바뀌는 비례",
+    "link": "chapters/proportion.html#sim-age"
+  },
+  {
+    "id": "artbook-drawing/proportion/sim-side",
+    "bookId": "artbook-drawing",
+    "title": "옆에서 본 눈높이 법칙",
+    "link": "chapters/proportion.html#sim-side"
+  },
+  {
+    "id": "artbook-drawing/proportion/sim-alley",
+    "bookId": "artbook-drawing",
+    "title": "골목의 사람들: 눈높이와 등신을 함께",
+    "link": "chapters/proportion.html#sim-alley"
+  },
+  {
+    "id": "artbook-drawing/seeing/sim-se-symbol",
+    "bookId": "artbook-drawing",
+    "title": "기호로 그린 정물, 보고 그린 정물",
+    "link": "chapters/seeing.html#sim-se-symbol"
+  },
+  {
+    "id": "artbook-drawing/seeing/sim-se-upside",
+    "bookId": "artbook-drawing",
+    "title": "거꾸로 놓으면 보이는 것",
+    "link": "chapters/seeing.html#sim-se-upside"
+  },
+  {
+    "id": "artbook-drawing/seeing/sim-se-contour",
+    "bookId": "artbook-drawing",
+    "title": "눈은 대상에, 손은 종이에",
+    "link": "chapters/seeing.html#sim-se-contour"
+  },
+  {
+    "id": "artbook-drawing/seeing/sim-se-negative",
+    "bookId": "artbook-drawing",
+    "title": "다리를 볼까, 다리 사이를 볼까",
+    "link": "chapters/seeing.html#sim-se-negative"
+  },
+  {
+    "id": "artbook-drawing/seeing/sim-se-arm",
+    "bookId": "artbook-drawing",
+    "title": "팔을 뻗어 재기",
+    "link": "chapters/seeing.html#sim-se-arm"
+  },
+  {
+    "id": "artbook-drawing/seeing/sim-se-angle",
+    "bookId": "artbook-drawing",
+    "title": "연필을 모서리에 겹치기",
+    "link": "chapters/seeing.html#sim-se-angle"
+  },
+  {
+    "id": "artbook-drawing/seeing/sim-se-still",
+    "bookId": "artbook-drawing",
+    "title": "화분 높이를 1로",
+    "link": "chapters/seeing.html#sim-se-still"
+  },
+  {
+    "id": "artbook-drawing/shadow/sim-sh-tri",
+    "bookId": "artbook-drawing",
+    "title": "그림자 삼각형",
+    "link": "chapters/shadow.html#sim-sh-tri"
+  },
+  {
+    "id": "artbook-drawing/shadow/sim-sh-par",
+    "bookId": "artbook-drawing",
+    "title": "평행광 작도: 해를 끌어 그림자 소실점 찾기",
+    "link": "chapters/shadow.html#sim-sh-par"
+  },
+  {
+    "id": "artbook-drawing/shadow/sim-sh-sun",
+    "bookId": "artbook-drawing",
+    "title": "서울의 해시계: 날짜와 시각으로 그림자 정하기",
+    "link": "chapters/shadow.html#sim-sh-sun"
+  },
+  {
+    "id": "artbook-drawing/shadow/sim-sh-wall",
+    "bookId": "artbook-drawing",
+    "title": "입면도 위의 처마와 간판 그림자",
+    "link": "chapters/shadow.html#sim-sh-wall"
+  },
+  {
+    "id": "artbook-drawing/shadow/sim-sh-lamp",
+    "bookId": "artbook-drawing",
+    "title": "점광원의 그림자: 광원의 발에서 퍼진다",
+    "link": "chapters/shadow.html#sim-sh-lamp"
+  },
+  {
+    "id": "artbook-drawing/shadow/sim-sh-pen",
+    "bookId": "artbook-drawing",
+    "title": "그림자 가장자리의 선명도",
+    "link": "chapters/shadow.html#sim-sh-pen"
+  },
+  {
+    "id": "artbook-drawing/shadow/sim-sh-lab",
+    "bookId": "artbook-drawing",
+    "title": "골목 모퉁이 그림자 무대",
+    "link": "chapters/shadow.html#sim-sh-lab"
   }
 ]
