@@ -27634,5 +27634,533 @@
     "bookId": "artbook-drawing",
     "title": "골목 모퉁이 그림자 무대",
     "link": "chapters/shadow.html#sim-sh-lab"
+  },
+  {
+    "id": "artbook-type/alignment/sim-a4",
+    "bookId": "artbook-type",
+    "title": "같은 단락, 네 가지 끝",
+    "link": "chapters/alignment.html#sim-a4"
+  },
+  {
+    "id": "artbook-type/alignment/sim-rv",
+    "bookId": "artbook-type",
+    "title": "흐르는 흰 물길",
+    "link": "chapters/alignment.html#sim-rv"
+  },
+  {
+    "id": "artbook-type/alignment/sim-hy",
+    "bookId": "artbook-type",
+    "title": "하이픈이 메우는 틈",
+    "link": "chapters/alignment.html#sim-hy"
+  },
+  {
+    "id": "artbook-type/alignment/sim-ko",
+    "bookId": "artbook-type",
+    "title": "어절 단위와 글자 단위",
+    "link": "chapters/alignment.html#sim-ko"
+  },
+  {
+    "id": "artbook-type/alignment/sim-pa",
+    "bookId": "artbook-type",
+    "title": "들여쓰기와 단락 간격",
+    "link": "chapters/alignment.html#sim-pa"
+  },
+  {
+    "id": "artbook-type/alignment/sim-wd",
+    "bookId": "artbook-type",
+    "title": "단이 바뀌는 곳",
+    "link": "chapters/alignment.html#sim-wd"
+  },
+  {
+    "id": "artbook-type/alignment/sim-af",
+    "bookId": "artbook-type",
+    "title": "책자와 웹의 단락 설계기",
+    "link": "chapters/alignment.html#sim-af"
+  },
+  {
+    "id": "artbook-type/anatomy/sim-an-find",
+    "bookId": "artbook-type",
+    "title": "보이지 않는 줄 찾기",
+    "link": "chapters/anatomy.html#sim-an-find"
+  },
+  {
+    "id": "artbook-type/anatomy/sim-an-xh",
+    "bookId": "artbook-type",
+    "title": "같은 크기, 다른 크기",
+    "link": "chapters/anatomy.html#sim-an-xh"
+  },
+  {
+    "id": "artbook-type/anatomy/sim-an-nib",
+    "bookId": "artbook-type",
+    "title": "납작한 펜촉으로 쓰기",
+    "link": "chapters/anatomy.html#sim-an-nib"
+  },
+  {
+    "id": "artbook-type/anatomy/sim-an-serif",
+    "bookId": "artbook-type",
+    "title": "세리프 갈아 끼우기",
+    "link": "chapters/anatomy.html#sim-an-serif"
+  },
+  {
+    "id": "artbook-type/anatomy/sim-an-counter",
+    "bookId": "artbook-type",
+    "title": "빈 곳이 닫히면",
+    "link": "chapters/anatomy.html#sim-an-counter"
+  },
+  {
+    "id": "artbook-type/anatomy/sim-an-over",
+    "bookId": "artbook-type",
+    "title": "같은 높이가 같아 보이게",
+    "link": "chapters/anatomy.html#sim-an-over"
+  },
+  {
+    "id": "artbook-type/anatomy/sim-an-build",
+    "bookId": "artbook-type",
+    "title": "글자 한 벌 만들기",
+    "link": "chapters/anatomy.html#sim-an-build"
+  },
+  {
+    "id": "artbook-type/classification/sim-cl-gray",
+    "bookId": "artbook-type",
+    "title": "눈을 가늘게 뜨면 남는 회색",
+    "link": "chapters/classification.html#sim-cl-gray"
+  },
+  {
+    "id": "artbook-type/classification/sim-cl-stroke",
+    "bookId": "artbook-type",
+    "title": "대비와 부리: 고딕에서 명조로",
+    "link": "chapters/classification.html#sim-cl-stroke"
+  },
+  {
+    "id": "artbook-type/classification/sim-cl-latin",
+    "bookId": "artbook-type",
+    "title": "대비, 축, 세리프로 라틴 갈래 찾기",
+    "link": "chapters/classification.html#sim-cl-latin"
+  },
+  {
+    "id": "artbook-type/classification/sim-cl-time",
+    "bookId": "artbook-type",
+    "title": "갈래의 연표",
+    "link": "chapters/classification.html#sim-cl-time"
+  },
+  {
+    "id": "artbook-type/classification/sim-cl-px",
+    "bookId": "artbook-type",
+    "title": "화소 위의 가로획",
+    "link": "chapters/classification.html#sim-cl-px"
+  },
+  {
+    "id": "artbook-type/classification/sim-cl-pick",
+    "bookId": "artbook-type",
+    "title": "글꼴 고르기 실험실",
+    "link": "chapters/classification.html#sim-cl-pick"
+  },
+  {
+    "id": "artbook-type/display/sim-dp-track",
+    "bookId": "artbook-type",
+    "title": "크기가 커지면 자간을 좁힌다",
+    "link": "chapters/display.html#sim-dp-track"
+  },
+  {
+    "id": "artbook-type/display/sim-dp-opsz",
+    "bookId": "artbook-type",
+    "title": "본문용과 제목용, 같은 크기에 놓기",
+    "link": "chapters/display.html#sim-dp-opsz"
+  },
+  {
+    "id": "artbook-type/display/sim-dp-lead",
+    "bookId": "artbook-type",
+    "title": "제목 두 줄: 행간과 따옴표 걸기",
+    "link": "chapters/display.html#sim-dp-lead"
+  },
+  {
+    "id": "artbook-type/display/sim-dp-pen",
+    "bookId": "artbook-type",
+    "title": "넓은 펜과 붓으로 써 보기",
+    "link": "chapters/display.html#sim-dp-pen"
+  },
+  {
+    "id": "artbook-type/display/sim-dp-logo",
+    "bookId": "artbook-type",
+    "title": "책방 E 로고타입: 가로획 보정",
+    "link": "chapters/display.html#sim-dp-logo"
+  },
+  {
+    "id": "artbook-type/display/sim-dp-far",
+    "bookId": "artbook-type",
+    "title": "멀리서 보는 간판",
+    "link": "chapters/display.html#sim-dp-far"
+  },
+  {
+    "id": "artbook-type/display/sim-dp-bench",
+    "bookId": "artbook-type",
+    "title": "책방 E 간판 작업대",
+    "link": "chapters/display.html#sim-dp-bench"
+  },
+  {
+    "id": "artbook-type/glossary/sim-score",
+    "bookId": "artbook-type",
+    "title": "나의 점수",
+    "link": "chapters/glossary.html#sim-score"
+  },
+  {
+    "id": "artbook-type/grid/sim-gm",
+    "bookId": "artbook-type",
+    "title": "여백을 끌어 판면 정하기",
+    "link": "chapters/grid.html#sim-gm"
+  },
+  {
+    "id": "artbook-type/grid/sim-gc",
+    "bookId": "artbook-type",
+    "title": "대각선 위의 판면",
+    "link": "chapters/grid.html#sim-gc"
+  },
+  {
+    "id": "artbook-type/grid/sim-gcol",
+    "bookId": "artbook-type",
+    "title": "단 수와 거터",
+    "link": "chapters/grid.html#sim-gcol"
+  },
+  {
+    "id": "artbook-type/grid/sim-gb",
+    "bookId": "artbook-type",
+    "title": "엇갈리는 두 단",
+    "link": "chapters/grid.html#sim-gb"
+  },
+  {
+    "id": "artbook-type/grid/sim-gmod",
+    "bookId": "artbook-type",
+    "title": "모듈에 그림 놓기",
+    "link": "chapters/grid.html#sim-gmod"
+  },
+  {
+    "id": "artbook-type/grid/sim-gw",
+    "bookId": "artbook-type",
+    "title": "원고지에서 벗어나는 글자",
+    "link": "chapters/grid.html#sim-gw"
+  },
+  {
+    "id": "artbook-type/grid/sim-gfin",
+    "bookId": "artbook-type",
+    "title": "「골목 산책」 펼침면 설계기",
+    "link": "chapters/grid.html#sim-gfin"
+  },
+  {
+    "id": "artbook-type/hangul/sim-ha-count",
+    "bookId": "artbook-type",
+    "title": "11,172자의 지도",
+    "link": "chapters/hangul.html#sim-ha-count"
+  },
+  {
+    "id": "artbook-type/hangul/sim-ha-moim",
+    "bookId": "artbook-type",
+    "title": "칸 나누기: 받침이 들어오면 위가 눌린다",
+    "link": "chapters/hangul.html#sim-ha-moim"
+  },
+  {
+    "id": "artbook-type/hangul/sim-ha-frame",
+    "bookId": "artbook-type",
+    "title": "네모틀에서 탈네모틀로",
+    "link": "chapters/hangul.html#sim-ha-frame"
+  },
+  {
+    "id": "artbook-type/hangul/sim-ha-weight",
+    "bookId": "artbook-type",
+    "title": "받침이 끌어내리는 무게중심",
+    "link": "chapters/hangul.html#sim-ha-weight"
+  },
+  {
+    "id": "artbook-type/hangul/sim-ha-latin",
+    "bookId": "artbook-type",
+    "title": "한글과 라틴 글자를 한 줄에",
+    "link": "chapters/hangul.html#sim-ha-latin"
+  },
+  {
+    "id": "artbook-type/hangul/sim-ha-dot",
+    "bookId": "artbook-type",
+    "title": "점 하나로 모음 만들기",
+    "link": "chapters/hangul.html#sim-ha-dot"
+  },
+  {
+    "id": "artbook-type/hangul/sim-ha-sign",
+    "bookId": "artbook-type",
+    "title": "간판 \"책방\" 두 글자 설계",
+    "link": "chapters/hangul.html#sim-ha-sign"
+  },
+  {
+    "id": "artbook-type/hierarchy/sim-var",
+    "bookId": "artbook-type",
+    "title": "위계의 다섯 손잡이를 하나씩",
+    "link": "chapters/hierarchy.html#sim-var"
+  },
+  {
+    "id": "artbook-type/hierarchy/sim-scale",
+    "bookId": "artbook-type",
+    "title": "모듈 스케일 만들기",
+    "link": "chapters/hierarchy.html#sim-scale"
+  },
+  {
+    "id": "artbook-type/hierarchy/sim-levels",
+    "bookId": "artbook-type",
+    "title": "단계를 늘리면 이웃 단계가 녹아 붙는다",
+    "link": "chapters/hierarchy.html#sim-levels"
+  },
+  {
+    "id": "artbook-type/hierarchy/sim-weight",
+    "bookId": "artbook-type",
+    "title": "굵게 쓴 작은 글자와 보통 굵기의 큰 글자",
+    "link": "chapters/hierarchy.html#sim-weight"
+  },
+  {
+    "id": "artbook-type/hierarchy/sim-space",
+    "bookId": "artbook-type",
+    "title": "묶음 안의 간격과 묶음 사이의 간격",
+    "link": "chapters/hierarchy.html#sim-space"
+  },
+  {
+    "id": "artbook-type/hierarchy/sim-blur",
+    "bookId": "artbook-type",
+    "title": "흐리게 보면 남는 순서",
+    "link": "chapters/hierarchy.html#sim-blur"
+  },
+  {
+    "id": "artbook-type/hierarchy/sim-design",
+    "bookId": "artbook-type",
+    "title": "「여름 낭독 모임」 안내문 위계 설계기",
+    "link": "chapters/hierarchy.html#sim-design"
+  },
+  {
+    "id": "artbook-type/lab/sim-tl-measure",
+    "bookId": "artbook-type",
+    "title": "글줄 패널: 글줄 폭, 크기, 행간",
+    "link": "chapters/lab.html#sim-tl-measure"
+  },
+  {
+    "id": "artbook-type/lab/sim-tl-track",
+    "bookId": "artbook-type",
+    "title": "자간 패널: 본문 자간과 제목 자간",
+    "link": "chapters/lab.html#sim-tl-track"
+  },
+  {
+    "id": "artbook-type/lab/sim-tl-contrast",
+    "bookId": "artbook-type",
+    "title": "대비 패널: 글자색, 바탕색, 글자 크기",
+    "link": "chapters/lab.html#sim-tl-contrast"
+  },
+  {
+    "id": "artbook-type/lab/sim-tl-scale",
+    "bookId": "artbook-type",
+    "title": "위계 패널: 낭독 모임 안내문의 크기 단계",
+    "link": "chapters/lab.html#sim-tl-scale"
+  },
+  {
+    "id": "artbook-type/lab/sim-tl-align",
+    "bookId": "artbook-type",
+    "title": "정렬 패널: 「골목 산책」 한 쪽의 정렬과 줄바꿈",
+    "link": "chapters/lab.html#sim-tl-align"
+  },
+  {
+    "id": "artbook-type/lab/sim-tl-cost",
+    "bookId": "artbook-type",
+    "title": "용량 패널: 글 한 편이 받는 글꼴 조각",
+    "link": "chapters/lab.html#sim-tl-cost"
+  },
+  {
+    "id": "artbook-type/lab/sim-tl-lab",
+    "bookId": "artbook-type",
+    "title": "조판 실험실",
+    "link": "chapters/lab.html#sim-tl-lab"
+  },
+  {
+    "id": "artbook-type/leading/sim-ld-lh",
+    "bookId": "artbook-type",
+    "title": "줄 높이 끌기",
+    "link": "chapters/leading.html#sim-ld-lh"
+  },
+  {
+    "id": "artbook-type/leading/sim-ld-measure",
+    "bookId": "artbook-type",
+    "title": "단의 폭 끌기",
+    "link": "chapters/leading.html#sim-ld-measure"
+  },
+  {
+    "id": "artbook-type/leading/sim-ld-sweep",
+    "bookId": "artbook-type",
+    "title": "되돌아가기의 과녁",
+    "link": "chapters/leading.html#sim-ld-sweep"
+  },
+  {
+    "id": "artbook-type/leading/sim-ld-mesh",
+    "bookId": "artbook-type",
+    "title": "글줄 길이 × 행간 지도",
+    "link": "chapters/leading.html#sim-ld-mesh"
+  },
+  {
+    "id": "artbook-type/leading/sim-ld-script",
+    "bookId": "artbook-type",
+    "title": "같은 행간, 다른 빈 띠",
+    "link": "chapters/leading.html#sim-ld-script"
+  },
+  {
+    "id": "artbook-type/leading/sim-ld-news",
+    "bookId": "artbook-type",
+    "title": "서점 소식 조판 작업대",
+    "link": "chapters/leading.html#sim-ld-news"
+  },
+  {
+    "id": "artbook-type/overview/sim-ov-voice",
+    "bookId": "artbook-type",
+    "title": "같은 문장, 네 가지 목소리",
+    "link": "chapters/overview.html#sim-ov-voice"
+  },
+  {
+    "id": "artbook-type/overview/sim-ov-box",
+    "bookId": "artbook-type",
+    "title": "보이지 않는 글자 상자",
+    "link": "chapters/overview.html#sim-ov-box"
+  },
+  {
+    "id": "artbook-type/overview/sim-ov-measure",
+    "bookId": "artbook-type",
+    "title": "읽을 수는 있지만 읽고 싶지 않은 글",
+    "link": "chapters/overview.html#sim-ov-measure"
+  },
+  {
+    "id": "artbook-type/overview/sim-ov-squint",
+    "bookId": "artbook-type",
+    "title": "흐리게 보기: 위계가 남는가",
+    "link": "chapters/overview.html#sim-ov-squint"
+  },
+  {
+    "id": "artbook-type/overview/sim-ov-pixel",
+    "bookId": "artbook-type",
+    "title": "픽셀 위의 글자",
+    "link": "chapters/overview.html#sim-ov-pixel"
+  },
+  {
+    "id": "artbook-type/overview/sim-ov-map",
+    "bookId": "artbook-type",
+    "title": "네 손잡이로 짜는 한 단락",
+    "link": "chapters/overview.html#sim-ov-map"
+  },
+  {
+    "id": "artbook-type/readability/sim-confuse",
+    "bookId": "artbook-type",
+    "title": "헷갈리는 글자 짝은 언제 무너지나",
+    "link": "chapters/readability.html#sim-confuse"
+  },
+  {
+    "id": "artbook-type/readability/sim-angle",
+    "bookId": "artbook-type",
+    "title": "글자 크기를 시각으로 바꾸기",
+    "link": "chapters/readability.html#sim-angle"
+  },
+  {
+    "id": "artbook-type/readability/sim-contrast",
+    "bookId": "artbook-type",
+    "title": "대비비는 크기마다 다른 문턱을 넘는다",
+    "link": "chapters/readability.html#sim-contrast"
+  },
+  {
+    "id": "artbook-type/readability/sim-eye",
+    "bookId": "artbook-type",
+    "title": "흐린 초점과 빛의 막이 끼면",
+    "link": "chapters/readability.html#sim-eye"
+  },
+  {
+    "id": "artbook-type/readability/sim-serif",
+    "bookId": "artbook-type",
+    "title": "명조와 고딕: 같은 크기, 같은 x높이, 거친 화면",
+    "link": "chapters/readability.html#sim-serif"
+  },
+  {
+    "id": "artbook-type/readability/sim-crowd",
+    "bookId": "artbook-type",
+    "title": "밀집 효과: 옆 글자가 가까우면 가운데 글자가 지워진다",
+    "link": "chapters/readability.html#sim-crowd"
+  },
+  {
+    "id": "artbook-type/readability/sim-check",
+    "bookId": "artbook-type",
+    "title": "「책방 E 소식」 판독 점검기",
+    "link": "chapters/readability.html#sim-check"
+  },
+  {
+    "id": "artbook-type/screen/sim-sc-raster",
+    "bookId": "artbook-type",
+    "title": "픽셀 격자 위의 글자",
+    "link": "chapters/screen.html#sim-sc-raster"
+  },
+  {
+    "id": "artbook-type/screen/sim-sc-hint",
+    "bookId": "artbook-type",
+    "title": "힌팅: 획을 격자에 맞추기",
+    "link": "chapters/screen.html#sim-sc-hint"
+  },
+  {
+    "id": "artbook-type/screen/sim-sc-slice",
+    "bookId": "artbook-type",
+    "title": "글자 수와 웹폰트 조각",
+    "link": "chapters/screen.html#sim-sc-slice"
+  },
+  {
+    "id": "artbook-type/screen/sim-sc-display",
+    "bookId": "artbook-type",
+    "title": "font-display: 숨길까, 바꿀까",
+    "link": "chapters/screen.html#sim-sc-display"
+  },
+  {
+    "id": "artbook-type/screen/sim-sc-var",
+    "bookId": "artbook-type",
+    "title": "가변 글꼴: 마스터 사이를 섞기",
+    "link": "chapters/screen.html#sim-sc-var"
+  },
+  {
+    "id": "artbook-type/screen/sim-sc-clamp",
+    "bookId": "artbook-type",
+    "title": "clamp()로 짜는 반응형 글자 크기",
+    "link": "chapters/screen.html#sim-sc-clamp"
+  },
+  {
+    "id": "artbook-type/screen/sim-sc-page",
+    "bookId": "artbook-type",
+    "title": "서점 소식 페이지 조판기",
+    "link": "chapters/screen.html#sim-sc-page"
+  },
+  {
+    "id": "artbook-type/spacing/sim-sp-gray",
+    "bookId": "artbook-type",
+    "title": "글줄의 회색",
+    "link": "chapters/spacing.html#sim-sp-gray"
+  },
+  {
+    "id": "artbook-type/spacing/sim-sp-kern",
+    "bookId": "artbook-type",
+    "title": "손으로 하는 커닝",
+    "link": "chapters/spacing.html#sim-sp-kern"
+  },
+  {
+    "id": "artbook-type/spacing/sim-sp-cmp",
+    "bookId": "artbook-type",
+    "title": "커닝 없음과 커닝 있음",
+    "link": "chapters/spacing.html#sim-sp-cmp"
+  },
+  {
+    "id": "artbook-type/spacing/sim-sp-hangul",
+    "bookId": "artbook-type",
+    "title": "한글 한 줄의 자간",
+    "link": "chapters/spacing.html#sim-sp-hangul"
+  },
+  {
+    "id": "artbook-type/spacing/sim-sp-size",
+    "bookId": "artbook-type",
+    "title": "크기별 트래킹 곡선",
+    "link": "chapters/spacing.html#sim-sp-size"
+  },
+  {
+    "id": "artbook-type/spacing/sim-sp-sign",
+    "bookId": "artbook-type",
+    "title": "간판 커닝 작업대",
+    "link": "chapters/spacing.html#sim-sp-sign"
   }
 ]

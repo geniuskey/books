@@ -1778,16 +1778,41 @@
       "code": "TYP",
       "title": "ArtBook 타이포",
       "subtitle": "타이포그래피",
-      "field": "art",
-      "status": "planned",
-      "phase": 2,
+      "headline": "좋은 글자는 읽는 동안 보이지 않는다",
+      "description": "글자의 해부, 한글의 구조, 글꼴의 갈래, 자간과 커닝, 행간과 글줄 길이, 가독성 연구의 실제, 위계, 그리드, 정렬, 화면의 글자와 웹폰트, 제목과 레터링까지. 한글과 라틴 글자를 같은 무게로 다루며 슬라이더로 직접 조판해 보는 ArtBook 서가의 네 번째 권(TypeBook)입니다.",
+      "url": "https://artbook.euiyun.com/type/",
       "repo": "https://github.com/geniuskey/artbook",
-      "description": "글자의 구조, 한글 타이포그래피, 자간과 행간, 위계, 그리드. 글줄을 조절하며 읽기 쉬운 화면이 만들어지는 이유를 봅니다.",
-      "ideas": [
-        "한글 자소의 구조 해부",
-        "자간·행간 슬라이더와 가독성",
-        "위계 만들기",
-        "그리드 위 지면 배치"
+      "checkout": "artbook/type",
+      "field": "art",
+      "status": "published",
+      "level": "입문",
+      "chapters": 14,
+      "simulators": 88,
+      "color": "#b5179e",
+      "colorDark": "#f27ad8",
+      "topics": [
+        "글자의 해부",
+        "한글의 구조",
+        "자간과 커닝",
+        "행간과 글줄 길이",
+        "가독성",
+        "위계와 그리드",
+        "웹폰트"
+      ],
+      "motif": "letter",
+      "featured": [
+        {
+          "title": "네모틀에서 탈네모틀로",
+          "desc": "같은 한글 문장을 네모틀과 탈네모틀로 바꾸며 윗선, 아랫선, 무게중심이 어떻게 달라지는지 본다",
+          "link": "chapters/hangul.html#sim-ha-frame",
+          "image": "img/sims/artbook-type-sim-ha-frame.jpg"
+        },
+        {
+          "title": "손으로 하는 커닝",
+          "desc": "글자 쌍 사이의 빈 면적을 보며 손잡이를 끌어 고르게 보이는 간격을 직접 찾는다",
+          "link": "chapters/spacing.html#sim-sp-kern",
+          "image": "img/sims/artbook-type-sim-sp-kern.jpg"
+        }
       ]
     },
     {
