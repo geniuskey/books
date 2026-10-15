@@ -28162,5 +28162,515 @@
     "bookId": "artbook-type",
     "title": "간판 커닝 작업대",
     "link": "chapters/spacing.html#sim-sp-sign"
+  },
+  {
+    "id": "artbook-history/ancient/sim-front",
+    "bookId": "artbook-history",
+    "title": "한 시점과 조합된 시점",
+    "link": "chapters/ancient.html#sim-front"
+  },
+  {
+    "id": "artbook-history/ancient/sim-grid",
+    "bookId": "artbook-history",
+    "title": "격자로 옮겨 그리기",
+    "link": "chapters/ancient.html#sim-grid"
+  },
+  {
+    "id": "artbook-history/ancient/sim-scale",
+    "bookId": "artbook-history",
+    "title": "거리로 정한 크기, 중요도로 정한 크기",
+    "link": "chapters/ancient.html#sim-scale"
+  },
+  {
+    "id": "artbook-history/ancient/sim-kouros",
+    "bookId": "artbook-history",
+    "title": "쿠로스를 머리로 재기",
+    "link": "chapters/ancient.html#sim-kouros"
+  },
+  {
+    "id": "artbook-history/ancient/sim-gold",
+    "bookId": "artbook-history",
+    "title": "촛불 아래의 금빛 바탕",
+    "link": "chapters/ancient.html#sim-gold"
+  },
+  {
+    "id": "artbook-history/ancient/sim-pal",
+    "bookId": "artbook-history",
+    "title": "3,000년의 팔레트",
+    "link": "chapters/ancient.html#sim-pal"
+  },
+  {
+    "id": "artbook-history/ancient/sim-pool",
+    "bookId": "artbook-history",
+    "title": "연못 정원: 아는 대로 ↔ 보이는 대로",
+    "link": "chapters/ancient.html#sim-pool"
+  },
+  {
+    "id": "artbook-history/baroque/sim-bq-form",
+    "bookId": "artbook-history",
+    "title": "한 방향의 빛과 주변광: 형태가 떠오르고 사라지는 곳",
+    "link": "chapters/baroque.html#sim-bq-form"
+  },
+  {
+    "id": "artbook-history/baroque/sim-bq-hist",
+    "bookId": "artbook-history",
+    "title": "어둠의 넓이: 명도 분포 비교",
+    "link": "chapters/baroque.html#sim-bq-hist"
+  },
+  {
+    "id": "artbook-history/baroque/sim-bq-fall",
+    "bookId": "artbook-history",
+    "title": "빛은 거리에 따라 얼마나 줄어드나",
+    "link": "chapters/baroque.html#sim-bq-fall"
+  },
+  {
+    "id": "artbook-history/baroque/sim-bq-diag",
+    "bookId": "artbook-history",
+    "title": "사선 읽기: 주축선과 테두리 방향 분포",
+    "link": "chapters/baroque.html#sim-bq-diag"
+  },
+  {
+    "id": "artbook-history/baroque/sim-bq-imp",
+    "bookId": "artbook-history",
+    "title": "임파스토: 두꺼운 물감이 빛을 받는 법",
+    "link": "chapters/baroque.html#sim-bq-imp"
+  },
+  {
+    "id": "artbook-history/baroque/sim-bq-stage",
+    "bookId": "artbook-history",
+    "title": "불 끈 방의 정물: 한 줄기 빛 설계기",
+    "link": "chapters/baroque.html#sim-bq-stage"
+  },
+  {
+    "id": "artbook-history/dutch/sim-dt-size",
+    "bookId": "artbook-history",
+    "title": "실제 크기로 한 벽에 걸기",
+    "link": "chapters/dutch.html#sim-dt-size"
+  },
+  {
+    "id": "artbook-history/dutch/sim-dt-gloss",
+    "bookId": "artbook-history",
+    "title": "같은 공, 다른 재질: 하이라이트 읽기",
+    "link": "chapters/dutch.html#sim-dt-gloss"
+  },
+  {
+    "id": "artbook-history/dutch/sim-dt-palette",
+    "bookId": "artbook-history",
+    "title": "단색조와 과시 정물: 팔레트 뽑기",
+    "link": "chapters/dutch.html#sim-dt-palette"
+  },
+  {
+    "id": "artbook-history/dutch/sim-dt-sky",
+    "bookId": "artbook-history",
+    "title": "지평선을 끌어 하늘의 몫 재기",
+    "link": "chapters/dutch.html#sim-dt-sky"
+  },
+  {
+    "id": "artbook-history/dutch/sim-dt-window",
+    "bookId": "artbook-history",
+    "title": "창에서 멀어지는 벽: 면 광원의 그라데이션",
+    "link": "chapters/dutch.html#sim-dt-window"
+  },
+  {
+    "id": "artbook-history/dutch/sim-dt-room",
+    "bookId": "artbook-history",
+    "title": "창이 있는 방: 눈높이와 빛과 사람",
+    "link": "chapters/dutch.html#sim-dt-room"
+  },
+  {
+    "id": "artbook-history/eastasia/sim-ea-prof",
+    "bookId": "artbook-history",
+    "title": "족자를 아래에서 위로: 높이에 따른 먹",
+    "link": "chapters/eastasia.html#sim-ea-prof"
+  },
+  {
+    "id": "artbook-history/eastasia/sim-ea-brush",
+    "bookId": "artbook-history",
+    "title": "붓 한 획: 속도, 먹, 물",
+    "link": "chapters/eastasia.html#sim-ea-brush"
+  },
+  {
+    "id": "artbook-history/eastasia/sim-ea-cun",
+    "bookId": "artbook-history",
+    "title": "돋보기로 준법 찾기",
+    "link": "chapters/eastasia.html#sim-ea-cun"
+  },
+  {
+    "id": "artbook-history/eastasia/sim-ea-insc",
+    "bookId": "artbook-history",
+    "title": "글씨를 옮겨 보기: 제발의 자리",
+    "link": "chapters/eastasia.html#sim-ea-insc"
+  },
+  {
+    "id": "artbook-history/eastasia/sim-ea-scroll",
+    "bookId": "artbook-history",
+    "title": "두루마리 펼치기: 오른쪽에서 왼쪽으로",
+    "link": "chapters/eastasia.html#sim-ea-scroll"
+  },
+  {
+    "id": "artbook-history/eastasia/sim-ea-map",
+    "bookId": "artbook-history",
+    "title": "이름표와 측정값",
+    "link": "chapters/eastasia.html#sim-ea-map"
+  },
+  {
+    "id": "artbook-history/eastasia/sim-ea-stage",
+    "bookId": "artbook-history",
+    "title": "산수화 무대: 구도·준법·여백",
+    "link": "chapters/eastasia.html#sim-ea-stage"
+  },
+  {
+    "id": "artbook-history/glossary/sim-score",
+    "bookId": "artbook-history",
+    "title": "나의 점수",
+    "link": "chapters/glossary.html#sim-score"
+  },
+  {
+    "id": "artbook-history/impressionism/sim-im-sun",
+    "bookId": "artbook-history",
+    "title": "해가 움직이는 속도",
+    "link": "chapters/impressionism.html#sim-im-sun"
+  },
+  {
+    "id": "artbook-history/impressionism/sim-im-stroke",
+    "bookId": "artbook-history",
+    "title": "짧은 붓질로 다시 칠하기",
+    "link": "chapters/impressionism.html#sim-im-stroke"
+  },
+  {
+    "id": "artbook-history/impressionism/sim-im-shadow",
+    "bookId": "artbook-history",
+    "title": "햇빛과 하늘빛으로 칠한 그림자",
+    "link": "chapters/impressionism.html#sim-im-shadow"
+  },
+  {
+    "id": "artbook-history/impressionism/sim-im-probe",
+    "bookId": "artbook-history",
+    "title": "그림 속 그림자 재기",
+    "link": "chapters/impressionism.html#sim-im-probe"
+  },
+  {
+    "id": "artbook-history/impressionism/sim-im-crop",
+    "bookId": "artbook-history",
+    "title": "프레임으로 자르기",
+    "link": "chapters/impressionism.html#sim-im-crop"
+  },
+  {
+    "id": "artbook-history/impressionism/sim-im-alley",
+    "bookId": "artbook-history",
+    "title": "골목 야외 사생 실험실",
+    "link": "chapters/impressionism.html#sim-im-alley"
+  },
+  {
+    "id": "artbook-history/korea/sim-ko-bae",
+    "bookId": "artbook-history",
+    "title": "배채: 앞에서 칠하기와 뒤에서 칠하기",
+    "link": "chapters/korea.html#sim-ko-bae"
+  },
+  {
+    "id": "artbook-history/korea/sim-ko-loupe",
+    "bookId": "artbook-history",
+    "title": "초상 돋보기: 가까이서 오래 보기",
+    "link": "chapters/korea.html#sim-ko-loupe"
+  },
+  {
+    "id": "artbook-history/korea/sim-ko-cun",
+    "bookId": "artbook-history",
+    "title": "미점과 수직준으로 산 쌓기",
+    "link": "chapters/korea.html#sim-ko-cun"
+  },
+  {
+    "id": "artbook-history/korea/sim-ko-ring",
+    "bookId": "artbook-history",
+    "title": "둘러앉은 구경꾼: 사람의 고리가 만드는 중심",
+    "link": "chapters/korea.html#sim-ko-ring"
+  },
+  {
+    "id": "artbook-history/korea/sim-ko-shelf",
+    "bookId": "artbook-history",
+    "title": "책장 하나, 세 가지 약속",
+    "link": "chapters/korea.html#sim-ko-shelf"
+  },
+  {
+    "id": "artbook-history/korea/sim-ko-jar",
+    "bookId": "artbook-history",
+    "title": "두 사발을 잇다: 비대칭은 어디서 오는가",
+    "link": "chapters/korea.html#sim-ko-jar"
+  },
+  {
+    "id": "artbook-history/korea/sim-ko-card",
+    "bookId": "artbook-history",
+    "title": "세 렌즈 읽기 카드: 한국 미술 여덟 점",
+    "link": "chapters/korea.html#sim-ko-card"
+  },
+  {
+    "id": "artbook-history/lab/sim-hl-tl",
+    "bookId": "artbook-history",
+    "title": "연대표 위의 99점",
+    "link": "chapters/lab.html#sim-hl-tl"
+  },
+  {
+    "id": "artbook-history/lab/sim-hl-pal",
+    "bookId": "artbook-history",
+    "title": "팔레트와 그 팔레트로만 칠한 그림",
+    "link": "chapters/lab.html#sim-hl-pal"
+  },
+  {
+    "id": "artbook-history/lab/sim-hl-shift",
+    "bookId": "artbook-history",
+    "title": "바니시와 조명이 팔레트를 얼마나 옮기나",
+    "link": "chapters/lab.html#sim-hl-shift"
+  },
+  {
+    "id": "artbook-history/lab/sim-hl-val",
+    "bookId": "artbook-history",
+    "title": "명도 히스토그램과 어둠의 자리",
+    "link": "chapters/lab.html#sim-hl-val"
+  },
+  {
+    "id": "artbook-history/lab/sim-hl-comp",
+    "bookId": "artbook-history",
+    "title": "3분할, 무게중심, 선 방향",
+    "link": "chapters/lab.html#sim-hl-comp"
+  },
+  {
+    "id": "artbook-history/lab/sim-hl-era",
+    "bookId": "artbook-history",
+    "title": "두 무리의 팔레트, 명도, 선 방향",
+    "link": "chapters/lab.html#sim-hl-era"
+  },
+  {
+    "id": "artbook-history/lab/sim-hl-lab",
+    "bookId": "artbook-history",
+    "title": "미술사 실험실",
+    "link": "chapters/lab.html#sim-hl-lab"
+  },
+  {
+    "id": "artbook-history/overview/sim-pal",
+    "bookId": "artbook-history",
+    "title": "그림에서 팔레트 뽑기",
+    "link": "chapters/overview.html#sim-pal"
+  },
+  {
+    "id": "artbook-history/overview/sim-photo",
+    "bookId": "artbook-history",
+    "title": "바니시와 조명이 바꾼 색",
+    "link": "chapters/overview.html#sim-photo"
+  },
+  {
+    "id": "artbook-history/overview/sim-notan",
+    "bookId": "artbook-history",
+    "title": "명암 두세 덩어리로 줄이기",
+    "link": "chapters/overview.html#sim-notan"
+  },
+  {
+    "id": "artbook-history/overview/sim-loupe",
+    "bookId": "artbook-history",
+    "title": "돋보기로 붓질과 판 보기",
+    "link": "chapters/overview.html#sim-loupe"
+  },
+  {
+    "id": "artbook-history/overview/sim-bound",
+    "bookId": "artbook-history",
+    "title": "\"바로크는 어둡다\"는 규칙 시험하기",
+    "link": "chapters/overview.html#sim-bound"
+  },
+  {
+    "id": "artbook-history/overview/sim-tl",
+    "bookId": "artbook-history",
+    "title": "같은 해, 네 지역",
+    "link": "chapters/overview.html#sim-tl"
+  },
+  {
+    "id": "artbook-history/overview/sim-card",
+    "bookId": "artbook-history",
+    "title": "읽기 카드 만들기",
+    "link": "chapters/overview.html#sim-card"
+  },
+  {
+    "id": "artbook-history/post/sim-po-dist",
+    "bookId": "artbook-history",
+    "title": "점묘와 보는 거리",
+    "link": "chapters/post.html#sim-po-dist"
+  },
+  {
+    "id": "artbook-history/post/sim-po-mix",
+    "bookId": "artbook-history",
+    "title": "팔레트에서 섞기와 점으로 나란히 찍기",
+    "link": "chapters/post.html#sim-po-mix"
+  },
+  {
+    "id": "artbook-history/post/sim-po-eye",
+    "bookId": "artbook-history",
+    "title": "한 화면, 두 눈높이",
+    "link": "chapters/post.html#sim-po-eye"
+  },
+  {
+    "id": "artbook-history/post/sim-po-mod",
+    "bookId": "artbook-history",
+    "title": "명암 모델링과 색의 전조",
+    "link": "chapters/post.html#sim-po-mod"
+  },
+  {
+    "id": "artbook-history/post/sim-po-pal",
+    "bookId": "artbook-history",
+    "title": "뉘넌의 팔레트와 파리의 팔레트",
+    "link": "chapters/post.html#sim-po-pal"
+  },
+  {
+    "id": "artbook-history/post/sim-po-flow",
+    "bookId": "artbook-history",
+    "title": "붓질의 결: 방향의 흐름",
+    "link": "chapters/post.html#sim-po-flow"
+  },
+  {
+    "id": "artbook-history/post/sim-po-lab",
+    "bookId": "artbook-history",
+    "title": "후기 인상주의 번역기",
+    "link": "chapters/post.html#sim-po-lab"
+  },
+  {
+    "id": "artbook-history/print/sim-pr-cut",
+    "bookId": "artbook-history",
+    "title": "깎아서 찍기: 볼록판과 거울상",
+    "link": "chapters/print.html#sim-pr-cut"
+  },
+  {
+    "id": "artbook-history/print/sim-pr-hatch",
+    "bookId": "artbook-history",
+    "title": "해칭으로 명도 만들기",
+    "link": "chapters/print.html#sim-pr-hatch"
+  },
+  {
+    "id": "artbook-history/print/sim-pr-sep",
+    "bookId": "artbook-history",
+    "title": "판 나누기: 한 판씩 찍어 쌓기",
+    "link": "chapters/print.html#sim-pr-sep"
+  },
+  {
+    "id": "artbook-history/print/sim-pr-near",
+    "bookId": "artbook-history",
+    "title": "가까운 것을 크게: 근경과 먼 산",
+    "link": "chapters/print.html#sim-pr-near"
+  },
+  {
+    "id": "artbook-history/print/sim-pr-flat",
+    "bookId": "artbook-history",
+    "title": "평평한 색면은 얼마나 넓은가",
+    "link": "chapters/print.html#sim-pr-flat"
+  },
+  {
+    "id": "artbook-history/print/sim-pr-make",
+    "bookId": "artbook-history",
+    "title": "두 판 판화 찍기: 견당, 순서, 보카시",
+    "link": "chapters/print.html#sim-pr-make"
+  },
+  {
+    "id": "artbook-history/renaissance/sim-rn-floor",
+    "bookId": "artbook-history",
+    "title": "알베르티의 창: 바닥 타일 작도",
+    "link": "chapters/renaissance.html#sim-rn-floor"
+  },
+  {
+    "id": "artbook-history/renaissance/sim-rn-vp",
+    "bookId": "artbook-history",
+    "title": "보티첼리의 광장에서 소실점 찾기",
+    "link": "chapters/renaissance.html#sim-rn-vp"
+  },
+  {
+    "id": "artbook-history/renaissance/sim-rn-eye",
+    "bookId": "artbook-history",
+    "title": "지평선은 눈높이: 같은 키의 사람들",
+    "link": "chapters/renaissance.html#sim-rn-eye"
+  },
+  {
+    "id": "artbook-history/renaissance/sim-rn-glaze",
+    "bookId": "artbook-history",
+    "title": "글레이즈를 한 겹씩: 투명한 층과 불투명한 섞기",
+    "link": "chapters/renaissance.html#sim-rn-glaze"
+  },
+  {
+    "id": "artbook-history/renaissance/sim-rn-air",
+    "bookId": "artbook-history",
+    "title": "반 에이크의 먼 산: 가까운 곳과 먼 곳의 색 재기",
+    "link": "chapters/renaissance.html#sim-rn-air"
+  },
+  {
+    "id": "artbook-history/renaissance/sim-rn-sfu",
+    "bookId": "artbook-history",
+    "title": "윤곽선과 스푸마토",
+    "link": "chapters/renaissance.html#sim-rn-sfu"
+  },
+  {
+    "id": "artbook-history/renaissance/sim-rn-stage",
+    "bookId": "artbook-history",
+    "title": "원근 무대 설계기",
+    "link": "chapters/renaissance.html#sim-rn-stage"
+  },
+  {
+    "id": "artbook-history/rococo/sim-rc-orn",
+    "bookId": "artbook-history",
+    "title": "로카유 액자: 비대칭과 말림",
+    "link": "chapters/rococo.html#sim-rc-orn"
+  },
+  {
+    "id": "artbook-history/rococo/sim-rc-line",
+    "bookId": "artbook-history",
+    "title": "S자 선 하나로: 선, 의자 다리, 꽃병",
+    "link": "chapters/rococo.html#sim-rc-line"
+  },
+  {
+    "id": "artbook-history/rococo/sim-rc-tint",
+    "bookId": "artbook-history",
+    "title": "흰색을 섞으면: 파스텔 톤의 길",
+    "link": "chapters/rococo.html#sim-rc-tint"
+  },
+  {
+    "id": "artbook-history/rococo/sim-rc-stage",
+    "bookId": "artbook-history",
+    "title": "얕은 무대와 깊은 무대: 부조 같은 구도",
+    "link": "chapters/rococo.html#sim-rc-stage"
+  },
+  {
+    "id": "artbook-history/rococo/sim-rc-pair",
+    "bookId": "artbook-history",
+    "title": "같은 시대 두 그림: 팔레트 비교기",
+    "link": "chapters/rococo.html#sim-rc-pair"
+  },
+  {
+    "id": "artbook-history/romantic/sim-rm-sub",
+    "bookId": "artbook-history",
+    "title": "숭고의 축척",
+    "link": "chapters/romantic.html#sim-rm-sub"
+  },
+  {
+    "id": "artbook-history/romantic/sim-rm-hue",
+    "bookId": "artbook-history",
+    "title": "두 색의 맞섬 찾기",
+    "link": "chapters/romantic.html#sim-rm-hue"
+  },
+  {
+    "id": "artbook-history/romantic/sim-rm-loupe",
+    "bookId": "artbook-history",
+    "title": "붓질 돋보기: 같은 실제 크기로",
+    "link": "chapters/romantic.html#sim-rm-loupe"
+  },
+  {
+    "id": "artbook-history/romantic/sim-rm-edge",
+    "bookId": "artbook-history",
+    "title": "윤곽의 양",
+    "link": "chapters/romantic.html#sim-rm-edge"
+  },
+  {
+    "id": "artbook-history/romantic/sim-rm-size",
+    "bookId": "artbook-history",
+    "title": "그림의 실제 크기",
+    "link": "chapters/romantic.html#sim-rm-size"
+  },
+  {
+    "id": "artbook-history/romantic/sim-rm-card",
+    "bookId": "artbook-history",
+    "title": "읽기 카드 만들기",
+    "link": "chapters/romantic.html#sim-rm-card"
   }
 ]

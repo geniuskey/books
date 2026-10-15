@@ -1819,17 +1819,42 @@
       "id": "artbook-history",
       "code": "AHI",
       "title": "ArtBook 미술사",
-      "subtitle": "색·구도·기법으로 읽는 미술사",
-      "field": "art",
-      "status": "planned",
-      "phase": 2,
+      "subtitle": "미술사",
+      "headline": "사조는 이름이 아니라 색·구도·기법의 변화다",
+      "description": "고대와 중세, 르네상스, 바로크, 네덜란드 황금기, 로코코와 신고전주의, 낭만주의와 사실주의, 인상주의와 후기 인상주의, 그리고 중국·한국·일본의 회화와 판화까지. 공공 도메인 명작에서 팔레트를 뽑고 구도선을 얹어 시대와 지역을 나란히 읽는 ArtBook 서가의 다섯 번째 권(ArtHistoryBook)입니다.",
+      "url": "https://artbook.euiyun.com/history/",
       "repo": "https://github.com/geniuskey/artbook",
-      "description": "사조의 흐름을 색·구도·기법의 변화로 읽습니다. 공공 도메인 작품 위에 분석 그림을 얹어 시대마다 달라진 눈을 비교합니다.",
-      "ideas": [
-        "시대별 팔레트 변화",
-        "원근법의 등장",
-        "수묵의 농담과 여백",
-        "인상주의의 붓질"
+      "checkout": "artbook/history",
+      "field": "art",
+      "status": "published",
+      "level": "입문",
+      "chapters": 14,
+      "simulators": 85,
+      "color": "#b5179e",
+      "colorDark": "#f27ad8",
+      "topics": [
+        "르네상스와 원근",
+        "바로크의 빛",
+        "인상주의",
+        "동아시아 회화",
+        "한국 미술",
+        "판화와 우키요에",
+        "팔레트 분석"
+      ],
+      "motif": "timeline",
+      "featured": [
+        {
+          "title": "보티첼리의 광장에서 소실점 찾기",
+          "desc": "그림 속 건물 모서리를 따라 선을 끌어 소실점이 한 점에 모이는지, 지평선이 어디인지 직접 찾는다",
+          "link": "chapters/renaissance.html#sim-rn-vp",
+          "image": "img/sims/artbook-history-sim-rn-vp.jpg"
+        },
+        {
+          "title": "두루마리 펼치기",
+          "desc": "원나라 두루마리를 오른쪽에서 왼쪽으로 조금씩 펼치며 시간 속에서 읽히는 동아시아의 화면을 경험한다",
+          "link": "chapters/eastasia.html#sim-ea-scroll",
+          "image": "img/sims/artbook-history-sim-ea-scroll.jpg"
+        }
       ]
     },
     {
