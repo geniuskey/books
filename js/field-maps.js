@@ -63,11 +63,12 @@ window.FIELD_MAPS = {
   },
   art: {
     title: "보는 눈에서 그리는 손까지",
-    desc: "색과 형태가 지각되는 원리에서 구도·드로잉·글자로 화면을 짜는 법, 미술사와 사진으로 이미지를 읽는 법으로 이어집니다.",
+    desc: "색과 형태가 지각되는 원리에서 구도·드로잉·글자로 화면을 짜는 법, 미술사와 사진으로 이미지를 읽는 법, 그리고 웹·제품·산업디자인으로 이어집니다.",
     groups: [
       ["보기", "See", "색이 생기고 달라 보이는 원리", ["artbook-color"]],
       ["짜기와 그리기", "Make", "구도와 드로잉, 글자로 화면을 구성하기", ["artbook-composition", "artbook-drawing", "artbook-type"]],
       ["읽기", "Read", "미술사와 사진으로 이미지를 읽기", ["artbook-history", "artbook-image"]],
+      ["디자인하기", "Design", "웹·디지털 제품·산업 제품으로 쓰이는 디자인", ["artbook-web", "artbook-product", "artbook-industrial"]],
     ],
   },
 };

@@ -577,6 +577,34 @@
       s += `<circle cx="${cx}" cy="${cy}" r="${R}" fill="none" stroke="${W}" stroke-width="1.6"/><path class="cv-pulse" d="${d}" stroke="#ffc46b" stroke-width="1.6" fill="none"/>`;
       return svg(s);
     },
+    // 브라우저 창 안의 열 그리드와 카드, 오른쪽 가장자리 손잡이가 맥동한다(ArtBook 웹)
+    browser() {
+      let s = `<rect x="22" y="14" width="156" height="102" rx="7" fill="none" stroke="${W}" stroke-opacity=".8" stroke-width="1.4"/><line x1="22" x2="178" y1="28" y2="28" stroke="${W}" stroke-opacity=".5"/>`;
+      [0, 1, 2].forEach((i) => { s += `<circle cx="${31 + i * 7}" cy="21" r="2.2" fill="${W}" fill-opacity=".6"/>`; });
+      range(12).forEach((i) => { s += `<rect x="${32 + i * 11.7}" y="34" width="8.5" height="76" fill="${W}" fill-opacity=".08"/>`; });
+      s += `<rect x="32" y="38" width="138" height="10" rx="2" fill="#ffc46b" fill-opacity=".85"/>`;
+      [0, 1, 2, 3].forEach((i) => { s += `<rect x="${32 + i * 35.1}" y="54" width="32" height="48" rx="3" fill="${W}" fill-opacity="${0.18 + i * 0.12}" stroke="${W}" stroke-opacity=".5"/>`; });
+      s += `<circle class="cv-pulse" cx="178" cy="65" r="5" fill="none" stroke="#ffc46b" stroke-width="2"/>`;
+      return svg(s);
+    },
+    // 사용자 흐름도와 줄어드는 퍼널(ArtBook 제품 디자인)
+    userflow() {
+      let s = "";
+      const N = [[30, 30], [78, 30], [126, 30], [174, 30]];
+      N.forEach(([x, y], i) => { s += `<rect x="${x - 16}" y="${y - 10}" width="32" height="20" rx="${i === 3 ? 10 : 3}" fill="${W}" fill-opacity="${i === 3 ? 0.85 : 0.18}" stroke="${W}" stroke-opacity=".7"/>`; if (i < 3) s += `<path class="cv-flow" d="M${x + 17} ${y}H${x + 31}" stroke="${W}" stroke-width="1.6" stroke-dasharray="4 3" fill="none"/>`; });
+      [100, 82, 61, 46].forEach((w, i) => { s += `<rect x="${100 - w * 0.8}" y="${66 + i * 13}" width="${w * 1.6}" height="9" rx="2" fill="#ffc46b" fill-opacity="${0.95 - i * 0.15}"/>`; });
+      return svg(s);
+    },
+    // 클립형 독서등의 측면도와 무게중심(ArtBook 산업디자인)
+    lamp() {
+      let s = `<line x1="20" x2="180" y1="112" y2="112" stroke="${W}" stroke-opacity=".5"/>`;
+      s += `<rect x="70" y="92" width="44" height="20" rx="4" fill="${W}" fill-opacity=".2" stroke="${W}" stroke-opacity=".8"/>`;
+      s += `<path d="M92 92 L112 40" stroke="${W}" stroke-width="5" stroke-linecap="round"/>`;
+      s += `<rect x="100" y="28" width="62" height="14" rx="5" fill="${W}" fill-opacity=".85" transform="rotate(8 112 40)"/>`;
+      s += `<path d="M118 44 L104 92 M150 50 L160 98" stroke="#ffc46b" stroke-opacity=".55" stroke-width="1.2" stroke-dasharray="3 3"/>`;
+      s += `<circle class="cv-pulse" cx="100" cy="84" r="4.5" fill="#ffc46b"/><line x1="100" x2="100" y1="88" y2="112" stroke="#ffc46b" stroke-dasharray="2 2"/>`;
+      return svg(s);
+    },
     grid() {
       let s = "";
       range(4).forEach((j) => range(8).forEach((i) => { s += `<rect x="${36 + i * 20}" y="${14 + j * 26}" width="16" height="22" rx="2" fill="${W}" fill-opacity=".2" stroke="${W}" stroke-opacity=".4"/>`; }));

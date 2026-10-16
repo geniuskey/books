@@ -1898,6 +1898,132 @@
           "image": "img/sims/artbook-image-sim-fc-dof.jpg"
         }
       ]
+    },
+    {
+      "id": "artbook-web",
+      "code": "WEB",
+      "title": "ArtBook 웹",
+      "subtitle": "웹 디자인",
+      "headline": "웹은 크기를 정할 수 없는 캔버스다",
+      "description": "뷰포트와 CSS 픽셀, 박스와 간격, 레이아웃 그리드, 반응형, 디자인 토큰과 다크 모드, 컴포넌트와 상태, 내비게이션, 폼, 모션, 웹 접근성, 성능까지. 창 폭을 끌고 상태를 바꿔 보며 배우는 ArtBook 서가의 일곱 번째 권(WebBook)입니다.",
+      "url": "https://artbook.euiyun.com/web/",
+      "repo": "https://github.com/geniuskey/artbook",
+      "checkout": "artbook/web",
+      "field": "art",
+      "status": "published",
+      "level": "입문",
+      "chapters": 14,
+      "simulators": 87,
+      "color": "#b5179e",
+      "colorDark": "#f27ad8",
+      "topics": [
+        "뷰포트",
+        "박스와 간격",
+        "레이아웃 그리드",
+        "반응형",
+        "디자인 토큰",
+        "컴포넌트와 상태",
+        "웹 접근성"
+      ],
+      "motif": "browser",
+      "featured": [
+        {
+          "title": "화면 폭을 끌어 보는 열 그리드",
+          "desc": "창의 오른쪽 가장자리를 끌어 12열 그리드와 카드가 화면 폭에 따라 어떻게 나뉘고 다시 짜이는지 본다",
+          "link": "chapters/grid.html#sim-arith",
+          "image": "img/sims/artbook-web-sim-arith.jpg"
+        },
+        {
+          "title": "clamp()로 잇는 제목 크기",
+          "desc": "가장 작은 화면과 가장 넓은 화면의 크기를 정하고 그 사이를 선형으로 잇는 반응형 글자 크기를 직접 만든다",
+          "link": "chapters/responsive.html#sim-rs-clamp",
+          "image": "img/sims/artbook-web-sim-rs-clamp.jpg"
+        }
+      ]
+    },
+    {
+      "id": "artbook-product",
+      "code": "PRD",
+      "title": "ArtBook 제품 디자인",
+      "subtitle": "디지털 제품 디자인",
+      "headline": "화면을 그리기 전에 문제를 고른다",
+      "description": "사용자 조사, 문제 정의, 정보 구조, 사용자 흐름, 상호작용의 원리, 프로토타입, 사용성 테스트, 지표와 A/B 테스트, UX 라이팅, 디자인 시스템, 다크 패턴과 윤리까지. 묻고 그리고 시험해 보며 배우는 ArtBook 서가의 여덟 번째 권(ProductBook)입니다.",
+      "url": "https://artbook.euiyun.com/product/",
+      "repo": "https://github.com/geniuskey/artbook",
+      "checkout": "artbook/product",
+      "field": "art",
+      "status": "published",
+      "level": "입문",
+      "chapters": 14,
+      "simulators": 84,
+      "color": "#b5179e",
+      "colorDark": "#f27ad8",
+      "topics": [
+        "사용자 조사",
+        "정보 구조",
+        "사용자 흐름",
+        "프로토타입",
+        "사용성 테스트",
+        "A/B 테스트",
+        "UX 라이팅"
+      ],
+      "motif": "userflow",
+      "featured": [
+        {
+          "title": "흐름도를 고치면 퍼널이 바뀐다",
+          "desc": "서비스의 단계를 빼고 넣으며 끝까지 가는 사람의 비율이 어떻게 달라지는지 퍼널로 본다",
+          "link": "chapters/flow.html#sim-editor",
+          "image": "img/sims/artbook-product-sim-editor.jpg"
+        },
+        {
+          "title": "유의해지는 날 멈추면",
+          "desc": "차이가 없는 A/B 테스트를 날마다 들여다보다 유의해지는 순간 멈추면 얼마나 자주 틀린 결론을 내는지 확인한다",
+          "link": "chapters/metrics.html#sim-pk",
+          "image": "img/sims/artbook-product-sim-pk.jpg"
+        }
+      ]
+    },
+    {
+      "id": "artbook-industrial",
+      "code": "IND",
+      "title": "ArtBook 산업디자인",
+      "subtitle": "산업디자인",
+      "headline": "물건은 손에서 완성된다",
+      "description": "제품 스케치와 도면, 형태와 곡면, 비례와 안정, 인간공학과 인체 치수, 조작과 피드백, 재료, 사출 성형 등 생산 공정, 구조와 조립, 색·재료·마감(CMF), 수명과 지속가능성, 산업디자인의 역사까지. 형태를 돌리고 손에 쥐어 보며 배우는 ArtBook 서가의 아홉 번째 권(IndustrialBook)입니다.",
+      "url": "https://artbook.euiyun.com/industrial/",
+      "repo": "https://github.com/geniuskey/artbook",
+      "checkout": "artbook/industrial",
+      "field": "art",
+      "status": "published",
+      "level": "입문",
+      "chapters": 14,
+      "simulators": 82,
+      "color": "#b5179e",
+      "colorDark": "#f27ad8",
+      "topics": [
+        "스케치와 도면",
+        "형태와 곡면",
+        "인간공학",
+        "재료",
+        "사출 성형",
+        "CMF",
+        "지속가능성"
+      ],
+      "motif": "lamp",
+      "featured": [
+        {
+          "title": "도면 대조: 첫 3면도와 최종 도면",
+          "desc": "클립형 독서등의 첫 스케치와 양산 도면을 3D로 돌려 보며 치수 하나가 무게와 넘어짐을 어떻게 바꾸는지 본다",
+          "link": "chapters/lab.html#sim-pl-draw",
+          "image": "img/sims/artbook-industrial-sim-pl-draw.jpg"
+        },
+        {
+          "title": "설계 한계와 수용 비율",
+          "desc": "손 길이 분포 위에서 설계 한계를 끌어 몇 퍼센트의 사람이 제품을 편하게 쓸 수 있는지 읽는다",
+          "link": "chapters/ergonomics.html#sim-pct",
+          "image": "img/sims/artbook-industrial-sim-pct.jpg"
+        }
+      ]
     }
   ],
   "tools": [

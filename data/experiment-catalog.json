@@ -29188,5 +29188,1523 @@
     "bookId": "artbook-image",
     "title": "종합: 장면에 맞는 카메라와 저장 형식",
     "link": "chapters/pixel.html#sim-px-pipe"
+  },
+  {
+    "id": "artbook-web/access/sim-rotor",
+    "bookId": "artbook-web",
+    "title": "화면 낭독기가 뽑아 보는 목록",
+    "link": "chapters/access.html#sim-rotor"
+  },
+  {
+    "id": "artbook-web/access/sim-kb",
+    "bookId": "artbook-web",
+    "title": "키보드만으로 모임 신청하기",
+    "link": "chapters/access.html#sim-kb"
+  },
+  {
+    "id": "artbook-web/access/sim-alt",
+    "bookId": "artbook-web",
+    "title": "대체 텍스트를 귀로 듣기",
+    "link": "chapters/access.html#sim-alt"
+  },
+  {
+    "id": "artbook-web/access/sim-err",
+    "bookId": "artbook-web",
+    "title": "오류를 보고, 듣기",
+    "link": "chapters/access.html#sim-err"
+  },
+  {
+    "id": "artbook-web/access/sim-con",
+    "bookId": "artbook-web",
+    "title": "안내 글자와 테두리의 대비",
+    "link": "chapters/access.html#sim-con"
+  },
+  {
+    "id": "artbook-web/access/sim-zoom",
+    "bookId": "artbook-web",
+    "title": "400%까지 키워 보기",
+    "link": "chapters/access.html#sim-zoom"
+  },
+  {
+    "id": "artbook-web/box/sim-see",
+    "bookId": "artbook-web",
+    "title": "화면을 상자로 보기",
+    "link": "chapters/box.html#sim-see"
+  },
+  {
+    "id": "artbook-web/box/sim-model",
+    "bookId": "artbook-web",
+    "title": "네 겹을 끌어 보는 박스 모델",
+    "link": "chapters/box.html#sim-model"
+  },
+  {
+    "id": "artbook-web/box/sim-sizing",
+    "bookId": "artbook-web",
+    "title": "50% 두 장이 한 줄에 들어갈까",
+    "link": "chapters/box.html#sim-sizing"
+  },
+  {
+    "id": "artbook-web/box/sim-collapse",
+    "bookId": "artbook-web",
+    "title": "더해질까, 겹칠까",
+    "link": "chapters/box.html#sim-collapse"
+  },
+  {
+    "id": "artbook-web/box/sim-steps",
+    "bookId": "artbook-web",
+    "title": "간격 단계 만들기",
+    "link": "chapters/box.html#sim-steps"
+  },
+  {
+    "id": "artbook-web/box/sim-snap",
+    "bookId": "artbook-web",
+    "title": "시안의 간격을 단계에 맞추기",
+    "link": "chapters/box.html#sim-snap"
+  },
+  {
+    "id": "artbook-web/box/sim-prox",
+    "bookId": "artbook-web",
+    "title": "안쪽 간격 < 바깥 간격",
+    "link": "chapters/box.html#sim-prox"
+  },
+  {
+    "id": "artbook-web/components/sim-cp-states",
+    "bookId": "artbook-web",
+    "title": "버튼의 상태 표",
+    "link": "chapters/components.html#sim-cp-states"
+  },
+  {
+    "id": "artbook-web/components/sim-cp-focus",
+    "bookId": "artbook-web",
+    "title": "어떤 바탕에서도 보이는 포커스 링",
+    "link": "chapters/components.html#sim-cp-focus"
+  },
+  {
+    "id": "artbook-web/components/sim-cp-size",
+    "bookId": "artbook-web",
+    "title": "글자가 커지면 버튼은?",
+    "link": "chapters/components.html#sim-cp-size"
+  },
+  {
+    "id": "artbook-web/components/sim-cp-touch",
+    "bookId": "artbook-web",
+    "title": "손가락은 흩어져 닿는다",
+    "link": "chapters/components.html#sim-cp-touch"
+  },
+  {
+    "id": "artbook-web/components/sim-cp-fitts",
+    "bookId": "artbook-web",
+    "title": "거리와 폭의 비",
+    "link": "chapters/components.html#sim-cp-fitts"
+  },
+  {
+    "id": "artbook-web/components/sim-cp-hover",
+    "bookId": "artbook-web",
+    "title": "호버 뒤에 숨긴 정보",
+    "link": "chapters/components.html#sim-cp-hover"
+  },
+  {
+    "id": "artbook-web/forms/sim-label",
+    "bookId": "artbook-web",
+    "title": "라벨, 자리표시자, 떠오르는 라벨",
+    "link": "chapters/forms.html#sim-label"
+  },
+  {
+    "id": "artbook-web/forms/sim-width",
+    "bookId": "artbook-web",
+    "title": "칸 폭이 주는 단서",
+    "link": "chapters/forms.html#sim-width"
+  },
+  {
+    "id": "artbook-web/forms/sim-kbd",
+    "bookId": "artbook-web",
+    "title": "칸이 부르는 키보드",
+    "link": "chapters/forms.html#sim-kbd"
+  },
+  {
+    "id": "artbook-web/forms/sim-phone",
+    "bookId": "artbook-web",
+    "title": "엄격한 칸, 너그러운 칸",
+    "link": "chapters/forms.html#sim-phone"
+  },
+  {
+    "id": "artbook-web/forms/sim-valid",
+    "bookId": "artbook-web",
+    "title": "오류를 알리는 시점과 자리",
+    "link": "chapters/forms.html#sim-valid"
+  },
+  {
+    "id": "artbook-web/forms/sim-scroll",
+    "bookId": "artbook-web",
+    "title": "화면 밖의 오류",
+    "link": "chapters/forms.html#sim-scroll"
+  },
+  {
+    "id": "artbook-web/forms/sim-steps",
+    "bookId": "artbook-web",
+    "title": "단계를 나누면 끝까지 가는가(가상 모형)",
+    "link": "chapters/forms.html#sim-steps"
+  },
+  {
+    "id": "artbook-web/glossary/sim-score",
+    "bookId": "artbook-web",
+    "title": "나의 점수",
+    "link": "chapters/glossary.html#sim-score"
+  },
+  {
+    "id": "artbook-web/grid/sim-arith",
+    "bookId": "artbook-web",
+    "title": "화면 폭을 끌어 보는 열 그리드",
+    "link": "chapters/grid.html#sim-arith"
+  },
+  {
+    "id": "artbook-web/grid/sim-span",
+    "bookId": "artbook-web",
+    "title": "단 선에 맞춰 카드 나누기",
+    "link": "chapters/grid.html#sim-span"
+  },
+  {
+    "id": "artbook-web/grid/sim-fr",
+    "bookId": "artbook-web",
+    "title": "fr이 나누는 남는 공간",
+    "link": "chapters/grid.html#sim-fr"
+  },
+  {
+    "id": "artbook-web/grid/sim-axis",
+    "bookId": "artbook-web",
+    "title": "마지막 줄이 말해 주는 것",
+    "link": "chapters/grid.html#sim-axis"
+  },
+  {
+    "id": "artbook-web/grid/sim-auto",
+    "bookId": "artbook-web",
+    "title": "카드 최소 폭이 정하는 톱니",
+    "link": "chapters/grid.html#sim-auto"
+  },
+  {
+    "id": "artbook-web/grid/sim-break",
+    "bookId": "artbook-web",
+    "title": "깬 것과 어긋난 것",
+    "link": "chapters/grid.html#sim-break"
+  },
+  {
+    "id": "artbook-web/grid/sim-books",
+    "bookId": "artbook-web",
+    "title": "책방 E 신간 목록",
+    "link": "chapters/grid.html#sim-books"
+  },
+  {
+    "id": "artbook-web/lab/sim-wl-width",
+    "bookId": "artbook-web",
+    "title": "폭 패널: 같은 첫 화면, 폭과 글자 크기",
+    "link": "chapters/lab.html#sim-wl-width"
+  },
+  {
+    "id": "artbook-web/lab/sim-wl-space",
+    "bookId": "artbook-web",
+    "title": "간격·그리드 패널: 행사 일정 페이지",
+    "link": "chapters/lab.html#sim-wl-space"
+  },
+  {
+    "id": "artbook-web/lab/sim-wl-color",
+    "bookId": "artbook-web",
+    "title": "토큰·대비 패널: 첫 화면의 글자–바탕 짝",
+    "link": "chapters/lab.html#sim-wl-color"
+  },
+  {
+    "id": "artbook-web/lab/sim-wl-focus",
+    "bookId": "artbook-web",
+    "title": "포커스 패널: Tab으로 한 칸씩",
+    "link": "chapters/lab.html#sim-wl-focus"
+  },
+  {
+    "id": "artbook-web/lab/sim-wl-target",
+    "bookId": "artbook-web",
+    "title": "타깃 패널: 휴대폰의 행사 일정",
+    "link": "chapters/lab.html#sim-wl-target"
+  },
+  {
+    "id": "artbook-web/lab/sim-wl-weight",
+    "bookId": "artbook-web",
+    "title": "용량 패널: 첫 화면 무게와 LCP",
+    "link": "chapters/lab.html#sim-wl-weight"
+  },
+  {
+    "id": "artbook-web/lab/sim-wl-lab",
+    "bookId": "artbook-web",
+    "title": "웹 실험실",
+    "link": "chapters/lab.html#sim-wl-lab"
+  },
+  {
+    "id": "artbook-web/motion/sim-rm",
+    "bookId": "artbook-web",
+    "title": "이 장의 움직임 스위치",
+    "link": "chapters/motion.html#sim-rm"
+  },
+  {
+    "id": "artbook-web/motion/sim-ease",
+    "bookId": "artbook-web",
+    "title": "같은 시간, 다른 빠르기",
+    "link": "chapters/motion.html#sim-ease"
+  },
+  {
+    "id": "artbook-web/motion/sim-bez",
+    "bookId": "artbook-web",
+    "title": "cubic-bezier 편집기",
+    "link": "chapters/motion.html#sim-bez"
+  },
+  {
+    "id": "artbook-web/motion/sim-dur",
+    "bookId": "artbook-web",
+    "title": "지속 시간과 거리",
+    "link": "chapters/motion.html#sim-dur"
+  },
+  {
+    "id": "artbook-web/motion/sim-space",
+    "bookId": "artbook-web",
+    "title": "출발점이 있는 전환, 없는 전환",
+    "link": "chapters/motion.html#sim-space"
+  },
+  {
+    "id": "artbook-web/motion/sim-stag",
+    "bookId": "artbook-web",
+    "title": "차례 등장의 총 시간",
+    "link": "chapters/motion.html#sim-stag"
+  },
+  {
+    "id": "artbook-web/motion/sim-para",
+    "bookId": "artbook-web",
+    "title": "시차 스크롤과 확대",
+    "link": "chapters/motion.html#sim-para"
+  },
+  {
+    "id": "artbook-web/motion/sim-alt",
+    "bookId": "artbook-web",
+    "title": "줄인다는 것은 바꾸는 것",
+    "link": "chapters/motion.html#sim-alt"
+  },
+  {
+    "id": "artbook-web/navigation/sim-nv-patterns",
+    "bookId": "artbook-web",
+    "title": "같은 메뉴, 세 가지 패턴",
+    "link": "chapters/navigation.html#sim-nv-patterns"
+  },
+  {
+    "id": "artbook-web/navigation/sim-nv-discover",
+    "bookId": "artbook-web",
+    "title": "손님 100명의 길 찾기(교육용 가정)",
+    "link": "chapters/navigation.html#sim-nv-discover"
+  },
+  {
+    "id": "artbook-web/navigation/sim-nv-here",
+    "bookId": "artbook-web",
+    "title": "현재 위치를 알리는 단서",
+    "link": "chapters/navigation.html#sim-nv-here"
+  },
+  {
+    "id": "artbook-web/navigation/sim-nv-crumb",
+    "bookId": "artbook-web",
+    "title": "빵부스러기 줄이기",
+    "link": "chapters/navigation.html#sim-nv-crumb"
+  },
+  {
+    "id": "artbook-web/navigation/sim-nv-links",
+    "bookId": "artbook-web",
+    "title": "링크만 떼어 읽기",
+    "link": "chapters/navigation.html#sim-nv-links"
+  },
+  {
+    "id": "artbook-web/navigation/sim-nv-search",
+    "bookId": "artbook-web",
+    "title": "책 한 권을 찾는 세 가지 길(교육용 가정)",
+    "link": "chapters/navigation.html#sim-nv-search"
+  },
+  {
+    "id": "artbook-web/overview/sim-ov-three",
+    "bookId": "artbook-web",
+    "title": "같은 페이지, 세 화면",
+    "link": "chapters/overview.html#sim-ov-three"
+  },
+  {
+    "id": "artbook-web/overview/sim-ov-fluid",
+    "bookId": "artbook-web",
+    "title": "창 폭을 끌어 보기: 고정 960과 흐름",
+    "link": "chapters/overview.html#sim-ov-fluid"
+  },
+  {
+    "id": "artbook-web/overview/sim-ov-text",
+    "bookId": "artbook-web",
+    "title": "글자를 키우면 메뉴는 어디로 가나",
+    "link": "chapters/overview.html#sim-ov-text"
+  },
+  {
+    "id": "artbook-web/overview/sim-ov-finger",
+    "bookId": "artbook-web",
+    "title": "커서는 점, 손가락은 얼룩",
+    "link": "chapters/overview.html#sim-ov-finger"
+  },
+  {
+    "id": "artbook-web/overview/sim-ov-speed",
+    "bookId": "artbook-web",
+    "title": "첫 화면이 뜨기까지",
+    "link": "chapters/overview.html#sim-ov-speed"
+  },
+  {
+    "id": "artbook-web/overview/sim-ov-map",
+    "bookId": "artbook-web",
+    "title": "한 페이지, 네 가지 질문",
+    "link": "chapters/overview.html#sim-ov-map"
+  },
+  {
+    "id": "artbook-web/performance/sim-budget",
+    "bookId": "artbook-web",
+    "title": "첫 화면 무게 예산",
+    "link": "chapters/performance.html#sim-budget"
+  },
+  {
+    "id": "artbook-web/performance/sim-lcp",
+    "bookId": "artbook-web",
+    "title": "첫 화면 사진과 LCP",
+    "link": "chapters/performance.html#sim-lcp"
+  },
+  {
+    "id": "artbook-web/performance/sim-font",
+    "bookId": "artbook-web",
+    "title": "글자 수와 웹폰트의 무게",
+    "link": "chapters/performance.html#sim-font"
+  },
+  {
+    "id": "artbook-web/performance/sim-cls",
+    "bookId": "artbook-web",
+    "title": "늦게 온 사진과 글꼴이 밀어내는 화면",
+    "link": "chapters/performance.html#sim-cls"
+  },
+  {
+    "id": "artbook-web/performance/sim-inp",
+    "bookId": "artbook-web",
+    "title": "탭에서 다음 화면까지",
+    "link": "chapters/performance.html#sim-inp"
+  },
+  {
+    "id": "artbook-web/performance/sim-skel",
+    "bookId": "artbook-web",
+    "title": "같은 기다림, 다른 화면",
+    "link": "chapters/performance.html#sim-skel"
+  },
+  {
+    "id": "artbook-web/responsive/sim-rs-fluid",
+    "bookId": "artbook-web",
+    "title": "고정폭·유동·최대 폭",
+    "link": "chapters/responsive.html#sim-rs-fluid"
+  },
+  {
+    "id": "artbook-web/responsive/sim-rs-break",
+    "bookId": "artbook-web",
+    "title": "깨지는 곳을 찾아 중단점 두기",
+    "link": "chapters/responsive.html#sim-rs-break"
+  },
+  {
+    "id": "artbook-web/responsive/sim-rs-clamp",
+    "bookId": "artbook-web",
+    "title": "clamp()로 잇는 제목 크기와 간격",
+    "link": "chapters/responsive.html#sim-rs-clamp"
+  },
+  {
+    "id": "artbook-web/responsive/sim-rs-measure",
+    "bookId": "artbook-web",
+    "title": "글줄 길이 상한: px로, em으로",
+    "link": "chapters/responsive.html#sim-rs-measure"
+  },
+  {
+    "id": "artbook-web/responsive/sim-rs-cq",
+    "bookId": "artbook-web",
+    "title": "같은 카드, 다른 자리",
+    "link": "chapters/responsive.html#sim-rs-cq"
+  },
+  {
+    "id": "artbook-web/responsive/sim-rs-srcset",
+    "bookId": "artbook-web",
+    "title": "srcset·sizes: 어느 파일이 내려오나",
+    "link": "chapters/responsive.html#sim-rs-srcset"
+  },
+  {
+    "id": "artbook-web/responsive/sim-rs-lab",
+    "bookId": "artbook-web",
+    "title": "행사 일정 페이지: 첫 시안과 서윤의 선택",
+    "link": "chapters/responsive.html#sim-rs-lab"
+  },
+  {
+    "id": "artbook-web/tokens/sim-tk-tree",
+    "bookId": "artbook-web",
+    "title": "토큰 나무: 한 곳을 바꾸면 따라 바뀌는 것",
+    "link": "chapters/tokens.html#sim-tk-tree"
+  },
+  {
+    "id": "artbook-web/tokens/sim-tk-dark",
+    "bookId": "artbook-web",
+    "title": "어두운 화면을 만드는 세 가지 방법",
+    "link": "chapters/tokens.html#sim-tk-dark"
+  },
+  {
+    "id": "artbook-web/tokens/sim-tk-pairs",
+    "bookId": "artbook-web",
+    "title": "글자 토큰 × 바탕 토큰 대비표",
+    "link": "chapters/tokens.html#sim-tk-pairs"
+  },
+  {
+    "id": "artbook-web/tokens/sim-tk-rem",
+    "bookId": "artbook-web",
+    "title": "기본 글자 크기를 올리면",
+    "link": "chapters/tokens.html#sim-tk-rem"
+  },
+  {
+    "id": "artbook-web/tokens/sim-tk-scale",
+    "bookId": "artbook-web",
+    "title": "비율로 만드는 글자 크기 단계",
+    "link": "chapters/tokens.html#sim-tk-scale"
+  },
+  {
+    "id": "artbook-web/tokens/sim-tk-lab",
+    "bookId": "artbook-web",
+    "title": "행사 일정 페이지: 첫 코드와 서윤의 토큰",
+    "link": "chapters/tokens.html#sim-tk-lab"
+  },
+  {
+    "id": "artbook-web/viewport/sim-vp-meta",
+    "bookId": "artbook-web",
+    "title": "메타 태그 한 줄의 차이",
+    "link": "chapters/viewport.html#sim-vp-meta"
+  },
+  {
+    "id": "artbook-web/viewport/sim-vp-hair",
+    "bookId": "artbook-web",
+    "title": "1px 선은 기기 픽셀 몇 줄인가",
+    "link": "chapters/viewport.html#sim-vp-hair"
+  },
+  {
+    "id": "artbook-web/viewport/sim-vp-img",
+    "bookId": "artbook-web",
+    "title": "사진은 몇 픽셀이어야 하나",
+    "link": "chapters/viewport.html#sim-vp-img"
+  },
+  {
+    "id": "artbook-web/viewport/sim-vp-hist",
+    "bookId": "artbook-web",
+    "title": "한 달 방문자의 화면 폭(가상 자료)",
+    "link": "chapters/viewport.html#sim-vp-hist"
+  },
+  {
+    "id": "artbook-web/viewport/sim-vp-zoom",
+    "bookId": "artbook-web",
+    "title": "페이지 확대와 글자 크기 설정",
+    "link": "chapters/viewport.html#sim-vp-zoom"
+  },
+  {
+    "id": "artbook-web/viewport/sim-vp-fold",
+    "bookId": "artbook-web",
+    "title": "첫 화면의 높이는 사람마다 다르다",
+    "link": "chapters/viewport.html#sim-vp-fold"
+  },
+  {
+    "id": "artbook-web/viewport/sim-vp-crowd",
+    "bookId": "artbook-web",
+    "title": "가상 방문자 100명의 첫 화면",
+    "link": "chapters/viewport.html#sim-vp-crowd"
+  },
+  {
+    "id": "artbook-product/ethics/sim-gallery",
+    "bookId": "artbook-product",
+    "title": "다크 패턴 전후 비교",
+    "link": "chapters/ethics.html#sim-gallery"
+  },
+  {
+    "id": "artbook-product/ethics/sim-cancel",
+    "bookId": "artbook-product",
+    "title": "맡기기 탭 수와 취소 탭 수",
+    "link": "chapters/ethics.html#sim-cancel"
+  },
+  {
+    "id": "artbook-product/ethics/sim-consent",
+    "bookId": "artbook-product",
+    "title": "동의 화면 짜기",
+    "link": "chapters/ethics.html#sim-consent"
+  },
+  {
+    "id": "artbook-product/ethics/sim-minimize",
+    "bookId": "artbook-product",
+    "title": "수집 항목과 보관 기간",
+    "link": "chapters/ethics.html#sim-minimize"
+  },
+  {
+    "id": "artbook-product/ethics/sim-inclusive",
+    "bookId": "artbook-product",
+    "title": "인증번호 시간 제한은 누구를 떨어뜨리나",
+    "link": "chapters/ethics.html#sim-inclusive"
+  },
+  {
+    "id": "artbook-product/ethics/sim-goodhart",
+    "bookId": "artbook-product",
+    "title": "누른 수가 오를 때 일어나는 일",
+    "link": "chapters/ethics.html#sim-goodhart"
+  },
+  {
+    "id": "artbook-product/flow/sim-editor",
+    "bookId": "artbook-product",
+    "title": "흐름도를 고치면 퍼널이 바뀐다",
+    "link": "chapters/flow.html#sim-editor"
+  },
+  {
+    "id": "artbook-product/flow/sim-power",
+    "bookId": "artbook-product",
+    "title": "단계 수는 지수로 작용한다",
+    "link": "chapters/flow.html#sim-power"
+  },
+  {
+    "id": "artbook-product/flow/sim-noise",
+    "bookId": "artbook-product",
+    "title": "몇 명으로 잰 퍼널인가",
+    "link": "chapters/flow.html#sim-noise"
+  },
+  {
+    "id": "artbook-product/flow/sim-branch",
+    "bookId": "artbook-product",
+    "title": "예외에 출구를 내면",
+    "link": "chapters/flow.html#sim-branch"
+  },
+  {
+    "id": "artbook-product/flow/sim-undo",
+    "bookId": "artbook-product",
+    "title": "확인 대화상자 대 되돌리기",
+    "link": "chapters/flow.html#sim-undo"
+  },
+  {
+    "id": "artbook-product/flow/sim-resume",
+    "bookId": "artbook-product",
+    "title": "끊긴 흐름을 이어 가기",
+    "link": "chapters/flow.html#sim-resume"
+  },
+  {
+    "id": "artbook-product/flow/sim-lab",
+    "bookId": "artbook-product",
+    "title": "검색에서 손에 든 책까지",
+    "link": "chapters/flow.html#sim-lab"
+  },
+  {
+    "id": "artbook-product/glossary/sim-score",
+    "bookId": "artbook-product",
+    "title": "나의 점수",
+    "link": "chapters/glossary.html#sim-score"
+  },
+  {
+    "id": "artbook-product/ia/sim-cs",
+    "bookId": "artbook-product",
+    "title": "카드 소팅 유사도 행렬",
+    "link": "chapters/ia.html#sim-cs"
+  },
+  {
+    "id": "artbook-product/ia/sim-dg",
+    "bookId": "artbook-product",
+    "title": "덴드로그램을 어디서 자를까",
+    "link": "chapters/ia.html#sim-dg"
+  },
+  {
+    "id": "artbook-product/ia/sim-tt",
+    "bookId": "artbook-product",
+    "title": "메뉴 구조를 옮기며 트리 테스트",
+    "link": "chapters/ia.html#sim-tt"
+  },
+  {
+    "id": "artbook-product/ia/sim-bd",
+    "bookId": "artbook-product",
+    "title": "한 단계의 항목 수와 찾는 시간",
+    "link": "chapters/ia.html#sim-bd"
+  },
+  {
+    "id": "artbook-product/ia/sim-lb",
+    "bookId": "artbook-product",
+    "title": "이름이 만드는 기대",
+    "link": "chapters/ia.html#sim-lb"
+  },
+  {
+    "id": "artbook-product/ia/sim-rg",
+    "bookId": "artbook-product",
+    "title": "검색 결과를 무엇으로 묶을까",
+    "link": "chapters/ia.html#sim-rg"
+  },
+  {
+    "id": "artbook-product/interaction/sim-status",
+    "bookId": "artbook-product",
+    "title": "같은 요청, 두 화면",
+    "link": "chapters/interaction.html#sim-status"
+  },
+  {
+    "id": "artbook-product/interaction/sim-sign",
+    "bookId": "artbook-product",
+    "title": "어느 것이 눌리나",
+    "link": "chapters/interaction.html#sim-sign"
+  },
+  {
+    "id": "artbook-product/interaction/sim-latency",
+    "bookId": "artbook-product",
+    "title": "대답이 늦은 버튼",
+    "link": "chapters/interaction.html#sim-latency"
+  },
+  {
+    "id": "artbook-product/interaction/sim-stove",
+    "bookId": "artbook-product",
+    "title": "어느 손잡이가 저 화구인가",
+    "link": "chapters/interaction.html#sim-stove"
+  },
+  {
+    "id": "artbook-product/interaction/sim-owner",
+    "bookId": "artbook-product",
+    "title": "주인 화면의 수락과 거절",
+    "link": "chapters/interaction.html#sim-owner"
+  },
+  {
+    "id": "artbook-product/interaction/sim-hick",
+    "bookId": "artbook-product",
+    "title": "선택지 수와 고르는 시간",
+    "link": "chapters/interaction.html#sim-hick"
+  },
+  {
+    "id": "artbook-product/lab/sim-pl-fn",
+    "bookId": "artbook-product",
+    "title": "손님 다섯 칸, 주인 두 칸",
+    "link": "chapters/lab.html#sim-pl-fn"
+  },
+  {
+    "id": "artbook-product/lab/sim-pl-ut",
+    "bookId": "artbook-product",
+    "title": "1차와 2차, 겹치는 구간",
+    "link": "chapters/lab.html#sim-pl-ut"
+  },
+  {
+    "id": "artbook-product/lab/sim-pl-ab",
+    "bookId": "artbook-product",
+    "title": "날마다 들여다본 14일",
+    "link": "chapters/lab.html#sim-pl-ab"
+  },
+  {
+    "id": "artbook-product/lab/sim-pl-rd",
+    "bookId": "artbook-product",
+    "title": "구간이 놓인 자리",
+    "link": "chapters/lab.html#sim-pl-rd"
+  },
+  {
+    "id": "artbook-product/lab/sim-pl-sh",
+    "bookId": "artbook-product",
+    "title": "계산대 뒤에 쌓이는 책",
+    "link": "chapters/lab.html#sim-pl-sh"
+  },
+  {
+    "id": "artbook-product/lab/sim-pl-ck",
+    "bookId": "artbook-product",
+    "title": "일관성 점검판",
+    "link": "chapters/lab.html#sim-pl-ck"
+  },
+  {
+    "id": "artbook-product/lab/sim-pl-lab",
+    "bookId": "artbook-product",
+    "title": "공개 판단대",
+    "link": "chapters/lab.html#sim-pl-lab"
+  },
+  {
+    "id": "artbook-product/metrics/sim-mp",
+    "bookId": "artbook-product",
+    "title": "무엇을 보고 성공이라 할까",
+    "link": "chapters/metrics.html#sim-mp"
+  },
+  {
+    "id": "artbook-product/metrics/sim-day",
+    "bookId": "artbook-product",
+    "title": "아무것도 바꾸지 않은 30일",
+    "link": "chapters/metrics.html#sim-day"
+  },
+  {
+    "id": "artbook-product/metrics/sim-ab",
+    "bookId": "artbook-product",
+    "title": "진짜 차이를 아는 A/B 테스트",
+    "link": "chapters/metrics.html#sim-ab"
+  },
+  {
+    "id": "artbook-product/metrics/sim-aa",
+    "bookId": "artbook-product",
+    "title": "A/A 실험 100번",
+    "link": "chapters/metrics.html#sim-aa"
+  },
+  {
+    "id": "artbook-product/metrics/sim-n",
+    "bookId": "artbook-product",
+    "title": "작은 차이는 큰 표본을 부른다",
+    "link": "chapters/metrics.html#sim-n"
+  },
+  {
+    "id": "artbook-product/metrics/sim-pk",
+    "bookId": "artbook-product",
+    "title": "유의해지는 날 멈추면",
+    "link": "chapters/metrics.html#sim-pk"
+  },
+  {
+    "id": "artbook-product/metrics/sim-nv",
+    "bookId": "artbook-product",
+    "title": "사흘째의 승리, 2주째의 진실",
+    "link": "chapters/metrics.html#sim-nv"
+  },
+  {
+    "id": "artbook-product/overview/sim-sort",
+    "bookId": "artbook-product",
+    "title": "기능인가, 문제인가",
+    "link": "chapters/overview.html#sim-sort"
+  },
+  {
+    "id": "artbook-product/overview/sim-layers",
+    "bookId": "artbook-product",
+    "title": "다섯 층으로 쌓는 화면",
+    "link": "chapters/overview.html#sim-layers"
+  },
+  {
+    "id": "artbook-product/overview/sim-diamond",
+    "bookId": "artbook-product",
+    "title": "12주 안의 두 마름모",
+    "link": "chapters/overview.html#sim-diamond"
+  },
+  {
+    "id": "artbook-product/overview/sim-cost",
+    "bookId": "artbook-product",
+    "title": "틀린 결정을 언제 찾았나",
+    "link": "chapters/overview.html#sim-cost"
+  },
+  {
+    "id": "artbook-product/overview/sim-lens",
+    "bookId": "artbook-product",
+    "title": "네 렌즈로 첫날 밤 화면 읽기",
+    "link": "chapters/overview.html#sim-lens"
+  },
+  {
+    "id": "artbook-product/problem/sim-af",
+    "bookId": "artbook-product",
+    "title": "포스트잇 친화도 묶기",
+    "link": "chapters/problem.html#sim-af"
+  },
+  {
+    "id": "artbook-product/problem/sim-bv",
+    "bookId": "artbook-product",
+    "title": "행동 변수로 유형 찾기",
+    "link": "chapters/problem.html#sim-bv"
+  },
+  {
+    "id": "artbook-product/problem/sim-ps",
+    "bookId": "artbook-product",
+    "title": "특징마다 근거가 몇 명인가",
+    "link": "chapters/problem.html#sim-ps"
+  },
+  {
+    "id": "artbook-product/problem/sim-jm",
+    "bookId": "artbook-product",
+    "title": "감정 곡선과 접점",
+    "link": "chapters/problem.html#sim-jm"
+  },
+  {
+    "id": "artbook-product/problem/sim-jb",
+    "bookId": "artbook-product",
+    "title": "잡 스토리 만들기",
+    "link": "chapters/problem.html#sim-jb"
+  },
+  {
+    "id": "artbook-product/problem/sim-hm",
+    "bookId": "artbook-product",
+    "title": "\"왜?\"와 \"어떻게?\"의 사다리",
+    "link": "chapters/problem.html#sim-hm"
+  },
+  {
+    "id": "artbook-product/problem/sim-pr",
+    "bookId": "artbook-product",
+    "title": "영향 × 빈도 우선순위",
+    "link": "chapters/problem.html#sim-pr"
+  },
+  {
+    "id": "artbook-product/prototype/sim-fd",
+    "bookId": "artbook-product",
+    "title": "세 축으로 바꾸는 결과 화면",
+    "link": "chapters/prototype.html#sim-fd"
+  },
+  {
+    "id": "artbook-product/prototype/sim-c8",
+    "bookId": "artbook-product",
+    "title": "8분, 여덟 칸",
+    "link": "chapters/prototype.html#sim-c8"
+  },
+  {
+    "id": "artbook-product/prototype/sim-sc",
+    "bookId": "artbook-product",
+    "title": "범위 칠하기",
+    "link": "chapters/prototype.html#sim-sc"
+  },
+  {
+    "id": "artbook-product/prototype/sim-wz",
+    "bookId": "artbook-product",
+    "title": "종이 위의 맡아 두기, 무대 뒤의 마법사",
+    "link": "chapters/prototype.html#sim-wz"
+  },
+  {
+    "id": "artbook-product/prototype/sim-qp",
+    "bookId": "artbook-product",
+    "title": "질문 하나, 프로토타입 하나",
+    "link": "chapters/prototype.html#sim-qp"
+  },
+  {
+    "id": "artbook-product/prototype/sim-it",
+    "bookId": "artbook-product",
+    "title": "두 주 동안 몇 번 고칠 수 있나",
+    "link": "chapters/prototype.html#sim-it"
+  },
+  {
+    "id": "artbook-product/research/sim-method",
+    "bookId": "artbook-product",
+    "title": "질문에 맞는 방법 고르기",
+    "link": "chapters/research.html#sim-method"
+  },
+  {
+    "id": "artbook-product/research/sim-rewrite",
+    "bookId": "artbook-product",
+    "title": "질문 고쳐 쓰기",
+    "link": "chapters/research.html#sim-rewrite"
+  },
+  {
+    "id": "artbook-product/research/sim-saydo",
+    "bookId": "artbook-product",
+    "title": "말한 것과 한 것",
+    "link": "chapters/research.html#sim-saydo"
+  },
+  {
+    "id": "artbook-product/research/sim-window",
+    "bookId": "artbook-product",
+    "title": "언제 지켜보느냐가 본 것을 정한다",
+    "link": "chapters/research.html#sim-window"
+  },
+  {
+    "id": "artbook-product/research/sim-sample",
+    "bookId": "artbook-product",
+    "title": "모집 경로와 표본 편향",
+    "link": "chapters/research.html#sim-sample"
+  },
+  {
+    "id": "artbook-product/research/sim-sat",
+    "bookId": "artbook-product",
+    "title": "인터뷰마다 새로 나온 주제",
+    "link": "chapters/research.html#sim-sat"
+  },
+  {
+    "id": "artbook-product/system/sim-graph",
+    "bookId": "artbook-product",
+    "title": "값을 바꾸면 어디까지 번지나",
+    "link": "chapters/system.html#sim-graph"
+  },
+  {
+    "id": "artbook-product/system/sim-theme",
+    "bookId": "artbook-product",
+    "title": "책방별 강조색 한 칸",
+    "link": "chapters/system.html#sim-theme"
+  },
+  {
+    "id": "artbook-product/system/sim-variants",
+    "bookId": "artbook-product",
+    "title": "버튼 변형 계산기",
+    "link": "chapters/system.html#sim-variants"
+  },
+  {
+    "id": "artbook-product/system/sim-audit",
+    "bookId": "artbook-product",
+    "title": "색 감사: 28개의 색을 몇 개로",
+    "link": "chapters/system.html#sim-audit"
+  },
+  {
+    "id": "artbook-product/system/sim-tree",
+    "bookId": "artbook-product",
+    "title": "일관성과 예외의 판단 나무",
+    "link": "chapters/system.html#sim-tree"
+  },
+  {
+    "id": "artbook-product/system/sim-gov",
+    "bookId": "artbook-product",
+    "title": "떠도는 변형: 기여 문턱과 정리 주기",
+    "link": "chapters/system.html#sim-gov"
+  },
+  {
+    "id": "artbook-product/usability/sim-tk",
+    "bookId": "artbook-product",
+    "title": "과업 문장 고쳐 쓰기",
+    "link": "chapters/usability.html#sim-tk"
+  },
+  {
+    "id": "artbook-product/usability/sim-md",
+    "bookId": "artbook-product",
+    "title": "막힌 순간, 진행자의 한 마디",
+    "link": "chapters/usability.html#sim-md"
+  },
+  {
+    "id": "artbook-product/usability/sim-rs",
+    "bookId": "artbook-product",
+    "title": "다섯 명의 성공률은 얼마나 흔들리나",
+    "link": "chapters/usability.html#sim-rs"
+  },
+  {
+    "id": "artbook-product/usability/sim-tm",
+    "bookId": "artbook-product",
+    "title": "느린 한 사람과 세 가지 평균",
+    "link": "chapters/usability.html#sim-tm"
+  },
+  {
+    "id": "artbook-product/usability/sim-sus",
+    "bookId": "artbook-product",
+    "title": "SUS 계산기",
+    "link": "chapters/usability.html#sim-sus"
+  },
+  {
+    "id": "artbook-product/usability/sim-dc",
+    "bookId": "artbook-product",
+    "title": "문제 발견 곡선",
+    "link": "chapters/usability.html#sim-dc"
+  },
+  {
+    "id": "artbook-product/usability/sim-mc",
+    "bookId": "artbook-product",
+    "title": "다섯 명은 어떤 문제를 찾았나",
+    "link": "chapters/usability.html#sim-mc"
+  },
+  {
+    "id": "artbook-product/usability/sim-sv",
+    "bookId": "artbook-product",
+    "title": "무엇부터 고칠까",
+    "link": "chapters/usability.html#sim-sv"
+  },
+  {
+    "id": "artbook-product/writing/sim-bt",
+    "bookId": "artbook-product",
+    "title": "버튼만 보고 누르기",
+    "link": "chapters/writing.html#sim-bt"
+  },
+  {
+    "id": "artbook-product/writing/sim-er",
+    "bookId": "artbook-product",
+    "title": "오류 메시지 고쳐 쓰기",
+    "link": "chapters/writing.html#sim-er"
+  },
+  {
+    "id": "artbook-product/writing/sim-em",
+    "bookId": "artbook-product",
+    "title": "검색 결과가 없을 때",
+    "link": "chapters/writing.html#sim-em"
+  },
+  {
+    "id": "artbook-product/writing/sim-fr",
+    "bookId": "artbook-product",
+    "title": "알림은 어디서 잘리나",
+    "link": "chapters/writing.html#sim-fr"
+  },
+  {
+    "id": "artbook-product/writing/sim-rg",
+    "bookId": "artbook-product",
+    "title": "말투 점검기",
+    "link": "chapters/writing.html#sim-rg"
+  },
+  {
+    "id": "artbook-product/writing/sim-ln",
+    "bookId": "artbook-product",
+    "title": "좁은 화면, 큰 글자, 긴 문구",
+    "link": "chapters/writing.html#sim-ln"
+  },
+  {
+    "id": "artbook-industrial/assembly/sim-rib",
+    "bookId": "artbook-industrial",
+    "title": "리브 하나가 버티는 힘",
+    "link": "chapters/assembly.html#sim-rib"
+  },
+  {
+    "id": "artbook-industrial/assembly/sim-boss",
+    "bookId": "artbook-industrial",
+    "title": "보스의 바깥지름: 갈라짐과 싱크 사이",
+    "link": "chapters/assembly.html#sim-boss"
+  },
+  {
+    "id": "artbook-industrial/assembly/sim-snap",
+    "bookId": "artbook-industrial",
+    "title": "스냅핏 변형률 계산기",
+    "link": "chapters/assembly.html#sim-snap"
+  },
+  {
+    "id": "artbook-industrial/assembly/sim-ang",
+    "bookId": "artbook-industrial",
+    "title": "들어가는 각과 걸림각",
+    "link": "chapters/assembly.html#sim-ang"
+  },
+  {
+    "id": "artbook-industrial/assembly/sim-tol",
+    "bookId": "artbook-industrial",
+    "title": "버튼 틈의 공차 누적",
+    "link": "chapters/assembly.html#sim-tol"
+  },
+  {
+    "id": "artbook-industrial/assembly/sim-dfa",
+    "bookId": "artbook-industrial",
+    "title": "세 질문으로 부품 줄이기",
+    "link": "chapters/assembly.html#sim-dfa"
+  },
+  {
+    "id": "artbook-industrial/cmf/sim-four",
+    "bookId": "artbook-industrial",
+    "title": "같은 색, 네 개의 표면",
+    "link": "chapters/cmf.html#sim-four"
+  },
+  {
+    "id": "artbook-industrial/cmf/sim-gloss",
+    "bookId": "artbook-industrial",
+    "title": "거칠기와 광택",
+    "link": "chapters/cmf.html#sim-gloss"
+  },
+  {
+    "id": "artbook-industrial/cmf/sim-veil",
+    "bookId": "artbook-industrial",
+    "title": "같은 안료, 다른 광택",
+    "link": "chapters/cmf.html#sim-veil"
+  },
+  {
+    "id": "artbook-industrial/cmf/sim-tex",
+    "bookId": "artbook-industrial",
+    "title": "질감 등급과 구배각",
+    "link": "chapters/cmf.html#sim-tex"
+  },
+  {
+    "id": "artbook-industrial/cmf/sim-match",
+    "bookId": "artbook-industrial",
+    "title": "배치 다섯, 허용차 하나",
+    "link": "chapters/cmf.html#sim-match"
+  },
+  {
+    "id": "artbook-industrial/cmf/sim-meta",
+    "bookId": "artbook-industrial",
+    "title": "빛을 바꾸면 갈라지는 두 견본",
+    "link": "chapters/cmf.html#sim-meta"
+  },
+  {
+    "id": "artbook-industrial/control/sim-ft",
+    "bookId": "artbook-industrial",
+    "title": "클릭감 편집기",
+    "link": "chapters/control.html#sim-ft"
+  },
+  {
+    "id": "artbook-industrial/control/sim-dish",
+    "bookId": "artbook-industrial",
+    "title": "어둠 속에서 버튼 찾기",
+    "link": "chapters/control.html#sim-dish"
+  },
+  {
+    "id": "artbook-industrial/control/sim-map",
+    "bookId": "artbook-industrial",
+    "title": "손잡이 배치와 실수",
+    "link": "chapters/control.html#sim-map"
+  },
+  {
+    "id": "artbook-industrial/control/sim-fsm",
+    "bookId": "artbook-industrial",
+    "title": "버튼 하나의 규칙",
+    "link": "chapters/control.html#sim-fsm"
+  },
+  {
+    "id": "artbook-industrial/control/sim-fb",
+    "bookId": "artbook-industrial",
+    "title": "어둠 속의 피드백",
+    "link": "chapters/control.html#sim-fb"
+  },
+  {
+    "id": "artbook-industrial/control/sim-pk",
+    "bookId": "artbook-industrial",
+    "title": "한쪽으로만, 아니면 어느 쪽으로든",
+    "link": "chapters/control.html#sim-pk"
+  },
+  {
+    "id": "artbook-industrial/ergonomics/sim-pct",
+    "bookId": "artbook-industrial",
+    "title": "설계 한계와 수용 비율",
+    "link": "chapters/ergonomics.html#sim-pct"
+  },
+  {
+    "id": "artbook-industrial/ergonomics/sim-avg",
+    "bookId": "artbook-industrial",
+    "title": "모든 치수에서 평균인 사람 찾기",
+    "link": "chapters/ergonomics.html#sim-avg"
+  },
+  {
+    "id": "artbook-industrial/ergonomics/sim-adj",
+    "bookId": "artbook-industrial",
+    "title": "필요한 조절 폭",
+    "link": "chapters/ergonomics.html#sim-adj"
+  },
+  {
+    "id": "artbook-industrial/ergonomics/sim-grip",
+    "bookId": "artbook-industrial",
+    "title": "손잡이 지름과 감싸기",
+    "link": "chapters/ergonomics.html#sim-grip"
+  },
+  {
+    "id": "artbook-industrial/ergonomics/sim-clip",
+    "bookId": "artbook-industrial",
+    "title": "클립을 열어 보기",
+    "link": "chapters/ergonomics.html#sim-clip"
+  },
+  {
+    "id": "artbook-industrial/ergonomics/sim-win",
+    "bookId": "artbook-industrial",
+    "title": "손잡이 길이의 창",
+    "link": "chapters/ergonomics.html#sim-win"
+  },
+  {
+    "id": "artbook-industrial/form/sim-bo",
+    "bookId": "artbook-industrial",
+    "title": "더하기, 빼기, 겹치기",
+    "link": "chapters/form.html#sim-bo"
+  },
+  {
+    "id": "artbook-industrial/form/sim-fl",
+    "bookId": "artbook-industrial",
+    "title": "모깎기 반경과 인상",
+    "link": "chapters/form.html#sim-fl"
+  },
+  {
+    "id": "artbook-industrial/form/sim-cc",
+    "bookId": "artbook-industrial",
+    "title": "원호 모서리와 곡률이 이어지는 모서리",
+    "link": "chapters/form.html#sim-cc"
+  },
+  {
+    "id": "artbook-industrial/form/sim-gc",
+    "bookId": "artbook-industrial",
+    "title": "두 곡선을 잇는 세 가지 방법",
+    "link": "chapters/form.html#sim-gc"
+  },
+  {
+    "id": "artbook-industrial/form/sim-zb",
+    "bookId": "artbook-industrial",
+    "title": "제브라 줄무늬로 이음새 찾기",
+    "link": "chapters/form.html#sim-zb"
+  },
+  {
+    "id": "artbook-industrial/form/sim-hl",
+    "bookId": "artbook-industrial",
+    "title": "원호 모서리와 G2 모서리의 하이라이트",
+    "link": "chapters/form.html#sim-hl"
+  },
+  {
+    "id": "artbook-industrial/glossary/sim-score",
+    "bookId": "artbook-industrial",
+    "title": "나의 점수",
+    "link": "chapters/glossary.html#sim-score"
+  },
+  {
+    "id": "artbook-industrial/history/sim-tl",
+    "bookId": "artbook-industrial",
+    "title": "산업디자인 연표",
+    "link": "chapters/history.html#sim-tl"
+  },
+  {
+    "id": "artbook-industrial/history/sim-pr",
+    "bookId": "artbook-industrial",
+    "title": "형태는 공정을 따른다: 같은 주전자 세 가지",
+    "link": "chapters/history.html#sim-pr"
+  },
+  {
+    "id": "artbook-industrial/history/sim-bk",
+    "bookId": "artbook-industrial",
+    "title": "색 하나에 판 하나: 목판 날염",
+    "link": "chapters/history.html#sim-bk"
+  },
+  {
+    "id": "artbook-industrial/history/sim-dr",
+    "bookId": "artbook-industrial",
+    "title": "드레서의 찻주전자 읽기",
+    "link": "chapters/history.html#sim-dr"
+  },
+  {
+    "id": "artbook-industrial/history/sim-st",
+    "bookId": "artbook-industrial",
+    "title": "유선형은 언제 기능인가",
+    "link": "chapters/history.html#sim-st"
+  },
+  {
+    "id": "artbook-industrial/history/sim-ul",
+    "bookId": "artbook-industrial",
+    "title": "격자에 맞춘 앞면",
+    "link": "chapters/history.html#sim-ul"
+  },
+  {
+    "id": "artbook-industrial/history/sim-mj",
+    "bookId": "artbook-industrial",
+    "title": "두 사발을 이은 항아리",
+    "link": "chapters/history.html#sim-mj"
+  },
+  {
+    "id": "artbook-industrial/lab/sim-pl-draw",
+    "bookId": "artbook-industrial",
+    "title": "도면 대조: 2장의 첫 3면도와 최종 도면",
+    "link": "chapters/lab.html#sim-pl-draw"
+  },
+  {
+    "id": "artbook-industrial/lab/sim-pl-head",
+    "bookId": "artbook-industrial",
+    "title": "등머리 길이: 무게, 넘어짐, 비례, 접은 길이",
+    "link": "chapters/lab.html#sim-pl-head"
+  },
+  {
+    "id": "artbook-industrial/lab/sim-pl-hand",
+    "bookId": "artbook-industrial",
+    "title": "클립의 설계 창: 손잡이 길이 × 스프링 세기",
+    "link": "chapters/lab.html#sim-pl-hand"
+  },
+  {
+    "id": "artbook-industrial/lab/sim-pl-wall",
+    "bookId": "artbook-industrial",
+    "title": "살두께: 무게, 강성, 냉각, 값",
+    "link": "chapters/lab.html#sim-pl-wall"
+  },
+  {
+    "id": "artbook-industrial/lab/sim-pl-cost",
+    "bookId": "artbook-industrial",
+    "title": "수량과 개당 원가: 공정별 곡선과 구성",
+    "link": "chapters/lab.html#sim-pl-cost"
+  },
+  {
+    "id": "artbook-industrial/lab/sim-pl-life",
+    "bookId": "artbook-industrial",
+    "title": "쓰는 1년당 값: 충전지를 갈 수 있을 때와 없을 때",
+    "link": "chapters/lab.html#sim-pl-life"
+  },
+  {
+    "id": "artbook-industrial/lab/sim-pl-lab",
+    "bookId": "artbook-industrial",
+    "title": "제품 실험실: E 라이트 양산 전 점검",
+    "link": "chapters/lab.html#sim-pl-lab"
+  },
+  {
+    "id": "artbook-industrial/materials/sim-ss",
+    "bookId": "artbook-industrial",
+    "title": "당겨 보기: 응력–변형률 곡선",
+    "link": "chapters/materials.html#sim-ss"
+  },
+  {
+    "id": "artbook-industrial/materials/sim-as",
+    "bookId": "artbook-industrial",
+    "title": "밀도–탄성계수 지도와 지표선",
+    "link": "chapters/materials.html#sim-as"
+  },
+  {
+    "id": "artbook-industrial/materials/sim-bd",
+    "bookId": "artbook-industrial",
+    "title": "판의 두께와 처짐",
+    "link": "chapters/materials.html#sim-bd"
+  },
+  {
+    "id": "artbook-industrial/materials/sim-pn",
+    "bookId": "artbook-industrial",
+    "title": "같은 강성의 판, 재료별 두께와 무게",
+    "link": "chapters/materials.html#sim-pn"
+  },
+  {
+    "id": "artbook-industrial/materials/sim-tc",
+    "bookId": "artbook-industrial",
+    "title": "같은 온도, 다른 촉감",
+    "link": "chapters/materials.html#sim-tc"
+  },
+  {
+    "id": "artbook-industrial/materials/sim-nk",
+    "bookId": "artbook-industrial",
+    "title": "목이 버티는가",
+    "link": "chapters/materials.html#sim-nk"
+  },
+  {
+    "id": "artbook-industrial/materials/sim-ch",
+    "bookId": "artbook-industrial",
+    "title": "몸통 재료 저울",
+    "link": "chapters/materials.html#sim-ch"
+  },
+  {
+    "id": "artbook-industrial/overview/sim-ov-ex",
+    "bookId": "artbook-industrial",
+    "title": "독서등 분해도: 부품마다 걸린 질문",
+    "link": "chapters/overview.html#sim-ov-ex"
+  },
+  {
+    "id": "artbook-industrial/overview/sim-ov-pf",
+    "bookId": "artbook-industrial",
+    "title": "옆모습 한 장이 말하지 않는 것",
+    "link": "chapters/overview.html#sim-ov-pf"
+  },
+  {
+    "id": "artbook-industrial/overview/sim-ov-cl",
+    "bookId": "artbook-industrial",
+    "title": "어디에 집나: 클립의 벌림과 손가락",
+    "link": "chapters/overview.html#sim-ov-cl"
+  },
+  {
+    "id": "artbook-industrial/overview/sim-ov-q",
+    "bookId": "artbook-industrial",
+    "title": "몇 개를 만드나: 개당 값과 손익분기",
+    "link": "chapters/overview.html#sim-ov-q"
+  },
+  {
+    "id": "artbook-industrial/overview/sim-ov-rq",
+    "bookId": "artbook-industrial",
+    "title": "요구 조건표 만들기: 묶여 있는 조건들",
+    "link": "chapters/overview.html#sim-ov-rq"
+  },
+  {
+    "id": "artbook-industrial/process/sim-cy",
+    "bookId": "artbook-industrial",
+    "title": "사출 사이클과 냉각 시간",
+    "link": "chapters/process.html#sim-cy"
+  },
+  {
+    "id": "artbook-industrial/process/sim-dr",
+    "bookId": "artbook-industrial",
+    "title": "구배각과 긁힘",
+    "link": "chapters/process.html#sim-dr"
+  },
+  {
+    "id": "artbook-industrial/process/sim-sk",
+    "bookId": "artbook-industrial",
+    "title": "리브의 두께와 싱크 자국",
+    "link": "chapters/process.html#sim-sk"
+  },
+  {
+    "id": "artbook-industrial/process/sim-uc",
+    "bookId": "artbook-industrial",
+    "title": "언더컷 찾기",
+    "link": "chapters/process.html#sim-uc"
+  },
+  {
+    "id": "artbook-industrial/process/sim-gt",
+    "bookId": "artbook-industrial",
+    "title": "게이트 위치와 웰드 라인",
+    "link": "chapters/process.html#sim-gt"
+  },
+  {
+    "id": "artbook-industrial/process/sim-ly",
+    "bookId": "artbook-industrial",
+    "title": "층 높이와 출력 방향",
+    "link": "chapters/process.html#sim-ly"
+  },
+  {
+    "id": "artbook-industrial/process/sim-be",
+    "bookId": "artbook-industrial",
+    "title": "수량과 공정의 손익분기",
+    "link": "chapters/process.html#sim-be"
+  },
+  {
+    "id": "artbook-industrial/proportion/sim-pr",
+    "bookId": "artbook-industrial",
+    "title": "등머리·목·몸통의 비율 재기",
+    "link": "chapters/proportion.html#sim-pr"
+  },
+  {
+    "id": "artbook-industrial/proportion/sim-vw",
+    "bookId": "artbook-industrial",
+    "title": "보이는 무게중심과 실제 무게중심",
+    "link": "chapters/proportion.html#sim-vw"
+  },
+  {
+    "id": "artbook-industrial/proportion/sim-cm",
+    "bookId": "artbook-industrial",
+    "title": "등머리를 뻗으면 넘어진다",
+    "link": "chapters/proportion.html#sim-cm"
+  },
+  {
+    "id": "artbook-industrial/proportion/sim-tp",
+    "bookId": "artbook-industrial",
+    "title": "기울어진 책상 위의 독서등",
+    "link": "chapters/proportion.html#sim-tp"
+  },
+  {
+    "id": "artbook-industrial/proportion/sim-mp",
+    "bookId": "artbook-industrial",
+    "title": "목 길이 × 받침 길이 설계 지도",
+    "link": "chapters/proportion.html#sim-mp"
+  },
+  {
+    "id": "artbook-industrial/proportion/sim-hi",
+    "bookId": "artbook-industrial",
+    "title": "흐리게 보면 남는 것",
+    "link": "chapters/proportion.html#sim-hi"
+  },
+  {
+    "id": "artbook-industrial/sketch/sim-sk-ps",
+    "bookId": "artbook-industrial",
+    "title": "돌려 보는 투시 스케치",
+    "link": "chapters/sketch.html#sim-sk-ps"
+  },
+  {
+    "id": "artbook-industrial/sketch/sim-sk-lw",
+    "bookId": "artbook-industrial",
+    "title": "같은 굵기, 위계 있는 굵기",
+    "link": "chapters/sketch.html#sim-sk-lw"
+  },
+  {
+    "id": "artbook-industrial/sketch/sim-sk-gb",
+    "bookId": "artbook-industrial",
+    "title": "유리 상자 펼치기: 제3각법과 제1각법",
+    "link": "chapters/sketch.html#sim-sk-gb"
+  },
+  {
+    "id": "artbook-industrial/sketch/sim-sk-iso",
+    "bookId": "artbook-industrial",
+    "title": "평행하게 남는 선, 모이는 선",
+    "link": "chapters/sketch.html#sim-sk-iso"
+  },
+  {
+    "id": "artbook-industrial/sketch/sim-sk-dm",
+    "bookId": "artbook-industrial",
+    "title": "이어서 잴까, 기준면에서 잴까",
+    "link": "chapters/sketch.html#sim-sk-dm"
+  },
+  {
+    "id": "artbook-industrial/sketch/sim-sk-rs",
+    "bookId": "artbook-industrial",
+    "title": "화면 위의 실물 크기",
+    "link": "chapters/sketch.html#sim-sk-rs"
+  },
+  {
+    "id": "artbook-industrial/sustain/sim-lf",
+    "bookId": "artbook-industrial",
+    "title": "가장 약한 고리",
+    "link": "chapters/sustain.html#sim-lf"
+  },
+  {
+    "id": "artbook-industrial/sustain/sim-bt",
+    "bookId": "artbook-industrial",
+    "title": "충전지는 언제 80%가 되나",
+    "link": "chapters/sustain.html#sim-bt"
+  },
+  {
+    "id": "artbook-industrial/sustain/sim-dis",
+    "bookId": "artbook-industrial",
+    "title": "충전지까지 분해하기",
+    "link": "chapters/sustain.html#sim-dis"
+  },
+  {
+    "id": "artbook-industrial/sustain/sim-rc",
+    "bookId": "artbook-industrial",
+    "title": "섞이지 않게 나뉘는가",
+    "link": "chapters/sustain.html#sim-rc"
+  },
+  {
+    "id": "artbook-industrial/sustain/sim-lca",
+    "bookId": "artbook-industrial",
+    "title": "단계별 배출과 수명",
+    "link": "chapters/sustain.html#sim-lca"
+  },
+  {
+    "id": "artbook-industrial/sustain/sim-pk",
+    "bookId": "artbook-industrial",
+    "title": "포장의 크기와 무게",
+    "link": "chapters/sustain.html#sim-pk"
   }
 ]
