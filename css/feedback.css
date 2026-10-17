@@ -37,11 +37,18 @@
 .feedback-page .inbox-reactions { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin-top: 10px; padding-top: 6px; }
 .feedback-page .inbox-reactions > .feedback-status:not(:empty) { flex-basis: 100%; }
 .feedback-page .inbox-reactions button { border-radius: 8px; background: transparent; }
-.feedback-page .inbox-thread { margin-top: 0; }
-.feedback-page .inbox-thread[open] { flex-basis: 100%; }
-.feedback-page .inbox-thread > summary { padding: 8px 0; color: var(--text-dim); }
-.feedback-page .inbox-comment { padding: 10px 0; }
-.feedback-page .inbox-comment-form { margin-top: 12px; }
+.feedback-page .inbox-thread { flex-basis: 100%; min-width: 0; margin-top: 0; }
+.feedback-page .inbox-comment-count { margin: 2px 0; font-size: 13px; color: var(--text-dim); }
+.feedback-page .inbox-comment { display: flex; align-items: baseline; gap: 8px; padding: 6px 0; font-size: 14px; }
+.feedback-page .inbox-comment .inbox-meta { flex-shrink: 0; max-width: 25%; overflow-wrap: anywhere; margin: 0; }
+.feedback-page .inbox-comment .inbox-message { flex: 1; min-width: 0; margin: 0; white-space: normal; }
+.feedback-page .inbox-comment time { flex-shrink: 0; font-size: 12px; color: var(--text-dim); }
+.feedback-page .inbox-comment-form { display: grid; grid-template-columns: 110px minmax(0, 1fr) auto; align-items: end; gap: 6px 8px; margin-top: 8px; }
+.feedback-page .inbox-comment-form label { margin: 0; font-size: 12px; }
+.feedback-page .inbox-comment-form input, .feedback-page .inbox-comment-form textarea { margin-top: 3px; padding: 8px; min-height: 40px; }
+.feedback-page .inbox-comment-form textarea { height: 40px; }
+.feedback-page .inbox-comment-form button { grid-column: 3; grid-row: 1; min-height: 40px; }
+.feedback-page .inbox-comment-form .feedback-note, .feedback-page .inbox-comment-form .feedback-status { grid-column: 1 / -1; margin: 0; font-size: 12px; }
 .feedback-page .feedback-inbox button:hover:not(:disabled) { background: var(--accent-soft); border-color: var(--accent); }
 .feedback-page .feedback-alternative { margin-bottom: 0; padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); }
 .feedback-page .feedback-alternative > summary { font-weight: 600; }
@@ -62,10 +69,108 @@
   .feedback-page .inbox-heading h2 { font-size: 20px; }
   .feedback-page .inbox-heading p { font-size: 13px; max-width: none; }
   .feedback-page .inbox-item { padding: 12px; }
-  .feedback-page .feedback-inbox button, .feedback-page .inbox-thread > summary { min-height: 44px; }
+  .feedback-page .feedback-inbox button { min-height: 44px; }
+  .feedback-page .inbox-comment-form { grid-template-columns: 76px minmax(0, 1fr) auto; gap: 6px; }
+  .feedback-page .inbox-comment-form input, .feedback-page .inbox-comment-form textarea { min-height: 44px; }
+  .feedback-page .inbox-comment-form button { padding: 8px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .feedback-page .feedback-compose > summary, .feedback-page .compose-icon { transition: none; }
 }
 
 .feedback-page .author-admin { display: inline-flex; align-items: center; padding: 2px 8px; border: 1px solid var(--accent); border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 12px; }
+
+/* Board and writing desk: one compact workspace, with the feed first visually. */
+.feedback-page main .wrap { max-width: 1240px; }
+.feedback-page .page-head { padding: 22px 0 18px; }
+.feedback-intro { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 18px; }
+.feedback-page .page-head h1 { margin: 0; font-size: 28px; }
+.feedback-page .page-head .lead { margin: 0; font-size: 14px; color: var(--text-dim); }
+.feedback-workspace { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; align-items: start; }
+.feedback-workspace > * { min-width: 0; }
+.feedback-page .feedback-context { margin: 0; padding: 8px 12px; }
+.feedback-page .feedback-compose { margin: 0; border-radius: 12px; }
+.feedback-page .feedback-compose > summary { padding: 14px 16px; border-left: 0; }
+.compose-label { display: grid; gap: 0; }
+.feedback-page .compose-icon { width: 28px; height: 28px; background: var(--accent-soft); color: var(--accent); }
+.feedback-page .feedback-form { padding: 14px 16px 16px; }
+.feedback-page .feedback-form .compose-note { margin: 0 0 12px; font-size: 13px; }
+.feedback-page .feedback-form-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
+.feedback-page .feedback-form label { margin-bottom: 12px; font-size: 13px; }
+.feedback-page .feedback-form :is(input, select, textarea) { min-width: 0; min-height: 44px; padding: 9px; }
+.feedback-page .feedback-form textarea { min-height: 150px; }
+.feedback-page .feedback-form .privacy-note { margin: -2px 0 12px; font-size: 12px; }
+.feedback-page .feedback-form-foot { gap: 8px; }
+.feedback-page .feedback-form-foot button { min-width: 120px; }
+.feedback-page .feedback-status { font-size: 13px; overflow-wrap: anywhere; }
+.feedback-page .feedback-inbox { width: 100%; margin: 0 0 16px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg-elev); overflow: hidden; }
+.feedback-page .inbox-heading { padding: 16px 18px 12px; }
+.feedback-page .inbox-heading h2 { font-size: 19px; }
+.feedback-page .inbox-heading p { margin: 2px 0 0; font-size: 12px; }
+.feedback-page #inbox-refresh { min-height: 44px; font-size: 12px; border-color: transparent; }
+.feedback-page .inbox-filters { gap: 8px; margin: 0; padding: 0 14px; border-top: 0; background: var(--surface); }
+.inbox-type-tabs { display: flex; flex-wrap: wrap; gap: 2px; }
+.feedback-page .inbox-type-tabs button { min-height: 44px; padding: 8px 12px; border: 0; border-radius: 0; background: transparent; color: var(--text-dim); border-bottom: 2px solid transparent; }
+.feedback-page .inbox-type-tabs button[aria-pressed="true"] { color: var(--accent); border-bottom-color: var(--accent); font-weight: 700; }
+.feedback-page #inbox-status { margin: 0; padding: 9px 18px; font-size: 12px; border-bottom: 1px solid var(--border); }
+.feedback-page #inbox-status:empty { display: none; }
+.feedback-page .inbox-item { padding: 15px 18px; margin: 0; border: 0; border-bottom: 1px solid var(--border); border-radius: 0; background: transparent; }
+.feedback-page .inbox-item:last-child { border-bottom: 0; }
+.feedback-page .inbox-meta { gap: 6px 10px; font-size: 12px; }
+.feedback-page .inbox-type { font-size: 11px; padding: 1px 6px; border-radius: 4px; }
+.feedback-page .inbox-message { margin: 9px 0; line-height: 1.7; font-size: 15px; }
+.feedback-page .inbox-reactions { gap: 4px 10px; margin-top: 8px; padding-top: 0; border-top: 0; }
+.feedback-page .inbox-reactions > button { min-height: 36px; padding: 5px 9px; font-size: 12px; }
+.feedback-page .inbox-thread { border-top: 1px dashed var(--border); padding-top: 6px; }
+.feedback-page .inbox-comment-count { font-size: 12px; }
+.feedback-page .inbox-comment { gap: 8px; padding: 7px 0; }
+.feedback-page .inbox-comment .inbox-message { margin: 0; font-size: 13px; white-space: pre-wrap; }
+.feedback-page .inbox-comment time { font-size: 11px; }
+.comment-compose { margin-top: 6px; }
+.comment-compose > summary { width: fit-content; padding: 6px 0; min-height: 36px; color: var(--accent); font-size: 13px; cursor: pointer; }
+.feedback-page .inbox-comment-form { margin: 4px 0 0; }
+.feedback-page .inbox-comment-form button { min-height: 44px; }
+.feedback-page #inbox-more { border: 0; border-top: 1px solid var(--border); border-radius: 0; min-height: 44px; }
+.feedback-page .feedback-alternative { margin: 0; padding: 10px 0; border: 0; border-radius: 0; background: transparent; }
+.feedback-page .feedback-alternative > summary { width: fit-content; min-height: 44px; display: list-item; align-content: center; font-size: 13px; }
+.feedback-page [hidden] { display: none !important; }
+@media (min-width: 1000px) {
+  .feedback-workspace { grid-template-columns: minmax(0, 1fr) 370px; gap: 16px 24px; }
+  .feedback-page .feedback-context { grid-column: 1 / -1; }
+  .feedback-page .feedback-compose { grid-column: 2; grid-row: 1; position: sticky; top: 78px; }
+  .feedback-page .feedback-inbox { grid-column: 1; grid-row: 1; }
+  .feedback-context:not([hidden]) ~ :is(.feedback-compose, .feedback-inbox) { grid-row: 2; }
+}
+@media (max-width: 599px) {
+  .feedback-page .page-head { padding: 16px 0 12px; }
+  .feedback-page .page-head h1 { font-size: 24px; }
+  .feedback-intro { gap: 2px; flex-direction: column; }
+  .feedback-page .feedback-compose > summary { padding: 10px 12px; }
+  .compose-label { display: flex; gap: 2px 10px; }
+  .feedback-page .compose-hint { font-size: 11px; }
+  .feedback-page .inbox-heading { padding: 12px; }
+  .feedback-page .inbox-filters { padding: 0 6px; }
+  .feedback-page .inbox-type-tabs button { padding: 8px 10px; font-size: 13px; }
+  .feedback-page .inbox-item { padding: 12px; }
+  .feedback-page #inbox-status { padding: 8px 12px; }
+  .feedback-page .inbox-reactions > button { min-height: 44px; }
+  .feedback-page .inbox-comment { flex-wrap: wrap; }
+  .feedback-page .inbox-comment .inbox-meta { max-width: calc(100% - 70px); }
+  .feedback-page .inbox-comment .inbox-message { flex-basis: 100%; order: 3; }
+  .feedback-page .inbox-comment time { margin-left: auto; }
+  .comment-compose > summary { min-height: 44px; }
+  .feedback-page .inbox-comment-form { grid-template-columns: minmax(0, 1fr) auto; }
+  .feedback-page .inbox-comment-form label:first-child { grid-column: 1 / -1; max-width: 140px; }
+  .feedback-page .inbox-comment-form button { grid-column: 2; grid-row: 2; }
+}
+/* Keep reaction controls on one line; only actual comments occupy another row. */
+.feedback-page .inbox-reactions { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 4px 12px; }
+.feedback-page .inbox-reactions > button { grid-column: 1; grid-row: 1; }
+.feedback-page .inbox-thread { display: contents; }
+.feedback-page .inbox-comment-count { display: none; }
+.feedback-page .inbox-comments { grid-column: 1 / -1; }
+.feedback-page .inbox-comments:empty { display: none; }
+.feedback-page .inbox-reactions .feedback-status, .feedback-page .inbox-thread > button { grid-column: 1 / -1; }
+.feedback-page .comment-compose { grid-column: 2; grid-row: 1; margin: 0; }
+.feedback-page .comment-compose[open] { grid-column: 1 / -1; grid-row: auto; }
+.feedback-page .inbox-comment:last-child { border-bottom: 0; }

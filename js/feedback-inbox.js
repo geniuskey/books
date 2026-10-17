@@ -24,6 +24,18 @@ function appendFeedbackLinks(element, text) {
   else element.append(text.slice(offset));
 }
 
+function feedbackTime(value) {
+  const date = new Date(value);
+  const time = document.createElement('time');
+  time.dateTime = value;
+  time.title = date.toLocaleString('ko-KR');
+  const seconds = Math.max(0, Math.floor((Date.now() - date.getTime()) / 1000));
+  const units = [[31536000, '년'], [2592000, '달'], [86400, '일'], [3600, '시간'], [60, '분']];
+  const unit = units.find(([size]) => seconds >= size);
+  time.textContent = unit ? `${Math.floor(seconds / unit[0])}${unit[1]}전` : '방금';
+  return time;
+}
+
 /* Public and authenticated inbox on the same feedback page. Tokens stay in memory. */
 globalThis.FeedbackInbox = (() => {
   let refresh = () => {};
@@ -72,10 +84,7 @@ globalThis.FeedbackInbox = (() => {
       const author = document.createElement('span');
       author.textContent = item.is_admin ? '관리자' : item.nickname || '익명';
       if (item.is_admin) author.className = 'author-admin';
-      const date = document.createElement('time');
-      date.dateTime = item.created_at;
-      date.textContent = new Date(item.created_at).toLocaleDateString('ko-KR');
-      date.title = new Date(item.created_at).toLocaleString('ko-KR');
+      const date = feedbackTime(item.created_at);
       meta.append(badge, author, date);
       if (admin) {
         const state = document.createElement('span');
@@ -127,15 +136,18 @@ globalThis.FeedbackInbox = (() => {
         } catch (error) { notice.textContent = error.message || '좋아요를 저장하지 못했습니다. 다시 시도해 주세요.'; }
         finally { like.disabled = false; }
       });
-      const thread = document.createElement('details'); thread.className = 'inbox-thread';
-      const summary = document.createElement('summary');
-      let count = item.comment_count || 0;
-      const showCount = () => { summary.textContent = `댓글 ${count}`; };
+      const thread = document.createElement('div'); thread.className = 'inbox-thread';
+      const summary = document.createElement('p'); summary.className = 'inbox-comment-count';
+      let count = item.comment_count || 0, composeLabel;
+      const showCount = () => {
+        summary.textContent = `댓글 ${count}`;
+        if (composeLabel) composeLabel.textContent = `댓글 ${count} · 쓰기`;
+      };
       showCount();
       const comments = document.createElement('div'); comments.className = 'inbox-comments';
       const more = document.createElement('button'); more.type = 'button'; more.textContent = '이전 댓글 더 보기'; more.hidden = true;
       const commentStatus = document.createElement('p'); commentStatus.className = 'feedback-status'; commentStatus.setAttribute('role', 'status');
-      let nextPage = 0, loaded = false, loading = false, commentGeneration = 0;
+      let nextPage = 0, loading = false, commentGeneration = 0;
       async function loadComments(reset = false) {
         if (loading && !reset) return;
         const current = ++commentGeneration;
@@ -148,28 +160,26 @@ globalThis.FeedbackInbox = (() => {
           for (const comment of result.items) {
             const row = document.createElement('article'); row.className = 'inbox-comment';
             const meta = document.createElement('p'); meta.className = 'inbox-meta';
-            const date = document.createElement('time'); date.dateTime = comment.created_at;
-            date.textContent = new Date(comment.created_at).toLocaleString('ko-KR');
+            const date = feedbackTime(comment.created_at);
             const author = document.createElement('span');
             author.textContent = comment.is_admin ? '관리자' : comment.nickname || '익명';
             if (comment.is_admin) author.className = 'author-admin';
-            meta.append(author, ' · ', date);
+            meta.append(author);
             const message = document.createElement('p'); message.className = 'inbox-message'; appendFeedbackLinks(message, comment.message);
-            row.append(meta, message); comments.append(row);
+            row.append(meta, message, date); comments.append(row);
           }
-          nextPage++; loaded = true; more.hidden = !result.hasMore;
+          nextPage++; more.hidden = !result.hasMore;
           commentStatus.textContent = comments.children.length ? '' : '첫 댓글을 남겨 주세요.';
-        } catch (error) { if (current === commentGeneration) commentStatus.textContent = error.message || '댓글을 불러오지 못했습니다. 다시 열어 주세요.'; }
+        } catch (error) { if (current === commentGeneration) commentStatus.textContent = error.message || '댓글을 불러오지 못했습니다. 새로고침해 주세요.'; }
         finally { if (current === commentGeneration) { loading = false; more.disabled = false; } }
       }
-      thread.addEventListener('toggle', () => { if (thread.open && !loaded) loadComments(true); });
       more.addEventListener('click', () => loadComments());
       const form = document.createElement('form'); form.className = 'inbox-comment-form';
       const nicknameLabel = document.createElement('label'); nicknameLabel.textContent = '닉네임 (선택)';
       const nickname = document.createElement('input'); nickname.name = 'nickname'; nickname.maxLength = 40; nickname.autocomplete = 'nickname'; nickname.placeholder = '익명'; nicknameLabel.append(nickname);
       if (token) { nickname.value = '관리자'; nickname.readOnly = true; }
       const messageLabel = document.createElement('label'); messageLabel.textContent = '댓글';
-      const message = document.createElement('textarea'); message.name = 'message'; message.required = true; message.maxLength = 1000; message.rows = 3; message.placeholder = '함께 나누고 싶은 이야기를 남겨 주세요. (최대 1,000자)'; messageLabel.append(message);
+      const message = document.createElement('textarea'); message.name = 'message'; message.required = true; message.maxLength = 1000; message.rows = 1; message.placeholder = '함께 나누고 싶은 이야기를 남겨 주세요. (최대 1,000자)'; messageLabel.append(message);
       const trap = document.createElement('input'); trap.name = 'website'; trap.tabIndex = -1; trap.autocomplete = 'off';
       const trapLabel = document.createElement('label'); trapLabel.className = 'feedback-honeypot'; trapLabel.setAttribute('aria-hidden', 'true'); trapLabel.append('Website', trap);
       const note = document.createElement('p'); note.className = 'feedback-note'; note.textContent = '댓글은 누구나 볼 수 있습니다. 개인 정보는 적지 마세요.';
@@ -193,8 +203,12 @@ globalThis.FeedbackInbox = (() => {
         finally { submitting = false; submit.disabled = false; nickname.disabled = false; message.disabled = false; }
       });
       form.append(nicknameLabel, messageLabel, trapLabel, note, submit, formStatus);
-      thread.append(summary, comments, more, commentStatus, form);
+      const compose = document.createElement('details'); compose.className = 'comment-compose';
+      composeLabel = document.createElement('summary'); showCount();
+      compose.append(composeLabel, form);
+      thread.append(summary, comments, more, commentStatus, compose);
       area.append(like, notice, thread);
+      if (count) loadComments(true);
       return area;
     }
     function handleError(error) {
@@ -221,7 +235,7 @@ globalThis.FeedbackInbox = (() => {
         const result = await api(`${credential ? '/api/admin/feedback' : '/api/feedback/public'}?${query}`, {}, credential);
         if (current !== generation) return;
         result.items.forEach((item) => list.append(render(item, Boolean(credential))));
-        status.textContent = list.children.length ? (credential ? '관리자에게만 비공개 글이 표시됩니다.' : '독자가 공개로 남긴 글입니다.') : ($('inbox-type').value || credential ? '이 조건에 맞는 글이 없습니다. 다른 조건으로 살펴보세요.' : '아직 공개된 글이 없습니다. ‘의견 남기기’에서 첫 이야기를 나눠 주세요.');
+        status.textContent = list.children.length ? (credential ? '관리자에게만 비공개 글이 표시됩니다.' : '') : ($('inbox-type').value || credential ? '이 조건에 맞는 글이 없습니다. 다른 조건으로 살펴보세요.' : '아직 공개된 글이 없습니다. ‘의견 남기기’에서 첫 이야기를 나눠 주세요.');
         $('inbox-more').hidden = !result.hasMore;
         page++;
       } catch (error) { if (current === generation) handleError(error); }

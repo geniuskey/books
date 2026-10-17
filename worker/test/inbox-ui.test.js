@@ -11,11 +11,11 @@ class Element {
   replaceChildren(...children) { this.children = children; }
 }
 const tick = () => new Promise(resolve => setImmediate(resolve));
-async function setup({ deferAdmin = false, authorized = true, isAdmin = 0, reactionFetch } = {}) {
+async function setup({ deferAdmin = false, authorized = true, isAdmin = 0, reactionFetch, commentCount = 0 } = {}) {
   const nodes = new Map();
   const get = id => { if (!nodes.has(id)) nodes.set(id, new Element()); return nodes.get(id); };
   let callback, release, adminRequests = 0;
-  const publicItem = { is_admin: isAdmin, id: 'public', type: 'cheer', nickname: '독자', message: '<img src=x onerror=alert(1)>', created_at: '2026-10-05T00:00:00Z' };
+  const publicItem = { comment_count: commentCount, is_admin: isAdmin, id: 'public', type: 'cheer', nickname: '독자', message: '<img src=x onerror=alert(1)>', created_at: '2026-10-05T00:00:00Z' };
   const privateItem = { ...publicItem, id: 'private', message: '비공개 내용', visibility: 'private' };
   const fetch = async (url, options) => {
     if (/\/api\/feedback\/public\//.test(url)) return reactionFetch(url, options);
@@ -83,10 +83,10 @@ test('likes toggle with the same visitor ID and recover from a failed request', 
   assert.ok(requests.every(r => !r.headers.Authorization));
 });
 
-test('comments load on demand as literal text and failed submissions preserve the draft and ID', async () => {
+test('comments load immediately as literal text and failed submissions preserve the draft and ID', async () => {
   const writes = [];
   let fail = true, reads = 0;
-  const { get } = await setup({ reactionFetch: async (url, options) => {
+  const { get } = await setup({ commentCount: 1, reactionFetch: async (url, options) => {
     if (options.method === 'POST') {
       writes.push(JSON.parse(options.body));
       if (fail) throw new TypeError('연결 실패');
@@ -95,19 +95,22 @@ test('comments load on demand as literal text and failed submissions preserve th
     reads++;
     return { ok: true, json: async () => ({ items: [{ nickname: '<b>독자</b>', message: '<script>unsafe()</script>', created_at: '2026-10-17T00:00:00Z' }], hasMore: false }) };
   } });
-  assert.equal(reads, 0);
+  assert.equal(reads, 1);
   const thread = get('inbox-list').children[0].children[2].children[2];
-  thread.open = true; thread.events.toggle(); await tick();
+  assert.equal(thread.events.toggle, undefined);
   assert.equal(reads, 1);
   assert.equal(thread.children[1].children[0].children[1].textContent, '<script>unsafe()</script>');
   assert.equal(thread.children[1].children[0].children[1].children.length, 0);
-  const form = thread.children[4], message = form.children[1].children[0];
+  const compose = thread.children[4];
+  assert.equal(compose.className, 'comment-compose');
+  assert.equal(compose.children[0].textContent, '댓글 1 · 쓰기');
+  const form = compose.children[1], message = form.children[1].children[0];
   message.value = '제 댓글입니다';
   await form.events.submit({ preventDefault() {} });
   assert.equal(message.value, '제 댓글입니다'); assert.equal(form.children[4].disabled, false);
   fail = false; await form.events.submit({ preventDefault() {} });
   assert.equal(writes[0].id, writes[1].id); assert.equal(message.value, '');
-  assert.equal(thread.children[0].textContent, '댓글 1');
+  assert.equal(thread.children[0].textContent, '댓글 2');
   assert.equal(reads, 2);
 });
 
@@ -124,4 +127,18 @@ test('verified authors have a distinct badge and credentials clear on logout', a
   assert.equal(api.authHeaders().Authorization, undefined);
   const reader = await setup();
   assert.equal(reader.get('inbox-list').children[0].children[0].children[1].className, undefined);
+});
+
+test('relative dates use compact units and retain the full timestamp tooltip', () => {
+  const now = Date.parse('2026-10-17T12:00:00Z');
+  class FixedDate extends Date { static now() { return now; } }
+  const context = vm.createContext({ Date: FixedDate, document: { createElement: () => new Element() } });
+  vm.runInContext(readFileSync(new URL('../../js/feedback-inbox.js', import.meta.url), 'utf8'), context);
+  for (const [seconds, expected] of [[0, '방금'], [60, '1분전'], [3600, '1시간전'], [86400, '1일전'], [2592000, '1달전'], [31536000, '1년전']]) {
+    const value = new Date(now - seconds * 1000).toISOString();
+    const time = context.feedbackTime(value);
+    assert.equal(time.textContent, expected);
+    assert.equal(time.dateTime, value);
+    assert.equal(time.title, new Date(value).toLocaleString('ko-KR'));
+  }
 });

@@ -52,18 +52,21 @@ test('a rejected request keeps the draft, retry uses the same ID, success clears
   assert.ok(fields.every(field => !field.disabled));
 });
 
-test('a network failure keeps the draft and switches to GitHub only', async () => {
-  const { fields, nodes, selectors, submissions, submit } = await setup([new TypeError('network')]);
+test('a network failure keeps the form and draft available for an idempotent retry', async () => {
+  const { fields, nodes, selectors, submissions, submit } = await setup([new TypeError('network'), { ok: true }]);
   fields.type.value = 'request';
   fields.message.value = '의견';
   await submit();
   assert.equal(fields.message.value, '의견');
-  assert.equal(nodes['feedback-compose'].hidden, true);
-  assert.equal(selectors['.feedback-inbox'].hidden, true);
-  assert.equal(selectors['.feedback-alternative'].open, true);
-  assert.equal(nodes['feedback-submit'].disabled, true);
+  assert.equal(nodes['feedback-compose'].hidden, false);
+  assert.equal(selectors['.feedback-inbox'].hidden, false);
+  assert.equal(selectors['.feedback-alternative'].open, false);
+  assert.equal(nodes['feedback-submit'].disabled, false);
+  assert.equal(nodes['feedback-status'].dataset.state, 'error');
   await submit();
-  assert.equal(submissions.length, 1);
+  assert.equal(submissions.length, 2);
+  assert.equal(submissions[0].id, submissions[1].id);
+  assert.equal(fields.message.value, '');
 });
 
 test('editing a failed draft generates a new ID and an unconfigured endpoint blocks sending', async () => {

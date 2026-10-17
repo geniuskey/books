@@ -139,7 +139,7 @@ EB.start("feedback", (data) => {
       globalThis.FeedbackInbox?.refresh();
       showStatus(payload.type === "cheer" ? "응원 감사합니다! 저자에게 잘 전달되었습니다." : "의견이 접수되었습니다. 남겨 주셔서 감사합니다.");
     } catch (error) {
-      if (error.name === "TimeoutError" || error instanceof TypeError) showGitHubOnly();
+      if (error.name === "TimeoutError" || error instanceof TypeError) showStatus("연결이 끊겼습니다. 작성한 내용은 유지됩니다. 다시 보내 주세요.", "error");
       else showStatus(error.message, "error");
     } finally {
       sending = false;
