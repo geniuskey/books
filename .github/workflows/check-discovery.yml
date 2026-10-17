@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'data/**'
+      - 'js/field-maps.js'
       - 'tools/**'
       - '.github/workflows/check-discovery.yml'
   workflow_dispatch:
@@ -29,5 +30,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - run: node tools/check-field-maps.cjs
+        working-directory: books
       - run: python3 tools/check-discovery.py
         working-directory: books

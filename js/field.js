@@ -2,6 +2,8 @@
 EB.initKnowledgeMaps = (d) => {
   "use strict";
   const { $, $$, esc } = EB;
+  const booksById = new Map(d.books.map((book) => [book.id, book]));
+  const crossLinks = window.FIELD_MAP_CROSS_LINKS || [];
   const fields = d.fields.filter((field) => field.books.length);
   const readingPanel = $("#paths-reading");
   const fieldMap = $("#flow");
@@ -208,10 +210,18 @@ EB.initKnowledgeMaps = (d) => {
     const { book, group } = atlas.nodes.get(id);
     detail.hidden = false;
     const url = EB.readUrl(book) || (book.status === "writing" && book.url) || `${EB.fieldUrl(book.field)}&q=${encodeURIComponent(book.title)}`;
-    const related = atlas.links.filter(([from, to]) => from === id || to === id).map(([from, to, reason]) => ({ id: from === id ? to : from, reason }));
-    const relatedButton = (item) => `<button type="button" data-related="${esc(item.id)}"><b>${esc(EB.coverTitle(atlas.nodes.get(item.id).book))} <span aria-hidden="true">↗</span></b><small>${esc(item.reason)}</small></button>`;
-    const preview = mobileLayout.matches ? related.slice(0, 2) : related;
-    const remaining = mobileLayout.matches ? related.slice(2) : [];
+    const related = [...atlas.links, ...crossLinks].filter(([from, to]) => from === id || to === id).map(([from, to, reason]) => ({ id: from === id ? to : from, reason }));
+    const relatedButton = (item) => {
+      const target = booksById.get(item.id);
+      const otherField = target.field !== currentField;
+      const content = `<b>${esc(EB.coverTitle(target))} <span aria-hidden="true">↗</span></b><small>${otherField ? `${esc(d.fieldById[target.field].name)} · ` : ""}${esc(EB.status(target))} · ${esc(item.reason)}</small>`;
+      return otherField
+        ? `<a href="/paths/?field=${encodeURIComponent(target.field)}#card-${encodeURIComponent(item.id)}">${content}</a>`
+        : `<button type="button" data-related="${esc(item.id)}">${content}</button>`;
+    };
+    const previewCount = mobileLayout.matches ? 2 : 6;
+    const preview = related.slice(0, previewCount);
+    const remaining = related.slice(previewCount);
     detail.innerHTML = `<button type="button" class="atlas-detail-close" aria-label="책 소개 닫기">×</button><div class="atlas-detail-main"><div><span class="atlas-detail-kicker">${esc(group.name)} · ${esc(EB.status(book))}</span><h3>${esc(EB.coverTitle(book))} <small>${esc(book.title)}</small></h3><p>${esc(book.headline || book.description || book.subtitle)}</p></div><a class="btn" href="${esc(url)}">${EB.isPublished(book) ? "책 읽기 ↗" : book.status === "writing" && book.url ? "집필 중인 책 보기 ↗" : "책장에서 자세히 보기 →"}</a></div>
       ${related.length ? `<div class="atlas-related"><span>함께 살펴볼 책 · ${related.length}권</span><div>${preview.map(relatedButton).join("")}</div>${remaining.length ? `<details class="atlas-related-more"><summary>연결된 책 ${remaining.length}권 더 보기</summary><div class="atlas-related-list">${remaining.map(relatedButton).join("")}</div></details>` : ""}</div>` : `<p class="atlas-single-note">${esc(group.desc)}${atlas.nodes.size === 1 ? " · 이 분야의 첫 책입니다." : ""}</p>`}`;
     const closeDetail = () => {
