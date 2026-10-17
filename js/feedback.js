@@ -85,6 +85,10 @@ EB.start("feedback", (data) => {
       if (url.protocol !== "https:" && !(url.protocol === "http:" && ["localhost", "127.0.0.1"].includes(url.hostname))) throw new Error();
       endpoint = url.href;
       globalThis.FeedbackInbox?.start(config, data, { onUnavailable: showGitHubOnly });
+      if (params.get("admin") === "1") {
+        document.getElementById("admin-login").open = true;
+        if (location.hash === "#feedback-admin") adminPanel?.scrollIntoView();
+      }
       submit.disabled = false;
       showStatus("로그인 없이 보낼 수 있습니다.");
     })
