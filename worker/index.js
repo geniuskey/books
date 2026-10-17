@@ -1,4 +1,5 @@
 import catalog from '../data/books.json' with { type: 'json' };
+import { authorIsAdmin } from './auth.js';
 import { inbox } from './inbox.js';
 import { reactions } from './reactions.js';
 
@@ -85,8 +86,11 @@ export default {
       catch (error) { return reply(error instanceof RangeError ? 413 : 400, '글의 길이와 입력 내용을 확인해 주세요.'); }
       if (!data) return reply(400, '글의 길이와 입력 내용을 확인해 주세요.');
       if (data.website) return reply(400, '입력 내용을 확인해 주세요.');
-      await env.DB.prepare('INSERT INTO feedback (id, type, nickname, message, book_id, page_url, visibility) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO NOTHING')
-        .bind(data.id, data.type, data.nickname, data.message, data.bookId, data.pageUrl, data.visibility).run();
+      let isAdmin;
+      try { isAdmin = await authorIsAdmin(request, env); }
+      catch { return reply(401, '관리자 계정으로 다시 로그인해 주세요.'); }
+      await env.DB.prepare('INSERT INTO feedback (id, type, nickname, message, book_id, page_url, visibility, is_admin) VALUES (?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO NOTHING')
+        .bind(data.id, data.type, isAdmin ? '관리자' : data.nickname, data.message, data.bookId, data.pageUrl, data.visibility, Number(isAdmin)).run();
       return reply(201);
     } catch {
       // Do not log reader messages or identifying request headers.

@@ -28,6 +28,7 @@ function setup() {
   db.prepare('INSERT INTO feedback(id,type,message) VALUES (?, ?, ?)').run(legacy, 'cheer', '기존 비공개 글');
   db.exec(readFileSync(new URL('../migrations/0002_visibility.sql', import.meta.url), 'utf8'));
   db.exec(readFileSync(new URL('../migrations/0003_reactions.sql', import.meta.url), 'utf8'));
+  db.exec(readFileSync(new URL('../migrations/0004_admin_authors.sql', import.meta.url), 'utf8'));
   const publicId = crypto.randomUUID();
   const hiddenId = crypto.randomUUID();
   const insert = db.prepare('INSERT INTO feedback(id,type,message,visibility,is_hidden,page_url) VALUES (?, ?, ?, ?, ?, ?)');
@@ -111,5 +112,26 @@ test('pagination and CORS for Authorization headers', async () => {
   const preflight = await request('/api/admin/feedback', undefined, { method: 'OPTIONS' });
   assert.equal(preflight.status, 204);
   assert.ok(preflight.headers.get('Access-Control-Allow-Headers').includes('Authorization'));
+  db.close();
+});
+
+test('only verified administrators get author badges on posts and comments', async () => {
+  const { db, env, request, publicId } = setup();
+  env.SUBMISSIONS = env.TOTAL_SUBMISSIONS = { limit: async () => ({ success: true }) };
+  const valid = await token();
+  const wrongAccount = await token({ email: 'reader@gmail.com' });
+  for (const path of ['/api/feedback', `/api/feedback/${publicId}/comments`]) {
+    for (const [credential, expected] of [[undefined, 201], [valid, 201], ['forged', 401], [wrongAccount, 401], [await token({ exp: Math.floor(Date.now() / 1000) - 60 }), 401]]) {
+      const id = crypto.randomUUID();
+      const response = await request(path, credential, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, type: 'cheer', visibility: 'public', message: 'author test', nickname: '관리자', is_admin: 1 }) });
+      assert.equal(response.status, expected);
+      const table = path.endsWith('/comments') ? 'feedback_comments' : 'feedback';
+      const row = db.prepare(`SELECT is_admin FROM ${table} WHERE id = ?`).get(id);
+      if (expected === 201) assert.equal(row.is_admin, credential === valid ? 1 : 0);
+      else assert.equal(row, undefined);
+    }
+    const listing = await (await request(path.endsWith('/comments') ? path : '/api/feedback/public')).json();
+    assert.ok(listing.items.some(item => item.is_admin === 1));
+  }
   db.close();
 });

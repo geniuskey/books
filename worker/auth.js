@@ -15,3 +15,13 @@ export async function verifyAdminToken(token, clientId, keys = googleKeys) {
   }
   return payload;
 }
+
+// No credentials means an ordinary reader; supplied credentials must be valid.
+export async function authorIsAdmin(request, env) {
+  const authorization = request.headers.get('Authorization');
+  if (authorization === null) return false;
+  const token = authorization.match(/^Bearer ([^\s]+)$/)?.[1];
+  if (!env.GOOGLE_CLIENT_ID || !token || token.length > 8192) throw new Error('Invalid credentials');
+  await verifyAdminToken(token, env.GOOGLE_CLIENT_ID);
+  return true;
+}

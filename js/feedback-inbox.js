@@ -1,7 +1,8 @@
 /* Public and authenticated inbox on the same feedback page. Tokens stay in memory. */
 globalThis.FeedbackInbox = (() => {
   let refresh = () => {};
-  function start(config, catalog, { onUnavailable = () => {} } = {}) {
+  let authHeaders = () => ({});
+  function start(config, catalog, { onUnavailable = () => {}, onSession = () => {} } = {}) {
     const $ = (id) => document.getElementById(id);
     const base = new URL(config.endpoint).origin;
     const books = new Map(catalog.books.map((book) => [book.id, book]));
@@ -13,11 +14,13 @@ globalThis.FeedbackInbox = (() => {
       try { localStorage.setItem('feedback-visitor', visitorId); } catch {}
     }
     let token = '', page = 0, generation = 0, expiryTimer, signingIn = false;
+    authHeaders = () => token ? { Authorization: `Bearer ${token}` } : {};
     const list = $('inbox-list');
     const status = $('inbox-status');
     const login = $('admin-login');
     const scope = $('inbox-scope');
     function session(active) {
+      onSession(active);
       $('admin-session').hidden = !active;
       $('inbox-scope-label').hidden = !active;
       login.hidden = active;
@@ -41,7 +44,8 @@ globalThis.FeedbackInbox = (() => {
       badge.className = 'inbox-type';
       badge.textContent = types[item.type] || '의견';
       const author = document.createElement('span');
-      author.textContent = item.nickname || '익명';
+      author.textContent = item.is_admin ? '관리자' : item.nickname || '익명';
+      if (item.is_admin) author.className = 'author-admin';
       const date = document.createElement('time');
       date.dateTime = item.created_at;
       date.textContent = new Date(item.created_at).toLocaleDateString('ko-KR');
@@ -139,7 +143,10 @@ globalThis.FeedbackInbox = (() => {
             const meta = document.createElement('p'); meta.className = 'inbox-meta';
             const date = document.createElement('time'); date.dateTime = comment.created_at;
             date.textContent = new Date(comment.created_at).toLocaleString('ko-KR');
-            meta.append(comment.nickname || '익명', ' · ', date);
+            const author = document.createElement('span');
+            author.textContent = comment.is_admin ? '관리자' : comment.nickname || '익명';
+            if (comment.is_admin) author.className = 'author-admin';
+            meta.append(author, ' · ', date);
             const message = document.createElement('p'); message.className = 'inbox-message'; message.textContent = comment.message;
             row.append(meta, message); comments.append(row);
           }
@@ -153,6 +160,7 @@ globalThis.FeedbackInbox = (() => {
       const form = document.createElement('form'); form.className = 'inbox-comment-form';
       const nicknameLabel = document.createElement('label'); nicknameLabel.textContent = '닉네임 (선택)';
       const nickname = document.createElement('input'); nickname.name = 'nickname'; nickname.maxLength = 40; nickname.autocomplete = 'nickname'; nickname.placeholder = '익명'; nicknameLabel.append(nickname);
+      if (token) { nickname.value = '관리자'; nickname.readOnly = true; }
       const messageLabel = document.createElement('label'); messageLabel.textContent = '댓글';
       const message = document.createElement('textarea'); message.name = 'message'; message.required = true; message.maxLength = 1000; message.rows = 3; message.placeholder = '함께 나누고 싶은 이야기를 남겨 주세요. (최대 1,000자)'; messageLabel.append(message);
       const trap = document.createElement('input'); trap.name = 'website'; trap.tabIndex = -1; trap.autocomplete = 'off';
@@ -170,7 +178,7 @@ globalThis.FeedbackInbox = (() => {
         submitting = true; submit.disabled = true; nickname.disabled = true; message.disabled = true;
         formStatus.textContent = '댓글을 보내는 중…';
         try {
-          await api(`${path}/comments`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...payload, id: pending.id }) }, '');
+          await api(`${path}/comments`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...payload, id: pending.id }) });
           message.value = ''; pending = null; count++; showCount();
           formStatus.textContent = '댓글을 남겼습니다.';
           await loadComments(true);
@@ -251,5 +259,5 @@ globalThis.FeedbackInbox = (() => {
     });
     refresh();
   }
-  return { start, refresh: () => refresh() };
+  return { start, refresh: () => refresh(), authHeaders: () => authHeaders() };
 })();

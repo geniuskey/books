@@ -6,7 +6,7 @@ import worker from '../index.js';
 
 function setup() {
   const db = new DatabaseSync(':memory:');
-  for (const migration of ['0001_feedback', '0002_visibility', '0003_reactions']) db.exec(readFileSync(new URL(`../migrations/${migration}.sql`, import.meta.url), 'utf8'));
+  for (const migration of ['0001_feedback', '0002_visibility', '0003_reactions', '0004_admin_authors']) db.exec(readFileSync(new URL(`../migrations/${migration}.sql`, import.meta.url), 'utf8'));
   const id = crypto.randomUUID(), privateId = crypto.randomUUID(), hiddenId = crypto.randomUUID();
   const insert = db.prepare('INSERT INTO feedback(id,type,message,visibility,is_hidden) VALUES (?,\'cheer\',\'응원\',?,?)');
   insert.run(id, 'public', 0); insert.run(privateId, 'private', 0); insert.run(hiddenId, 'public', 1);

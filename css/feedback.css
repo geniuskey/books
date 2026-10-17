@@ -67,3 +67,5 @@
 @media (prefers-reduced-motion: reduce) {
   .feedback-page .feedback-compose > summary, .feedback-page .compose-icon { transition: none; }
 }
+
+.feedback-page .author-admin { display: inline-flex; align-items: center; padding: 2px 8px; border: 1px solid var(--accent); border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 12px; }

@@ -51,6 +51,12 @@ EB.start("feedback", (data) => {
   const fields = form.elements;
   const composer = document.getElementById("feedback-compose");
   let unavailable = false;
+  let readerNickname = '';
+  const onSession = (active) => {
+    if (active && !fields.nickname.readOnly) readerNickname = fields.nickname.value;
+    fields.nickname.value = active ? '관리자' : readerNickname;
+    fields.nickname.readOnly = active;
+  };
   const showGitHubOnly = () => {
     unavailable = true;
     composer.hidden = true;
@@ -84,7 +90,7 @@ EB.start("feedback", (data) => {
       const url = new URL(config.endpoint);
       if (url.protocol !== "https:" && !(url.protocol === "http:" && ["localhost", "127.0.0.1"].includes(url.hostname))) throw new Error();
       endpoint = url.href;
-      globalThis.FeedbackInbox?.start(config, data, { onUnavailable: showGitHubOnly });
+      globalThis.FeedbackInbox?.start(config, data, { onUnavailable: showGitHubOnly, onSession });
       if (params.get("admin") === "1") {
         document.getElementById("admin-login").open = true;
         if (location.hash === "#feedback-admin") adminPanel?.scrollIntoView();
@@ -120,7 +126,7 @@ EB.start("feedback", (data) => {
     try {
       const response = await fetch(endpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", ...globalThis.FeedbackInbox?.authHeaders() },
         body: JSON.stringify({ ...payload, id: pending.id }),
         signal: AbortSignal.timeout(15000),
         credentials: "omit",

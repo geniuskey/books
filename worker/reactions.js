@@ -1,3 +1,4 @@
+import { authorIsAdmin } from './auth.js';
 const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 const visible = "SELECT id FROM feedback WHERE id = ? AND visibility = 'public' AND is_hidden = 0";
 
@@ -21,7 +22,7 @@ export async function reactions(request, env, headers, match, readBody) {
     if (kind === 'comments' && reading) {
       const page = url.searchParams.get('page') || '0';
       if (!/^\d{1,5}$/.test(page)) return reply(400, { error: '검색 조건을 확인해 주세요.' });
-      const { results } = await env.DB.prepare(`SELECT id, nickname, message, created_at FROM feedback_comments WHERE feedback_id IN (${visible}) ORDER BY created_at DESC, id DESC LIMIT 21 OFFSET ?`).bind(id, Number(page) * 20).all();
+      const { results } = await env.DB.prepare(`SELECT id, nickname, message, created_at, is_admin FROM feedback_comments WHERE feedback_id IN (${visible}) ORDER BY created_at DESC, id DESC LIMIT 21 OFFSET ?`).bind(id, Number(page) * 20).all();
       return reply(200, { items: results.slice(0, 20), hasMore: results.length > 20 });
     }
     let data;
@@ -36,8 +37,11 @@ export async function reactions(request, env, headers, match, readBody) {
       if (!uuid.test(commentId) || typeof commentId !== 'string' || typeof nickname !== 'string' || nickname.length > 40 || typeof message !== 'string' || !message.trim() || message.length > 1000 || website !== '') {
         return reply(400, { error: '댓글은 1~1,000자, 닉네임은 40자 이내로 입력해 주세요.' });
       }
+      let isAdmin;
+      try { isAdmin = await authorIsAdmin(request, env); }
+      catch { return reply(401, { error: '관리자 계정으로 다시 로그인해 주세요.' }); }
       // Recheck visibility in the write itself, including concurrent moderation.
-      const result = await env.DB.prepare(`INSERT INTO feedback_comments (id, feedback_id, nickname, message) SELECT ?, id, ?, ? FROM feedback WHERE id = ? AND visibility = 'public' AND is_hidden = 0 ON CONFLICT(id) DO NOTHING`).bind(commentId, nickname.trim(), message.trim(), id).run();
+      const result = await env.DB.prepare(`INSERT INTO feedback_comments (id, feedback_id, nickname, message, is_admin) SELECT ?, id, ?, ?, ? FROM feedback WHERE id = ? AND visibility = 'public' AND is_hidden = 0 ON CONFLICT(id) DO NOTHING`).bind(commentId, isAdmin ? '관리자' : nickname.trim(), message.trim(), Number(isAdmin), id).run();
       if (!result.meta.changes) {
         const existing = await env.DB.prepare(`SELECT id FROM feedback_comments WHERE id = ? AND feedback_id IN (${visible})`).bind(commentId, id).all();
         if (!existing.results.length) return reply(404, { error: '공개된 글을 찾을 수 없습니다.' });

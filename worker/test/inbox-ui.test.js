@@ -11,11 +11,11 @@ class Element {
   replaceChildren(...children) { this.children = children; }
 }
 const tick = () => new Promise(resolve => setImmediate(resolve));
-async function setup({ deferAdmin = false, authorized = true, reactionFetch } = {}) {
+async function setup({ deferAdmin = false, authorized = true, isAdmin = 0, reactionFetch } = {}) {
   const nodes = new Map();
   const get = id => { if (!nodes.has(id)) nodes.set(id, new Element()); return nodes.get(id); };
   let callback, release, adminRequests = 0;
-  const publicItem = { id: 'public', type: 'cheer', nickname: '독자', message: '<img src=x onerror=alert(1)>', created_at: '2026-10-05T00:00:00Z' };
+  const publicItem = { is_admin: isAdmin, id: 'public', type: 'cheer', nickname: '독자', message: '<img src=x onerror=alert(1)>', created_at: '2026-10-05T00:00:00Z' };
   const privateItem = { ...publicItem, id: 'private', message: '비공개 내용', visibility: 'private' };
   const fetch = async (url, options) => {
     if (/\/api\/feedback\/public\//.test(url)) return reactionFetch(url, options);
@@ -35,7 +35,7 @@ async function setup({ deferAdmin = false, authorized = true, reactionFetch } = 
   await tick();
   get('admin-login').open = true;
   get('admin-login').events.toggle();
-  return { get, signIn: () => callback({ credential: 'signed-token' }), release: () => release?.() };
+  return { get, api: context.FeedbackInbox, signIn: () => callback({ credential: 'signed-token' }), release: () => release?.() };
 }
 
 test('reader messages are literal text, and a rejected Google account never enters admin mode', async () => {
@@ -109,4 +109,19 @@ test('comments load on demand as literal text and failed submissions preserve th
   assert.equal(writes[0].id, writes[1].id); assert.equal(message.value, '');
   assert.equal(thread.children[0].textContent, '댓글 1');
   assert.equal(reads, 2);
+});
+
+
+test('verified authors have a distinct badge and credentials clear on logout', async () => {
+  const { get, api, signIn } = await setup({ isAdmin: 1 });
+  const author = get('inbox-list').children[0].children[0].children[1];
+  assert.equal(author.textContent, '관리자');
+  assert.equal(author.className, 'author-admin');
+  assert.equal(api.authHeaders().Authorization, undefined);
+  await signIn();
+  assert.equal(api.authHeaders().Authorization, 'Bearer signed-token');
+  get('admin-logout').events.click();
+  assert.equal(api.authHeaders().Authorization, undefined);
+  const reader = await setup();
+  assert.equal(reader.get('inbox-list').children[0].children[0].children[1].className, undefined);
 });
