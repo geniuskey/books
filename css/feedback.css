@@ -1,67 +1,68 @@
-/* 독자 의견: 책의 여백에 남기는 메모 */
+/* 독자 의견: 내용을 빠르게 읽고 쓸 수 있는 조밀한 배치 */
 .feedback-page main .wrap { max-width: 1080px; }
-.feedback-page .page-head { padding: 64px 0 40px; }
-.feedback-page .page-head .wrap { display: grid; grid-template-columns: 1.5fr 1fr; align-items: center; gap: 24px; }
-.feedback-page .eyebrow { color: var(--accent); font-size: 12px; letter-spacing: .09em; font-weight: 650; }
-.feedback-page .page-head h1 { margin: 20px 0; font-size: clamp(34px, 4.5vw, 52px); line-height: 1.25; letter-spacing: -.055em; font-weight: 750; }
-.feedback-page .page-head .lead { font-size: 16px; line-height: 1.9; }
-.feedback-topics { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
-.feedback-topics span { padding: 5px 11px; border: 1px solid var(--border); border-radius: 20px; color: var(--text-dim); font-size: 12px; }
-.feedback-illustration { display: block; width: 100%; max-width: 360px; justify-self: end; }
-.feedback-page .feedback-section { padding-top: 0; border-top: 0; }
-.feedback-page .feedback-compose { overflow: hidden; margin-bottom: 52px; border-color: var(--border); border-radius: 18px; background: var(--bg-elev); box-shadow: var(--shadow); }
-.feedback-page .feedback-compose > summary { padding: 26px 30px; border-left: 4px solid var(--accent); transition: background .18s ease; }
+.feedback-page .page-head { padding: 20px 0 16px; }
+.feedback-page .page-head h1 { margin: 0 0 6px; font-size: 30px; line-height: 1.25; letter-spacing: -.045em; }
+.feedback-page .page-head .lead { font-size: 15px; line-height: 1.6; }
+.feedback-page .feedback-section { padding: 0 0 24px; border-top: 0; }
+.feedback-page .feedback-context { margin-bottom: 12px; }
+.feedback-page .feedback-compose { overflow: hidden; margin-bottom: 20px; border-radius: 10px; background: var(--bg-elev); }
+.feedback-page .feedback-compose > summary { padding: 12px 16px; border-left: 3px solid var(--accent); transition: background .18s ease; }
 .feedback-page .feedback-compose > summary:hover { background: var(--accent-soft); }
-.compose-label { display: grid; gap: 5px; }
-.compose-kicker { color: var(--text-faint); font: 500 10px var(--mono); letter-spacing: .12em; }
-.feedback-page .feedback-compose > summary strong { font-size: 22px; letter-spacing: -.035em; color: var(--text); }
-.feedback-page .compose-hint { margin: 0; font-size: 14px; }
-.feedback-page .compose-icon { width: 44px; height: 44px; color: var(--bg-elev); background: var(--accent); transition: transform .18s ease; }
-.feedback-page .feedback-form { padding: 30px 34px; }
-.feedback-page .feedback-form .feedback-note { max-width: 650px; line-height: 1.85; }
-.feedback-page .feedback-form label { font-size: 14px; }
-.feedback-page .feedback-form :is(input, select, textarea) { background: var(--bg); border-radius: 10px; }
-.feedback-page .feedback-form textarea { line-height: 1.8; }
-.feedback-page .feedback-form button { padding: 13px 32px; border-radius: 30px; }
-.feedback-page .feedback-inbox { margin-bottom: 36px; }
-.inbox-kicker { display: block; margin-bottom: 6px; color: var(--accent); font-size: 12px; font-weight: 600; }
-.feedback-page .inbox-heading h2 { font-size: 28px; letter-spacing: -.045em; }
-.feedback-page .inbox-heading p { margin-top: 7px; }
-.feedback-page #inbox-refresh { border-radius: 24px; padding: 8px 16px; background: transparent; }
-.feedback-page .inbox-filters { margin-top: 24px; padding: 13px 18px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+.compose-label { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; }
+.feedback-page .feedback-compose > summary strong { font-size: 17px; letter-spacing: -.035em; color: var(--text); }
+.feedback-page .compose-hint { margin: 0; font-size: 13px; }
+.feedback-page .compose-icon { width: 36px; height: 36px; flex-shrink: 0; color: var(--bg-elev); background: var(--accent); transition: transform .18s ease; }
+.feedback-page .feedback-form { padding: 16px; }
+.feedback-page .feedback-form h2 { font-size: 18px; }
+.feedback-page .feedback-form .feedback-note { margin: 6px 0 12px; line-height: 1.6; }
+.feedback-page .feedback-form-row { gap: 0 16px; }
+.feedback-page .feedback-form label { margin-bottom: 12px; font-size: 14px; }
+.feedback-page .feedback-form :is(input, select, textarea) { margin-top: 4px; padding: 9px 10px; background: var(--bg); border-radius: 6px; }
+.feedback-page .feedback-form textarea { min-height: 110px; line-height: 1.6; }
+.feedback-page .feedback-form button { min-height: 44px; padding: 8px 24px; border-radius: 8px; }
+.feedback-page .feedback-status { margin-top: 8px; }
+.feedback-page .feedback-status:empty { display: none; }
+.feedback-page .feedback-inbox { margin-bottom: 16px; }
+.feedback-page .inbox-heading h2 { font-size: 22px; letter-spacing: -.045em; }
+.feedback-page .inbox-heading p { margin-top: 4px; }
+.feedback-page #inbox-refresh { border-radius: 8px; padding: 8px 12px; background: transparent; }
+.feedback-page .inbox-filters { margin-top: 12px; padding: 6px 0; }
 .feedback-page .inbox-filters label { font-size: 13px; font-weight: 600; }
-.feedback-page .inbox-filters select { background: var(--bg-elev); font-size: 13px; }
-.feedback-page #inbox-status { margin: 20px 0; }
-.feedback-page #inbox-list:empty { min-height: 64px; border-bottom: 1px dashed var(--border); margin-bottom: 24px; }
-.feedback-page .inbox-item { padding: 28px; border-radius: 16px; box-shadow: 0 3px 12px color-mix(in srgb, var(--border) 18%, transparent); }
-.feedback-page .inbox-type { padding: 4px 11px; border-radius: 20px; font-size: 12px; }
-.feedback-page .inbox-message { margin: 22px 0; }
-.feedback-page .inbox-reactions { margin-top: 22px; }
-.feedback-page .inbox-reactions button { border-radius: 20px; background: transparent; }
-.feedback-page .inbox-thread > summary { color: var(--text-dim); }
+.feedback-page .inbox-filters select { background: var(--bg-elev); font-size: 14px; }
+.feedback-page #inbox-status { margin: 8px 0; line-height: 1.6; }
+.feedback-page #inbox-list:empty { min-height: 0; margin: 0; }
+.feedback-page .inbox-item { padding: 14px 16px; margin-bottom: 8px; border-radius: 8px; }
+.feedback-page .inbox-type { padding: 2px 8px; border-radius: 6px; font-size: 12px; }
+.feedback-page .inbox-message { margin: 10px 0; line-height: 1.65; }
+.feedback-page .inbox-reactions { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin-top: 10px; padding-top: 6px; }
+.feedback-page .inbox-reactions > .feedback-status:not(:empty) { flex-basis: 100%; }
+.feedback-page .inbox-reactions button { border-radius: 8px; background: transparent; }
+.feedback-page .inbox-thread { margin-top: 0; }
+.feedback-page .inbox-thread[open] { flex-basis: 100%; }
+.feedback-page .inbox-thread > summary { padding: 8px 0; color: var(--text-dim); }
+.feedback-page .inbox-comment { padding: 10px 0; }
+.feedback-page .inbox-comment-form { margin-top: 12px; }
 .feedback-page .feedback-inbox button:hover:not(:disabled) { background: var(--accent-soft); border-color: var(--accent); }
-.feedback-page .feedback-alternative { padding: 20px 24px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+.feedback-page .feedback-alternative { margin-bottom: 0; padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); }
 .feedback-page .feedback-alternative > summary { font-weight: 600; }
-.feedback-page .feedback-alternative .feedback-card { background: var(--bg-elev); }
+.feedback-page .feedback-alternative .feedback-grid { margin-top: 12px; gap: 12px; }
+.feedback-page .feedback-alternative .feedback-card { padding: 14px; background: var(--bg-elev); }
+.feedback-page .feedback-alternative .feedback-card h2 { margin-top: 6px; }
+.feedback-page .feedback-alternative .feedback-card p { margin-bottom: 10px; }
+.feedback-page .feedback-admin { margin-top: 16px; padding: 14px; }
+.feedback-page footer { padding: 16px 0 24px; }
 @media (max-width: 720px) {
-  .feedback-page .page-head { padding: 36px 0 28px; }
-  .feedback-page .page-head .wrap { grid-template-columns: 1fr; gap: 0; }
-  .feedback-illustration { grid-row: 1; width: 180px; justify-self: center; margin-bottom: 12px; }
-  .feedback-page .page-head h1 { font-size: 36px; margin: 14px 0; }
-  .feedback-page .page-head .lead { font-size: 15px; }
-  .feedback-topics { gap: 6px; margin-top: 20px; }
-  .feedback-topics span { font-size: 11px; padding: 4px 9px; }
-  .feedback-page .feedback-compose { margin-bottom: 36px; }
-  .feedback-page .feedback-compose > summary { padding: 20px 18px; gap: 12px; }
-  .feedback-page .feedback-compose > summary strong { font-size: 19px; }
+  .feedback-page .page-head { padding: 16px 0 12px; }
+  .feedback-page .page-head h1 { font-size: 26px; }
+  .feedback-page .feedback-compose { margin-bottom: 16px; }
+  .feedback-page .feedback-compose > summary { padding: 10px 12px; gap: 10px; }
   .feedback-page .compose-hint { font-size: 12px; }
-  .feedback-page .compose-icon { width: 36px; height: 36px; }
-  .feedback-page .feedback-form { padding: 24px 18px; }
-  .feedback-page .feedback-form h2 { font-size: 19px; }
-  .feedback-page .inbox-heading h2 { font-size: 23px; }
-  .feedback-page .inbox-heading p { font-size: 13px; max-width: 220px; }
-  .feedback-page .inbox-item { padding: 20px; }
-  .feedback-page .feedback-alternative { padding: 18px; }
+  .feedback-page .feedback-form { padding: 12px; }
+  .feedback-page .inbox-heading { gap: 8px; }
+  .feedback-page .inbox-heading h2 { font-size: 20px; }
+  .feedback-page .inbox-heading p { font-size: 13px; max-width: none; }
+  .feedback-page .inbox-item { padding: 12px; }
+  .feedback-page .feedback-inbox button, .feedback-page .inbox-thread > summary { min-height: 44px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .feedback-page .feedback-compose > summary, .feedback-page .compose-icon { transition: none; }

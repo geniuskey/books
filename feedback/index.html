@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
 <link rel="stylesheet" href="/css/style.css?v=20261017-reactions">
-<link rel="stylesheet" href="/css/feedback.css?v=20261017-design">
+<link rel="stylesheet" href="/css/feedback.css?v=20261017-compact">
 <script src="/js/core.js?v=20261017-six-fields" defer></script>
 <script src="/js/feedback-inbox.js?v=20261017-reactions" defer></script>
 <script src="/js/feedback.js" defer></script>
@@ -31,29 +31,16 @@
   <section class="page-head">
     <div class="wrap">
       <div class="feedback-intro">
-        <div class="eyebrow">독자 의견 · Reader’s notes</div>
-        <h1>책의 다음 문장은,<br>함께 만듭니다.</h1>
-        <p class="lead">읽다가 멈춘 문장, 문득 떠오른 생각.<br>여러분의 한마디가 더 나은 책의 시작이 됩니다.</p>
-        <div class="feedback-topics" aria-label="남길 수 있는 의견"><span>오류를 발견했어요</span><span>이런 책이 궁금해요</span><span>잘 읽었어요!</span></div>
+        <h1>독자 의견</h1>
+        <p class="lead">오류 제보, 개선 의견, 짧은 응원을 남겨 주세요.</p>
       </div>
-      <svg class="feedback-illustration" viewBox="0 0 360 280" fill="none" aria-hidden="true">
-        <circle cx="180" cy="145" r="118" fill="var(--surface)"/>
-        <ellipse cx="186" cy="239" rx="129" ry="13" fill="var(--border)" opacity=".45"/>
-        <path d="M53 116 Q116 98 180 127 Q244 98 307 116 L307 226 Q243 210 180 239 Q116 210 53 226Z" fill="var(--surface-2)" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
-        <path d="M59 104 Q121 91 180 119 Q239 91 301 104 L301 215 Q237 204 180 230 Q123 204 59 215Z" fill="var(--bg-elev)" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
-        <path d="M180 120V230 M80 132Q118 129 157 144 M80 152Q118 149 157 164 M80 172Q118 169 145 179 M203 145Q240 130 278 133 M203 165Q240 150 278 153 M203 185Q233 173 258 174" stroke="var(--border)" stroke-width="3" stroke-linecap="round"/>
-        <path d="M222 110V155L233 147L244 150V106" fill="var(--accent-2)"/>
-        <g transform="rotate(-9 119 68)"><rect x="55" y="24" width="130" height="72" rx="12" fill="var(--bg-elev)" stroke="var(--accent)" stroke-width="1.5"/><path d="M142 96L151 109L158 96" fill="var(--bg-elev)" stroke="var(--accent)" stroke-width="1.5"/><path d="M76 49H155M76 64H134" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" opacity=".6"/></g>
-        <g transform="rotate(10 270 64)"><rect x="235" y="32" width="67" height="61" rx="14" fill="var(--accent)"/><path d="M268 76L252 60C241 48 259 40 268 52C277 40 295 48 284 60Z" fill="var(--bg-elev)"/></g>
-        <path d="M322 145V161M314 153H330M31 87V99M25 93H37" stroke="var(--accent-2)" stroke-width="2" stroke-linecap="round"/>
-      </svg>
     </div>
   </section>
   <section class="block feedback-section">
     <div class="wrap">
       <div class="feedback-context" id="feedback-context" hidden></div>
       <details id="feedback-compose" class="feedback-compose">
-        <summary><span class="compose-label"><span class="compose-kicker">A NOTE TO THE AUTHOR</span><strong>저자에게 의견 남기기</strong><span class="compose-hint">작은 발견도, 짧은 응원도 좋아요. 로그인 없이 전해 주세요.</span></span><span class="compose-icon" aria-hidden="true">＋</span></summary>
+        <summary><span class="compose-label"><strong>저자에게 의견 남기기</strong><span class="compose-hint">작은 발견도, 짧은 응원도 좋아요. 로그인 없이 전해 주세요.</span></span><span class="compose-icon" aria-hidden="true">＋</span></summary>
       <form id="feedback-form" class="feedback-form">
         <h2>어떤 이야기를 전하고 싶으신가요?</h2>
         <p class="feedback-note">비공개 글은 저자만 확인합니다. 공개 글은 아래 목록에 바로 표시됩니다. 개인 정보는 적지 마세요. 개별 답변은 어려울 수 있습니다.</p>
@@ -61,9 +48,11 @@
           <label>글 종류<select name="type" required><option value="request">의견·건의</option><option value="error">오류 제보</option><option value="cheer">저자 응원</option></select></label>
           <label>닉네임 <span>(선택)</span><input name="nickname" maxlength="40" autocomplete="nickname" placeholder="비워 두면 익명으로 접수됩니다"></label>
         </div>
+        <div class="feedback-form-row">
         <label>관련 책 <span>(선택)</span><select name="bookId" id="feedback-book"><option value="">시리즈 전체 / 선택하지 않음</option></select></label>
         <label>공개 범위<select name="visibility" required><option value="private">비공개 · 저자에게만 보내기</option><option value="public">공개 · 다른 독자도 볼 수 있음</option></select></label>
-        <label>내용<textarea name="message" required maxlength="3000" rows="7" placeholder="어떤 점이 좋았나요? 어려웠던 설명이나 개선 아이디어도 편하게 남겨 주세요." aria-describedby="feedback-count"></textarea></label>
+        </div>
+        <label>내용<textarea name="message" required maxlength="3000" rows="4" placeholder="어떤 점이 좋았나요? 어려웠던 설명이나 개선 아이디어도 편하게 남겨 주세요." aria-describedby="feedback-count"></textarea></label>
         <div class="feedback-form-foot"><span id="feedback-count">0 / 3,000자</span><button id="feedback-submit" type="submit" disabled>보내기</button></div>
         <div class="feedback-honeypot" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
         <p id="feedback-status" class="feedback-status" role="status" aria-live="polite">접수 창구를 연결하는 중…</p>
@@ -71,7 +60,7 @@
       </details>
       <noscript><p>로그인 없는 접수에는 JavaScript가 필요합니다. 아래 GitHub 창구를 이용할 수도 있습니다.</p></noscript>
       <section class="feedback-inbox" aria-labelledby="inbox-title">
-        <div class="inbox-heading"><div><span class="inbox-kicker">함께 나누는 이야기</span><h2 id="inbox-title">독자들이 남긴 글</h2><p>공개 글에 댓글과 좋아요로 함께 이야기해 보세요.</p></div><button id="inbox-refresh" type="button">새로고침</button></div>
+        <div class="inbox-heading"><div><h2 id="inbox-title">독자들이 남긴 글</h2><p>공개 글에 댓글과 좋아요로 함께 이야기해 보세요.</p></div><button id="inbox-refresh" type="button">새로고침</button></div>
 
         <div id="admin-session" hidden><span>관리자로 로그인했습니다.</span> <button id="admin-logout" type="button">로그아웃</button></div>
         <div class="inbox-filters"><label>글 종류<select id="inbox-type"><option value="">전체</option><option value="error">오류 제보</option><option value="request">의견·건의</option><option value="cheer">저자 응원</option></select></label><label id="inbox-scope-label" hidden>보기<select id="inbox-scope"><option value="all">전체</option><option value="unread">안 읽은 글</option><option value="private">비공개</option><option value="public">공개</option><option value="hidden">숨긴 글</option></select></label></div>
