@@ -743,7 +743,6 @@ a.badge.stg:hover { text-decoration: none; filter: brightness(1.1); }
 .library-head { padding: 24px 0 12px; }
 .library-heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; }
 .library-head h1 { margin: 0; font-size: clamp(27px, 3vw, 34px); }
-.library-count { color: var(--text-dim); font-size: 13px; }
 .library-intro { margin: 3px 0 0; color: var(--text-dim); font-size: 13px; }
 .library-head .lib-filters { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 14px; }
 .library-head .lib-filters .search { flex: 1 1 260px; width: auto; min-width: 0; max-width: none; }
@@ -1357,7 +1356,7 @@ body[data-page="simulators"] .lib-filters { flex-direction: row; flex-wrap: wrap
 .catalog-cover-art .cover-art { max-height: none; min-height: 0; }
 .catalog-cover-footer { display: block; padding-top: 8px; font-size: 11px; letter-spacing: normal; flex-shrink: 0; }
 .catalog-cover-footer > span:last-child { display: none; }
-@media (max-width: 1100px) { .catalog-list { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 900px) { .catalog-list { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (max-width: 760px) {
   .catalog-list { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 16px; padding-inline: 8px; }
 }
@@ -1387,7 +1386,5 @@ body[data-page="simulators"] .lib-filters { flex-direction: row; flex-wrap: wrap
   .browse-cover { width: min(90%, 151.2px); }
 }
 
-/* Field discovery opens the atlas; the library offers the same route. */
+/* Field discovery opens the atlas. */
 .browse-fields-label { flex-basis: 100%; margin-bottom: 3px; font-size: 13px; }
-.library-map-prompt { display: flex; flex-wrap: wrap; gap: 6px 16px; width: fit-content; margin: 0 0 14px; color: var(--text-dim); font-size: 13px; }
-.library-map-prompt span { color: var(--accent); font-weight: 600; }

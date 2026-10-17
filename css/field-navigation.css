@@ -61,9 +61,9 @@
 @media (prefers-reduced-motion: reduce) {
   .atlas-navigation .map-fields button { transition: none; }
 }
-.library-head { padding-top: 18px; }
+.library-head { padding: 12px 0 0; }
+.library-head .atlas-navigation { padding-bottom: 0; }
 .library-head .atlas-nav-label { margin: 0; font-size: 18px; letter-spacing: -.04em; }
-.library-head .lib-filters { margin-top: 12px; }
 body[data-page="library"] main > .wrap,
 .library-head > .wrap { max-width: 1384px; }
 @media (max-width: 760px) {
@@ -71,3 +71,8 @@ body[data-page="library"] main > .wrap,
   body[data-page="library"] main > .wrap,
   .library-head > .wrap { padding-inline: 10px; }
 }
+
+/* Keep field headings and covers close to the navigation. */
+body[data-page="library"] #shelf-groups > .group { margin-top: 0; padding-top: 12px; }
+body[data-page="library"] #shelf-groups .group-head { margin-bottom: 4px; padding-bottom: 6px; }
+body[data-page="library"] #shelf-groups .catalog-list { padding-top: 8px; }

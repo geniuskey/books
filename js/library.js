@@ -2,8 +2,6 @@
 EB.start("library", (d) => {
   "use strict";
   const { $, esc } = EB;
-  const counts = EB.counts(d.books);
-  $("#lib-count").textContent = `출간 ${counts.published}권${counts.writing ? ` · 집필 중 ${counts.writing}권` : ""} · 집필 예정 ${counts.planned}권`;
   const favoriteKey = "books:favorites:v1";
   const publishedIds = new Set(d.books.filter(EB.isPublished).map((b) => b.id));
   function readFavorites() {
@@ -13,21 +11,8 @@ EB.start("library", (d) => {
     } catch { return new Set(); }
   }
   let favorites = readFavorites();
-  const state = { wing: "all", field: "all", status: "published", favorites: false };
+  const state = { field: "all" };
   const fields = [{ id: "all", name: "모든 분야" }, ...d.fields.filter((f) => f.books.length)];
-  const filters = {
-    wing: [{ id: "all", name: "전체" }, ...d.wings],
-    status: [{ id: "all", name: "모든 상태" }, ...Object.entries(d.statusLabels).map(([id, name]) => ({ id, name }))],
-  };
-  Object.entries(filters).forEach(([key, options]) => {
-    const select = $(`#f-${key}`);
-    options.forEach((option) => select.add(new Option(option.name, option.id)));
-    select.addEventListener("change", () => {
-      state[key] = select.value;
-      if (key === "wing") state.field = "all";
-      sync();
-    });
-  });
   const fieldButtons = new Map();
   fields.forEach((field, index) => {
     const button = document.createElement("button");
@@ -37,7 +22,6 @@ EB.start("library", (d) => {
     fieldButtons.set(field.id, button);
     $("#library-fields").appendChild(button);
   });
-  $("#library-favorites").addEventListener("click", () => { state.favorites = !state.favorites; sync(); });
 
   const menu = document.createElement("div");
   menu.className = "book-context-menu";
@@ -73,8 +57,7 @@ EB.start("library", (d) => {
     try { localStorage.setItem(favoriteKey, JSON.stringify([...favorites])); } catch {}
     closeMenu();
     sync();
-    if (menuAnchor.closest("article").hidden) $("#library-favorites").focus();
-    else menuAnchor.focus({ preventScroll: true });
+    menuAnchor.focus({ preventScroll: true });
   });
   menu.addEventListener("keydown", (event) => {
     if (event.key === "Escape") { event.preventDefault(); closeMenu(true); }
@@ -198,29 +181,19 @@ EB.start("library", (d) => {
   search.addEventListener("input", sync);
   $(".header-search").addEventListener("submit", (event) => { event.preventDefault(); sync(); });
   const query = new URLSearchParams(location.search);
-  Object.entries(filters).forEach(([key, options]) => { if (options.some((option) => option.id === query.get(key))) state[key] = query.get(key); });
   if (fields.some((field) => field.id === EB.resolveField(query.get("field")))) state.field = EB.resolveField(query.get("field"));
-  if (state.wing !== "all" && state.field !== "all" && d.fieldById[state.field].wing !== state.wing) state.field = "all";
-  state.favorites = query.get("favorites") === "1";
   search.value = query.get("q") || "";
   function sync() {
     closeMenu();
     closeDetails();
-    Object.keys(filters).forEach((key) => { $(`#f-${key}`).value = state[key]; });
     fields.forEach((field) => {
       const button = fieldButtons.get(field.id);
-      button.hidden = !!field.wing && state.wing !== "all" && field.wing !== state.wing;
       button.setAttribute("aria-pressed", String(state.field === field.id));
     });
-    const mapLink = $("#library-map-link");
-    const selectedField = d.fieldById[state.field];
-    mapLink.href = selectedField ? EB.mapUrl(selectedField.id) : "/paths/";
-    mapLink.innerHTML = `${selectedField ? esc(selectedField.name) + " 책들은" : "이 책들은"} 어떻게 이어질까요? <span>지식 지도 보기 →</span>`;
-    $("#library-favorites").setAttribute("aria-pressed", String(state.favorites));
     const q = search.value.trim().toLowerCase();
     let shown = 0;
     rows.forEach(({ book, row, text }) => {
-      const visible = (state.wing === "all" || book.fieldObj.wing === state.wing) && (state.field === "all" || book.field === state.field) && (state.status === "all" || book.status === state.status) && (!state.favorites || favorites.has(book.id)) && (!q || text.includes(q));
+      const visible = (state.field === "all" || book.field === state.field) && (!q || text.includes(q));
       row.hidden = !visible;
       $(".catalog-star", row).hidden = !favorites.has(book.id);
       if (visible) shown++;
@@ -233,8 +206,7 @@ EB.start("library", (d) => {
     $("#shown").textContent = `${shown}권`;
     $("#no-result").hidden = shown > 0;
     const params = new URLSearchParams();
-    ["wing", "field", "status"].forEach((key) => { if (state[key] !== (key === "status" ? "published" : "all")) params.set(key, state[key]); });
-    if (state.favorites) params.set("favorites", "1");
+    if (state.field !== "all") params.set("field", state.field);
     if (q) params.set("q", search.value.trim());
     history.replaceState(null, "", `${location.pathname}${params.size ? "?" + params : ""}${location.hash}`);
   }
