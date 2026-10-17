@@ -1,3 +1,29 @@
+// Build links with DOM nodes so submitted HTML remains plain text.
+function appendFeedbackLinks(element, text) {
+  const pattern = /\b(?:https?:\/\/|www\.)[^\s<>"'`]+/gi;
+  let offset = 0;
+  for (const match of text.matchAll(pattern)) {
+    let label = match[0].replace(/[.,!?;:。！？、]+$/, '');
+    // Keep balanced parentheses in URLs, but leave surrounding punctuation outside.
+    for (const [open, close] of [['(', ')'], ['[', ']'], ['{', '}']]) {
+      while (label.endsWith(close) && label.split(close).length > label.split(open).length) label = label.slice(0, -1);
+    }
+    let url;
+    try { url = new URL(/^www\./i.test(label) ? `https://${label}` : label); } catch { continue; }
+    if (!['http:', 'https:'].includes(url.protocol) || !url.hostname) continue;
+    element.append(text.slice(offset, match.index));
+    const link = document.createElement('a');
+    link.href = url.href;
+    link.textContent = label;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    element.append(link);
+    offset = match.index + label.length;
+  }
+  if (offset === 0) element.textContent = text;
+  else element.append(text.slice(offset));
+}
+
 /* Public and authenticated inbox on the same feedback page. Tokens stay in memory. */
 globalThis.FeedbackInbox = (() => {
   let refresh = () => {};
@@ -53,12 +79,12 @@ globalThis.FeedbackInbox = (() => {
       meta.append(badge, author, date);
       if (admin) {
         const state = document.createElement('span');
-        state.textContent = `${item.visibility === 'public' ? '공개' : '비공개'} · ${item.read_at ? '읽음' : '안 읽음'}${item.is_hidden ? ' · 숨김' : ''}`;
+        state.textContent = item.visibility === 'public' ? '공개' : '비공개';
         meta.append(state);
       }
       const message = document.createElement('p');
       message.className = 'inbox-message';
-      message.textContent = item.message;
+      appendFeedbackLinks(message, item.message);
       card.append(meta, message);
       const book = books.get(item.book_id);
       if (book) {
@@ -78,26 +104,7 @@ globalThis.FeedbackInbox = (() => {
           } catch {}
         }
       }
-      if (!admin || (item.visibility === 'public' && !item.is_hidden)) card.append(renderReactions(item));
-      if (admin) {
-        const actions = document.createElement('div'); actions.className = 'inbox-actions';
-        const buttons = [[item.read_at ? 'unread' : 'read', item.read_at ? '안 읽음으로 표시' : '읽음으로 표시']];
-        if (item.visibility === 'public') buttons.push([item.is_hidden ? 'restore' : 'hide', item.is_hidden ? '공개 목록에 복원' : '공개 목록에서 숨기기']);
-        for (const [action, label] of buttons) {
-          const button = document.createElement('button'); button.type = 'button'; button.textContent = label;
-          button.addEventListener('click', async () => {
-            const current = generation;
-            button.disabled = true;
-            try {
-              await api(`/api/admin/feedback/${item.id}`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action }) });
-              if (current === generation) await load(true);
-            } catch (error) { if (current === generation) handleError(error); }
-            finally { button.disabled = false; }
-          });
-          actions.append(button);
-        }
-        card.append(actions);
-      }
+      if (!admin || item.visibility === 'public') card.append(renderReactions(item));
       return card;
     }
     function renderReactions(item) {
@@ -147,7 +154,7 @@ globalThis.FeedbackInbox = (() => {
             author.textContent = comment.is_admin ? '관리자' : comment.nickname || '익명';
             if (comment.is_admin) author.className = 'author-admin';
             meta.append(author, ' · ', date);
-            const message = document.createElement('p'); message.className = 'inbox-message'; message.textContent = comment.message;
+            const message = document.createElement('p'); message.className = 'inbox-message'; appendFeedbackLinks(message, comment.message);
             row.append(meta, message); comments.append(row);
           }
           nextPage++; loaded = true; more.hidden = !result.hasMore;

@@ -845,7 +845,7 @@ footer p { margin: 0; }
 .feedback-honeypot { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 .feedback-alternative { font-size: 20px; margin: 0 0 18px; }
 .feedback-inbox { max-width: 760px; margin: 0 auto 48px; }
-.inbox-heading, .inbox-filters, .inbox-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+.inbox-heading, .inbox-filters { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
 .inbox-heading { justify-content: space-between; }
 .feedback-inbox button { padding: 8px 12px; font: inherit; font-size: 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text); background: var(--bg-elev); cursor: pointer; }
 .feedback-inbox button:disabled { opacity: .5; cursor: default; }
@@ -857,7 +857,6 @@ footer p { margin: 0; }
 .inbox-item { padding: 20px; margin: 12px 0; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-elev); }
 .inbox-meta, #inbox-status, #admin-session { font-size: 13px; color: var(--text-dim); }
 .inbox-message { white-space: pre-wrap; overflow-wrap: anywhere; }
-.inbox-actions { margin-top: 16px; }
 .inbox-reactions { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border); }
 .inbox-reactions button[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
 .inbox-reactions .feedback-status:empty { display: none; }

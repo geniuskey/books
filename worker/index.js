@@ -63,7 +63,7 @@ export default {
     const isInbox = path === '/api/feedback/public' || path === '/api/admin/feedback' || /^\/api\/admin\/feedback\/[0-9a-f-]{36}$/i.test(path);
     if (path !== '/api/feedback' && !isInbox && !reaction) return reply(404, '요청한 주소를 찾을 수 없습니다.');
     if (request.method === 'OPTIONS') {
-      return new Response(null, { status: 204, headers: { ...headers, 'Access-Control-Allow-Methods': reaction ? 'GET, POST, PUT, DELETE, OPTIONS' : isInbox ? 'GET, PATCH, OPTIONS' : 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization' } });
+      return new Response(null, { status: 204, headers: { ...headers, 'Access-Control-Allow-Methods': reaction ? 'GET, POST, PUT, DELETE, OPTIONS' : isInbox ? 'GET, OPTIONS' : 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization' } });
     }
     if (reaction) return reactions(request, env, headers, reaction, readBody);
     if (isInbox) {

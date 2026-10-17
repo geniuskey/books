@@ -48,12 +48,12 @@ function setup() {
   return { db, env, request, legacy, publicId, hiddenId };
 }
 
-test('public API returns only visible public rows, never private columns or old private messages', async () => {
-  const { db, request, publicId, legacy } = setup();
+test('public API returns all public rows including formerly hidden posts, never private columns or old private messages', async () => {
+  const { db, request, publicId, hiddenId, legacy } = setup();
   const response = await request('/api/feedback/public?scope=all');
   assert.equal(response.status, 200);
   const { items } = await response.json();
-  assert.deepEqual(items.map(i => i.id), [publicId]);
+  assert.deepEqual(new Set(items.map(i => i.id)), new Set([publicId, hiddenId]));
   assert.ok(!Object.hasOwn(items[0], 'page_url'));
   assert.ok(!Object.hasOwn(items[0], 'read_at'));
   assert.equal(db.prepare('SELECT visibility FROM feedback WHERE id=?').get(legacy).visibility, 'private');
@@ -79,22 +79,17 @@ test('only Google-signed, unexpired, correct-audience, verified admin email toke
   db.close();
 });
 
-test('authenticated read/hide/restore actions and filtering preserve writer privacy', async () => {
-  const { db, request, legacy, publicId } = setup();
+test('removed moderation actions and filters are rejected while private posts stay private', async () => {
+  const { db, request, legacy } = setup();
   const credential = await token();
-  const change = (id, action, auth = credential) => request(`/api/admin/feedback/${id}`, auth, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action }) });
-  assert.equal((await change(legacy, 'read', null)).status, 401);
-  assert.equal((await change(legacy, 'read')).status, 200);
-  let response = await request('/api/admin/feedback?scope=unread', credential);
-  assert.equal((await response.json()).items.length, 2);
-  assert.equal((await change(legacy, 'unread')).status, 200);
-  assert.equal((await change(publicId, 'hide')).status, 200);
-  response = await request('/api/feedback/public');
-  assert.equal((await response.json()).items.length, 0);
-  assert.equal((await change(publicId, 'restore')).status, 200);
-  assert.equal((await change(legacy, 'publish')).status, 400);
+  for (const action of ['read', 'unread', 'hide', 'restore', 'publish']) {
+    const response = await request(`/api/admin/feedback/${legacy}`, credential, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action }) });
+    assert.equal(response.status, 405);
+  }
+  for (const scope of ['unread', 'hidden']) assert.equal((await request(`/api/admin/feedback?scope=${scope}`, credential)).status, 400);
+  const response = await request('/api/admin/feedback?scope=private', credential);
+  assert.deepEqual((await response.json()).items.map(item => item.id), [legacy]);
   assert.equal(db.prepare('SELECT visibility FROM feedback WHERE id=?').get(legacy).visibility, 'private');
-  assert.equal((await request('/api/admin/feedback?scope=private', credential)).status, 200);
   assert.equal((await request('/api/feedback/public?page=-1')).status, 400);
   assert.equal((await request('/api/feedback/public?type=invalid')).status, 400);
   db.close();
@@ -106,9 +101,9 @@ test('pagination and CORS for Authorization headers', async () => {
   const first = await (await request('/api/feedback/public')).json();
   const second = await (await request('/api/feedback/public?page=1')).json();
   assert.equal(first.items.length, 20); assert.equal(first.hasMore, true);
-  assert.equal(second.items.length, 5); assert.equal(second.hasMore, false);
+  assert.equal(second.items.length, 6); assert.equal(second.hasMore, false);
   const ids = new Set([...first.items, ...second.items].map(i => i.id));
-  assert.equal(ids.size, 25);
+  assert.equal(ids.size, 26);
   const preflight = await request('/api/admin/feedback', undefined, { method: 'OPTIONS' });
   assert.equal(preflight.status, 204);
   assert.ok(preflight.headers.get('Access-Control-Allow-Headers').includes('Authorization'));

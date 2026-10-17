@@ -38,7 +38,7 @@ test('likes are idempotent per visitor, persist in the inbox, and can be removed
   const other = crypto.randomUUID();
   await request(path, 'PUT', { visitorId: other });
   const inbox = await (await request(`/api/feedback/public?visitorId=${visitorId}`)).json();
-  assert.equal(inbox.items[0].like_count, 2); assert.equal(inbox.items[0].liked, 1);
+  assert.equal(inbox.items.find(item => item.id === id).like_count, 2); assert.equal(inbox.items.find(item => item.id === id).liked, 1);
   assert.ok(!JSON.stringify(inbox).includes(other));
   for (let i = 0; i < 2; i++) assert.deepEqual(await (await request(path, 'DELETE', { visitorId })).json(), { count: 1, liked: false });
   assert.deepEqual(await (await request(`${path}?visitorId=${other}`)).json(), { count: 1, liked: true });
@@ -58,15 +58,15 @@ test('comments preserve literal text, retry once, and paginate without overlap',
   const all = [...first.items, ...second.items];
   assert.equal(new Set(all.map(item => item.id)).size, 25);
   assert.equal(all.find(item => item.id === comment.id).message, comment.message);
-  assert.equal((await (await request('/api/feedback/public')).json()).items[0].comment_count, 25);
+  assert.equal((await (await request('/api/feedback/public')).json()).items.find(item => item.id === id).comment_count, 25);
   db.close();
 });
 
-test('private, hidden, missing and subsequently hidden threads cannot be read or changed', async () => {
+test('private, missing and subsequently private threads cannot be read or changed', async () => {
   const { db, request, id, privateId, hiddenId } = setup();
   await request(`/api/feedback/${id}/comments`, 'POST', { id: crypto.randomUUID(), message: '댓글' });
-  db.prepare('UPDATE feedback SET is_hidden=1 WHERE id=?').run(id);
-  for (const parent of [id, privateId, hiddenId, crypto.randomUUID()]) {
+  db.prepare("UPDATE feedback SET visibility='private' WHERE id=?").run(id);
+  for (const parent of [id, privateId, crypto.randomUUID()]) {
     for (const [suffix, method, body] of [
       ['comments', 'GET'], ['comments', 'POST', { id: crypto.randomUUID(), message: '댓글' }],
       [`likes?visitorId=${crypto.randomUUID()}`, 'GET'], ['likes', 'PUT', { visitorId: crypto.randomUUID() }], ['likes', 'DELETE', { visitorId: crypto.randomUUID() }],
@@ -96,5 +96,14 @@ test('validation, bounded requests, CORS, rate limiting and DB errors fail safel
   env.INBOX_REQUESTS.limit = async () => ({ success: true });
   env.DB.prepare = () => { throw new Error('database secret'); };
   const failed = await request(path); assert.equal(failed.status, 503); assert.ok(!(await failed.text()).includes('secret'));
+  db.close();
+});
+
+test('formerly hidden public posts allow comments and likes', async () => {
+  const { db, request, hiddenId } = setup();
+  const path = `/api/feedback/${hiddenId}`;
+  assert.equal((await request(`${path}/comments`, 'POST', { id: crypto.randomUUID(), message: '댓글' })).status, 201);
+  assert.equal((await (await request(`${path}/comments`)).json()).items.length, 1);
+  assert.equal((await request(`${path}/likes`, 'PUT', { visitorId: crypto.randomUUID() })).status, 200);
   db.close();
 });

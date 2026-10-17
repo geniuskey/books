@@ -1,6 +1,6 @@
 import { authorIsAdmin } from './auth.js';
 const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
-const visible = "SELECT id FROM feedback WHERE id = ? AND visibility = 'public' AND is_hidden = 0";
+const visible = "SELECT id FROM feedback WHERE id = ? AND visibility = 'public'";
 
 export async function reactions(request, env, headers, match, readBody) {
   const [, id, kind] = match;
@@ -41,7 +41,7 @@ export async function reactions(request, env, headers, match, readBody) {
       try { isAdmin = await authorIsAdmin(request, env); }
       catch { return reply(401, { error: '관리자 계정으로 다시 로그인해 주세요.' }); }
       // Recheck visibility in the write itself, including concurrent moderation.
-      const result = await env.DB.prepare(`INSERT INTO feedback_comments (id, feedback_id, nickname, message, is_admin) SELECT ?, id, ?, ?, ? FROM feedback WHERE id = ? AND visibility = 'public' AND is_hidden = 0 ON CONFLICT(id) DO NOTHING`).bind(commentId, isAdmin ? '관리자' : nickname.trim(), message.trim(), Number(isAdmin), id).run();
+      const result = await env.DB.prepare(`INSERT INTO feedback_comments (id, feedback_id, nickname, message, is_admin) SELECT ?, id, ?, ?, ? FROM feedback WHERE id = ? AND visibility = 'public' ON CONFLICT(id) DO NOTHING`).bind(commentId, isAdmin ? '관리자' : nickname.trim(), message.trim(), Number(isAdmin), id).run();
       if (!result.meta.changes) {
         const existing = await env.DB.prepare(`SELECT id FROM feedback_comments WHERE id = ? AND feedback_id IN (${visible})`).bind(commentId, id).all();
         if (!existing.results.length) return reply(404, { error: '공개된 글을 찾을 수 없습니다.' });
@@ -51,7 +51,7 @@ export async function reactions(request, env, headers, match, readBody) {
     const visitorId = reading ? url.searchParams.get('visitorId') : data.visitorId;
     if (typeof visitorId !== 'string' || !uuid.test(visitorId)) return reply(400, { error: '브라우저 식별 정보를 확인해 주세요.' });
     if (request.method === 'PUT') {
-      await env.DB.prepare("INSERT INTO feedback_likes (feedback_id, visitor_id) SELECT id, ? FROM feedback WHERE id = ? AND visibility = 'public' AND is_hidden = 0 ON CONFLICT(feedback_id, visitor_id) DO NOTHING").bind(visitorId, id).run();
+      await env.DB.prepare("INSERT INTO feedback_likes (feedback_id, visitor_id) SELECT id, ? FROM feedback WHERE id = ? AND visibility = 'public' ON CONFLICT(feedback_id, visitor_id) DO NOTHING").bind(visitorId, id).run();
     } else if (request.method === 'DELETE') {
       await env.DB.prepare(`DELETE FROM feedback_likes WHERE visitor_id = ? AND feedback_id IN (${visible})`).bind(visitorId, id).run();
     }
