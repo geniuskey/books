@@ -29,6 +29,7 @@ function setup() {
   db.exec(readFileSync(new URL('../migrations/0002_visibility.sql', import.meta.url), 'utf8'));
   db.exec(readFileSync(new URL('../migrations/0003_reactions.sql', import.meta.url), 'utf8'));
   db.exec(readFileSync(new URL('../migrations/0004_admin_authors.sql', import.meta.url), 'utf8'));
+  db.exec(readFileSync(new URL('../migrations/0005_feedback_owner.sql', import.meta.url), 'utf8'));
   const publicId = crypto.randomUUID();
   const hiddenId = crypto.randomUUID();
   const insert = db.prepare('INSERT INTO feedback(id,type,message,visibility,is_hidden,page_url) VALUES (?, ?, ?, ?, ?, ?)');
@@ -142,5 +143,47 @@ test('aggregate count includes private posts without exposing their details or c
   const empty = await (await request('/api/feedback/public')).json();
   assert.equal(empty.total, 0);
   assert.deepEqual(empty.items, []);
+  db.close();
+});
+
+test('browser owner key isolates private posts, survives retries and never claims legacy posts', async () => {
+  const { db, env, request, legacy } = setup();
+  env.SUBMISSIONS = env.TOTAL_SUBMISSIONS = { limit: async () => ({ success: true }) };
+  const alice = 'a'.repeat(64), bob = 'b'.repeat(64);
+  const post = (id, key, visibility = 'private') => request('/api/feedback', undefined, {
+    method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Feedback-Owner': key },
+    body: JSON.stringify({ id, type: 'request', message: '내 비공개 의견', visibility }),
+  });
+  const mine = key => request('/api/feedback/mine', undefined, { headers: key ? { 'X-Feedback-Owner': key } : {} });
+  const id = crypto.randomUUID();
+  assert.equal((await post(id, alice)).status, 201);
+  assert.equal((await post(id, alice)).status, 201);
+  assert.equal((await post(id, bob)).status, 201); // conflict cannot replace ownership
+  assert.equal((await post(legacy, alice)).status, 201); // nor claim an old post
+  assert.equal((await post(crypto.randomUUID(), 'invalid')).status, 400);
+  assert.equal((await mine()).status, 401);
+  assert.equal((await mine('invalid')).status, 401);
+  const own = await (await mine(alice)).json();
+  assert.deepEqual(own.items.map(row => row.id), [id]);
+  assert.equal(own.items[0].visibility, 'private');
+  assert.ok(!JSON.stringify(own).includes('owner_hash'));
+  assert.ok(!JSON.stringify(own).includes(alice));
+  assert.deepEqual((await (await mine(bob)).json()).items, []);
+  assert.notEqual(db.prepare('SELECT owner_hash FROM feedback WHERE id=?').get(id).owner_hash, alice);
+  assert.equal(db.prepare('SELECT owner_hash FROM feedback WHERE id=?').get(legacy).owner_hash, null);
+  const publicRows = await (await request('/api/feedback/public', undefined, { headers: { 'X-Feedback-Owner': alice } })).json();
+  assert.ok(publicRows.items.every(row => row.id !== id));
+  const viaUrl = await request(`/api/feedback/mine?ownerToken=${alice}&visitorId=${id}`);
+  assert.equal(viaUrl.status, 401);
+  for (let i = 0; i < 21; i++) await post(crypto.randomUUID(), alice, 'public');
+  const first = await (await mine(alice)).json();
+  const second = await (await request('/api/feedback/mine?page=1', undefined, { headers: { 'X-Feedback-Owner': alice } })).json();
+  assert.equal(first.items.length, 20); assert.equal(first.hasMore, true);
+  assert.equal(second.items.length, 2); assert.equal(second.hasMore, false);
+  assert.equal(new Set([...first.items, ...second.items].map(row => row.id)).size, 22);
+  const filtered = await (await request('/api/feedback/mine?type=error', undefined, { headers: { 'X-Feedback-Owner': alice } })).json();
+  assert.deepEqual(filtered.items, []);
+  const preflight = await request('/api/feedback/mine', undefined, { method: 'OPTIONS' });
+  assert.match(preflight.headers.get('Access-Control-Allow-Headers'), /X-Feedback-Owner/);
   db.close();
 });

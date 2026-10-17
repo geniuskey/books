@@ -12,6 +12,7 @@ function setup() {
   db.exec(readFileSync(new URL('../migrations/0002_visibility.sql', import.meta.url), 'utf8'));
   db.exec(readFileSync(new URL('../migrations/0003_reactions.sql', import.meta.url), 'utf8'));
   db.exec(readFileSync(new URL('../migrations/0004_admin_authors.sql', import.meta.url), 'utf8'));
+  db.exec(readFileSync(new URL('../migrations/0005_feedback_owner.sql', import.meta.url), 'utf8'));
   const env = {
     ALLOWED_ORIGINS: origin,
     SUBMISSIONS: { limit: async () => ({ success: true }) },
@@ -94,5 +95,15 @@ test('rate limiting and database failure never report successful receipt', async
   assert.equal(failed.status, 503);
   assert.ok(!(await failed.text()).includes('private database detail'));
   assert.equal(db.prepare('SELECT count(*) AS count FROM feedback').get().count, 0);
+  db.close();
+});
+
+test('science courses accept feedback with their own path context', async () => {
+  const { db, post } = setup();
+  for (const bookId of ['general-chemistry', 'general-physics']) {
+    assert.equal((await post({ ...payload(), bookId, pageUrl: `https://science.euiyun.com/${bookId}/chapters/overview.html` })).status, 201);
+    assert.equal((await post({ ...payload(), bookId, pageUrl: 'https://science.euiyun.com/other/chapters/overview.html' })).status, 400);
+  }
+  assert.equal((await post({ ...payload(), bookId: 'science', pageUrl: 'https://science.euiyun.com/' })).status, 201);
   db.close();
 });

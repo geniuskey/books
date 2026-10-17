@@ -43,7 +43,7 @@ globalThis.FeedbackInbox = (() => {
   function start(config, catalog, { onUnavailable = () => {}, onSession = () => {} } = {}) {
     const $ = (id) => document.getElementById(id);
     const base = new URL(config.endpoint).origin;
-    const books = new Map(catalog.books.map((book) => [book.id, book]));
+    const books = new Map([...catalog.books, ...(catalog.sisterBooks || [])].map((book) => [book.id, book]));
     const types = { error: '오류 제보', request: '의견·건의', cheer: '저자 응원' };
     let visitorId;
     try { visitorId = localStorage.getItem('feedback-visitor'); } catch {}
@@ -77,7 +77,7 @@ globalThis.FeedbackInbox = (() => {
     function session(active) {
       onSession(active);
       $('admin-session').hidden = !active;
-      $('inbox-scope-label').hidden = !active;
+      $('inbox-scope-label').hidden = !active || $('inbox-view').value === 'mine';
       login.hidden = active;
       if (!active) {
         token = ''; scope.value = 'all'; clearTimeout(expiryTimer);
@@ -106,7 +106,7 @@ globalThis.FeedbackInbox = (() => {
       if (item.is_admin) author.className = 'author-admin';
       const date = feedbackTime(item.created_at);
       meta.append(badge, author, date);
-      if (admin) {
+      if (admin || item.visibility) {
         const state = document.createElement('span');
         state.textContent = item.visibility === 'public' ? '공개' : '비공개';
         meta.append(state);
@@ -133,7 +133,7 @@ globalThis.FeedbackInbox = (() => {
           } catch {}
         }
       }
-      if (!admin || item.visibility === 'public') card.append(renderReactions(item));
+      if (item.visibility !== 'private') card.append(renderReactions(item));
       return card;
     }
     function renderReactions(item) {
@@ -246,19 +246,26 @@ globalThis.FeedbackInbox = (() => {
     async function load(reset = true) {
       if (reset) { page = 0; list.replaceChildren(); }
       const current = ++generation;
-      const credential = token;
+      const mine = $('inbox-view').value === 'mine';
+      const credential = mine ? '' : token;
+      $('inbox-order').textContent = mine ? '내가 쓴 이야기 · 최신순' : credential ? '관리자 조회 · 최신순' : '공개된 이야기 · 최신순';
       $('inbox-more').hidden = true;
       status.textContent = '글을 불러오는 중…';
       const query = new URLSearchParams({ page: String(page), type: $('inbox-type').value, visitorId });
       if (credential) query.set('scope', scope.value);
       try {
-        const result = await api(`${credential ? '/api/admin/feedback' : '/api/feedback/public'}?${query}`, {}, credential);
+        const ownerHeaders = mine ? globalThis.FeedbackOwner?.headers() || {} : {};
+        if (mine && !ownerHeaders['X-Feedback-Owner']) {
+          status.textContent = '이 브라우저에서 새로 작성한 글이 없습니다. 기능 추가 전에 쓴 글은 확인할 수 없습니다.';
+          return;
+        }
+        const result = await api(`${mine ? '/api/feedback/mine' : credential ? '/api/admin/feedback' : '/api/feedback/public'}?${query}`, { headers: ownerHeaders }, credential);
         if (current !== generation) return;
         if (Number.isSafeInteger(result.total) && result.total >= 0) {
           $('inbox-total').textContent = `전체 ${result.total.toLocaleString('ko-KR')}개 · 비공개 포함`;
         }
         result.items.forEach((item) => list.append(render(item, Boolean(credential))));
-        status.textContent = list.children.length ? (credential ? '관리자에게만 비공개 글이 표시됩니다.' : '') : ($('inbox-type').value || credential ? '이 조건에 맞는 글이 없습니다. 다른 조건으로 살펴보세요.' : '아직 공개된 글이 없습니다. ‘의견 남기기’에서 첫 이야기를 나눠 주세요.');
+        status.textContent = mine ? (list.children.length ? '이 브라우저에서 작성한 글입니다. 비공개 글은 작성자와 관리자만 볼 수 있습니다.' : '이 조건에 맞는 내 글이 없습니다.') : list.children.length ? (credential ? '관리자에게만 비공개 글이 표시됩니다.' : '') : ($('inbox-type').value || credential ? '이 조건에 맞는 글이 없습니다. 다른 조건으로 살펴보세요.' : '아직 공개된 글이 없습니다. ‘의견 남기기’에서 첫 이야기를 나눠 주세요.');
         $('inbox-more').hidden = !result.hasMore;
         page++;
       } catch (error) { if (current === generation) handleError(error); }
@@ -267,6 +274,10 @@ globalThis.FeedbackInbox = (() => {
     $('inbox-refresh').addEventListener('click', refresh);
     $('inbox-more').addEventListener('click', () => load(false));
     $('inbox-type').addEventListener('change', refresh);
+    $('inbox-view').addEventListener('change', () => {
+      $('inbox-scope-label').hidden = !token || $('inbox-view').value === 'mine';
+      refresh();
+    });
     scope.addEventListener('change', refresh);
     $('admin-logout').addEventListener('click', () => {
       authGeneration++;

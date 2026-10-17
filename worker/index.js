@@ -1,10 +1,11 @@
 import catalog from '../data/books.json' with { type: 'json' };
+import { ownerHash } from './ownership.js';
 import { authorIsAdmin } from './auth.js';
 import { inbox } from './inbox.js';
 import { reactions } from './reactions.js';
 
 // 출간된 책과 일부 장을 공개한 집필 중인 책. 책의 주소는 서브도메인 전체이거나 서가의 하위 경로다.
-const books = new Map(catalog.books.filter(b => (b.status === 'published' || b.status === 'writing') && b.url).map(b => [b.id, b]));
+const books = new Map([...catalog.books, ...(catalog.sisterBooks || [])].filter(b => (b.status === 'published' || b.status === 'writing') && b.url).map(b => [b.id, b]));
 const inBook = (url, book) => { const base = new URL(book.url); return url.origin === base.origin && url.pathname.startsWith(base.pathname); };
 const MAX_BYTES = 16384;
 const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
@@ -60,10 +61,10 @@ export default {
     headers['Access-Control-Allow-Origin'] = origin;
     const path = new URL(request.url).pathname;
     const reaction = path.match(/^\/api\/feedback\/([0-9a-f-]{36})\/(comments|likes)$/i);
-    const isInbox = path === '/api/feedback/public' || path === '/api/admin/feedback' || /^\/api\/admin\/feedback\/[0-9a-f-]{36}$/i.test(path);
+    const isInbox = path === '/api/feedback/mine' || path === '/api/feedback/public' || path === '/api/admin/feedback' || /^\/api\/admin\/feedback\/[0-9a-f-]{36}$/i.test(path);
     if (path !== '/api/feedback' && !isInbox && !reaction) return reply(404, '요청한 주소를 찾을 수 없습니다.');
     if (request.method === 'OPTIONS') {
-      return new Response(null, { status: 204, headers: { ...headers, 'Access-Control-Allow-Methods': reaction ? 'GET, POST, PUT, DELETE, OPTIONS' : isInbox ? 'GET, OPTIONS' : 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization' } });
+      return new Response(null, { status: 204, headers: { ...headers, 'Access-Control-Allow-Methods': reaction ? 'GET, POST, PUT, DELETE, OPTIONS' : isInbox ? 'GET, OPTIONS' : 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Feedback-Owner' } });
     }
     if (reaction) return reactions(request, env, headers, reaction, readBody);
     if (isInbox) {
@@ -86,11 +87,14 @@ export default {
       catch (error) { return reply(error instanceof RangeError ? 413 : 400, '글의 길이와 입력 내용을 확인해 주세요.'); }
       if (!data) return reply(400, '글의 길이와 입력 내용을 확인해 주세요.');
       if (data.website) return reply(400, '입력 내용을 확인해 주세요.');
+      let owner;
+      try { owner = await ownerHash(request); }
+      catch { return reply(400, '내 글 확인 정보를 확인해 주세요.'); }
       let isAdmin;
       try { isAdmin = await authorIsAdmin(request, env); }
       catch { return reply(401, '관리자 계정으로 다시 로그인해 주세요.'); }
-      await env.DB.prepare('INSERT INTO feedback (id, type, nickname, message, book_id, page_url, visibility, is_admin) VALUES (?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO NOTHING')
-        .bind(data.id, data.type, isAdmin ? '관리자' : data.nickname, data.message, data.bookId, data.pageUrl, data.visibility, Number(isAdmin)).run();
+      await env.DB.prepare('INSERT INTO feedback (id, type, nickname, message, book_id, page_url, visibility, is_admin, owner_hash) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO NOTHING')
+        .bind(data.id, data.type, isAdmin ? '관리자' : data.nickname, data.message, data.bookId, data.pageUrl, data.visibility, Number(isAdmin), owner).run();
       return reply(201);
     } catch {
       // Do not log reader messages or identifying request headers.

@@ -1,0 +1,5 @@
+.roadmap-science { margin-top: 12px; padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg-elev); }
+.roadmap-science p { margin: 2px 0; font-size: 14px; }
+.roadmap-process { margin: 8px 0; font-size: 14px; }
+.roadmap-process summary { min-height: 44px; align-content: center; cursor: pointer; }
+.roadmap-process p { margin: 4px 0; }

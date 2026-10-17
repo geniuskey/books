@@ -1,7 +1,9 @@
+import { ownerHash } from './ownership.js';
 import { verifyAdminToken } from './auth.js';
 
 export async function inbox(request, env, headers) {
   const url = new URL(request.url);
+  const mine = url.pathname === '/api/feedback/mine';
   const admin = url.pathname.startsWith('/api/admin/');
   const reply = (status, data) => new Response(JSON.stringify(data), { status, headers });
   if (admin) {
@@ -12,7 +14,7 @@ export async function inbox(request, env, headers) {
     catch { return reply(401, { error: '관리자 계정으로 다시 로그인해 주세요.' }); }
   }
   try {
-    if (request.method === 'GET' && ['/api/feedback/public', '/api/admin/feedback'].includes(url.pathname)) {
+    if (request.method === 'GET' && ['/api/feedback/public', '/api/feedback/mine', '/api/admin/feedback'].includes(url.pathname)) {
       const type = url.searchParams.get('type') || '';
       const page = url.searchParams.get('page') || '0';
       const scope = admin ? url.searchParams.get('scope') || 'all' : 'public';
@@ -21,13 +23,18 @@ export async function inbox(request, env, headers) {
       if ((type && !['error', 'request', 'cheer'].includes(type)) || !/^\d{1,5}$/.test(page) || !['all', 'public', 'private'].includes(scope)) {
         return reply(400, { error: '검색 조건을 확인해 주세요.' });
       }
-      const conditions = admin ? [] : ["visibility = 'public'"];
+      let owner;
+      if (mine) {
+        try { owner = await ownerHash(request); } catch {}
+        if (!owner) return reply(401, { error: '이 브라우저의 내 글 확인 정보가 없습니다.' });
+      }
+      const conditions = mine ? ['owner_hash = ?'] : admin ? [] : ["visibility = 'public'"];
       if (admin && ['public', 'private'].includes(scope)) conditions.push(`visibility = '${scope}'`);
-      const args = [];
+      const args = mine ? [owner] : [];
       if (type) { conditions.push('type = ?'); args.push(type); }
       const where = conditions.length ? ` WHERE ${conditions.join(' AND ')}` : '';
       // Public rows intentionally omit page URLs, private state and moderation data.
-      const columns = admin ? 'id, type, nickname, message, book_id, page_url, visibility, created_at' : 'id, type, nickname, message, book_id, created_at';
+      const columns = admin ? 'id, type, nickname, message, book_id, page_url, visibility, created_at' : mine ? 'id, type, nickname, message, book_id, visibility, created_at' : 'id, type, nickname, message, book_id, created_at';
       const counts = ', is_admin, (SELECT COUNT(*) FROM feedback_likes WHERE feedback_id = feedback.id) AS like_count, (SELECT COUNT(*) FROM feedback_comments WHERE feedback_id = feedback.id) AS comment_count, EXISTS(SELECT 1 FROM feedback_likes WHERE feedback_id = feedback.id AND visitor_id = ?) AS liked';
       const { results } = await env.DB.prepare(`SELECT ${columns}${counts} FROM feedback${where} ORDER BY created_at DESC, id DESC LIMIT 21 OFFSET ?`).bind(visitorId, ...args, Number(page) * 20).all();
       // Only the aggregate includes private posts; their contents remain authenticated.

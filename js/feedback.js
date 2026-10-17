@@ -14,7 +14,8 @@ EB.start("feedback", (data) => {
   const acceptsFeedback = (item) => item.url && (item.status === "published" || item.status === "writing");
   // 책 하나가 서브도메인 전체일 수도(xxxbook.euiyun.com/), 서가의 하위 경로일 수도(artbook.euiyun.com/color/) 있다.
   const inBook = (url, item) => { const base = new URL(item.url); return url.protocol === "https:" && url.origin === base.origin && url.pathname.startsWith(base.pathname); };
-  const book = data.books.find((item) => item.id === bookId && acceptsFeedback(item));
+  const feedbackBooks = [...data.books, ...(data.sisterBooks || [])];
+  const book = feedbackBooks.find((item) => item.id === bookId && acceptsFeedback(item));
   const page = params.get("page") || "";
   let pageUrl = "";
   if (book && page) {
@@ -77,7 +78,7 @@ EB.start("feedback", (data) => {
   };
   // Book links arrive with writing intent; ordinary visitors see the board first.
   if (composer && (book || ["error", "request", "cheer"].includes(type))) composer.open = true;
-  data.books.filter(acceptsFeedback).forEach((b) => {
+  feedbackBooks.filter(acceptsFeedback).forEach((b) => {
     fields.bookId.add(new Option(`${b.title} · ${b.subtitle}`, b.id));
   });
   if (book) fields.bookId.value = book.id;
@@ -133,18 +134,21 @@ EB.start("feedback", (data) => {
     try {
       const response = await fetch(endpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/json", ...globalThis.FeedbackInbox?.authHeaders() },
+        headers: { "Content-Type": "application/json", ...globalThis.FeedbackInbox?.authHeaders(), ...globalThis.FeedbackOwner?.headers(true) },
         body: JSON.stringify({ ...payload, id: pending.id }),
         signal: AbortSignal.timeout(15000),
         credentials: "omit",
       });
       const result = await response.json();
       if (!response.ok || !result.ok) throw new Error(result.error || "접수하지 못했습니다. 잠시 후 다시 보내 주세요.");
+      const ownNote = globalThis.FeedbackOwner?.isPersistent()
+        ? ' ‘내 글’에서 다시 확인할 수 있습니다.'
+        : ' 이 브라우저에 확인 키를 저장하지 못해, 페이지를 닫으면 내 글을 다시 볼 수 없습니다.';
       fields.message.value = "";
       pending = null;
       updateCount();
       globalThis.FeedbackInbox?.refresh();
-      showStatus(payload.type === "cheer" ? "응원 감사합니다! 저자에게 잘 전달되었습니다." : "의견이 접수되었습니다. 남겨 주셔서 감사합니다.");
+      showStatus((payload.type === "cheer" ? "응원 감사합니다! 저자에게 잘 전달되었습니다." : "의견이 접수되었습니다. 남겨 주셔서 감사합니다.") + ownNote);
     } catch (error) {
       if (error.name === "TimeoutError" || error instanceof TypeError) showStatus("연결이 끊겼습니다. 작성한 내용은 유지됩니다. 다시 보내 주세요.", "error");
       else showStatus(error.message, "error");

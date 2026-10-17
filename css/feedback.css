@@ -176,3 +176,5 @@
 .feedback-page .inbox-comment:last-child { border-bottom: 0; }
 
 #inbox-total:empty + .inbox-total-separator { display: none; }
+
+.feedback-page .inbox-owner-note { margin: 0; padding: 6px 14px; font-size: 12px; }

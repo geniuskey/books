@@ -11,7 +11,7 @@ class Element {
   replaceChildren(...children) { this.children = children; }
 }
 const tick = () => new Promise(resolve => setImmediate(resolve));
-async function setup({ deferAdmin = false, authorized = true, isAdmin = 0, reactionFetch, commentCount = 0, storage = new Map(), total = 42 } = {}) {
+async function setup({ deferAdmin = false, authorized = true, isAdmin = 0, reactionFetch, commentCount = 0, storage = new Map(), total = 42, ownerKey = "", deferMine = false } = {}) {
   const nodes = new Map();
   const get = id => { if (!nodes.has(id)) nodes.set(id, new Element()); return nodes.get(id); };
   let callback, release, adminRequests = 0;
@@ -19,6 +19,13 @@ async function setup({ deferAdmin = false, authorized = true, isAdmin = 0, react
   const privateItem = { ...publicItem, id: 'private', message: '비공개 내용', visibility: 'private' };
   const fetch = async (url, options) => {
     if (/\/api\/feedback\/public\//.test(url)) return reactionFetch(url, options);
+    if (url.includes('/api/feedback/mine')) {
+      assert.equal(options.headers['X-Feedback-Owner'], ownerKey);
+      assert.equal(options.headers.Authorization, undefined);
+      if (deferMine) await new Promise(resolve => { release = resolve; });
+      return { ok: true, json: async () => ({ items: [privateItem], hasMore: false, total }) };
+    }
+    assert.equal(options.headers['X-Feedback-Owner'], undefined);
     if (options.headers.Authorization) {
       if (!authorized) return { ok: false, status: 401, json: async () => ({ error: '관리자가 아닙니다.' }) };
       adminRequests++;
@@ -31,7 +38,7 @@ async function setup({ deferAdmin = false, authorized = true, isAdmin = 0, react
   const google = { accounts: { id: { initialize: options => { callback = options.callback; }, renderButton() {}, disableAutoSelect() {} } } };
   const timers = [];
   const sessionStorage = { getItem: key => storage.get(key), setItem: (key, value) => storage.set(key, value), removeItem: key => storage.delete(key) };
-  const context = vm.createContext({ atob, sessionStorage, document: { getElementById: get, createElement: () => new Element(), head }, fetch, google, crypto, URL, URLSearchParams, AbortSignal, setTimeout: (fn, delay) => { timers.push({ fn, delay }); return timers.length; }, clearTimeout() {} });
+  const context = vm.createContext({ FeedbackOwner: { headers: () => ownerKey ? { 'X-Feedback-Owner': ownerKey } : {} }, atob, sessionStorage, document: { getElementById: get, createElement: () => new Element(), head }, fetch, google, crypto, URL, URLSearchParams, AbortSignal, setTimeout: (fn, delay) => { timers.push({ fn, delay }); return timers.length; }, clearTimeout() {} });
   vm.runInContext(readFileSync(new URL('../../js/feedback-inbox.js', import.meta.url), 'utf8'), context);
   context.FeedbackInbox.start({ endpoint: 'https://feedback.example/api/feedback', googleClientId: 'client' }, { books: [] });
   await tick();
@@ -188,4 +195,28 @@ test('board reports the aggregate count including private posts, including zero'
     const page = await setup({ total });
     assert.equal(page.get('inbox-total').textContent, `전체 ${total.toLocaleString('ko-KR')}개 · 비공개 포함`);
   }
+});
+
+test('my posts show private contents without public reactions, and switching discards a late private response', async () => {
+  const page = await setup({ ownerKey: 'a'.repeat(64) });
+  page.get('inbox-view').value = 'mine';
+  page.get('inbox-view').events.change(); await tick();
+  const card = page.get('inbox-list').children[0];
+  assert.equal(card.children[1].textContent, '비공개 내용');
+  assert.equal(card.children.length, 2);
+  assert.equal(card.children[0].children[3].textContent, '비공개');
+  const late = await setup({ ownerKey: 'a'.repeat(64), deferMine: true });
+  late.get('inbox-view').value = 'mine';
+  late.get('inbox-view').events.change(); await tick();
+  late.get('inbox-view').value = 'public';
+  late.get('inbox-view').events.change(); await tick();
+  late.release(); await tick();
+  assert.ok(late.get('inbox-list').children.every(card => card.children[1].textContent !== '비공개 내용'));
+});
+test('my posts without a browser key explain why old posts cannot be recovered', async () => {
+  const page = await setup();
+  page.get('inbox-view').value = 'mine';
+  page.get('inbox-view').events.change(); await tick();
+  assert.equal(page.get('inbox-list').children.length, 0);
+  assert.match(page.get('inbox-status').textContent, /기능 추가 전에/);
 });

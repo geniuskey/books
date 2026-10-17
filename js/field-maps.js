@@ -199,6 +199,9 @@ window.FIELD_MAPS = {
     "title": "세상을 이해하고 표현하는 방법",
     "desc": "사진·음악·수학에서 미술과 시각 표현, 웹·제품·산업디자인까지.",
     "links": [
+      ["musicbook", "guitarbook", "화성·음색을 지판과 연주로 연결하기"],
+      ["musicbook", "pianobook", "음정·화성을 건반과 반주로 익히기"],
+      ["musicbook", "drumbook", "박자·리듬을 손발의 연주로 연결하기"],
       ["mathbook", "musicbook", "푸리에·표본화·수의 비율로 음색과 조율 이해하기"],
       ["artbook-color", "artbook-composition", "색과 형태로 시선 이끌기"],
       ["artbook-color", "artbook-image", "이미지의 색을 읽는 눈"],
@@ -232,7 +235,7 @@ window.FIELD_MAPS = {
         "Create",
         "음·화음·리듬을 직접 듣고 구성하기",
         [
-          "musicbook"
+          "musicbook", "guitarbook", "pianobook", "drumbook"
         ]
       ],
       [

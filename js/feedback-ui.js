@@ -22,7 +22,7 @@
   const updatePrivacy = () => {
     privacy.textContent = visibility.value === 'public'
       ? '게시판에 공개됩니다. 개인 정보는 적지 마세요.'
-      : '비공개로 저자에게 전달됩니다. 개인 정보는 적지 마세요.';
+      : '비공개 글은 저자와 나만 봅니다. 작성한 브라우저의 ‘내 글’에서 확인하세요.';
   };
   visibility.addEventListener('change', updatePrivacy);
   updatePrivacy();

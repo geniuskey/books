@@ -1998,6 +1998,163 @@
           "image": "img/sims/artbook-industrial-sim-pct.jpg"
         }
       ]
+    },
+    {
+      "id": "electromagneticsbook",
+      "code": "EMF",
+      "title": "ElectromagneticsBook",
+      "subtitle": "반도체를 위한 전자기학",
+      "description": "정전계·경계 조건에서 맥스웰 방정식, 전자기파와 전송선까지. 소자·배선·RF 공정의 전기장과 에너지 전달을 대학 전공 수준으로 연결합니다.",
+      "field": "semiconductor",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "유전체 경계와 전계",
+        "전송선·반사·임피던스",
+        "RF 전력과 전자기파"
+      ],
+      "stage": "physics"
+    },
+    {
+      "id": "thermobook",
+      "code": "THM",
+      "title": "ThermoBook",
+      "subtitle": "반도체를 위한 열역학",
+      "description": "열역학 법칙과 엔트로피, 자유 에너지·화학 퍼텐셜, 상평형을 반도체 재료와 공정에 연결합니다. 반응이 가능한 조건과 반응 속도의 차이를 함께 다룹니다.",
+      "field": "semiconductor",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "자유 에너지와 상평형",
+        "화학 퍼텐셜과 반응 평형",
+        "열 예산과 에너지 수지"
+      ],
+      "stage": "physics"
+    },
+    {
+      "id": "materialsbook",
+      "code": "MAT",
+      "title": "MaterialsBook",
+      "subtitle": "반도체 재료공학",
+      "description": "결정 구조·결함, 확산과 상변태에서 박막의 응력·계면·신뢰성까지. 실리콘·절연체·금속 재료가 공정 조건에 따라 어떻게 달라지는지 살펴봅니다.",
+      "field": "semiconductor",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "결정 결함과 확산",
+        "상태도와 미세 조직",
+        "박막 응력·계면"
+      ],
+      "stage": "physics"
+    },
+    {
+      "id": "plasmabook",
+      "code": "PLS",
+      "title": "PlasmaBook",
+      "subtitle": "반도체 플라즈마공학",
+      "description": "입자 충돌과 전자 에너지 분포, 방전·시스, CCP·ICP와 RF 정합을 체계적으로 다룹니다. 식각·증착 장비의 이온과 라디칼을 제어하는 원리를 익힙니다.",
+      "field": "semiconductor",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "방전과 전자 에너지 분포",
+        "CCP·ICP·시스",
+        "RF 정합과 플라즈마 진단"
+      ],
+      "stage": "physics"
+    },
+    {
+      "id": "thinfilmbook",
+      "code": "FIL",
+      "title": "ThinFilmBook",
+      "subtitle": "반도체 산화·박막 증착",
+      "description": "8대 공정 학습을 심화하는 산화·박막 편. 열산화, PVD·CVD·ALD의 반응과 수송, 핵생성·피복성·막질을 장비 조건과 연결합니다.",
+      "field": "semiconductor",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "산화막 성장과 열 예산",
+        "CVD·ALD 반응과 포화",
+        "피복성·균일도·막질"
+      ],
+      "stage": "process"
+    },
+    {
+      "id": "cmpbook",
+      "code": "CMP",
+      "title": "CMPBook",
+      "subtitle": "반도체 CMP·세정",
+      "description": "평탄화와 세정을 공정 통합 관점에서 다룹니다. 패드·슬러리·압력·속도, 디싱·에로전, 잔류물과 오염 제어가 다음 공정의 품질에 미치는 영향을 살펴봅니다.",
+      "field": "semiconductor",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "제거율과 공정 조건",
+        "디싱·에로전·종점",
+        "입자·금속 오염과 세정"
+      ],
+      "stage": "process"
+    },
+    {
+      "id": "fabinfrabook",
+      "code": "FAB",
+      "title": "FabInfraBook",
+      "subtitle": "반도체 팹 인프라",
+      "description": "클린룸과 공조, 초순수, 특수가스·케미컬, 진공·배기, 전력·냉각과 폐수·배출 처리까지. 공정 장비를 안정적으로 가동하는 팹의 공급망과 설비를 연결합니다.",
+      "field": "semiconductor",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "클린룸·공조·초순수",
+        "가스·진공·배기·처리",
+        "전력·냉각·설비 신뢰성"
+      ],
+      "stage": "industry"
+    },
+    {
+      "id": "guitarbook",
+      "code": "GTR",
+      "title": "GuitarBook",
+      "subtitle": "기타 교과서",
+      "description": "어쿠스틱·일렉트릭 기타의 구조와 조율, 지판의 음, 코드·리듬·스케일에서 픽업과 앰프까지. 손의 움직임과 실제로 나는 소리를 연결합니다.",
+      "field": "culture",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "지판·코드 보이싱",
+        "스트로크·피킹·리듬",
+        "픽업·앰프·음색"
+      ]
+    },
+    {
+      "id": "pianobook",
+      "code": "PNO",
+      "title": "PianoBook",
+      "subtitle": "피아노 교과서",
+      "description": "건반과 음정, 손가락 운용, 양손 리듬·코드 반주에서 페달과 보이싱까지. 악보와 화성을 건반 위에서 직접 익힙니다.",
+      "field": "culture",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "건반·음정·스케일",
+        "양손 리듬·코드 반주",
+        "페달·다이내믹·보이싱"
+      ]
+    },
+    {
+      "id": "drumbook",
+      "code": "DRM",
+      "title": "DrumBook",
+      "subtitle": "드럼 교과서",
+      "description": "드럼 세트의 구성과 스틱 컨트롤, 박자·세분·루디먼트에서 그루브·필인까지. 손발의 독립성과 타이밍을 듣고 비교하며 연습합니다.",
+      "field": "culture",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "박자·세분·루디먼트",
+        "손발 독립·그루브",
+        "필인·튜닝·음색"
+      ]
     }
   ],
   "tools": [
@@ -2026,5 +2183,31 @@
     ],
     "closing": "틀린 내용을 발견하면 언제든 알려 주세요. 그것도 제 공부가 됩니다.",
     "contact": "https://github.com/geniuskey"
-  }
+  },
+  "sisterBooks": [
+    {
+      "id": "science",
+      "title": "SciBook",
+      "subtitle": "대학 인터랙티브 과학 교과서",
+      "status": "writing",
+      "url": "https://science.euiyun.com/",
+      "checkout": "science-books"
+    },
+    {
+      "id": "general-chemistry",
+      "title": "일반화학",
+      "subtitle": "대학 1학년 · 일반화학 I·II",
+      "status": "published",
+      "url": "https://science.euiyun.com/general-chemistry/",
+      "checkout": "science-books/general-chemistry"
+    },
+    {
+      "id": "general-physics",
+      "title": "일반물리학",
+      "subtitle": "대학 1학년 · 일반물리학 I·II",
+      "status": "writing",
+      "url": "https://science.euiyun.com/general-physics/",
+      "checkout": "science-books/general-physics"
+    }
+  ]
 }
