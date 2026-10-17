@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check public page routes and their local assets without a browser."""
+"""Check public routes, local assets, and legacy redirects including map links."""
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urljoin, urlsplit
@@ -9,23 +9,23 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parent.parent
 NAMES = ('feedback', 'field', 'library', 'paths', 'roadmap', 'simulators')
+PUBLIC = ('', 'feedback', 'library', 'paths', 'roadmap', 'simulators')
+
 
 class Links(HTMLParser):
     def __init__(self):
         super().__init__()
         self.links = []
-    def handle_starttag(self, tag, attrs):
-        self.links.extend(v for k, v in attrs if k in ('href', 'src') and v)
 
-fields = json.loads((ROOT / 'data/books.json').read_text())['fields']
-page_names = ('', *NAMES, *(f"field/{f['id']}" for f in fields))
-for name in page_names:
-    path = ROOT / name / 'index.html'
+    def handle_starttag(self, tag, attrs):
+        self.links.extend(value for key, value in attrs if key in ('href', 'src') and value)
+
+
+def check_assets(path):
     source = path.read_text()
-    route = f'/{name}/' if name else '/'
-    assert f'href="https://books.euiyun.com{route}"' in source, path
     parser = Links()
     parser.feed(source)
+    route = '/' + str(path.parent.relative_to(ROOT)).strip('.') + '/'
     for link in parser.links:
         url = urlsplit(urljoin('https://books.euiyun.com' + route, link))
         if url.netloc != 'books.euiyun.com':
@@ -35,11 +35,19 @@ for name in page_names:
             target /= 'index.html'
         assert target.is_file(), f'{path}: missing {link}'
     assert source.count('static.cloudflareinsights.com/beacon.min.js') == 1, path
+    return source
+
+
+fields = json.loads((ROOT / 'data/books.json').read_text())['fields']
+for name in PUBLIC:
+    path = ROOT / name / 'index.html'
+    source = check_assets(path)
+    route = f'/{name}/' if name else '/'
+    assert f'href="https://books.euiyun.com{route}"' in source, path
 
 for name in NAMES:
     old = (ROOT / f'{name}.html').read_text()
     script = re.search(r'<script>(.*?)</script>', old, re.S)[1]
-    # Run the actual legacy redirect with encoded book/page context and a fragment.
     case = '?book=memorybook&page=https%3A%2F%2Fmemorybook.euiyun.com%2Fchapters%2Fhbm.html%23sim-h3'
     test = f'''const vm = require('node:vm');
 const assert = require('node:assert/strict');
@@ -50,22 +58,40 @@ for path in (ROOT / 'js').glob('*.js'):
     source = path.read_text()
     assert not re.search(r'(?:href=["\']|href: ["\'])[^"\']*(?:' + '|'.join(NAMES) + r')\.html', source), path
     subprocess.run(['node', '--check', str(path)], check=True)
-source = (ROOT / 'field/index.html').read_text()
-redirect = re.search(r'<script>(.*?)</script>', source, re.S)[1]
-for field in fields:
-    route = '/field/' + field['id'] + '/'
-    page = (ROOT / route.lstrip('/') / 'index.html').read_text()
-    assert f'data-field="{field["id"]}"' in page
-    assert f'content="https://books.euiyun.com{route}"' in page
-    metadata = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', page)[1])
-    assert metadata['url'] == 'https://books.euiyun.com' + route
-    query = '?f=' + field['id'] + '&q=a%26b'
-    expected = route + '?q=a%26b#shelf'
+
+
+def check_map_redirect(path, query, expected_field):
+    source = check_assets(path)
+    assert 'name="robots" content="noindex"' in source, path
+    assert 'rel="canonical" href="https://books.euiyun.com/paths/"' in source, path
+    script = re.search(r'<script>(.*?)</script>', source, re.S)[1]
     test = f'''const vm = require('node:vm');
 const assert = require('node:assert/strict');
-vm.runInNewContext({json.dumps(redirect)}, {{URLSearchParams, location: {{search: {json.dumps(query)}, hash: '#shelf', replace(value) {{assert.equal(value, {json.dumps(expected)});}}}}}});'''
+vm.runInNewContext({json.dumps(script)}, {{URLSearchParams, location: {{search: {json.dumps(query)}, hash: '#card-statbook', replace(value) {{
+  const url = new URL(value, 'https://books.euiyun.com');
+  assert.equal(url.pathname, '/paths/');
+  assert.equal(url.searchParams.get('view'), 'map');
+  assert.equal(url.searchParams.get('field'), {json.dumps(expected_field)});
+  assert.equal(url.searchParams.has('f'), false);
+  assert.equal(url.searchParams.get('q'), 'a&b');
+  assert.equal(url.searchParams.get('book'), 'memorybook');
+  assert.equal(url.searchParams.get('page'), 'https://memorybook.euiyun.com/chapters/hbm.html#sim-h3');
+  assert.equal(url.hash, '#card-statbook');
+}}}}}});'''
     subprocess.run(['node', '-e', test], check=True)
-# Invalid query IDs must leave the field chooser usable.
-test = f'''require('node:vm').runInNewContext({json.dumps(redirect)}, {{URLSearchParams, location: {{search: '?f=unknown', hash: '', replace() {{throw new Error('Invalid redirect');}}}}}});'''
-subprocess.run(['node', '-e', test], check=True)
-print(f'OK: {len(page_names)} public pages, local assets, 6 legacy redirects, {len(fields)} field redirects and metadata, JavaScript syntax')
+
+
+context = '&q=a%26b&book=memorybook&page=https%3A%2F%2Fmemorybook.euiyun.com%2Fchapters%2Fhbm.html%23sim-h3'
+for field in fields:
+    check_map_redirect(ROOT / 'field' / field['id'] / 'index.html', '?f=unknown' + context, field['id'])
+    check_map_redirect(ROOT / 'field/index.html', '?f=' + field['id'] + context, field['id'])
+check_map_redirect(ROOT / 'field/index.html', '?f=unknown' + context, None)
+check_map_redirect(ROOT / 'field/index.html', '?field=ai' + context, 'computing')
+aliases = json.loads((ROOT / 'data/books.json').read_text())['fieldAliases']
+for old, new in aliases.items():
+    check_map_redirect(ROOT / 'field' / old / 'index.html', '?' + context.lstrip('&'), new)
+    check_map_redirect(ROOT / 'field/index.html', '?f=' + old + context, new)
+sitemap = (ROOT / 'sitemap.xml').read_text()
+expected = {'https://books.euiyun.com' + (f'/{name}/' if name else '/') for name in PUBLIC}
+assert set(re.findall(r'<loc>(.*?)</loc>', sitemap)) == expected
+print(f'OK: {len(PUBLIC)} public pages, local assets, 6 legacy page redirects, {len(fields) + len(aliases) + 1} map redirects, sitemap, JavaScript syntax')

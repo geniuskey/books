@@ -144,7 +144,7 @@
       const stats = EB.isPublished(b) ? `<span>${b.chapters}개 챕터</span><span>${b.simulators}+ 시뮬레이터</span>` : `<span>${esc(EB.status(b))}</span>`;
       const link = EB.readUrl(b)
         ? `<a href="${esc(b.url)}">읽으러 가기 →</a>`
-        : all ? `<a href="${EB.fieldUrl(b.field)}#card-${esc(b.id)}">분야에서 보기 →</a>` : `<a href="#card-${esc(b.id)}" data-jump="${esc(b.id)}">책장에서 보기 →</a>`;
+        : all ? `<a href="${EB.fieldUrl(b.field)}#card-${esc(b.id)}">책장에서 보기 →</a>` : `<a href="#card-${esc(b.id)}" data-jump="${esc(b.id)}">책장에서 보기 →</a>`;
       info.innerHTML = `<div class="k">DIE ${g.dataset.pos} · <span class="verdict ${vc}">${vt}</span> · ${esc(b.code)} · ${esc(b.fieldObj.name)}</div>
         <h3>${esc(b.title)}<small>${esc(b.subtitle)}</small></h3>
         <p>${esc(b.headline && EB.isPublished(b) ? b.headline : b.description)}</p>

@@ -30,6 +30,7 @@
       "desc": "돈과 투자, 주거와 몸의 원리, 카메라와 음악처럼 생활에서 만나는 지식"
     }
   ],
+  "fieldAliases": {"ai": "computing", "housing": "money", "art": "culture"},
   "fields": [
     {
       "id": "semiconductor",
@@ -81,20 +82,11 @@
     {
       "id": "computing",
       "wing": "work",
-      "name": "컴퓨터·SW",
-      "en": "Computing",
+      "name": "컴퓨터·AI",
+      "en": "Computing & AI",
       "color": "#4f46e5",
       "colorDark": "#8b85ff",
-      "desc": "컴퓨터의 기본 동작에서 운영체제, 네트워크, 데이터베이스의 내부까지."
-    },
-    {
-      "id": "ai",
-      "wing": "work",
-      "name": "AI·데이터",
-      "en": "AI & Data",
-      "color": "#9333ea",
-      "colorDark": "#c084fc",
-      "desc": "통계와 데이터 해석에서 신경망과 LLM의 동작 원리까지."
+      "desc": "컴퓨터와 네트워크의 원리에서 데이터 분석, 신경망과 AI의 업무 활용까지."
     },
     {
       "id": "electronics",
@@ -108,20 +100,11 @@
     {
       "id": "money",
       "wing": "life",
-      "name": "돈·금융",
-      "en": "Money",
+      "name": "돈·부동산",
+      "en": "Money & Housing",
       "color": "#b45309",
       "colorDark": "#fbbf24",
-      "desc": "복리, 금리, 주식, 보험, 연금, 세금, 경제 뉴스. 월급을 받는 순간부터 필요한 지식."
-    },
-    {
-      "id": "housing",
-      "wing": "life",
-      "name": "집·부동산",
-      "en": "Housing",
-      "color": "#0f766e",
-      "colorDark": "#2dd4bf",
-      "desc": "집값의 원리, 전월세 계약과 보증금, 대출과 세금, 내 집 마련의 판단."
+      "desc": "돈과 경제, 투자·보험·세금에서 집값과 전월세, 내 집 마련까지."
     },
     {
       "id": "health",
@@ -135,20 +118,11 @@
     {
       "id": "culture",
       "wing": "life",
-      "name": "취미·교양",
-      "en": "Culture",
+      "name": "예술·교양",
+      "en": "Arts & Culture",
       "color": "#c2410c",
       "colorDark": "#fb923c",
-      "desc": "카메라와 음악. 빛과 소리를 직접 조작하며 배우는 지식."
-    },
-    {
-      "id": "art",
-      "wing": "life",
-      "name": "미술·디자인",
-      "en": "Art & Design",
-      "color": "#b5179e",
-      "colorDark": "#f27ad8",
-      "desc": "색, 형태와 구도, 드로잉, 타이포그래피, 미술사. 보고 만지고 그려 보며 배우는 미술과 시각 디자인."
+      "desc": "사진·음악·수학에서 미술과 시각 표현, 웹·제품·산업디자인까지."
     }
   ],
   "books": [
@@ -1073,7 +1047,7 @@
           "image": "img/sims/aibook-sim-space.jpg"
         }
       ],
-      "field": "ai"
+      "field": "computing"
     },
     {
       "id": "axbook",
@@ -1112,7 +1086,7 @@
           "image": "img/sims/axbook-sim-trap.jpg"
         }
       ],
-      "field": "ai"
+      "field": "computing"
     },
     {
       "id": "statbook",
@@ -1120,7 +1094,7 @@
       "title": "StatBook",
       "subtitle": "통계와 데이터 분석",
       "description": "평균의 함정부터 A/B 테스트까지.",
-      "field": "ai",
+      "field": "computing",
       "status": "planned",
       "phase": 2,
       "ideas": [
@@ -1497,7 +1471,7 @@
           "image": "img/sims/estatebook-sim-af.jpg"
         }
       ],
-      "field": "housing"
+      "field": "money"
     },
     {
       "id": "bodybook",
@@ -1657,7 +1631,7 @@
       "url": "https://artbook.euiyun.com/color/",
       "repo": "https://github.com/geniuskey/artbook",
       "checkout": "artbook/color",
-      "field": "art",
+      "field": "culture",
       "status": "published",
       "level": "입문",
       "chapters": 17,
@@ -1699,13 +1673,13 @@
       "url": "https://artbook.euiyun.com/composition/",
       "repo": "https://github.com/geniuskey/artbook",
       "checkout": "artbook/composition",
-      "field": "art",
+      "field": "culture",
       "status": "published",
       "level": "입문",
       "chapters": 15,
       "simulators": 95,
-      "color": "#b5179e",
-      "colorDark": "#f27ad8",
+      "color": "#4338a0",
+      "colorDark": "#aaa2f2",
       "topics": [
         "점·선·면",
         "형과 바탕",
@@ -1741,13 +1715,13 @@
       "url": "https://artbook.euiyun.com/drawing/",
       "repo": "https://github.com/geniuskey/artbook",
       "checkout": "artbook/drawing",
-      "field": "art",
+      "field": "culture",
       "status": "published",
       "level": "입문",
       "chapters": 15,
       "simulators": 93,
-      "color": "#b5179e",
-      "colorDark": "#f27ad8",
+      "color": "#485461",
+      "colorDark": "#acbac9",
       "topics": [
         "보이는 대로 보기",
         "선과 해칭",
@@ -1783,13 +1757,13 @@
       "url": "https://artbook.euiyun.com/type/",
       "repo": "https://github.com/geniuskey/artbook",
       "checkout": "artbook/type",
-      "field": "art",
+      "field": "culture",
       "status": "published",
       "level": "입문",
       "chapters": 14,
       "simulators": 88,
-      "color": "#b5179e",
-      "colorDark": "#f27ad8",
+      "color": "#24599a",
+      "colorDark": "#8bb9f0",
       "topics": [
         "글자의 해부",
         "한글의 구조",
@@ -1825,13 +1799,13 @@
       "url": "https://artbook.euiyun.com/history/",
       "repo": "https://github.com/geniuskey/artbook",
       "checkout": "artbook/history",
-      "field": "art",
+      "field": "culture",
       "status": "published",
       "level": "입문",
       "chapters": 14,
       "simulators": 85,
-      "color": "#b5179e",
-      "colorDark": "#f27ad8",
+      "color": "#934333",
+      "colorDark": "#e7a18e",
       "topics": [
         "르네상스와 원근",
         "바로크의 빛",
@@ -1867,13 +1841,13 @@
       "url": "https://artbook.euiyun.com/image/",
       "repo": "https://github.com/geniuskey/artbook",
       "checkout": "artbook/image",
-      "field": "art",
+      "field": "culture",
       "status": "published",
       "level": "입문",
       "chapters": 14,
       "simulators": 86,
-      "color": "#b5179e",
-      "colorDark": "#f27ad8",
+      "color": "#624183",
+      "colorDark": "#c2a0e3",
       "topics": [
         "노출",
         "히스토그램",
@@ -1909,13 +1883,13 @@
       "url": "https://artbook.euiyun.com/web/",
       "repo": "https://github.com/geniuskey/artbook",
       "checkout": "artbook/web",
-      "field": "art",
+      "field": "culture",
       "status": "published",
       "level": "입문",
       "chapters": 14,
       "simulators": 87,
-      "color": "#b5179e",
-      "colorDark": "#f27ad8",
+      "color": "#087e8b",
+      "colorDark": "#71cbd5",
       "topics": [
         "뷰포트",
         "박스와 간격",
@@ -1951,13 +1925,13 @@
       "url": "https://artbook.euiyun.com/product/",
       "repo": "https://github.com/geniuskey/artbook",
       "checkout": "artbook/product",
-      "field": "art",
+      "field": "culture",
       "status": "published",
       "level": "입문",
       "chapters": 14,
       "simulators": 84,
-      "color": "#b5179e",
-      "colorDark": "#f27ad8",
+      "color": "#35734c",
+      "colorDark": "#94cba5",
       "topics": [
         "사용자 조사",
         "정보 구조",
@@ -1993,13 +1967,13 @@
       "url": "https://artbook.euiyun.com/industrial/",
       "repo": "https://github.com/geniuskey/artbook",
       "checkout": "artbook/industrial",
-      "field": "art",
+      "field": "culture",
       "status": "published",
       "level": "입문",
       "chapters": 14,
       "simulators": 82,
-      "color": "#b5179e",
-      "colorDark": "#f27ad8",
+      "color": "#956214",
+      "colorDark": "#e3bb70",
       "topics": [
         "스케치와 도면",
         "형태와 곡면",

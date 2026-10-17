@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>문제로 시작하기 · Books</title>
-<meta name="description" content="반도체부터 컴퓨터·AI, 영상, 자동차·선박, 돈까지. 질문에 맞는 시작 책과 다음 책으로 이어지는 학습 경로를 안내합니다.">
+<title>지식 지도 · Books</title>
+<meta name="description" content="분야를 고르고, 책 사이의 연결을 따라가 보세요.">
 <link rel="canonical" href="https://books.euiyun.com/paths/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#201c1f">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Books">
-<meta property="og:title" content="문제로 시작하기 · Books">
-<meta property="og:description" content="반도체부터 컴퓨터·AI, 영상, 자동차·선박, 돈까지. 질문에 맞는 시작 책과 다음 책으로 이어지는 학습 경로를 안내합니다.">
+<meta property="og:title" content="지식 지도 · Books">
+<meta property="og:description" content="분야를 고르고, 책 사이의 연결을 따라가 보세요.">
 <meta property="og:url" content="https://books.euiyun.com/paths/">
 <meta property="og:image" content="https://books.euiyun.com/og.png">
 <meta property="og:image:width" content="1200">
@@ -19,32 +19,47 @@
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
-<link rel="stylesheet" href="/css/style.css">
-<script src="/js/covers.js" defer>
+<link rel="stylesheet" href="/css/style.css?v=20261017-map-first">
+<link rel="stylesheet" href="/css/paths.css?v=20261017-shared-tabs">
+<link rel="stylesheet" href="/css/field-navigation.css?v=20261017-shared-tabs">
+<script src="/js/core.js?v=20261017-six-fields" defer>
 </script>
-<script src="/js/core.js" defer>
-</script>
-<script src="/js/discovery.js" defer>
-</script>
+<script src="/js/field-maps.js?v=20261017-six-fields" defer></script>
+<script src="/js/field.js?v=20261017-compact-maps" defer></script>
+<script src="/js/discovery.js?v=20261017-six-fields" defer></script>
 <!-- Cloudflare Web Analytics -->
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3d6151a0abc94ede89285d462527fa80"}'></script>
 <!-- End Cloudflare Web Analytics -->
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "문제로 시작하기 · Books", "url": "https://books.euiyun.com/paths/", "inLanguage": "ko", "isPartOf": {"@type": "WebSite", "name": "Books · 인터랙티브 교과서 시리즈", "url": "https://books.euiyun.com/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "지식 지도 · Books", "url": "https://books.euiyun.com/paths/", "inLanguage": "ko", "isPartOf": {"@type": "WebSite", "name": "Books · 인터랙티브 교과서 시리즈", "url": "https://books.euiyun.com/"}}</script>
 </head>
 <body data-page="paths">
-<main>
-<section class="page-head">
+<main class="atlas-page">
 <div class="wrap">
-<h1>문제로 시작하기</h1>
-<p class="lead">궁금한 질문에서 시작 책을 고르고, 필요한 주제를 따라 다음 책으로 이어 가세요. 반도체부터 컴퓨터·AI, 영상, 이동 수단과 돈까지 안내합니다.</p>
+  <header class="atlas-navigation"><h1 class="atlas-nav-label">지식 지도 <span aria-hidden="true">/</span></h1><div id="map-fields" class="map-fields" role="group" aria-label="지식 지도 분야 선택"></div></header>
+  <section class="field-map" id="flow" aria-label="분야별 지식 지도">
+    <div class="atlas-shell">
+      <div class="atlas-field-header">
+        <div class="atlas-field-copy"><p class="atlas-field-index" id="map-field-index">KNOWLEDGE ATLAS</p><h2 id="map-field-title">책과 책 사이, 새로운 발견</h2><p id="map-field-description">분야별 지식 지도를 불러옵니다.</p></div>
+        <dl class="atlas-stats" id="map-stats" aria-label="선택한 분야의 책 현황"></dl>
+        <svg class="atlas-header-art" viewBox="0 0 380 180" fill="none" aria-hidden="true"><g stroke="currentColor"><ellipse cx="235" cy="90" rx="135" ry="56" transform="rotate(-25 235 90)"/><ellipse cx="235" cy="90" rx="135" ry="56" transform="rotate(25 235 90)"/><circle cx="235" cy="90" r="74"/><path d="M50 90h320M235 0v180"/></g><g fill="currentColor"><circle cx="235" cy="90" r="5"/><circle cx="159" cy="42" r="4"/><circle cx="310" cy="139" r="4"/></g></svg>
+      </div>
+      <div class="atlas-viewport" id="map-viewport" role="region" aria-label="분야별 지식 지도 탐색">
+        <div class="atlas-extent" id="map-extent"><div class="knowledge-map" id="chain"><p class="atlas-loading" role="status">지도를 불러오는 중…</p></div></div>
+      </div>
+      <div class="atlas-detail" id="map-detail" hidden></div>
+      <p class="sr-only" id="map-selection-status" role="status"></p>
+    </div>
+    <div class="atlas-bottom">
+      <a id="field-library-link" href="/library/">이 분야 책장 ↗</a>
+      <details class="atlas-guide"><summary>지도 보는 법</summary><p><span class="atlas-desktop-guide">아래로 스크롤해 탐색하고, 책을 눌러 자세히 살펴보세요. 가까운 영역은 같은 주제이고, 선은 함께 볼 책을 잇습니다.</span><span class="atlas-mobile-guide">아래로 스크롤해 탐색하세요. 책을 누르면 바로 다음 줄에 소개와 함께 볼 책이 표시됩니다. 더 많은 연결은 펼쳐서 확인하세요.</span> 필수 학습 순서는 아닙니다. 키보드는 Tab·방향키로 이동, Enter로 선택, Esc로 선택 해제를 지원합니다. 실선 카드는 출간, 점선은 집필 중·예정입니다.</p></details>
+    </div>
+  </section>
+  <details class="reading-suggestions" id="paths-reading">
+    <summary><span class="reading-icon" aria-hidden="true">↗</span><span class="reading-heading"><strong>어디서부터 읽을지 고민된다면</strong><small>질문에서 출발하는 추천 읽기 순서</small></span><span class="reading-action">읽기 경로 <span id="reading-count"></span><span class="reading-toggle" aria-hidden="true">+</span></span></summary>
+    <div id="learning-paths"><p role="status">읽는 순서를 불러오는 중…</p></div>
+  </details>
 </div>
-</section>
-<div class="wrap" id="learning-paths">
-<p role="status">학습 경로를 불러오는 중…</p>
-</div>
-<noscript>
-<p class="wrap">목록을 보려면 JavaScript를 켜 주세요.</p>
-</noscript>
+<noscript><p class="wrap">지도를 보려면 JavaScript를 켜 주세요.</p></noscript>
 </main>
 </body>
 </html>

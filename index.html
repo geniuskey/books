@@ -19,12 +19,10 @@
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css?v=20261017-map-entry">
 <script src="/js/covers.js" defer></script>
-<script src="/js/core.js" defer></script>
-<script src="/js/wafer.js?v=2" defer></script>
-<script src="/js/field-art.js" defer></script>
-<script src="/js/home.js" defer></script>
+<script src="/js/core.js?v=20261017-six-fields" defer></script>
+<script src="/js/home.js?v=20261017-map-entry" defer></script>
 <!-- Cloudflare Web Analytics -->
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3d6151a0abc94ede89285d462527fa80"}'></script>
 <!-- End Cloudflare Web Analytics -->
@@ -45,37 +43,16 @@
           <a href="/library/">전체 책장 둘러보기 <span aria-hidden="true">↗</span></a>
         </div>
       </div>
-      <div class="library-room" aria-label="출간된 책장">
-        <div class="library-room-head"><span>지금 바로 펼칠 수 있는 책</span><strong><span data-stat="published">–</span>권 출간</strong></div>
-        <div id="home-shelves" class="home-shelves"></div>
-        <div class="library-room-foot"><span>책등을 눌러 바로 읽어 보세요 · <a href="/paths/">처음이라면 읽기 길잡이</a></span><a href="/library/">분야별로 찾기 →</a></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block wing" id="work">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <div class="eyebrow">Knowledge for Work</div>
-          <h2>일하는 지식</h2>
-          <p>반도체에서 출발해 컴퓨터, AI, 전자까지. 일하는 데 필요한 전문 지식을 원리부터 쌓습니다.</p>
+      <nav class="browse-fields" id="browse-fields" aria-label="분야별 지식 지도"><span class="browse-fields-label">관심 있는 분야를 탐험해 보세요</span></nav>
+      <div class="browse-heading"><h2 id="browse-title">처음 펼치기 좋은 책</h2><a href="/library/">전체 <span data-stat="published">–</span>권 보기 →</a></div>
+      <div id="browse-books" class="browse-books" tabindex="0" role="region" aria-labelledby="browse-title"></div>
+      <div class="browse-scroll-nav" id="browse-scroll-nav" hidden>
+        <span class="browse-scroll-hint">책장을 옆으로 넘겨 보세요</span>
+        <div class="browse-scroll-actions">
+          <button type="button" id="browse-prev" aria-label="이전 책 보기" aria-controls="browse-books"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+          <button type="button" id="browse-next" aria-label="다음 책 보기" aria-controls="browse-books"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
         </div>
       </div>
-      <div class="field-grid" id="fields-work"></div>
-    </div>
-  </section>
-
-  <section class="block wing" id="life">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <div class="eyebrow">Knowledge for Life</div>
-          <h2>살아가는 지식</h2>
-          <p>돈과 투자, 집, 몸의 원리, 카메라와 음악. 생활에서 만나는 원리를 직접 조작하며 배웁니다.</p>
-        </div>
-      </div>
-      <div class="field-grid" id="fields-life"></div>
     </div>
   </section>
 
@@ -89,7 +66,7 @@
         </div>
       </div>
       <div class="home-experiments" id="home-experiments"></div>
-      <div class="home-experiments-foot"><a href="/paths/">어디부터 볼지 모르겠다면 →</a><a href="/simulators/">전체 실험 찾아보기 →</a></div>
+      <div class="home-experiments-foot"><a href="/simulators/">전체 실험 찾아보기 →</a></div>
     </div>
   </section>
 

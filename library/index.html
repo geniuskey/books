@@ -19,29 +19,30 @@
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css?v=20261017-map-entry">
+<link rel="stylesheet" href="/css/field-navigation.css?v=20261017-shared-tabs">
 <script src="/js/covers.js" defer></script>
-<script src="/js/core.js" defer></script>
-<script src="/js/library.js" defer></script>
+<script src="/js/core.js?v=20261017-six-fields" defer></script>
+<script src="/js/library.js?v=20261017-map-entry" defer></script>
 <!-- Cloudflare Web Analytics -->
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3d6151a0abc94ede89285d462527fa80"}'></script>
 <!-- End Cloudflare Web Analytics -->
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "전체 책장 · Books", "url": "https://books.euiyun.com/library/", "inLanguage": "ko", "isPartOf": {"@type": "WebSite", "name": "Books · 인터랙티브 교과서 시리즈", "url": "https://books.euiyun.com/"}}</script>
 </head>
-<body>
+<body data-page="library">
 
 <main>
   <section class="page-head library-head">
     <div class="wrap">
-      <div class="library-heading">
-        <h1>전체 책장</h1>
-        <span class="library-count" id="lib-count"></span>
-      </div>
-      <p class="library-intro">출간된 교과서를 먼저 보여드립니다. 집필 계획은 상태 필터 또는 <a href="/roadmap/">로드맵</a>에서 볼 수 있습니다.</p>
+      <header class="atlas-navigation">
+        <h1 class="atlas-nav-label">전체 책장 <span aria-hidden="true">/</span></h1>
+        <div id="library-fields" class="map-fields" role="group" aria-label="책장 분야 선택"></div>
+      </header>
+      <a class="library-map-prompt" id="library-map-link" href="/paths/">이 책들은 어떻게 이어질까요? <span>지식 지도 보기 →</span></a>
+      <span class="library-count" id="lib-count"></span>
       <div class="lib-filters">
-        <input class="search" id="search" type="search" placeholder="주제 검색 (예: HBM, 전세, 연말정산)" aria-label="교과서 검색">
         <label class="library-select">갈래 <select id="f-wing"></select></label>
-        <label class="library-select">분야 <select id="f-field"></select></label>
+        <button type="button" id="library-favorites" aria-pressed="false">★ 즐겨찾기</button>
         <label class="library-select">상태 <select id="f-status"></select></label>
         <span class="shown" id="shown" aria-live="polite"></span>
       </div>
