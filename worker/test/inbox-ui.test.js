@@ -11,7 +11,7 @@ class Element {
   replaceChildren(...children) { this.children = children; }
 }
 const tick = () => new Promise(resolve => setImmediate(resolve));
-async function setup({ deferAdmin = false, authorized = true, isAdmin = 0, reactionFetch, commentCount = 0 } = {}) {
+async function setup({ deferAdmin = false, authorized = true, isAdmin = 0, reactionFetch, commentCount = 0, storage = new Map(), total = 42 } = {}) {
   const nodes = new Map();
   const get = id => { if (!nodes.has(id)) nodes.set(id, new Element()); return nodes.get(id); };
   let callback, release, adminRequests = 0;
@@ -25,17 +25,19 @@ async function setup({ deferAdmin = false, authorized = true, isAdmin = 0, react
       if (deferAdmin && adminRequests === 2) await new Promise(resolve => { release = resolve; });
       return { ok: true, json: async () => ({ items: [privateItem], hasMore: false }) };
     }
-    return { ok: true, json: async () => ({ items: [publicItem], hasMore: false }) };
+    return { ok: true, json: async () => ({ items: [publicItem], hasMore: false, total }) };
   };
   const head = { append: script => script.onload() };
   const google = { accounts: { id: { initialize: options => { callback = options.callback; }, renderButton() {}, disableAutoSelect() {} } } };
-  const context = vm.createContext({ document: { getElementById: get, createElement: () => new Element(), head }, fetch, google, crypto, URL, URLSearchParams, AbortSignal, setTimeout: () => 1, clearTimeout() {} });
+  const timers = [];
+  const sessionStorage = { getItem: key => storage.get(key), setItem: (key, value) => storage.set(key, value), removeItem: key => storage.delete(key) };
+  const context = vm.createContext({ atob, sessionStorage, document: { getElementById: get, createElement: () => new Element(), head }, fetch, google, crypto, URL, URLSearchParams, AbortSignal, setTimeout: (fn, delay) => { timers.push({ fn, delay }); return timers.length; }, clearTimeout() {} });
   vm.runInContext(readFileSync(new URL('../../js/feedback-inbox.js', import.meta.url), 'utf8'), context);
   context.FeedbackInbox.start({ endpoint: 'https://feedback.example/api/feedback', googleClientId: 'client' }, { books: [] });
   await tick();
   get('admin-login').open = true;
   get('admin-login').events.toggle();
-  return { get, api: context.FeedbackInbox, signIn: () => callback({ credential: 'signed-token' }), release: () => release?.() };
+  return { get, api: context.FeedbackInbox, signIn: (credential = 'signed-token') => callback({ credential }), release: () => release?.(), storage, timers };
 }
 
 test('reader messages are literal text, and a rejected Google account never enters admin mode', async () => {
@@ -140,5 +142,50 @@ test('relative dates use compact units and retain the full timestamp tooltip', (
     assert.equal(time.textContent, expected);
     assert.equal(time.dateTime, value);
     assert.equal(time.title, new Date(value).toLocaleString('ko-KR'));
+  }
+});
+
+const credential = exp => `header.${Buffer.from(JSON.stringify({ exp })).toString('base64url')}.signature`;
+
+test('navigation restores a stored session only after server verification; logout removes it', async () => {
+  const saved = credential(Math.floor(Date.now() / 1000) + 1200);
+  const first = await setup();
+  await first.signIn(saved);
+  assert.equal(first.storage.get('feedback-admin-session'), saved);
+  const returned = await setup({ storage: first.storage });
+  assert.equal(returned.api.authHeaders().Authorization, `Bearer ${saved}`);
+  assert.equal(returned.get('admin-session').hidden, false);
+  assert.equal(returned.get('inbox-list').children[0].children[1].textContent, '비공개 내용');
+  assert.ok(returned.timers[0].delay > 1190000 && returned.timers[0].delay <= 1200000);
+  returned.get('admin-logout').events.click();
+  assert.equal(first.storage.has('feedback-admin-session'), false);
+  const loggedOut = await setup({ storage: first.storage });
+  assert.equal(loggedOut.api.authHeaders().Authorization, undefined);
+});
+
+test('expired, malformed and server-rejected stored tokens cannot restore admin access', async () => {
+  for (const saved of ['broken', credential(1), credential(Math.floor(Date.now() / 1000) + 1200)]) {
+    const storage = new Map([['feedback-admin-session', saved]]);
+    const page = await setup({ storage, authorized: false });
+    assert.equal(page.api.authHeaders().Authorization, undefined);
+    assert.equal(storage.has('feedback-admin-session'), false);
+    assert.ok(page.get('inbox-list').children.every(card => card.children[1].textContent !== '비공개 내용'));
+  }
+});
+
+test('actual token expiry removes stored credentials and private content', async () => {
+  const page = await setup();
+  await page.signIn(credential(Math.floor(Date.now() / 1000) + 60));
+  page.timers[0].fn();
+  await tick();
+  assert.equal(page.storage.has('feedback-admin-session'), false);
+  assert.equal(page.api.authHeaders().Authorization, undefined);
+  assert.ok(page.get('inbox-list').children.every(card => card.children[1].textContent !== '비공개 내용'));
+});
+
+test('board reports the aggregate count including private posts, including zero', async () => {
+  for (const total of [0, 1234]) {
+    const page = await setup({ total });
+    assert.equal(page.get('inbox-total').textContent, `전체 ${total.toLocaleString('ko-KR')}개 · 비공개 포함`);
   }
 });

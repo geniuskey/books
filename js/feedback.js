@@ -2,7 +2,13 @@
 EB.start("feedback", (data) => {
   const params = new URLSearchParams(location.search);
   const adminPanel = document.getElementById("feedback-admin");
-  if (adminPanel) adminPanel.hidden = params.get("admin") !== "1";
+  const adminPage = /^\/admin(?:\/|$)/.test(location.pathname);
+  if (params.get("admin") === "1") {
+    params.delete("admin");
+    location.replace("/admin/" + (params.size ? "?" + params : ""));
+    return;
+  }
+  if (adminPanel) adminPanel.hidden = !adminPage;
   const bookId = params.get("book");
   // 출간된 책과, 주소가 있는 집필 중인 책(일부 장을 공개한 책)에서 의견을 받는다.
   const acceptsFeedback = (item) => item.url && (item.status === "published" || item.status === "writing");
@@ -53,6 +59,7 @@ EB.start("feedback", (data) => {
   let unavailable = false;
   let readerNickname = '';
   const onSession = (active) => {
+    if (adminPanel) adminPanel.hidden = !adminPage || active;
     if (active && !fields.nickname.readOnly) readerNickname = fields.nickname.value;
     fields.nickname.value = active ? '관리자' : readerNickname;
     fields.nickname.readOnly = active;
@@ -91,7 +98,7 @@ EB.start("feedback", (data) => {
       if (url.protocol !== "https:" && !(url.protocol === "http:" && ["localhost", "127.0.0.1"].includes(url.hostname))) throw new Error();
       endpoint = url.href;
       globalThis.FeedbackInbox?.start(config, data, { onUnavailable: showGitHubOnly, onSession });
-      if (params.get("admin") === "1") {
+      if (adminPage) {
         document.getElementById("admin-login").open = true;
         if (location.hash === "#feedback-admin") adminPanel?.scrollIntoView();
       }

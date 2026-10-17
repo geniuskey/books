@@ -36,7 +36,7 @@ function feedbackTime(value) {
   return time;
 }
 
-/* Public and authenticated inbox on the same feedback page. Tokens stay in memory. */
+/* Public and authenticated inbox on the same feedback page. Credentials survive navigation within this tab until Google token expiry. */
 globalThis.FeedbackInbox = (() => {
   let refresh = () => {};
   let authHeaders = () => ({});
@@ -51,18 +51,38 @@ globalThis.FeedbackInbox = (() => {
       visitorId = crypto.randomUUID();
       try { localStorage.setItem('feedback-visitor', visitorId); } catch {}
     }
-    let token = '', page = 0, generation = 0, expiryTimer, signingIn = false;
+    let token = '', page = 0, generation = 0, expiryTimer, signingIn = false, authGeneration = 0;
     authHeaders = () => token ? { Authorization: `Bearer ${token}` } : {};
     const list = $('inbox-list');
     const status = $('inbox-status');
     const login = $('admin-login');
     const scope = $('inbox-scope');
+    const sessionKey = 'feedback-admin-session';
+    function expiry(credential) {
+      try {
+        const payload = JSON.parse(atob(credential.split('.')[1].replace(/-/g, '+').replace(/_/g, '/')));
+        return Number.isFinite(payload.exp) ? payload.exp * 1000 : 0;
+      } catch { return 0; }
+    }
+    function remember(credential) {
+      token = credential;
+      try { sessionStorage.setItem(sessionKey, credential); } catch {}
+      clearTimeout(expiryTimer);
+      expiryTimer = setTimeout(() => {
+        session(false); refresh();
+        $('admin-status').textContent = '로그인 유효기간이 끝났습니다. 다시 로그인해 주세요.';
+      }, Math.max(0, expiry(credential) - Date.now()));
+      session(true);
+    }
     function session(active) {
       onSession(active);
       $('admin-session').hidden = !active;
       $('inbox-scope-label').hidden = !active;
       login.hidden = active;
-      if (!active) { token = ''; scope.value = 'all'; clearTimeout(expiryTimer); }
+      if (!active) {
+        token = ''; scope.value = 'all'; clearTimeout(expiryTimer);
+        try { sessionStorage.removeItem(sessionKey); } catch {}
+      }
     }
     async function api(path, options = {}, credential = token) {
       const response = await fetch(base + path, {
@@ -234,6 +254,9 @@ globalThis.FeedbackInbox = (() => {
       try {
         const result = await api(`${credential ? '/api/admin/feedback' : '/api/feedback/public'}?${query}`, {}, credential);
         if (current !== generation) return;
+        if (Number.isSafeInteger(result.total) && result.total >= 0) {
+          $('inbox-total').textContent = `전체 ${result.total.toLocaleString('ko-KR')}개 · 비공개 포함`;
+        }
         result.items.forEach((item) => list.append(render(item, Boolean(credential))));
         status.textContent = list.children.length ? (credential ? '관리자에게만 비공개 글이 표시됩니다.' : '') : ($('inbox-type').value || credential ? '이 조건에 맞는 글이 없습니다. 다른 조건으로 살펴보세요.' : '아직 공개된 글이 없습니다. ‘의견 남기기’에서 첫 이야기를 나눠 주세요.');
         $('inbox-more').hidden = !result.hasMore;
@@ -246,6 +269,7 @@ globalThis.FeedbackInbox = (() => {
     $('inbox-type').addEventListener('change', refresh);
     scope.addEventListener('change', refresh);
     $('admin-logout').addEventListener('click', () => {
+      authGeneration++;
       globalThis.google?.accounts.id.disableAutoSelect();
       session(false); refresh();
     });
@@ -263,12 +287,12 @@ globalThis.FeedbackInbox = (() => {
           callback: async ({ credential }) => {
             if (signingIn) return;
             signingIn = true;
+            const attempt = ++authGeneration;
             $('admin-status').textContent = '관리자 권한을 확인하는 중…';
             try {
               await api('/api/admin/feedback?page=0', {}, credential);
-              token = credential; session(true);
-              clearTimeout(expiryTimer);
-              expiryTimer = setTimeout(() => { session(false); refresh(); }, 60 * 60 * 1000);
+              if (attempt !== authGeneration) return;
+              remember(credential);
               await refresh();
             } catch (error) { $('admin-status').textContent = error.message || '로그인하지 못했습니다.'; }
             finally { signingIn = false; }
@@ -278,7 +302,24 @@ globalThis.FeedbackInbox = (() => {
       };
       document.head.append(script);
     });
-    refresh();
+    // A stored token is only a candidate: verify it on the server before admin UI.
+    async function restore() {
+      const attempt = authGeneration;
+      let saved;
+      try { saved = sessionStorage.getItem(sessionKey); } catch {}
+      if (saved && expiry(saved) > Date.now()) {
+        try {
+          await api('/api/admin/feedback?page=0', {}, saved);
+          if (attempt !== authGeneration) return;
+          remember(saved);
+        } catch (error) {
+          if (attempt !== authGeneration) return;
+          if (error.status === 401) session(false);
+        }
+      } else if (saved) session(false);
+      await refresh();
+    }
+    restore();
   }
   return { start, refresh: () => refresh(), authHeaders: () => authHeaders() };
 })();

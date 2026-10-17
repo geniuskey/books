@@ -38,6 +38,12 @@ def check_assets(path):
     return source
 
 
+admin = check_assets(ROOT / 'admin/index.html')
+assert 'name="robots" content="noindex"' in admin
+assert 'href="https://books.euiyun.com/admin/"' in admin
+assert 'id="feedback-admin"' in admin
+assert 'location.replace' not in admin
+
 fields = json.loads((ROOT / 'data/books.json').read_text())['fields']
 for name in PUBLIC:
     path = ROOT / name / 'index.html'

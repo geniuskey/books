@@ -17,11 +17,11 @@
 <meta name="twitter:card" content="summary_large_image">
 <script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
 <link rel="stylesheet" href="/css/style.css?v=20261017-reactions">
-<link rel="stylesheet" href="/css/feedback.css?v=20261017-workspace">
+<link rel="stylesheet" href="/css/feedback.css?v=20261017-session">
 <script src="/js/core.js?v=20261017-six-fields" defer></script>
-<script src="/js/feedback-inbox.js?v=20261017-workspace" defer></script>
-<script src="/js/feedback.js?v=20261017-workspace" defer></script>
-<script src="/js/feedback-ui.js?v=20261017-workspace" defer></script>
+<script src="/js/feedback-inbox.js?v=20261017-session" defer></script>
+<script src="/js/feedback.js?v=20261017-session" defer></script>
+<script src="/js/feedback-ui.js?v=20261017-session" defer></script>
 <!-- Cloudflare Web Analytics -->
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3d6151a0abc94ede89285d462527fa80"}'></script>
 <!-- End Cloudflare Web Analytics -->
@@ -62,7 +62,7 @@
       </details>
       <noscript><p>로그인 없는 접수에는 JavaScript가 필요합니다. 아래 GitHub 창구를 이용할 수도 있습니다.</p></noscript>
       <section class="feedback-inbox" aria-labelledby="inbox-title">
-        <div class="inbox-heading"><div><h2 id="inbox-title">독자 게시판</h2><p>공개된 이야기 · 최신순</p></div><button id="inbox-refresh" type="button">새로고침</button></div>
+        <div class="inbox-heading"><div><h2 id="inbox-title">독자 게시판</h2><p><span id="inbox-total"></span><span class="inbox-total-separator"> · </span>공개된 이야기 · 최신순</p></div><button id="inbox-refresh" type="button">새로고침</button></div>
 
         <div id="admin-session" hidden><span>관리자로 로그인했습니다.</span> <button id="admin-logout" type="button">로그아웃</button></div>
         <div class="inbox-filters"><div class="inbox-type-tabs" role="group" aria-label="글 종류" hidden><button type="button" data-inbox-type="" aria-pressed="true">전체</button><button type="button" data-inbox-type="error" aria-pressed="false">오류 제보</button><button type="button" data-inbox-type="request" aria-pressed="false">의견·건의</button><button type="button" data-inbox-type="cheer" aria-pressed="false">응원</button></div><label id="inbox-type-label">글 종류<select id="inbox-type"><option value="">전체</option><option value="error">오류 제보</option><option value="request">의견·건의</option><option value="cheer">저자 응원</option></select></label><label id="inbox-scope-label" hidden>보기<select id="inbox-scope"><option value="all">전체</option><option value="private">비공개</option><option value="public">공개</option></select></label></div>

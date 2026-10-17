@@ -30,7 +30,9 @@ export async function inbox(request, env, headers) {
       const columns = admin ? 'id, type, nickname, message, book_id, page_url, visibility, created_at' : 'id, type, nickname, message, book_id, created_at';
       const counts = ', is_admin, (SELECT COUNT(*) FROM feedback_likes WHERE feedback_id = feedback.id) AS like_count, (SELECT COUNT(*) FROM feedback_comments WHERE feedback_id = feedback.id) AS comment_count, EXISTS(SELECT 1 FROM feedback_likes WHERE feedback_id = feedback.id AND visitor_id = ?) AS liked';
       const { results } = await env.DB.prepare(`SELECT ${columns}${counts} FROM feedback${where} ORDER BY created_at DESC, id DESC LIMIT 21 OFFSET ?`).bind(visitorId, ...args, Number(page) * 20).all();
-      return reply(200, { ok: true, items: results.slice(0, 20), hasMore: results.length > 20 });
+      // Only the aggregate includes private posts; their contents remain authenticated.
+      const { results: totals } = await env.DB.prepare('SELECT COUNT(*) AS total FROM feedback').bind().all();
+      return reply(200, { ok: true, total: totals[0].total, items: results.slice(0, 20), hasMore: results.length > 20 });
     }
     return reply(405, { error: '지원하지 않는 요청입니다.' });
   } catch { return reply(503, { error: '글을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.' }); }

@@ -130,3 +130,17 @@ test('only verified administrators get author badges on posts and comments', asy
   }
   db.close();
 });
+
+test('aggregate count includes private posts without exposing their details or changing with filters', async () => {
+  const { db, request } = setup();
+  for (const query of ['', '?type=error', '?page=1', '?type=cheer&scope=private']) {
+    const body = await (await request('/api/feedback/public' + query)).json();
+    assert.equal(body.total, 3);
+    assert.ok(!JSON.stringify(body).includes('기존 비공개 글'));
+  }
+  db.exec('DELETE FROM feedback');
+  const empty = await (await request('/api/feedback/public')).json();
+  assert.equal(empty.total, 0);
+  assert.deepEqual(empty.items, []);
+  db.close();
+});
