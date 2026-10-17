@@ -6,6 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap");
 
 :root {
+  --book-cover-ratio: 7 / 10;
   --bg: #f6f1e9;
   --bg-elev: #fffaf3;
   --surface: #eee5d8;
@@ -1211,15 +1212,15 @@ body[data-page="simulators"] .lib-filters { flex-direction: row; flex-wrap: wrap
   .browse-books:has(.browse-book:nth-child(n+6)) { --shelf-rows: 2; }
 }
 @media (min-width: 761px) and (max-width: 1100px) {
-  .browse-books { --shelf-columns: 4; grid-auto-columns: calc((100% - 96px) / 4.2); }
+  .browse-books { --shelf-columns: 4; grid-auto-columns: max(180px, (100% - 96px) / 4.2); }
   .browse-books:has(.browse-book:nth-child(n+5)) { --shelf-rows: 2; }
 }
 @media (min-width: 541px) and (max-width: 760px) {
-  .browse-books { --shelf-columns: 3; scroll-padding-inline: 8px; grid-auto-columns: calc((100% - 48px) / 3.2); }
+  .browse-books { --shelf-columns: 3; scroll-padding-inline: 8px; grid-auto-columns: max(180px, (100% - 48px) / 3.2); }
   .browse-books:has(.browse-book:nth-child(n+4)) { --shelf-rows: 2; }
 }
 @media (max-width: 540px) {
-  .browse-books { --shelf-columns: 2; scroll-padding-inline: 7px; grid-auto-columns: calc((100% - 28px) / 2.2); }
+  .browse-books { --shelf-columns: 2; scroll-padding-inline: 7px; grid-auto-columns: max(180px, (100% - 28px) / 2.2); }
   .browse-books:has(.browse-book:nth-child(n+3)) { --shelf-rows: 2; }
 }
 .browse-book::after { content: none; }
@@ -1349,7 +1350,7 @@ body[data-page="simulators"] .lib-filters { flex-direction: row; flex-wrap: wrap
 /* Match the home shelf's cover geometry and typography at every viewport. */
 .catalog-list { grid-template-columns: repeat(5, minmax(0, 1fr)); column-gap: 24px; padding-inline: 12px; }
 .catalog-book { padding-inline: 10px; }
-.catalog-cover { width: 90%; height: 227px; min-height: 0; margin-inline: auto; padding: 16px 15px 13px 20px; border: 0; }
+.catalog-cover { width: 90%; height: auto; aspect-ratio: var(--book-cover-ratio); min-height: 0; margin-inline: auto; padding: 16px 15px 13px 20px; border: 0; overflow: hidden; }
 .catalog-cover-field { font-size: 10px; letter-spacing: .04em; opacity: .85; }
 .catalog-cover-title { margin-top: 12px; font-size: 18px; line-height: 1.3; letter-spacing: -.035em; }
 .catalog-cover-art { min-height: 25px; margin-block: 8px; opacity: .8; }
@@ -1363,24 +1364,27 @@ body[data-page="simulators"] .lib-filters { flex-direction: row; flex-wrap: wrap
 @media (max-width: 540px) {
   .catalog-list { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 14px; padding-inline: 7px; }
   .catalog-book { padding-inline: 4px; }
-  .catalog-cover { height: 216px; padding-inline: 14px 11px; }
+  .catalog-cover { padding-inline: 14px 11px; }
   .catalog-cover-title { font-size: 16px; }
 }
 
-/* The catalog fits six proportional covers while the home shelf keeps five. */
+/* Six catalog columns use the same fixed proportions as the home covers. */
+.catalog-book { container-type: inline-size; }
+.catalog-cover { padding: 9cqw 8cqw 7cqw 11cqw; }
+.catalog-cover-field { font-size: clamp(8px, 5.5cqw, 10px); }
+.catalog-cover-title { font-size: clamp(12px, 10cqw, 18px); margin-top: 7cqw; }
+.catalog-cover-art { min-height: 0; margin-block: 4cqw; }
+.catalog-cover-footer { font-size: clamp(8px, 6cqw, 11px); padding-top: 4cqw; }
 @media (min-width: 1101px) {
   .catalog-list { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-  .catalog-cover {
-    width: calc(90% / .82);
-    margin-inline: calc((100% - 90% / .82) / 2);
-    margin-bottom: -40.86px;
-    transform: scale(.82);
-    transform-origin: top center;
-  }
-  .catalog-cover:hover { transform: scale(.82) translateY(-5px) rotate(-.5deg); }
 }
-@media (min-width: 1101px) and (prefers-reduced-motion: reduce) {
-  .catalog-cover:hover { transform: scale(.82); }
+
+/* Keep smaller home covers resting on the shelf without stretching them. */
+.browse-book { height: 227px; display: flex; align-items: end; }
+.browse-cover { width: min(90%, 158.9px); height: auto; aspect-ratio: var(--book-cover-ratio); flex-shrink: 0; }
+@media (max-width: 540px) {
+  .browse-book { height: 216px; }
+  .browse-cover { width: min(90%, 151.2px); }
 }
 
 /* Field discovery opens the atlas; the library offers the same route. */
