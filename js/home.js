@@ -43,18 +43,18 @@ EB.start("home", (d) => {
   const publishedFields = d.fields.filter((f) => published.some((b) => b.field === f.id));
   // 위쪽 다섯 권, 아래쪽 다섯 권 순서. 작은 화면에서도 같은 두 줄을 옆으로 넘긴다.
   const starterPicks = [
-    { id: "computerbook", caption: "0과 1에서 시작하는 컴퓨터의 원리" },
-    { id: "moneybook", caption: "월급부터 은퇴까지, 생활 속 돈의 원리" },
-    { id: "camerabook", caption: "다이얼을 돌리면 사진이 달라진다" },
-    { id: "bodybook", caption: "매일 쓰는 내 몸은 어떻게 움직일까?" },
-    { id: "chipindustrybook", caption: "칩 하나를 만드는 회사와 산업의 연결" },
-    { id: "carbook", caption: "연료 한 방울이 자동차를 움직이기까지" },
-    { id: "estatebook", caption: "집값과 전세를 숫자로 이해하기" },
-    { id: "artbook-color", caption: "색을 섞고 비교하며 찾는 색의 관계" },
-    { id: "musicbook", caption: "소리를 직접 바꾸며 만나는 음악의 원리" },
-    { id: "networkbook", caption: "인터넷 속 데이터는 어떤 길로 갈까?" },
+    "computerbook",
+    "moneybook",
+    "camerabook",
+    "bodybook",
+    "chipindustrybook",
+    "carbook",
+    "estatebook",
+    "artbook-color",
+    "musicbook",
+    "networkbook",
   ];
-  const starters = starterPicks.map((pick) => ({ ...pick, book: published.find((b) => b.id === pick.id) })).filter((pick) => pick.book);
+  const starters = starterPicks.map((id) => published.find((b) => b.id === id)).filter(Boolean);
   publishedFields.forEach((field) => {
     const link = document.createElement("a");
     link.href = EB.mapUrl(field.id);
@@ -63,13 +63,13 @@ EB.start("home", (d) => {
   });
   function renderBrowse() {
     browseGrid.replaceChildren();
-    starters.forEach(({ book: b, caption }, index) => {
+    starters.forEach((b, index) => {
       const card = document.createElement("article");
       card.className = "browse-book";
       card.style.gridColumn = index % 5 + 1;
       card.style.gridRow = Math.floor(index / 5) + 1;
       card.style.setProperty("--book-color", b.color);
-      card.innerHTML = `<a class="browse-cover" data-book-id="${esc(b.id)}" href="${esc(b.url)}" target="_blank" rel="noopener" aria-label="${esc(b.title)} · ${esc(b.subtitle)} 읽기 (새 탭)"><small>${esc(b.fieldObj.name)}</small><strong>${esc(EB.coverTitle(b))}</strong><span class="browse-art" aria-hidden="true">${window.coverArt ? window.coverArt(b.motif) : ""}</span><span class="browse-book-title">${esc(b.title)}</span></a><div class="browse-caption"><p>${esc(caption)}</p></div>`;
+      card.innerHTML = `<a class="browse-cover" data-book-id="${esc(b.id)}" href="${esc(b.url)}" target="_blank" rel="noopener" aria-label="${esc(b.title)} · ${esc(b.subtitle)} 읽기 (새 탭)"><small>${esc(b.fieldObj.name)}</small><strong>${esc(EB.coverTitle(b))}</strong><span class="browse-art" aria-hidden="true">${window.coverArt ? window.coverArt(b.motif) : ""}</span><span class="browse-book-title">${esc(b.title)}</span></a>`;
       browseGrid.appendChild(card);
     });
     requestAnimationFrame(updateScrollNav);
