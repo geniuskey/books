@@ -16,6 +16,8 @@ export async function inbox(request, env, headers) {
       const type = url.searchParams.get('type') || '';
       const page = url.searchParams.get('page') || '0';
       const scope = admin ? url.searchParams.get('scope') || 'all' : 'public';
+      const visitorId = url.searchParams.get('visitorId') || '';
+      if (visitorId && !/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(visitorId)) return reply(400, { error: '브라우저 식별 정보를 확인해 주세요.' });
       if ((type && !['error', 'request', 'cheer'].includes(type)) || !/^\d{1,5}$/.test(page) || !['all', 'public', 'private', 'unread', 'hidden'].includes(scope)) {
         return reply(400, { error: '검색 조건을 확인해 주세요.' });
       }
@@ -28,7 +30,8 @@ export async function inbox(request, env, headers) {
       const where = conditions.length ? ` WHERE ${conditions.join(' AND ')}` : '';
       // Public rows intentionally omit page URLs, private state and moderation data.
       const columns = admin ? 'id, type, nickname, message, book_id, page_url, visibility, read_at, is_hidden, created_at' : 'id, type, nickname, message, book_id, created_at';
-      const { results } = await env.DB.prepare(`SELECT ${columns} FROM feedback${where} ORDER BY created_at DESC, id DESC LIMIT 21 OFFSET ?`).bind(...args, Number(page) * 20).all();
+      const counts = ', (SELECT COUNT(*) FROM feedback_likes WHERE feedback_id = feedback.id) AS like_count, (SELECT COUNT(*) FROM feedback_comments WHERE feedback_id = feedback.id) AS comment_count, EXISTS(SELECT 1 FROM feedback_likes WHERE feedback_id = feedback.id AND visitor_id = ?) AS liked';
+      const { results } = await env.DB.prepare(`SELECT ${columns}${counts} FROM feedback${where} ORDER BY created_at DESC, id DESC LIMIT 21 OFFSET ?`).bind(visitorId, ...args, Number(page) * 20).all();
       return reply(200, { ok: true, items: results.slice(0, 20), hasMore: results.length > 20 });
     }
     const match = url.pathname.match(/^\/api\/admin\/feedback\/([0-9a-f-]{36})$/i);

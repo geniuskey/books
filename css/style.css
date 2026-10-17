@@ -985,6 +985,16 @@ footer p { margin: 0; }
 .inbox-meta, #inbox-status, #admin-session { font-size: 13px; color: var(--text-dim); }
 .inbox-message { white-space: pre-wrap; overflow-wrap: anywhere; }
 .inbox-actions { margin-top: 16px; }
+.inbox-reactions { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border); }
+.inbox-reactions button[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+.inbox-reactions .feedback-status:empty { display: none; }
+.inbox-thread { margin-top: 14px; }
+.inbox-thread > summary { width: fit-content; padding: 6px 0; cursor: pointer; font-size: 14px; }
+.inbox-comment { padding: 16px 0; border-bottom: 1px solid var(--border); }
+.inbox-comment-form { margin-top: 20px; }
+.inbox-comment-form label { display: block; margin-bottom: 12px; font-size: 14px; font-weight: 600; }
+.inbox-comment-form input, .inbox-comment-form textarea { display: block; width: 100%; margin-top: 6px; padding: 10px 12px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg); color: var(--text); font: inherit; font-size: 16px; }
+.inbox-comment-form textarea { resize: vertical; min-height: 90px; }
 
 /* 독자 게시판: 목록 중심, 필요할 때 펼치는 작성 영역 */
 .feedback-page .wrap { max-width: 920px; }

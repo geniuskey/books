@@ -1,5 +1,6 @@
 import catalog from '../data/books.json' with { type: 'json' };
 import { inbox } from './inbox.js';
+import { reactions } from './reactions.js';
 
 // 출간된 책과 일부 장을 공개한 집필 중인 책. 책의 주소는 서브도메인 전체이거나 서가의 하위 경로다.
 const books = new Map(catalog.books.filter(b => (b.status === 'published' || b.status === 'writing') && b.url).map(b => [b.id, b]));
@@ -24,7 +25,7 @@ function validate(data) {
   return { id, type, nickname: nickname.trim(), message: message.trim(), bookId, pageUrl, website, visibility };
 }
 
-async function readBody(request) {
+export async function readBody(request) {
   if (Number(request.headers.get('content-length')) > MAX_BYTES) throw new RangeError();
   const reader = request.body?.getReader();
   if (!reader) return '';
@@ -57,11 +58,13 @@ export default {
     if (!origin || !allowed.includes(origin)) return reply(403, '이 사이트에서 접수할 수 없습니다.');
     headers['Access-Control-Allow-Origin'] = origin;
     const path = new URL(request.url).pathname;
+    const reaction = path.match(/^\/api\/feedback\/([0-9a-f-]{36})\/(comments|likes)$/i);
     const isInbox = path === '/api/feedback/public' || path === '/api/admin/feedback' || /^\/api\/admin\/feedback\/[0-9a-f-]{36}$/i.test(path);
-    if (path !== '/api/feedback' && !isInbox) return reply(404, '요청한 주소를 찾을 수 없습니다.');
+    if (path !== '/api/feedback' && !isInbox && !reaction) return reply(404, '요청한 주소를 찾을 수 없습니다.');
     if (request.method === 'OPTIONS') {
-      return new Response(null, { status: 204, headers: { ...headers, 'Access-Control-Allow-Methods': isInbox ? 'GET, PATCH, OPTIONS' : 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization' } });
+      return new Response(null, { status: 204, headers: { ...headers, 'Access-Control-Allow-Methods': reaction ? 'GET, POST, PUT, DELETE, OPTIONS' : isInbox ? 'GET, PATCH, OPTIONS' : 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization' } });
     }
+    if (reaction) return reactions(request, env, headers, reaction, readBody);
     if (isInbox) {
       try {
         const { success } = await env.INBOX_REQUESTS.limit({ key: `inbox:${request.headers.get('CF-Connecting-IP') || 'local'}` });

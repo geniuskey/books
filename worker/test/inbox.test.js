@@ -27,6 +27,7 @@ function setup() {
   const legacy = crypto.randomUUID();
   db.prepare('INSERT INTO feedback(id,type,message) VALUES (?, ?, ?)').run(legacy, 'cheer', '기존 비공개 글');
   db.exec(readFileSync(new URL('../migrations/0002_visibility.sql', import.meta.url), 'utf8'));
+  db.exec(readFileSync(new URL('../migrations/0003_reactions.sql', import.meta.url), 'utf8'));
   const publicId = crypto.randomUUID();
   const hiddenId = crypto.randomUUID();
   const insert = db.prepare('INSERT INTO feedback(id,type,message,visibility,is_hidden,page_url) VALUES (?, ?, ?, ?, ?, ?)');

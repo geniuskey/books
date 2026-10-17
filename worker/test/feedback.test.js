@@ -56,8 +56,9 @@ test('books under a shared host only accept pages inside their own path', async 
     assert.equal((await post({ ...payload(), bookId: 'artbook-color', pageUrl })).status, 400);
   }
   assert.equal((await post({ ...payload(), bookId: 'artbook-color', pageUrl: 'https://artbook.euiyun.com/color/chapters/overview.html#sim-map' })).status, 201);
-  assert.equal((await post({ ...payload(), bookId: 'artbook-composition' })).status, 400);
-  assert.equal(db.prepare('SELECT count(*) AS count FROM feedback').get().count, 1);
+  // Composition is now published and accepts feedback, including without a page URL.
+  assert.equal((await post({ ...payload(), bookId: 'artbook-composition' })).status, 201);
+  assert.equal(db.prepare('SELECT count(*) AS count FROM feedback').get().count, 2);
   db.close();
 });
 
