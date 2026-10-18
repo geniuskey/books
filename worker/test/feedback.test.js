@@ -13,6 +13,7 @@ function setup() {
   db.exec(readFileSync(new URL('../migrations/0003_reactions.sql', import.meta.url), 'utf8'));
   db.exec(readFileSync(new URL('../migrations/0004_admin_authors.sql', import.meta.url), 'utf8'));
   db.exec(readFileSync(new URL('../migrations/0005_feedback_owner.sql', import.meta.url), 'utf8'));
+  db.exec(readFileSync(new URL('../migrations/0006_feedback_email.sql', import.meta.url), 'utf8'));
   const env = {
     ALLOWED_ORIGINS: origin,
     SUBMISSIONS: { limit: async () => ({ success: true }) },
@@ -105,5 +106,18 @@ test('science courses accept feedback with their own path context', async () => 
     assert.equal((await post({ ...payload(), bookId, pageUrl: 'https://science.euiyun.com/other/chapters/overview.html' })).status, 400);
   }
   assert.equal((await post({ ...payload(), bookId: 'science', pageUrl: 'https://science.euiyun.com/' })).status, 201);
+  db.close();
+});
+
+test('optional email is trimmed and saved, invalid addresses are rejected', async () => {
+  const { db, post } = setup();
+  for (const email of [null, 42, 'reader', 'a@@example.com', 'a b@example.com', 'a@example.com\r\nBcc:x@y.com', 'a'.repeat(243) + '@example.com']) {
+    assert.equal((await post({ ...payload(), email })).status, 400, String(email));
+  }
+  for (const email of ['', '   ', ' reader+books@example.com ']) {
+    const data = { ...payload(), email };
+    assert.equal((await post(data)).status, 201);
+    assert.equal(db.prepare('SELECT email FROM feedback WHERE id=?').get(data.id).email, email.trim());
+  }
   db.close();
 });

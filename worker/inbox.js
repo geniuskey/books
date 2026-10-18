@@ -34,7 +34,7 @@ export async function inbox(request, env, headers) {
       if (type) { conditions.push('type = ?'); args.push(type); }
       const where = conditions.length ? ` WHERE ${conditions.join(' AND ')}` : '';
       // Public rows intentionally omit page URLs, private state and moderation data.
-      const columns = admin ? 'id, type, nickname, message, book_id, page_url, visibility, created_at' : mine ? 'id, type, nickname, message, book_id, visibility, created_at' : 'id, type, nickname, message, book_id, created_at';
+      const columns = admin ? 'id, type, nickname, message, book_id, page_url, visibility, created_at, email' : mine ? 'id, type, nickname, message, book_id, visibility, created_at' : 'id, type, nickname, message, book_id, created_at';
       const counts = ', is_admin, (SELECT COUNT(*) FROM feedback_likes WHERE feedback_id = feedback.id) AS like_count, (SELECT COUNT(*) FROM feedback_comments WHERE feedback_id = feedback.id) AS comment_count, EXISTS(SELECT 1 FROM feedback_likes WHERE feedback_id = feedback.id AND visitor_id = ?) AS liked';
       const { results } = await env.DB.prepare(`SELECT ${columns}${counts} FROM feedback${where} ORDER BY created_at DESC, id DESC LIMIT 21 OFFSET ?`).bind(visitorId, ...args, Number(page) * 20).all();
       // Only the aggregate includes private posts; their contents remain authenticated.

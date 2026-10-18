@@ -117,6 +117,7 @@ EB.start("feedback", (data) => {
     const payload = {
       type: fields.type.value,
       nickname: fields.nickname.value,
+      email: fields.email.value.trim(),
       message: fields.message.value,
       bookId: fields.bookId.value,
       pageUrl: book && fields.bookId.value === book.id ? pageUrl : "",
@@ -145,6 +146,7 @@ EB.start("feedback", (data) => {
         ? ' ‘내 글’에서 다시 확인할 수 있습니다.'
         : ' 이 브라우저에 확인 키를 저장하지 못해, 페이지를 닫으면 내 글을 다시 볼 수 없습니다.';
       fields.message.value = "";
+      fields.email.value = "";
       pending = null;
       updateCount();
       globalThis.FeedbackInbox?.refresh();

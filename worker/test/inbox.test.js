@@ -30,6 +30,7 @@ function setup() {
   db.exec(readFileSync(new URL('../migrations/0003_reactions.sql', import.meta.url), 'utf8'));
   db.exec(readFileSync(new URL('../migrations/0004_admin_authors.sql', import.meta.url), 'utf8'));
   db.exec(readFileSync(new URL('../migrations/0005_feedback_owner.sql', import.meta.url), 'utf8'));
+  db.exec(readFileSync(new URL('../migrations/0006_feedback_email.sql', import.meta.url), 'utf8'));
   const publicId = crypto.randomUUID();
   const hiddenId = crypto.randomUUID();
   const insert = db.prepare('INSERT INTO feedback(id,type,message,visibility,is_hidden,page_url) VALUES (?, ?, ?, ?, ?, ?)');
@@ -185,5 +186,25 @@ test('browser owner key isolates private posts, survives retries and never claim
   assert.deepEqual(filtered.items, []);
   const preflight = await request('/api/feedback/mine', undefined, { method: 'OPTIONS' });
   assert.match(preflight.headers.get('Access-Control-Allow-Headers'), /X-Feedback-Owner/);
+  db.close();
+});
+
+test('reply email is returned only to authenticated admins, never public or owner lists', async () => {
+  const { db, request, publicId, legacy } = setup();
+  const secret = 'a'.repeat(64);
+  const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(secret));
+  const hash = Array.from(new Uint8Array(digest), b => b.toString(16).padStart(2, '0')).join('');
+  db.prepare('UPDATE feedback SET email=?, owner_hash=?').run('reader@example.com', hash);
+  const publicData = await (await request('/api/feedback/public')).json();
+  assert.ok(publicData.items.length > 0);
+  assert.ok(publicData.items.every(item => !Object.hasOwn(item, 'email')));
+  const mineResponse = await request('/api/feedback/mine', undefined, { headers: { 'X-Feedback-Owner': secret } });
+  assert.equal(mineResponse.status, 200);
+  const mine = await mineResponse.json();
+  assert.ok(mine.items.some(item => item.id === legacy));
+  assert.ok(mine.items.every(item => !Object.hasOwn(item, 'email')));
+  const admin = await (await request('/api/admin/feedback', await token())).json();
+  assert.equal(admin.items.find(item => item.id === publicId).email, 'reader@example.com');
+  assert.equal(admin.items.find(item => item.id === legacy).email, 'reader@example.com');
   db.close();
 });

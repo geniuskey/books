@@ -6,7 +6,7 @@ import vm from 'node:vm';
 async function setup(responses, endpoint = 'https://feedback.example/api/feedback') {
   const handlers = {};
   const fields = [];
-  for (const name of ['type', 'nickname', 'message', 'bookId', 'website', 'visibility']) {
+  for (const name of ['type', 'nickname', 'email', 'message', 'bookId', 'website', 'visibility']) {
     const field = { value: '', disabled: false, add() {}, focus() {} };
     fields.push(field);
     fields[name] = field;
@@ -39,6 +39,7 @@ test('a rejected request keeps the draft, retry uses the same ID, success clears
   const { fields, nodes, submissions, submit } = await setup([{ ok: false, error: '잠시 후 다시 보내 주세요.' }, { ok: true }]);
   fields.type.value = 'cheer';
   fields.message.value = '응원합니다';
+  fields.email.value = ' reader@example.com ';
   assert.equal(nodes['feedback-submit'].disabled, false);
   await submit();
   assert.equal(fields.message.value, '응원합니다');
@@ -47,6 +48,8 @@ test('a rejected request keeps the draft, retry uses the same ID, success clears
   assert.equal(submissions.length, 2);
   assert.equal(submissions[0].id, submissions[1].id);
   assert.equal(submissions[1].type, 'cheer');
+  assert.equal(submissions[1].email, 'reader@example.com');
+  assert.equal(fields.email.value, '');
   assert.equal(fields.message.value, '');
   assert.ok(nodes['feedback-status'].textContent.includes('응원 감사합니다'));
   assert.ok(fields.every(field => !field.disabled));

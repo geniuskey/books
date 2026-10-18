@@ -126,7 +126,7 @@ test('comments load immediately as literal text and failed submissions preserve 
 
 test('verified authors have a distinct badge and credentials clear on logout', async () => {
   const { get, api, signIn } = await setup({ isAdmin: 1 });
-  const author = get('inbox-list').children[0].children[0].children[1];
+  const author = get('inbox-list').children[0].children[0].children[1].children[0];
   assert.equal(author.textContent, '관리자');
   assert.equal(author.className, 'author-admin');
   assert.equal(api.authHeaders().Authorization, undefined);
@@ -135,7 +135,7 @@ test('verified authors have a distinct badge and credentials clear on logout', a
   get('admin-logout').events.click();
   assert.equal(api.authHeaders().Authorization, undefined);
   const reader = await setup();
-  assert.equal(reader.get('inbox-list').children[0].children[0].children[1].className, undefined);
+  assert.equal(reader.get('inbox-list').children[0].children[0].children[1].children[0].className, undefined);
 });
 
 test('relative dates use compact units and retain the full timestamp tooltip', () => {
@@ -204,7 +204,7 @@ test('my posts show private contents without public reactions, and switching dis
   const card = page.get('inbox-list').children[0];
   assert.equal(card.children[1].textContent, '비공개 내용');
   assert.equal(card.children.length, 2);
-  assert.equal(card.children[0].children[3].textContent, '비공개');
+  assert.equal(card.children[0].children[1].children[1].textContent, '비공개');
   const late = await setup({ ownerKey: 'a'.repeat(64), deferMine: true });
   late.get('inbox-view').value = 'mine';
   late.get('inbox-view').events.change(); await tick();

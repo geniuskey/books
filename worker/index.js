@@ -12,11 +12,12 @@ const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{1
 
 function validate(data) {
   if (!data || typeof data !== 'object' || Array.isArray(data)) return null;
-  const { id, type, nickname = '', message, bookId = '', pageUrl = '', website = '', visibility = 'private' } = data;
+  const { id, type, nickname = '', email = '', message, bookId = '', pageUrl = '', website = '', visibility = 'private' } = data;
   if (!['public', 'private'].includes(visibility)) return null;
   if (typeof id !== 'string' || !uuid.test(id) || !['error', 'request', 'cheer'].includes(type)) return null;
-  if (![nickname, message, bookId, pageUrl, website].every(v => typeof v === 'string')) return null;
+  if (![nickname, email, message, bookId, pageUrl, website].every(v => typeof v === 'string')) return null;
   if (!message.trim() || message.length > 3000 || nickname.length > 40 || pageUrl.length > 2048) return null;
+  if (email.trim() && (email.trim().length > 254 || !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?)*$/.test(email.trim()))) return null;
   if (bookId && !books.has(bookId)) return null;
   if (pageUrl) {
     try {
@@ -24,7 +25,7 @@ function validate(data) {
       if (!bookId || url.protocol !== 'https:' || !inBook(url, books.get(bookId)) || url.username || url.password) return null;
     } catch { return null; }
   }
-  return { id, type, nickname: nickname.trim(), message: message.trim(), bookId, pageUrl, website, visibility };
+  return { id, type, nickname: nickname.trim(), email: email.trim(), message: message.trim(), bookId, pageUrl, website, visibility };
 }
 
 export async function readBody(request) {
@@ -93,8 +94,8 @@ export default {
       let isAdmin;
       try { isAdmin = await authorIsAdmin(request, env); }
       catch { return reply(401, '관리자 계정으로 다시 로그인해 주세요.'); }
-      await env.DB.prepare('INSERT INTO feedback (id, type, nickname, message, book_id, page_url, visibility, is_admin, owner_hash) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO NOTHING')
-        .bind(data.id, data.type, isAdmin ? '관리자' : data.nickname, data.message, data.bookId, data.pageUrl, data.visibility, Number(isAdmin), owner).run();
+      await env.DB.prepare('INSERT INTO feedback (id, type, nickname, message, book_id, page_url, visibility, is_admin, owner_hash, email) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO NOTHING')
+        .bind(data.id, data.type, isAdmin ? '관리자' : data.nickname, data.message, data.bookId, data.pageUrl, data.visibility, Number(isAdmin), owner, data.email).run();
       return reply(201);
     } catch {
       // Do not log reader messages or identifying request headers.

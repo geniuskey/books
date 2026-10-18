@@ -100,21 +100,36 @@ globalThis.FeedbackInbox = (() => {
       meta.className = 'inbox-meta';
       const badge = document.createElement('span');
       badge.className = 'inbox-type';
+      if (Object.hasOwn(types, item.type)) badge.className += ` inbox-type-${item.type}`;
       badge.textContent = types[item.type] || '의견';
       const author = document.createElement('span');
       author.textContent = item.is_admin ? '관리자' : item.nickname || '익명';
       if (item.is_admin) author.className = 'author-admin';
       const date = feedbackTime(item.created_at);
-      meta.append(badge, author, date);
+      const identity = document.createElement('span');
+      identity.className = 'inbox-identity';
+      identity.append(author);
+      meta.append(badge, identity);
       if (admin || item.visibility) {
         const state = document.createElement('span');
+        state.className = `inbox-visibility inbox-visibility-${item.visibility === 'public' ? 'public' : 'private'}`;
         state.textContent = item.visibility === 'public' ? '공개' : '비공개';
-        meta.append(state);
+        identity.append(state);
       }
+      meta.append(date);
       const message = document.createElement('p');
       message.className = 'inbox-message';
       appendFeedbackLinks(message, item.message);
       card.append(meta, message);
+      if (admin && item.email) {
+        const contact = document.createElement('p');
+        contact.className = 'inbox-email';
+        const address = document.createElement('a');
+        address.href = `mailto:${encodeURIComponent(item.email)}`;
+        address.textContent = item.email;
+        contact.append('답장 이메일 · ', address, ' (관리자 전용)');
+        card.append(contact);
+      }
       const book = books.get(item.book_id);
       if (book) {
         const link = document.createElement('a');

@@ -19,12 +19,12 @@
 <meta name="twitter:card" content="summary_large_image">
 <script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
 <link rel="stylesheet" href="/css/style.css?v=20261017-reactions">
-<link rel="stylesheet" href="/css/feedback.css?v=20261018-owner">
+<link rel="stylesheet" href="/css/feedback.css?v=20261018-email-badges">
 <script src="/js/core.js?v=20261017-six-fields" defer></script>
-<script src="/js/feedback-owner.js?v=20261018-owner" defer></script>
-<script src="/js/feedback-inbox.js?v=20261018-owner" defer></script>
-<script src="/js/feedback.js?v=20261018-owner" defer></script>
-<script src="/js/feedback-ui.js?v=20261018-owner" defer></script>
+<script src="/js/feedback-owner.js?v=20261018-email-badges" defer></script>
+<script src="/js/feedback-inbox.js?v=20261018-email-badges" defer></script>
+<script src="/js/feedback.js?v=20261018-email-badges" defer></script>
+<script src="/js/feedback-ui.js?v=20261018-email-badges" defer></script>
 <!-- Cloudflare Web Analytics -->
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3d6151a0abc94ede89285d462527fa80"}'></script>
 <!-- End Cloudflare Web Analytics -->
@@ -60,6 +60,8 @@
         <label>관련 책 <span>(선택)</span><select name="bookId" id="feedback-book"><option value="">시리즈 전체</option></select></label>
         <label>공개 범위<select name="visibility" required><option value="private">비공개 · 나와 저자</option><option value="public">공개 · 모든 독자</option></select></label>
         </div>
+        <label>이메일 <span>(선택)</span><input type="email" name="email" maxlength="254" autocomplete="email" placeholder="name@example.com" aria-describedby="feedback-email-guide"></label>
+        <p class="feedback-note privacy-note" id="feedback-email-guide">피드백을 메일로 받고 싶은 분은 메일을 남겨주세요. 메일 주소는 관리자만 볼 수 있습니다.</p>
         <label>내용<textarea name="message" required maxlength="3000" rows="4" placeholder="어떤 점이 좋았나요? 어려웠던 설명이나 개선 아이디어도 편하게 남겨 주세요." aria-describedby="feedback-count feedback-privacy"></textarea></label>
         <p class="feedback-note privacy-note" id="feedback-privacy">비공개 글은 저자와 나만 봅니다. 작성한 브라우저의 ‘내 글’에서 확인하세요.</p>
         <div class="feedback-form-foot"><span id="feedback-count">0 / 3,000자</span><button id="feedback-submit" type="submit" disabled>보내기</button></div>
@@ -71,7 +73,7 @@
       <section class="feedback-inbox" aria-labelledby="inbox-title">
         <div class="inbox-heading"><div><h2 id="inbox-title">독자 게시판</h2><p><span id="inbox-total"></span><span class="inbox-total-separator"> · </span><span id="inbox-order">공개된 이야기 · 최신순</span></p></div><button id="inbox-refresh" type="button">새로고침</button></div>
 
-        <div id="admin-session" hidden><span>관리자로 로그인했습니다.</span> <button id="admin-logout" type="button">로그아웃</button></div>
+        <div id="admin-session" class="admin-session" hidden><div class="admin-session-info"><span class="admin-session-badge">관리자</span><span>로그인됨 <span class="admin-session-detail">· 비공개 글 확인 가능</span></span></div><button id="admin-logout" type="button">로그아웃 <span aria-hidden="true">↗</span></button></div>
         <div class="inbox-filters"><label>글 목록<select id="inbox-view"><option value="public">게시판</option><option value="mine">내 글 · 비공개 포함</option></select></label><div class="inbox-type-tabs" role="group" aria-label="글 종류" hidden><button type="button" data-inbox-type="" aria-pressed="true">전체</button><button type="button" data-inbox-type="error" aria-pressed="false">오류 제보</button><button type="button" data-inbox-type="request" aria-pressed="false">의견·건의</button><button type="button" data-inbox-type="cheer" aria-pressed="false">응원</button></div><label id="inbox-type-label">글 종류<select id="inbox-type"><option value="">전체</option><option value="error">오류 제보</option><option value="request">의견·건의</option><option value="cheer">저자 응원</option></select></label><label id="inbox-scope-label" hidden>보기<select id="inbox-scope"><option value="all">전체</option><option value="private">비공개</option><option value="public">공개</option></select></label></div>
         <p class="feedback-note inbox-owner-note">내 글은 이 브라우저에서만 확인할 수 있습니다. 브라우저 데이터를 지우면 확인할 수 없습니다.</p>
         <p id="inbox-status" role="status" aria-live="polite">글을 불러오는 중…</p>

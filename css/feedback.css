@@ -178,3 +178,22 @@
 #inbox-total:empty + .inbox-total-separator { display: none; }
 
 .feedback-page .inbox-owner-note { margin: 0; padding: 6px 14px; font-size: 12px; }
+
+/* Compact, labeled colors keep visibility and category easy to scan. */
+.feedback-page .inbox-identity { display: inline-flex; align-items: center; gap: 6px; min-width: 0; overflow-wrap: anywhere; }
+.feedback-page .inbox-visibility { flex-shrink: 0; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 700; }
+.feedback-page .inbox-visibility-public { color: #14603c; background: #dcf5e7; }
+.feedback-page .inbox-visibility-private { color: #854c08; background: #fff0ce; }
+.feedback-page .inbox-type-error { color: #a52836; background: #ffe4e8; }
+.feedback-page .inbox-type-request { color: #2456a4; background: #e2edff; }
+.feedback-page .inbox-type-cheer { color: #773ba0; background: #f2e5fc; }
+.feedback-page .inbox-email { margin: 6px 0; color: var(--text-dim); font-size: 12px; overflow-wrap: anywhere; }
+.feedback-page #admin-session { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 0; padding: 8px 18px; border-block: 1px solid var(--border); background: var(--surface); }
+.admin-session-info { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; }
+.admin-session-badge { display: inline-flex; align-items: center; gap: 5px; padding: 3px 8px; border-radius: 5px; color: var(--accent); background: var(--accent-soft); font-weight: 700; }
+.admin-session-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.feedback-page #admin-logout { display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0; min-height: 44px; padding: 7px 11px; font-size: 12px; }
+@media (max-width: 599px) {
+  .feedback-page #admin-session { padding: 6px 12px; }
+  .admin-session-detail { display: none; }
+}
