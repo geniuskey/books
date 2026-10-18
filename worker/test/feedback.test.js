@@ -56,10 +56,10 @@ test('invalid fields, book references, page URLs and honeypot are rejected', asy
 
 test('books under a shared host only accept pages inside their own path', async () => {
   const { db, post } = setup();
-  for (const pageUrl of ['https://artbook.euiyun.com/', 'https://artbook.euiyun.com/composition/chapters/balance.html', 'https://artbook.euiyun.com/colorful/']) {
+  for (const pageUrl of ['https://art.euiyun.com/', 'https://art.euiyun.com/composition/chapters/balance.html', 'https://art.euiyun.com/colorful/']) {
     assert.equal((await post({ ...payload(), bookId: 'artbook-color', pageUrl })).status, 400);
   }
-  assert.equal((await post({ ...payload(), bookId: 'artbook-color', pageUrl: 'https://artbook.euiyun.com/color/chapters/overview.html#sim-map' })).status, 201);
+  assert.equal((await post({ ...payload(), bookId: 'artbook-color', pageUrl: 'https://art.euiyun.com/color/chapters/overview.html#sim-map' })).status, 201);
   // Composition is now published and accepts feedback, including without a page URL.
   assert.equal((await post({ ...payload(), bookId: 'artbook-composition' })).status, 201);
   assert.equal(db.prepare('SELECT count(*) AS count FROM feedback').get().count, 2);

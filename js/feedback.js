@@ -12,7 +12,7 @@ EB.start("feedback", (data) => {
   const bookId = params.get("book");
   // 출간된 책과, 주소가 있는 집필 중인 책(일부 장을 공개한 책)에서 의견을 받는다.
   const acceptsFeedback = (item) => item.url && (item.status === "published" || item.status === "writing");
-  // 책 하나가 서브도메인 전체일 수도(xxxbook.euiyun.com/), 서가의 하위 경로일 수도(artbook.euiyun.com/color/) 있다.
+  // 책 하나가 서브도메인 전체일 수도(xxxbook.euiyun.com/), 서가의 하위 경로일 수도(art.euiyun.com/color/) 있다.
   const inBook = (url, item) => { const base = new URL(item.url); return url.protocol === "https:" && url.origin === base.origin && url.pathname.startsWith(base.pathname); };
   const feedbackBooks = [...data.books, ...(data.sisterBooks || [])];
   const book = feedbackBooks.find((item) => item.id === bookId && acceptsFeedback(item));
