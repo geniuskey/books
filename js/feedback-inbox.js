@@ -154,10 +154,19 @@ globalThis.FeedbackInbox = (() => {
     function renderReactions(item) {
       const area = document.createElement('div'); area.className = 'inbox-reactions';
       const notice = document.createElement('p'); notice.className = 'feedback-status'; notice.setAttribute('role', 'status');
-      const like = document.createElement('button'); like.type = 'button';
+      function actionContent(button, iconClass, label) {
+        const icon = document.createElement('span'); icon.className = `reaction-icon ${iconClass}`; icon.setAttribute('aria-hidden', 'true');
+        const text = document.createElement('span'); text.textContent = label;
+        const count = document.createElement('span'); count.className = 'reaction-count';
+        button.append(icon, text, count);
+        return { text, count };
+      }
+      const like = document.createElement('button'); like.type = 'button'; like.className = 'reaction-action reaction-like';
+      const likeContent = actionContent(like, 'reaction-heart', '좋아요');
       let liked = Boolean(item.liked);
       function showLike(count) {
-        like.textContent = `♥ 좋아요 ${count}`;
+        likeContent.count.textContent = String(count);
+        like.setAttribute('aria-label', `좋아요 ${count}개`);
         like.setAttribute('aria-pressed', String(liked));
         like.title = liked ? '좋아요 취소' : '좋아요 남기기';
       }
@@ -173,10 +182,13 @@ globalThis.FeedbackInbox = (() => {
       });
       const thread = document.createElement('div'); thread.className = 'inbox-thread';
       const summary = document.createElement('p'); summary.className = 'inbox-comment-count';
-      let count = item.comment_count || 0, composeLabel;
+      let count = item.comment_count || 0, composeLabel, commentContent;
       const showCount = () => {
         summary.textContent = `댓글 ${count}`;
-        if (composeLabel) composeLabel.textContent = `댓글 ${count} · 쓰기`;
+        if (commentContent) {
+          commentContent.count.textContent = String(count);
+          composeLabel.setAttribute('aria-label', `댓글 ${count}개 · ${form.hidden ? '댓글 쓰기' : '입력창 닫기'}`);
+        }
       };
       showCount();
       const comments = document.createElement('div'); comments.className = 'inbox-comments';
@@ -210,6 +222,7 @@ globalThis.FeedbackInbox = (() => {
       }
       more.addEventListener('click', () => loadComments());
       const form = document.createElement('form'); form.className = 'inbox-comment-form';
+      form.id = `comment-form-${item.id}`; form.hidden = true;
       const nicknameLabel = document.createElement('label'); nicknameLabel.textContent = '닉네임 (선택)';
       const nickname = document.createElement('input'); nickname.name = 'nickname'; nickname.maxLength = 40; nickname.autocomplete = 'nickname'; nickname.placeholder = '익명'; nicknameLabel.append(nickname);
       if (token) { nickname.value = '관리자'; nickname.readOnly = true; }
@@ -218,7 +231,7 @@ globalThis.FeedbackInbox = (() => {
       const trap = document.createElement('input'); trap.name = 'website'; trap.tabIndex = -1; trap.autocomplete = 'off';
       const trapLabel = document.createElement('label'); trapLabel.className = 'feedback-honeypot'; trapLabel.setAttribute('aria-hidden', 'true'); trapLabel.append('Website', trap);
       const note = document.createElement('p'); note.className = 'feedback-note'; note.textContent = '댓글은 누구나 볼 수 있습니다. 개인 정보는 적지 마세요.';
-      const submit = document.createElement('button'); submit.type = 'submit'; submit.textContent = '댓글 남기기';
+      const submit = document.createElement('button'); submit.type = 'submit'; submit.textContent = '등록';
       const formStatus = document.createElement('p'); formStatus.className = 'feedback-status'; formStatus.setAttribute('role', 'status');
       let pending, submitting = false;
       form.addEventListener('submit', async (event) => {
@@ -238,8 +251,19 @@ globalThis.FeedbackInbox = (() => {
         finally { submitting = false; submit.disabled = false; nickname.disabled = false; message.disabled = false; }
       });
       form.append(nicknameLabel, messageLabel, trapLabel, note, submit, formStatus);
-      const compose = document.createElement('details'); compose.className = 'comment-compose';
-      composeLabel = document.createElement('summary'); showCount();
+      const compose = document.createElement('div'); compose.className = 'comment-compose';
+      composeLabel = document.createElement('button'); composeLabel.type = 'button'; composeLabel.className = 'reaction-action reaction-comment';
+      commentContent = actionContent(composeLabel, 'reaction-bubble', '댓글 쓰기');
+      composeLabel.setAttribute('aria-controls', form.id);
+      composeLabel.setAttribute('aria-expanded', 'false');
+      composeLabel.addEventListener('click', () => {
+        form.hidden = !form.hidden;
+        composeLabel.setAttribute('aria-expanded', String(!form.hidden));
+        commentContent.text.textContent = form.hidden ? '댓글 쓰기' : '입력창 닫기';
+        showCount();
+        if (!form.hidden) message.focus();
+      });
+      showCount();
       compose.append(composeLabel, form);
       thread.append(summary, comments, more, commentStatus, compose);
       area.append(like, notice, thread);

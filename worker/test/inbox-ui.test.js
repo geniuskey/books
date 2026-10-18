@@ -5,6 +5,7 @@ import { readFileSync } from 'node:fs';
 
 class Element {
   constructor() { this.children = []; this.events = {}; this.value = ''; this.hidden = false; this.textContent = ''; }
+  focus() { this.focused = true; }
   setAttribute(name, value) { this[name] = value; }
   addEventListener(name, fn) { this.events[name] = fn; }
   append(...children) { this.children.push(...children); }
@@ -82,7 +83,7 @@ test('likes toggle with the same visitor ID and recover from a failed request', 
   const like = area.children[0];
   assert.equal(like['aria-pressed'], 'false');
   await like.events.click();
-  assert.equal(like['aria-pressed'], 'true'); assert.equal(like.textContent, '♥ 좋아요 1');
+  assert.equal(like['aria-pressed'], 'true'); assert.equal(like['aria-label'], '좋아요 1개');
   fail = true; await like.events.click();
   assert.equal(like['aria-pressed'], 'true'); assert.equal(like.disabled, false);
   fail = false; await like.events.click();
@@ -112,9 +113,18 @@ test('comments load immediately as literal text and failed submissions preserve 
   assert.equal(thread.children[1].children[0].children[1].children.length, 0);
   const compose = thread.children[4];
   assert.equal(compose.className, 'comment-compose');
-  assert.equal(compose.children[0].textContent, '댓글 1 · 쓰기');
+  assert.equal(compose.children[0]['aria-label'], '댓글 1개 · 댓글 쓰기');
   const form = compose.children[1], message = form.children[1].children[0];
+  assert.equal(form.hidden, true);
+  compose.children[0].events.click();
+  assert.equal(form.hidden, false);
+  assert.equal(compose.children[0]['aria-expanded'], 'true');
+  assert.equal(message.focused, true);
   message.value = '제 댓글입니다';
+  compose.children[0].events.click();
+  assert.equal(form.hidden, true);
+  assert.equal(message.value, '제 댓글입니다');
+  compose.children[0].events.click();
   await form.events.submit({ preventDefault() {} });
   assert.equal(message.value, '제 댓글입니다'); assert.equal(form.children[4].disabled, false);
   fail = false; await form.events.submit({ preventDefault() {} });
