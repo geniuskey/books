@@ -1,5 +1,24 @@
 /* 분야별 개념 묶음과 연결. 책의 집필 순서와는 독립적인 탐색 지도입니다. */
 window.FIELD_MAPS = {
+  science: {
+    title: "대학에서 배우는 과학과 공학의 기초",
+    desc: "ScienceBooks의 공통 기초 교재입니다. 물리·화학과 공학 역학을 공부하고 각 전공의 응용으로 이어갑니다.",
+    groups: [
+      ["물리와 전자기", "Physics", "운동·파동·전기장과 플라즈마의 원리", ["general-physics", "electromagneticsbook", "plasmabook"]],
+      ["화학과 재료", "Chemistry", "원자·분자·반응에서 재료의 구조와 물성까지", ["general-chemistry", "organic-chemistry", "materialsbook"]],
+      ["에너지와 역학", "Mechanics", "힘과 운동, 에너지와 유동의 공학적 해석", ["thermobook", "statics", "dynamics", "fluid-mechanics"]],
+    ],
+    links: [
+      ["general-physics", "electromagneticsbook", "전기·자기 기초에서 장과 맥스웰 방정식으로"],
+      ["electromagneticsbook", "plasmabook", "전자기장과 하전 입자의 운동·방전"],
+      ["general-chemistry", "organic-chemistry", "화학 결합에서 분자 구조와 반응 메커니즘으로"],
+      ["general-chemistry", "materialsbook", "원자·결합·결정에서 재료의 구조와 물성으로"],
+      ["general-chemistry", "thermobook", "열화학·자유 에너지에서 열역학과 상평형으로"],
+      ["general-physics", "statics", "뉴턴 법칙에서 힘·모멘트와 강체 평형으로"],
+      ["statics", "dynamics", "힘의 평형에서 가속도와 운동으로"],
+      ["general-physics", "fluid-mechanics", "유체의 압력·흐름에서 검사 체적과 관 유동으로"],
+    ],
+  },
   semiconductor: {
     title: "전자 하나에서 산업 전체까지",
     desc: "원리에서 설계·제조로, 완성된 칩에서 제품과 산업으로 이어집니다.",
@@ -289,6 +308,12 @@ window.FIELD_MAPS = {
 
 // 분야를 넘는 연결도 한 번만 등록합니다. 양쪽 책의 소개에서 같은 이유로 탐색합니다.
 window.FIELD_MAP_CROSS_LINKS = [
+  ["electromagneticsbook", "devicebook", "정전계·경계 조건으로 이해하는 소자의 전위와 전기장"],
+  ["materialsbook", "processbook", "결정·확산·상변태와 반도체 공정의 재료 변화"],
+  ["plasmabook", "etchbook", "방전·시스와 플라즈마 식각의 이온·라디칼 제어"],
+  ["thermobook", "infrabook", "에너지 수지·열기관과 팹의 냉동·냉각 설비"],
+  ["general-chemistry", "processbook", "반응·평형·속도론으로 이해하는 제조 공정"],
+  ["fluid-mechanics", "infrabook", "관 유동·압력 손실과 팹의 공조·용수 공급"],
   ["electricbook", "analogbook", "전압·전류·커패시터의 기초에서 증폭·필터 회로로"],
   ["powerbook", "carbook", "전력 반도체와 전기차의 인버터·모터 구동"],
   ["gpubook", "computerbook", "컴퓨터의 GPU 기초에서 워프·SIMT·메모리 병목으로"],

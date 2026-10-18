@@ -84,6 +84,15 @@
       ]
     },
     {
+      "id": "science",
+      "wing": "work",
+      "name": "기초과학·공학",
+      "en": "Science & Engineering",
+      "color": "#0a7f6f",
+      "colorDark": "#2fd1b5",
+      "desc": "일반물리·화학에서 전자기학·열역학·재료·역학까지. ScienceBooks에서 관리하는 대학 과학·공학 교재입니다."
+    },
+    {
       "id": "computing",
       "wing": "work",
       "name": "컴퓨터·AI",
@@ -2026,65 +2035,61 @@
       "id": "electromagneticsbook",
       "code": "EMF",
       "title": "ElectromagneticsBook",
-      "subtitle": "반도체를 위한 전자기학",
-      "description": "정전계·경계 조건에서 맥스웰 방정식, 전자기파와 전송선까지. 소자·배선·RF 공정의 전기장과 에너지 전달을 대학 전공 수준으로 연결합니다.",
-      "field": "semiconductor",
+      "subtitle": "전자기학",
+      "description": "정전계와 경계 조건, 정자계, 맥스웰 방정식, 전자기파와 전송선까지. 전기·전자공학 전반에서 사용하는 전기장과 에너지 전달의 원리를 배웁니다.",
+      "field": "science",
       "status": "planned",
       "phase": 2,
       "ideas": [
         "유전체 경계와 전계",
         "전송선·반사·임피던스",
         "RF 전력과 전자기파"
-      ],
-      "stage": "physics"
+      ]
     },
     {
       "id": "thermobook",
       "code": "THM",
       "title": "ThermoBook",
-      "subtitle": "반도체를 위한 열역학",
-      "description": "열역학 법칙과 엔트로피, 자유 에너지·화학 퍼텐셜, 상평형을 반도체 재료와 공정에 연결합니다. 반응이 가능한 조건과 반응 속도의 차이를 함께 다룹니다.",
-      "field": "semiconductor",
+      "subtitle": "열역학",
+      "description": "열역학 법칙과 엔트로피, 자유 에너지와 화학 퍼텐셜, 상평형과 열기관까지. 기계·화학·재료공학에 공통으로 쓰이는 에너지와 평형의 원리를 배웁니다.",
+      "field": "science",
       "status": "planned",
       "phase": 2,
       "ideas": [
         "자유 에너지와 상평형",
         "화학 퍼텐셜과 반응 평형",
         "열 예산과 에너지 수지"
-      ],
-      "stage": "physics"
+      ]
     },
     {
       "id": "materialsbook",
       "code": "MAT",
       "title": "MaterialsBook",
-      "subtitle": "반도체 재료공학",
-      "description": "결정 구조·결함, 확산과 상변태에서 박막의 응력·계면·신뢰성까지. 실리콘·절연체·금속 재료가 공정 조건에 따라 어떻게 달라지는지 살펴봅니다.",
-      "field": "semiconductor",
+      "subtitle": "재료공학",
+      "description": "결정 구조와 결함, 확산과 상변태, 금속·세라믹·고분자의 특성과 계면까지. 구조와 공정이 재료의 물성에 미치는 영향을 배웁니다.",
+      "field": "science",
       "status": "planned",
       "phase": 2,
       "ideas": [
         "결정 결함과 확산",
         "상태도와 미세 조직",
         "박막 응력·계면"
-      ],
-      "stage": "physics"
+      ]
     },
     {
       "id": "plasmabook",
       "code": "PLS",
       "title": "PlasmaBook",
-      "subtitle": "반도체 플라즈마공학",
-      "description": "입자 충돌과 전자 에너지 분포, 방전·시스, CCP·ICP와 RF 정합을 체계적으로 다룹니다. 식각·증착 장비의 이온과 라디칼을 제어하는 원리를 익힙니다.",
-      "field": "semiconductor",
+      "subtitle": "플라즈마공학",
+      "description": "입자 충돌과 전자 에너지 분포, 방전과 시스, CCP·ICP와 RF 정합까지. 플라즈마의 생성·수송·진단과 공학적 응용을 배웁니다.",
+      "field": "science",
       "status": "planned",
       "phase": 2,
       "ideas": [
         "방전과 전자 에너지 분포",
         "CCP·ICP·시스",
         "RF 정합과 플라즈마 진단"
-      ],
-      "stage": "physics"
+      ]
     },
     {
       "id": "thinfilmbook",
@@ -2192,6 +2197,104 @@
         "손발 독립·그루브",
         "필인·튜닝·음색"
       ]
+    },
+    {
+      "id": "general-chemistry",
+      "code": "CHM",
+      "title": "일반화학",
+      "subtitle": "일반화학 교과서",
+      "description": "원자와 몰에서 출발해 결합·분자 구조, 기체와 용액, 열역학, 속도론, 평형, 산·염기, 전기화학, 핵화학까지 — 대학 1학년 일반화학 전 과정을 수식과 시뮬레이터로 직접 실험하며 익히는 인터랙티브 교과서.",
+      "field": "science",
+      "status": "published",
+      "level": "대학 1학년 · 일반화학 I·II",
+      "url": "https://science.euiyun.com/general-chemistry/",
+      "repo": "https://github.com/geniuskey/science-books",
+      "checkout": "science-books/general-chemistry",
+      "color": "#0a7f6f",
+      "colorDark": "#2fd1b5",
+      "chapters": 23,
+      "topics": [
+        "물질·원자·화학량론",
+        "에너지와 기체",
+        "원자 구조와 화학 결합",
+        "물질의 상태와 용액",
+        "반응 속도와 평형",
+        "열역학·전기화학·핵화학",
+        "부록"
+      ],
+      "simulators": 99
+    },
+    {
+      "id": "general-physics",
+      "code": "PHY",
+      "title": "일반물리학",
+      "subtitle": "일반물리학 교과서",
+      "description": "운동과 힘, 에너지와 운동량, 회전, 진동과 파동, 열, 전기와 자기, 빛, 상대성까지 — 미적분 기반 대학 1학년 일반물리 전 과정을 끌고, 던지고, 부딪쳐 보며 익히는 인터랙티브 교과서.",
+      "field": "science",
+      "status": "writing",
+      "level": "대학 1학년 · 일반물리학 I·II",
+      "phase": 1,
+      "url": "https://science.euiyun.com/general-physics/",
+      "repo": "https://github.com/geniuskey/science-books",
+      "checkout": "science-books/general-physics",
+      "color": "#2f6fe0",
+      "colorDark": "#6b9bff",
+      "chapters": 35,
+      "topics": [
+        "운동과 힘",
+        "에너지와 운동량",
+        "회전과 중력",
+        "진동, 유체, 파동",
+        "열역학",
+        "전기",
+        "자기와 전자기 유도",
+        "빛과 현대 물리",
+        "부록"
+      ]
+    },
+    {
+      "id": "organic-chemistry",
+      "code": "ORG",
+      "title": "유기화학",
+      "subtitle": "유기화학 교과서",
+      "description": "구조와 결합, 입체화학, 반응 메커니즘(치환·제거·첨가), 작용기별 반응, 분광학 — 화살표로 전자를 따라간다.",
+      "field": "science",
+      "status": "planned",
+      "level": "대학 2학년",
+      "phase": 2
+    },
+    {
+      "id": "statics",
+      "code": "STA",
+      "title": "정역학",
+      "subtitle": "정역학 교과서",
+      "description": "힘과 모멘트, 자유 물체도, 강체 평형, 트러스·프레임, 마찰, 도심과 관성 모멘트.",
+      "field": "science",
+      "status": "planned",
+      "level": "대학 2학년",
+      "phase": 2
+    },
+    {
+      "id": "dynamics",
+      "code": "DYN",
+      "title": "동역학",
+      "subtitle": "동역학 교과서",
+      "description": "질점과 강체의 운동학·운동역학, 일–에너지, 충격–운동량, 상대 운동, 진동.",
+      "field": "science",
+      "status": "planned",
+      "level": "대학 2학년",
+      "phase": 2
+    },
+    {
+      "id": "fluid-mechanics",
+      "code": "FLD",
+      "title": "유체역학",
+      "subtitle": "유체역학 교과서",
+      "description": "유체 정역학, 베르누이 식, 검사 체적 해석, 차원 해석, 관 유동과 경계층.",
+      "field": "science",
+      "status": "planned",
+      "level": "대학 2–3학년",
+      "phase": 2
     }
   ],
   "tools": [
@@ -2229,22 +2332,6 @@
       "status": "writing",
       "url": "https://science.euiyun.com/",
       "checkout": "science-books"
-    },
-    {
-      "id": "general-chemistry",
-      "title": "일반화학",
-      "subtitle": "대학 1학년 · 일반화학 I·II",
-      "status": "published",
-      "url": "https://science.euiyun.com/general-chemistry/",
-      "checkout": "science-books/general-chemistry"
-    },
-    {
-      "id": "general-physics",
-      "title": "일반물리학",
-      "subtitle": "대학 1학년 · 일반물리학 I·II",
-      "status": "writing",
-      "url": "https://science.euiyun.com/general-physics/",
-      "checkout": "science-books/general-physics"
     }
   ]
 }

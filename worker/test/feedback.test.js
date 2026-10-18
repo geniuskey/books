@@ -43,13 +43,13 @@ test('invalid fields, book references, page URLs and honeypot are rejected', asy
   const variants = [
     { type: 'admin' }, { visibility: 'any' }, { id: 'invalid' }, { message: '  ' }, { message: 'x'.repeat(3001) },
     { nickname: 'x'.repeat(41) }, { message: 123 }, { bookId: 'unknown' },
-    { pageUrl: 'https://memorybook.euiyun.com/' },
+    { pageUrl: 'https://semi.euiyun.com/memory/' },
     { bookId: 'memorybook', pageUrl: 'https://evil.example/' },
-    { bookId: 'memorybook', pageUrl: 'https://user:pass@memorybook.euiyun.com/' },
+    { bookId: 'memorybook', pageUrl: 'https://user:pass@semi.euiyun.com/memory/' },
     { website: 'spam.example' },
   ];
   for (const variant of variants) assert.equal((await post({ ...payload(), ...variant })).status, 400);
-  assert.equal((await post({ ...payload(), bookId: 'memorybook', pageUrl: 'https://memorybook.euiyun.com/chapters/hbm.html#sim-h3' })).status, 201);
+  assert.equal((await post({ ...payload(), bookId: 'memorybook', pageUrl: 'https://semi.euiyun.com/memory/chapters/hbm.html#sim-h3' })).status, 201);
   assert.equal(db.prepare('SELECT count(*) AS count FROM feedback').get().count, 1);
   db.close();
 });

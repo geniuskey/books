@@ -9,8 +9,9 @@ EB.start("roadmap", (d) => {
     <div class="rm-legend"><span><i class="pub"></i>출간 ${c.published}</span><span><i class="wri"></i>집필 중 ${c.writing}</span><span><i class="pla"></i>집필 예정 ${c.planned}</span></div>`;
 
   const science = $("#rm-science");
-  science.innerHTML = (d.sisterBooks || []).filter(b => b.id !== 'science').map(b =>
-    `<a href="${esc(b.url)}">${esc(b.title)}</a> <span>${esc(EB.status(b))}</span>`).join(' · ') + ' · Books 진행률과 별도로 관리합니다.';
+  science.innerHTML = d.books.filter(b => b.field === 'science' && b.url).map(b =>
+    `<a href="${esc(b.url)}">${esc(b.title)}</a> <span>${esc(EB.status(b))}</span>`).join(' · ') +
+    ` · <a href="${EB.fieldUrl('science')}">기초과학·공학 전체 보기</a>`;
 
   // 분야별 진행률
   const fb = $("#rm-fields");

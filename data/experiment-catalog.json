@@ -31480,5 +31480,599 @@
     "bookId": "infrabook",
     "title": "가뭄 시나리오: 급수 제한 · 저장량 · 절감 속도",
     "link": "chapters/water.html#sim-dry"
+  },
+  {
+    "id": "general-chemistry/acids-bases/sim-ph",
+    "bookId": "general-chemistry",
+    "title": "pH 척도 위의 용액",
+    "link": "chapters/acids-bases.html#sim-ph"
+  },
+  {
+    "id": "general-chemistry/acids-bases/sim-wa",
+    "bookId": "general-chemistry",
+    "title": "약산의 해리: 입자로 본 이온화 백분율",
+    "link": "chapters/acids-bases.html#sim-wa"
+  },
+  {
+    "id": "general-chemistry/acids-bases/sim-frac",
+    "bookId": "general-chemistry",
+    "title": "분율 분포도: pH에 따라 어떤 화학종이 우세한가",
+    "link": "chapters/acids-bases.html#sim-frac"
+  },
+  {
+    "id": "general-chemistry/acids-bases/sim-salt",
+    "bookId": "general-chemistry",
+    "title": "염 용액 pH 계산기",
+    "link": "chapters/acids-bases.html#sim-salt"
+  },
+  {
+    "id": "general-chemistry/aqueous-equilibria/sim-buf",
+    "bookId": "general-chemistry",
+    "title": "완충 용액 도전: 산·염기를 넣어도 pH를 지켜라",
+    "link": "chapters/aqueous-equilibria.html#sim-buf"
+  },
+  {
+    "id": "general-chemistry/aqueous-equilibria/sim-tit",
+    "bookId": "general-chemistry",
+    "title": "적정 곡선 실험실",
+    "link": "chapters/aqueous-equilibria.html#sim-tit"
+  },
+  {
+    "id": "general-chemistry/aqueous-equilibria/sim-ksp",
+    "bookId": "general-chemistry",
+    "title": "K sp 침전 탐색기",
+    "link": "chapters/aqueous-equilibria.html#sim-ksp"
+  },
+  {
+    "id": "general-chemistry/aqueous-reactions/sim-cond",
+    "bookId": "general-chemistry",
+    "title": "전도도 측정기: 용질과 농도에 따른 전구 밝기",
+    "link": "chapters/aqueous-reactions.html#sim-cond"
+  },
+  {
+    "id": "general-chemistry/aqueous-reactions/sim-ppt",
+    "bookId": "general-chemistry",
+    "title": "침전 반응 혼합기",
+    "link": "chapters/aqueous-reactions.html#sim-ppt"
+  },
+  {
+    "id": "general-chemistry/aqueous-reactions/sim-mix",
+    "bookId": "general-chemistry",
+    "title": "이온 혼합 실험실: 칸막이를 들어 두 용액을 섞어라",
+    "link": "chapters/aqueous-reactions.html#sim-mix"
+  },
+  {
+    "id": "general-chemistry/aqueous-reactions/sim-act",
+    "bookId": "general-chemistry",
+    "title": "활동도 계열: 금속 조각을 이온 용액에 담그기",
+    "link": "chapters/aqueous-reactions.html#sim-act"
+  },
+  {
+    "id": "general-chemistry/aqueous-reactions/sim-titr",
+    "bookId": "general-chemistry",
+    "title": "적정 뷰렛: 종말점을 찾아 미지 농도 구하기",
+    "link": "chapters/aqueous-reactions.html#sim-titr"
+  },
+  {
+    "id": "general-chemistry/atoms-molecules-ions/sim-thom",
+    "bookId": "general-chemistry",
+    "title": "톰슨의 음극선관: 빔을 곧게 맞추고 e/m 재기",
+    "link": "chapters/atoms-molecules-ions.html#sim-thom"
+  },
+  {
+    "id": "general-chemistry/atoms-molecules-ions/sim-ruth",
+    "bookId": "general-chemistry",
+    "title": "러더퍼드 산란: 핵의 크기와 전하를 바꿔 보기",
+    "link": "chapters/atoms-molecules-ions.html#sim-ruth"
+  },
+  {
+    "id": "general-chemistry/atoms-molecules-ions/sim-ms",
+    "bookId": "general-chemistry",
+    "title": "질량 스펙트럼으로 평균 원자량 구하기",
+    "link": "chapters/atoms-molecules-ions.html#sim-ms"
+  },
+  {
+    "id": "general-chemistry/atoms-molecules-ions/sim-pt",
+    "bookId": "general-chemistry",
+    "title": "주기율표 둘러보기",
+    "link": "chapters/atoms-molecules-ions.html#sim-pt"
+  },
+  {
+    "id": "general-chemistry/atoms-molecules-ions/sim-ion",
+    "bookId": "general-chemistry",
+    "title": "이온 화합물 만들기: 전하 균형과 이름",
+    "link": "chapters/atoms-molecules-ions.html#sim-ion"
+  },
+  {
+    "id": "general-chemistry/chemical-bonding/sim-ion",
+    "bookId": "general-chemistry",
+    "title": "이온쌍의 퍼텐셜 에너지 곡선",
+    "link": "chapters/chemical-bonding.html#sim-ion"
+  },
+  {
+    "id": "general-chemistry/chemical-bonding/sim-bh",
+    "bookId": "general-chemistry",
+    "title": "본–하버 순환 에너지 사다리",
+    "link": "chapters/chemical-bonding.html#sim-bh"
+  },
+  {
+    "id": "general-chemistry/chemical-bonding/sim-en",
+    "bookId": "general-chemistry",
+    "title": "전기음성도 차이와 결합의 성격",
+    "link": "chapters/chemical-bonding.html#sim-en"
+  },
+  {
+    "id": "general-chemistry/chemical-bonding/sim-lewis",
+    "bookId": "general-chemistry",
+    "title": "루이스 구조 퍼즐: 전자쌍을 끌어 놓아라",
+    "link": "chapters/chemical-bonding.html#sim-lewis"
+  },
+  {
+    "id": "general-chemistry/chemical-bonding/sim-fc",
+    "bookId": "general-chemistry",
+    "title": "형식 전하 계산기: 어느 루이스 구조가 가장 타당한가",
+    "link": "chapters/chemical-bonding.html#sim-fc"
+  },
+  {
+    "id": "general-chemistry/chemical-bonding/sim-exc",
+    "bookId": "general-chemistry",
+    "title": "중심 원자 둘레의 전자 세기: 옥텟의 예외",
+    "link": "chapters/chemical-bonding.html#sim-exc"
+  },
+  {
+    "id": "general-chemistry/chemical-bonding/sim-be",
+    "bookId": "general-chemistry",
+    "title": "끊고 다시 잇기: 반응열 어림 도전",
+    "link": "chapters/chemical-bonding.html#sim-be"
+  },
+  {
+    "id": "general-chemistry/coordination-chemistry/sim-geo",
+    "bookId": "general-chemistry",
+    "title": "착물의 3D 기하 구조와 이성질체",
+    "link": "chapters/coordination-chemistry.html#sim-geo"
+  },
+  {
+    "id": "general-chemistry/coordination-chemistry/sim-cf",
+    "bookId": "general-chemistry",
+    "title": "결정장 갈라짐 도표: 전자 채우기와 고·저스핀",
+    "link": "chapters/coordination-chemistry.html#sim-cf"
+  },
+  {
+    "id": "general-chemistry/coordination-chemistry/sim-color",
+    "bookId": "general-chemistry",
+    "title": "착물 색 바퀴: 흡수 파장과 보이는 색",
+    "link": "chapters/coordination-chemistry.html#sim-color"
+  },
+  {
+    "id": "general-chemistry/electrochemistry/sim-half",
+    "bookId": "general-chemistry",
+    "title": "반쪽 반응 균형 맞추기 도우미",
+    "link": "chapters/electrochemistry.html#sim-half"
+  },
+  {
+    "id": "general-chemistry/electrochemistry/sim-cell",
+    "bookId": "general-chemistry",
+    "title": "갈바니 전지 조립기",
+    "link": "chapters/electrochemistry.html#sim-cell"
+  },
+  {
+    "id": "general-chemistry/electrochemistry/sim-nernst",
+    "bookId": "general-chemistry",
+    "title": "네른스트 식 탐색: log Q와 E",
+    "link": "chapters/electrochemistry.html#sim-nernst"
+  },
+  {
+    "id": "general-chemistry/electrochemistry/sim-elec",
+    "bookId": "general-chemistry",
+    "title": "전기분해 셀: 전류 × 시간 = 석출량",
+    "link": "chapters/electrochemistry.html#sim-elec"
+  },
+  {
+    "id": "general-chemistry/equilibrium/sim-app",
+    "bookId": "general-chemistry",
+    "title": "평형에 접근하기: 농도와 속도",
+    "link": "chapters/equilibrium.html#sim-app"
+  },
+  {
+    "id": "general-chemistry/equilibrium/sim-q",
+    "bookId": "general-chemistry",
+    "title": "Q 대 K 방향 게이지: 하버 공정 (500 °C)",
+    "link": "chapters/equilibrium.html#sim-q"
+  },
+  {
+    "id": "general-chemistry/equilibrium/sim-ice",
+    "bookId": "general-chemistry",
+    "title": "ICE 표 풀이기",
+    "link": "chapters/equilibrium.html#sim-ice"
+  },
+  {
+    "id": "general-chemistry/equilibrium/sim-lc",
+    "bookId": "general-chemistry",
+    "title": "르샤틀리에 교란 실험: N₂O₄ ⇌ 2NO₂",
+    "link": "chapters/equilibrium.html#sim-lc"
+  },
+  {
+    "id": "general-chemistry/gases/sim-box",
+    "bookId": "general-chemistry",
+    "title": "피스톤 속 기체: 피스톤을 끌어 P, V, T, n을 바꿔 보기",
+    "link": "chapters/gases.html#sim-box"
+  },
+  {
+    "id": "general-chemistry/gases/sim-bag",
+    "bookId": "general-chemistry",
+    "title": "에어백 부풀리기: 아자이드화 소듐을 정확히 계량하라",
+    "link": "chapters/gases.html#sim-bag"
+  },
+  {
+    "id": "general-chemistry/gases/sim-mb",
+    "bookId": "general-chemistry",
+    "title": "맥스웰–볼츠만 속력 분포",
+    "link": "chapters/gases.html#sim-mb"
+  },
+  {
+    "id": "general-chemistry/gases/sim-graham",
+    "bookId": "general-chemistry",
+    "title": "분출 경주: 누가 먼저 80개를 내보낼까",
+    "link": "chapters/gases.html#sim-graham"
+  },
+  {
+    "id": "general-chemistry/gases/sim-z",
+    "bookId": "general-chemistry",
+    "title": "압축 인자 Z: 실제 기체는 언제 이상 기체에서 벗어나나",
+    "link": "chapters/gases.html#sim-z"
+  },
+  {
+    "id": "general-chemistry/kinetics/sim-ir",
+    "bookId": "general-chemistry",
+    "title": "초기 속도 실험실: 숨겨진 속도 법칙 찾기",
+    "link": "chapters/kinetics.html#sim-ir"
+  },
+  {
+    "id": "general-chemistry/kinetics/sim-int",
+    "bookId": "general-chemistry",
+    "title": "농도–시간 곡선과 선형화: 어느 그래프가 직선인가",
+    "link": "chapters/kinetics.html#sim-int"
+  },
+  {
+    "id": "general-chemistry/kinetics/sim-arr",
+    "bookId": "general-chemistry",
+    "title": "볼츠만 꼬리와 아레니우스 그래프",
+    "link": "chapters/kinetics.html#sim-arr"
+  },
+  {
+    "id": "general-chemistry/kinetics/sim-ed",
+    "bookId": "general-chemistry",
+    "title": "반응 좌표 에너지 도표: 장벽, 중간체, 촉매 경로",
+    "link": "chapters/kinetics.html#sim-ed"
+  },
+  {
+    "id": "general-chemistry/liquids-solids/sim-rank",
+    "bookId": "general-chemistry",
+    "title": "끓는점 줄 세우기: 분자 카드를 끌어 순서를 맞혀라",
+    "link": "chapters/liquids-solids.html#sim-rank"
+  },
+  {
+    "id": "general-chemistry/liquids-solids/sim-heat",
+    "bookId": "general-chemistry",
+    "title": "가열 곡선: 구간별 열량 계산",
+    "link": "chapters/liquids-solids.html#sim-heat"
+  },
+  {
+    "id": "general-chemistry/liquids-solids/sim-vp",
+    "bookId": "general-chemistry",
+    "title": "증기압 곡선과 끓는점",
+    "link": "chapters/liquids-solids.html#sim-vp"
+  },
+  {
+    "id": "general-chemistry/liquids-solids/sim-pd",
+    "bookId": "general-chemistry",
+    "title": "상평형 그림 탐색: 물과 CO₂",
+    "link": "chapters/liquids-solids.html#sim-pd"
+  },
+  {
+    "id": "general-chemistry/liquids-solids/sim-cell",
+    "bookId": "general-chemistry",
+    "title": "단위 세포: 반지름 → 격자 상수·밀도·충전율",
+    "link": "chapters/liquids-solids.html#sim-cell"
+  },
+  {
+    "id": "general-chemistry/liquids-solids/sim-xtal",
+    "bookId": "general-chemistry",
+    "title": "결정 구조 맞히기: 정체불명의 금속",
+    "link": "chapters/liquids-solids.html#sim-xtal"
+  },
+  {
+    "id": "general-chemistry/matter-measurement/sim-heat",
+    "bookId": "general-chemistry",
+    "title": "가열 곡선: 열을 넣으며 입자 들여다보기",
+    "link": "chapters/matter-measurement.html#sim-heat"
+  },
+  {
+    "id": "general-chemistry/matter-measurement/sim-dart",
+    "bookId": "general-chemistry",
+    "title": "다트판으로 보는 정확도와 정밀도",
+    "link": "chapters/matter-measurement.html#sim-dart"
+  },
+  {
+    "id": "general-chemistry/matter-measurement/sim-sf",
+    "bookId": "general-chemistry",
+    "title": "유효숫자 계산기: 자릿수로 보는 반올림 규칙",
+    "link": "chapters/matter-measurement.html#sim-sf"
+  },
+  {
+    "id": "general-chemistry/matter-measurement/sim-dens",
+    "bookId": "general-chemistry",
+    "title": "밀도 기둥과 부력",
+    "link": "chapters/matter-measurement.html#sim-dens"
+  },
+  {
+    "id": "general-chemistry/molecular-geometry/sim-vsepr",
+    "bookId": "general-chemistry",
+    "title": "VSEPR 3D 탐색기",
+    "link": "chapters/molecular-geometry.html#sim-vsepr"
+  },
+  {
+    "id": "general-chemistry/molecular-geometry/sim-dip",
+    "bookId": "general-chemistry",
+    "title": "결합 쌍극자의 벡터 합",
+    "link": "chapters/molecular-geometry.html#sim-dip"
+  },
+  {
+    "id": "general-chemistry/molecular-geometry/sim-vec",
+    "bookId": "general-chemistry",
+    "title": "쌍극자 벡터 합 맞히기",
+    "link": "chapters/molecular-geometry.html#sim-vec"
+  },
+  {
+    "id": "general-chemistry/molecular-geometry/sim-ovl",
+    "bookId": "general-chemistry",
+    "title": "오비탈 겹침: σ와 π, 같은 위상과 반대 위상",
+    "link": "chapters/molecular-geometry.html#sim-ovl"
+  },
+  {
+    "id": "general-chemistry/molecular-geometry/sim-hyb",
+    "bookId": "general-chemistry",
+    "title": "혼성 오비탈: s 성분과 모양·각도",
+    "link": "chapters/molecular-geometry.html#sim-hyb"
+  },
+  {
+    "id": "general-chemistry/molecular-geometry/sim-mo",
+    "bookId": "general-chemistry",
+    "title": "분자 오비탈 에너지 도표 빌더",
+    "link": "chapters/molecular-geometry.html#sim-mo"
+  },
+  {
+    "id": "general-chemistry/molecular-geometry/sim-fill",
+    "bookId": "general-chemistry",
+    "title": "MO 전자 채우기 퍼즐",
+    "link": "chapters/molecular-geometry.html#sim-fill"
+  },
+  {
+    "id": "general-chemistry/nuclear-chemistry/sim-chart",
+    "bookId": "general-chemistry",
+    "title": "핵종 도표: 안정성의 띠와 붕괴 방식 예측",
+    "link": "chapters/nuclear-chemistry.html#sim-chart"
+  },
+  {
+    "id": "general-chemistry/nuclear-chemistry/sim-decay",
+    "bookId": "general-chemistry",
+    "title": "붕괴 확률 격자: 무작위 붕괴가 만드는 지수 곡선",
+    "link": "chapters/nuclear-chemistry.html#sim-decay"
+  },
+  {
+    "id": "general-chemistry/nuclear-chemistry/sim-c14",
+    "bookId": "general-chemistry",
+    "title": "방사성 연대 계산기",
+    "link": "chapters/nuclear-chemistry.html#sim-c14"
+  },
+  {
+    "id": "general-chemistry/nuclear-chemistry/sim-be",
+    "bookId": "general-chemistry",
+    "title": "핵자당 결합 에너지 곡선",
+    "link": "chapters/nuclear-chemistry.html#sim-be"
+  },
+  {
+    "id": "general-chemistry/periodic-properties/sim-pt",
+    "bookId": "general-chemistry",
+    "title": "주기율표 성질 지도",
+    "link": "chapters/periodic-properties.html#sim-pt"
+  },
+  {
+    "id": "general-chemistry/periodic-properties/sim-zeff",
+    "bookId": "general-chemistry",
+    "title": "유효 핵전하 계산기 (슬레이터 규칙)",
+    "link": "chapters/periodic-properties.html#sim-zeff"
+  },
+  {
+    "id": "general-chemistry/periodic-properties/sim-iso",
+    "bookId": "general-chemistry",
+    "title": "등전자 계열: 같은 전자, 다른 핵전하",
+    "link": "chapters/periodic-properties.html#sim-iso"
+  },
+  {
+    "id": "general-chemistry/periodic-properties/sim-trend",
+    "bookId": "general-chemistry",
+    "title": "주기적 경향 그래프",
+    "link": "chapters/periodic-properties.html#sim-trend"
+  },
+  {
+    "id": "general-chemistry/periodic-properties/sim-sie",
+    "bookId": "general-chemistry",
+    "title": "연속 이온화 에너지",
+    "link": "chapters/periodic-properties.html#sim-sie"
+  },
+  {
+    "id": "general-chemistry/periodic-properties/sim-rip",
+    "bookId": "general-chemistry",
+    "title": "전자 뜯어내기: 미지 원소의 족을 알아내라",
+    "link": "chapters/periodic-properties.html#sim-rip"
+  },
+  {
+    "id": "general-chemistry/periodic-properties/sim-match",
+    "bookId": "general-chemistry",
+    "title": "주기적 경향 도전: 카드를 분류하고 빠르게 비교하라",
+    "link": "chapters/periodic-properties.html#sim-match"
+  },
+  {
+    "id": "general-chemistry/periodic-table/sim-pt",
+    "bookId": "general-chemistry",
+    "title": "118개 원소",
+    "link": "chapters/periodic-table.html#sim-pt"
+  },
+  {
+    "id": "general-chemistry/quantum-atom/sim-pe",
+    "bookId": "general-chemistry",
+    "title": "광전 효과 실험",
+    "link": "chapters/quantum-atom.html#sim-pe"
+  },
+  {
+    "id": "general-chemistry/quantum-atom/sim-h",
+    "bookId": "general-chemistry",
+    "title": "수소 원자의 에너지 준위와 선 스펙트럼",
+    "link": "chapters/quantum-atom.html#sim-h"
+  },
+  {
+    "id": "general-chemistry/quantum-atom/sim-bohr",
+    "bookId": "general-chemistry",
+    "title": "보어 원자: 전자를 끌어 목표 스펙트럼선을 만들어라",
+    "link": "chapters/quantum-atom.html#sim-bohr"
+  },
+  {
+    "id": "general-chemistry/quantum-atom/sim-orb",
+    "bookId": "general-chemistry",
+    "title": "수소 원자 오비탈: 점구름과 방사 분포 함수",
+    "link": "chapters/quantum-atom.html#sim-orb"
+  },
+  {
+    "id": "general-chemistry/quantum-atom/sim-cfg",
+    "bookId": "general-chemistry",
+    "title": "전자 배치 빌더",
+    "link": "chapters/quantum-atom.html#sim-cfg"
+  },
+  {
+    "id": "general-chemistry/quantum-atom/sim-hund",
+    "bookId": "general-chemistry",
+    "title": "전자 배치 퍼즐: 화살표를 끌어 오비탈 상자를 채워라",
+    "link": "chapters/quantum-atom.html#sim-hund"
+  },
+  {
+    "id": "general-chemistry/solutions/sim-solc",
+    "bookId": "general-chemistry",
+    "title": "용해도 곡선 위의 점: 포화·불포화·과포화와 재결정 도전",
+    "link": "chapters/solutions.html#sim-solc"
+  },
+  {
+    "id": "general-chemistry/solutions/sim-henry",
+    "bookId": "general-chemistry",
+    "title": "헨리 법칙: 탄산음료 속 CO₂",
+    "link": "chapters/solutions.html#sim-henry"
+  },
+  {
+    "id": "general-chemistry/solutions/sim-raoult",
+    "bookId": "general-chemistry",
+    "title": "2성분 용액의 증기압 도표",
+    "link": "chapters/solutions.html#sim-raoult"
+  },
+  {
+    "id": "general-chemistry/solutions/sim-colli",
+    "bookId": "general-chemistry",
+    "title": "총괄성 계산기와 상평형 그림의 이동",
+    "link": "chapters/solutions.html#sim-colli"
+  },
+  {
+    "id": "general-chemistry/solutions/sim-anti",
+    "bookId": "general-chemistry",
+    "title": "부동액 맞히기: 이번 겨울의 최저 기온을 버텨라",
+    "link": "chapters/solutions.html#sim-anti"
+  },
+  {
+    "id": "general-chemistry/solutions/sim-osmo",
+    "bookId": "general-chemistry",
+    "title": "삼투 U자관",
+    "link": "chapters/solutions.html#sim-osmo"
+  },
+  {
+    "id": "general-chemistry/solutions/sim-vh",
+    "bookId": "general-chemistry",
+    "title": "반트호프 인자: 해리와 이온쌍",
+    "link": "chapters/solutions.html#sim-vh"
+  },
+  {
+    "id": "general-chemistry/stoichiometry/sim-bal",
+    "bookId": "general-chemistry",
+    "title": "반응식 균형 맞추기 퍼즐",
+    "link": "chapters/stoichiometry.html#sim-bal"
+  },
+  {
+    "id": "general-chemistry/stoichiometry/sim-comb",
+    "bookId": "general-chemistry",
+    "title": "연소 분석 장치: CO₂·H₂O 질량에서 실험식까지",
+    "link": "chapters/stoichiometry.html#sim-comb"
+  },
+  {
+    "id": "general-chemistry/stoichiometry/sim-lim",
+    "bookId": "general-chemistry",
+    "title": "한계 반응물: 분자로 세어 보기",
+    "link": "chapters/stoichiometry.html#sim-lim"
+  },
+  {
+    "id": "general-chemistry/stoichiometry/sim-factory",
+    "bookId": "general-chemistry",
+    "title": "화학 공장: 주문량을 정확히, 원료 낭비 없이 생산하라",
+    "link": "chapters/stoichiometry.html#sim-factory"
+  },
+  {
+    "id": "general-chemistry/thermochemistry/sim-pv",
+    "bookId": "general-chemistry",
+    "title": "피스톤 일 w = −P ext ΔV: 경로에 따라 달라지는 일",
+    "link": "chapters/thermochemistry.html#sim-pv"
+  },
+  {
+    "id": "general-chemistry/thermochemistry/sim-mix",
+    "bookId": "general-chemistry",
+    "title": "열 평형 혼합기: 뜨거운 금속 + 찬물",
+    "link": "chapters/thermochemistry.html#sim-mix"
+  },
+  {
+    "id": "general-chemistry/thermochemistry/sim-bomb",
+    "bookId": "general-chemistry",
+    "title": "통 열량계: 시료를 태워 ΔU 구하기",
+    "link": "chapters/thermochemistry.html#sim-bomb"
+  },
+  {
+    "id": "general-chemistry/thermochemistry/sim-hess",
+    "bookId": "general-chemistry",
+    "title": "헤스 법칙 엔탈피 사다리",
+    "link": "chapters/thermochemistry.html#sim-hess"
+  },
+  {
+    "id": "general-chemistry/thermochemistry/sim-fuel",
+    "bookId": "general-chemistry",
+    "title": "연료 배합 도전: 목표 에너지를 만들어라",
+    "link": "chapters/thermochemistry.html#sim-fuel"
+  },
+  {
+    "id": "general-chemistry/thermodynamics/sim-micro",
+    "bookId": "general-chemistry",
+    "title": "미시 상태 세기: 기체 팽창은 왜 일어나나",
+    "link": "chapters/thermodynamics.html#sim-micro"
+  },
+  {
+    "id": "general-chemistry/thermodynamics/sim-gt",
+    "bookId": "general-chemistry",
+    "title": "ΔG–T 도표: 온도가 자발성을 바꾸는 순간",
+    "link": "chapters/thermodynamics.html#sim-gt"
+  },
+  {
+    "id": "general-chemistry/thermodynamics/sim-gk",
+    "bookId": "general-chemistry",
+    "title": "ΔG° ⇄ K 변환기",
+    "link": "chapters/thermodynamics.html#sim-gk"
+  },
+  {
+    "id": "general-chemistry/thermodynamics/sim-gcurve",
+    "bookId": "general-chemistry",
+    "title": "반응 진행도에 따른 G 곡선: A(g) ⇌ B(g)",
+    "link": "chapters/thermodynamics.html#sim-gcurve"
   }
 ]

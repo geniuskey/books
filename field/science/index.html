@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>기초과학·공학 지식 지도 · Books</title>
+<meta name="description" content="분야별 지식 지도의 새 주소로 이동합니다.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://books.euiyun.com/paths/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>
+(function () {
+  const params = new URLSearchParams(location.search);
+  const fields = ["semiconductor", "science", "computing", "electronics", "money", "health", "culture"];
+  const aliases = {"ai": "computing", "housing": "money", "art": "culture"};
+  for (const key of ["f", "field"]) {
+    if (Object.hasOwn(aliases, params.get(key))) params.set(key, aliases[params.get(key)]);
+  }
+  const field = "science" || (fields.includes(params.get("f")) ? params.get("f") : fields.includes(params.get("field")) ? params.get("field") : "");
+  params.delete("f");
+  params.set("view", "map");
+  if (field) params.set("field", field); else params.delete("field");
+  location.replace("/paths/?" + params + location.hash);
+})();
+</script>
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3d6151a0abc94ede89285d462527fa80"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</head>
+<body><p>지식 지도의 새 주소로 이동합니다. <a href="/paths/?view=map&amp;field=science">지식 지도 보기 →</a></p></body>
+</html>
