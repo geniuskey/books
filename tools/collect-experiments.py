@@ -3,6 +3,7 @@
 Run when book content changes. The resulting catalog is committed so the
 discovery site can be rebuilt without checking out every book.
 """
+import argparse
 import html
 import json
 import re
@@ -19,11 +20,21 @@ def clean(markup):
     return ' '.join(html.unescape(STRIP.sub(' ', markup)).split())
 
 
-def collect():
+def collect(book_ids=None):
     books = json.loads((ROOT / 'data/books.json').read_text(encoding='utf-8'))['books']
+    cached = {}
+    if book_ids is not None:
+        published = {book['id'] for book in books if book['status'] == 'published'}
+        if set(book_ids) - published:
+            raise ValueError('Selected books must be published catalog IDs')
+        for entry in json.loads((ROOT / 'data/experiment-catalog.json').read_text(encoding='utf-8')):
+            cached.setdefault(entry['bookId'], []).append(entry)
     entries = []
     for book in books:
         if book['status'] != 'published':
+            continue
+        if book_ids is not None and book['id'] not in book_ids:
+            entries.extend(cached.get(book['id'], []))
             continue
         # 서가 저장소의 한 권은 checkout에 하위 경로를 적는다(예: artbook/color). 없으면 책 ID 폴더.
         chapters = ROOT.parent / book.get('checkout', book['id']) / 'chapters'
@@ -53,7 +64,9 @@ def collect():
 
 
 if __name__ == '__main__':
-    entries = collect()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--book', action='append', help='Refresh only this published book ID; repeat for multiple books')
+    entries = collect(parser.parse_args().book)
     output = ROOT / 'data/experiment-catalog.json'
     output.write_text(json.dumps(entries, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(f'Collected {len(entries)} linked experiments into {output}')

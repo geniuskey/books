@@ -7322,7 +7322,7 @@
   {
     "id": "memorybook/hierarchy/sim-roof",
     "bookId": "memorybook",
-    "title": "LLM 디코드 루프라인 계산기",
+    "title": "밀집 LLM 디코드 루프라인 계산기",
     "link": "chapters/hierarchy.html#sim-roof"
   },
   {
@@ -30706,5 +30706,779 @@
     "bookId": "artbook-industrial",
     "title": "포장의 크기와 무게",
     "link": "chapters/sustain.html#sim-pk"
+  },
+  {
+    "id": "infrabook/amc/sim-unit",
+    "bookId": "infrabook",
+    "title": "AMC 농도 단위 환산기",
+    "link": "chapters/amc.html#sim-unit"
+  },
+  {
+    "id": "infrabook/amc/sim-class",
+    "bookId": "infrabook",
+    "title": "SEMI F21 표기와 구역별 판정",
+    "link": "chapters/amc.html#sim-class"
+  },
+  {
+    "id": "infrabook/amc/sim-bal",
+    "bookId": "infrabook",
+    "title": "클린룸 암모니아 물질수지와 누출 사고 회복",
+    "link": "chapters/amc.html#sim-bal"
+  },
+  {
+    "id": "infrabook/amc/sim-ttop",
+    "bookId": "infrabook",
+    "title": "T-top 단면 시뮬레이터: 염기 농도 × PEB 지연",
+    "link": "chapters/amc.html#sim-ttop"
+  },
+  {
+    "id": "infrabook/amc/sim-ads",
+    "bookId": "infrabook",
+    "title": "웨이퍼 표면 흡착 시간 의존",
+    "link": "chapters/amc.html#sim-ads"
+  },
+  {
+    "id": "infrabook/amc/sim-bt",
+    "bookId": "infrabook",
+    "title": "케미컬 필터 파과 곡선과 교체 주기 계산기",
+    "link": "chapters/amc.html#sim-bt"
+  },
+  {
+    "id": "infrabook/amc/sim-purge",
+    "bookId": "infrabook",
+    "title": "FOUP 질소 퍼지: 로드포트 → 반송 → 퍼지 스토커",
+    "link": "chapters/amc.html#sim-purge"
+  },
+  {
+    "id": "infrabook/amc/sim-qt",
+    "bookId": "infrabook",
+    "title": "자연산화막 성장과 큐 타임 초과율",
+    "link": "chapters/amc.html#sim-qt"
+  },
+  {
+    "id": "infrabook/amhs/sim-moves",
+    "bookId": "infrabook",
+    "title": "FOUP 이동량과 필요 차량 수 계산기",
+    "link": "chapters/amhs.html#sim-moves"
+  },
+  {
+    "id": "infrabook/amhs/sim-3d",
+    "bookId": "infrabook",
+    "title": "인트라베이 OHT 루프 3D 모델",
+    "link": "chapters/amhs.html#sim-3d"
+  },
+  {
+    "id": "infrabook/amhs/sim-ring",
+    "bookId": "infrabook",
+    "title": "단방향 루프 교통 애니메이션",
+    "link": "chapters/amhs.html#sim-ring"
+  },
+  {
+    "id": "infrabook/amhs/sim-cong",
+    "bookId": "infrabook",
+    "title": "차량 수–처리량 혼잡 곡선",
+    "link": "chapters/amhs.html#sim-cong"
+  },
+  {
+    "id": "infrabook/amhs/sim-mmc",
+    "bookId": "infrabook",
+    "title": "M/M/c 반송 대기열 계산기",
+    "link": "chapters/amhs.html#sim-mmc"
+  },
+  {
+    "id": "infrabook/amhs/sim-ct",
+    "bookId": "infrabook",
+    "title": "반송 시간 → 사이클 타임·WIP 계산기",
+    "link": "chapters/amhs.html#sim-ct"
+  },
+  {
+    "id": "infrabook/amhs/sim-disp",
+    "bookId": "infrabook",
+    "title": "디스패칭 규칙 비교 이산사건 시뮬레이션",
+    "link": "chapters/amhs.html#sim-disp"
+  },
+  {
+    "id": "infrabook/amhs/sim-buf",
+    "bookId": "infrabook",
+    "title": "OHB 버퍼 크기: 얼랑 B 넘침 확률",
+    "link": "chapters/amhs.html#sim-buf"
+  },
+  {
+    "id": "infrabook/amhs/sim-prof",
+    "bookId": "infrabook",
+    "title": "S자 주행 프로파일과 평균 속도",
+    "link": "chapters/amhs.html#sim-prof"
+  },
+  {
+    "id": "infrabook/build/sim-site",
+    "bookId": "infrabook",
+    "title": "부지 후보 비교: 가중 점수 + 전력·용수 용량 제약",
+    "link": "chapters/build.html#sim-site"
+  },
+  {
+    "id": "infrabook/build/sim-campus",
+    "bookId": "infrabook",
+    "title": "팹 캠퍼스 3D: 단계별 건설 진행",
+    "link": "chapters/build.html#sim-campus"
+  },
+  {
+    "id": "infrabook/build/sim-gantt",
+    "bookId": "infrabook",
+    "title": "팹 건설 간트 차트와 주공정",
+    "link": "chapters/build.html#sim-gantt"
+  },
+  {
+    "id": "infrabook/build/sim-capex",
+    "bookId": "infrabook",
+    "title": "FAB-E 인프라 CAPEX · OPEX 계산기",
+    "link": "chapters/build.html#sim-capex"
+  },
+  {
+    "id": "infrabook/build/sim-npv",
+    "bookId": "infrabook",
+    "title": "램프업과 조기 가동의 NPV",
+    "link": "chapters/build.html#sim-npv"
+  },
+  {
+    "id": "infrabook/build/sim-stage",
+    "bookId": "infrabook",
+    "title": "유틸리티 용량 트레이드오프: 미리 깔기 vs 단계 증설",
+    "link": "chapters/build.html#sim-stage"
+  },
+  {
+    "id": "infrabook/build/sim-mc",
+    "bookId": "infrabook",
+    "title": "첫 웨이퍼 날짜 몬테카를로 (간트 시뮬레이터 조건 사용)",
+    "link": "chapters/build.html#sim-mc"
+  },
+  {
+    "id": "infrabook/chemical/sim-metal",
+    "bookId": "infrabook",
+    "title": "액 속 금속 농도 → 웨이퍼 표면 오염",
+    "link": "chapters/chemical.html#sim-metal"
+  },
+  {
+    "id": "infrabook/chemical/sim-blend",
+    "bookId": "infrabook",
+    "title": "희석 블렌딩 물질수지와 농도 오차",
+    "link": "chapters/chemical.html#sim-blend"
+  },
+  {
+    "id": "infrabook/chemical/sim-bath",
+    "bookId": "infrabook",
+    "title": "SC1 배스 농도 감쇠와 보충(spiking)",
+    "link": "chapters/chemical.html#sim-bath"
+  },
+  {
+    "id": "infrabook/chemical/sim-loop",
+    "bookId": "infrabook",
+    "title": "순환 루프 압력 분포와 동시 사용",
+    "link": "chapters/chemical.html#sim-loop"
+  },
+  {
+    "id": "infrabook/chemical/sim-filter",
+    "bookId": "infrabook",
+    "title": "필터 정격·면적·부하와 교체 주기",
+    "link": "chapters/chemical.html#sim-filter"
+  },
+  {
+    "id": "infrabook/chemical/sim-slurry",
+    "bookId": "infrabook",
+    "title": "슬러리 입자 분포와 큰 입자 꼬리(LPC)",
+    "link": "chapters/chemical.html#sim-slurry"
+  },
+  {
+    "id": "infrabook/chemical/sim-inv",
+    "bookId": "infrabook",
+    "title": "저장 탱크 재고와 재주문점",
+    "link": "chapters/chemical.html#sim-inv"
+  },
+  {
+    "id": "infrabook/cleanroom/sim-kill",
+    "bookId": "infrabook",
+    "title": "킬러 결함 크기와 다이 수율",
+    "link": "chapters/cleanroom.html#sim-kill"
+  },
+  {
+    "id": "infrabook/cleanroom/sim-iso",
+    "bookId": "infrabook",
+    "title": "ISO 등급 계산기와 판정",
+    "link": "chapters/cleanroom.html#sim-iso"
+  },
+  {
+    "id": "infrabook/cleanroom/sim-flow",
+    "bookId": "infrabook",
+    "title": "기류 방식과 입자 궤적 (2D 단면)",
+    "link": "chapters/cleanroom.html#sim-flow"
+  },
+  {
+    "id": "infrabook/cleanroom/sim-ffu",
+    "bookId": "infrabook",
+    "title": "FFU 커버리지·풍속·환기 횟수 계산기",
+    "link": "chapters/cleanroom.html#sim-ffu"
+  },
+  {
+    "id": "infrabook/cleanroom/sim-3d",
+    "bookId": "infrabook",
+    "title": "클린룸 구간의 공기·입자 순환",
+    "link": "chapters/cleanroom.html#sim-3d"
+  },
+  {
+    "id": "infrabook/cleanroom/sim-dil",
+    "bookId": "infrabook",
+    "title": "정상상태 농도와 100:1 회복 시간",
+    "link": "chapters/cleanroom.html#sim-dil"
+  },
+  {
+    "id": "infrabook/cleanroom/sim-lay",
+    "bookId": "infrabook",
+    "title": "구성별 공기량과 팬 에너지 비교",
+    "link": "chapters/cleanroom.html#sim-lay"
+  },
+  {
+    "id": "infrabook/cleanroom/sim-dep",
+    "bookId": "infrabook",
+    "title": "입자 침착 속도와 웨이퍼당 침착 수",
+    "link": "chapters/cleanroom.html#sim-dep"
+  },
+  {
+    "id": "infrabook/cooling/sim-heat",
+    "bookId": "infrabook",
+    "title": "팹 열 수지와 냉동 용량",
+    "link": "chapters/cooling.html#sim-heat"
+  },
+  {
+    "id": "infrabook/cooling/sim-ph",
+    "bookId": "infrabook",
+    "title": "P-h 선도 위의 냉동 사이클 (R-134a 근사)",
+    "link": "chapters/cooling.html#sim-ph"
+  },
+  {
+    "id": "infrabook/cooling/sim-cop",
+    "bookId": "infrabook",
+    "title": "냉수·냉각수 온도와 칠러 COP",
+    "link": "chapters/cooling.html#sim-cop"
+  },
+  {
+    "id": "infrabook/cooling/sim-tower",
+    "bookId": "infrabook",
+    "title": "냉각탑: 온도와 물 수요",
+    "link": "chapters/cooling.html#sim-tower"
+  },
+  {
+    "id": "infrabook/cooling/sim-pcw",
+    "bookId": "infrabook",
+    "title": "PCW 공급 온도 제어: 부하 계단 응답",
+    "link": "chapters/cooling.html#sim-pcw"
+  },
+  {
+    "id": "infrabook/cooling/sim-stage",
+    "bookId": "infrabook",
+    "title": "칠러 대수 제어와 N+1",
+    "link": "chapters/cooling.html#sim-stage"
+  },
+  {
+    "id": "infrabook/cooling/sim-free",
+    "bookId": "infrabook",
+    "title": "프리쿨링 연간 시간 분포와 연간 냉동 에너지",
+    "link": "chapters/cooling.html#sim-free"
+  },
+  {
+    "id": "infrabook/cooling/sim-hr",
+    "bookId": "infrabook",
+    "title": "히트펌프 폐열 회수 vs LNG 보일러",
+    "link": "chapters/cooling.html#sim-hr"
+  },
+  {
+    "id": "infrabook/exhaust/sim-duct",
+    "bookId": "infrabook",
+    "title": "배기 덕트 정압 밸런싱: 장비를 더 붙이면",
+    "link": "chapters/exhaust.html#sim-duct"
+  },
+  {
+    "id": "infrabook/exhaust/sim-fan",
+    "bookId": "infrabook",
+    "title": "팬 곡선·시스템 곡선: 인버터 vs 댐퍼",
+    "link": "chapters/exhaust.html#sim-fan"
+  },
+  {
+    "id": "infrabook/exhaust/sim-pfc",
+    "bookId": "infrabook",
+    "title": "FAB-E 공정가스 CO₂ 환산 배출 계산기",
+    "link": "chapters/exhaust.html#sim-pfc"
+  },
+  {
+    "id": "infrabook/exhaust/sim-dre",
+    "bookId": "infrabook",
+    "title": "분해 효율 곡선: 온도·체류시간·가스 종류",
+    "link": "chapters/exhaust.html#sim-dre"
+  },
+  {
+    "id": "infrabook/exhaust/sim-tower",
+    "bookId": "infrabook",
+    "title": "충전탑 높이·L/G·세정액에 따른 제거 효율",
+    "link": "chapters/exhaust.html#sim-tower"
+  },
+  {
+    "id": "infrabook/exhaust/sim-voc",
+    "bookId": "infrabook",
+    "title": "농축 로터 + RTO 열수지와 LEL",
+    "link": "chapters/exhaust.html#sim-voc"
+  },
+  {
+    "id": "infrabook/exhaust/sim-loss",
+    "bookId": "infrabook",
+    "title": "배기 상실 시 인클로저 농도와 인터록",
+    "link": "chapters/exhaust.html#sim-loss"
+  },
+  {
+    "id": "infrabook/gas/sim-asu",
+    "bookId": "infrabook",
+    "title": "이중 증류탑 압력 설계: 질소가 산소를 끓일 수 있나",
+    "link": "chapters/gas.html#sim-asu"
+  },
+  {
+    "id": "infrabook/gas/sim-n2",
+    "bookId": "infrabook",
+    "title": "FAB-E 질소 수지 · 전력 · 백업 시간",
+    "link": "chapters/gas.html#sim-n2"
+  },
+  {
+    "id": "infrabook/gas/sim-pur",
+    "bookId": "infrabook",
+    "title": "불순물 ppb와 단분자층 형성 시간",
+    "link": "chapters/gas.html#sim-pur"
+  },
+  {
+    "id": "infrabook/gas/sim-cyl",
+    "bookId": "infrabook",
+    "title": "실린더 잔량 · 교체 주기 · 기화 냉각",
+    "link": "chapters/gas.html#sim-cyl"
+  },
+  {
+    "id": "infrabook/gas/sim-dp",
+    "bookId": "infrabook",
+    "title": "가스 배관 압력 강하 계산기 (Darcy–Weisbach, 등온)",
+    "link": "chapters/gas.html#sim-dp"
+  },
+  {
+    "id": "infrabook/gas/sim-purge",
+    "bookId": "infrabook",
+    "title": "퍼지 사이클 계산기",
+    "link": "chapters/gas.html#sim-purge"
+  },
+  {
+    "id": "infrabook/gas/sim-nf3",
+    "bookId": "infrabook",
+    "title": "FAB-E NF₃ 소비량과 공급 방식",
+    "link": "chapters/gas.html#sim-nf3"
+  },
+  {
+    "id": "infrabook/hvac/sim-bal",
+    "bookId": "infrabook",
+    "title": "클린룸 공기 수지",
+    "link": "chapters/hvac.html#sim-bal"
+  },
+  {
+    "id": "infrabook/hvac/sim-psy",
+    "bookId": "infrabook",
+    "title": "습공기선도 위의 MAU 공정",
+    "link": "chapters/hvac.html#sim-psy"
+  },
+  {
+    "id": "infrabook/hvac/sim-dew",
+    "bookId": "infrabook",
+    "title": "노점 계산과 결로 판정",
+    "link": "chapters/hvac.html#sim-dew"
+  },
+  {
+    "id": "infrabook/hvac/sim-load",
+    "bookId": "infrabook",
+    "title": "클린룸 현열·잠열 부하 계산기",
+    "link": "chapters/hvac.html#sim-load"
+  },
+  {
+    "id": "infrabook/hvac/sim-exp",
+    "bookId": "infrabook",
+    "title": "온도 변화 → 열팽창 → 오버레이 예산",
+    "link": "chapters/hvac.html#sim-exp"
+  },
+  {
+    "id": "infrabook/hvac/sim-pid",
+    "bookId": "infrabook",
+    "title": "PID 온도 제어 응답",
+    "link": "chapters/hvac.html#sim-pid"
+  },
+  {
+    "id": "infrabook/hvac/sim-dp",
+    "bookId": "infrabook",
+    "title": "잉여 공기량·누설 면적과 실압",
+    "link": "chapters/hvac.html#sim-dp"
+  },
+  {
+    "id": "infrabook/hvac/sim-en",
+    "bookId": "infrabook",
+    "title": "계절별 MAU 외기 처리 에너지",
+    "link": "chapters/hvac.html#sim-en"
+  },
+  {
+    "id": "infrabook/operation/sim-avail",
+    "bookId": "infrabook",
+    "title": "MTBF · MTTR → 가용도와 1년 타임라인",
+    "link": "chapters/operation.html#sim-avail"
+  },
+  {
+    "id": "infrabook/operation/sim-kofn",
+    "bookId": "infrabook",
+    "title": "칠러 플랜트 이중화: N · N+1 · N+2 · 2N",
+    "link": "chapters/operation.html#sim-kofn"
+  },
+  {
+    "id": "infrabook/operation/sim-ccf",
+    "bookId": "infrabook",
+    "title": "β 인자: 이중화 효과의 천장",
+    "link": "chapters/operation.html#sim-ccf"
+  },
+  {
+    "id": "infrabook/operation/sim-dep",
+    "bookId": "infrabook",
+    "title": "유틸리티 의존성 그래프: 고장 전파 따라가기",
+    "link": "chapters/operation.html#sim-dep"
+  },
+  {
+    "id": "infrabook/operation/sim-alarm",
+    "bookId": "infrabook",
+    "title": "PCW 공급 온도 24시간: 알람 설정 실험",
+    "link": "chapters/operation.html#sim-alarm"
+  },
+  {
+    "id": "infrabook/operation/sim-spc",
+    "bookId": "infrabook",
+    "title": "Shewhart vs EWMA: 작은 이동을 누가 먼저 잡나",
+    "link": "chapters/operation.html#sim-spc"
+  },
+  {
+    "id": "infrabook/operation/sim-rul",
+    "bookId": "infrabook",
+    "title": "PCW 펌프 진동 추세 → 잔여 수명 예측",
+    "link": "chapters/operation.html#sim-rul"
+  },
+  {
+    "id": "infrabook/operation/sim-pm",
+    "bookId": "infrabook",
+    "title": "최적 예방 교체 주기 (Weibull 나이 교체)",
+    "link": "chapters/operation.html#sim-pm"
+  },
+  {
+    "id": "infrabook/overview/sim-ov3d",
+    "bookId": "infrabook",
+    "title": "팹 단면 3D 모델: 층을 켜고 끄며 유틸리티 흐름 보기",
+    "link": "chapters/overview.html#sim-ov3d"
+  },
+  {
+    "id": "infrabook/overview/sim-res",
+    "bookId": "infrabook",
+    "title": "웨이퍼당 자원 계산기 (FAB-E 기준)",
+    "link": "chapters/overview.html#sim-res"
+  },
+  {
+    "id": "infrabook/overview/sim-sankey",
+    "bookId": "infrabook",
+    "title": "전력 흐름도: 수전 → 소비처 → 열 → 대기",
+    "link": "chapters/overview.html#sim-sankey"
+  },
+  {
+    "id": "infrabook/overview/sim-outage",
+    "bookId": "infrabook",
+    "title": "정전 · 순간 전압 강하 1회의 손실 추정",
+    "link": "chapters/overview.html#sim-outage"
+  },
+  {
+    "id": "infrabook/overview/sim-yield",
+    "bookId": "infrabook",
+    "title": "클린룸 등급 · 노출 → 결함 밀도 → 수율",
+    "link": "chapters/overview.html#sim-yield"
+  },
+  {
+    "id": "infrabook/overview/sim-vib",
+    "bookId": "infrabook",
+    "title": "바닥 진동 → 변위 → VC 등급 판정",
+    "link": "chapters/overview.html#sim-vib"
+  },
+  {
+    "id": "infrabook/overview/sim-avail",
+    "bookId": "infrabook",
+    "title": "유틸리티 직렬 가용도와 이중화",
+    "link": "chapters/overview.html#sim-avail"
+  },
+  {
+    "id": "infrabook/power/sim-loadcurve",
+    "bookId": "infrabook",
+    "title": "FAB-E 일 부하 곡선",
+    "link": "chapters/power.html#sim-loadcurve"
+  },
+  {
+    "id": "infrabook/power/sim-tr",
+    "bookId": "infrabook",
+    "title": "변압기 효율 곡선과 연간 손실",
+    "link": "chapters/power.html#sim-tr"
+  },
+  {
+    "id": "infrabook/power/sim-pf",
+    "bookId": "infrabook",
+    "title": "역률 보상 계산기 (22.9 kV 모선)",
+    "link": "chapters/power.html#sim-pf"
+  },
+  {
+    "id": "infrabook/power/sim-sagd",
+    "bookId": "infrabook",
+    "title": "고장 거리 → 잔류 전압 → 연간 트립 횟수",
+    "link": "chapters/power.html#sim-sagd"
+  },
+  {
+    "id": "infrabook/power/sim-f47",
+    "bookId": "infrabook",
+    "title": "전압 강하 판정기: SEMI F47 · ITIC · 실제 장비",
+    "link": "chapters/power.html#sim-f47"
+  },
+  {
+    "id": "infrabook/power/sim-loss",
+    "bookId": "infrabook",
+    "title": "전압 강하 손실 기대값과 대책 비교",
+    "link": "chapters/power.html#sim-loss"
+  },
+  {
+    "id": "infrabook/power/sim-ups",
+    "bookId": "infrabook",
+    "title": "정전 타임라인과 백업 용량",
+    "link": "chapters/power.html#sim-ups"
+  },
+  {
+    "id": "infrabook/power/sim-thd",
+    "bookId": "infrabook",
+    "title": "고조파 합성기: 파형 · 스펙트럼 · THD",
+    "link": "chapters/power.html#sim-thd"
+  },
+  {
+    "id": "infrabook/safety/sim-twa",
+    "bookId": "infrabook",
+    "title": "노출 이력과 TWA · STEL 판정",
+    "link": "chapters/safety.html#sim-twa"
+  },
+  {
+    "id": "infrabook/safety/sim-det",
+    "bookId": "infrabook",
+    "title": "가스 캐비닛 누출 → 감지 → 자동 차단 타임라인",
+    "link": "chapters/safety.html#sim-det"
+  },
+  {
+    "id": "infrabook/safety/sim-room",
+    "bookId": "infrabook",
+    "title": "실내 누출 희석 시뮬레이터",
+    "link": "chapters/safety.html#sim-room"
+  },
+  {
+    "id": "infrabook/safety/sim-plume",
+    "bookId": "infrabook",
+    "title": "가우시안 플룸: 바람 아래 몇 m까지 위험한가",
+    "link": "chapters/safety.html#sim-plume"
+  },
+  {
+    "id": "infrabook/safety/sim-o2",
+    "bookId": "infrabook",
+    "title": "밀폐 공간 질소 누출과 산소 농도",
+    "link": "chapters/safety.html#sim-o2"
+  },
+  {
+    "id": "infrabook/safety/sim-rfo",
+    "bookId": "infrabook",
+    "title": "RFO 최악 방출량과 캐비닛 배기 희석",
+    "link": "chapters/safety.html#sim-rfo"
+  },
+  {
+    "id": "infrabook/safety/sim-lopa",
+    "bookId": "infrabook",
+    "title": "방호 계층 분석 (LOPA) 계산기",
+    "link": "chapters/safety.html#sim-lopa"
+  },
+  {
+    "id": "infrabook/sustain/sim-node",
+    "bookId": "infrabook",
+    "title": "노드별 웨이퍼당 에너지와 탄소",
+    "link": "chapters/sustain.html#sim-node"
+  },
+  {
+    "id": "infrabook/sustain/sim-util",
+    "bookId": "infrabook",
+    "title": "가동률과 웨이퍼당 에너지",
+    "link": "chapters/sustain.html#sim-util"
+  },
+  {
+    "id": "infrabook/sustain/sim-pfc",
+    "bookId": "infrabook",
+    "title": "공정가스 Scope 1 계산기",
+    "link": "chapters/sustain.html#sim-pfc"
+  },
+  {
+    "id": "infrabook/sustain/sim-ledger",
+    "bookId": "infrabook",
+    "title": "FAB-E 탄소 회계 계산기",
+    "link": "chapters/sustain.html#sim-ledger"
+  },
+  {
+    "id": "infrabook/sustain/sim-macc",
+    "bookId": "infrabook",
+    "title": "FAB-E 감축비용 곡선(MACC)",
+    "link": "chapters/sustain.html#sim-macc"
+  },
+  {
+    "id": "infrabook/sustain/sim-ppa",
+    "bookId": "infrabook",
+    "title": "PPA 포트폴리오: 연간 매칭 vs 시간별 매칭",
+    "link": "chapters/sustain.html#sim-ppa"
+  },
+  {
+    "id": "infrabook/sustain/sim-drought",
+    "bookId": "infrabook",
+    "title": "가뭄 시나리오: 취수 제한과 재이용률",
+    "link": "chapters/sustain.html#sim-drought"
+  },
+  {
+    "id": "infrabook/upw/sim-rho",
+    "bookId": "infrabook",
+    "title": "비저항 계산기: 불순물 농도 → MΩ·cm",
+    "link": "chapters/upw.html#sim-rho"
+  },
+  {
+    "id": "infrabook/upw/sim-tc",
+    "bookId": "infrabook",
+    "title": "비저항 온도 보정: 선형 보정은 얼마나 틀리나",
+    "link": "chapters/upw.html#sim-tc"
+  },
+  {
+    "id": "infrabook/upw/sim-ro",
+    "bookId": "infrabook",
+    "title": "RO 물질수지: 회수율 · 제거율 · 실리카 스케일",
+    "link": "chapters/upw.html#sim-ro"
+  },
+  {
+    "id": "infrabook/upw/sim-do",
+    "bookId": "infrabook",
+    "title": "막 탈기: 진공 · 질소 스윕 · 단수 → 용존산소",
+    "link": "chapters/upw.html#sim-do"
+  },
+  {
+    "id": "infrabook/upw/sim-uv",
+    "bookId": "infrabook",
+    "title": "UV185 선량과 TOC · 그 직후의 비저항",
+    "link": "chapters/upw.html#sim-uv"
+  },
+  {
+    "id": "infrabook/upw/sim-loop",
+    "bookId": "infrabook",
+    "title": "UPW 공급 루프: 유속 · 압력 손실 · 데드레그",
+    "link": "chapters/upw.html#sim-loop"
+  },
+  {
+    "id": "infrabook/upw/sim-wafer",
+    "bookId": "infrabook",
+    "title": "웨이퍼당 UPW와 팹 하루 수요 계산기",
+    "link": "chapters/upw.html#sim-wafer"
+  },
+  {
+    "id": "infrabook/vibration/sim-unit",
+    "bookId": "infrabook",
+    "title": "진동 단위 환산기와 변위 파형",
+    "link": "chapters/vibration.html#sim-unit"
+  },
+  {
+    "id": "infrabook/vibration/sim-vc",
+    "bookId": "infrabook",
+    "title": "1/3 옥타브 스펙트럼 VC 판정기",
+    "link": "chapters/vibration.html#sim-vc"
+  },
+  {
+    "id": "infrabook/vibration/sim-dist",
+    "bookId": "infrabook",
+    "title": "지반 진동 거리 감쇠 (Bornitz)",
+    "link": "chapters/vibration.html#sim-dist"
+  },
+  {
+    "id": "infrabook/vibration/sim-slab",
+    "bookId": "infrabook",
+    "title": "슬래브 고유진동수와 보행 응답",
+    "link": "chapters/vibration.html#sim-slab"
+  },
+  {
+    "id": "infrabook/vibration/sim-tr",
+    "bookId": "infrabook",
+    "title": "절연 전달률 T(f/f n , ζ)와 움직임",
+    "link": "chapters/vibration.html#sim-tr"
+  },
+  {
+    "id": "infrabook/vibration/sim-act",
+    "bookId": "infrabook",
+    "title": "바닥 스펙트럼 → 장비 스펙트럼: 수동 vs 능동",
+    "link": "chapters/vibration.html#sim-act"
+  },
+  {
+    "id": "infrabook/vibration/sim-noise",
+    "bookId": "infrabook",
+    "title": "클린룸 소음 합산기 (옥타브 밴드 + A 가중)",
+    "link": "chapters/vibration.html#sim-noise"
+  },
+  {
+    "id": "infrabook/vibration/sim-mag",
+    "bookId": "infrabook",
+    "title": "케이블 자기장 거리 계산기",
+    "link": "chapters/vibration.html#sim-mag"
+  },
+  {
+    "id": "infrabook/vibration/sim-esd",
+    "bookId": "infrabook",
+    "title": "이오나이저 전하 감쇠",
+    "link": "chapters/vibration.html#sim-esd"
+  },
+  {
+    "id": "infrabook/water/sim-caf2",
+    "bookId": "infrabook",
+    "title": "CaF₂ 침전: 약품량 · 슬러지 · 잔류 불소",
+    "link": "chapters/water.html#sim-caf2"
+  },
+  {
+    "id": "infrabook/water/sim-ph",
+    "bookId": "infrabook",
+    "title": "중화 적정 곡선과 pH 제어 여유",
+    "link": "chapters/water.html#sim-ph"
+  },
+  {
+    "id": "infrabook/water/sim-settle",
+    "bookId": "infrabook",
+    "title": "스토크스 침강과 침전조 면적",
+    "link": "chapters/water.html#sim-settle"
+  },
+  {
+    "id": "infrabook/water/sim-bio",
+    "bookId": "infrabook",
+    "title": "활성슬러지: SRT · 수온 · 세척(washout)",
+    "link": "chapters/water.html#sim-bio"
+  },
+  {
+    "id": "infrabook/water/sim-bal",
+    "bookId": "infrabook",
+    "title": "팹 물 수지: 재이용률과 원수 사용량",
+    "link": "chapters/water.html#sim-bal"
+  },
+  {
+    "id": "infrabook/water/sim-mix",
+    "bookId": "infrabook",
+    "title": "분리 처리 vs 혼합 처리: 불소 방류량과 약품",
+    "link": "chapters/water.html#sim-mix"
+  },
+  {
+    "id": "infrabook/water/sim-dry",
+    "bookId": "infrabook",
+    "title": "가뭄 시나리오: 급수 제한 · 저장량 · 절감 속도",
+    "link": "chapters/water.html#sim-dry"
   }
 ]

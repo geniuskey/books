@@ -11,7 +11,7 @@ Copyright (c) 2026 geniuskey and euiyun books contributors
 
 ## 시뮬레이터 화면 (`img/sims/`)
 
-`img/sims/`의 이미지는 각 교과서의 시뮬레이터 화면을 캡처한 것입니다. 해당 교과서의 콘텐츠로서 그 책의 라이선스(CC BY 4.0)를 따르며, 파일 이름의 앞부분이 출처 책입니다. 예: `memorybook-sim-h3.jpg` → [MemoryBook](https://memorybook.euiyun.com/) (원본: https://github.com/geniuskey/memorybook).
+`img/sims/`의 이미지는 각 교과서의 시뮬레이터 화면을 캡처한 것입니다. 해당 교과서의 콘텐츠로서 그 책의 라이선스(CC BY 4.0)를 따르며, 파일 이름의 앞부분이 출처 책입니다. 예: `memorybook-sim-h3.jpg` → [MemoryBook](https://semi.euiyun.com/memory/) (원본: https://github.com/geniuskey/semi-books/tree/main/memory).
 
 ## 재사용 조건
 

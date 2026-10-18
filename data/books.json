@@ -30,7 +30,11 @@
       "desc": "돈과 투자, 주거와 몸의 원리, 카메라와 음악처럼 생활에서 만나는 지식"
     }
   ],
-  "fieldAliases": {"ai": "computing", "housing": "money", "art": "culture"},
+  "fieldAliases": {
+    "ai": "computing",
+    "housing": "money",
+    "art": "culture"
+  },
   "fields": [
     {
       "id": "semiconductor",
@@ -133,8 +137,8 @@
       "subtitle": "반도체 소자 물리 교과서",
       "headline": "전자와 정공에서 트랜지스터까지",
       "description": "결정과 밴드, 캐리어 통계, 수송, pn 접합, 쇼트키, MOS, MOSFET, BJT, 광소자까지. 포아송·드리프트–확산 방정식을 실제로 푸는 1D 솔버로 밴드와 전류가 바뀌는 모습을 직접 봅니다.",
-      "url": "https://devicebook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/devicebook",
+      "url": "https://semi.euiyun.com/device/",
+      "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "physics",
       "status": "published",
@@ -167,7 +171,8 @@
           "link": "chapters/crystal.html#sim-lattice",
           "image": "img/sims/devicebook-sim-lattice.jpg"
         }
-      ]
+      ],
+      "checkout": "semi-books/device"
     },
     {
       "id": "digitalbook",
@@ -176,8 +181,8 @@
       "subtitle": "디지털 회로 설계 교과서",
       "headline": "0과 1을 만드는 트랜지스터",
       "description": "MOSFET 스위치와 CMOS 인버터에서 정적 게이트, 지연과 논리적 노력, 동적 논리, 래치·플립플롭과 타이밍, 덧셈기·곱셈기, SRAM, 배선, 전력과 신뢰성, HDL 합성까지. 교육용 기준 공정 DG-7 위에서 게이트 하나, 플립플롭 하나를 직접 켜고 끄고 재 보며 디지털 회로를 배웁니다.",
-      "url": "https://digitalbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/digitalbook",
+      "url": "https://semi.euiyun.com/digital/",
+      "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "design",
       "status": "published",
@@ -210,7 +215,8 @@
           "link": "chapters/inverter.html#sim-vtc",
           "image": "img/sims/digitalbook-sim-vtc.jpg"
         }
-      ]
+      ],
+      "checkout": "semi-books/digital"
     },
     {
       "id": "designbook",
@@ -219,8 +225,8 @@
       "subtitle": "반도체 설계 교과서",
       "headline": "코드에서 마스크까지",
       "description": "Verilog 코드가 게이트, 표준 셀, 배선, 타이밍 검증을 거쳐 마스크가 되기까지. 레이아웃의 사각형 하나하나가 ProcessBook의 어떤 공정이 되는지 단면으로 확인합니다.",
-      "url": "https://designbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/designbook",
+      "url": "https://semi.euiyun.com/design/",
+      "repo": "https://github.com/geniuskey/semi-books",
       "stage": "design",
       "status": "published",
       "color": "#6d3fd1",
@@ -252,7 +258,8 @@
           "link": "chapters/place.html#sim-pl",
           "image": "img/sims/designbook-sim-pl.jpg"
         }
-      ]
+      ],
+      "checkout": "semi-books/design"
     },
     {
       "id": "socbook",
@@ -261,8 +268,8 @@
       "subtitle": "시스템 온 칩 교과서",
       "headline": "손톱만 한 칩 안의 컴퓨터",
       "description": "CPU 파이프라인, 캐시와 일관성, NoC, GPU, NPU, ISP, 전력과 열, 클럭과 보안까지. 가상의 기준 칩 SB-1의 부품 하나하나를 직접 건드리고 바꿔 보며 SoC를 배웁니다.",
-      "url": "https://socbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/socbook",
+      "url": "https://semi.euiyun.com/soc/",
+      "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "design",
       "status": "published",
@@ -295,7 +302,8 @@
           "link": "chapters/noc.html#sim-mesh",
           "image": "img/sims/socbook-sim-mesh.jpg"
         }
-      ]
+      ],
+      "checkout": "semi-books/soc"
     },
     {
       "id": "analogbook",
@@ -304,8 +312,8 @@
       "subtitle": "반도체 아날로그 회로설계 교과서",
       "headline": "읽는 대신 만지는 아날로그",
       "description": "MOSFET 소신호 모델과 gm/ID에서 단일단·차동 증폭기, 주파수 응답과 피드백, 연산 증폭기 설계와 보상, 잡음·부정합, 밴드갭·LDO, 스위치드 커패시터, ADC·ΔΣ·PLL까지. 브라우저 안의 SPICE로 회로를 직접 그려 동작점과 보드 선도를 돌려 봅니다.",
-      "url": "https://analogbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/analogbook",
+      "url": "https://semi.euiyun.com/analog/",
+      "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "design",
       "status": "published",
@@ -338,7 +346,8 @@
           "link": "chapters/adc.html#sim-sar",
           "image": "img/sims/analogbook-sim-sar.jpg"
         }
-      ]
+      ],
+      "checkout": "semi-books/analog"
     },
     {
       "id": "processbook",
@@ -347,8 +356,8 @@
       "subtitle": "반도체 제조 공정 교과서",
       "headline": "모래에서 트랜지스터까지",
       "description": "노광·식각·증착·이온 주입·열처리·CMP의 조건을 바꾸면 단면이 어떻게 변하는지, 2D 공정 엔진으로 직접 계산하며 CMOS 트랜지스터를 한 단계씩 쌓아 올립니다.",
-      "url": "https://processbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/processbook",
+      "url": "https://semi.euiyun.com/process/",
+      "repo": "https://github.com/geniuskey/semi-books",
       "stage": "process",
       "status": "published",
       "level": "공대 학부",
@@ -379,7 +388,8 @@
           "image": "img/sims/processbook-sim-etch.jpg"
         }
       ],
-      "field": "semiconductor"
+      "field": "semiconductor",
+      "checkout": "semi-books/process"
     },
     {
       "id": "lithobook",
@@ -388,8 +398,8 @@
       "subtitle": "반도체 노광 교과서",
       "headline": "빛으로 회로를 새긴다",
       "description": "회절과 해상도, 마스크와 OPC, 레지스트, 공정 윈도, 오버레이, EUV, 멀티 패터닝까지. 가상의 패턴 LB-28을 레이아웃에서 식각 전사까지 일곱 단계로 옮기며 파장·NA·초점·노광량을 직접 바꿔 봅니다.",
-      "url": "https://lithobook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/lithobook",
+      "url": "https://semi.euiyun.com/litho/",
+      "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "process",
       "status": "published",
@@ -422,7 +432,8 @@
           "link": "chapters/overview.html#sim-pipe",
           "image": "img/sims/lithobook-sim-pipe.jpg"
         }
-      ]
+      ],
+      "checkout": "semi-books/litho"
     },
     {
       "id": "etchbook",
@@ -431,8 +442,8 @@
       "subtitle": "반도체 식각 교과서",
       "headline": "깎아서 새긴다",
       "description": "습식 식각부터 플라스마·시스, RIE와 이방성, 선택비, ARDE, 보잉, 마이크로트렌칭, 원자층 식각까지. 가상의 EB-20 트렌치를 따라 이온·라디칼·고분자와 시간을 바꾸며 단면이 깎이는 과정을 직접 봅니다.",
-      "url": "https://etchbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/etchbook",
+      "url": "https://semi.euiyun.com/etch/",
+      "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "process",
       "status": "published",
@@ -449,7 +460,8 @@
         "ARDE·보잉",
         "원자층 식각"
       ],
-      "motif": "etch"
+      "motif": "etch",
+      "checkout": "semi-books/etch"
     },
     {
       "id": "dopingbook",
@@ -458,8 +470,8 @@
       "subtitle": "반도체 도핑 교과서",
       "headline": "불순물로 전기를 설계한다",
       "description": "도펀트와 접합부터 이온 소스·질량 분석기·빔라인, 저지와 채널링, 손상·비정질화, 어닐·확산·TED, 열 예산과 측정까지. 가상의 DB-20 pMOS 소스/드레인 확장을 따라 에너지·도즈·각도·어닐 조건을 바꾸며 xj와 면저항이 움직이는 과정을 직접 봅니다.",
-      "url": "https://dopingbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/dopingbook",
+      "url": "https://semi.euiyun.com/doping/",
+      "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "process",
       "status": "published",
@@ -476,7 +488,8 @@
         "확산·TED",
         "면저항·측정"
       ],
-      "motif": "implant"
+      "motif": "implant",
+      "checkout": "semi-books/doping"
     },
     {
       "id": "yieldbook",
@@ -485,8 +498,8 @@
       "subtitle": "반도체 수율 분석 교과서",
       "headline": "수율은 왜 떨어졌는가",
       "description": "웨이퍼와 다이, 결함 밀도와 수율 모델, 명시야·암시야·전자빔 검사, 웨이퍼 맵의 공간 패턴에서 근본 원인까지. 가상의 사건 YB-12를 따라가며 시뮬레이터와 추리 게임으로 배웁니다.",
-      "url": "https://yieldbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/yieldbook",
+      "url": "https://semi.euiyun.com/yield/",
+      "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "process",
       "status": "published",
@@ -518,7 +531,8 @@
           "link": "chapters/detective.html#sim-detective",
           "image": "img/sims/yieldbook-sim-detective.jpg"
         }
-      ]
+      ],
+      "checkout": "semi-books/yield"
     },
     {
       "id": "failurebook",
@@ -527,8 +541,8 @@
       "subtitle": "반도체 불량 분석 교과서",
       "headline": "불량 칩에서 범인까지",
       "description": "불량 발생, 전기적 검출, 위치 추적, 층 제거, SEM·TEM·EDS, 근본 원인까지. 가상의 사건 FB-28을 따라가며 각 분석 기법이 무엇을 보여 주고 무엇을 놓치는지 시뮬레이터로 확인합니다.",
-      "url": "https://failurebook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/failurebook",
+      "url": "https://semi.euiyun.com/failure/",
+      "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "process",
       "status": "published",
@@ -560,7 +574,8 @@
           "link": "chapters/mechanisms.html#sim-lineup",
           "image": "img/sims/failurebook-sim-lineup.jpg"
         }
-      ]
+      ],
+      "checkout": "semi-books/failure"
     },
     {
       "id": "tcadbook",
@@ -569,8 +584,8 @@
       "subtitle": "반도체 TCAD 교과서",
       "headline": "웨이퍼 없이 소자를 만든다",
       "description": "이온 주입·확산·산화 공정 모사에서 격자와 이산화, 포아송·드리프트-확산 방정식, 뉴턴 반복, PN 접합·MOS 커패시터·2D MOSFET 해석, 보정과 변동성까지. 가상의 45 nm 트랜지스터 TN-45를 공정 레시피에서 I-V 곡선까지 브라우저 안에서 직접 풀어 봅니다.",
-      "url": "https://tcadbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/tcadbook",
+      "url": "https://semi.euiyun.com/tcad/",
+      "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "process",
       "status": "published",
@@ -603,7 +618,8 @@
           "link": "chapters/mosfet.html#sim-idvg",
           "image": "img/sims/tcadbook-sim-idvg.jpg"
         }
-      ]
+      ],
+      "checkout": "semi-books/tcad"
     },
     {
       "id": "packagingbook",
@@ -612,8 +628,8 @@
       "subtitle": "반도체 패키징 교과서",
       "headline": "웨이퍼에서 완성된 칩까지",
       "description": "범핑, 다이싱, 와이어 본딩, 플립칩, 몰딩부터 2.5D·TSV·HBM까지. 조건을 바꾸면 접합·휨·열·수명이 어떻게 변하는지, 패키지 단면을 한 단계씩 쌓아 보며 배웁니다.",
-      "url": "https://packagingbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/packagingbook",
+      "url": "https://semi.euiyun.com/packaging/",
+      "repo": "https://github.com/geniuskey/semi-books",
       "stage": "packaging",
       "status": "published",
       "color": "#2f9e44",
@@ -645,7 +661,8 @@
           "link": "chapters/interposer.html#sim-st",
           "image": "img/sims/packagingbook-sim-st.jpg"
         }
-      ]
+      ],
+      "checkout": "semi-books/packaging"
     },
     {
       "id": "testbook",
@@ -654,8 +671,8 @@
       "subtitle": "반도체 테스트 교과서",
       "headline": "좋은 칩과 나쁜 칩을 가르는 기술",
       "description": "테스트 장비(ATE), 프로브 카드, 폴트 모델과 스캔·BIST 같은 테스트 용이성 설계(DFT), 번인, 빈 분류, 테스트 비용까지. 가상의 모바일 SoC TB-7의 테스트 계획서를 한 장씩 채워 갑니다.",
-      "url": "https://testbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/testbook",
+      "url": "https://semi.euiyun.com/test/",
+      "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "packaging",
       "status": "published",
@@ -688,7 +705,8 @@
           "link": "chapters/limits.html#sim-sh",
           "image": "img/sims/testbook-sim-sh.jpg"
         }
-      ]
+      ],
+      "checkout": "semi-books/test"
     },
     {
       "id": "memorybook",
@@ -697,8 +715,8 @@
       "subtitle": "메모리 반도체 교과서",
       "headline": "비트 하나에서 테라바이트까지",
       "description": "트랜지스터 하나와 커패시터 하나에서 출발해 SRAM·DRAM·HBM·3D NAND·SSD·차세대 메모리까지, 슬라이더를 움직이고 3D 구조를 돌려 보며 배웁니다.",
-      "url": "https://memorybook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/memorybook",
+      "url": "https://semi.euiyun.com/memory/",
+      "repo": "https://github.com/geniuskey/semi-books",
       "stage": "device",
       "status": "published",
       "level": "공대 학부",
@@ -728,7 +746,8 @@
           "image": "img/sims/memorybook-sim-vn3d.jpg"
         }
       ],
-      "field": "semiconductor"
+      "field": "semiconductor",
+      "checkout": "semi-books/memory"
     },
     {
       "id": "opticsbook",
@@ -737,8 +756,8 @@
       "subtitle": "이미지 센서를 위한 광학 교과서",
       "headline": "렌즈를 지나 실리콘에 닿기까지",
       "description": "기하광학과 파동광학에서 간섭·회절·편광, 박막 TMM, PSF·MTF, CRA와 마이크로렌즈, RCWA·FDTD까지 — 빛이 렌즈를 지나 1 µm도 안 되는 픽셀에 흡수되기까지를 슬라이더로 직접 계산하며 배웁니다.",
-      "url": "https://opticsbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/opticsbook",
+      "url": "https://semi.euiyun.com/optics/",
+      "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "physics",
       "status": "published",
@@ -755,7 +774,8 @@
         "픽셀 광학 스택",
         "RCWA·FDTD"
       ],
-      "motif": "lens"
+      "motif": "lens",
+      "checkout": "semi-books/optics"
     },
     {
       "id": "sensorbook",
@@ -764,8 +784,8 @@
       "subtitle": "이미지 센서 교과서",
       "headline": "광자 하나에서 사진 한 장까지",
       "description": "빛의 물리부터 포토다이오드, 마이크로렌즈, 픽셀 회로, 노이즈, ISP까지 — 1 µm도 안 되는 픽셀 안에서 일어나는 일을 시뮬레이터와 3D로 따라갑니다.",
-      "url": "https://sensorbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/sensorbook",
+      "url": "https://semi.euiyun.com/sensor/",
+      "repo": "https://github.com/geniuskey/semi-books",
       "stage": "device",
       "status": "published",
       "level": "공대 학부",
@@ -795,7 +815,8 @@
           "image": "img/sims/sensorbook-sim-dm.jpg"
         }
       ],
-      "field": "semiconductor"
+      "field": "semiconductor",
+      "checkout": "semi-books/sensor"
     },
     {
       "id": "displaybook",
@@ -804,8 +825,8 @@
       "subtitle": "디스플레이 교과서",
       "headline": "전자 하나에서 빛나는 화면까지",
       "description": "색채 과학, TFT, LCD, OLED, 마이크로LED, HDR, 구동 회로부터 폴더블과 XR까지. 서브픽셀을 확대하고 OLED 적층을 돌려 보며 디스플레이가 빛을 만드는 원리를 배웁니다.",
-      "url": "https://displaybook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/displaybook",
+      "url": "https://semi.euiyun.com/display/",
+      "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "device",
       "status": "published",
@@ -838,7 +859,8 @@
           "link": "chapters/color.html#sim-gamut",
           "image": "img/sims/displaybook-sim-gamut.jpg"
         }
-      ]
+      ],
+      "checkout": "semi-books/display"
     },
     {
       "id": "gpubook",
@@ -880,8 +902,8 @@
       "subtitle": "반도체 산업 지도",
       "headline": "칩 하나를 누가 만드는가",
       "description": "설계 도구와 IP, 팹리스, 장비·소재, 파운드리·메모리, 패키징부터 시장과 지정학까지. 반도체 산업의 가치사슬을 지도와 시뮬레이터로 살펴봅니다.",
-      "url": "https://chipindustrybook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/chipindustrybook",
+      "url": "https://semi.euiyun.com/industry/",
+      "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "status": "published",
       "level": "대학·일반",
@@ -897,7 +919,8 @@
         "공급망·지정학"
       ],
       "stage": "industry",
-      "motif": "globe"
+      "motif": "globe",
+      "checkout": "semi-books/industry"
     },
     {
       "id": "computerbook",
@@ -2096,21 +2119,34 @@
       "stage": "process"
     },
     {
-      "id": "fabinfrabook",
+      "id": "infrabook",
       "code": "FAB",
       "title": "FabInfraBook",
       "subtitle": "반도체 팹 인프라",
-      "description": "클린룸과 공조, 초순수, 특수가스·케미컬, 진공·배기, 전력·냉각과 폐수·배출 처리까지. 공정 장비를 안정적으로 가동하는 팹의 공급망과 설비를 연결합니다.",
+      "description": "클린룸과 공조, 초순수, 가스·케미컬 공급, 배기·스크러버, 폐수와 물 재이용, 전력과 전력 품질, 냉동·냉각수, 진동, 물류 자동화, 가스 안전, 운영 신뢰성, 에너지·탄소, 팹 건설까지. 가상 기준 팹 FAB-E의 숫자로 직접 계산하며 배우는 반도체 인프라 교과서.",
       "field": "semiconductor",
-      "status": "planned",
-      "phase": 2,
-      "ideas": [
-        "클린룸·공조·초순수",
-        "가스·진공·배기·처리",
-        "전력·냉각·설비 신뢰성"
-      ],
+      "status": "published",
       "stage": "industry",
-      "motif": "fab"
+      "motif": "fab",
+      "url": "https://semi.euiyun.com/infra/",
+      "repo": "https://github.com/geniuskey/semi-books",
+      "checkout": "semi-books/infra",
+      "headline": "팹을 움직이는 보이지 않는 공장",
+      "chapters": 18,
+      "color": "#2f5f96",
+      "colorDark": "#8db8ea",
+      "topics": [
+        "클린룸·공조",
+        "초순수·폐수",
+        "가스·케미컬",
+        "배기·스크러버",
+        "전력 품질",
+        "냉동·냉각수",
+        "진동·AMHS",
+        "안전·신뢰성·탄소"
+      ],
+      "level": "공대 학부",
+      "simulators": 129
     },
     {
       "id": "guitarbook",

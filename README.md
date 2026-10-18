@@ -212,3 +212,5 @@ node tools/check-models.cjs
 2026-10-18 독자 요청으로 전자기학·열역학·재료공학·플라즈마공학, 산화·박막 증착·CMP·세정·팹 인프라, 기타·피아노·드럼을 다루는 교과서 10권을 후속 집필 예정에 추가했습니다. 확정 출간일은 없으며 기존 공정 전문 교과서와 연결합니다.
 
 [과학 교과서 SciBook](https://science.euiyun.com/)은 형제 저장소 `../science-books`에서 관리합니다. `data/books.json`의 `sisterBooks`에 실제 과목 ID(`general-chemistry`, `general-physics`)와 URL·상태를 기록하며, Books 출간 진행률과는 별도로 로드맵에 표시합니다. 이 목록은 과학 교과서의 피드백 링크 검증과 관련 책 선택에도 사용합니다. 과목 상태가 바뀌거나 과목을 공개하면 함께 갱신하세요.
+
+반도체 교과서는 [SemiBooks](https://semi.euiyun.com/)에서 통합 관리합니다. 책 주소는 `https://semi.euiyun.com/{slug}/`이며, 산업 지도는 `industry`, 팹 인프라는 `infra`를 사용합니다. `books.json`의 기존 출간 책 ID는 유지하고 `checkout`은 `semi-books/{slug}`를 가리켜 실험 목록도 통합 저장소에서 수집합니다. 팹 인프라는 집필을 완료해 출간 상태로 등록했으며, 통합 사이트의 독자 의견 링크와 맞춰 ID를 `infrabook`으로 사용합니다. 일부 책만 갱신할 때는 `python3 tools/collect-experiments.py --book infrabook`처럼 `--book`을 반복 지정하면 나머지 책의 실험 스냅샷을 보존합니다.
