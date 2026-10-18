@@ -5,7 +5,13 @@
       "bookId": "yieldbook",
       "sourceFile": "js/wafer.js",
       "sourceSha256": "7e0606db71f73440f3169c456172260b02d7078e682692831256bf3e6cca570b",
-      "checkedOn": "2026-10-04",
+      "functionSha256": {
+        "murphy": "1a3eaa577a53dede6bff7f0096bd38311834e20e76b5b5c6692f52fa52591391",
+        "negbin": "512de022225551e50bad172c140f4512461db53a9b237349c031d8d7b0699d04",
+        "poisson": "34a1fd841da1dcd615b3f4d110beb815cbd672ba11a4ec8a53fca3b079f0648d",
+        "seeds": "8650ce2f470027d5142966829fdcee3360e2bf60e0aa74112b79c6eaea59216d"
+      },
+      "checkedOn": "2026-10-18",
       "reviewer": "automated reference cases",
       "summary": "푸아송·머피·시즈·음이항 수율식의 기준값과 경계값 확인. 화면 연결과 실제 공정 예측력은 검증하지 않음.",
       "method": "책의 수율식에서 독립적으로 계산한 값과 실행 중인 WM.Y 함수 비교",
@@ -24,8 +30,12 @@
     "computerbook/bits/sim-bin": {
       "bookId": "computerbook",
       "sourceFile": "js/common.js",
-      "sourceSha256": "478b626bbbaa11a6dae40e7aba953c9a790876ca048bd800c27ffd73b4d472af",
-      "checkedOn": "2026-10-04",
+      "sourceSha256": "c3ab6930e25dfa647c821bde74bbc3758a895337895b88c878227dfbfd4e3144",
+      "functionSha256": {
+        "bin": "6d20c204dd12e3b08d8cc0263e3aa980888e297a7554609e25c24853fcd946e1",
+        "hex": "eefa953b28f3fe6f2b10dbc8b0df0ec14d1ca8100f07fa569769dfe2787b9e0f"
+      },
+      "checkedOn": "2026-10-18",
       "reviewer": "automated reference cases",
       "summary": "8비트·16진수 변환의 0, 13, 255 기준 사례 확인. 화면 조작 전체는 검증하지 않음.",
       "method": "독립적인 자릿값 표기와 실행 중인 CB.bin·CB.hex 함수 비교",

@@ -13,12 +13,24 @@ for (const [id, record] of Object.entries(records)) {
   const sourcePath = resolve(root, '..', record.bookId, record.sourceFile);
   if (!existsSync(sourcePath)) { skipped++; continue; }
   const source = readFileSync(sourcePath, 'utf8').replace(/\r\n/g, '\n');
-  const hash = createHash('sha256').update(source).digest('hex');
-  assert.equal(hash, record.sourceSha256, `${id}: model source changed; rerun reference review`);
   const window = {};
-  const document = { readyState: 'loading', addEventListener() {} };
-  vm.runInNewContext(source, { window, document }, { filename: sourcePath, timeout: 5000 });
+  // Load helpers without running DOM-ready handlers or fetching UI scripts.
+  const document = {
+    readyState: 'loading', addEventListener() {},
+    currentScript: { src: `https://example.test/${record.bookId}/${record.sourceFile}` },
+    createElement() { return {}; }, head: { append() {} },
+  };
+  vm.runInNewContext(source, { window, document, URL }, { filename: sourcePath, timeout: 5000 });
   const api = record.bookId === 'yieldbook' ? window.WM.Y : window.CB;
+  const names = [...new Set(record.cases.map(example => example.function))].sort();
+  assert.deepEqual(Object.keys(record.functionSha256 || {}).sort(), names,
+    `${id}: functionSha256 must cover every reference function`);
+  for (const name of names) {
+    assert.equal(typeof api[name], 'function', `${id}: missing ${name}`);
+    const hash = createHash('sha256').update(Function.prototype.toString.call(api[name])).digest('hex');
+    assert.equal(hash, record.functionSha256[name],
+      `${id}: ${name} model function changed; review reference cases and update functionSha256 (actual: ${hash})`);
+  }
   for (const example of record.cases) {
     assert.equal(typeof api[example.function], 'function', `${id}: missing ${example.function}`);
     const actual = api[example.function](...example.args);

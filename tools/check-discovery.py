@@ -113,7 +113,7 @@ for eid, e in learning['experiments'].items():
         check(bool(e['description'].strip()), f'Empty experiment description: {eid}')
 for eid, record in validation.items():
     check(record.get('bookId') == eid.split('/')[0], f'Validation book mismatch: {eid}')
-    for key in ('sourceFile', 'sourceSha256', 'checkedOn', 'reviewer', 'summary', 'method', 'reference'):
+    for key in ('sourceFile', 'sourceSha256', 'functionSha256', 'checkedOn', 'reviewer', 'summary', 'method', 'reference'):
         check(bool(record.get(key)), f'Missing validation {key}: {eid}')
     check(bool(record.get('cases')), f'No reference cases: {eid}')
 for p in learning['paths']:
