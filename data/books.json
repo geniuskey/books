@@ -364,7 +364,7 @@
         "CMP",
         "FinFET·GAA"
       ],
-      "motif": "layers",
+      "motif": "process",
       "featured": [
         {
           "title": "트랜지스터 구조 비교",
@@ -449,7 +449,7 @@
         "ARDE·보잉",
         "원자층 식각"
       ],
-      "motif": "layers"
+      "motif": "etch"
     },
     {
       "id": "dopingbook",
@@ -2109,7 +2109,8 @@
         "가스·진공·배기·처리",
         "전력·냉각·설비 신뢰성"
       ],
-      "stage": "industry"
+      "stage": "industry",
+      "motif": "fab"
     },
     {
       "id": "guitarbook",
