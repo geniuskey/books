@@ -447,7 +447,7 @@ section.block { padding: 56px 0; border-top: 1px solid var(--border); }
 @keyframes cv-draw { 6% { stroke-dashoffset: 0; opacity: 0; } 7% { stroke-dashoffset: 1; opacity: 1; } 80%, to { stroke-dashoffset: 0; } }
 .cv-depth { transform-box: fill-box; transform-origin: right center; animation: cv-depth 1.8s ease-in-out infinite; }
 @keyframes cv-depth { 50% { transform: scaleX(.5); } }
-/* fab · process · etch: made for SemiBooks and shared with the books portal, MIT.
+/* fab · process · etch · cmp: made for SemiBooks and shared with the books portal, MIT.
    Their un-animated markup equals the first frame, so dropping the animation still leaves a finished picture. */
 /* fab: OHT travels the ceiling rail, stops over the load port and lowers its FOUP. */
 .fb-oht { animation: fb-oht 6s ease-in-out infinite; }
@@ -502,6 +502,16 @@ section.block { padding: 56px 0; border-top: 1px solid var(--border); }
 @keyframes et-out { 0% { transform: scale(.6); opacity: 0; } 20% { opacity: .95; } 100% { transform: translate(var(--ox), -46px) scale(1.25); opacity: 0; } }
 .et-drift { animation: et-drift 2.4s ease-in-out infinite alternate; }
 @keyframes et-drift { to { transform: translate(4px, -2px); } }
+
+/* cmp: slurry drips, the head presses, the conditioner sweeps, and the high spots in the inset are polished flat. */
+.cm-drop { animation: cm-drop 1.35s ease-in infinite; }
+@keyframes cm-drop { 0% { transform: none; opacity: 0; } 10%, 80% { opacity: 1; } 100% { transform: translateY(32px); opacity: 0; } }
+.cm-head { animation: cm-head 3s ease-in-out infinite alternate; }
+@keyframes cm-head { to { transform: translateY(2px); } }
+.cm-sweep { transform-box: view-box; transform-origin: 196px 64px; animation: cm-sweep 4s ease-in-out infinite alternate; }
+@keyframes cm-sweep { from { transform: rotate(-9deg); } to { transform: rotate(9deg); } }
+.cm-flat { transform-box: fill-box; transform-origin: bottom; animation: cm-flat 6s ease-in-out infinite; }
+@keyframes cm-flat { 0%, 8% { transform: none; } 60%, 88% { transform: scaleY(0); } 100% { transform: none; } }
 @media (prefers-reduced-motion: reduce) { .cover-art * { animation: none !important; } .cover-art { transition: none; } }
 
 /* ---------- 홈의 대표 실험 ---------- */

@@ -30708,6 +30708,864 @@
     "link": "chapters/sustain.html#sim-pk"
   },
   {
+    "id": "cmpbook/advanced/sim-hb-anneal",
+    "bookId": "cmpbook",
+    "title": "어닐 온도와 구리 리세스: 틈이 닫히는가",
+    "link": "chapters/advanced.html#sim-hb-anneal"
+  },
+  {
+    "id": "cmpbook/advanced/sim-hb-map",
+    "bookId": "cmpbook",
+    "title": "다이 리세스 지도: 패드 크기·밀도·버프 선택비",
+    "link": "chapters/advanced.html#sim-hb-map"
+  },
+  {
+    "id": "cmpbook/advanced/sim-hb-void",
+    "bookId": "cmpbook",
+    "title": "접합파와 입자 보이드: 다이 몇 개가 죽는가",
+    "link": "chapters/advanced.html#sim-hb-void"
+  },
+  {
+    "id": "cmpbook/advanced/sim-hb-thin",
+    "bookId": "cmpbook",
+    "title": "후면 박화: 연삭 TTV, CMP, 식각 정지막 과식각",
+    "link": "chapters/advanced.html#sim-hb-thin"
+  },
+  {
+    "id": "cmpbook/advanced/sim-hb-tsv",
+    "bookId": "cmpbook",
+    "title": "TSV 노출 몬테카를로: 못 머리 높이 분포",
+    "link": "chapters/advanced.html#sim-hb-tsv"
+  },
+  {
+    "id": "cmpbook/advanced/sim-hb-bow",
+    "bookId": "cmpbook",
+    "title": "Stoney 휨: 막 응력, 박화, 후면 보상",
+    "link": "chapters/advanced.html#sim-hb-bow"
+  },
+  {
+    "id": "cmpbook/advanced/sim-hb-coo",
+    "bookId": "cmpbook",
+    "title": "웨이퍼 한 장의 CMP 비용 분해",
+    "link": "chapters/advanced.html#sim-hb-coo"
+  },
+  {
+    "id": "cmpbook/advanced/sim-hb-vm",
+    "bookId": "cmpbook",
+    "title": "ML 가상 계측: 센서로 제거율 예측하기",
+    "link": "chapters/advanced.html#sim-hb-vm"
+  },
+  {
+    "id": "cmpbook/cleanbasics/sim-life",
+    "bookId": "cmpbook",
+    "title": "금속 오염 → 수명·누설·문턱 전압",
+    "link": "chapters/cleanbasics.html#sim-life"
+  },
+  {
+    "id": "cmpbook/cleanbasics/sim-adh",
+    "bookId": "cmpbook",
+    "title": "부착력 vs 제거력: 입자 크기 교차점",
+    "link": "chapters/cleanbasics.html#sim-adh"
+  },
+  {
+    "id": "cmpbook/cleanbasics/sim-bl",
+    "bookId": "cmpbook",
+    "title": "경계층 항력 애니메이션: 누가 굴러가나",
+    "link": "chapters/cleanbasics.html#sim-bl"
+  },
+  {
+    "id": "cmpbook/cleanbasics/sim-zeta",
+    "bookId": "cmpbook",
+    "title": "제타 전위 짝짓기와 DLVO 재부착 장벽",
+    "link": "chapters/cleanbasics.html#sim-zeta"
+  },
+  {
+    "id": "cmpbook/cleanbasics/sim-sc1",
+    "bookId": "cmpbook",
+    "title": "SC1 들어 올림 동역학: 식각량과 입자 제거율",
+    "link": "chapters/cleanbasics.html#sim-sc1"
+  },
+  {
+    "id": "cmpbook/cleanbasics/sim-dhf",
+    "bookId": "cmpbook",
+    "title": "DHF 식각과 소수성 전이: 접촉각 물방울",
+    "link": "chapters/cleanbasics.html#sim-dhf"
+  },
+  {
+    "id": "cmpbook/cleanbasics/sim-metal",
+    "bookId": "cmpbook",
+    "title": "약액 속 금속 → 웨이퍼 표면 농도",
+    "link": "chapters/cleanbasics.html#sim-metal"
+  },
+  {
+    "id": "cmpbook/cleanbasics/sim-seq",
+    "bookId": "cmpbook",
+    "title": "세정 시퀀스 빌더: 오염별 잔류량",
+    "link": "chapters/cleanbasics.html#sim-seq"
+  },
+  {
+    "id": "cmpbook/conditioning/sim-decay",
+    "bookId": "cmpbook",
+    "title": "제거율 감소와 회복: 컨디셔닝 방식 비교",
+    "link": "chapters/conditioning.html#sim-decay"
+  },
+  {
+    "id": "cmpbook/conditioning/sim-disk",
+    "bookId": "cmpbook",
+    "title": "활성 다이아몬드 계산기: 돌출 산포와 하중 분배",
+    "link": "chapters/conditioning.html#sim-disk"
+  },
+  {
+    "id": "cmpbook/conditioning/sim-cut",
+    "bookId": "cmpbook",
+    "title": "절삭률: 하중·속도·디스크 마모와 패드 수명",
+    "link": "chapters/conditioning.html#sim-cut"
+  },
+  {
+    "id": "cmpbook/conditioning/sim-sweep",
+    "bookId": "cmpbook",
+    "title": "스윕 레시피 → 패드 마모 분포 (반지름별 적분)",
+    "link": "chapters/conditioning.html#sim-sweep"
+  },
+  {
+    "id": "cmpbook/conditioning/sim-rough",
+    "bookId": "cmpbook",
+    "title": "표면 진화: 다이아몬드 홈 파기 vs 글레이징, Rpk와 제거율",
+    "link": "chapters/conditioning.html#sim-rough"
+  },
+  {
+    "id": "cmpbook/conditioning/sim-traj",
+    "bookId": "cmpbook",
+    "title": "컨디셔너 궤적 애니메이션: 패드 좌표계의 다이아몬드 길",
+    "link": "chapters/conditioning.html#sim-traj"
+  },
+  {
+    "id": "cmpbook/conditioning/sim-life",
+    "bookId": "cmpbook",
+    "title": "패드 두께 모니터링: 절삭률 추정, 하중 보상, 교체 시점",
+    "link": "chapters/conditioning.html#sim-life"
+  },
+  {
+    "id": "cmpbook/conditioning/sim-pull",
+    "bookId": "cmpbook",
+    "title": "다이아몬드 탈락 → 스크래치 몬테카를로",
+    "link": "chapters/conditioning.html#sim-pull"
+  },
+  {
+    "id": "cmpbook/copper/sim-flow",
+    "bookId": "cmpbook",
+    "title": "듀얼 다마신 공정 단계 따라가기",
+    "link": "chapters/copper.html#sim-flow"
+  },
+  {
+    "id": "cmpbook/copper/sim-3step",
+    "bookId": "cmpbook",
+    "title": "3단계 레시피 시뮬레이터: 필드·조밀 어레이·넓은 선",
+    "link": "chapters/copper.html#sim-3step"
+  },
+  {
+    "id": "cmpbook/copper/sim-bta",
+    "bookId": "cmpbook",
+    "title": "BTA 농도와 압력: 동적 제거율 vs 정적 식각률",
+    "link": "chapters/copper.html#sim-bta"
+  },
+  {
+    "id": "cmpbook/copper/sim-evans",
+    "bookId": "cmpbook",
+    "title": "에반스 다이어그램: 혼성 전위와 갈바닉 결합",
+    "link": "chapters/copper.html#sim-evans"
+  },
+  {
+    "id": "cmpbook/copper/sim-res",
+    "bookId": "cmpbook",
+    "title": "디싱·이로전 → 배선 저항 계산기",
+    "link": "chapters/copper.html#sim-res"
+  },
+  {
+    "id": "cmpbook/copper/sim-clear",
+    "bookId": "cmpbook",
+    "title": "웨이퍼 클리어 지도와 오버폴리시",
+    "link": "chapters/copper.html#sim-clear"
+  },
+  {
+    "id": "cmpbook/copper/sim-lowk",
+    "bookId": "cmpbook",
+    "title": "저유전막 손상 위험 vs 하중",
+    "link": "chapters/copper.html#sim-lowk"
+  },
+  {
+    "id": "cmpbook/copper/sim-3d",
+    "bookId": "cmpbook",
+    "title": "다마신 배선 스택 연마 3D",
+    "link": "chapters/copper.html#sim-3d"
+  },
+  {
+    "id": "cmpbook/defects/sim-lpc",
+    "bookId": "cmpbook",
+    "title": "입자 크기 꼬리, 필터, 스크래치 수",
+    "link": "chapters/defects.html#sim-lpc"
+  },
+  {
+    "id": "cmpbook/defects/sim-scr",
+    "bookId": "cmpbook",
+    "title": "스크래치 생성기: 입자·하중 → 깊이와 호 무늬",
+    "link": "chapters/defects.html#sim-scr"
+  },
+  {
+    "id": "cmpbook/defects/sim-dfi",
+    "bookId": "cmpbook",
+    "title": "암시야 검사 감도: 산란 신호, 헤이즈, 문턱",
+    "link": "chapters/defects.html#sim-dfi"
+  },
+  {
+    "id": "cmpbook/defects/sim-game",
+    "bookId": "cmpbook",
+    "title": "결함 지도 판독 게임: 원인을 맞혀라",
+    "link": "chapters/defects.html#sim-game"
+  },
+  {
+    "id": "cmpbook/defects/sim-cor",
+    "bookId": "cmpbook",
+    "title": "대기 시간 동안 자라는 부식 피트",
+    "link": "chapters/defects.html#sim-cor"
+  },
+  {
+    "id": "cmpbook/defects/sim-ca",
+    "bookId": "cmpbook",
+    "title": "Cu 잔류 단락: 배선 간격과 임계 면적",
+    "link": "chapters/defects.html#sim-ca"
+  },
+  {
+    "id": "cmpbook/defects/sim-yld",
+    "bookId": "cmpbook",
+    "title": "결함 밀도 → 수율: 푸아송 vs 음이항, 다이 지도",
+    "link": "chapters/defects.html#sim-yld"
+  },
+  {
+    "id": "cmpbook/defects/sim-par",
+    "bookId": "cmpbook",
+    "title": "파레토 차트 만들기: 개수 기준 vs 킬러 기준",
+    "link": "chapters/defects.html#sim-par"
+  },
+  {
+    "id": "cmpbook/endpoint/sim-mc",
+    "bookId": "cmpbook",
+    "title": "패드 수명 1,200장: 시간 연마 vs 종점 연마",
+    "link": "chapters/endpoint.html#sim-mc"
+  },
+  {
+    "id": "cmpbook/endpoint/sim-tq",
+    "bookId": "cmpbook",
+    "title": "모터 토크 종점: 필터·문턱·오검출",
+    "link": "chapters/endpoint.html#sim-tq"
+  },
+  {
+    "id": "cmpbook/endpoint/sim-spec",
+    "bookId": "cmpbook",
+    "title": "반사 스펙트럼 R(λ, d) 계산기",
+    "link": "chapters/endpoint.html#sim-spec"
+  },
+  {
+    "id": "cmpbook/endpoint/sim-live",
+    "bookId": "cmpbook",
+    "title": "실시간 광학 종점: 반사율 트레이스와 스펙트럼 피팅",
+    "link": "chapters/endpoint.html#sim-live"
+  },
+  {
+    "id": "cmpbook/endpoint/sim-ec",
+    "bookId": "cmpbook",
+    "title": "와전류 신호 vs 금속 두께와 주파수",
+    "link": "chapters/endpoint.html#sim-ec"
+  },
+  {
+    "id": "cmpbook/endpoint/sim-r2r",
+    "bookId": "cmpbook",
+    "title": "EWMA 런투런 제어: 100로트와 λ의 선택",
+    "link": "chapters/endpoint.html#sim-r2r"
+  },
+  {
+    "id": "cmpbook/endpoint/sim-ff",
+    "bookId": "cmpbook",
+    "title": "네 가지 전략: 고정 · 피드백 · 피드포워드 · 둘 다",
+    "link": "chapters/endpoint.html#sim-ff"
+  },
+  {
+    "id": "cmpbook/endpoint/sim-mz",
+    "bookId": "cmpbook",
+    "title": "4구역 압력 폐루프: 웨이퍼마다 프로파일 보정",
+    "link": "chapters/endpoint.html#sim-mz"
+  },
+  {
+    "id": "cmpbook/glossary/sim-cm",
+    "bookId": "cmpbook",
+    "title": "장 사이 공유 용어 네트워크",
+    "link": "chapters/glossary.html#sim-cm"
+  },
+  {
+    "id": "cmpbook/glossary/sim-fc",
+    "bookId": "cmpbook",
+    "title": "플래시 카드",
+    "link": "chapters/glossary.html#sim-fc"
+  },
+  {
+    "id": "cmpbook/kinematics/sim-vfield",
+    "bookId": "cmpbook",
+    "title": "웨이퍼 위 상대 속도장",
+    "link": "chapters/kinematics.html#sim-vfield"
+  },
+  {
+    "id": "cmpbook/kinematics/sim-traj",
+    "bookId": "cmpbook",
+    "title": "궤적 그리기: 패드 좌표 vs 웨이퍼 좌표",
+    "link": "chapters/kinematics.html#sim-traj"
+  },
+  {
+    "id": "cmpbook/kinematics/sim-avg",
+    "bookId": "cmpbook",
+    "title": "시간 평균 속도와 반경 RR 분포",
+    "link": "chapters/kinematics.html#sim-avg"
+  },
+  {
+    "id": "cmpbook/kinematics/sim-wiwnu",
+    "bookId": "cmpbook",
+    "title": "WIWNU 계산기: 정의·EE·측정 점 배치",
+    "link": "chapters/kinematics.html#sim-wiwnu"
+  },
+  {
+    "id": "cmpbook/kinematics/sim-edge",
+    "bookId": "cmpbook",
+    "title": "가장자리 압력: 패드 탄성 + 리테이너 링",
+    "link": "chapters/kinematics.html#sim-edge"
+  },
+  {
+    "id": "cmpbook/kinematics/sim-zone",
+    "bookId": "cmpbook",
+    "title": "다중 구역 헤드 튜닝",
+    "link": "chapters/kinematics.html#sim-zone"
+  },
+  {
+    "id": "cmpbook/kinematics/sim-slurry",
+    "bookId": "cmpbook",
+    "title": "슬러리 수송 입자 추적",
+    "link": "chapters/kinematics.html#sim-slurry"
+  },
+  {
+    "id": "cmpbook/kinematics/sim-3d",
+    "bookId": "cmpbook",
+    "title": "회전형 연마기와 패드 위 궤적",
+    "link": "chapters/kinematics.html#sim-3d"
+  },
+  {
+    "id": "cmpbook/metals/sim-fenton",
+    "bookId": "cmpbook",
+    "title": "W 제거율: 산화제·철 촉매·압력과 포트 라이프",
+    "link": "chapters/metals.html#sim-fenton"
+  },
+  {
+    "id": "cmpbook/metals/sim-plug",
+    "bookId": "cmpbook",
+    "title": "W 플러그 CMP: 리세스·산화막 손실·키홀 노출",
+    "link": "chapters/metals.html#sim-plug"
+  },
+  {
+    "id": "cmpbook/metals/sim-key",
+    "bookId": "cmpbook",
+    "title": "키홀 노출 확률: 몬테카를로 vs 해석해",
+    "link": "chapters/metals.html#sim-key"
+  },
+  {
+    "id": "cmpbook/metals/sim-rmg",
+    "bookId": "cmpbook",
+    "title": "RMG 게이트 높이 예산 계산기",
+    "link": "chapters/metals.html#sim-rmg"
+  },
+  {
+    "id": "cmpbook/metals/sim-galv",
+    "bookId": "cmpbook",
+    "title": "갈바닉 결합 계산기: Co·Cu·Ru·W·Mo·TiN·Ta",
+    "link": "chapters/metals.html#sim-galv"
+  },
+  {
+    "id": "cmpbook/metals/sim-pourbaix",
+    "bookId": "cmpbook",
+    "title": "단순화 푸르베 도표: W · Co · Ru · Cu",
+    "link": "chapters/metals.html#sim-pourbaix"
+  },
+  {
+    "id": "cmpbook/metals/sim-sel",
+    "bookId": "cmpbook",
+    "title": "선택비 행렬 탐색기: 막 조합 × 슬러리 → 제거 시간표",
+    "link": "chapters/metals.html#sim-sel"
+  },
+  {
+    "id": "cmpbook/metals/sim-thick",
+    "bookId": "cmpbook",
+    "title": "후막 CMP: 평탄화 길이와 페리 손실",
+    "link": "chapters/metals.html#sim-thick"
+  },
+  {
+    "id": "cmpbook/overview/sim-stack",
+    "bookId": "cmpbook",
+    "title": "배선 5층 쌓기: 평탄화 없음 vs 층마다 CMP",
+    "link": "chapters/overview.html#sim-stack"
+  },
+  {
+    "id": "cmpbook/overview/sim-dof",
+    "bookId": "cmpbook",
+    "title": "초점 심도와 허용 단차",
+    "link": "chapters/overview.html#sim-dof"
+  },
+  {
+    "id": "cmpbook/overview/sim-plen",
+    "bookId": "cmpbook",
+    "title": "평탄화 길이로 보는 기법 비교",
+    "link": "chapters/overview.html#sim-plen"
+  },
+  {
+    "id": "cmpbook/overview/sim-eb",
+    "bookId": "cmpbook",
+    "title": "희생막 에치백: 도포 평탄도와 선택비",
+    "link": "chapters/overview.html#sim-eb"
+  },
+  {
+    "id": "cmpbook/overview/sim-pr",
+    "bookId": "cmpbook",
+    "title": "프레스턴 식으로 막 깎기",
+    "link": "chapters/overview.html#sim-pr"
+  },
+  {
+    "id": "cmpbook/overview/sim-flow",
+    "bookId": "cmpbook",
+    "title": "CMP 단계 탐색기: 무엇을 깎고 어디서 멈추나",
+    "link": "chapters/overview.html#sim-flow"
+  },
+  {
+    "id": "cmpbook/overview/sim-tool3d",
+    "bookId": "cmpbook",
+    "title": "연마 스테이션 돌려 보기",
+    "link": "chapters/overview.html#sim-tool3d"
+  },
+  {
+    "id": "cmpbook/overview/sim-pipe",
+    "bookId": "cmpbook",
+    "title": "장비 파이프라인과 처리량",
+    "link": "chapters/overview.html#sim-pipe"
+  },
+  {
+    "id": "cmpbook/overview/sim-wiw",
+    "bookId": "cmpbook",
+    "title": "49점 맵과 WIWNU·WTWNU",
+    "link": "chapters/overview.html#sim-wiw"
+  },
+  {
+    "id": "cmpbook/overview/sim-coo",
+    "bookId": "cmpbook",
+    "title": "웨이퍼당 CMP 비용 어림",
+    "link": "chapters/overview.html#sim-coo"
+  },
+  {
+    "id": "cmpbook/oxide/sim-hyd",
+    "bookId": "cmpbook",
+    "title": "화학·기계 직렬 모델과 수화층",
+    "link": "chapters/oxide.html#sim-hyd"
+  },
+  {
+    "id": "cmpbook/oxide/sim-sti",
+    "bookId": "cmpbook",
+    "title": "STI 공정 스테퍼: 단면이 만들어지고 깎이는 과정",
+    "link": "chapters/oxide.html#sim-sti"
+  },
+  {
+    "id": "cmpbook/oxide/sim-sel",
+    "bookId": "cmpbook",
+    "title": "pH·첨가제와 산화막:질화막 선택비",
+    "link": "chapters/oxide.html#sim-sel"
+  },
+  {
+    "id": "cmpbook/oxide/sim-np",
+    "bookId": "cmpbook",
+    "title": "비프레스턴 제거율과 업·다운 압력",
+    "link": "chapters/oxide.html#sim-np"
+  },
+  {
+    "id": "cmpbook/oxide/sim-ss",
+    "bookId": "cmpbook",
+    "title": "자기 정지: 세리아 vs 실리카 단차 제거 경주",
+    "link": "chapters/oxide.html#sim-ss"
+  },
+  {
+    "id": "cmpbook/oxide/sim-selc",
+    "bookId": "cmpbook",
+    "title": "선택비·오버폴리시 계산기",
+    "link": "chapters/oxide.html#sim-selc"
+  },
+  {
+    "id": "cmpbook/oxide/sim-dish",
+    "bookId": "cmpbook",
+    "title": "STI 디싱 대 트렌치 폭: 세리아 vs 실리카",
+    "link": "chapters/oxide.html#sim-dish"
+  },
+  {
+    "id": "cmpbook/oxide/sim-mc",
+    "bookId": "cmpbook",
+    "title": "질화막 잔막 웨이퍼 지도 몬테카를로",
+    "link": "chapters/oxide.html#sim-mc"
+  },
+  {
+    "id": "cmpbook/oxide/sim-ep",
+    "bookId": "cmpbook",
+    "title": "모터 토크 종점 검출",
+    "link": "chapters/oxide.html#sim-ep"
+  },
+  {
+    "id": "cmpbook/pad/sim-dma",
+    "bookId": "cmpbook",
+    "title": "DMA: 온도에 따른 저장 탄성률과 경도",
+    "link": "chapters/pad.html#sim-dma"
+  },
+  {
+    "id": "cmpbook/pad/sim-pore",
+    "bookId": "cmpbook",
+    "title": "기공 단면 생성기: 다공도·기공 지름과 표면",
+    "link": "chapters/pad.html#sim-pore"
+  },
+  {
+    "id": "cmpbook/pad/sim-stack",
+    "bookId": "cmpbook",
+    "title": "적층 패드의 압력 전달: 패턴 압력과 파장 응답",
+    "link": "chapters/pad.html#sim-stack"
+  },
+  {
+    "id": "cmpbook/pad/sim-gw",
+    "bookId": "cmpbook",
+    "title": "그린우드–윌리엄슨 접촉: 실접촉 면적과 접촉 압력",
+    "link": "chapters/pad.html#sim-gw"
+  },
+  {
+    "id": "cmpbook/pad/sim-groove",
+    "bookId": "cmpbook",
+    "title": "그루브별 슬러리 수송과 체류 시간",
+    "link": "chapters/pad.html#sim-groove"
+  },
+  {
+    "id": "cmpbook/pad/sim-hydro",
+    "bookId": "cmpbook",
+    "title": "막 두께와 하이드로플레이닝: 속도를 올리면 제거율이 꺾인다",
+    "link": "chapters/pad.html#sim-hydro"
+  },
+  {
+    "id": "cmpbook/pad/sim-temp",
+    "bookId": "cmpbook",
+    "title": "패드 온도 상승과 제거율 (시간 적분)",
+    "link": "chapters/pad.html#sim-temp"
+  },
+  {
+    "id": "cmpbook/pad/sim-3d",
+    "bookId": "cmpbook",
+    "title": "패드 표면 모델: 기공·그루브·돌기와 실접촉",
+    "link": "chapters/pad.html#sim-3d"
+  },
+  {
+    "id": "cmpbook/pattern/sim-sh",
+    "bookId": "cmpbook",
+    "title": "단차가 깎이는 단면 애니메이션",
+    "link": "chapters/pattern.html#sim-sh"
+  },
+  {
+    "id": "cmpbook/pattern/sim-shc",
+    "bookId": "cmpbook",
+    "title": "단차 대 제거량 곡선과 평탄화 효율",
+    "link": "chapters/pattern.html#sim-shc"
+  },
+  {
+    "id": "cmpbook/pattern/sim-ker",
+    "bookId": "cmpbook",
+    "title": "커널이 레이아웃을 훑는다: 유효 밀도와 두께",
+    "link": "chapters/pattern.html#sim-ker"
+  },
+  {
+    "id": "cmpbook/pattern/sim-two",
+    "bookId": "cmpbook",
+    "title": "밀집 영역 vs 성긴 영역: 평탄화 시점과 남는 두께 차",
+    "link": "chapters/pattern.html#sim-two"
+  },
+  {
+    "id": "cmpbook/pattern/sim-map",
+    "bookId": "cmpbook",
+    "title": "레이아웃을 그리면 CMP 후 두께 지도가 나온다",
+    "link": "chapters/pattern.html#sim-map"
+  },
+  {
+    "id": "cmpbook/pattern/sim-de",
+    "bookId": "cmpbook",
+    "title": "오버폴리시 동안 자라는 디싱과 이로전",
+    "link": "chapters/pattern.html#sim-de"
+  },
+  {
+    "id": "cmpbook/pattern/sim-dec",
+    "bookId": "cmpbook",
+    "title": "디싱-선폭, 이로전-밀도 곡선과 CP-300 목표",
+    "link": "chapters/pattern.html#sim-dec"
+  },
+  {
+    "id": "cmpbook/pattern/sim-fill",
+    "bookId": "cmpbook",
+    "title": "윈도우 밀도 규칙 검사와 더미 필 효과",
+    "link": "chapters/pattern.html#sim-fill"
+  },
+  {
+    "id": "cmpbook/postclean/sim-bb3d",
+    "bookId": "cmpbook",
+    "title": "브러시 박스: PVA 롤러 사이에서 도는 웨이퍼",
+    "link": "chapters/postclean.html#sim-bb3d"
+  },
+  {
+    "id": "cmpbook/postclean/sim-bmap",
+    "bookId": "cmpbook",
+    "title": "브러시 접촉 몬테카를로: 위치별 제거율과 브러시 수명",
+    "link": "chapters/postclean.html#sim-bmap"
+  },
+  {
+    "id": "cmpbook/postclean/sim-chem",
+    "bookId": "cmpbook",
+    "title": "세정 약액 설계: 반발·Cu 손실·잔류물",
+    "link": "chapters/postclean.html#sim-chem"
+  },
+  {
+    "id": "cmpbook/postclean/sim-stokes",
+    "bookId": "cmpbook",
+    "title": "음향 경계층: 주파수와 입자 크기",
+    "link": "chapters/postclean.html#sim-stokes"
+  },
+  {
+    "id": "cmpbook/postclean/sim-rp",
+    "bookId": "cmpbook",
+    "title": "레일리-플레셋 기포: 안정 진동 vs 과도 붕괴",
+    "link": "chapters/postclean.html#sim-rp"
+  },
+  {
+    "id": "cmpbook/postclean/sim-mar",
+    "bookId": "cmpbook",
+    "title": "마랑고니 건조: 끌어올림 속도와 IPA",
+    "link": "chapters/postclean.html#sim-mar"
+  },
+  {
+    "id": "cmpbook/postclean/sim-spin",
+    "bookId": "cmpbook",
+    "title": "스핀 건조와 물반점 몬테카를로",
+    "link": "chapters/postclean.html#sim-spin"
+  },
+  {
+    "id": "cmpbook/postclean/sim-qt",
+    "bookId": "cmpbook",
+    "title": "Q-time 부식 성장과 최대 대기 시간",
+    "link": "chapters/postclean.html#sim-qt"
+  },
+  {
+    "id": "cmpbook/postclean/sim-rcp",
+    "bookId": "cmpbook",
+    "title": "CMP 후 세정 레시피 빌더",
+    "link": "chapters/postclean.html#sim-rcp"
+  },
+  {
+    "id": "cmpbook/preston/sim-plane",
+    "bookId": "cmpbook",
+    "title": "프레스턴 평면 탐색기",
+    "link": "chapters/preston.html#sim-plane"
+  },
+  {
+    "id": "cmpbook/preston/sim-film",
+    "bookId": "cmpbook",
+    "title": "막 두께가 깎여 나가는 단면",
+    "link": "chapters/preston.html#sim-film"
+  },
+  {
+    "id": "cmpbook/preston/sim-fit",
+    "bookId": "cmpbook",
+    "title": "RR–PV 데이터 맞추기",
+    "link": "chapters/preston.html#sim-fit"
+  },
+  {
+    "id": "cmpbook/preston/sim-models",
+    "bookId": "cmpbook",
+    "title": "비선형 제거율 모델 비교",
+    "link": "chapters/preston.html#sim-models"
+  },
+  {
+    "id": "cmpbook/preston/sim-soft",
+    "bookId": "cmpbook",
+    "title": "연화층 2단계 반응과 율속 전환",
+    "link": "chapters/preston.html#sim-soft"
+  },
+  {
+    "id": "cmpbook/preston/sim-arr",
+    "bookId": "cmpbook",
+    "title": "온도와 제거율: 아레니우스 + 마찰 발열",
+    "link": "chapters/preston.html#sim-arr"
+  },
+  {
+    "id": "cmpbook/preston/sim-hertz",
+    "bookId": "cmpbook",
+    "title": "연마입자 하나의 헤르츠 압입과 긁기",
+    "link": "chapters/preston.html#sim-hertz"
+  },
+  {
+    "id": "cmpbook/preston/sim-mc",
+    "bookId": "cmpbook",
+    "title": "활성 연마입자 몬테카를로",
+    "link": "chapters/preston.html#sim-mc"
+  },
+  {
+    "id": "cmpbook/slurry/sim-psd",
+    "bookId": "cmpbook",
+    "title": "입자 크기 분포, LPC 꼬리와 스크래치 기대값",
+    "link": "chapters/slurry.html#sim-psd"
+  },
+  {
+    "id": "cmpbook/slurry/sim-zeta",
+    "bookId": "cmpbook",
+    "title": "제타 전위 탐색기: 입자와 막은 끌릴까, 밀릴까",
+    "link": "chapters/slurry.html#sim-zeta"
+  },
+  {
+    "id": "cmpbook/slurry/sim-dlvo",
+    "bookId": "cmpbook",
+    "title": "DLVO 에너지 곡선과 슬러리 보관 수명",
+    "link": "chapters/slurry.html#sim-dlvo"
+  },
+  {
+    "id": "cmpbook/slurry/sim-agg",
+    "bookId": "cmpbook",
+    "title": "브라운 응집 애니메이션",
+    "link": "chapters/slurry.html#sim-agg"
+  },
+  {
+    "id": "cmpbook/slurry/sim-filt",
+    "bookId": "cmpbook",
+    "title": "필터 정격·단 수와 LPC 제거, 연마입자 손실",
+    "link": "chapters/slurry.html#sim-filt"
+  },
+  {
+    "id": "cmpbook/slurry/sim-ceria",
+    "bookId": "cmpbook",
+    "title": "세리아 STI 슬러리: pH·첨가제와 산화막:질화막 선택비",
+    "link": "chapters/slurry.html#sim-ceria"
+  },
+  {
+    "id": "cmpbook/slurry/sim-pourbaix",
+    "bookId": "cmpbook",
+    "title": "구리 푸르베 도표와 슬러리 운전점",
+    "link": "chapters/slurry.html#sim-pourbaix"
+  },
+  {
+    "id": "cmpbook/slurry/sim-mix",
+    "bookId": "cmpbook",
+    "title": "POU 블렌딩 계산기와 H₂O₂ 사용 가능 시간",
+    "link": "chapters/slurry.html#sim-mix"
+  },
+  {
+    "id": "cmpbook/tribology/sim-strib",
+    "bookId": "cmpbook",
+    "title": "스트리벡 곡선과 운전점",
+    "link": "chapters/tribology.html#sim-strib"
+  },
+  {
+    "id": "cmpbook/tribology/sim-film",
+    "bookId": "cmpbook",
+    "title": "계면 단면 애니메이션: 막 두께와 돌기 접촉",
+    "link": "chapters/tribology.html#sim-film"
+  },
+  {
+    "id": "cmpbook/tribology/sim-pv",
+    "bookId": "cmpbook",
+    "title": "P–V 공간의 마찰 지도와 제거율",
+    "link": "chapters/tribology.html#sim-pv"
+  },
+  {
+    "id": "cmpbook/tribology/sim-stick",
+    "bookId": "cmpbook",
+    "title": "스프링-블록 스틱-슬립",
+    "link": "chapters/tribology.html#sim-stick"
+  },
+  {
+    "id": "cmpbook/tribology/sim-flash",
+    "bookId": "cmpbook",
+    "title": "섬광 온도 계산기",
+    "link": "chapters/tribology.html#sim-flash"
+  },
+  {
+    "id": "cmpbook/tribology/sim-heat",
+    "bookId": "cmpbook",
+    "title": "패드 온도 과도 응답: 여러 장 연속 연마",
+    "link": "chapters/tribology.html#sim-heat"
+  },
+  {
+    "id": "cmpbook/tribology/sim-run",
+    "bookId": "cmpbook",
+    "title": "세묘노프 도표: 온도–반응 되먹임과 열 폭주",
+    "link": "chapters/tribology.html#sim-run"
+  },
+  {
+    "id": "cmpbook/tribology/sim-trace",
+    "bookId": "cmpbook",
+    "title": "Cu 연마 마찰 신호와 종점 검출",
+    "link": "chapters/tribology.html#sim-trace"
+  },
+  {
+    "id": "cmpbook/wetclean/sim-wc-tput",
+    "bookId": "cmpbook",
+    "title": "배치 vs 매엽: 처리량과 웨이퍼당 비용",
+    "link": "chapters/wetclean.html#sim-wc-tput"
+  },
+  {
+    "id": "cmpbook/wetclean/sim-wc-rinse",
+    "bookId": "cmpbook",
+    "title": "헹굼 탱크: 농도 감쇠와 비저항 회복",
+    "link": "chapters/wetclean.html#sim-wc-rinse"
+  },
+  {
+    "id": "cmpbook/wetclean/sim-wc-bath",
+    "bookId": "cmpbook",
+    "title": "SC1 약액 수명: 분해·증발·금속 축적과 스파이킹",
+    "link": "chapters/wetclean.html#sim-wc-bath"
+  },
+  {
+    "id": "cmpbook/wetclean/sim-wc-spin",
+    "bookId": "cmpbook",
+    "title": "스핀 분사: 액막 두께와 반경 방향 식각 균일도",
+    "link": "chapters/wetclean.html#sim-wc-spin"
+  },
+  {
+    "id": "cmpbook/wetclean/sim-wc-collapse",
+    "bookId": "cmpbook",
+    "title": "건조 중 패턴 붕괴: 휘는 선 애니메이션",
+    "link": "chapters/wetclean.html#sim-wc-collapse"
+  },
+  {
+    "id": "cmpbook/wetclean/sim-wc-armap",
+    "bookId": "cmpbook",
+    "title": "임계 종횡비 지도: 반피치와 건조 방법",
+    "link": "chapters/wetclean.html#sim-wc-armap"
+  },
+  {
+    "id": "cmpbook/wetclean/sim-wc-co2",
+    "bookId": "cmpbook",
+    "title": "CO₂ 상평형도에서 건조 경로 그리기",
+    "link": "chapters/wetclean.html#sim-wc-co2"
+  },
+  {
+    "id": "cmpbook/wetclean/sim-wc-aero",
+    "bookId": "cmpbook",
+    "title": "극저온 에어로졸 세정: 입자 제거 효율과 패턴 손상",
+    "link": "chapters/wetclean.html#sim-wc-aero"
+  },
+  {
+    "id": "cmpbook/wetclean/sim-wc-water",
+    "bookId": "cmpbook",
+    "title": "팹 세정 물·약품 발자국 계산기",
+    "link": "chapters/wetclean.html#sim-wc-water"
+  },
+  {
     "id": "infrabook/amc/sim-unit",
     "bookId": "infrabook",
     "title": "AMC 농도 단위 환산기",
