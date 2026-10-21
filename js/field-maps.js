@@ -4,11 +4,12 @@ window.FIELD_MAPS = {
     title: "대학에서 배우는 과학과 공학의 기초",
     desc: "ScienceBooks의 공통 기초 교재입니다. 물리·화학과 공학 역학을 공부하고 각 전공의 응용으로 이어갑니다.",
     groups: [
-      ["물리와 전자기", "Physics", "운동·파동·전기장과 플라즈마의 원리", ["general-physics", "electromagneticsbook", "plasmabook"]],
+      ["물리와 전자기", "Physics", "운동·파동·전기장과 플라즈마의 원리", ["general-physics", "modern-physics", "electromagneticsbook", "plasmabook"]],
       ["화학과 재료", "Chemistry", "원자·분자·반응에서 재료의 구조와 물성까지", ["general-chemistry", "organic-chemistry", "materialsbook"]],
       ["에너지와 역학", "Mechanics", "힘과 운동, 에너지와 유동의 공학적 해석", ["thermobook", "statics", "dynamics", "fluid-mechanics"]],
     ],
     links: [
+      ["general-physics", "modern-physics", "빛과 원자의 기초에서 양자역학과 에너지 띠로"],
       ["general-physics", "electromagneticsbook", "전기·자기 기초에서 장과 맥스웰 방정식으로"],
       ["electromagneticsbook", "plasmabook", "전자기장과 하전 입자의 운동·방전"],
       ["general-chemistry", "organic-chemistry", "화학 결합에서 분자 구조와 반응 메커니즘으로"],
@@ -317,6 +318,7 @@ window.FIELD_MAP_CROSS_LINKS = [
   ["materialsbook", "processbook", "결정·확산·상변태와 반도체 공정의 재료 변화"],
   ["plasmabook", "etchbook", "방전·시스와 플라즈마 식각의 이온·라디칼 제어"],
   ["thermobook", "infrabook", "에너지 수지·열기관과 팹의 냉동·냉각 설비"],
+  ["modern-physics", "devicebook", "양자 우물·터널링·에너지 띠에서 반도체 소자 물리로"],
   ["general-chemistry", "processbook", "반응·평형·속도론으로 이해하는 제조 공정"],
   ["fluid-mechanics", "infrabook", "관 유동·압력 손실과 팹의 공조·용수 공급"],
   ["electricbook", "analogbook", "전압·전류·커패시터의 기초에서 증폭·필터 회로로"],

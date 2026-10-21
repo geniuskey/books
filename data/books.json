@@ -2231,9 +2231,8 @@
       "subtitle": "일반물리학 교과서",
       "description": "운동과 힘, 에너지와 운동량, 회전, 진동과 파동, 열, 전기와 자기, 빛, 상대성까지 — 미적분 기반 대학 1학년 일반물리 전 과정을 끌고, 던지고, 부딪쳐 보며 익히는 인터랙티브 교과서.",
       "field": "science",
-      "status": "writing",
+      "status": "published",
       "level": "대학 1학년 · 일반물리학 I·II",
-      "phase": 1,
       "url": "https://science.euiyun.com/general-physics/",
       "repo": "https://github.com/geniuskey/science-books",
       "checkout": "science-books/general-physics",
@@ -2250,7 +2249,32 @@
         "자기와 전자기 유도",
         "빛과 현대 물리",
         "부록"
-      ]
+      ],
+      "simulators": 159
+    },
+    {
+      "id": "modern-physics",
+      "code": "MPH",
+      "title": "현대물리학",
+      "subtitle": "현대물리학 교과서",
+      "description": "광자와 물질파, 슈뢰딩거 방정식, 양자 우물과 터널링, 수소 원자와 스핀, 양자 통계, 분자 결합에서 에너지 띠와 LED·레이저까지 — 반도체 소자와 공정을 떠받치는 양자역학을 직접 풀고 만지며 익히는 인터랙티브 교과서.",
+      "field": "science",
+      "status": "published",
+      "level": "대학 2학년 · 반도체 기초",
+      "url": "https://science.euiyun.com/modern-physics/",
+      "repo": "https://github.com/geniuskey/science-books",
+      "checkout": "science-books/modern-physics",
+      "color": "#2f6fe0",
+      "colorDark": "#6b9bff",
+      "chapters": 15,
+      "topics": [
+        "빛과 물질의 양자성",
+        "슈뢰딩거 방정식",
+        "원자",
+        "고체로 가는 길",
+        "부록"
+      ],
+      "simulators": 76
     },
     {
       "id": "organic-chemistry",
@@ -2290,11 +2314,24 @@
       "code": "FLD",
       "title": "유체역학",
       "subtitle": "유체역학 교과서",
-      "description": "유체 정역학, 베르누이 식, 검사 체적 해석, 차원 해석, 관 유동과 경계층.",
+      "description": "유체의 성질과 정역학, 베르누이 식, 검사 체적 해석, 나비에–스토크스와 퍼텐셜 유동, 차원 해석, 관 유동과 무디 선도, 경계층과 항력·양력, 개수로·압축성 유동, 펌프까지 — 흐름을 직접 그리고 흘려 보며 익히는 인터랙티브 공학 교과서.",
       "field": "science",
-      "status": "planned",
-      "level": "대학 2–3학년",
-      "phase": 2
+      "status": "published",
+      "level": "대학 2–3학년 · 공학 유체역학",
+      "url": "https://science.euiyun.com/fluid-mechanics/",
+      "repo": "https://github.com/geniuskey/science-books",
+      "checkout": "science-books/fluid-mechanics",
+      "color": "#c2410c",
+      "colorDark": "#fb923c",
+      "chapters": 14,
+      "topics": [
+        "유체와 정역학",
+        "유동 해석의 틀",
+        "점성 유동",
+        "응용 유동",
+        "부록"
+      ],
+      "simulators": 76
     }
   ],
   "tools": [

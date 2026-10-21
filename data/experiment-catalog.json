@@ -32074,5 +32074,1871 @@
     "bookId": "general-chemistry",
     "title": "반응 진행도에 따른 G 곡선: A(g) ⇌ B(g)",
     "link": "chapters/thermodynamics.html#sim-gcurve"
+  },
+  {
+    "id": "general-physics/ac-circuits/sim-phasor",
+    "bookId": "general-physics",
+    "title": "페이저와 위상: R, L, C 하나씩",
+    "link": "chapters/ac-circuits.html#sim-phasor"
+  },
+  {
+    "id": "general-physics/ac-circuits/sim-rlcac",
+    "bookId": "general-physics",
+    "title": "도전: 라디오 주파수 맞추기 (RLC 공명)",
+    "link": "chapters/ac-circuits.html#sim-rlcac"
+  },
+  {
+    "id": "general-physics/ac-circuits/sim-filter",
+    "bookId": "general-physics",
+    "title": "RC 필터: 섞인 소리에서 하나만 남겨라",
+    "link": "chapters/ac-circuits.html#sim-filter"
+  },
+  {
+    "id": "general-physics/ac-circuits/sim-grid",
+    "bookId": "general-physics",
+    "title": "도전: 손실 1% 이하로 도시에 전기를 보내라",
+    "link": "chapters/ac-circuits.html#sim-grid"
+  },
+  {
+    "id": "general-physics/applying-newton/sim-light",
+    "bookId": "general-physics",
+    "title": "매달린 신호등: 매듭을 끌어 장력을 바꿔라",
+    "link": "chapters/applying-newton.html#sim-light"
+  },
+  {
+    "id": "general-physics/applying-newton/sim-atwood",
+    "bookId": "general-physics",
+    "title": "애트우드 기계와 연결된 물체",
+    "link": "chapters/applying-newton.html#sim-atwood"
+  },
+  {
+    "id": "general-physics/applying-newton/sim-fric",
+    "bookId": "general-physics",
+    "title": "마찰력 – 미는 힘 그래프",
+    "link": "chapters/applying-newton.html#sim-fric"
+  },
+  {
+    "id": "general-physics/applying-newton/sim-incline",
+    "bookId": "general-physics",
+    "title": "경사면 실험실: 미끄러지기 시작하는 각을 찾아라",
+    "link": "chapters/applying-newton.html#sim-incline"
+  },
+  {
+    "id": "general-physics/applying-newton/sim-para",
+    "bookId": "general-physics",
+    "title": "낙하산: 언제 펼칠 것인가",
+    "link": "chapters/applying-newton.html#sim-para"
+  },
+  {
+    "id": "general-physics/applying-newton/sim-bank",
+    "bookId": "general-physics",
+    "title": "경사진 커브 설계하기",
+    "link": "chapters/applying-newton.html#sim-bank"
+  },
+  {
+    "id": "general-physics/applying-newton/sim-coaster",
+    "bookId": "general-physics",
+    "title": "수직 루프 롤러코스터",
+    "link": "chapters/applying-newton.html#sim-coaster"
+  },
+  {
+    "id": "general-physics/capacitance/sim-plate",
+    "bookId": "general-physics",
+    "title": "평행판 축전기 실험대",
+    "link": "chapters/capacitance.html#sim-plate"
+  },
+  {
+    "id": "general-physics/capacitance/sim-net",
+    "bookId": "general-physics",
+    "title": "도전: 회로를 짜서 목표 등가 용량을 만들어라",
+    "link": "chapters/capacitance.html#sim-net"
+  },
+  {
+    "id": "general-physics/capacitance/sim-share",
+    "bookId": "general-physics",
+    "title": "두 축전기 잇기: 전하는 보존, 에너지는?",
+    "link": "chapters/capacitance.html#sim-share"
+  },
+  {
+    "id": "general-physics/capacitance/sim-diel",
+    "bookId": "general-physics",
+    "title": "유전체 판 밀어 넣기",
+    "link": "chapters/capacitance.html#sim-diel"
+  },
+  {
+    "id": "general-physics/constants-units/sim-conv",
+    "bookId": "general-physics",
+    "title": "값을 넣고 단위를 고르면 바로 바뀐다",
+    "link": "chapters/constants-units.html#sim-conv"
+  },
+  {
+    "id": "general-physics/current-circuits/sim-drift",
+    "bookId": "general-physics",
+    "title": "도선 속 전자의 유동",
+    "link": "chapters/current-circuits.html#sim-drift"
+  },
+  {
+    "id": "general-physics/current-circuits/sim-battery",
+    "bookId": "general-physics",
+    "title": "도전: 부하에 최대 전력을 보내라",
+    "link": "chapters/current-circuits.html#sim-battery"
+  },
+  {
+    "id": "general-physics/current-circuits/sim-circuit",
+    "bookId": "general-physics",
+    "title": "두 고리 회로: 키르히호프 법칙 실험대",
+    "link": "chapters/current-circuits.html#sim-circuit"
+  },
+  {
+    "id": "general-physics/current-circuits/sim-rc",
+    "bookId": "general-physics",
+    "title": "RC 회로의 충전과 방전",
+    "link": "chapters/current-circuits.html#sim-rc"
+  },
+  {
+    "id": "general-physics/electric-field/sim-coulomb",
+    "bookId": "general-physics",
+    "title": "도전: 알짜 힘이 0인 곳을 찾아라",
+    "link": "chapters/electric-field.html#sim-coulomb"
+  },
+  {
+    "id": "general-physics/electric-field/sim-field",
+    "bookId": "general-physics",
+    "title": "전기력선 그리기: 전하를 놓고 끌어라",
+    "link": "chapters/electric-field.html#sim-field"
+  },
+  {
+    "id": "general-physics/electric-field/sim-deflect",
+    "bookId": "general-physics",
+    "title": "도전: 전기장으로 과녁 맞히기",
+    "link": "chapters/electric-field.html#sim-deflect"
+  },
+  {
+    "id": "general-physics/electric-field/sim-dipole",
+    "bookId": "general-physics",
+    "title": "균일한 장 속의 물 분자 쌍극자",
+    "link": "chapters/electric-field.html#sim-dipole"
+  },
+  {
+    "id": "general-physics/electric-potential/sim-energy",
+    "bookId": "general-physics",
+    "title": "도전: 전하를 모아 목표 에너지를 만들어라",
+    "link": "chapters/electric-potential.html#sim-energy"
+  },
+  {
+    "id": "general-physics/electric-potential/sim-pot",
+    "bookId": "general-physics",
+    "title": "전위 지도와 등전위선: 목표 전위를 찾아라",
+    "link": "chapters/electric-potential.html#sim-pot"
+  },
+  {
+    "id": "general-physics/electric-potential/sim-land",
+    "bookId": "general-physics",
+    "title": "전위 지형 위의 시험 전하",
+    "link": "chapters/electric-potential.html#sim-land"
+  },
+  {
+    "id": "general-physics/electric-potential/sim-spheres",
+    "bookId": "general-physics",
+    "title": "도선으로 이은 두 도체 구",
+    "link": "chapters/electric-potential.html#sim-spheres"
+  },
+  {
+    "id": "general-physics/em-waves/sim-wave3d",
+    "bookId": "general-physics",
+    "title": "평면 전자기파 (돌려 보기)",
+    "link": "chapters/em-waves.html#sim-wave3d"
+  },
+  {
+    "id": "general-physics/em-waves/sim-antenna",
+    "bookId": "general-physics",
+    "title": "쌍극자 안테나의 복사",
+    "link": "chapters/em-waves.html#sim-antenna"
+  },
+  {
+    "id": "general-physics/em-waves/sim-sail",
+    "bookId": "general-physics",
+    "title": "도전: 태양 돛으로 화성 궤도에 닿아라",
+    "link": "chapters/em-waves.html#sim-sail"
+  },
+  {
+    "id": "general-physics/em-waves/sim-pol",
+    "bookId": "general-physics",
+    "title": "도전: 편광판으로 목표 밝기를 만들어라",
+    "link": "chapters/em-waves.html#sim-pol"
+  },
+  {
+    "id": "general-physics/energy-conservation/sim-track",
+    "bookId": "general-physics",
+    "title": "트랙 설계: 공을 깃발까지 보내라",
+    "link": "chapters/energy-conservation.html#sim-track"
+  },
+  {
+    "id": "general-physics/energy-conservation/sim-loop",
+    "bookId": "general-physics",
+    "title": "루프 도전: 가장 낮은 출발 높이를 찾아라",
+    "link": "chapters/energy-conservation.html#sim-loop"
+  },
+  {
+    "id": "general-physics/energy-conservation/sim-launch",
+    "bookId": "general-physics",
+    "title": "용수철 발사기: 공을 선반 높이에 딱 맞춰라",
+    "link": "chapters/energy-conservation.html#sim-launch"
+  },
+  {
+    "id": "general-physics/energy-conservation/sim-paths",
+    "bookId": "general-physics",
+    "title": "경로 의존 실험: 용수철의 일 vs 마찰의 일",
+    "link": "chapters/energy-conservation.html#sim-paths"
+  },
+  {
+    "id": "general-physics/energy-conservation/sim-ux",
+    "bookId": "general-physics",
+    "title": "U(x) 곡선 위의 입자: 에너지 선을 끌어라",
+    "link": "chapters/energy-conservation.html#sim-ux"
+  },
+  {
+    "id": "general-physics/equilibrium-elasticity/sim-bridge",
+    "bookId": "general-physics",
+    "title": "다리 받침의 반력: 차를 끌어 옮겨라",
+    "link": "chapters/equilibrium-elasticity.html#sim-bridge"
+  },
+  {
+    "id": "general-physics/equilibrium-elasticity/sim-mobile",
+    "bookId": "general-physics",
+    "title": "도전: 모빌 수평 맞추기",
+    "link": "chapters/equilibrium-elasticity.html#sim-mobile"
+  },
+  {
+    "id": "general-physics/equilibrium-elasticity/sim-tower",
+    "bookId": "general-physics",
+    "title": "피사의 사탑: 얼마나 기울일 수 있을까",
+    "link": "chapters/equilibrium-elasticity.html#sim-tower"
+  },
+  {
+    "id": "general-physics/equilibrium-elasticity/sim-ladder",
+    "bookId": "general-physics",
+    "title": "사다리 미끄러짐: 꼭대기까지 오를 수 있는 가장 낮은 각도를 찾아라",
+    "link": "chapters/equilibrium-elasticity.html#sim-ladder"
+  },
+  {
+    "id": "general-physics/equilibrium-elasticity/sim-crane",
+    "bookId": "general-physics",
+    "title": "크레인 붐: 케이블이 끊어지지 않게 짐을 가장 멀리 옮겨라",
+    "link": "chapters/equilibrium-elasticity.html#sim-crane"
+  },
+  {
+    "id": "general-physics/equilibrium-elasticity/sim-ss",
+    "bookId": "general-physics",
+    "title": "응력–변형률 곡선: 시편을 끌어 늘려라",
+    "link": "chapters/equilibrium-elasticity.html#sim-ss"
+  },
+  {
+    "id": "general-physics/fluids/sim-probe",
+    "bookId": "general-physics",
+    "title": "수압 측정 탐침: 탐침을 끌어 깊이를 바꿔라",
+    "link": "chapters/fluids.html#sim-probe"
+  },
+  {
+    "id": "general-physics/fluids/sim-jack",
+    "bookId": "general-physics",
+    "title": "유압 잭: 손잡이를 눌러 자동차를 들어 올려라",
+    "link": "chapters/fluids.html#sim-jack"
+  },
+  {
+    "id": "general-physics/fluids/sim-float",
+    "bookId": "general-physics",
+    "title": "뜰까 가라앉을까: 잠기는 비율을 예측하라",
+    "link": "chapters/fluids.html#sim-float"
+  },
+  {
+    "id": "general-physics/fluids/sim-pipe",
+    "bookId": "general-physics",
+    "title": "모양을 바꾸는 관: 단면을 끌어 흐름을 보라",
+    "link": "chapters/fluids.html#sim-pipe"
+  },
+  {
+    "id": "general-physics/fluids/sim-venturi",
+    "bookId": "general-physics",
+    "title": "벤투리관과 압력 기둥",
+    "link": "chapters/fluids.html#sim-venturi"
+  },
+  {
+    "id": "general-physics/fluids/sim-tank",
+    "bookId": "general-physics",
+    "title": "물통의 구멍: 물줄기로 컵을 맞혀라",
+    "link": "chapters/fluids.html#sim-tank"
+  },
+  {
+    "id": "general-physics/gauss-law/sim-mystery",
+    "bookId": "general-physics",
+    "title": "도전: 상자 속 숨은 전하를 맞혀라",
+    "link": "chapters/gauss-law.html#sim-mystery"
+  },
+  {
+    "id": "general-physics/gauss-law/sim-gauss",
+    "bookId": "general-physics",
+    "title": "가우스 면 실험대: 선속을 수치 적분으로 재기",
+    "link": "chapters/gauss-law.html#sim-gauss"
+  },
+  {
+    "id": "general-physics/gauss-law/sim-sphere",
+    "bookId": "general-physics",
+    "title": "대전된 구의 전기장 E(r): 가우스 면을 키워 보라",
+    "link": "chapters/gauss-law.html#sim-sphere"
+  },
+  {
+    "id": "general-physics/gauss-law/sim-conductor",
+    "bookId": "general-physics",
+    "title": "도체 속 전하의 이완",
+    "link": "chapters/gauss-law.html#sim-conductor"
+  },
+  {
+    "id": "general-physics/geometric-optics/sim-snell",
+    "bookId": "general-physics",
+    "title": "스넬 법칙과 반사",
+    "link": "chapters/geometric-optics.html#sim-snell"
+  },
+  {
+    "id": "general-physics/geometric-optics/sim-mirror",
+    "bookId": "general-physics",
+    "title": "구면 거울의 상 작도",
+    "link": "chapters/geometric-optics.html#sim-mirror"
+  },
+  {
+    "id": "general-physics/geometric-optics/sim-lens",
+    "bookId": "general-physics",
+    "title": "도전: 스크린에 목표 배율의 선명한 상을 맺어라",
+    "link": "chapters/geometric-optics.html#sim-lens"
+  },
+  {
+    "id": "general-physics/geometric-optics/sim-scope",
+    "bookId": "general-physics",
+    "title": "케플러 망원경",
+    "link": "chapters/geometric-optics.html#sim-scope"
+  },
+  {
+    "id": "general-physics/gravitation/sim-field",
+    "bookId": "general-physics",
+    "title": "중력장 지도: 질량과 시험 질량을 끌어 보라",
+    "link": "chapters/gravitation.html#sim-field"
+  },
+  {
+    "id": "general-physics/gravitation/sim-well",
+    "bookId": "general-physics",
+    "title": "퍼텐셜 우물: 총에너지 선을 끌어 올려 탈출시켜라",
+    "link": "chapters/gravitation.html#sim-well"
+  },
+  {
+    "id": "general-physics/gravitation/sim-orbit",
+    "bookId": "general-physics",
+    "title": "궤도 실험실: 위성과 속도 벡터를 끌어 궤도를 만든다",
+    "link": "chapters/gravitation.html#sim-orbit"
+  },
+  {
+    "id": "general-physics/gravitation/sim-rdv",
+    "bookId": "general-physics",
+    "title": "랑데부: 속도 벡터를 끌어 목표 궤도에 올라타라",
+    "link": "chapters/gravitation.html#sim-rdv"
+  },
+  {
+    "id": "general-physics/gravitation/sim-kepler2",
+    "bookId": "general-physics",
+    "title": "넓이 속도 일정: 같은 시간, 같은 넓이",
+    "link": "chapters/gravitation.html#sim-kepler2"
+  },
+  {
+    "id": "general-physics/gravitation/sim-kepler3",
+    "bookId": "general-physics",
+    "title": "로그–로그 그래프에 행성 점 찍기",
+    "link": "chapters/gravitation.html#sim-kepler3"
+  },
+  {
+    "id": "general-physics/induction/sim-faraday",
+    "bookId": "general-physics",
+    "title": "자석과 코일: 선속과 기전력의 그래프",
+    "link": "chapters/induction.html#sim-faraday"
+  },
+  {
+    "id": "general-physics/induction/sim-rail",
+    "bookId": "general-physics",
+    "title": "도전: 막대를 끌어 전구를 일정하게 켜라",
+    "link": "chapters/induction.html#sim-rail"
+  },
+  {
+    "id": "general-physics/induction/sim-gen",
+    "bookId": "general-physics",
+    "title": "발전기: 손잡이를 돌려 전기를 만들어라",
+    "link": "chapters/induction.html#sim-gen"
+  },
+  {
+    "id": "general-physics/induction/sim-rlc",
+    "bookId": "general-physics",
+    "title": "RL·LC·RLC 회로",
+    "link": "chapters/induction.html#sim-rlc"
+  },
+  {
+    "id": "general-physics/interference-diffraction/sim-young",
+    "bookId": "general-physics",
+    "title": "이중 슬릿 실험",
+    "link": "chapters/interference-diffraction.html#sim-young"
+  },
+  {
+    "id": "general-physics/interference-diffraction/sim-film",
+    "bookId": "general-physics",
+    "title": "비눗막과 반사 방지막의 색",
+    "link": "chapters/interference-diffraction.html#sim-film"
+  },
+  {
+    "id": "general-physics/interference-diffraction/sim-grating",
+    "bookId": "general-physics",
+    "title": "분광기로 미지의 파장을 재라",
+    "link": "chapters/interference-diffraction.html#sim-grating"
+  },
+  {
+    "id": "general-physics/interference-diffraction/sim-rayleigh",
+    "bookId": "general-physics",
+    "title": "두 별을 구별하라",
+    "link": "chapters/interference-diffraction.html#sim-rayleigh"
+  },
+  {
+    "id": "general-physics/kinetic-theory-first-law/sim-gas",
+    "bookId": "general-physics",
+    "title": "이상 기체 실험대: 피스톤과 pV 도표",
+    "link": "chapters/kinetic-theory-first-law.html#sim-gas"
+  },
+  {
+    "id": "general-physics/kinetic-theory-first-law/sim-box",
+    "bookId": "general-physics",
+    "title": "분자 상자: 벽이 받는 충격량을 세어 압력을 잰다",
+    "link": "chapters/kinetic-theory-first-law.html#sim-box"
+  },
+  {
+    "id": "general-physics/kinetic-theory-first-law/sim-path",
+    "bookId": "general-physics",
+    "title": "도전: 순환 과정을 그려 목표 일을 만들어라",
+    "link": "chapters/kinetic-theory-first-law.html#sim-path"
+  },
+  {
+    "id": "general-physics/kinetic-theory-first-law/sim-proc",
+    "bookId": "general-physics",
+    "title": "네 가지 과정 탐색기",
+    "link": "chapters/kinetic-theory-first-law.html#sim-proc"
+  },
+  {
+    "id": "general-physics/magnetic-force/sim-orbit",
+    "bookId": "general-physics",
+    "title": "자기장 속 하전 입자의 원운동",
+    "link": "chapters/magnetic-force.html#sim-orbit"
+  },
+  {
+    "id": "general-physics/magnetic-force/sim-sel",
+    "bookId": "general-physics",
+    "title": "도전: 속도 선택기로 원하는 속력만 통과시켜라",
+    "link": "chapters/magnetic-force.html#sim-sel"
+  },
+  {
+    "id": "general-physics/magnetic-force/sim-spec",
+    "bookId": "general-physics",
+    "title": "질량 분석기: 미지 시료의 질량을 알아내라",
+    "link": "chapters/magnetic-force.html#sim-spec"
+  },
+  {
+    "id": "general-physics/magnetic-force/sim-motor",
+    "bookId": "general-physics",
+    "title": "직류 전동기: 정류자의 역할",
+    "link": "chapters/magnetic-force.html#sim-motor"
+  },
+  {
+    "id": "general-physics/magnetic-sources/sim-wires",
+    "bookId": "general-physics",
+    "title": "도선 배치와 자기장: 장이 0인 점을 찾아라",
+    "link": "chapters/magnetic-sources.html#sim-wires"
+  },
+  {
+    "id": "general-physics/magnetic-sources/sim-ampere",
+    "bookId": "general-physics",
+    "title": "앙페르 고리: ∮B·dl을 수치 적분으로 재기",
+    "link": "chapters/magnetic-sources.html#sim-ampere"
+  },
+  {
+    "id": "general-physics/magnetic-sources/sim-sol",
+    "bookId": "general-physics",
+    "title": "솔레노이드 단면의 자기장",
+    "link": "chapters/magnetic-sources.html#sim-sol"
+  },
+  {
+    "id": "general-physics/magnetic-sources/sim-mag",
+    "bookId": "general-physics",
+    "title": "자화 곡선과 히스테리시스",
+    "link": "chapters/magnetic-sources.html#sim-mag"
+  },
+  {
+    "id": "general-physics/math-tools/sim-vec",
+    "bookId": "general-physics",
+    "title": "벡터 계산기",
+    "link": "chapters/math-tools.html#sim-vec"
+  },
+  {
+    "id": "general-physics/math-tools/sim-deriv",
+    "bookId": "general-physics",
+    "title": "할선에서 접선으로",
+    "link": "chapters/math-tools.html#sim-deriv"
+  },
+  {
+    "id": "general-physics/math-tools/sim-integ",
+    "bookId": "general-physics",
+    "title": "리만 합에서 적분으로",
+    "link": "chapters/math-tools.html#sim-integ"
+  },
+  {
+    "id": "general-physics/math-tools/sim-ode",
+    "bookId": "general-physics",
+    "title": "오일러 대 RK4",
+    "link": "chapters/math-tools.html#sim-ode"
+  },
+  {
+    "id": "general-physics/mechanical-waves/sim-types",
+    "bookId": "general-physics",
+    "title": "횡파 · 종파 · 물결파: 입자는 어떻게 움직이나",
+    "link": "chapters/mechanical-waves.html#sim-types"
+  },
+  {
+    "id": "general-physics/mechanical-waves/sim-wave",
+    "bookId": "general-physics",
+    "title": "파동 함수 탐색기: 스냅숏 y(x)와 한 점의 기록 y(t)",
+    "link": "chapters/mechanical-waves.html#sim-wave"
+  },
+  {
+    "id": "general-physics/mechanical-waves/sim-super",
+    "bookId": "general-physics",
+    "title": "두 펄스의 중첩: 펄스 모양을 끌어 만들어라",
+    "link": "chapters/mechanical-waves.html#sim-super"
+  },
+  {
+    "id": "general-physics/mechanical-waves/sim-reflect",
+    "bookId": "general-physics",
+    "title": "경계에서의 반사와 투과",
+    "link": "chapters/mechanical-waves.html#sim-reflect"
+  },
+  {
+    "id": "general-physics/mechanical-waves/sim-stand",
+    "bookId": "general-physics",
+    "title": "정상파 실험실: 진동수를 훑어 공명을 찾아라",
+    "link": "chapters/mechanical-waves.html#sim-stand"
+  },
+  {
+    "id": "general-physics/mechanical-waves/sim-guess",
+    "bookId": "general-physics",
+    "title": "고유 진동수 맞히기",
+    "link": "chapters/mechanical-waves.html#sim-guess"
+  },
+  {
+    "id": "general-physics/momentum/sim-egg",
+    "bookId": "general-physics",
+    "title": "달걀 떨어뜨리기: 충돌 시간과 최대 힘",
+    "link": "chapters/momentum.html#sim-egg"
+  },
+  {
+    "id": "general-physics/momentum/sim-track",
+    "bookId": "general-physics",
+    "title": "1차원 충돌 트랙",
+    "link": "chapters/momentum.html#sim-track"
+  },
+  {
+    "id": "general-physics/momentum/sim-bal",
+    "bookId": "general-physics",
+    "title": "탄동 진자 도전: 목표 높이까지 정확히 올려라",
+    "link": "chapters/momentum.html#sim-bal"
+  },
+  {
+    "id": "general-physics/momentum/sim-pool",
+    "bookId": "general-physics",
+    "title": "2차원 충돌 당구대: 목표 포켓에 넣어라",
+    "link": "chapters/momentum.html#sim-pool"
+  },
+  {
+    "id": "general-physics/momentum/sim-cm",
+    "bookId": "general-physics",
+    "title": "질량 중심 놀이터",
+    "link": "chapters/momentum.html#sim-cm"
+  },
+  {
+    "id": "general-physics/momentum/sim-rocket",
+    "bookId": "general-physics",
+    "title": "로켓 발사: 질량이 줄면 가속도가 커진다",
+    "link": "chapters/momentum.html#sim-rocket"
+  },
+  {
+    "id": "general-physics/motion-2d/sim-drop",
+    "bookId": "general-physics",
+    "title": "떨어뜨리기 vs 수평으로 던지기 (섬광 사진)",
+    "link": "chapters/motion-2d.html#sim-drop"
+  },
+  {
+    "id": "general-physics/motion-2d/sim-launch",
+    "bookId": "general-physics",
+    "title": "발사대: 화살표를 끌어 겨냥하고 과녁을 맞혀라",
+    "link": "chapters/motion-2d.html#sim-launch"
+  },
+  {
+    "id": "general-physics/motion-2d/sim-circ",
+    "bookId": "general-physics",
+    "title": "원운동과 속도 그림(호도그래프)",
+    "link": "chapters/motion-2d.html#sim-circ"
+  },
+  {
+    "id": "general-physics/motion-2d/sim-river",
+    "bookId": "general-physics",
+    "title": "강 건너기: 뱃머리 방향을 끌어 정하라",
+    "link": "chapters/motion-2d.html#sim-river"
+  },
+  {
+    "id": "general-physics/newtons-laws/sim-forces",
+    "bookId": "general-physics",
+    "title": "힘 끌기: 알짜힘과 가속도",
+    "link": "chapters/newtons-laws.html#sim-forces"
+  },
+  {
+    "id": "general-physics/newtons-laws/sim-inertia",
+    "bookId": "general-physics",
+    "title": "관성 실험: 식탁보 빼기와 가속하는 기차",
+    "link": "chapters/newtons-laws.html#sim-inertia"
+  },
+  {
+    "id": "general-physics/newtons-laws/sim-fma",
+    "bookId": "general-physics",
+    "title": "F = ma 실험실: 힘을 끌어 정하고 데이터를 모아라",
+    "link": "chapters/newtons-laws.html#sim-fma"
+  },
+  {
+    "id": "general-physics/newtons-laws/sim-elev",
+    "bookId": "general-physics",
+    "title": "엘리베이터 속 체중계",
+    "link": "chapters/newtons-laws.html#sim-elev"
+  },
+  {
+    "id": "general-physics/newtons-laws/sim-pairs",
+    "bookId": "general-physics",
+    "title": "작용–반작용 쌍 찾기",
+    "link": "chapters/newtons-laws.html#sim-pairs"
+  },
+  {
+    "id": "general-physics/newtons-laws/sim-fbd",
+    "bookId": "general-physics",
+    "title": "자유 물체도 그리기 도전",
+    "link": "chapters/newtons-laws.html#sim-fbd"
+  },
+  {
+    "id": "general-physics/oscillations/sim-phase",
+    "bookId": "general-physics",
+    "title": "x(t)·v(t)·a(t) 동시 그래프와 위상 공간",
+    "link": "chapters/oscillations.html#sim-phase"
+  },
+  {
+    "id": "general-physics/oscillations/sim-vert",
+    "bookId": "general-physics",
+    "title": "수직 용수철: 중력을 꺼도 주기는 같다",
+    "link": "chapters/oscillations.html#sim-vert"
+  },
+  {
+    "id": "general-physics/oscillations/sim-pend",
+    "bookId": "general-physics",
+    "title": "진자 실험실: 작은 각 근사 vs 정확한 운동",
+    "link": "chapters/oscillations.html#sim-pend"
+  },
+  {
+    "id": "general-physics/oscillations/sim-gmeas",
+    "bookId": "general-physics",
+    "title": "미지의 행성에서 진자로 g 재기",
+    "link": "chapters/oscillations.html#sim-gmeas"
+  },
+  {
+    "id": "general-physics/oscillations/sim-damp",
+    "bookId": "general-physics",
+    "title": "감쇠 진동: b를 바꿔 세 영역을 넘나들어라",
+    "link": "chapters/oscillations.html#sim-damp"
+  },
+  {
+    "id": "general-physics/oscillations/sim-res",
+    "bookId": "general-physics",
+    "title": "공명 곡선: 구동 진동수를 훑으며 진폭을 재라",
+    "link": "chapters/oscillations.html#sim-res"
+  },
+  {
+    "id": "general-physics/relativity-quantum/sim-clock",
+    "bookId": "general-physics",
+    "title": "빛 시계 두 개",
+    "link": "chapters/relativity-quantum.html#sim-clock"
+  },
+  {
+    "id": "general-physics/relativity-quantum/sim-mink",
+    "bookId": "general-physics",
+    "title": "시공간 도표: 동시성은 상대적이다",
+    "link": "chapters/relativity-quantum.html#sim-mink"
+  },
+  {
+    "id": "general-physics/relativity-quantum/sim-photo",
+    "bookId": "general-physics",
+    "title": "광전관 · 도전: 미지 금속의 일함수를 재라",
+    "link": "chapters/relativity-quantum.html#sim-photo"
+  },
+  {
+    "id": "general-physics/relativity-quantum/sim-elec",
+    "bookId": "general-physics",
+    "title": "전자 하나씩의 이중 슬릿",
+    "link": "chapters/relativity-quantum.html#sim-elec"
+  },
+  {
+    "id": "general-physics/rotation-dynamics/sim-door",
+    "bookId": "general-physics",
+    "title": "토크 실험실: 문을 위에서 내려다보기",
+    "link": "chapters/rotation-dynamics.html#sim-door"
+  },
+  {
+    "id": "general-physics/rotation-dynamics/sim-seesaw",
+    "bookId": "general-physics",
+    "title": "도전: 시소 균형 맞추기",
+    "link": "chapters/rotation-dynamics.html#sim-seesaw"
+  },
+  {
+    "id": "general-physics/rotation-dynamics/sim-pulley",
+    "bookId": "general-physics",
+    "title": "추가 매달린 도르래: 질량 분포를 바꿔 낙하 시간을 맞혀라",
+    "link": "chapters/rotation-dynamics.html#sim-pulley"
+  },
+  {
+    "id": "general-physics/rotation-dynamics/sim-incline",
+    "bookId": "general-physics",
+    "title": "경사면 구름 경주: 마찰과 미끄러짐",
+    "link": "chapters/rotation-dynamics.html#sim-incline"
+  },
+  {
+    "id": "general-physics/rotation-dynamics/sim-skater",
+    "bookId": "general-physics",
+    "title": "피겨 스케이터: 팔을 끌어 회전 속도를 바꿔라",
+    "link": "chapters/rotation-dynamics.html#sim-skater"
+  },
+  {
+    "id": "general-physics/rotation-dynamics/sim-chair",
+    "bookId": "general-physics",
+    "title": "회전 의자와 자전거 바퀴: 각운동량 벡터 맞추기",
+    "link": "chapters/rotation-dynamics.html#sim-chair"
+  },
+  {
+    "id": "general-physics/rotation-dynamics/sim-gyro",
+    "bookId": "general-physics",
+    "title": "자이로스코프: 세차와 장동 (무거운 대칭 팽이의 정확한 운동 방정식)",
+    "link": "chapters/rotation-dynamics.html#sim-gyro"
+  },
+  {
+    "id": "general-physics/rotation-kinematics/sim-ang",
+    "bookId": "general-physics",
+    "title": "각운동 그래프와 브레이크 도전",
+    "link": "chapters/rotation-kinematics.html#sim-ang"
+  },
+  {
+    "id": "general-physics/rotation-kinematics/sim-pts",
+    "bookId": "general-physics",
+    "title": "바퀴 위 점들의 속도와 가속도",
+    "link": "chapters/rotation-kinematics.html#sim-pts"
+  },
+  {
+    "id": "general-physics/rotation-kinematics/sim-moi",
+    "bookId": "general-physics",
+    "title": "관성 모멘트 실험실",
+    "link": "chapters/rotation-kinematics.html#sim-moi"
+  },
+  {
+    "id": "general-physics/rotation-kinematics/sim-race",
+    "bookId": "general-physics",
+    "title": "경사면 경주: 굴렁쇠·원판·구",
+    "link": "chapters/rotation-kinematics.html#sim-race"
+  },
+  {
+    "id": "general-physics/second-law/sim-otto",
+    "bookId": "general-physics",
+    "title": "오토 순환 엔진: 압축비를 끌어 효율을 바꿔라",
+    "link": "chapters/second-law.html#sim-otto"
+  },
+  {
+    "id": "general-physics/second-law/sim-carnot",
+    "bookId": "general-physics",
+    "title": "카르노 순환 실험대: pV 도표와 TS 도표",
+    "link": "chapters/second-law.html#sim-carnot"
+  },
+  {
+    "id": "general-physics/second-law/sim-patent",
+    "bookId": "general-physics",
+    "title": "특허 심사관: 이 기계는 가능한가?",
+    "link": "chapters/second-law.html#sim-patent"
+  },
+  {
+    "id": "general-physics/second-law/sim-micro",
+    "bookId": "general-physics",
+    "title": "미시 상태 세기: 두 칸 상자의 엔트로피",
+    "link": "chapters/second-law.html#sim-micro"
+  },
+  {
+    "id": "general-physics/sound/sim-db",
+    "bookId": "general-physics",
+    "title": "소음계: 듣는 사람을 끌어 데시벨을 재라",
+    "link": "chapters/sound.html#sim-db"
+  },
+  {
+    "id": "general-physics/sound/sim-pipe",
+    "bookId": "general-physics",
+    "title": "관 공명: 관 끝을 끌어 길이를 바꾸고 소리를 들어라",
+    "link": "chapters/sound.html#sim-pipe"
+  },
+  {
+    "id": "general-physics/sound/sim-two",
+    "bookId": "general-physics",
+    "title": "두 스피커의 간섭 지도",
+    "link": "chapters/sound.html#sim-two"
+  },
+  {
+    "id": "general-physics/sound/sim-tune",
+    "bookId": "general-physics",
+    "title": "도전: 맥놀이로 기타 줄 조율하기",
+    "link": "chapters/sound.html#sim-tune"
+  },
+  {
+    "id": "general-physics/sound/sim-dop",
+    "bookId": "general-physics",
+    "title": "도플러 효과: 음원의 속도 화살표를 끌어라",
+    "link": "chapters/sound.html#sim-dop"
+  },
+  {
+    "id": "general-physics/straight-line-motion/sim-draw",
+    "bookId": "general-physics",
+    "title": "x–t 그래프를 그리면 물체가 따라 움직인다",
+    "link": "chapters/straight-line-motion.html#sim-draw"
+  },
+  {
+    "id": "general-physics/straight-line-motion/sim-match",
+    "bookId": "general-physics",
+    "title": "그래프 짝 맞추기: 자동차를 끌어 목표 그래프를 만들어라",
+    "link": "chapters/straight-line-motion.html#sim-match"
+  },
+  {
+    "id": "general-physics/straight-line-motion/sim-chase",
+    "bookId": "general-physics",
+    "title": "두 차의 추격: 언제, 어디서 만나는가",
+    "link": "chapters/straight-line-motion.html#sim-chase"
+  },
+  {
+    "id": "general-physics/straight-line-motion/sim-fall",
+    "bookId": "general-physics",
+    "title": "자유 낙하 섬광 사진: 던지는 속도를 끌어라",
+    "link": "chapters/straight-line-motion.html#sim-fall"
+  },
+  {
+    "id": "general-physics/straight-line-motion/sim-area",
+    "bookId": "general-physics",
+    "title": "v–t 그래프 아래 넓이를 끌어 적분 보기",
+    "link": "chapters/straight-line-motion.html#sim-area"
+  },
+  {
+    "id": "general-physics/temperature-heat/sim-bimetal",
+    "bookId": "general-physics",
+    "title": "바이메탈: 온도계를 끌어 데우고 식혀라",
+    "link": "chapters/temperature-heat.html#sim-bimetal"
+  },
+  {
+    "id": "general-physics/temperature-heat/sim-heat",
+    "bookId": "general-physics",
+    "title": "가열 곡선: 얼음에서 수증기까지",
+    "link": "chapters/temperature-heat.html#sim-heat"
+  },
+  {
+    "id": "general-physics/temperature-heat/sim-mix",
+    "bookId": "general-physics",
+    "title": "도전: 얼음–물 혼합의 최종 상태를 맞혀라",
+    "link": "chapters/temperature-heat.html#sim-mix"
+  },
+  {
+    "id": "general-physics/temperature-heat/sim-rod",
+    "bookId": "general-physics",
+    "title": "막대의 열전도 (유한 차분 시뮬레이션)",
+    "link": "chapters/temperature-heat.html#sim-rod"
+  },
+  {
+    "id": "general-physics/temperature-heat/sim-bb",
+    "bookId": "general-physics",
+    "title": "흑체 복사 스펙트럼: 봉우리를 끌어 온도를 바꿔라",
+    "link": "chapters/temperature-heat.html#sim-bb"
+  },
+  {
+    "id": "general-physics/units-vectors/sim-dim",
+    "bookId": "general-physics",
+    "title": "차원 분석 퍼즐: 지수를 맞혀 목표 차원을 만들어라",
+    "link": "chapters/units-vectors.html#sim-dim"
+  },
+  {
+    "id": "general-physics/units-vectors/sim-dart",
+    "bookId": "general-physics",
+    "title": "과녁 맞히기: 정확도와 정밀도",
+    "link": "chapters/units-vectors.html#sim-dart"
+  },
+  {
+    "id": "general-physics/units-vectors/sim-vadd",
+    "bookId": "general-physics",
+    "title": "벡터 덧셈 놀이터: 화살 끝을 끌어라",
+    "link": "chapters/units-vectors.html#sim-vadd"
+  },
+  {
+    "id": "general-physics/units-vectors/sim-treasure",
+    "bookId": "general-physics",
+    "title": "벡터 합으로 보물 찾기",
+    "link": "chapters/units-vectors.html#sim-treasure"
+  },
+  {
+    "id": "general-physics/units-vectors/sim-prod",
+    "bookId": "general-physics",
+    "title": "내적·외적 탐색기: 사잇각을 끌어라",
+    "link": "chapters/units-vectors.html#sim-prod"
+  },
+  {
+    "id": "general-physics/work-energy/sim-work",
+    "bookId": "general-physics",
+    "title": "일 계산기: 힘 화살표와 도착점을 끌어라",
+    "link": "chapters/work-energy.html#sim-work"
+  },
+  {
+    "id": "general-physics/work-energy/sim-wet",
+    "bookId": "general-physics",
+    "title": "일–에너지 정리 검산기: 힘마다 한 일의 합 = ΔK",
+    "link": "chapters/work-energy.html#sim-wet"
+  },
+  {
+    "id": "general-physics/work-energy/sim-slide",
+    "bookId": "general-physics",
+    "title": "도전: 상자가 멈출 곳에 깃발을 꽂아라",
+    "link": "chapters/work-energy.html#sim-slide"
+  },
+  {
+    "id": "general-physics/work-energy/sim-fx",
+    "bookId": "general-physics",
+    "title": "F–x 그래프 그리기: 넓이가 곧 일이다",
+    "link": "chapters/work-energy.html#sim-fx"
+  },
+  {
+    "id": "general-physics/work-energy/sim-spring",
+    "bookId": "general-physics",
+    "title": "용수철 늘이기: 손잡이를 끌면 넓이가 쌓인다",
+    "link": "chapters/work-energy.html#sim-spring"
+  },
+  {
+    "id": "modern-physics/atomic-spectra/sim-ruth",
+    "bookId": "modern-physics",
+    "title": "러더퍼드 산란: b를 끌고 빔을 쏘아 분포를 모아라",
+    "link": "chapters/atomic-spectra.html#sim-ruth"
+  },
+  {
+    "id": "modern-physics/atomic-spectra/sim-bohr",
+    "bookId": "modern-physics",
+    "title": "보어 원자 준위 사다리: 전자를 끌어 목표 선을 만들어라",
+    "link": "chapters/atomic-spectra.html#sim-bohr"
+  },
+  {
+    "id": "modern-physics/atomic-spectra/sim-oes",
+    "bookId": "modern-physics",
+    "title": "OES 종말점 검출: 막이 뚫리는 순간 식각을 멈춰라",
+    "link": "chapters/atomic-spectra.html#sim-oes"
+  },
+  {
+    "id": "modern-physics/atomic-spectra/sim-fh",
+    "bookId": "modern-physics",
+    "title": "프랑크–헤르츠 I–V 곡선: 전압 손잡이를 끌어 측정하라",
+    "link": "chapters/atomic-spectra.html#sim-fh"
+  },
+  {
+    "id": "modern-physics/atomic-spectra/sim-mos",
+    "bookId": "modern-physics",
+    "title": "모즐리 직선과 EDS: 미지 시료의 원소를 맞혀라",
+    "link": "chapters/atomic-spectra.html#sim-mos"
+  },
+  {
+    "id": "modern-physics/constants-data/sim-photon",
+    "bookId": "modern-physics",
+    "title": "광자 단위 환산기",
+    "link": "chapters/constants-data.html#sim-photon"
+  },
+  {
+    "id": "modern-physics/constants-data/sim-elec",
+    "bookId": "modern-physics",
+    "title": "전자 파장 계산기 (상대론 포함)",
+    "link": "chapters/constants-data.html#sim-elec"
+  },
+  {
+    "id": "modern-physics/constants-data/sim-mat",
+    "bookId": "modern-physics",
+    "title": "반도체 고르기: 띠 간격 대 격자 상수",
+    "link": "chapters/constants-data.html#sim-mat"
+  },
+  {
+    "id": "modern-physics/constants-data/sim-eot",
+    "bookId": "modern-physics",
+    "title": "EOT 계산기: 계면 SiO₂ + high-k",
+    "link": "chapters/constants-data.html#sim-eot"
+  },
+  {
+    "id": "modern-physics/constants-data/sim-fd",
+    "bookId": "modern-physics",
+    "title": "f(E) = 1/(1 + e (E−E F )/kT )",
+    "link": "chapters/constants-data.html#sim-fd"
+  },
+  {
+    "id": "modern-physics/constants-data/sim-ni",
+    "bookId": "modern-physics",
+    "title": "n i (T) 계산기",
+    "link": "chapters/constants-data.html#sim-ni"
+  },
+  {
+    "id": "modern-physics/constants-data/sim-donor",
+    "bookId": "modern-physics",
+    "title": "주개 결합 에너지와 궤도 반지름",
+    "link": "chapters/constants-data.html#sim-donor"
+  },
+  {
+    "id": "modern-physics/constants-data/sim-bar",
+    "bookId": "modern-physics",
+    "title": "투과 확률 T(a)",
+    "link": "chapters/constants-data.html#sim-bar"
+  },
+  {
+    "id": "modern-physics/constants-data/sim-well",
+    "bookId": "modern-physics",
+    "title": "우물 폭과 준위",
+    "link": "chapters/constants-data.html#sim-well"
+  },
+  {
+    "id": "modern-physics/energy-bands/sim-bloch",
+    "bookId": "modern-physics",
+    "title": "블로흐 파동함수 해부: k를 끌어 보라",
+    "link": "chapters/energy-bands.html#sim-bloch"
+  },
+  {
+    "id": "modern-physics/energy-bands/sim-kp",
+    "bookId": "modern-physics",
+    "title": "크로니히–페니 탐험기: 장벽을 끌어 띠 간격을 만들어라",
+    "link": "chapters/energy-bands.html#sim-kp"
+  },
+  {
+    "id": "modern-physics/energy-bands/sim-fill",
+    "bookId": "modern-physics",
+    "title": "띠 채움 게임: 전자를 채우고 고체를 분류하라",
+    "link": "chapters/energy-bands.html#sim-fill"
+  },
+  {
+    "id": "modern-physics/energy-bands/sim-mass",
+    "bookId": "modern-physics",
+    "title": "유효 질량 측정기: E(k) 위의 점을 끌어라",
+    "link": "chapters/energy-bands.html#sim-mass"
+  },
+  {
+    "id": "modern-physics/energy-bands/sim-hole",
+    "bookId": "modern-physics",
+    "title": "전기장 속의 k 이동: 블로흐 진동과 정공",
+    "link": "chapters/energy-bands.html#sim-hole"
+  },
+  {
+    "id": "modern-physics/energy-bands/sim-opt",
+    "bookId": "modern-physics",
+    "title": "Si·GaAs·Ge 단순화 띠 구조: 전이를 끌어 보라",
+    "link": "chapters/energy-bands.html#sim-opt"
+  },
+  {
+    "id": "modern-physics/harmonic-oscillator/sim-fit",
+    "bookId": "modern-physics",
+    "title": "포물선 맞히기: 곡률로 진동 주기를 예측하라",
+    "link": "chapters/harmonic-oscillator.html#sim-fit"
+  },
+  {
+    "id": "modern-physics/harmonic-oscillator/sim-ladder",
+    "bookId": "modern-physics",
+    "title": "에너지 사다리: 준위를 끌어 ψ n 과 고전 분포를 비교하라",
+    "link": "chapters/harmonic-oscillator.html#sim-ladder"
+  },
+  {
+    "id": "modern-physics/harmonic-oscillator/sim-coherent",
+    "bookId": "modern-physics",
+    "title": "결맞음 상태: 파속을 끌어 놓고 왕복을 지켜보라",
+    "link": "chapters/harmonic-oscillator.html#sim-coherent"
+  },
+  {
+    "id": "modern-physics/harmonic-oscillator/sim-ir",
+    "bookId": "modern-physics",
+    "title": "적외선 흡수선 맞히기: 힘 상수를 끌어 목표 파수를 찾아라",
+    "link": "chapters/harmonic-oscillator.html#sim-ir"
+  },
+  {
+    "id": "modern-physics/harmonic-oscillator/sim-chain",
+    "bookId": "modern-physics",
+    "title": "원자 사슬의 포논: 분산 곡선 위의 점을 끌어라",
+    "link": "chapters/harmonic-oscillator.html#sim-chain"
+  },
+  {
+    "id": "modern-physics/hydrogen-atom/sim-vec",
+    "bookId": "modern-physics",
+    "title": "벡터 모형: \\(\\vec L\\)의 끝을 끌어 \\(m\\)을 골라라",
+    "link": "chapters/hydrogen-atom.html#sim-vec"
+  },
+  {
+    "id": "modern-physics/hydrogen-atom/sim-veff",
+    "bookId": "modern-physics",
+    "title": "유효 퍼텐셜과 준위: 숨은 준위를 맞혀라",
+    "link": "chapters/hydrogen-atom.html#sim-veff"
+  },
+  {
+    "id": "modern-physics/hydrogen-atom/sim-pr",
+    "bookId": "modern-physics",
+    "title": "지름 확률 분포 P(r): 경계를 끌어 확률을 모아라",
+    "link": "chapters/hydrogen-atom.html#sim-pr"
+  },
+  {
+    "id": "modern-physics/hydrogen-atom/sim-orb",
+    "bookId": "modern-physics",
+    "title": "오비탈 점구름 뷰어",
+    "link": "chapters/hydrogen-atom.html#sim-orb"
+  },
+  {
+    "id": "modern-physics/hydrogen-atom/sim-slice",
+    "bookId": "modern-physics",
+    "title": "단면 확률 밀도: 끌어서 자르는 평면을 돌려라",
+    "link": "chapters/hydrogen-atom.html#sim-slice"
+  },
+  {
+    "id": "modern-physics/hydrogen-atom/sim-tr",
+    "bookId": "modern-physics",
+    "title": "전이 게임: 준위에서 준위로 끌어 광자를 만들어라",
+    "link": "chapters/hydrogen-atom.html#sim-tr"
+  },
+  {
+    "id": "modern-physics/light-matter/sim-pop",
+    "bookId": "modern-physics",
+    "title": "원자 집단 펌핑: 밀도 반전을 만들어라",
+    "link": "chapters/light-matter.html#sim-pop"
+  },
+  {
+    "id": "modern-physics/light-matter/sim-th",
+    "bookId": "modern-physics",
+    "title": "레이저 문턱: 거울 반사율을 설계해 목표 출력을 내라",
+    "link": "chapters/light-matter.html#sim-th"
+  },
+  {
+    "id": "modern-physics/light-matter/sim-abs",
+    "bookId": "modern-physics",
+    "title": "흡수 끝과 침투 깊이: 웨이퍼 단면 속의 빛",
+    "link": "chapters/light-matter.html#sim-abs"
+  },
+  {
+    "id": "modern-physics/light-matter/sim-led",
+    "bookId": "modern-physics",
+    "title": "LED 색 설계: 띠 간격을 끌어 목표 색을 맞혀라",
+    "link": "chapters/light-matter.html#sim-led"
+  },
+  {
+    "id": "modern-physics/light-matter/sim-pd",
+    "bookId": "modern-physics",
+    "title": "포토다이오드 응답도 곡선",
+    "link": "chapters/light-matter.html#sim-pd"
+  },
+  {
+    "id": "modern-physics/matter-waves/sim-dg",
+    "bookId": "modern-physics",
+    "title": "데이비슨–거머 각도 스캔: 목표 각도에 봉우리를 세워라",
+    "link": "chapters/matter-waves.html#sim-dg"
+  },
+  {
+    "id": "modern-physics/matter-waves/sim-ds",
+    "bookId": "modern-physics",
+    "title": "전자가 하나씩 도착하는 이중 슬릿",
+    "link": "chapters/matter-waves.html#sim-ds"
+  },
+  {
+    "id": "modern-physics/matter-waves/sim-synth",
+    "bookId": "modern-physics",
+    "title": "파속 합성기: 성분을 겹쳐 목표 폭의 파속을 만들어라",
+    "link": "chapters/matter-waves.html#sim-synth"
+  },
+  {
+    "id": "modern-physics/matter-waves/sim-group",
+    "bookId": "modern-physics",
+    "title": "위상 속도와 군속도: 분산 곡선 위의 점을 끌어라",
+    "link": "chapters/matter-waves.html#sim-group"
+  },
+  {
+    "id": "modern-physics/matter-waves/sim-atom",
+    "bookId": "modern-physics",
+    "title": "원자의 크기 찾기: 에너지가 가장 낮은 r로 끌어라",
+    "link": "chapters/matter-waves.html#sim-atom"
+  },
+  {
+    "id": "modern-physics/molecular-bonding/sim-dw",
+    "bookId": "modern-physics",
+    "title": "이중 우물: 간격을 끌어 준위를 갈라라",
+    "link": "chapters/molecular-bonding.html#sim-dw"
+  },
+  {
+    "id": "modern-physics/molecular-bonding/sim-tunnel",
+    "bookId": "modern-physics",
+    "title": "두 우물 사이를 오가는 전자 (크랭크–니콜슨 시간 전개)",
+    "link": "chapters/molecular-bonding.html#sim-tunnel"
+  },
+  {
+    "id": "modern-physics/molecular-bonding/sim-lcao",
+    "bookId": "modern-physics",
+    "title": "LCAO 에너지 도표: 원자 준위를 끌어 극성 결합 만들기",
+    "link": "chapters/molecular-bonding.html#sim-lcao"
+  },
+  {
+    "id": "modern-physics/molecular-bonding/sim-morse",
+    "bookId": "modern-physics",
+    "title": "모스 퍼텐셜 맞추기: 측정점에 곡선을 맞춰라",
+    "link": "chapters/molecular-bonding.html#sim-morse"
+  },
+  {
+    "id": "modern-physics/molecular-bonding/sim-hyb",
+    "bookId": "modern-physics",
+    "title": "혼성 오비탈 만들기: 두 혼성을 직교시켜라",
+    "link": "chapters/molecular-bonding.html#sim-hyb"
+  },
+  {
+    "id": "modern-physics/molecular-bonding/sim-chain",
+    "bookId": "modern-physics",
+    "title": "원자 사슬의 준위가 띠가 된다",
+    "link": "chapters/molecular-bonding.html#sim-chain"
+  },
+  {
+    "id": "modern-physics/photons/sim-bb",
+    "bookId": "modern-physics",
+    "title": "흑체 스펙트럼: 봉우리를 끌어 온도를 바꾸고 별의 온도를 맞혀라",
+    "link": "chapters/photons.html#sim-bb"
+  },
+  {
+    "id": "modern-physics/photons/sim-pe",
+    "bookId": "modern-physics",
+    "title": "광전 효과 실험대: 정지 전압을 재고 플랑크 상수를 측정하라",
+    "link": "chapters/photons.html#sim-pe"
+  },
+  {
+    "id": "modern-physics/photons/sim-flux",
+    "bookId": "modern-physics",
+    "title": "세기 ↔ 광자 수: 레지스트 픽셀에 떨어지는 광자 세기",
+    "link": "chapters/photons.html#sim-flux"
+  },
+  {
+    "id": "modern-physics/photons/sim-compton",
+    "bookId": "modern-physics",
+    "title": "콤프턴 산란: 산란 광자의 방향을 끌어라",
+    "link": "chapters/photons.html#sim-compton"
+  },
+  {
+    "id": "modern-physics/quantum-statistics/sim-quanta",
+    "bookId": "modern-physics",
+    "title": "에너지 퀀텀 나눠 주기: 점유 히스토그램",
+    "link": "chapters/quantum-statistics.html#sim-quanta"
+  },
+  {
+    "id": "modern-physics/quantum-statistics/sim-dos",
+    "bookId": "modern-physics",
+    "title": "1D·2D·3D 상태 밀도: 양자 우물의 계단",
+    "link": "chapters/quantum-statistics.html#sim-dos"
+  },
+  {
+    "id": "modern-physics/quantum-statistics/sim-occ",
+    "bookId": "modern-physics",
+    "title": "f(E) × g(E) = 점유 상태 밀도",
+    "link": "chapters/quantum-statistics.html#sim-occ"
+  },
+  {
+    "id": "modern-physics/quantum-statistics/sim-arr",
+    "bookId": "modern-physics",
+    "title": "진성 농도의 아레니우스 그래프: 고온 소자에 어떤 재료?",
+    "link": "chapters/quantum-statistics.html#sim-arr"
+  },
+  {
+    "id": "modern-physics/quantum-statistics/sim-dop",
+    "bookId": "modern-physics",
+    "title": "도핑 → 페르미 준위 계산기: 목표 E F 를 맞혀라",
+    "link": "chapters/quantum-statistics.html#sim-dop"
+  },
+  {
+    "id": "modern-physics/quantum-wells/sim-inf",
+    "bookId": "modern-physics",
+    "title": "상자 속 입자: 벽과 측정 구간을 끌어라",
+    "link": "chapters/quantum-wells.html#sim-inf"
+  },
+  {
+    "id": "modern-physics/quantum-wells/sim-fin",
+    "bookId": "modern-physics",
+    "title": "유한 우물 고유 상태 풀이기 (유한 차분, 실시간)",
+    "link": "chapters/quantum-wells.html#sim-fin"
+  },
+  {
+    "id": "modern-physics/quantum-wells/sim-graph",
+    "bookId": "modern-physics",
+    "title": "그래프 풀이: 원을 키워 상태를 만들어라",
+    "link": "chapters/quantum-wells.html#sim-graph"
+  },
+  {
+    "id": "modern-physics/quantum-wells/sim-tri",
+    "bookId": "modern-physics",
+    "title": "반전층 삼각 우물: 전기장을 끌어 올려라",
+    "link": "chapters/quantum-wells.html#sim-tri"
+  },
+  {
+    "id": "modern-physics/quantum-wells/sim-qd",
+    "bookId": "modern-physics",
+    "title": "양자점 색 만들기: 목표 색에 맞는 크기를 찾아라",
+    "link": "chapters/quantum-wells.html#sim-qd"
+  },
+  {
+    "id": "modern-physics/schrodinger/sim-sample",
+    "bookId": "modern-physics",
+    "title": "측정 한 번, 점 하나: 히스토그램이 |ψ|²이 될 때까지",
+    "link": "chapters/schrodinger.html#sim-sample"
+  },
+  {
+    "id": "modern-physics/schrodinger/sim-super",
+    "bookId": "modern-physics",
+    "title": "정상 상태 중첩: 위상 화살표를 끌어 출렁임 만들기",
+    "link": "chapters/schrodinger.html#sim-super"
+  },
+  {
+    "id": "modern-physics/schrodinger/sim-shoot",
+    "bookId": "modern-physics",
+    "title": "슈팅법 게임: 꼬리가 0이 되는 에너지 세 개 찾기",
+    "link": "chapters/schrodinger.html#sim-shoot"
+  },
+  {
+    "id": "modern-physics/schrodinger/sim-spread",
+    "bookId": "modern-physics",
+    "title": "가우스 파속 쏘기: 검출기에 가장 좁게 도착시켜라",
+    "link": "chapters/schrodinger.html#sim-spread"
+  },
+  {
+    "id": "modern-physics/spin-atoms/sim-zeeman",
+    "bookId": "modern-physics",
+    "title": "제만 분리: 자기장 커서를 끌어 과녁 스펙트럼을 맞혀라",
+    "link": "chapters/spin-atoms.html#sim-zeeman"
+  },
+  {
+    "id": "modern-physics/spin-atoms/sim-sg",
+    "bookId": "modern-physics",
+    "title": "슈테른–게를라흐 연쇄 장치: 자석 축을 돌려 목표 비율을 만들어라",
+    "link": "chapters/spin-atoms.html#sim-sg"
+  },
+  {
+    "id": "modern-physics/spin-atoms/sim-exchange",
+    "bookId": "modern-physics",
+    "title": "두 입자 확률 밀도: 대칭과 반대칭",
+    "link": "chapters/spin-atoms.html#sim-exchange"
+  },
+  {
+    "id": "modern-physics/spin-atoms/sim-config",
+    "bookId": "modern-physics",
+    "title": "전자 배치 빌더: 주기율표를 끌고, 훈트 규칙 퀴즈에 도전하라",
+    "link": "chapters/spin-atoms.html#sim-config"
+  },
+  {
+    "id": "modern-physics/spin-atoms/sim-ie",
+    "bookId": "modern-physics",
+    "title": "이온화 에너지 그래프: 커서를 끌어 껍질 구조를 읽어라",
+    "link": "chapters/spin-atoms.html#sim-ie"
+  },
+  {
+    "id": "modern-physics/tunneling/sim-packet",
+    "bookId": "modern-physics",
+    "title": "파속 터널링 실험실: 측정한 T vs 이론",
+    "link": "chapters/tunneling.html#sim-packet"
+  },
+  {
+    "id": "modern-physics/tunneling/sim-multi",
+    "bookId": "modern-physics",
+    "title": "다층 구조 편집기와 투과 스펙트럼 T(E)",
+    "link": "chapters/tunneling.html#sim-multi"
+  },
+  {
+    "id": "modern-physics/tunneling/sim-rtd",
+    "bookId": "modern-physics",
+    "title": "공명 터널 다이오드: 띠 그림과 I–V",
+    "link": "chapters/tunneling.html#sim-rtd"
+  },
+  {
+    "id": "modern-physics/tunneling/sim-gate",
+    "bookId": "modern-physics",
+    "title": "게이트 누설 계산기: high-k는 왜 필요한가",
+    "link": "chapters/tunneling.html#sim-gate"
+  },
+  {
+    "id": "modern-physics/tunneling/sim-fn",
+    "bookId": "modern-physics",
+    "title": "FN 플롯과 플래시 프로그램 전압",
+    "link": "chapters/tunneling.html#sim-fn"
+  },
+  {
+    "id": "modern-physics/tunneling/sim-stm",
+    "bookId": "modern-physics",
+    "title": "STM 바늘 조종: 정높이 vs 정전류",
+    "link": "chapters/tunneling.html#sim-stm"
+  },
+  {
+    "id": "fluid-mechanics/bernoulli/sim-pitot",
+    "bookId": "fluid-mechanics",
+    "title": "피토 정압관으로 비행 속도 재기",
+    "link": "chapters/bernoulli.html#sim-pitot"
+  },
+  {
+    "id": "fluid-mechanics/bernoulli/sim-venturi",
+    "bookId": "fluid-mechanics",
+    "title": "벤투리관: 목을 좁혀 보라",
+    "link": "chapters/bernoulli.html#sim-venturi"
+  },
+  {
+    "id": "fluid-mechanics/bernoulli/sim-drain",
+    "bookId": "fluid-mechanics",
+    "title": "탱크 배수: h–t 실시간 그래프",
+    "link": "chapters/bernoulli.html#sim-drain"
+  },
+  {
+    "id": "fluid-mechanics/bernoulli/sim-siphon",
+    "bookId": "fluid-mechanics",
+    "title": "사이펀: 벽을 넘겨 최대 유량을 뽑아라",
+    "link": "chapters/bernoulli.html#sim-siphon"
+  },
+  {
+    "id": "fluid-mechanics/bernoulli/sim-egl",
+    "bookId": "fluid-mechanics",
+    "title": "관로를 따라 EGL·HGL 그리기",
+    "link": "chapters/bernoulli.html#sim-egl"
+  },
+  {
+    "id": "fluid-mechanics/compressible-flow/sim-pulse",
+    "bookId": "fluid-mechanics",
+    "title": "관 속 압력파: 피스톤을 밀어 음파를 보내라",
+    "link": "chapters/compressible-flow.html#sim-pulse"
+  },
+  {
+    "id": "fluid-mechanics/compressible-flow/sim-mach",
+    "bookId": "fluid-mechanics",
+    "title": "슐리렌 사진 판독: 마하 각을 재서 탄환의 속도를 맞혀라",
+    "link": "chapters/compressible-flow.html#sim-mach"
+  },
+  {
+    "id": "fluid-mechanics/compressible-flow/sim-duct",
+    "bookId": "fluid-mechanics",
+    "title": "면적–속도 관계: 관 벽을 끌어 모양을 바꿔라",
+    "link": "chapters/compressible-flow.html#sim-duct"
+  },
+  {
+    "id": "fluid-mechanics/compressible-flow/sim-conv",
+    "bookId": "fluid-mechanics",
+    "title": "수축 노즐: 배압을 끌어 내려 초크시켜라",
+    "link": "chapters/compressible-flow.html#sim-conv"
+  },
+  {
+    "id": "fluid-mechanics/compressible-flow/sim-nozzle",
+    "bookId": "fluid-mechanics",
+    "title": "라발 노즐 시뮬레이터: 배압으로 충격파를 과녁에 세워라",
+    "link": "chapters/compressible-flow.html#sim-nozzle"
+  },
+  {
+    "id": "fluid-mechanics/compressible-flow/sim-shock",
+    "bookId": "fluid-mechanics",
+    "title": "수직 충격파 계산기: 상류 속도 화살표를 끌어라",
+    "link": "chapters/compressible-flow.html#sim-shock"
+  },
+  {
+    "id": "fluid-mechanics/compressible-flow/sim-wedge",
+    "bookId": "fluid-mechanics",
+    "title": "쐐기와 코너: 경사 충격파와 팽창 부채",
+    "link": "chapters/compressible-flow.html#sim-wedge"
+  },
+  {
+    "id": "fluid-mechanics/control-volume/sim-tank",
+    "bookId": "fluid-mechanics",
+    "title": "탱크 질량 수지: 목표 수위를 지켜라",
+    "link": "chapters/control-volume.html#sim-tank"
+  },
+  {
+    "id": "fluid-mechanics/control-volume/sim-vane",
+    "bookId": "fluid-mechanics",
+    "title": "날개 시뮬레이터: 목표 힘을 맞혀라",
+    "link": "chapters/control-volume.html#sim-vane"
+  },
+  {
+    "id": "fluid-mechanics/control-volume/sim-elbow",
+    "bookId": "fluid-mechanics",
+    "title": "엘보와 축소 노즐을 붙잡는 힘",
+    "link": "chapters/control-volume.html#sim-elbow"
+  },
+  {
+    "id": "fluid-mechanics/control-volume/sim-sprinkler",
+    "bookId": "fluid-mechanics",
+    "title": "회전 스프링클러: 목표 회전수를 맞혀라",
+    "link": "chapters/control-volume.html#sim-sprinkler"
+  },
+  {
+    "id": "fluid-mechanics/control-volume/sim-pipe",
+    "bookId": "fluid-mechanics",
+    "title": "펌프·터빈이 있는 관로의 수두 막대",
+    "link": "chapters/control-volume.html#sim-pipe"
+  },
+  {
+    "id": "fluid-mechanics/differential-analysis/sim-div",
+    "bookId": "fluid-mechanics",
+    "title": "검사 체적 상자: 면 유량과 유체 덩어리의 넓이",
+    "link": "chapters/differential-analysis.html#sim-div"
+  },
+  {
+    "id": "fluid-mechanics/differential-analysis/sim-start",
+    "bookId": "fluid-mechanics",
+    "title": "출발 유동: 점성이 운동량을 퍼뜨리는 시간",
+    "link": "chapters/differential-analysis.html#sim-start"
+  },
+  {
+    "id": "fluid-mechanics/differential-analysis/sim-cp",
+    "bookId": "fluid-mechanics",
+    "title": "쿠에트–푸아죄유 유동: 판을 끌고 압력을 올려라",
+    "link": "chapters/differential-analysis.html#sim-cp"
+  },
+  {
+    "id": "fluid-mechanics/differential-analysis/sim-super",
+    "bookId": "fluid-mechanics",
+    "title": "중첩 빌더: 요소를 놓아 목표 모양을 만들어라",
+    "link": "chapters/differential-analysis.html#sim-super"
+  },
+  {
+    "id": "fluid-mechanics/differential-analysis/sim-cyl",
+    "bookId": "fluid-mechanics",
+    "title": "회전하는 원주: 순환, 정체점, 표면 압력, 양력",
+    "link": "chapters/differential-analysis.html#sim-cyl"
+  },
+  {
+    "id": "fluid-mechanics/dimensional-analysis/sim-fall",
+    "bookId": "fluid-mechanics",
+    "title": "던지기의 무차원화: 서로 다른 던지기로 같은 곡선 만들기",
+    "link": "chapters/dimensional-analysis.html#sim-fall"
+  },
+  {
+    "id": "fluid-mechanics/dimensional-analysis/sim-pi",
+    "bookId": "fluid-mechanics",
+    "title": "Π 정리 빌더: 변수를 고르면 Π 그룹이 만들어진다",
+    "link": "chapters/dimensional-analysis.html#sim-pi"
+  },
+  {
+    "id": "fluid-mechanics/dimensional-analysis/sim-wave",
+    "bookId": "fluid-mechanics",
+    "title": "수면파 수조: 바닥과 파장을 끌어 보라",
+    "link": "chapters/dimensional-analysis.html#sim-wave"
+  },
+  {
+    "id": "fluid-mechanics/dimensional-analysis/sim-model",
+    "bookId": "fluid-mechanics",
+    "title": "모형 실험 설계기: 시설 한계 안에서 Re를 맞춰라",
+    "link": "chapters/dimensional-analysis.html#sim-model"
+  },
+  {
+    "id": "fluid-mechanics/dimensional-analysis/sim-ship",
+    "bookId": "fluid-mechanics",
+    "title": "예인 수조: 모형 배의 파형을 원형과 똑같이",
+    "link": "chapters/dimensional-analysis.html#sim-ship"
+  },
+  {
+    "id": "fluid-mechanics/dimensional-analysis/sim-collapse",
+    "bookId": "fluid-mechanics",
+    "title": "데이터 정리기: 올바른 무차원 묶음을 찾아 곡선을 붕괴시켜라",
+    "link": "chapters/dimensional-analysis.html#sim-collapse"
+  },
+  {
+    "id": "fluid-mechanics/external-flow/sim-bl",
+    "bookId": "fluid-mechanics",
+    "title": "경계층 탐침: 평판 위 어디서든 속도 분포를 재라",
+    "link": "chapters/external-flow.html#sim-bl"
+  },
+  {
+    "id": "fluid-mechanics/external-flow/sim-sep",
+    "bookId": "fluid-mechanics",
+    "title": "원주 주위 박리: 표면 압력을 탐침으로 재라",
+    "link": "chapters/external-flow.html#sim-sep"
+  },
+  {
+    "id": "fluid-mechanics/external-flow/sim-cdre",
+    "bookId": "fluid-mechanics",
+    "title": "C D –Re 곡선 탐험: 점을 끌어 레이놀즈 수를 바꿔라",
+    "link": "chapters/external-flow.html#sim-cdre"
+  },
+  {
+    "id": "fluid-mechanics/external-flow/sim-sphere",
+    "bookId": "fluid-mechanics",
+    "title": "떨어지는 구: 종단 속도와 C D –Re 위의 점",
+    "link": "chapters/external-flow.html#sim-sphere"
+  },
+  {
+    "id": "fluid-mechanics/external-flow/sim-chute",
+    "bookId": "fluid-mechanics",
+    "title": "도전: 낙하산을 설계해 5 m/s 이하로 착지하라",
+    "link": "chapters/external-flow.html#sim-chute"
+  },
+  {
+    "id": "fluid-mechanics/external-flow/sim-airfoil",
+    "bookId": "fluid-mechanics",
+    "title": "에어포일 풍동: 받음각을 끌어 실속을 찾아라",
+    "link": "chapters/external-flow.html#sim-airfoil"
+  },
+  {
+    "id": "fluid-mechanics/external-flow/sim-takeoff",
+    "bookId": "fluid-mechanics",
+    "title": "도전: 짧은 활주로에서 이륙하라",
+    "link": "chapters/external-flow.html#sim-takeoff"
+  },
+  {
+    "id": "fluid-mechanics/fluid-kinematics/sim-le",
+    "bookId": "fluid-mechanics",
+    "title": "입자 따라가기(라그랑주) vs 고정 탐침(오일러)",
+    "link": "chapters/fluid-kinematics.html#sim-le"
+  },
+  {
+    "id": "fluid-mechanics/fluid-kinematics/sim-noz",
+    "bookId": "fluid-mechanics",
+    "title": "수축 노즐: 국소 가속도와 대류 가속도의 분해",
+    "link": "chapters/fluid-kinematics.html#sim-noz"
+  },
+  {
+    "id": "fluid-mechanics/fluid-kinematics/sim-lines",
+    "bookId": "fluid-mechanics",
+    "title": "유선·유적선·유맥선 동시에 그리기",
+    "link": "chapters/fluid-kinematics.html#sim-lines"
+  },
+  {
+    "id": "fluid-mechanics/fluid-kinematics/sim-elem",
+    "bookId": "fluid-mechanics",
+    "title": "유체 요소 띄우기: 회전하는가, 변형하는가?",
+    "link": "chapters/fluid-kinematics.html#sim-elem"
+  },
+  {
+    "id": "fluid-mechanics/fluid-kinematics/sim-circ",
+    "bookId": "fluid-mechanics",
+    "title": "순환 재기: 폐곡선을 끌어 Γ = ∮V·ds 구하기",
+    "link": "chapters/fluid-kinematics.html#sim-circ"
+  },
+  {
+    "id": "fluid-mechanics/fluid-kinematics/sim-rtt",
+    "bookId": "fluid-mechanics",
+    "title": "움직이는 계 vs 고정된 검사 체적",
+    "link": "chapters/fluid-kinematics.html#sim-rtt"
+  },
+  {
+    "id": "fluid-mechanics/fluid-properties/sim-couette",
+    "bookId": "fluid-mechanics",
+    "title": "평판 사이 유체: 목표 전단 응력을 만들어라",
+    "link": "chapters/fluid-properties.html#sim-couette"
+  },
+  {
+    "id": "fluid-mechanics/fluid-properties/sim-journal",
+    "bookId": "fluid-mechanics",
+    "title": "저널 베어링의 점성 토크",
+    "link": "chapters/fluid-properties.html#sim-journal"
+  },
+  {
+    "id": "fluid-mechanics/fluid-properties/sim-rheo",
+    "bookId": "fluid-mechanics",
+    "title": "유변 측정기: 미지 시료의 정체를 밝혀라",
+    "link": "chapters/fluid-properties.html#sim-rheo"
+  },
+  {
+    "id": "fluid-mechanics/fluid-properties/sim-piston",
+    "bookId": "fluid-mechanics",
+    "title": "피스톤으로 눌러 보는 체적 탄성 계수",
+    "link": "chapters/fluid-properties.html#sim-piston"
+  },
+  {
+    "id": "fluid-mechanics/fluid-properties/sim-cap",
+    "bookId": "fluid-mechanics",
+    "title": "모세관: 관 지름을 맞혀 목표 높이에 세워라",
+    "link": "chapters/fluid-properties.html#sim-cap"
+  },
+  {
+    "id": "fluid-mechanics/fluid-properties/sim-cavit",
+    "bookId": "fluid-mechanics",
+    "title": "펌프 흡입부의 공동 현상",
+    "link": "chapters/fluid-properties.html#sim-cavit"
+  },
+  {
+    "id": "fluid-mechanics/fluid-statics/sim-paradox",
+    "bookId": "fluid-mechanics",
+    "title": "정수압 역설: 모양이 다른 세 용기",
+    "link": "chapters/fluid-statics.html#sim-paradox"
+  },
+  {
+    "id": "fluid-mechanics/fluid-statics/sim-mano",
+    "bookId": "fluid-mechanics",
+    "title": "U자관 차압 마노미터",
+    "link": "chapters/fluid-statics.html#sim-mano"
+  },
+  {
+    "id": "fluid-mechanics/fluid-statics/sim-gate",
+    "bookId": "fluid-mechanics",
+    "title": "경사 수문: 압력 분포, 압력 중심, 힌지 모멘트",
+    "link": "chapters/fluid-statics.html#sim-gate"
+  },
+  {
+    "id": "fluid-mechanics/fluid-statics/sim-curved",
+    "bookId": "fluid-mechanics",
+    "title": "1/4 원통 곡면 수문의 힘 성분",
+    "link": "chapters/fluid-statics.html#sim-curved"
+  },
+  {
+    "id": "fluid-mechanics/fluid-statics/sim-float",
+    "bookId": "fluid-mechanics",
+    "title": "부양체 상자의 안정성과 복원 팔 곡선",
+    "link": "chapters/fluid-statics.html#sim-float"
+  },
+  {
+    "id": "fluid-mechanics/fluid-statics/sim-accel",
+    "bookId": "fluid-mechanics",
+    "title": "가속하는 탱크: 기울어진 수면과 등압선",
+    "link": "chapters/fluid-statics.html#sim-accel"
+  },
+  {
+    "id": "fluid-mechanics/fluid-statics/sim-rot",
+    "bookId": "fluid-mechanics",
+    "title": "회전하는 원통: 포물면 수면 — 넘치기 직전을 맞혀라",
+    "link": "chapters/fluid-statics.html#sim-rot"
+  },
+  {
+    "id": "fluid-mechanics/open-channel/sim-wave",
+    "bookId": "fluid-mechanics",
+    "title": "흐르는 물에 돌 던지기 (위에서 본 수로)",
+    "link": "chapters/open-channel.html#sim-wave"
+  },
+  {
+    "id": "fluid-mechanics/open-channel/sim-energy",
+    "bookId": "fluid-mechanics",
+    "title": "비에너지 선도와 바닥 융기 (도전: 초크 직전까지)",
+    "link": "chapters/open-channel.html#sim-energy"
+  },
+  {
+    "id": "fluid-mechanics/open-channel/sim-manning",
+    "bookId": "fluid-mechanics",
+    "title": "매닝 수로 설계기 (도전: 목표 유량을 가장 작은 단면으로)",
+    "link": "chapters/open-channel.html#sim-manning"
+  },
+  {
+    "id": "fluid-mechanics/open-channel/sim-gvf",
+    "bookId": "fluid-mechanics",
+    "title": "수면 곡선 적분기 (M · S · H · A 곡선)",
+    "link": "chapters/open-channel.html#sim-gvf"
+  },
+  {
+    "id": "fluid-mechanics/open-channel/sim-jump",
+    "bookId": "fluid-mechanics",
+    "title": "수력 도약 계산기",
+    "link": "chapters/open-channel.html#sim-jump"
+  },
+  {
+    "id": "fluid-mechanics/open-channel/sim-gate",
+    "bookId": "fluid-mechanics",
+    "title": "수문 아래 흐름: 자유 유출과 잠긴 유출",
+    "link": "chapters/open-channel.html#sim-gate"
+  },
+  {
+    "id": "fluid-mechanics/pipe-flow/sim-entry",
+    "bookId": "fluid-mechanics",
+    "title": "입구 영역: 속도 분포가 자라는 모습",
+    "link": "chapters/pipe-flow.html#sim-entry"
+  },
+  {
+    "id": "fluid-mechanics/pipe-flow/sim-profile",
+    "bookId": "fluid-mechanics",
+    "title": "층류 포물선 vs 난류 멱법칙 (같은 평균 속도)",
+    "link": "chapters/pipe-flow.html#sim-profile"
+  },
+  {
+    "id": "fluid-mechanics/pipe-flow/sim-moody",
+    "bookId": "fluid-mechanics",
+    "title": "인터랙티브 무디 선도",
+    "link": "chapters/pipe-flow.html#sim-moody"
+  },
+  {
+    "id": "fluid-mechanics/pipe-flow/sim-tanks",
+    "bookId": "fluid-mechanics",
+    "title": "두 탱크 사이 관로 계산기 + 도전: 최소 지름 고르기",
+    "link": "chapters/pipe-flow.html#sim-tanks"
+  },
+  {
+    "id": "fluid-mechanics/pipe-flow/sim-parallel",
+    "bookId": "fluid-mechanics",
+    "title": "병렬 관로의 유량 분배",
+    "link": "chapters/pipe-flow.html#sim-parallel"
+  },
+  {
+    "id": "fluid-mechanics/property-tables/sim-water",
+    "bookId": "fluid-mechanics",
+    "title": "물의 물성 계산기",
+    "link": "chapters/property-tables.html#sim-water"
+  },
+  {
+    "id": "fluid-mechanics/property-tables/sim-air",
+    "bookId": "fluid-mechanics",
+    "title": "공기의 물성 계산기",
+    "link": "chapters/property-tables.html#sim-air"
+  },
+  {
+    "id": "fluid-mechanics/property-tables/sim-atm",
+    "bookId": "fluid-mechanics",
+    "title": "고도를 끌어 대기 상태 읽기",
+    "link": "chapters/property-tables.html#sim-atm"
+  },
+  {
+    "id": "fluid-mechanics/property-tables/sim-conv",
+    "bookId": "fluid-mechanics",
+    "title": "단위 환산기",
+    "link": "chapters/property-tables.html#sim-conv"
+  },
+  {
+    "id": "fluid-mechanics/property-tables/sim-moody",
+    "bookId": "fluid-mechanics",
+    "title": "인터랙티브 무디 선도",
+    "link": "chapters/property-tables.html#sim-moody"
+  },
+  {
+    "id": "fluid-mechanics/property-tables/sim-gas",
+    "bookId": "fluid-mechanics",
+    "title": "등엔트로피 · 수직 충격파 계산기",
+    "link": "chapters/property-tables.html#sim-gas"
+  },
+  {
+    "id": "fluid-mechanics/turbomachinery/sim-tri",
+    "bookId": "fluid-mechanics",
+    "title": "속도 삼각형: V₂ 끝을 끌어 날개 출구각과 유량을 바꿔라",
+    "link": "chapters/turbomachinery.html#sim-tri"
+  },
+  {
+    "id": "fluid-mechanics/turbomachinery/sim-op",
+    "bookId": "fluid-mechanics",
+    "title": "작동점: 시스템 곡선을 끌고, 회전수로 목표 유량을 맞혀라",
+    "link": "chapters/turbomachinery.html#sim-op"
+  },
+  {
+    "id": "fluid-mechanics/turbomachinery/sim-npsh",
+    "bookId": "fluid-mechanics",
+    "title": "NPSH와 공동 현상: 펌프를 끌어 올리고 내려 보라",
+    "link": "chapters/turbomachinery.html#sim-npsh"
+  },
+  {
+    "id": "fluid-mechanics/turbomachinery/sim-ns",
+    "bookId": "fluid-mechanics",
+    "title": "비속도로 펌프 형식 고르기: 주문서를 받아 회전수를 정하라",
+    "link": "chapters/turbomachinery.html#sim-ns"
+  },
+  {
+    "id": "fluid-mechanics/turbomachinery/sim-pelton",
+    "bookId": "fluid-mechanics",
+    "title": "펠턴 휠: 버킷 속도비와 출력, 발전기 동기 속도 맞추기",
+    "link": "chapters/turbomachinery.html#sim-pelton"
   }
 ]
