@@ -2,22 +2,29 @@
 window.FIELD_MAPS = {
   science: {
     title: "대학에서 배우는 과학과 공학의 기초",
-    desc: "ScienceBooks의 공통 기초 교재입니다. 물리·화학과 공학 역학을 공부하고 각 전공의 응용으로 이어갑니다.",
+    desc: "ScienceBooks의 공통 기초 교재입니다. 물리·화학·재료와 열·유동, 확률·통계를 공부하고 각 전공의 응용으로 이어갑니다.",
+    // [왼쪽, 위, 열 수]. 화학은 한 줄로 세워 세 묶음이 한 행에 들어가게 합니다.
+    regions: [[12, 12, 2], [486, 12, 1], [742, 12, 2]],
     groups: [
-      ["물리와 전자기", "Physics", "운동·파동·전기장과 플라즈마의 원리", ["general-physics", "modern-physics", "electromagneticsbook", "plasmabook"]],
-      ["화학과 재료", "Chemistry", "원자·분자·반응에서 재료의 구조와 물성까지", ["general-chemistry", "organic-chemistry", "materialsbook"]],
-      ["에너지와 역학", "Mechanics", "힘과 운동, 에너지와 유동의 공학적 해석", ["thermobook", "statics", "dynamics", "fluid-mechanics"]],
+      ["물리와 전자기", "Physics", "운동·파동에서 양자·고체, 전기장과 플라즈마의 원리", ["general-physics", "modern-physics", "quantum-mechanics", "solid-state", "electromagnetics", "plasmabook"]],
+      ["화학과 재료", "Chemistry", "원자·분자·반응에서 재료의 구조와 물성까지", ["general-chemistry", "organic-chemistry", "materials-science"]],
+      ["열·유동과 통계", "Thermal, Fluids & Statistics", "열·평형과 유동 해석, 측정 데이터의 통계", ["thermal-physics", "fluid-mechanics", "probability-statistics"]],
     ],
     links: [
       ["general-physics", "modern-physics", "빛과 원자의 기초에서 양자역학과 에너지 띠로"],
-      ["general-physics", "electromagneticsbook", "전기·자기 기초에서 장과 맥스웰 방정식으로"],
-      ["electromagneticsbook", "plasmabook", "전자기장과 하전 입자의 운동·방전"],
+      ["modern-physics", "quantum-mechanics", "슈뢰딩거 방정식 입문에서 디랙 표기·각운동량·근사법으로"],
+      ["modern-physics", "solid-state", "양자 통계·에너지 띠에서 결정 속 전자와 반도체로"],
+      ["quantum-mechanics", "solid-state", "블로흐 정리·터널링으로 이해하는 띠 구조와 나노 구조"],
+      ["general-physics", "electromagnetics", "전기·자기 기초에서 장과 맥스웰 방정식으로"],
+      ["electromagnetics", "plasmabook", "전자기장과 하전 입자의 운동·방전"],
       ["general-chemistry", "organic-chemistry", "화학 결합에서 분자 구조와 반응 메커니즘으로"],
-      ["general-chemistry", "materialsbook", "원자·결합·결정에서 재료의 구조와 물성으로"],
-      ["general-chemistry", "thermobook", "열화학·자유 에너지에서 열역학과 상평형으로"],
-      ["general-physics", "statics", "뉴턴 법칙에서 힘·모멘트와 강체 평형으로"],
-      ["statics", "dynamics", "힘의 평형에서 가속도와 운동으로"],
+      ["general-chemistry", "materials-science", "원자·결합·결정에서 재료의 구조와 물성으로"],
+      ["solid-state", "materials-science", "결정 구조·결함·확산을 물성과 미세조직으로"],
+      ["general-chemistry", "thermal-physics", "열화학·자유 에너지에서 열역학과 상평형으로"],
+      ["thermal-physics", "materials-science", "자유 에너지·상태도로 이해하는 상변태와 미세조직"],
       ["general-physics", "fluid-mechanics", "유체의 압력·흐름에서 검사 체적과 관 유동으로"],
+      ["thermal-physics", "fluid-mechanics", "기체 운동론·확산·열전달과 유동"],
+      ["probability-statistics", "thermal-physics", "확률 분포에서 볼츠만 분포와 통계역학으로"],
     ],
   },
   semiconductor: {
@@ -232,6 +239,9 @@ window.FIELD_MAPS = {
       ["musicbook", "guitarbook", "화성·음색을 지판과 연주로 연결하기"],
       ["musicbook", "pianobook", "음정·화성을 건반과 반주로 익히기"],
       ["musicbook", "drumbook", "박자·리듬을 손발의 연주로 연결하기"],
+      ["musicbook", "bassbook", "근음·코드톤·리듬을 베이스라인으로 연결하기"],
+      ["guitarbook", "bassbook", "같은 지판·TAB에서 코드 반주와 베이스라인으로"],
+      ["drumbook", "bassbook", "킥 드럼과 맞물리는 리듬 섹션의 그루브"],
       ["mathbook", "musicbook", "푸리에·표본화·수의 비율로 음색과 조율 이해하기"],
       ["artbook-color", "artbook-composition", "색과 형태로 시선 이끌기"],
       ["artbook-color", "artbook-image", "이미지의 색을 읽는 눈"],
@@ -265,7 +275,7 @@ window.FIELD_MAPS = {
         "Create",
         "음·화음·리듬을 직접 듣고 구성하기",
         [
-          "musicbook", "guitarbook", "pianobook", "drumbook"
+          "musicbook", "guitarbook", "pianobook", "drumbook", "bassbook"
         ]
       ],
       [
@@ -319,11 +329,13 @@ window.FIELD_MAPS = {
 
 // 분야를 넘는 연결도 한 번만 등록합니다. 양쪽 책의 소개에서 같은 이유로 탐색합니다.
 window.FIELD_MAP_CROSS_LINKS = [
-  ["electromagneticsbook", "devicebook", "정전계·경계 조건으로 이해하는 소자의 전위와 전기장"],
-  ["materialsbook", "processbook", "결정·확산·상변태와 반도체 공정의 재료 변화"],
+  ["electromagnetics", "devicebook", "정전계·경계 조건으로 이해하는 소자의 전위와 전기장"],
+  ["materials-science", "processbook", "결정·확산·상변태와 반도체 공정의 재료 변화"],
   ["plasmabook", "etchbook", "방전·시스와 플라즈마 식각의 이온·라디칼 제어"],
-  ["thermobook", "infrabook", "에너지 수지·열기관과 팹의 냉동·냉각 설비"],
+  ["thermal-physics", "infrabook", "에너지 수지·열기관과 팹의 냉동·냉각 설비"],
   ["modern-physics", "devicebook", "양자 우물·터널링·에너지 띠에서 반도체 소자 물리로"],
+  ["solid-state", "devicebook", "캐리어 통계·수송·재결합과 접합에서 소자 동작으로"],
+  ["probability-statistics", "yieldbook", "통계적 공정 관리·신뢰성 분포로 읽는 수율과 불량"],
   ["general-chemistry", "processbook", "반응·평형·속도론으로 이해하는 제조 공정"],
   ["general-chemistry", "cmpbook", "산화·착화·pH와 제타 전위로 이해하는 슬러리와 세정액"],
   ["fluid-mechanics", "infrabook", "관 유동·압력 손실과 팹의 공조·용수 공급"],

@@ -41,7 +41,7 @@
     padding: 14px 24px 12px; border: 1px solid #6b4c32; border-radius: 10px;
     background: linear-gradient(90deg, #1c1515, #302522 50%, #1c1515);
     box-shadow: inset 0 0 0 5px rgba(173,117,60,.09), inset 0 18px 30px rgba(0,0,0,.35), 0 24px 60px rgba(0,0,0,.45);
-    display: flex; flex-direction: column; gap: 14px;
+    display: flex; flex-direction: column; gap: 12px;
   }
   .room::before, .room::after { content: ""; position: absolute; top: 0; bottom: 0; width: 16px; background: linear-gradient(90deg, #61442c, #9a6c42 30%, #38271f 75%, #201715); }
   .room::before { left: 0; border-radius: 10px 0 0 10px; }
@@ -50,25 +50,25 @@
   .room-head strong { color: #f6dbb3; font: 700 14px var(--mono); }
   .shelf {
     flex: 1; display: flex; align-items: flex-end; justify-content: center; gap: 3px; padding: 0 8px;
-    border-bottom: 17px solid #744d30;
+    border-bottom: 13px solid #744d30;
     background: radial-gradient(ellipse 70% 110% at 50% 5%, rgba(239,182,107,.1), transparent 65%), linear-gradient(90deg, #211a1b, #2d2423 50%, #211a1b);
     box-shadow: 0 7px 0 #302019, 0 10px 12px rgba(0,0,0,.5), inset 0 18px 22px rgba(0,0,0,.35);
   }
   .spine {
-    position: relative; flex: 1 1 0; min-width: 0; max-width: 40px; height: 196px;
-    display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 9px 2px 8px;
+    position: relative; flex: 1 1 0; min-width: 0; max-width: 34px; height: 128px;
+    display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 6px 1px 5px;
     color: #fff9ec; border: 1px solid rgba(255,255,255,.16); border-bottom: 0; border-radius: 3px 4px 0 0;
     background: linear-gradient(90deg, rgba(0,0,0,.42), rgba(255,255,255,.15) 9%, transparent 19%, rgba(0,0,0,.08) 75%, rgba(0,0,0,.45) 95%), repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 5px), var(--c);
     box-shadow: inset 3px 0 rgba(255,255,255,.12), inset -3px 0 rgba(0,0,0,.2), 3px 3px 5px rgba(0,0,0,.45);
   }
-  .spine:nth-child(4n+2) { height: 206px; }
-  .spine:nth-child(5n+3) { height: 186px; }
-  .spine.tall { height: 214px; }
+  .spine:nth-child(4n+2) { height: 134px; }
+  .spine:nth-child(5n+3) { height: 122px; }
+  .spine.tall { height: 138px; }
   .spine::before, .spine::after { content: ""; position: absolute; left: 3px; right: 3px; height: 3px; border-block: 1px solid rgba(255,241,210,.55); }
-  .spine::before { top: 24px; } .spine::after { bottom: 24px; }
-  .spine .t { margin-top: 22px; font: 600 15px/1 var(--font); writing-mode: vertical-rl; white-space: nowrap; letter-spacing: .01em; text-shadow: 0 1px 2px rgba(0,0,0,.5); }
-  .spine .f { font: 600 9px var(--mono); letter-spacing: .06em; opacity: .9; }
-  .spine.pulled { transform: translateY(-14px); filter: brightness(1.15); }
+  .spine::before { top: 16px; } .spine::after { bottom: 18px; }
+  .spine .t { margin-top: 14px; font: 600 13px/1 var(--font); writing-mode: vertical-rl; white-space: nowrap; letter-spacing: .01em; text-shadow: 0 1px 2px rgba(0,0,0,.5); }
+  .spine .f { font: 600 8px var(--mono); letter-spacing: .06em; opacity: .9; }
+  .spine.pulled { transform: translateY(-10px); filter: brightness(1.15); }
 </style>
 </head>
 <body>
@@ -87,6 +87,7 @@
     <div class="room-head"><span>지금 바로 펼칠 수 있는 책</span><strong id="s-head">–</strong></div>
     <div class="shelf" id="row1"></div>
     <div class="shelf" id="row2"></div>
+    <div class="shelf" id="row3"></div>
   </div>
 <script>
 (async () => {
@@ -99,8 +100,13 @@
   document.getElementById("s-sims").textContent = sims.toLocaleString("en-US");
   document.getElementById("s-fields").textContent = fieldsUsed.size;
   document.getElementById("s-head").textContent = `${pub.length}권 출간`;
-  // 홈 책장처럼 첫 칸은 더 넓은 세계, 둘째 칸은 반도체.
-  const rows = [pub.filter((b) => b.field !== "semiconductor"), pub.filter((b) => b.field === "semiconductor")];
+  // 첫 칸은 과학·컴퓨터·전자, 둘째 칸은 살아가는 지식, 셋째 칸은 반도체.
+  const wingOf = Object.fromEntries(data.fields.map((f) => [f.id, f.wing]));
+  const rows = [
+    pub.filter((b) => b.field !== "semiconductor" && wingOf[b.field] === "work"),
+    pub.filter((b) => wingOf[b.field] !== "work"),
+    pub.filter((b) => b.field === "semiconductor"),
+  ];
   const pulled = new Set(["aibook", "moneybook", "devicebook"]);
   rows.forEach((books, i) => {
     const row = document.getElementById(`row${i + 1}`);
@@ -116,6 +122,11 @@
     });
   });
   await document.fonts.ready;
+  // 긴 제목은 책등 안에 들어오도록 글자를 줄인다.
+  document.querySelectorAll(".spine").forEach((el) => {
+    const t = el.querySelector(".t"), room = el.clientHeight - 34;
+    for (let size = 13; size > 8 && t.getBoundingClientRect().height > room; size -= 0.5) t.style.fontSize = `${size - 0.5}px`;
+  });
   document.body.dataset.ready = "1";
 })();
 </script>
