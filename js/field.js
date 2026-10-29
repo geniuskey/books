@@ -112,17 +112,29 @@ EB.initKnowledgeMaps = (d) => {
       group.books.forEach((book, bookIndex) => {
         const left = regionPadding + bookIndex % cols * (cardWidth + cardGap);
         const top = regionHeader + Math.floor(bookIndex / cols) * (cardHeight + cardGap);
+        const card = document.createElement("div");
+        card.className = "map-book " + book.status;
+        card.id = "card-" + book.id;
+        card.dataset.book = book.id;
+        EB.tint(card, book);
+        Object.assign(card.style, { left: `${left}px`, top: `${top}px` });
         const button = document.createElement("button");
         button.type = "button";
-        button.className = "map-book " + book.status;
-        button.id = "card-" + book.id;
-        button.dataset.book = book.id;
+        button.className = "map-book-select";
         button.setAttribute("aria-pressed", "false");
         button.setAttribute("aria-label", `${EB.coverTitle(book)} · ${EB.status(book)} · 연결과 소개 보기`);
-        EB.tint(button, book);
-        Object.assign(button.style, { left: `${left}px`, top: `${top}px` });
         button.innerHTML = `<span class="map-book-code" aria-hidden="true">${esc(book.code)}</span><span class="map-book-name"><b>${esc(EB.coverTitle(book))}</b><small><i aria-hidden="true"></i>${esc(EB.isPublished(book) ? book.title : EB.status(book))}</small></span>`;
-        nodes.set(book.id, { book, element: button, x: x + left + cardWidth / 2, y: y + top + cardHeight / 2, group });
+        card.appendChild(button);
+        const readUrl = EB.readUrl(book) || (book.status === "writing" && book.url);
+        if (readUrl) {
+          const link = document.createElement("a");
+          link.className = "map-book-read";
+          link.href = readUrl;
+          link.textContent = EB.isPublished(book) ? "책 읽기 ↗" : "미리 읽기 ↗";
+          link.setAttribute("aria-label", `${EB.coverTitle(book)} · ${link.textContent}`);
+          card.appendChild(link);
+        }
+        nodes.set(book.id, { book, element: card, control: button, x: x + left + cardWidth / 2, y: y + top + cardHeight / 2, group });
         button.addEventListener("click", () => {
           selectBook(selectedBook === book.id ? null : book.id);
           if (mobileLayout.matches && selectedBook) detail.scrollIntoView({ block: "nearest", behavior: "instant" });
@@ -149,10 +161,10 @@ EB.initKnowledgeMaps = (d) => {
             const dx = node.x - origin.x, dy = node.y - origin.y;
             return Math.hypot(dx, dy) + Math.abs(dx * direction[1] - dy * direction[0]) * 2;
           }
-          next?.element.focus({ preventScroll: true });
+          next?.control.focus({ preventScroll: true });
           if (next) revealBook(next.book.id);
         });
-        section.appendChild(button);
+        section.appendChild(card);
       });
       chain.appendChild(section);
     });
@@ -200,7 +212,7 @@ EB.initKnowledgeMaps = (d) => {
   function selectBook(id) {
     selectedBook = id;
     placeDetail();
-    atlas.nodes.forEach((node, bookId) => node.element.setAttribute("aria-pressed", String(bookId === id)));
+    atlas.nodes.forEach((node, bookId) => node.control.setAttribute("aria-pressed", String(bookId === id)));
     highlight(id);
     if (!id) {
       detail.hidden = true;
@@ -225,7 +237,7 @@ EB.initKnowledgeMaps = (d) => {
     detail.innerHTML = `<button type="button" class="atlas-detail-close" aria-label="책 소개 닫기">×</button><div class="atlas-detail-main"><div><span class="atlas-detail-kicker">${esc(group.name)} · ${esc(EB.status(book))}</span><h3>${esc(EB.coverTitle(book))} <small>${esc(book.title)}</small></h3><p>${esc(book.headline || book.description || book.subtitle)}</p></div><a class="btn" href="${esc(url)}">${EB.isPublished(book) ? "책 읽기 ↗" : book.status === "writing" && book.url ? "집필 중인 책 보기 ↗" : "책장에서 자세히 보기 →"}</a></div>
       ${related.length ? `<div class="atlas-related"><span>함께 살펴볼 책 · ${related.length}권</span><div>${preview.map(relatedButton).join("")}</div>${remaining.length ? `<details class="atlas-related-more"><summary>연결된 책 ${remaining.length}권 더 보기</summary><div class="atlas-related-list">${remaining.map(relatedButton).join("")}</div></details>` : ""}</div>` : `<p class="atlas-single-note">${esc(group.desc)}${atlas.nodes.size === 1 ? " · 이 분야의 첫 책입니다." : ""}</p>`}`;
     const closeDetail = () => {
-      const selected = atlas.nodes.get(selectedBook)?.element;
+      const selected = atlas.nodes.get(selectedBook)?.control;
       selectBook(null);
       selected?.focus({ preventScroll: true });
       selected?.scrollIntoView({ block: "nearest", behavior: "instant" });
@@ -240,7 +252,7 @@ EB.initKnowledgeMaps = (d) => {
     $$("[data-related]", detail).forEach((button) => button.addEventListener("click", () => {
       const next = button.dataset.related;
       selectBook(next);
-      atlas.nodes.get(next).element.focus({ preventScroll: true });
+      atlas.nodes.get(next).control.focus({ preventScroll: true });
       if (mobileLayout.matches) detail.scrollIntoView({ block: "nearest", behavior: "instant" });
       else revealBook(next);
     }));

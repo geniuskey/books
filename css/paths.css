@@ -39,7 +39,7 @@ body[data-page="paths"] { --atlas-ink: #203e3b; --atlas-gold: #e1c39a; }
 .map-book:not(.published) { background: color-mix(in srgb, var(--bg-elev) 65%, var(--bg)); box-shadow: none; }
 .map-book:not(.published) .map-book-code { border-left: 2px solid var(--border); background: var(--surface); color: var(--text-faint); text-shadow: none; box-shadow: inset -2px 0 0 var(--border); }
 .map-book:not(.published) .map-book-code::after { background: var(--border); box-shadow: 0 3px 0 var(--border); }
-.map-book:hover, .map-book:focus-visible, .map-book[aria-pressed="true"] { z-index: 3; outline-width: 1px; outline-offset: 2px; box-shadow: 0 5px 18px color-mix(in srgb, var(--c) 20%, transparent); }
+.map-book:hover, .map-book:has(:focus-visible), .map-book:has([aria-pressed="true"]) { z-index: 3; outline-width: 1px; outline-offset: 2px; box-shadow: 0 5px 18px color-mix(in srgb, var(--c) 20%, transparent); }
 .atlas-map-footer { display: flex; align-items: center; justify-content: space-between; gap: 15px; min-height: 39px; padding: 9px 22px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 10px; }
 .atlas-legend { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; }
 .atlas-legend > span { display: inline-flex; align-items: center; gap: 6px; }
@@ -189,4 +189,19 @@ body[data-page="paths"] { --atlas-ink: #203e3b; --atlas-gold: #e1c39a; }
   .atlas-related b { font-size: 12px; }
   .atlas-related small { font-size: 11px; line-height: 1.4; }
   .atlas-related-more > summary { min-height: 44px; align-content: center; padding-block: 10px; color: var(--text-dim); font-size: 12px; cursor: pointer; }
+}
+
+/* Separate the introduction control and reading link within each compact card. */
+.map-book-select { position: absolute; inset: 0; display: flex; align-items: center; gap: inherit; width: 100%; padding: 8px 10px 27px; border: 0; border-radius: inherit; background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.map-book:has(.map-book-read) .map-book-name small { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; display: block; }
+.map-book:has([aria-pressed="true"]) { border-color: var(--c); background: color-mix(in srgb, var(--c) 9%, var(--bg-elev)); }
+.map-book-select:focus-visible { outline: 2px solid var(--c); outline-offset: 2px; }
+.map-book-read { position: absolute; right: 6px; bottom: 4px; display: inline-flex; align-items: center; justify-content: center; min-height: 24px; padding: 2px 8px; border: 1px solid color-mix(in srgb, var(--c) 35%, var(--border)); border-radius: 4px; background: var(--bg-elev); color: var(--c); font-size: 10px; font-weight: 650; line-height: 1.2; text-decoration: none; }
+.map-book-read:hover { background: color-mix(in srgb, var(--c) 12%, var(--bg-elev)); }
+.map-book-read:focus-visible { outline: 2px solid var(--c); outline-offset: 2px; }
+.map-book:not(:has(.map-book-read)) .map-book-select { padding-bottom: 8px; }
+@media (max-width: 760px) {
+  .map-book:has(.map-book-read) { min-height: 96px; }
+  .map-book-select { padding: 8px 8px 44px; }
+  .map-book-read { bottom: 2px; right: 4px; min-height: 40px; padding-inline: 8px; font-size: 11px; }
 }
