@@ -34,7 +34,9 @@ def check_assets(path):
         if url.path.endswith('/'):
             target /= 'index.html'
         assert target.is_file(), f'{path}: missing {link}'
-    assert source.count('static.cloudflareinsights.com/beacon.min.js') == 1, path
+    assert source.count('https://www.googletagmanager.com/gtag/js?id=G-LST8C5WL08') == 1, path
+    assert source.count("gtag('config', 'G-LST8C5WL08');") == 1, path
+    assert 'static.cloudflareinsights.com/beacon.min.js' not in source, path
     return source
 
 
