@@ -2034,6 +2034,7 @@
     },
     {
       "id": "general-chemistry",
+      "motif": "general-chemistry",
       "code": "CHM",
       "title": "일반화학",
       "subtitle": "일반화학 교과서",
@@ -2060,6 +2061,7 @@
     },
     {
       "id": "general-physics",
+      "motif": "general-physics",
       "code": "PHY",
       "title": "일반물리학",
       "subtitle": "일반물리학 교과서",
@@ -2088,6 +2090,7 @@
     },
     {
       "id": "modern-physics",
+      "motif": "modern-physics",
       "code": "MPH",
       "title": "현대물리학",
       "subtitle": "현대물리학 교과서",
@@ -2112,6 +2115,7 @@
     },
     {
       "id": "solid-state",
+      "motif": "solid-state",
       "code": "SSP",
       "title": "고체물리",
       "subtitle": "고체물리 교과서",
@@ -2137,6 +2141,7 @@
     },
     {
       "id": "electromagnetics",
+      "motif": "electromagnetics",
       "code": "EMF",
       "title": "전자기학",
       "subtitle": "전자기학 교과서",
@@ -2162,6 +2167,7 @@
     },
     {
       "id": "thermal-physics",
+      "motif": "thermal-physics",
       "code": "THM",
       "title": "열·통계물리와 물리화학",
       "subtitle": "열·통계물리와 물리화학 교과서",
@@ -2187,6 +2193,7 @@
     },
     {
       "id": "materials-science",
+      "motif": "materials-science",
       "code": "MAT",
       "title": "재료과학",
       "subtitle": "재료과학 교과서",
@@ -2212,6 +2219,7 @@
     },
     {
       "id": "quantum-mechanics",
+      "motif": "quantum-mechanics",
       "code": "QMC",
       "title": "양자역학",
       "subtitle": "양자역학 교과서",
@@ -2238,6 +2246,7 @@
     },
     {
       "id": "probability-statistics",
+      "motif": "probability-statistics",
       "code": "PRB",
       "title": "확률과 통계",
       "subtitle": "확률과 통계 교과서",
@@ -2263,6 +2272,7 @@
     },
     {
       "id": "fluid-mechanics",
+      "motif": "fluid-mechanics",
       "code": "FLD",
       "title": "유체역학",
       "subtitle": "유체역학 교과서",
@@ -2287,6 +2297,7 @@
     },
     {
       "id": "organic-chemistry",
+      "motif": "organic-chemistry",
       "code": "ORG",
       "title": "유기화학",
       "subtitle": "유기화학 교과서",

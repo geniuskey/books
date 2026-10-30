@@ -916,5 +916,104 @@
     },
   };
 
+  // 이하는 SciBook(science-books) 서가 표지를 그대로 옮긴 것이다. 책 id를 motif로 쓰고, 움직임은 .sc-* 클래스가 맡는다.
+  const hex = (cx, cy, r) => Array.from({ length: 6 }, (_, i) => { const a = Math.PI / 6 + (i * Math.PI) / 3; return `${(cx + r * Math.cos(a)).toFixed(1)},${(cy + r * Math.sin(a)).toFixed(1)}`; }).join(" ");
+  // 함수 y=f(x)를 x0..x1 구간에서 꺾은선 점 목록으로 (B파처럼 비스듬히 누이려면 skew)
+  const pts = (f, x0, x1, step = 2, skew = 0) => { const out = []; for (let x = x0; x <= x1; x += step) { const y = f(x); out.push(`${(x + (skew * (y - 68)) / 16).toFixed(1)},${y.toFixed(1)}`); } return out.join(" "); };
+  const CYCLE = "M122 24Q134 48 156 54Q172 66 184 92Q160 88 142 78Q128 58 122 24Z";
+  const CURVE = "M108 110L126 44Q132 36 144 33Q162 28 172 34Q182 42 186 56";
+  const SCI = {
+    // 삼각 플라스크와 피어오르는 기포, 옆에는 분자 고리
+    "general-chemistry": () => svg(
+      `<path d="M70 14h28M76 14v34l-30 58a6 6 0 0 0 5 9h66a6 6 0 0 0 5-9l-30-58V14" fill="none" stroke="${W}" stroke-width="3" stroke-linejoin="round"/>` +
+      `<path d="M56 86h56l11 20a6 6 0 0 1-5 9H50a6 6 0 0 1-5-9z" fill="${W}" fill-opacity=".3"/>` +
+      [[70, 98, 4, 0], [88, 92, 3, .5], [80, 76, 2.6, 1], [86, 58, 2.2, 1.4]].map(([x, y, r, d]) => `<circle class="sc-pulse" style="animation-delay:${d}s" cx="${x}" cy="${y}" r="${r}" fill="${W}"/>`).join("") +
+      `<polygon points="${hex(158, 48, 20)}" fill="none" stroke="${W}" stroke-width="2.4" stroke-opacity=".85"/><circle cx="158" cy="48" r="10" fill="none" stroke="${W}" stroke-opacity=".5" stroke-width="1.6"/>` +
+      `<path d="M158 28V12M175 58l12 7M141 58l-12 7" stroke="${W}" stroke-width="2" stroke-opacity=".6"/>`),
+    // 행성 둘레를 도는 위성과 던진 공의 포물선
+    "general-physics": () => svg(
+      `<ellipse cx="100" cy="65" rx="58" ry="58" fill="none" stroke="${W}" stroke-opacity=".35" stroke-dasharray="3 5"/>` +
+      `<circle cx="100" cy="65" r="22" fill="${W}" fill-opacity=".85"/><path d="M80 58q20 8 40 0M82 74q18 6 36 0" stroke="#0003" stroke-width="3" fill="none"/>` +
+      `<g class="sc-spin"><circle cx="158" cy="65" r="5.5" fill="${W}"/><path d="M158 65v-26" stroke="${W}" stroke-width="2.2"/><path d="M154 44l4-7 4 7" fill="${W}"/></g>` +
+      `<path class="sc-flow" d="M14 122q34-80 68 0" fill="none" stroke="${W}" stroke-width="2" stroke-dasharray="4 6" stroke-opacity=".7"/>`),
+    // 골격 구조식: 벤젠 고리에 이어진 사슬과 굽은 전자 화살표
+    "organic-chemistry": () => svg(
+      `<polygon points="${hex(62, 70, 26)}" fill="none" stroke="${W}" stroke-width="3"/><circle cx="62" cy="70" r="14" fill="none" stroke="${W}" stroke-width="2" stroke-opacity=".7"/>` +
+      `<path d="M84.5 57l22 13 22-13 22 13 22-13" fill="none" stroke="${W}" stroke-width="3" stroke-linejoin="round"/><path d="M128.5 57V34M126 57V34" stroke="${W}" stroke-width="2.4"/>` +
+      `<text x="121" y="28" fill="${W}" font-size="13" font-weight="700" font-family="sans-serif">O</text>` +
+      `<path class="sc-pulse" d="M150 88q14 22-12 26" fill="none" stroke="${W}" stroke-width="2.2"/><path d="M142 108l-6 6 9 2" fill="none" stroke="${W}" stroke-width="2.2"/>`),
+    // 원기둥을 돌아 흐르는 유선
+    "fluid-mechanics": () => svg(
+      [-46, -30, -16, -6, 6, 16, 30, 46].map((d) => { const y = (65 + Math.sign(d) * Math.hypot(d, 22)).toFixed(1); return `<path class="sc-flow" d="M4 ${65 + d}C60 ${65 + d} 70 ${y} 100 ${y}S140 ${65 + d} 196 ${65 + d}" fill="none" stroke="${W}" stroke-width="2" stroke-dasharray="10 10" stroke-opacity="${(0.4 + 12 / (Math.abs(d) + 20)).toFixed(2)}"/>`; }).join("") +
+      `<circle cx="100" cy="65" r="17" fill="${W}" fill-opacity=".85"/>`),
+    // 수소 원자 에너지 준위: 위 준위에서 떨어지는 전자와 튀어나가는 광자, 위에는 파속
+    "modern-physics": () => svg(
+      [1, 2, 3, 4, 99].map((n) => { const y = (112 - 72 * (1 - 1 / (n * n))).toFixed(1); return `<path d="M16 ${y}h76" stroke="${W}" stroke-width="${n === 1 ? 3 : 2}" stroke-opacity="${n === 99 ? .35 : .85}"${n === 99 ? ' stroke-dasharray="3 4"' : ""}/>`; }).join("") +
+      `<g class="sc-pulse"><path d="M54 52v52" stroke="${W}" stroke-width="2.2"/><path d="M48 98l6 10 6-10z" fill="${W}"/></g><circle cx="54" cy="48" r="4.5" fill="${W}"/>` +
+      `<polyline points="${pts((x) => 82 - 8 * Math.sin((x - 64) / 4.2), 64, 186)}" fill="none" stroke="${W}" stroke-width="1.6" stroke-opacity=".3"/>` +
+      `<polyline class="sc-run" pathLength="100" points="${pts((x) => 82 - 8 * Math.sin((x - 64) / 4.2), 64, 186)}" fill="none" stroke="${W}" stroke-width="2.6"/>` +
+      `<polyline points="${pts((x) => 34 - 20 * Math.exp(-((x - 150) ** 2) / 420) * Math.cos((x - 150) / 3.4), 108, 192)}" fill="none" stroke="${W}" stroke-width="2" stroke-opacity=".8"/>` +
+      `<path d="M108 34h84" stroke="${W}" stroke-opacity=".3" stroke-dasharray="2 4"/>`),
+    // 원자 격자를 지나가는 격자 진동(포논)과 띠 간격을 뛰어넘는 전자
+    "solid-state": () => svg(
+      `<path d="${[0, 1, 2, 3].map((j) => `M18 ${28 + 24 * j}h112`).join("")}${[0, 1, 2, 3, 4, 5].map((i) => `M${20 + 22 * i} 26v76`).join("")}" stroke="${W}" stroke-opacity=".25" stroke-width="1.4"/>` +
+      [0, 1, 2, 3, 4, 5].map((i) => `<g class="sc-sway" style="animation-delay:${(-i * 0.27).toFixed(2)}s">${[0, 1, 2, 3].map((j) => `<circle cx="${20 + 22 * i}" cy="${28 + 24 * j}" r="${(i + j) % 2 ? 4.2 : 6}" fill="${W}" fill-opacity="${(i + j) % 2 ? .6 : .95}"/>`).join("")}</g>`).join("") +
+      `<rect x="148" y="18" width="44" height="26" rx="2" fill="${W}" fill-opacity=".18" stroke="${W}" stroke-width="2"/><rect x="148" y="84" width="44" height="26" rx="2" fill="${W}" fill-opacity=".7"/>` +
+      `<path d="M140 46v36M137 49l3-5 3 5M137 79l3 5 3-5" fill="none" stroke="${W}" stroke-width="1.4" stroke-opacity=".6"/>` +
+      `<path d="M170 80V48" stroke="${W}" stroke-width="1.6" stroke-dasharray="2 4" stroke-opacity=".6"/><circle class="sc-hop" cx="170" cy="78" r="4.5" fill="${W}"/>`),
+    // 진행하는 평면 전자기파: 세로로 출렁이는 E, 비스듬히 누운 B
+    electromagnetics: () => svg(
+      `<defs><clipPath id="sc-em-clip"><rect x="10" y="0" width="180" height="130"/></clipPath></defs>` +
+      `<path d="M10 68h182M186 63l8 5-8 5" fill="none" stroke="${W}" stroke-width="2" stroke-opacity=".7"/>` +
+      `<g clip-path="url(#sc-em-clip)"><g class="sc-travel">` +
+      `<path d="${Array.from({ length: 30 }, (_, i) => { const x = -46 + i * 8; return `M${x} 68V${(68 - 40 * Math.sin((x - 10) * Math.PI / 28)).toFixed(1)}`; }).join("")}" stroke="${W}" stroke-width="1.2" stroke-opacity=".35"/>` +
+      `<polyline points="${pts((x) => 68 - 40 * Math.sin((x - 10) * Math.PI / 28), -46, 196)}" fill="none" stroke="${W}" stroke-width="2.6"/>` +
+      `<polyline points="${pts((x) => 68 + 16 * Math.sin((x - 10) * Math.PI / 28), -46, 196, 2, 14)}" fill="none" stroke="${W}" stroke-width="2" stroke-opacity=".6" stroke-dasharray="4 3"/>` +
+      `</g></g>` +
+      `<text x="14" y="20" fill="${W}" font-size="13" font-weight="700" font-style="italic" font-family="serif">E</text><text x="14" y="118" fill="${W}" fill-opacity=".7" font-size="13" font-weight="700" font-style="italic" font-family="serif">B</text>`),
+    // 쌓여 가는 히스토그램과 그 위의 정규 분포 곡선, 위에서 떨어지는 표본
+    "probability-statistics": () => svg(
+      Array.from({ length: 11 }, (_, i) => { const h = 76 * Math.exp(-((i - 5) ** 2) / (2 * 2.1 ** 2)); return `<rect class="sc-grow" style="animation-delay:${(-Math.abs(i - 5) * 0.25 - i * 0.07).toFixed(2)}s" x="${23 + i * 14}" y="${(112 - h).toFixed(1)}" width="12" height="${h.toFixed(1)}" fill="${W}" fill-opacity=".42"/>`; }).join("") +
+      `<path d="M14 112h172" stroke="${W}" stroke-width="2.4"/>` +
+      `<polyline points="${pts((x) => 112 - 82 * Math.exp(-((x - 100) ** 2) / (2 * 30 ** 2)), 14, 186)}" fill="none" stroke="${W}" stroke-width="2.6"/>` +
+      `<path d="M100 30v82" stroke="${W}" stroke-opacity=".45" stroke-dasharray="3 4"/>` +
+      [[86, 0], [100, .6], [114, 1.2], [93, 1.8]].map(([x, d]) => `<circle class="sc-fall" style="animation-delay:${d}s" cx="${x}" cy="14" r="3.2" fill="${W}"/>`).join("")),
+    // 기체를 가둔 실린더와 피스톤, 옆에는 P–V 그림 위를 도는 열기관 순환
+    "thermal-physics": () => svg(
+      `<path d="M18 30v82h62V30" fill="none" stroke="${W}" stroke-width="3" stroke-linejoin="round"/>` +
+      `<g class="sc-piston"><rect x="21" y="38" width="56" height="9" rx="1.5" fill="${W}"/><path d="M49 38V8" stroke="${W}" stroke-width="3.4"/></g>` +
+      [[30, 66, 0], [52, 60, .3], [68, 74, .6], [38, 88, .9], [60, 94, .2], [28, 102, .5], [70, 102, .8], [48, 80, .4]].map(([x, y, d]) => `<circle class="sc-jit" style="animation-delay:-${d}s" cx="${x}" cy="${y}" r="3.2" fill="${W}" fill-opacity=".85"/>`).join("") +
+      `<path class="sc-pulse" d="M28 124q4-6 0-10M44 124q4-6 0-10M60 124q4-6 0-10M76 124q4-6 0-10" fill="none" stroke="${W}" stroke-width="1.8" stroke-opacity=".7"/>` +
+      `<path d="M106 10v100h88" fill="none" stroke="${W}" stroke-width="2" stroke-opacity=".7"/>` +
+      `<path d="${CYCLE}" fill="${W}" fill-opacity=".14" stroke="${W}" stroke-width="2.4" stroke-linejoin="round"/>` +
+      `<circle class="sc-fly" style="offset-path:path('${CYCLE}');animation-duration:4s;animation-timing-function:linear" r="4.5" fill="${W}"/>` +
+      `<text x="110" y="18" fill="${W}" fill-opacity=".8" font-size="11" font-style="italic" font-family="serif">P</text><text x="184" y="124" fill="${W}" fill-opacity=".8" font-size="11" font-style="italic" font-family="serif">V</text>`),
+    // 체심입방 단위 격자와 응력–변형률 곡선을 따라 끝내 끊어지는 시편
+    "materials-science": () => svg(
+      `<path d="M16 54h50v50H16zM38 36h50v50M16 54l22-18M66 54l22-18M66 104l22-18" fill="none" stroke="${W}" stroke-width="2.2" stroke-linejoin="round"/>` +
+      `<path d="M38 36v50h50M16 104l22-18" fill="none" stroke="${W}" stroke-width="1.6" stroke-opacity=".45" stroke-dasharray="3 3"/>` +
+      `<path d="M16 54L88 86M66 54L38 86M16 104L88 36M66 104L38 36" stroke="${W}" stroke-width="1" stroke-opacity=".25"/>` +
+      [[16, 54], [66, 54], [16, 104], [66, 104], [38, 36], [88, 36], [38, 86], [88, 86]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="5.2" fill="${W}" fill-opacity="${x === 38 && y === 86 ? .55 : .95}"/>`).join("") +
+      `<circle class="sc-pulse" cx="52" cy="70" r="7.5" fill="${W}"/>` +
+      `<path d="M108 10v100h86" fill="none" stroke="${W}" stroke-width="2" stroke-opacity=".7"/>` +
+      `<path d="${CURVE}" fill="none" stroke="${W}" stroke-width="2.6" stroke-linejoin="round"/><path d="M182 52l8 8M190 52l-8 8" stroke="${W}" stroke-width="2"/>` +
+      `<path d="M126 44v66" stroke="${W}" stroke-opacity=".35" stroke-dasharray="2 4"/>` +
+      `<circle class="sc-fly" style="offset-path:path('${CURVE}');animation-duration:3.4s" r="4.5" fill="${W}"/>` +
+      `<text x="112" y="18" fill="${W}" fill-opacity=".8" font-size="11" font-style="italic" font-family="serif">σ</text><text x="184" y="124" fill="${W}" fill-opacity=".8" font-size="11" font-style="italic" font-family="serif">ε</text>`),
+    // 블로흐 구 위에서 세차하는 스핀과, 장벽에 부딪혀 투과·반사로 갈라지는 파속
+    "quantum-mechanics": () => svg(
+      `<circle cx="50" cy="66" r="40" fill="none" stroke="${W}" stroke-width="2.4"/>` +
+      `<ellipse cx="50" cy="66" rx="40" ry="11" fill="none" stroke="${W}" stroke-width="1.4" stroke-opacity=".45" stroke-dasharray="3 3"/>` +
+      `<path d="M50 20v92" stroke="${W}" stroke-width="1.2" stroke-opacity=".4" stroke-dasharray="2 4"/>` +
+      `<path d="M50 66L22 38M50 66L78 38" stroke="${W}" stroke-width="1.2" stroke-opacity=".35"/>` +
+      `<ellipse cx="50" cy="38" rx="28" ry="7" fill="none" stroke="${W}" stroke-width="1.8" stroke-opacity=".7"/>` +
+      `<circle class="sc-fly" style="offset-path:path('M22 38a28 7 0 1 0 56 0a28 7 0 1 0 -56 0');animation-duration:2.4s;animation-timing-function:linear" r="5" fill="${W}"/>` +
+      `<circle cx="50" cy="66" r="3.4" fill="${W}"/>` +
+      `<path d="M104 104h88" stroke="${W}" stroke-width="2" stroke-opacity=".7"/><rect x="146" y="48" width="7" height="56" fill="${W}" fill-opacity=".55"/>` +
+      `<polyline points="${pts((x) => 82 - 26 * Math.exp(-((x - 124) ** 2) / 70) * Math.cos((x - 124) / 2.6), 104, 144, 1.5)}" fill="none" stroke="${W}" stroke-width="2.4"/>` +
+      `<polyline class="sc-pulse" points="${pts((x) => 82 - 13 * Math.exp(-((x - 174) ** 2) / 60) * Math.cos((x - 174) / 2.6), 156, 194, 1.5)}" fill="none" stroke="${W}" stroke-width="2"/>`),
+  };
+  Object.assign(M, SCI);
+
   window.coverArt = (motif) => (M[motif] || M.grid)();
 })();

@@ -402,7 +402,7 @@ section.block { padding: 56px 0; border-top: 1px solid var(--border); }
 .card:hover .cover-art { transform: scale(1.04); }
 .card.writing .cover-art { opacity: .55; }
 .cover-art * { animation-play-state: paused; }
-.card:hover .cover-art *, .card:focus-within .cover-art * { animation-play-state: running; }
+.card:hover .cover-art *, .card:focus-within .cover-art *, .catalog-book:hover .cover-art *, .catalog-book:focus-within .cover-art * { animation-play-state: running; }
 .cv-blink { animation: cv-blink 1.6s steps(1) infinite; }
 @keyframes cv-blink { 50% { fill-opacity: .12; } }
 .cv-fall { animation: cv-fall 1.8s ease-in infinite; }
@@ -542,6 +542,31 @@ section.block { padding: 56px 0; border-top: 1px solid var(--border); }
 @keyframes cm-sweep { from { transform: rotate(-9deg); } to { transform: rotate(9deg); } }
 .cm-flat { transform-box: fill-box; transform-origin: bottom; animation: cm-flat 6s ease-in-out infinite; }
 @keyframes cm-flat { 0%, 8% { transform: none; } 60%, 88% { transform: scaleY(0); } 100% { transform: none; } }
+/* SciBook covers (science-books), MIT: the same cv- motions renamed sc- so they do not collide with the cv- set above. */
+.sc-spin { transform-box: view-box; transform-origin: 100px 65px; animation: sc-spin 6s linear infinite; }
+@keyframes sc-spin { to { transform: rotate(360deg); } }
+.sc-flow { animation: sc-flow 1.2s linear infinite; }
+@keyframes sc-flow { to { stroke-dashoffset: -20; } }
+.sc-pulse { animation: sc-pulse 1.8s ease-in-out infinite; }
+@keyframes sc-pulse { 50% { opacity: .25; } }
+.sc-fly { offset-rotate: 0deg; animation: sc-fly 2.6s ease-in-out infinite; }
+@keyframes sc-fly { from { offset-distance: 0%; } to { offset-distance: 100%; } }
+.sc-run { stroke-dasharray: 22 100; animation: sc-run 1.6s linear infinite; }
+@keyframes sc-run { from { stroke-dashoffset: 22; } to { stroke-dashoffset: -100; } }
+.sc-sway { animation: sc-sway 1.6s ease-in-out infinite alternate; }
+@keyframes sc-sway { from { transform: translateX(-3px); } to { transform: translateX(3px); } }
+.sc-hop { animation: sc-hop 2.2s ease-in-out infinite; }
+@keyframes sc-hop { 0%, 15% { transform: none; } 50%, 80% { transform: translateY(-46px); } 100% { transform: translateY(-46px); opacity: 0; } }
+.sc-travel { animation: sc-travel 1.8s linear infinite; }
+@keyframes sc-travel { to { transform: translateX(56px); } }
+.sc-grow { transform-box: fill-box; transform-origin: 50% 100%; animation: sc-grow 2.4s ease-in-out infinite alternate; }
+@keyframes sc-grow { from { transform: scaleY(.35); } }
+.sc-fall { animation: sc-fall 2.4s ease-in infinite; }
+@keyframes sc-fall { from { transform: translateY(0); opacity: 0; } 15% { opacity: 1; } 80% { opacity: 1; } to { transform: translateY(56px); opacity: 0; } }
+.sc-piston { animation: sc-piston 2s ease-in-out infinite alternate; }
+@keyframes sc-piston { to { transform: translateY(14px); } }
+.sc-jit { animation: sc-jit .9s steps(4) infinite; }
+@keyframes sc-jit { 0% { transform: translate(0, 0); } 25% { transform: translate(3px, -2px); } 50% { transform: translate(-2px, 3px); } 75% { transform: translate(2px, 2px); } }
 @media (prefers-reduced-motion: reduce) { .cover-art * { animation: none !important; } .cover-art { transition: none; } }
 
 /* ---------- 홈의 대표 실험 ---------- */
