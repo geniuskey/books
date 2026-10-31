@@ -51,6 +51,10 @@ window.FIELD_MAPS = {
       ["memorybook", "packagingbook", "메모리를 연결하고 쌓기"],
       ["sensorbook", "displaybook", "센서의 색 신호와 디스플레이의 색역·재현"],
       ["devicebook", "powerbook", "전력을 다루는 소자"],
+      ["powerbook", "packagingbook", "전력 모듈의 다이 접합·와이어 본딩·열 경로"],
+      ["powerbook", "failurebook", "파워 사이클링·단락·우주선 소손 같은 전력 소자 고장"],
+      ["analogbook", "powerbook", "LDO·피드백 제어에서 스위칭 컨버터로"],
+      ["powerbook", "infrabook", "팹 전력·UPS와 고효율 전력 변환"],
       ["testbook", "chipindustrybook", "패키징·테스트를 맡는 OSAT와 테스트 비용"],
       ["memorybook", "processbook", "DRAM·3D NAND의 셀 구조와 제조 공정"],
       ["memorybook", "designbook", "메모리 주변 회로의 설계·타이밍·배치"],
@@ -337,6 +341,8 @@ window.FIELD_MAPS = {
 
 // 분야를 넘는 연결도 한 번만 등록합니다. 양쪽 책의 소개에서 같은 이유로 탐색합니다.
 window.FIELD_MAP_CROSS_LINKS = [
+  ["electromagnetics", "powerbook", "기생 인덕턴스·자기 소자와 스위칭 과도"],
+  ["thermal-physics", "powerbook", "열저항·열 확산과 전력 소자의 접합 온도"],
   ["electromagnetics", "devicebook", "정전계·경계 조건으로 이해하는 소자의 전위와 전기장"],
   ["materials-science", "processbook", "결정·확산·상변태와 반도체 공정의 재료 변화"],
   ["electromagnetics", "plasmabook", "전자기장과 하전 입자의 운동·방전"],

@@ -10194,6 +10194,846 @@
     "link": "chapters/xr.html#sim-mtp"
   },
   {
+    "id": "powerbook/applications/sim-ev",
+    "bookId": "powerbook",
+    "title": "주행 사이클 에너지: SiC vs Si IGBT 인버터",
+    "link": "chapters/applications.html#sim-ev"
+  },
+  {
+    "id": "powerbook/applications/sim-sel",
+    "bookId": "powerbook",
+    "title": "기술 선택 지도: 버스 전압 × 스위칭 주파수",
+    "link": "chapters/applications.html#sim-sel"
+  },
+  {
+    "id": "powerbook/applications/sim-cost",
+    "bookId": "powerbook",
+    "title": "SiC 전환 손익 폭포 차트",
+    "link": "chapters/applications.html#sim-cost"
+  },
+  {
+    "id": "powerbook/applications/sim-pv",
+    "bookId": "powerbook",
+    "title": "효율 곡선, 가중 효율, 연간 발전량과 ESS 왕복 효율",
+    "link": "chapters/applications.html#sim-pv"
+  },
+  {
+    "id": "powerbook/applications/sim-dc",
+    "bookId": "powerbook",
+    "title": "랙 전원 사슬: 단별 손실과 전체 효율",
+    "link": "chapters/applications.html#sim-dc"
+  },
+  {
+    "id": "powerbook/applications/sim-gc",
+    "bookId": "powerbook",
+    "title": "65 W 충전기: 스위칭 주파수 → 효율·부피·전력 밀도",
+    "link": "chapters/applications.html#sim-gc"
+  },
+  {
+    "id": "powerbook/applications/sim-hv",
+    "bookId": "powerbook",
+    "title": "HVDC: MMC 서브모듈 수와 고조파 · 사이리스터 직렬 균압",
+    "link": "chapters/applications.html#sim-hv"
+  },
+  {
+    "id": "powerbook/applications/sim-mat",
+    "bookId": "powerbook",
+    "title": "다음 세대 소재: 단극 한계와 열 병목",
+    "link": "chapters/applications.html#sim-mat"
+  },
+  {
+    "id": "powerbook/breakdown/sim-alpha",
+    "bookId": "powerbook",
+    "title": "이온화 계수 탐색기: Si vs 4H-SiC, 온도",
+    "link": "chapters/breakdown.html#sim-alpha"
+  },
+  {
+    "id": "powerbook/breakdown/sim-mc",
+    "bookId": "powerbook",
+    "title": "애벌런치 몬테카를로: 캐리어 연쇄를 하나씩 세기",
+    "link": "chapters/breakdown.html#sim-mc"
+  },
+  {
+    "id": "powerbook/breakdown/sim-solver",
+    "bookId": "powerbook",
+    "title": "1D 포아송 + 이온화 적분 솔버",
+    "link": "chapters/breakdown.html#sim-solver"
+  },
+  {
+    "id": "powerbook/breakdown/sim-bvn",
+    "bookId": "powerbook",
+    "title": "BV, W pp , E c 대 도핑: 수치 적분 vs 닫힌 식",
+    "link": "chapters/breakdown.html#sim-bvn"
+  },
+  {
+    "id": "powerbook/breakdown/sim-pt",
+    "bookId": "powerbook",
+    "title": "드리프트층 최적화기: 목표 BV에서 W와 N D 고르기",
+    "link": "chapters/breakdown.html#sim-pt"
+  },
+  {
+    "id": "powerbook/breakdown/sim-limit",
+    "bookId": "powerbook",
+    "title": "R on,sp 대 BV: 단극 한계선 그리기",
+    "link": "chapters/breakdown.html#sim-limit"
+  },
+  {
+    "id": "powerbook/breakdown/sim-uis",
+    "bookId": "powerbook",
+    "title": "UIS 애벌런치: 12셀 병렬 칩의 전류·온도 되먹임",
+    "link": "chapters/breakdown.html#sim-uis"
+  },
+  {
+    "id": "powerbook/breakdown/sim-leak",
+    "bookId": "powerbook",
+    "title": "누설 전류 대 온도: 1200 V Si vs SiC 드리프트층",
+    "link": "chapters/breakdown.html#sim-leak"
+  },
+  {
+    "id": "powerbook/converters/sim-bk",
+    "bookId": "powerbook",
+    "title": "벅·부스트·벅-부스트 스위칭 파형 (시간 적분)",
+    "link": "chapters/converters.html#sim-bk"
+  },
+  {
+    "id": "powerbook/converters/sim-ls",
+    "bookId": "powerbook",
+    "title": "DC 서버 48 → 12 V 손실 분해: GaN 500 kHz vs Si 200 kHz",
+    "link": "chapters/converters.html#sim-ls"
+  },
+  {
+    "id": "powerbook/converters/sim-fs",
+    "bookId": "powerbook",
+    "title": "최적 스위칭 주파수: 인덕터가 작아지는 값과 스위칭 손실",
+    "link": "chapters/converters.html#sim-fs"
+  },
+  {
+    "id": "powerbook/converters/sim-il",
+    "bookId": "powerbook",
+    "title": "인터리빙 리플 상쇄: 상 수와 듀티",
+    "link": "chapters/converters.html#sim-il"
+  },
+  {
+    "id": "powerbook/converters/sim-llc",
+    "bookId": "powerbook",
+    "title": "LLC 이득 곡선 (FHA)과 ZVS 영역",
+    "link": "chapters/converters.html#sim-llc"
+  },
+  {
+    "id": "powerbook/converters/sim-pfc",
+    "bookId": "powerbook",
+    "title": "입력 전류 성형: 정류+C vs 부스트 PFC (PF·THD)",
+    "link": "chapters/converters.html#sim-pfc"
+  },
+  {
+    "id": "powerbook/converters/sim-tp",
+    "bookId": "powerbook",
+    "title": "토템폴 PFC 손실: 빠른 레그 소자 선택과 Q rr",
+    "link": "chapters/converters.html#sim-tp"
+  },
+  {
+    "id": "powerbook/diodes/sim-dcar",
+    "bookId": "powerbook",
+    "title": "PiN 드리프트층 캐리어 분포: 앰비폴라 현수선",
+    "link": "chapters/diodes.html#sim-dcar"
+  },
+  {
+    "id": "powerbook/diodes/sim-dvf",
+    "bookId": "powerbook",
+    "title": "V F 분해: 수명 · 두께 · 온도",
+    "link": "chapters/diodes.html#sim-dvf"
+  },
+  {
+    "id": "powerbook/diodes/sim-rr",
+    "bookId": "powerbook",
+    "title": "전하 제어 역회복 시뮬레이터",
+    "link": "chapters/diodes.html#sim-rr"
+  },
+  {
+    "id": "powerbook/diodes/sim-life",
+    "bookId": "powerbook",
+    "title": "수명 제어 트레이드오프: V F ↔ Q rr ↔ 누설",
+    "link": "chapters/diodes.html#sim-life"
+  },
+  {
+    "id": "powerbook/diodes/sim-sbd",
+    "bookId": "powerbook",
+    "title": "쇼트키 I-V: 장벽 높이 · 온도 · 장벽 저하",
+    "link": "chapters/diodes.html#sim-sbd"
+  },
+  {
+    "id": "powerbook/diodes/sim-jbs",
+    "bookId": "powerbook",
+    "title": "SiC SBD · JBS · MPS: 누설 차폐와 서지 전류",
+    "link": "chapters/diodes.html#sim-jbs"
+  },
+  {
+    "id": "powerbook/diodes/sim-sel",
+    "bookId": "powerbook",
+    "title": "응용별 다이오드 손실: Si PiN 세 종 vs SiC JBS",
+    "link": "chapters/diodes.html#sim-sel"
+  },
+  {
+    "id": "powerbook/gan/sim-ns",
+    "bookId": "powerbook",
+    "title": "분극 전하 → 2DEG 밀도: Al 조성과 장벽 두께",
+    "link": "chapters/gan.html#sim-ns"
+  },
+  {
+    "id": "powerbook/gan/sim-pg",
+    "bookId": "powerbook",
+    "title": "p-GaN 게이트 문턱 전압과 접근 영역 면저항",
+    "link": "chapters/gan.html#sim-pg"
+  },
+  {
+    "id": "powerbook/gan/sim-gw",
+    "bookId": "powerbook",
+    "title": "게이트 루프 링잉과 GaN 게이트 창",
+    "link": "chapters/gan.html#sim-gw"
+  },
+  {
+    "id": "powerbook/gan/sim-rv",
+    "bookId": "powerbook",
+    "title": "3사분면 I–V와 데드 타임 손실",
+    "link": "chapters/gan.html#sim-rv"
+  },
+  {
+    "id": "powerbook/gan/sim-dr",
+    "bookId": "powerbook",
+    "title": "트래핑·디트래핑 모델: 동적 온저항의 누적",
+    "link": "chapters/gan.html#sim-dr"
+  },
+  {
+    "id": "powerbook/gan/sim-lv",
+    "bookId": "powerbook",
+    "title": "측면 vs 수직: 항복 길이와 비온저항 스케일링",
+    "link": "chapters/gan.html#sim-lv"
+  },
+  {
+    "id": "powerbook/gan/sim-bw",
+    "bookId": "powerbook",
+    "title": "GaN-on-Si 웨이퍼 휨과 균열: 스토니 식",
+    "link": "chapters/gan.html#sim-bw"
+  },
+  {
+    "id": "powerbook/gan/sim-fom",
+    "bookId": "powerbook",
+    "title": "하드 스위칭 하프 브리지 손실: 650 V Si·SiC·GaN",
+    "link": "chapters/gan.html#sim-fom"
+  },
+  {
+    "id": "powerbook/gan/sim-3d",
+    "bookId": "powerbook",
+    "title": "p-GaN HEMT: 게이트 전압에 반응하는 2DEG",
+    "link": "chapters/gan.html#sim-3d"
+  },
+  {
+    "id": "powerbook/gatedrive/sim-gl",
+    "bookId": "powerbook",
+    "title": "게이트 루프 RLC: V GS 오버슈트와 링잉",
+    "link": "chapters/gatedrive.html#sim-gl"
+  },
+  {
+    "id": "powerbook/gatedrive/sim-rv",
+    "bookId": "powerbook",
+    "title": "구동 전압 → R DS(on) ·전도 손실·산화막 전계",
+    "link": "chapters/gatedrive.html#sim-rv"
+  },
+  {
+    "id": "powerbook/gatedrive/sim-gp",
+    "bookId": "powerbook",
+    "title": "게이트 전력 예산: Q G ·ΔV·f와 바이어스 전원",
+    "link": "chapters/gatedrive.html#sim-gp"
+  },
+  {
+    "id": "powerbook/gatedrive/sim-mi",
+    "bookId": "powerbook",
+    "title": "밀러 유도 턴온: dv/dt, 턴오프 저항, 음 바이어스, 클램프",
+    "link": "chapters/gatedrive.html#sim-mi"
+  },
+  {
+    "id": "powerbook/gatedrive/sim-cm",
+    "bookId": "powerbook",
+    "title": "CMTI: 장벽 커패시턴스를 건너는 공통 모드 전류",
+    "link": "chapters/gatedrive.html#sim-cm"
+  },
+  {
+    "id": "powerbook/gatedrive/sim-bs",
+    "bookId": "powerbook",
+    "title": "부트스트랩 커패시터: 처짐, 충전, GaN 과충전",
+    "link": "chapters/gatedrive.html#sim-bs"
+  },
+  {
+    "id": "powerbook/gatedrive/sim-sc",
+    "bookId": "powerbook",
+    "title": "단락 보호 타임라인: 블랭킹·검출·소프트 턴오프",
+    "link": "chapters/gatedrive.html#sim-sc"
+  },
+  {
+    "id": "powerbook/gatedrive/sim-ag",
+    "bookId": "powerbook",
+    "title": "턴오프 게이트 구동: 고정 R G vs 3단 능동 구동",
+    "link": "chapters/gatedrive.html#sim-ag"
+  },
+  {
+    "id": "powerbook/glossary/sim-cm",
+    "bookId": "powerbook",
+    "title": "장 사이 공유 용어 네트워크",
+    "link": "chapters/glossary.html#sim-cm"
+  },
+  {
+    "id": "powerbook/glossary/sim-fc",
+    "bookId": "powerbook",
+    "title": "플래시 카드",
+    "link": "chapters/glossary.html#sim-fc"
+  },
+  {
+    "id": "powerbook/igbt/sim-out",
+    "bookId": "powerbook",
+    "title": "IGBT 출력 특성: 무릎 · 포화 · 온도 교차점",
+    "link": "chapters/igbt.html#sim-out"
+  },
+  {
+    "id": "powerbook/igbt/sim-tail",
+    "bookId": "powerbook",
+    "title": "턴오프 파형 모델: 플라즈마 걷어 내기와 꼬리 전류",
+    "link": "chapters/igbt.html#sim-tail"
+  },
+  {
+    "id": "powerbook/igbt/sim-trade",
+    "bookId": "powerbook",
+    "title": "트레이드오프 곡선과 주파수별 최적 수명",
+    "link": "chapters/igbt.html#sim-trade"
+  },
+  {
+    "id": "powerbook/igbt/sim-field",
+    "bookId": "powerbook",
+    "title": "PT · NPT · FS 전계와 항복 전압 (1D 포아송 + 이온화 적분)",
+    "link": "chapters/igbt.html#sim-field"
+  },
+  {
+    "id": "powerbook/igbt/sim-latch",
+    "bookId": "powerbook",
+    "title": "래치업 전류 밀도: 셀 설계와 온도",
+    "link": "chapters/igbt.html#sim-latch"
+  },
+  {
+    "id": "powerbook/igbt/sim-sc",
+    "bookId": "powerbook",
+    "title": "단락 내량: 칩 안의 1D 열 확산",
+    "link": "chapters/igbt.html#sim-sc"
+  },
+  {
+    "id": "powerbook/igbt/sim-par",
+    "bookId": "powerbook",
+    "title": "병렬 다이의 전기-열 전류 분배",
+    "link": "chapters/igbt.html#sim-par"
+  },
+  {
+    "id": "powerbook/igbt/sim-scr",
+    "bookId": "powerbook",
+    "title": "재생 래치 애니메이션: α₁ + α₂",
+    "link": "chapters/igbt.html#sim-scr"
+  },
+  {
+    "id": "powerbook/inverter/sim-sp",
+    "bookId": "powerbook",
+    "title": "한 레그의 반송파 비교 PWM: 게이트 신호와 극 전압",
+    "link": "chapters/inverter.html#sim-sp"
+  },
+  {
+    "id": "powerbook/inverter/sim-tp",
+    "bookId": "powerbook",
+    "title": "3상 인버터 + R-L-역기전력 부하: 파형, 전류 리플, FFT·THD",
+    "link": "chapters/inverter.html#sim-tp"
+  },
+  {
+    "id": "powerbook/inverter/sim-sv",
+    "bookId": "powerbook",
+    "title": "공간 벡터 육각형: 회전 기준 벡터, 섹터와 체류 시간, 영상분 주입",
+    "link": "chapters/inverter.html#sim-sv"
+  },
+  {
+    "id": "powerbook/inverter/sim-dt",
+    "bookId": "powerbook",
+    "title": "데드 타임 전압 오차: 전류 부호, 저속 왜곡, 보상",
+    "link": "chapters/inverter.html#sim-dt"
+  },
+  {
+    "id": "powerbook/inverter/sim-ls",
+    "bookId": "powerbook",
+    "title": "인버터 손실 계산기: SiC MOSFET vs Si IGBT + 다이오드",
+    "link": "chapters/inverter.html#sim-ls"
+  },
+  {
+    "id": "powerbook/inverter/sim-rg",
+    "bookId": "powerbook",
+    "title": "구동 ↔ 회생: 전류 위상각, DC 링크 전류, 손실 분담",
+    "link": "chapters/inverter.html#sim-rg"
+  },
+  {
+    "id": "powerbook/inverter/sim-ml",
+    "bookId": "powerbook",
+    "title": "2레벨 vs 3레벨(NPC·T형): 파형, 리플, 소자 스트레스",
+    "link": "chapters/inverter.html#sim-ml"
+  },
+  {
+    "id": "powerbook/inverter/sim-rw",
+    "bookId": "powerbook",
+    "title": "모터 케이블 반사파: dv/dt·케이블 길이·임피던스와 단자 피크",
+    "link": "chapters/inverter.html#sim-rw"
+  },
+  {
+    "id": "powerbook/materials/sim-ec",
+    "bookId": "powerbook",
+    "title": "이온화 계수와 임계 전계: 도핑과 밴드갭",
+    "link": "chapters/materials.html#sim-ec"
+  },
+  {
+    "id": "powerbook/materials/sim-dr",
+    "bookId": "powerbook",
+    "title": "드리프트층 설계: 같은 BV의 전계 삼각형",
+    "link": "chapters/materials.html#sim-dr"
+  },
+  {
+    "id": "powerbook/materials/sim-bf",
+    "bookId": "powerbook",
+    "title": "단극 한계 직선: R_on,sp – BV 로그 지도",
+    "link": "chapters/materials.html#sim-bf"
+  },
+  {
+    "id": "powerbook/materials/sim-ni",
+    "bookId": "powerbook",
+    "title": "진성 캐리어 밀도와 진성 온도",
+    "link": "chapters/materials.html#sim-ni"
+  },
+  {
+    "id": "powerbook/materials/sim-th",
+    "bookId": "powerbook",
+    "title": "다이 두께 방향 온도 분포: 재료와 열유속",
+    "link": "chapters/materials.html#sim-th"
+  },
+  {
+    "id": "powerbook/materials/sim-pt",
+    "bookId": "powerbook",
+    "title": "폴리타입 적층과 오프컷 계단",
+    "link": "chapters/materials.html#sim-pt"
+  },
+  {
+    "id": "powerbook/materials/sim-ge",
+    "bookId": "powerbook",
+    "title": "GaN 이종 에피: 열 응력·웨이퍼 휨·균열",
+    "link": "chapters/materials.html#sim-ge"
+  },
+  {
+    "id": "powerbook/materials/sim-fm",
+    "bookId": "powerbook",
+    "title": "재료 비교 레이더와 성능 지수 계산기",
+    "link": "chapters/materials.html#sim-fm"
+  },
+  {
+    "id": "powerbook/materials/sim-wf",
+    "bookId": "powerbook",
+    "title": "웨이퍼 지도·수율·암페어당 원가",
+    "link": "chapters/materials.html#sim-wf"
+  },
+  {
+    "id": "powerbook/mosfet/sim-ron",
+    "bookId": "powerbook",
+    "title": "온저항 성분 분해: 전압 등급 × 셀 피치 × 구조",
+    "link": "chapters/mosfet.html#sim-ron"
+  },
+  {
+    "id": "powerbook/mosfet/sim-iv",
+    "bookId": "powerbook",
+    "title": "650 V 슈퍼정션 40 mΩ: 출력·전달 특성과 온도",
+    "link": "chapters/mosfet.html#sim-iv"
+  },
+  {
+    "id": "powerbook/mosfet/sim-cv",
+    "bookId": "powerbook",
+    "title": "C–V 곡선과 \\(Q_{oss}\\)·\\(E_{oss}\\) 적분: 슈퍼정션 vs 평면",
+    "link": "chapters/mosfet.html#sim-cv"
+  },
+  {
+    "id": "powerbook/mosfet/sim-qg",
+    "bookId": "powerbook",
+    "title": "게이트 전하 곡선 적분과 밀러 플래토",
+    "link": "chapters/mosfet.html#sim-qg"
+  },
+  {
+    "id": "powerbook/mosfet/sim-opt",
+    "bookId": "powerbook",
+    "title": "최적 다이 크기: 48 V → 12 V 벅 상측 스위치",
+    "link": "chapters/mosfet.html#sim-opt"
+  },
+  {
+    "id": "powerbook/mosfet/sim-sj",
+    "bookId": "powerbook",
+    "title": "슈퍼정션 전하 균형: 전계 분포·공정 창·단극 한계",
+    "link": "chapters/mosfet.html#sim-sj"
+  },
+  {
+    "id": "powerbook/mosfet/sim-3d",
+    "bookId": "powerbook",
+    "title": "트렌치 MOSFET 셀과 슈퍼정션 기둥: 전류 경로와 공핍",
+    "link": "chapters/mosfet.html#sim-3d"
+  },
+  {
+    "id": "powerbook/mosfet/sim-uis",
+    "bookId": "powerbook",
+    "title": "UIS 애벌런치: \\(E_{AS}\\)와 접합 온도",
+    "link": "chapters/mosfet.html#sim-uis"
+  },
+  {
+    "id": "powerbook/overview/sim-chain",
+    "bookId": "powerbook",
+    "title": "변환 사슬의 손실 예산: 효율의 곱",
+    "link": "chapters/overview.html#sim-chain"
+  },
+  {
+    "id": "powerbook/overview/sim-lin",
+    "bookId": "powerbook",
+    "title": "선형 레귤레이터 vs 동기 벅: 효율 곡선",
+    "link": "chapters/overview.html#sim-lin"
+  },
+  {
+    "id": "powerbook/overview/sim-sw",
+    "bookId": "powerbook",
+    "title": "하드 스위칭 파형과 스위칭 에너지",
+    "link": "chapters/overview.html#sim-sw"
+  },
+  {
+    "id": "powerbook/overview/sim-loss",
+    "bookId": "powerbook",
+    "title": "PW-800 인버터 손실: SiC MOSFET vs Si IGBT",
+    "link": "chapters/overview.html#sim-loss"
+  },
+  {
+    "id": "powerbook/overview/sim-energy",
+    "bookId": "powerbook",
+    "title": "효율이 바꾸는 에너지·열·주행거리",
+    "link": "chapters/overview.html#sim-energy"
+  },
+  {
+    "id": "powerbook/overview/sim-map",
+    "bookId": "powerbook",
+    "title": "응용 지도: 전압·전류·주파수로 소자 고르기",
+    "link": "chapters/overview.html#sim-map"
+  },
+  {
+    "id": "powerbook/overview/sim-iv",
+    "bookId": "powerbook",
+    "title": "출력 특성: SiC MOSFET의 직선 vs IGBT의 무릎",
+    "link": "chapters/overview.html#sim-iv"
+  },
+  {
+    "id": "powerbook/overview/sim-inv3d",
+    "bookId": "powerbook",
+    "title": "3D 분해도: 800 V SiC 트랙션 인버터",
+    "link": "chapters/overview.html#sim-inv3d"
+  },
+  {
+    "id": "powerbook/overview/sim-pwm",
+    "bookId": "powerbook",
+    "title": "사인파 PWM: 반송파 비교와 부하 전류 리플",
+    "link": "chapters/overview.html#sim-pwm"
+  },
+  {
+    "id": "powerbook/packaging/sim-cer",
+    "bookId": "powerbook",
+    "title": "세라믹 비교: 두께에 따른 열저항과 기계·절연 여유",
+    "link": "chapters/packaging.html#sim-cer"
+  },
+  {
+    "id": "powerbook/packaging/sim-joint",
+    "bookId": "powerbook",
+    "title": "다이 접합 재료: 상동 온도와 접합층 열저항",
+    "link": "chapters/packaging.html#sim-joint"
+  },
+  {
+    "id": "powerbook/packaging/sim-wire",
+    "bookId": "powerbook",
+    "title": "본드 와이어 대 클립: 저항·인덕턴스·발열",
+    "link": "chapters/packaging.html#sim-wire"
+  },
+  {
+    "id": "powerbook/packaging/sim-loop",
+    "bookId": "powerbook",
+    "title": "정류 루프 인덕턴스 추정과 턴오프 오버슈트",
+    "link": "chapters/packaging.html#sim-loop"
+  },
+  {
+    "id": "powerbook/packaging/sim-par",
+    "bookId": "powerbook",
+    "title": "병렬 다이 전류 분배: 턴온 과도와 정상 상태",
+    "link": "chapters/packaging.html#sim-par"
+  },
+  {
+    "id": "powerbook/packaging/sim-cte",
+    "bookId": "powerbook",
+    "title": "CTE 불일치: 접합층 전단 응력 분포와 피로 지수",
+    "link": "chapters/packaging.html#sim-cte"
+  },
+  {
+    "id": "powerbook/packaging/sim-pd",
+    "bookId": "powerbook",
+    "title": "삼중점 전계 지도와 부분 방전 개시 전압 (2D 라플라스 풀이)",
+    "link": "chapters/packaging.html#sim-pd"
+  },
+  {
+    "id": "powerbook/packaging/sim-dm",
+    "bookId": "powerbook",
+    "title": "디스크리트 대 모듈: 한 스위치의 루프·손실·접합 온도",
+    "link": "chapters/packaging.html#sim-dm"
+  },
+  {
+    "id": "powerbook/packaging/sim-3d",
+    "bookId": "powerbook",
+    "title": "SiC 하프 브리지 모듈: 분해 · 정류 루프 · 와이어↔클립",
+    "link": "chapters/packaging.html#sim-3d"
+  },
+  {
+    "id": "powerbook/reliability/sim-pc",
+    "bookId": "powerbook",
+    "title": "파워 사이클링 시험: T j 파형과 와이어 들뜸에 따른 온 전압 상승",
+    "link": "chapters/reliability.html#sim-pc"
+  },
+  {
+    "id": "powerbook/reliability/sim-life",
+    "bookId": "powerbook",
+    "title": "수명 곡선 N f (ΔT j ): LESIT 대 CIPS08",
+    "link": "chapters/reliability.html#sim-life"
+  },
+  {
+    "id": "powerbook/reliability/sim-mp",
+    "bookId": "powerbook",
+    "title": "주행 T j 이력의 레인플로 계수와 마이너 수명",
+    "link": "chapters/reliability.html#sim-mp"
+  },
+  {
+    "id": "powerbook/reliability/sim-sc",
+    "bookId": "powerbook",
+    "title": "단락 내량: 다이 윗면 온도와 보호 시간",
+    "link": "chapters/reliability.html#sim-sc"
+  },
+  {
+    "id": "powerbook/reliability/sim-cr",
+    "bookId": "powerbook",
+    "title": "우주선 고장률: DC 링크 전압·고도·전압 등급",
+    "link": "chapters/reliability.html#sim-cr"
+  },
+  {
+    "id": "powerbook/reliability/sim-ht",
+    "bookId": "powerbook",
+    "title": "가속 계수 계산기: HTRB(아레니우스)와 H3TRB(펙)",
+    "link": "chapters/reliability.html#sim-ht"
+  },
+  {
+    "id": "powerbook/reliability/sim-td",
+    "bookId": "powerbook",
+    "title": "TDDB 데이터 맞춤과 사용 조건 외삽",
+    "link": "chapters/reliability.html#sim-td"
+  },
+  {
+    "id": "powerbook/reliability/sim-wl",
+    "bookId": "powerbook",
+    "title": "와이블 확률지: 표본 고장 데이터에서 β, η, B10 추정",
+    "link": "chapters/reliability.html#sim-wl"
+  },
+  {
+    "id": "powerbook/reliability/sim-cm",
+    "bookId": "powerbook",
+    "title": "온저항 상태 감시: 온도 보상과 경보 시점",
+    "link": "chapters/reliability.html#sim-cm"
+  },
+  {
+    "id": "powerbook/sic/sim-ron",
+    "bookId": "powerbook",
+    "title": "1200 V SiC 온저항 분해: 온도 × \\(D_{it}\\) × 게이트 전압",
+    "link": "chapters/sic.html#sim-ron"
+  },
+  {
+    "id": "powerbook/sic/sim-it",
+    "bookId": "powerbook",
+    "title": "계면 트랩과 채널 전하: 가우스 법칙 풀이",
+    "link": "chapters/sic.html#sim-it"
+  },
+  {
+    "id": "powerbook/sic/sim-bti",
+    "bookId": "powerbook",
+    "title": "문턱 전압 이동: DC BTI와 스위칭 불안정",
+    "link": "chapters/sic.html#sim-bti"
+  },
+  {
+    "id": "powerbook/sic/sim-tddb",
+    "bookId": "powerbook",
+    "title": "게이트 산화막 TDDB: 진성 수명, 외인성 결함, 스크리닝",
+    "link": "chapters/sic.html#sim-tddb"
+  },
+  {
+    "id": "powerbook/sic/sim-bd",
+    "bookId": "powerbook",
+    "title": "바디 다이오드 \\(V_F\\)와 적층 결함 확장",
+    "link": "chapters/sic.html#sim-bd"
+  },
+  {
+    "id": "powerbook/sic/sim-sc",
+    "bookId": "powerbook",
+    "title": "단락 열 모델: SiC MOSFET 대 Si IGBT (1D 열 확산)",
+    "link": "chapters/sic.html#sim-sc"
+  },
+  {
+    "id": "powerbook/sic/sim-yield",
+    "bookId": "powerbook",
+    "title": "웨이퍼 수율과 원가: 다이 크기 × 결함 밀도",
+    "link": "chapters/sic.html#sim-yield"
+  },
+  {
+    "id": "powerbook/sic/sim-pw",
+    "bookId": "powerbook",
+    "title": "전기-열 동작점: 손실 곡선과 \\(y = T\\)의 교점",
+    "link": "chapters/sic.html#sim-pw"
+  },
+  {
+    "id": "powerbook/switching/sim-ton",
+    "bookId": "powerbook",
+    "title": "턴온 4구간 계산기: 게이트 전하로 읽는 파형",
+    "link": "chapters/switching.html#sim-ton"
+  },
+  {
+    "id": "powerbook/switching/sim-dpt",
+    "bookId": "powerbook",
+    "title": "이중 펄스 시험: 턴온·턴오프 파형과 스위칭 에너지",
+    "link": "chapters/switching.html#sim-dpt"
+  },
+  {
+    "id": "powerbook/switching/sim-ring",
+    "bookId": "powerbook",
+    "title": "턴오프 오버슈트와 RLC 링잉",
+    "link": "chapters/switching.html#sim-ring"
+  },
+  {
+    "id": "powerbook/switching/sim-csi",
+    "bookId": "powerbook",
+    "title": "공통 소스 인덕턴스가 늦추는 턴온",
+    "link": "chapters/switching.html#sim-csi"
+  },
+  {
+    "id": "powerbook/switching/sim-rg",
+    "bookId": "powerbook",
+    "title": "R G 스윕: 스위칭 손실 ↔ 오버슈트",
+    "link": "chapters/switching.html#sim-rg"
+  },
+  {
+    "id": "powerbook/switching/sim-coss",
+    "bookId": "powerbook",
+    "title": "C oss 곡선 적분: Q oss , E oss 와 하드 스위칭 용량 손실",
+    "link": "chapters/switching.html#sim-coss"
+  },
+  {
+    "id": "powerbook/switching/sim-psw",
+    "bookId": "powerbook",
+    "title": "손실 대 칩 면적·주파수: R on ·Q 성능 지수의 의미",
+    "link": "chapters/switching.html#sim-psw"
+  },
+  {
+    "id": "powerbook/switching/sim-zvs",
+    "bookId": "powerbook",
+    "title": "데드 타임 ZVS 전이: 전류·데드 타임·Q oss",
+    "link": "chapters/switching.html#sim-zvs"
+  },
+  {
+    "id": "powerbook/switching/sim-skew",
+    "bookId": "powerbook",
+    "title": "프로브 지연·대역폭이 만드는 E on 오차",
+    "link": "chapters/switching.html#sim-skew"
+  },
+  {
+    "id": "powerbook/termination/sim-cyl",
+    "bookId": "powerbook",
+    "title": "반지름 솔버: 원통·구 접합의 종단 효율",
+    "link": "chapters/termination.html#sim-cyl"
+  },
+  {
+    "id": "powerbook/termination/sim-bare",
+    "bookId": "powerbook",
+    "title": "2D 솔버 ① 종단 없는 평면 접합의 가장자리",
+    "link": "chapters/termination.html#sim-bare"
+  },
+  {
+    "id": "powerbook/termination/sim-fp",
+    "bookId": "powerbook",
+    "title": "2D 솔버 ② 필드 플레이트 (Si 650 V급)",
+    "link": "chapters/termination.html#sim-fp"
+  },
+  {
+    "id": "powerbook/termination/sim-flr",
+    "bookId": "powerbook",
+    "title": "2D 솔버 ③ 플로팅 가드 링 간격 최적화 (Si 650 V급)",
+    "link": "chapters/termination.html#sim-flr"
+  },
+  {
+    "id": "powerbook/termination/sim-jte",
+    "bookId": "powerbook",
+    "title": "2D 솔버 ④ SiC JTE와 도즈 창 (PW-800 1200 V 드리프트)",
+    "link": "chapters/termination.html#sim-jte"
+  },
+  {
+    "id": "powerbook/termination/sim-qss",
+    "bookId": "powerbook",
+    "title": "표면 전하 민감도: 세 종단을 같은 축에서 비교",
+    "link": "chapters/termination.html#sim-qss"
+  },
+  {
+    "id": "powerbook/termination/sim-area",
+    "bookId": "powerbook",
+    "title": "다이 크기 최적화: 종단 면적 vs 수율",
+    "link": "chapters/termination.html#sim-area"
+  },
+  {
+    "id": "powerbook/thermal/sim-stack",
+    "bookId": "powerbook",
+    "title": "층 구조 열저항 계산기: 45° 퍼짐과 재료 선택",
+    "link": "chapters/thermal.html#sim-stack"
+  },
+  {
+    "id": "powerbook/thermal/sim-foster",
+    "bookId": "powerbook",
+    "title": "카우어 사다리 → Z th (t) → 포스터 맞춤",
+    "link": "chapters/thermal.html#sim-foster"
+  },
+  {
+    "id": "powerbook/thermal/sim-pulse",
+    "bookId": "powerbook",
+    "title": "펄스 전력 → T j (t): 포스터 중첩과 Z th (t p , D)",
+    "link": "chapters/thermal.html#sim-pulse"
+  },
+  {
+    "id": "powerbook/thermal/sim-ripple",
+    "bookId": "powerbook",
+    "title": "기본파 주기의 T j 리플: 출력 주파수와 정지 토크",
+    "link": "chapters/thermal.html#sim-ripple"
+  },
+  {
+    "id": "powerbook/thermal/sim-runaway",
+    "bookId": "powerbook",
+    "title": "전기-열 결합 해와 열 폭주 경계",
+    "link": "chapters/thermal.html#sim-runaway"
+  },
+  {
+    "id": "powerbook/thermal/sim-cool",
+    "bookId": "powerbook",
+    "title": "냉각 방식 비교: 열저항 분해와 허용 손실",
+    "link": "chapters/thermal.html#sim-cool"
+  },
+  {
+    "id": "powerbook/thermal/sim-tsep",
+    "bookId": "powerbook",
+    "title": "TSEP 보정과 냉각 곡선: V SD 로 T j 재기",
+    "link": "chapters/thermal.html#sim-tsep"
+  },
+  {
     "id": "chipindustrybook/business/sim-bm-map",
     "bookId": "chipindustrybook",
     "title": "사업 모델 지도: 공장을 가진 회사는 어디에 있나",
