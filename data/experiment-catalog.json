@@ -210,6 +210,54 @@
     "link": "chapters/gr.html#sim-qfl"
   },
   {
+    "id": "devicebook/hetero/sim-align",
+    "bookId": "devicebook",
+    "title": "밴드 정렬 탐색기: 앤더슨 규칙 vs 실측",
+    "link": "chapters/hetero.html#sim-align"
+  },
+  {
+    "id": "devicebook/hetero/sim-hj",
+    "bookId": "devicebook",
+    "title": "이종 접합 밴드 다이어그램 솔버 (페르미–디랙 포아송)",
+    "link": "chapters/hetero.html#sim-hj"
+  },
+  {
+    "id": "devicebook/hetero/sim-2deg",
+    "bookId": "devicebook",
+    "title": "2DEG 시트 밀도: 게이트, 스페이서, 도핑층",
+    "link": "chapters/hetero.html#sim-2deg"
+  },
+  {
+    "id": "devicebook/hetero/sim-mob",
+    "bookId": "devicebook",
+    "title": "도너를 떼어 놓으면: 벌크 도핑 vs 변조 도핑의 산란",
+    "link": "chapters/hetero.html#sim-mob"
+  },
+  {
+    "id": "devicebook/hetero/sim-qwp",
+    "bookId": "devicebook",
+    "title": "우물 폭을 절반으로 줄이면 바닥 준위는 몇 배?",
+    "link": "chapters/hetero.html#sim-qwp"
+  },
+  {
+    "id": "devicebook/hetero/sim-qw",
+    "bookId": "devicebook",
+    "title": "유한 양자 우물 솔버: 부밴드, 파동 함수, 계단형 상태 밀도",
+    "link": "chapters/hetero.html#sim-qw"
+  },
+  {
+    "id": "devicebook/hetero/sim-sige",
+    "bookId": "devicebook",
+    "title": "변형 SiGe: 임계 두께, 밴드 오프셋, 이동도 향상",
+    "link": "chapters/hetero.html#sim-sige"
+  },
+  {
+    "id": "devicebook/hetero/sim-design",
+    "bookId": "devicebook",
+    "title": "목표 파장의 양자 우물 레이저 설계하기",
+    "link": "chapters/hetero.html#sim-design"
+  },
+  {
     "id": "devicebook/lab/lab",
     "bookId": "devicebook",
     "title": "1D 드리프트–확산 소자 실험실",
@@ -448,6 +496,186 @@
     "bookId": "devicebook",
     "title": "미지의 접합: 1/C² 직선 맞춤으로 N D 와 V bi 찾기",
     "link": "chapters/pn.html#sim-chal"
+  },
+  {
+    "id": "devicebook/power/sim-ion",
+    "bookId": "devicebook",
+    "title": "이온화 적분 솔버: 한쪽 접합의 항복",
+    "link": "chapters/power.html#sim-ion"
+  },
+  {
+    "id": "devicebook/power/sim-pt",
+    "bookId": "devicebook",
+    "title": "드리프트층 설계기: 도핑과 두께로 BV와 R drift 맞추기",
+    "link": "chapters/power.html#sim-pt"
+  },
+  {
+    "id": "devicebook/power/sim-bfom",
+    "bookId": "devicebook",
+    "title": "BV를 두 배로 올리면 온저항은 몇 배?",
+    "link": "chapters/power.html#sim-bfom"
+  },
+  {
+    "id": "devicebook/power/sim-ron",
+    "bookId": "devicebook",
+    "title": "전력 MOSFET 온저항 분해: 어디가 병목인가",
+    "link": "chapters/power.html#sim-ron"
+  },
+  {
+    "id": "devicebook/power/sim-sj",
+    "bookId": "devicebook",
+    "title": "슈퍼정션 전하 균형: 공정 여유와 실리콘 한계",
+    "link": "chapters/power.html#sim-sj"
+  },
+  {
+    "id": "devicebook/power/sim-igbt",
+    "bookId": "devicebook",
+    "title": "IGBT vs MOSFET: 온상태 교차점과 수명 트레이드오프",
+    "link": "chapters/power.html#sim-igbt"
+  },
+  {
+    "id": "devicebook/power/sim-hemt",
+    "bookId": "devicebook",
+    "title": "AlGaN/GaN 분극 2DEG와 문턱 전압",
+    "link": "chapters/power.html#sim-hemt"
+  },
+  {
+    "id": "devicebook/power/sim-dpt",
+    "bookId": "devicebook",
+    "title": "이중 펄스 시험: 턴오프·턴온 파형과 밀러 평탄부",
+    "link": "chapters/power.html#sim-dpt"
+  },
+  {
+    "id": "devicebook/power/sim-loss",
+    "bookId": "devicebook",
+    "title": "총손실 vs 스위칭 주파수: 어느 소자가 언제 이기나",
+    "link": "chapters/power.html#sim-loss"
+  },
+  {
+    "id": "devicebook/power/sim-ch",
+    "bookId": "devicebook",
+    "title": "소자와 드리프트층을 골라 사양을 최소 손실로 맞추기",
+    "link": "chapters/power.html#sim-ch"
+  },
+  {
+    "id": "devicebook/reliability/sim-bt",
+    "bookId": "devicebook",
+    "title": "욕조 곡선 만들기와 번인 효과",
+    "link": "chapters/reliability.html#sim-bt"
+  },
+  {
+    "id": "devicebook/reliability/sim-lk",
+    "bookId": "devicebook",
+    "title": "행운 전자: 드레인 근처에서 에너지를 모으는 전자들",
+    "link": "chapters/reliability.html#sim-lk"
+  },
+  {
+    "id": "devicebook/reliability/sim-hci",
+    "bookId": "devicebook",
+    "title": "기판 전류와 HCI 열화 수명",
+    "link": "chapters/reliability.html#sim-hci"
+  },
+  {
+    "id": "devicebook/reliability/sim-bti",
+    "bookId": "devicebook",
+    "title": "NBTI 스트레스와 회복: 결함 집단 모형",
+    "link": "chapters/reliability.html#sim-bti"
+  },
+  {
+    "id": "devicebook/reliability/sim-pc",
+    "bookId": "devicebook",
+    "title": "퍼콜레이션 몬테카를로: 커패시터를 하나씩 터뜨려 와이블 그리기",
+    "link": "chapters/reliability.html#sim-pc"
+  },
+  {
+    "id": "devicebook/reliability/sim-wb",
+    "bookId": "devicebook",
+    "title": "와이블 면적 스케일링과 ppm 수명",
+    "link": "chapters/reliability.html#sim-wb"
+  },
+  {
+    "id": "devicebook/reliability/sim-ac",
+    "bookId": "devicebook",
+    "title": "TDDB 가속 데이터에서 10년·ppm 수명 외삽",
+    "link": "chapters/reliability.html#sim-ac"
+  },
+  {
+    "id": "devicebook/reliability/sim-esd",
+    "bookId": "devicebook",
+    "title": "ESD 펄스와 보호 소자 설계 창",
+    "link": "chapters/reliability.html#sim-esd"
+  },
+  {
+    "id": "devicebook/reliability/sim-gb",
+    "bookId": "devicebook",
+    "title": "노화로 이동하고 퍼지는 V th 분포와 전압 가드밴드",
+    "link": "chapters/reliability.html#sim-gb"
+  },
+  {
+    "id": "devicebook/reliability/sim-ch",
+    "bookId": "devicebook",
+    "title": "V DD 와 온도 가드밴드를 골라 10년 수명과 속도를 동시에",
+    "link": "chapters/reliability.html#sim-ch"
+  },
+  {
+    "id": "devicebook/rf/sim-nqs",
+    "bookId": "devicebook",
+    "title": "채널 전하가 게이트를 따라가지 못할 때",
+    "link": "chapters/rf.html#sim-nqs"
+  },
+  {
+    "id": "devicebook/rf/sim-ss",
+    "bookId": "devicebook",
+    "title": "동작점에서 소신호 파라미터 뽑기",
+    "link": "chapters/rf.html#sim-ss"
+  },
+  {
+    "id": "devicebook/rf/sim-tp",
+    "bookId": "devicebook",
+    "title": "2단자쌍 계산기: h 21 , U, 스미스 차트",
+    "link": "chapters/rf.html#sim-tp"
+  },
+  {
+    "id": "devicebook/rf/sim-pr",
+    "bookId": "devicebook",
+    "title": "채널 길이를 절반으로 줄이면 f T 는?",
+    "link": "chapters/rf.html#sim-pr"
+  },
+  {
+    "id": "devicebook/rf/sim-bias",
+    "bookId": "devicebook",
+    "title": "f T ·f max 의 전류 밀도 의존성",
+    "link": "chapters/rf.html#sim-bias"
+  },
+  {
+    "id": "devicebook/rf/sim-fg",
+    "bookId": "devicebook",
+    "title": "핑거를 몇 개로 나눌까: R g 와 f max",
+    "link": "chapters/rf.html#sim-fg"
+  },
+  {
+    "id": "devicebook/rf/sim-nz",
+    "bookId": "devicebook",
+    "title": "잡음 스펙트럼과 시간 파형",
+    "link": "chapters/rf.html#sim-nz"
+  },
+  {
+    "id": "devicebook/rf/sim-nf",
+    "bookId": "devicebook",
+    "title": "MOSFET의 최소 잡음 지수 vs 주파수",
+    "link": "chapters/rf.html#sim-nf"
+  },
+  {
+    "id": "devicebook/rf/sim-map",
+    "bookId": "devicebook",
+    "title": "f T –항복 전압 지도와 존슨 한계",
+    "link": "chapters/rf.html#sim-map"
+  },
+  {
+    "id": "devicebook/rf/sim-ch",
+    "bookId": "devicebook",
+    "title": "최소 전류로 f T 와 NF 목표 맞추기",
+    "link": "chapters/rf.html#sim-ch"
   },
   {
     "id": "devicebook/scaling/sim-dn",
@@ -36934,6 +37162,1716 @@
     "bookId": "fluid-mechanics",
     "title": "펠턴 휠: 버킷 속도비와 출력, 발전기 동기 속도 맞추기",
     "link": "chapters/turbomachinery.html#sim-pelton"
+  },
+  {
+    "id": "thinfilmbook/ald/sim-qcm",
+    "bookId": "thinfilmbook",
+    "title": "인시투 QCM: 펄스 시간과 질량 계단",
+    "link": "chapters/ald.html#sim-qcm"
+  },
+  {
+    "id": "thinfilmbook/ald/sim-ald3d",
+    "bookId": "thinfilmbook",
+    "title": "TMA/H₂O 사이클 — 표면 격자 애니메이션",
+    "link": "chapters/ald.html#sim-ald3d"
+  },
+  {
+    "id": "thinfilmbook/ald/sim-lang",
+    "bookId": "thinfilmbook",
+    "title": "포화 곡선과 포화 노출량 계산기",
+    "link": "chapters/ald.html#sim-lang"
+  },
+  {
+    "id": "thinfilmbook/ald/sim-purge",
+    "bookId": "thinfilmbook",
+    "title": "펄스/퍼지 최적화: ALD 성분과 CVD 성분",
+    "link": "chapters/ald.html#sim-purge"
+  },
+  {
+    "id": "thinfilmbook/ald/sim-steric",
+    "bookId": "thinfilmbook",
+    "title": "입체 장애 몬테카를로(RSA): OH 밀도와 리간드 크기",
+    "link": "chapters/ald.html#sim-steric"
+  },
+  {
+    "id": "thinfilmbook/ald/sim-window",
+    "bookId": "thinfilmbook",
+    "title": "ALD 온도 창 탐색기",
+    "link": "chapters/ald.html#sim-window"
+  },
+  {
+    "id": "thinfilmbook/ald/sim-nuc",
+    "bookId": "thinfilmbook",
+    "title": "핵생성 지연과 섬 합체(아브라미 모델)",
+    "link": "chapters/ald.html#sim-nuc"
+  },
+  {
+    "id": "thinfilmbook/aldadv/sim-rad",
+    "bookId": "thinfilmbook",
+    "title": "PEALD 래디컬 침투: 재결합 확률 · 종횡비 · 플라즈마 시간",
+    "link": "chapters/aldadv.html#sim-rad"
+  },
+  {
+    "id": "thinfilmbook/aldadv/sim-pq",
+    "bookId": "thinfilmbook",
+    "title": "PEALD SiO₂ 조건 → 막질 지도",
+    "link": "chapters/aldadv.html#sim-pq"
+  },
+  {
+    "id": "thinfilmbook/aldadv/sim-spatial",
+    "bookId": "thinfilmbook",
+    "title": "공간 분할 ALD: 회전 속도 · 구역 · 커튼",
+    "link": "chapters/aldadv.html#sim-spatial"
+  },
+  {
+    "id": "thinfilmbook/aldadv/sim-asd",
+    "bookId": "thinfilmbook",
+    "title": "선택도 vs 사이클: 억제제 · 결함 · 식각 보정",
+    "link": "chapters/aldadv.html#sim-asd"
+  },
+  {
+    "id": "thinfilmbook/aldadv/sim-ale",
+    "bookId": "thinfilmbook",
+    "title": "ALD/ALE 대칭: 포화 곡선과 시너지",
+    "link": "chapters/aldadv.html#sim-ale"
+  },
+  {
+    "id": "thinfilmbook/aldadv/sim-hk",
+    "bookId": "thinfilmbook",
+    "title": "게이트 스택 계산기: IL · HfO₂ 사이클 · 열처리 · 도핑",
+    "link": "chapters/aldadv.html#sim-hk"
+  },
+  {
+    "id": "thinfilmbook/aldadv/sim-tin",
+    "bookId": "thinfilmbook",
+    "title": "TiN ALD: 온도 · NH₃ 펄스 · 두께 → 비저항",
+    "link": "chapters/aldadv.html#sim-tin"
+  },
+  {
+    "id": "thinfilmbook/aldadv/sim-pd",
+    "bookId": "thinfilmbook",
+    "title": "전구체 공급: 증기압 · 운반 유량 → 펄스당 분자 수와 포화",
+    "link": "chapters/aldadv.html#sim-pd"
+  },
+  {
+    "id": "thinfilmbook/budget/sim-dt",
+    "bookId": "thinfilmbook",
+    "title": "Dt 계산기: 주입 프로파일의 퍼짐",
+    "link": "chapters/budget.html#sim-dt"
+  },
+  {
+    "id": "thinfilmbook/budget/sim-ramp",
+    "bookId": "thinfilmbook",
+    "title": "퍼니스 레시피의 Dt 적분",
+    "link": "chapters/budget.html#sim-ramp"
+  },
+  {
+    "id": "thinfilmbook/budget/sim-spike",
+    "bookId": "thinfilmbook",
+    "title": "스파이크 어닐 프로파일 설계 (RTP 집중 열용량 모델)",
+    "link": "chapters/budget.html#sim-spike"
+  },
+  {
+    "id": "thinfilmbook/budget/sim-msa",
+    "bookId": "thinfilmbook",
+    "title": "밀리초 어닐: 표면만 데우기",
+    "link": "chapters/budget.html#sim-msa"
+  },
+  {
+    "id": "thinfilmbook/budget/sim-slip",
+    "bookId": "thinfilmbook",
+    "title": "RTP 반지름 온도 분포와 슬립 위험",
+    "link": "chapters/budget.html#sim-slip"
+  },
+  {
+    "id": "thinfilmbook/budget/sim-emis",
+    "bookId": "thinfilmbook",
+    "title": "뒷면 박막·방사율과 고온계 오차",
+    "link": "chapters/budget.html#sim-emis"
+  },
+  {
+    "id": "thinfilmbook/budget/sim-3d",
+    "bookId": "thinfilmbook",
+    "title": "종형 퍼니스 배치 산화 / RTP 스파이크",
+    "link": "chapters/budget.html#sim-3d"
+  },
+  {
+    "id": "thinfilmbook/budget/sim-ledger",
+    "bookId": "thinfilmbook",
+    "title": "열 예산 장부: 접합 뒤의 공정들",
+    "link": "chapters/budget.html#sim-ledger"
+  },
+  {
+    "id": "thinfilmbook/conformality/sim-vf",
+    "bookId": "thinfilmbook",
+    "title": "시야각 계산기: 직진 플럭스 분포",
+    "link": "chapters/conformality.html#sim-vf"
+  },
+  {
+    "id": "thinfilmbook/conformality/sim-mc",
+    "bookId": "thinfilmbook",
+    "title": "2D 몬테카를로: 트렌치 안 분자 궤적과 두께 분포",
+    "link": "chapters/conformality.html#sim-mc"
+  },
+  {
+    "id": "thinfilmbook/conformality/sim-hole3d",
+    "bookId": "thinfilmbook",
+    "title": "3D 홀·트렌치 피복: 몬테카를로와 포화 전선",
+    "link": "chapters/conformality.html#sim-hole3d"
+  },
+  {
+    "id": "thinfilmbook/conformality/sim-gordon",
+    "bookId": "thinfilmbook",
+    "title": "Gordon 노출량 계산기: 고종횡비 ALD 펄스 시간",
+    "link": "chapters/conformality.html#sim-gordon"
+  },
+  {
+    "id": "thinfilmbook/conformality/sim-front",
+    "bookId": "thinfilmbook",
+    "title": "포화 전선: 크누센 확산-반응 방정식",
+    "link": "chapters/conformality.html#sim-front"
+  },
+  {
+    "id": "thinfilmbook/conformality/sim-kn",
+    "bookId": "thinfilmbook",
+    "title": "압력 · 구조 크기 → 크누센 수와 확산 시간",
+    "link": "chapters/conformality.html#sim-kn"
+  },
+  {
+    "id": "thinfilmbook/conformality/sim-void",
+    "bookId": "thinfilmbook",
+    "title": "갭필 문자열 모델: 오버행 · 심 · 보이드 · 증착-식각-증착",
+    "link": "chapters/conformality.html#sim-void"
+  },
+  {
+    "id": "thinfilmbook/cvd/sim-grove",
+    "bookId": "thinfilmbook",
+    "title": "그로브 모델 계산기: 경계층 속 농도와 두 저항",
+    "link": "chapters/cvd.html#sim-grove"
+  },
+  {
+    "id": "thinfilmbook/cvd/sim-arr",
+    "bookId": "thinfilmbook",
+    "title": "아레니우스 그림: 꺾임점과 겉보기 활성화 에너지",
+    "link": "chapters/cvd.html#sim-arr"
+  },
+  {
+    "id": "thinfilmbook/cvd/sim-bl",
+    "bookId": "thinfilmbook",
+    "title": "수평 반응기의 경계층과 길이 방향 증착 분포",
+    "link": "chapters/cvd.html#sim-bl"
+  },
+  {
+    "id": "thinfilmbook/cvd/sim-stick",
+    "bookId": "thinfilmbook",
+    "title": "부착 계수와 충돌 횟수: 트렌치 속 분자 몬테카를로",
+    "link": "chapters/cvd.html#sim-stick"
+  },
+  {
+    "id": "thinfilmbook/cvd/sim-lh",
+    "bookId": "thinfilmbook",
+    "title": "흡착 자리 격자와 반응 차수",
+    "link": "chapters/cvd.html#sim-lh"
+  },
+  {
+    "id": "thinfilmbook/cvd/sim-gas",
+    "bookId": "thinfilmbook",
+    "title": "기상 핵생성 위험 지도: 온도 × 압력",
+    "link": "chapters/cvd.html#sim-gas"
+  },
+  {
+    "id": "thinfilmbook/cvd/sim-chem",
+    "bookId": "thinfilmbook",
+    "title": "세 화학의 증착 속도 비교 (반응 제한 LPCVD)",
+    "link": "chapters/cvd.html#sim-chem"
+  },
+  {
+    "id": "thinfilmbook/cvd/sim-grow",
+    "bookId": "thinfilmbook",
+    "title": "LPCVD 실리콘 성장 단면: 잠복기·속도·결정 구조",
+    "link": "chapters/cvd.html#sim-grow"
+  },
+  {
+    "id": "thinfilmbook/glossary/sim-cm",
+    "bookId": "thinfilmbook",
+    "title": "장 사이 공유 용어 네트워크",
+    "link": "chapters/glossary.html#sim-cm"
+  },
+  {
+    "id": "thinfilmbook/glossary/sim-fc",
+    "bookId": "thinfilmbook",
+    "title": "플래시 카드",
+    "link": "chapters/glossary.html#sim-fc"
+  },
+  {
+    "id": "thinfilmbook/integration/sim-eot",
+    "bookId": "thinfilmbook",
+    "title": "게이트 스택 EOT·누설 계산기",
+    "link": "chapters/integration.html#sim-eot"
+  },
+  {
+    "id": "thinfilmbook/integration/sim-cesl",
+    "bookId": "thinfilmbook",
+    "title": "CESL 응력 → 채널 응력 → 이동도",
+    "link": "chapters/integration.html#sim-cesl"
+  },
+  {
+    "id": "thinfilmbook/integration/sim-gap",
+    "bookId": "thinfilmbook",
+    "title": "STI 갭필: 방식·종횡비·경사 → 보이드·심",
+    "link": "chapters/integration.html#sim-gap"
+  },
+  {
+    "id": "thinfilmbook/integration/sim-plug",
+    "bookId": "thinfilmbook",
+    "title": "콘택 플러그 저항: 배리어가 W 자리를 빼앗는다",
+    "link": "chapters/integration.html#sim-plug"
+  },
+  {
+    "id": "thinfilmbook/integration/sim-on",
+    "bookId": "thinfilmbook",
+    "title": "ON 적층: 쌍 수·층 응력 → 누적 σh·웨이퍼 휨·높이 산포",
+    "link": "chapters/integration.html#sim-on"
+  },
+  {
+    "id": "thinfilmbook/integration/sim-ono",
+    "bookId": "thinfilmbook",
+    "title": "채널 홀 ONO: 홀 경사·ALD 노출량 → 남는 코어와 셀 전계",
+    "link": "chapters/integration.html#sim-ono"
+  },
+  {
+    "id": "thinfilmbook/integration/sim-ac",
+    "bookId": "thinfilmbook",
+    "title": "a-C 하드마스크: 증착 온도 → 선택비·필요 두께·정렬 투과율",
+    "link": "chapters/integration.html#sim-ac"
+  },
+  {
+    "id": "thinfilmbook/integration/sim-coo",
+    "bookId": "thinfilmbook",
+    "title": "퍼니스 vs PECVD vs ALD: 처리량과 웨이퍼당 비용",
+    "link": "chapters/integration.html#sim-coo"
+  },
+  {
+    "id": "thinfilmbook/interface/sim-mas",
+    "bookId": "thinfilmbook",
+    "title": "딜-그로브 vs 마수드: 얇은 건식 산화",
+    "link": "chapters/interface.html#sim-mas"
+  },
+  {
+    "id": "thinfilmbook/interface/sim-cv",
+    "bookId": "thinfilmbook",
+    "title": "MOS C-V 곡선과 산화막 전하",
+    "link": "chapters/interface.html#sim-cv"
+  },
+  {
+    "id": "thinfilmbook/interface/sim-fga",
+    "bookId": "thinfilmbook",
+    "title": "포밍 가스 어닐과 그 뒤의 열 공정",
+    "link": "chapters/interface.html#sim-fga"
+  },
+  {
+    "id": "thinfilmbook/interface/sim-seg",
+    "bookId": "thinfilmbook",
+    "title": "움직이는 계면의 편석과 산화 증강 확산",
+    "link": "chapters/interface.html#sim-seg"
+  },
+  {
+    "id": "thinfilmbook/interface/sim-locos",
+    "bookId": "thinfilmbook",
+    "title": "LOCOS 새부리: 마스크 아래로 스미는 산화제",
+    "link": "chapters/interface.html#sim-locos"
+  },
+  {
+    "id": "thinfilmbook/interface/sim-corner",
+    "bookId": "thinfilmbook",
+    "title": "모서리 산화와 점성 응력",
+    "link": "chapters/interface.html#sim-corner"
+  },
+  {
+    "id": "thinfilmbook/interface/sim-son",
+    "bookId": "thinfilmbook",
+    "title": "SiON 질소 프로파일, EOT와 누설",
+    "link": "chapters/interface.html#sim-son"
+  },
+  {
+    "id": "thinfilmbook/metrology/sim-sr",
+    "bookId": "thinfilmbook",
+    "title": "분광 반사율: 분산을 넣은 에어리 식",
+    "link": "chapters/metrology.html#sim-sr"
+  },
+  {
+    "id": "thinfilmbook/metrology/sim-fit",
+    "bookId": "thinfilmbook",
+    "title": "스펙트럼 피팅: χ² 지형과 국소 최소",
+    "link": "chapters/metrology.html#sim-fit"
+  },
+  {
+    "id": "thinfilmbook/metrology/sim-se",
+    "bookId": "thinfilmbook",
+    "title": "엘립소메트리 Ψ–Δ 궤적과 극박막 감도",
+    "link": "chapters/metrology.html#sim-se"
+  },
+  {
+    "id": "thinfilmbook/metrology/sim-xrr",
+    "bookId": "thinfilmbook",
+    "title": "XRR 반사 곡선(파랫 점화식 + 네보-크로세 거칠기)",
+    "link": "chapters/metrology.html#sim-xrr"
+  },
+  {
+    "id": "thinfilmbook/metrology/sim-rs",
+    "bookId": "thinfilmbook",
+    "title": "4탐침: 크기 효과 + 49점 면저항 지도",
+    "link": "chapters/metrology.html#sim-rs"
+  },
+  {
+    "id": "thinfilmbook/metrology/sim-bowm",
+    "bookId": "thinfilmbook",
+    "title": "레이저 곡률 측정: 잡음·전후 차감·막 두께와 응력 오차",
+    "link": "chapters/metrology.html#sim-bowm"
+  },
+  {
+    "id": "thinfilmbook/metrology/sim-grr",
+    "bookId": "thinfilmbook",
+    "title": "게이지 R&R 연구: 10장 × 3명 × 3회",
+    "link": "chapters/metrology.html#sim-grr"
+  },
+  {
+    "id": "thinfilmbook/metrology/sim-spc",
+    "bookId": "thinfilmbook",
+    "title": "모니터 웨이퍼 관리도: 이동·추세 주입과 규칙 검출",
+    "link": "chapters/metrology.html#sim-spc"
+  },
+  {
+    "id": "thinfilmbook/metrology/sim-ewma",
+    "bookId": "thinfilmbook",
+    "title": "EWMA 런투런: 표류하는 PECVD 증착 속도",
+    "link": "chapters/metrology.html#sim-ewma"
+  },
+  {
+    "id": "thinfilmbook/nucleation/sim-res",
+    "bookId": "thinfilmbook",
+    "title": "흡착 에너지·기판 온도 → 체류 시간과 피복률",
+    "link": "chapters/nucleation.html#sim-res"
+  },
+  {
+    "id": "thinfilmbook/nucleation/sim-walk",
+    "bookId": "thinfilmbook",
+    "title": "흡착 원자의 무작위 행보와 재증발",
+    "link": "chapters/nucleation.html#sim-walk"
+  },
+  {
+    "id": "thinfilmbook/nucleation/sim-dg",
+    "bookId": "thinfilmbook",
+    "title": "ΔG(r) 곡선: 과포화도·접촉각·표면 에너지",
+    "link": "chapters/nucleation.html#sim-dg"
+  },
+  {
+    "id": "thinfilmbook/nucleation/sim-kmc",
+    "bookId": "thinfilmbook",
+    "title": "KMC: 확산·핵생성·섬 성장·합체",
+    "link": "chapters/nucleation.html#sim-kmc"
+  },
+  {
+    "id": "thinfilmbook/nucleation/sim-nsat",
+    "bookId": "thinfilmbook",
+    "title": "조건 → 섬 밀도 → 연속막이 되는 두께",
+    "link": "chapters/nucleation.html#sim-nsat"
+  },
+  {
+    "id": "thinfilmbook/nucleation/sim-mode",
+    "bookId": "thinfilmbook",
+    "title": "표면 에너지·격자 불일치 → 성장 모드",
+    "link": "chapters/nucleation.html#sim-mode"
+  },
+  {
+    "id": "thinfilmbook/nucleation/sim-incub",
+    "bookId": "thinfilmbook",
+    "title": "JMAK 잠복기와 선택 증착 창",
+    "link": "chapters/nucleation.html#sim-incub"
+  },
+  {
+    "id": "thinfilmbook/nucleation/sim-szm",
+    "bookId": "thinfilmbook",
+    "title": "구조 영역 탐색기: 장비 조건 → 미세구조",
+    "link": "chapters/nucleation.html#sim-szm"
+  },
+  {
+    "id": "thinfilmbook/nucleation/sim-grain",
+    "bookId": "thinfilmbook",
+    "title": "Cu 어닐: 결정립 성장과 비저항",
+    "link": "chapters/nucleation.html#sim-grain"
+  },
+  {
+    "id": "thinfilmbook/overview/sim-ruler",
+    "bookId": "thinfilmbook",
+    "title": "두께의 자: 원자층 몇 개, 방법별 몇 분?",
+    "link": "chapters/overview.html#sim-ruler"
+  },
+  {
+    "id": "thinfilmbook/overview/sim-grow",
+    "bookId": "thinfilmbook",
+    "title": "산화 vs 증착: 계면이 움직인다",
+    "link": "chapters/overview.html#sim-grow"
+  },
+  {
+    "id": "thinfilmbook/overview/sim-surf",
+    "bookId": "thinfilmbook",
+    "title": "표면에서 본 ALD와 CVD: 자기 제한과 거칠기",
+    "link": "chapters/overview.html#sim-surf"
+  },
+  {
+    "id": "thinfilmbook/overview/sim-trench",
+    "bookId": "thinfilmbook",
+    "title": "트렌치 피복 비교: 시야각 · 부착 계수 · 자기 제한",
+    "link": "chapters/overview.html#sim-trench"
+  },
+  {
+    "id": "thinfilmbook/overview/sim-pick",
+    "bookId": "thinfilmbook",
+    "title": "방법 고르기: 두께 · 종횡비 · 온도 한계 → 가능한 방법과 처리량",
+    "link": "chapters/overview.html#sim-pick"
+  },
+  {
+    "id": "thinfilmbook/overview/sim-recipe",
+    "bookId": "thinfilmbook",
+    "title": "레시피 손잡이 → 챔버 안의 기체",
+    "link": "chapters/overview.html#sim-recipe"
+  },
+  {
+    "id": "thinfilmbook/overview/sim-cluster",
+    "bookId": "thinfilmbook",
+    "title": "3D 클러스터 장비: 웨이퍼 경로와 처리량",
+    "link": "chapters/overview.html#sim-cluster"
+  },
+  {
+    "id": "thinfilmbook/oxidation/sim-grow",
+    "bookId": "thinfilmbook",
+    "title": "퍼니스 속 단면: 산화막이 자라는 모습",
+    "link": "chapters/oxidation.html#sim-grow"
+  },
+  {
+    "id": "thinfilmbook/oxidation/sim-flux",
+    "bookId": "thinfilmbook",
+    "title": "세 플럭스와 율속 단계",
+    "link": "chapters/oxidation.html#sim-flux"
+  },
+  {
+    "id": "thinfilmbook/oxidation/sim-dg",
+    "bookId": "thinfilmbook",
+    "title": "딜-그로브 계산기: 두께 ↔ 시간",
+    "link": "chapters/oxidation.html#sim-dg"
+  },
+  {
+    "id": "thinfilmbook/oxidation/sim-arr",
+    "bookId": "thinfilmbook",
+    "title": "아레니우스 그림: B와 B/A",
+    "link": "chapters/oxidation.html#sim-arr"
+  },
+  {
+    "id": "thinfilmbook/oxidation/sim-ori",
+    "bookId": "thinfilmbook",
+    "title": "면방위와 n⁺ 도핑에 따른 산화 속도",
+    "link": "chapters/oxidation.html#sim-ori"
+  },
+  {
+    "id": "thinfilmbook/oxidation/sim-hipox",
+    "bookId": "thinfilmbook",
+    "title": "고압 산화: 같은 두께, 낮은 온도",
+    "link": "chapters/oxidation.html#sim-hipox"
+  },
+  {
+    "id": "thinfilmbook/oxidation/sim-recipe",
+    "bookId": "thinfilmbook",
+    "title": "퍼니스 레시피 적분기",
+    "link": "chapters/oxidation.html#sim-recipe"
+  },
+  {
+    "id": "thinfilmbook/oxidation/sim-color",
+    "bookId": "thinfilmbook",
+    "title": "산화막 두께와 간섭색",
+    "link": "chapters/oxidation.html#sim-color"
+  },
+  {
+    "id": "thinfilmbook/pvd/sim-evap",
+    "bookId": "thinfilmbook",
+    "title": "증발원 온도 → 증기압 → 증착 속도",
+    "link": "chapters/pvd.html#sim-evap"
+  },
+  {
+    "id": "thinfilmbook/pvd/sim-cos",
+    "bookId": "thinfilmbook",
+    "title": "증발원·레이스트랙 → 웨이퍼 두께 분포",
+    "link": "chapters/pvd.html#sim-cos"
+  },
+  {
+    "id": "thinfilmbook/pvd/sim-yield",
+    "bookId": "thinfilmbook",
+    "title": "스퍼터 수율: 이온 에너지·이온 종·타깃",
+    "link": "chapters/pvd.html#sim-yield"
+  },
+  {
+    "id": "thinfilmbook/pvd/sim-paschen",
+    "bookId": "thinfilmbook",
+    "title": "파셴 곡선과 마그네트론의 경로 연장",
+    "link": "chapters/pvd.html#sim-paschen"
+  },
+  {
+    "id": "thinfilmbook/pvd/sim-exb",
+    "bookId": "thinfilmbook",
+    "title": "타깃 앞 2차 전자의 궤적 (보리스 적분)",
+    "link": "chapters/pvd.html#sim-exb"
+  },
+  {
+    "id": "thinfilmbook/pvd/sim-mag3d",
+    "bookId": "thinfilmbook",
+    "title": "마그네트론 3D: 회전 자석, 레이스트랙, 타깃 침식",
+    "link": "chapters/pvd.html#sim-mag3d"
+  },
+  {
+    "id": "thinfilmbook/pvd/sim-therm",
+    "bookId": "thinfilmbook",
+    "title": "몬테카를로: 스퍼터 원자의 비행과 열평형화",
+    "link": "chapters/pvd.html#sim-therm"
+  },
+  {
+    "id": "thinfilmbook/pvd/sim-rate",
+    "bookId": "thinfilmbook",
+    "title": "장비 조건 → 증착 속도",
+    "link": "chapters/pvd.html#sim-rate"
+  },
+  {
+    "id": "thinfilmbook/quality/sim-ll",
+    "bookId": "thinfilmbook",
+    "title": "로렌츠-로렌츠 계산기: 기공률·조성 → 굴절률·밀도",
+    "link": "chapters/quality.html#sim-ll"
+  },
+  {
+    "id": "thinfilmbook/quality/sim-h",
+    "bookId": "thinfilmbook",
+    "title": "PECVD SiN 수소 함량과 FTIR 스펙트럼",
+    "link": "chapters/quality.html#sim-h"
+  },
+  {
+    "id": "thinfilmbook/quality/sim-wer",
+    "bookId": "thinfilmbook",
+    "title": "어닐 치밀화: 온도·시간 → 기공·수소·WERR·수축",
+    "link": "chapters/quality.html#sim-wer"
+  },
+  {
+    "id": "thinfilmbook/quality/sim-st",
+    "bookId": "thinfilmbook",
+    "title": "응력 분해: 막·증착 온도·LF 전력 → 열 + 고유 응력",
+    "link": "chapters/quality.html#sim-st"
+  },
+  {
+    "id": "thinfilmbook/quality/sim-cyc",
+    "bookId": "thinfilmbook",
+    "title": "응력-온도 사이클: 수소 방출이 만드는 비가역 인장 이동",
+    "link": "chapters/quality.html#sim-cyc"
+  },
+  {
+    "id": "thinfilmbook/quality/sim-bow",
+    "bookId": "thinfilmbook",
+    "title": "스토니 웨이퍼 휨 계산기",
+    "link": "chapters/quality.html#sim-bow"
+  },
+  {
+    "id": "thinfilmbook/quality/sim-iv",
+    "bookId": "thinfilmbook",
+    "title": "누설 I-V: FN·PF·옴 성분과 판별 그림",
+    "link": "chapters/quality.html#sim-iv"
+  },
+  {
+    "id": "thinfilmbook/quality/sim-tddb",
+    "bookId": "thinfilmbook",
+    "title": "TDDB 와이블 시험과 10년 수명 외삽",
+    "link": "chapters/quality.html#sim-tddb"
+  },
+  {
+    "id": "thinfilmbook/quality/sim-map",
+    "bookId": "thinfilmbook",
+    "title": "막질 지도: 방식·온도·속도·이온 충격 → 6개 지표",
+    "link": "chapters/quality.html#sim-map"
+  },
+  {
+    "id": "thinfilmbook/reactor/sim-types",
+    "bookId": "thinfilmbook",
+    "title": "압력 축 위의 반응기: 평균 자유 행로·확산·영역",
+    "link": "chapters/reactor.html#sim-types"
+  },
+  {
+    "id": "thinfilmbook/reactor/sim-batch",
+    "bookId": "thinfilmbook",
+    "title": "FX 퍼니스 배치 고갈과 온도 경사 보정",
+    "link": "chapters/reactor.html#sim-batch"
+  },
+  {
+    "id": "thinfilmbook/reactor/sim-shower",
+    "bookId": "thinfilmbook",
+    "title": "샤워헤드 틈의 흐름과 체류 시간 분포",
+    "link": "chapters/reactor.html#sim-shower"
+  },
+  {
+    "id": "thinfilmbook/reactor/sim-eedf",
+    "bookId": "thinfilmbook",
+    "title": "전자 에너지 분포와 해리 속도 → 증착 속도",
+    "link": "chapters/reactor.html#sim-eedf"
+  },
+  {
+    "id": "thinfilmbook/reactor/sim-3d",
+    "bookId": "thinfilmbook",
+    "title": "TF-300 PE 샤워헤드 챔버",
+    "link": "chapters/reactor.html#sim-3d"
+  },
+  {
+    "id": "thinfilmbook/reactor/sim-iedf",
+    "bookId": "thinfilmbook",
+    "title": "충돌성 쉬스 이온 몬테카를로: 이온 에너지 분포",
+    "link": "chapters/reactor.html#sim-iedf"
+  },
+  {
+    "id": "thinfilmbook/reactor/sim-film",
+    "bookId": "thinfilmbook",
+    "title": "HF × LF 막질 지도: 응력·수소·밀도",
+    "link": "chapters/reactor.html#sim-film"
+  },
+  {
+    "id": "thinfilmbook/reactor/sim-hdp",
+    "bookId": "thinfilmbook",
+    "title": "HDP 갭필: E/D 비와 보이드·클리핑",
+    "link": "chapters/reactor.html#sim-hdp"
+  },
+  {
+    "id": "thinfilmbook/sputter/sim-berg",
+    "bookId": "thinfilmbook",
+    "title": "베르그 모델: N₂ 유량-분압 히스테리시스",
+    "link": "chapters/sputter.html#sim-berg"
+  },
+  {
+    "id": "thinfilmbook/sputter/sim-pid",
+    "bookId": "thinfilmbook",
+    "title": "분압 되먹임으로 전이 영역에 머물기",
+    "link": "chapters/sputter.html#sim-pid"
+  },
+  {
+    "id": "thinfilmbook/sputter/sim-ipvd",
+    "bookId": "thinfilmbook",
+    "title": "코일 전력·압력·바이어스 → 금속 이온화율과 이온 에너지",
+    "link": "chapters/sputter.html#sim-ipvd"
+  },
+  {
+    "id": "thinfilmbook/sputter/sim-bc",
+    "bookId": "thinfilmbook",
+    "title": "비아 바닥·측벽 피복: 각도 분포와 재스퍼터",
+    "link": "chapters/sputter.html#sim-bc"
+  },
+  {
+    "id": "thinfilmbook/sputter/sim-throw",
+    "bookId": "thinfilmbook",
+    "title": "롱스로 기하: 중심과 가장자리의 입사각 분포",
+    "link": "chapters/sputter.html#sim-throw"
+  },
+  {
+    "id": "thinfilmbook/sputter/sim-stress",
+    "bookId": "thinfilmbook",
+    "title": "Ar 압력·바이어스·온도 → 막 응력과 웨이퍼 휨",
+    "link": "chapters/sputter.html#sim-stress"
+  },
+  {
+    "id": "thinfilmbook/sputter/sim-bias",
+    "bookId": "thinfilmbook",
+    "title": "기판 바이어스 → 에너지/원자, 밀도, 재스퍼터, 순 증착 속도",
+    "link": "chapters/sputter.html#sim-bias"
+  },
+  {
+    "id": "thinfilmbook/sputter/sim-budget",
+    "bookId": "thinfilmbook",
+    "title": "배리어·시드 두께 예산: 입구 폭, 시드 연속성, 선 저항",
+    "link": "chapters/sputter.html#sim-budget"
+  },
+  {
+    "id": "thinfilmbook/uniformity/sim-map",
+    "bookId": "thinfilmbook",
+    "title": "웨이퍼 두께 지도와 균일도 지표 계산기",
+    "link": "chapters/uniformity.html#sim-map"
+  },
+  {
+    "id": "thinfilmbook/uniformity/sim-temp",
+    "bookId": "thinfilmbook",
+    "title": "온도 분포 → 두께 분포: 반응 제한과 수송 제한",
+    "link": "chapters/uniformity.html#sim-temp"
+  },
+  {
+    "id": "thinfilmbook/uniformity/sim-sh",
+    "bookId": "thinfilmbook",
+    "title": "샤워헤드 반지름 분포 풀이기 (대류-확산-반응)",
+    "link": "chapters/uniformity.html#sim-sh"
+  },
+  {
+    "id": "thinfilmbook/uniformity/sim-zone",
+    "bookId": "thinfilmbook",
+    "title": "3구역 히터 보정: 손으로 맞추기 vs 최소 제곱",
+    "link": "chapters/uniformity.html#sim-zone"
+  },
+  {
+    "id": "thinfilmbook/uniformity/sim-wtw",
+    "bookId": "thinfilmbook",
+    "title": "FX 퍼니스 5구역 온도 자동 보정 (가우스-뉴턴)",
+    "link": "chapters/uniformity.html#sim-wtw"
+  },
+  {
+    "id": "thinfilmbook/uniformity/sim-gap",
+    "bookId": "thinfilmbook",
+    "title": "틸레 계수 계산기: 피치·압력·온도와 웨이퍼 안 보울",
+    "link": "chapters/uniformity.html#sim-gap"
+  },
+  {
+    "id": "thinfilmbook/uniformity/sim-rot",
+    "bookId": "thinfilmbook",
+    "title": "회전 바퀴 수와 남는 경사",
+    "link": "chapters/uniformity.html#sim-rot"
+  },
+  {
+    "id": "thinfilmbook/uniformity/sim-load",
+    "bookId": "thinfilmbook",
+    "title": "미시·거시 로딩: 패턴 밀도와 영역",
+    "link": "chapters/uniformity.html#sim-load"
+  },
+  {
+    "id": "thinfilmbook/vacuum/sim-ladder",
+    "bookId": "thinfilmbook",
+    "title": "압력 사다리 계산기: λ, n, Φ, 크누센 수",
+    "link": "chapters/vacuum.html#sim-ladder"
+  },
+  {
+    "id": "thinfilmbook/vacuum/sim-mb",
+    "bookId": "thinfilmbook",
+    "title": "맥스웰-볼츠만 속력 분포: 기체와 온도",
+    "link": "chapters/vacuum.html#sim-mb"
+  },
+  {
+    "id": "thinfilmbook/vacuum/sim-box",
+    "bookId": "thinfilmbook",
+    "title": "분자 당구대: 충돌이 만드는 분포와 자유 행로",
+    "link": "chapters/vacuum.html#sim-box"
+  },
+  {
+    "id": "thinfilmbook/vacuum/sim-knmap",
+    "bookId": "thinfilmbook",
+    "title": "크누센 지도: 압력 × 길이 평면 위의 공정들",
+    "link": "chapters/vacuum.html#sim-knmap"
+  },
+  {
+    "id": "thinfilmbook/vacuum/sim-flux",
+    "bookId": "thinfilmbook",
+    "title": "베이스 압력 → 막 불순물: 헤르츠-크누센 계산기",
+    "link": "chapters/vacuum.html#sim-flux"
+  },
+  {
+    "id": "thinfilmbook/vacuum/sim-cond",
+    "bookId": "thinfilmbook",
+    "title": "배관 컨덕턴스와 유효 펌핑 속도",
+    "link": "chapters/vacuum.html#sim-cond"
+  },
+  {
+    "id": "thinfilmbook/vacuum/sim-pd",
+    "bookId": "thinfilmbook",
+    "title": "펌프다운 곡선: 거친 배기 → 터보 → 탈기 한계",
+    "link": "chapters/vacuum.html#sim-pd"
+  },
+  {
+    "id": "thinfilmbook/vacuum/sim-purge",
+    "bookId": "thinfilmbook",
+    "title": "ALD 펄스·퍼지와 체류 시간",
+    "link": "chapters/vacuum.html#sim-purge"
+  },
+  {
+    "id": "thinfilmbook/vacuum/sim-diff",
+    "bookId": "thinfilmbook",
+    "title": "확산 계수와 페클레 수: 샤워헤드 간격을 건너는 시간",
+    "link": "chapters/vacuum.html#sim-diff"
+  },
+  {
+    "id": "plasmabook/applications/sim-pmap",
+    "bookId": "plasmabook",
+    "title": "공정 지도: 이온 에너지 × 이온 플럭스",
+    "link": "chapters/applications.html#sim-pmap"
+  },
+  {
+    "id": "plasmabook/applications/sim-recipe",
+    "bookId": "plasmabook",
+    "title": "레시피 탐색기: 손잡이 → 플라즈마 → 결과",
+    "link": "chapters/applications.html#sim-recipe"
+  },
+  {
+    "id": "plasmabook/applications/sim-window",
+    "bookId": "plasmabook",
+    "title": "공정 창 지도: 압력 × 바이어스 전력",
+    "link": "chapters/applications.html#sim-window"
+  },
+  {
+    "id": "plasmabook/applications/sim-clean",
+    "bookId": "plasmabook",
+    "title": "원격 NF₃ 챔버 세정 계산기",
+    "link": "chapters/applications.html#sim-clean"
+  },
+  {
+    "id": "plasmabook/applications/sim-match",
+    "bookId": "plasmabook",
+    "title": "챔버 매칭: N대의 nₑ와 V-I 서명",
+    "link": "chapters/applications.html#sim-match"
+  },
+  {
+    "id": "plasmabook/applications/sim-fdc",
+    "bookId": "plasmabook",
+    "title": "V-I·OES 신호의 다변량 FDC",
+    "link": "chapters/applications.html#sim-fdc"
+  },
+  {
+    "id": "plasmabook/applications/sim-season",
+    "bookId": "plasmabook",
+    "title": "속도 드리프트 · PM 주기 · 시즈닝",
+    "link": "chapters/applications.html#sim-season"
+  },
+  {
+    "id": "plasmabook/applications/sim-coo",
+    "bookId": "plasmabook",
+    "title": "웨이퍼당 플라즈마 비용(CoO) 계산기",
+    "link": "chapters/applications.html#sim-coo"
+  },
+  {
+    "id": "plasmabook/applications/sim-apc",
+    "bookId": "plasmabook",
+    "title": "런투런 제어와 가상 계측",
+    "link": "chapters/applications.html#sim-apc"
+  },
+  {
+    "id": "plasmabook/breakdown/sim-aval",
+    "bookId": "plasmabook",
+    "title": "전자 사태 몬테카를로: α가 증식을, γ가 되먹임을",
+    "link": "chapters/breakdown.html#sim-aval"
+  },
+  {
+    "id": "plasmabook/breakdown/sim-alpha",
+    "bookId": "plasmabook",
+    "title": "α/p와 이온화 효율 η: 기체 비교",
+    "link": "chapters/breakdown.html#sim-alpha"
+  },
+  {
+    "id": "plasmabook/breakdown/sim-amp",
+    "bookId": "plasmabook",
+    "title": "타운센드 전류 증폭: 개시 전압에서 발산한다",
+    "link": "chapters/breakdown.html#sim-amp"
+  },
+  {
+    "id": "plasmabook/breakdown/sim-paschen",
+    "bookId": "plasmabook",
+    "title": "파셴 곡선 계산기: 기체 · 음극 재료 · 장비 조건",
+    "link": "chapters/breakdown.html#sim-paschen"
+  },
+  {
+    "id": "plasmabook/breakdown/sim-iv",
+    "bookId": "plasmabook",
+    "title": "부하선 시뮬레이터: 전원 전압과 안정 저항이 동작점을 고른다",
+    "link": "chapters/breakdown.html#sim-iv"
+  },
+  {
+    "id": "plasmabook/breakdown/sim-glow",
+    "bookId": "plasmabook",
+    "title": "직류 글로 구조: 음극 강하 이론과 양광주 균형 (Ar)",
+    "link": "chapters/breakdown.html#sim-glow"
+  },
+  {
+    "id": "plasmabook/breakdown/sim-rf",
+    "bookId": "plasmabook",
+    "title": "RF 점화 곡선: 주파수 · 간격 · 압력 (Ar)",
+    "link": "chapters/breakdown.html#sim-rf"
+  },
+  {
+    "id": "plasmabook/breakdown/sim-hollow",
+    "bookId": "plasmabook",
+    "title": "진자 전자 몬테카를로: 할로우 vs 평판 (Ar)",
+    "link": "chapters/breakdown.html#sim-hollow"
+  },
+  {
+    "id": "plasmabook/breakdown/sim-mag",
+    "bookId": "plasmabook",
+    "title": "마그네트론 전자 궤적: 자기장이 이온화 수를 늘린다",
+    "link": "chapters/breakdown.html#sim-mag"
+  },
+  {
+    "id": "plasmabook/ccp/sim-circuit",
+    "bookId": "plasmabook",
+    "title": "균질 CCP 등가 회로 값 계산기",
+    "link": "chapters/ccp.html#sim-circuit"
+  },
+  {
+    "id": "plasmabook/ccp/sim-osc",
+    "bookId": "plasmabook",
+    "title": "출렁이는 두 시스와 페르미 가열 입자 계산",
+    "link": "chapters/ccp.html#sim-osc"
+  },
+  {
+    "id": "plasmabook/ccp/sim-heat",
+    "bookId": "plasmabook",
+    "title": "저항 가열 vs 확률 가열: 압력·주파수 스케일링",
+    "link": "chapters/ccp.html#sim-heat"
+  },
+  {
+    "id": "plasmabook/ccp/sim-scale",
+    "bookId": "plasmabook",
+    "title": "균질 CCP + 전역 모델: 손잡이 → nₑ·V̄·전력 분배",
+    "link": "chapters/ccp.html#sim-scale"
+  },
+  {
+    "id": "plasmabook/ccp/sim-gamma",
+    "bookId": "plasmabook",
+    "title": "α → γ 전환: 2차 전자 증배와 밀도",
+    "link": "chapters/ccp.html#sim-gamma"
+  },
+  {
+    "id": "plasmabook/ccp/sim-dual",
+    "bookId": "plasmabook",
+    "title": "이중 주파수 CCP: HF·LF 전력 → 밀도·IEDF",
+    "link": "chapters/ccp.html#sim-dual"
+  },
+  {
+    "id": "plasmabook/ccp/sim-vhf",
+    "bookId": "plasmabook",
+    "title": "13.56 / 60 / 100 / 162 MHz 반지름 분포",
+    "link": "chapters/ccp.html#sim-vhf"
+  },
+  {
+    "id": "plasmabook/ccp/sim-bias",
+    "bookId": "plasmabook",
+    "title": "면적비 → 자기 바이어스와 순간 시스 전압",
+    "link": "chapters/ccp.html#sim-bias"
+  },
+  {
+    "id": "plasmabook/ccp/sim-3d",
+    "bookId": "plasmabook",
+    "title": "PL-300 CP 모듈: 숨 쉬는 시스와 이온 가속",
+    "link": "chapters/ccp.html#sim-3d"
+  },
+  {
+    "id": "plasmabook/chemistry/sim-kdiss",
+    "bookId": "plasmabook",
+    "title": "해리 속도 계수 k_diss(Tₑ): 맥스웰 적분과 아레니우스 맞춤",
+    "link": "chapters/chemistry.html#sim-kdiss"
+  },
+  {
+    "id": "plasmabook/chemistry/sim-balance",
+    "bookId": "plasmabook",
+    "title": "래디컬 밀도 계산기: 체류 시간·벽 재결합·해리율",
+    "link": "chapters/chemistry.html#sim-balance"
+  },
+  {
+    "id": "plasmabook/chemistry/sim-transient",
+    "bookId": "plasmabook",
+    "title": "래디컬 켜짐·꺼짐: 시간 의존 수지 ODE",
+    "link": "chapters/chemistry.html#sim-transient"
+  },
+  {
+    "id": "plasmabook/chemistry/sim-flux",
+    "bookId": "plasmabook",
+    "title": "몬테카를로로 세는 플럭스: n v̄/4 대 n u_B",
+    "link": "chapters/chemistry.html#sim-flux"
+  },
+  {
+    "id": "plasmabook/chemistry/sim-cf4o2",
+    "bookId": "plasmabook",
+    "title": "CF₄/O₂ 반응 네트워크의 정상 상태 (교육용 정성 모델)",
+    "link": "chapters/chemistry.html#sim-cf4o2"
+  },
+  {
+    "id": "plasmabook/chemistry/sim-cl2",
+    "bookId": "plasmabook",
+    "title": "Cl₂ ICP: 전력·압력·벽이 정하는 Cl 밀도와 Γ_Cl/Γᵢ",
+    "link": "chapters/chemistry.html#sim-cl2"
+  },
+  {
+    "id": "plasmabook/chemistry/sim-sih4",
+    "bookId": "plasmabook",
+    "title": "SiH₄ PECVD 래디컬 네트워크: SiH₃ 영역과 파우더 위험",
+    "link": "chapters/chemistry.html#sim-sih4"
+  },
+  {
+    "id": "plasmabook/chemistry/sim-rps",
+    "bookId": "plasmabook",
+    "title": "NF₃ 원격 플라즈마: 해리 → 수송관 손실 → 챔버 세정 속도",
+    "link": "chapters/chemistry.html#sim-rps"
+  },
+  {
+    "id": "plasmabook/chemistry/sim-tgas",
+    "bookId": "plasmabook",
+    "title": "기체 가열: 온도 분포와 밀도·반응 속도 변화",
+    "link": "chapters/chemistry.html#sim-tgas"
+  },
+  {
+    "id": "plasmabook/chemistry/sim-dust",
+    "bookId": "plasmabook",
+    "title": "먼지 입자: OML 대전과 힘의 균형",
+    "link": "chapters/chemistry.html#sim-dust"
+  },
+  {
+    "id": "plasmabook/collisions/sim-mfp",
+    "bookId": "plasmabook",
+    "title": "기체 속을 나는 전자: 자유 비행과 충돌",
+    "link": "chapters/collisions.html#sim-mfp"
+  },
+  {
+    "id": "plasmabook/collisions/sim-nu",
+    "bookId": "plasmabook",
+    "title": "압력 손잡이와 충돌 주파수: νₘ, ν_iz, νᵢ와 RF 주파수",
+    "link": "chapters/collisions.html#sim-nu"
+  },
+  {
+    "id": "plasmabook/collisions/sim-xs",
+    "bookId": "plasmabook",
+    "title": "단면적 탐색기: 기체별 과정과 문턱",
+    "link": "chapters/collisions.html#sim-xs"
+  },
+  {
+    "id": "plasmabook/collisions/sim-transfer",
+    "bookId": "plasmabook",
+    "title": "강체 충돌 실험대: 질량비와 충돌 변수",
+    "link": "chapters/collisions.html#sim-transfer"
+  },
+  {
+    "id": "plasmabook/collisions/sim-rate",
+    "bookId": "plasmabook",
+    "title": "k(Tₑ) 적분기: 단면적 × 맥스웰 분포",
+    "link": "chapters/collisions.html#sim-rate"
+  },
+  {
+    "id": "plasmabook/collisions/sim-tail",
+    "bookId": "plasmabook",
+    "title": "문턱 민감도: 꼬리의 비율과 dlnK/dlnTₑ",
+    "link": "chapters/collisions.html#sim-tail"
+  },
+  {
+    "id": "plasmabook/collisions/sim-ec",
+    "bookId": "plasmabook",
+    "title": "𝓔_c(Tₑ) 계산기: 이온 하나의 에너지 영수증",
+    "link": "chapters/collisions.html#sim-ec"
+  },
+  {
+    "id": "plasmabook/collisions/sim-mc",
+    "bookId": "plasmabook",
+    "title": "몬테카를로 전자 무리: E/N이 만드는 분포와 반응 속도",
+    "link": "chapters/collisions.html#sim-mc"
+  },
+  {
+    "id": "plasmabook/diagnostics/sim-iv",
+    "bookId": "plasmabook",
+    "title": "합성 I-V 발생기와 해석: Tₑ·V_f·V_p·n 되찾기",
+    "link": "chapters/diagnostics.html#sim-iv"
+  },
+  {
+    "id": "plasmabook/diagnostics/sim-dv",
+    "bookId": "plasmabook",
+    "title": "드루이베스테인 EEPF: 평활화 창과 잡음의 맞바꿈",
+    "link": "chapters/diagnostics.html#sim-dv"
+  },
+  {
+    "id": "plasmabook/diagnostics/sim-rc",
+    "bookId": "plasmabook",
+    "title": "RF 보상: 임피던스 분배와 문질러진 I-V",
+    "link": "chapters/diagnostics.html#sim-rc"
+  },
+  {
+    "id": "plasmabook/diagnostics/sim-oe",
+    "bookId": "plasmabook",
+    "title": "합성 발광 스펙트럼과 액티노메트리 오차",
+    "link": "chapters/diagnostics.html#sim-oe"
+  },
+  {
+    "id": "plasmabook/diagnostics/sim-vi",
+    "bookId": "plasmabook",
+    "title": "V-I 탐침: 위상 오차가 전력 오차로 커지는 이유",
+    "link": "chapters/diagnostics.html#sim-vi"
+  },
+  {
+    "id": "plasmabook/diagnostics/sim-hp",
+    "bookId": "plasmabook",
+    "title": "헤어핀 공진 탐침 계산기(시스 보정 포함)",
+    "link": "chapters/diagnostics.html#sim-hp"
+  },
+  {
+    "id": "plasmabook/diagnostics/sim-mw",
+    "bookId": "plasmabook",
+    "title": "마이크로파 간섭계: 현 적분, 무늬 세기, 아벨 역변환",
+    "link": "chapters/diagnostics.html#sim-mw"
+  },
+  {
+    "id": "plasmabook/diagnostics/sim-rf",
+    "bookId": "plasmabook",
+    "title": "RFEA: 수집 전류 미분으로 두 봉우리 IEDF 재기",
+    "link": "chapters/diagnostics.html#sim-rf"
+  },
+  {
+    "id": "plasmabook/diagnostics/sim-p3",
+    "bookId": "plasmabook",
+    "title": "IC 모듈 챔버 속 탐침 스캔과 균일도",
+    "link": "chapters/diagnostics.html#sim-p3"
+  },
+  {
+    "id": "plasmabook/eedf/sim-eepf",
+    "bookId": "plasmabook",
+    "title": "EEDF와 EEPF: 같은 분포, 다른 그래프",
+    "link": "chapters/eedf.html#sim-eepf"
+  },
+  {
+    "id": "plasmabook/eedf/sim-shape",
+    "bookId": "plasmabook",
+    "title": "일반 지수 분포: 모양 지수 x와 \"온도\"들",
+    "link": "chapters/eedf.html#sim-shape"
+  },
+  {
+    "id": "plasmabook/eedf/sim-bimax",
+    "bookId": "plasmabook",
+    "title": "두 온도 분포: 소수의 뜨거운 전자가 이온화를 맡는다",
+    "link": "chapters/eedf.html#sim-bimax"
+  },
+  {
+    "id": "plasmabook/eedf/sim-boltz",
+    "bookId": "plasmabook",
+    "title": "2항 볼츠만 풀이기: Ar 속 전자의 EEPF",
+    "link": "chapters/eedf.html#sim-boltz"
+  },
+  {
+    "id": "plasmabook/eedf/sim-sens",
+    "bookId": "plasmabook",
+    "title": "반응 속도 민감도: 평균 에너지는 같고 꼬리만 다를 때",
+    "link": "chapters/eedf.html#sim-sens"
+  },
+  {
+    "id": "plasmabook/eedf/sim-ee",
+    "bookId": "plasmabook",
+    "title": "전자-전자 충돌과 맥스웰화: 이온화도 손잡이",
+    "link": "chapters/eedf.html#sim-ee"
+  },
+  {
+    "id": "plasmabook/eedf/sim-nonlocal",
+    "bookId": "plasmabook",
+    "title": "비국소 EEPF: 위치마다 잘라 보는 하나의 분포",
+    "link": "chapters/eedf.html#sim-nonlocal"
+  },
+  {
+    "id": "plasmabook/global/sim-hfac",
+    "bookId": "plasmabook",
+    "title": "가장자리 비 h_L·h_R와 실효 길이 d_eff",
+    "link": "chapters/global.html#sim-hfac"
+  },
+  {
+    "id": "plasmabook/global/sim-ec",
+    "bookId": "plasmabook",
+    "title": "이온당 손실 에너지 𝓔_T 분해 (Ar 반응 속도 적분)",
+    "link": "chapters/global.html#sim-ec"
+  },
+  {
+    "id": "plasmabook/global/sim-gm",
+    "bookId": "plasmabook",
+    "title": "전역 모델: 압력·전력·크기·질량 → Tₑ, n₀, Γᵢ",
+    "link": "chapters/global.html#sim-gm"
+  },
+  {
+    "id": "plasmabook/global/sim-scale",
+    "bookId": "plasmabook",
+    "title": "스케일링 그래프: Tₑ–압력, n₀–전력",
+    "link": "chapters/global.html#sim-scale"
+  },
+  {
+    "id": "plasmabook/global/sim-knob",
+    "bookId": "plasmabook",
+    "title": "조건 → 결과: 손잡이 하나를 두 배로",
+    "link": "chapters/global.html#sim-knob"
+  },
+  {
+    "id": "plasmabook/global/sim-eneg",
+    "bookId": "plasmabook",
+    "title": "전기 음성 전역 모델: O₂ · Cl₂ ICP",
+    "link": "chapters/global.html#sim-eneg"
+  },
+  {
+    "id": "plasmabook/global/sim-mix",
+    "bookId": "plasmabook",
+    "title": "He/Ar 혼합 전역 모델: 희석과 페닝",
+    "link": "chapters/global.html#sim-mix"
+  },
+  {
+    "id": "plasmabook/global/sim-tdep",
+    "bookId": "plasmabook",
+    "title": "시간 의존 전역 모델: n(t), Tₑ(t) 적분",
+    "link": "chapters/global.html#sim-tdep"
+  },
+  {
+    "id": "plasmabook/glossary/sim-cm",
+    "bookId": "plasmabook",
+    "title": "장 사이 공유 용어 네트워크",
+    "link": "chapters/glossary.html#sim-cm"
+  },
+  {
+    "id": "plasmabook/glossary/sim-fc",
+    "bookId": "plasmabook",
+    "title": "플래시 카드",
+    "link": "chapters/glossary.html#sim-fc"
+  },
+  {
+    "id": "plasmabook/icp/sim-field",
+    "bookId": "plasmabook",
+    "title": "평면 나선 코일의 유도 전기장 지도 (타원 적분 비오-사바르)",
+    "link": "chapters/icp.html#sim-field"
+  },
+  {
+    "id": "plasmabook/icp/sim-skin",
+    "bookId": "plasmabook",
+    "title": "표피 깊이 계산기: 복소 유전율 · 충돌 · 무충돌",
+    "link": "chapters/icp.html#sim-skin"
+  },
+  {
+    "id": "plasmabook/icp/sim-decay",
+    "bookId": "plasmabook",
+    "title": "플라즈마 속으로 스며드는 RF 장: 감쇠·위상·흡수",
+    "link": "chapters/icp.html#sim-decay"
+  },
+  {
+    "id": "plasmabook/icp/sim-tx",
+    "bookId": "plasmabook",
+    "title": "변압기 모델: 반사 저항 R s 와 전력 전달 효율 η",
+    "link": "chapters/icp.html#sim-tx"
+  },
+  {
+    "id": "plasmabook/icp/sim-eh",
+    "bookId": "plasmabook",
+    "title": "전력 램프와 E–H 히스테리시스 (전력 균형 근 찾기)",
+    "link": "chapters/icp.html#sim-eh"
+  },
+  {
+    "id": "plasmabook/icp/sim-shield",
+    "bookId": "plasmabook",
+    "title": "코일 전압 분포와 창 스퍼터 이온 에너지",
+    "link": "chapters/icp.html#sim-shield"
+  },
+  {
+    "id": "plasmabook/icp/sim-unif",
+    "bookId": "plasmabook",
+    "title": "코일 배치 → 가열 → 확산 → 웨이퍼 이온 플럭스 균일도",
+    "link": "chapters/icp.html#sim-unif"
+  },
+  {
+    "id": "plasmabook/icp/sim-bias",
+    "bookId": "plasmabook",
+    "title": "소스 × 바이어스: 이온 플럭스, 시스 전압, IEDF",
+    "link": "chapters/icp.html#sim-bias"
+  },
+  {
+    "id": "plasmabook/icp/sim-ecr",
+    "bookId": "plasmabook",
+    "title": "ECR 공명면과 마이크로파 차단·표면파 밀도",
+    "link": "chapters/icp.html#sim-ecr"
+  },
+  {
+    "id": "plasmabook/icp/sim-3d",
+    "bookId": "plasmabook",
+    "title": "PL-300 IC 모듈: 코일 · 유도 전류 고리 · 도넛 글로 · 바이어스",
+    "link": "chapters/icp.html#sim-3d"
+  },
+  {
+    "id": "plasmabook/modeling/sim-sg",
+    "bookId": "plasmabook",
+    "title": "이산화 비교: 중앙 차분 · 바람 거슬러 · 샤페터-거멜",
+    "link": "chapters/modeling.html#sim-sg"
+  },
+  {
+    "id": "plasmabook/modeling/sim-dd",
+    "bookId": "plasmabook",
+    "title": "1D 표류-확산 + 포아송: RF 방전이 시스를 만드는 과정",
+    "link": "chapters/modeling.html#sim-dd"
+  },
+  {
+    "id": "plasmabook/modeling/sim-lm",
+    "bookId": "plasmabook",
+    "title": "LFA vs LMEA: 음극 시스 뒤 이온화 원천",
+    "link": "chapters/modeling.html#sim-lm"
+  },
+  {
+    "id": "plasmabook/modeling/sim-cy",
+    "bookId": "plasmabook",
+    "title": "PIC 한 사이클 따라가기(입자 12개, 격자 8칸)",
+    "link": "chapters/modeling.html#sim-cy"
+  },
+  {
+    "id": "plasmabook/modeling/sim-pc",
+    "bookId": "plasmabook",
+    "title": "1D 정전 PIC: 플라즈마 진동, 이류 불안정, 수치 가열",
+    "link": "chapters/modeling.html#sim-pc"
+  },
+  {
+    "id": "plasmabook/modeling/sim-hy",
+    "bookId": "plasmabook",
+    "title": "2D ICP 하이브리드 반복: 표피 흡수 ↔ 양극성 확산",
+    "link": "chapters/modeling.html#sim-hy"
+  },
+  {
+    "id": "plasmabook/modeling/sim-va",
+    "bookId": "plasmabook",
+    "title": "모델 교정: 탐침 지름 분포에 확산 모델 맞추기",
+    "link": "chapters/modeling.html#sim-va"
+  },
+  {
+    "id": "plasmabook/modeling/sim-co",
+    "bookId": "plasmabook",
+    "title": "계산 비용 추정기: 격자 × 입자 × 시간 단계",
+    "link": "chapters/modeling.html#sim-co"
+  },
+  {
+    "id": "plasmabook/overview/sim-map",
+    "bookId": "plasmabook",
+    "title": "플라즈마 지도: 데바이 길이·플라즈마 주파수 등고선",
+    "link": "chapters/overview.html#sim-map"
+  },
+  {
+    "id": "plasmabook/overview/sim-noneq",
+    "bookId": "plasmabook",
+    "title": "전자 에너지 균형: E/N이 Tₑ와 Tᵢ를 정한다",
+    "link": "chapters/overview.html#sim-noneq"
+  },
+  {
+    "id": "plasmabook/overview/sim-chem",
+    "bookId": "plasmabook",
+    "title": "열로 할까, 전자로 할까: 같은 래디컬을 얻는 기체 온도",
+    "link": "chapters/overview.html#sim-chem"
+  },
+  {
+    "id": "plasmabook/overview/sim-aniso",
+    "bookId": "plasmabook",
+    "title": "이방성 식각 장난감 모델: 래디컬과 이온의 몬테카를로",
+    "link": "chapters/overview.html#sim-aniso"
+  },
+  {
+    "id": "plasmabook/overview/sim-sheathmc",
+    "bookId": "plasmabook",
+    "title": "왜 낮은 압력인가: 시스를 건너는 이온의 몬테카를로",
+    "link": "chapters/overview.html#sim-sheathmc"
+  },
+  {
+    "id": "plasmabook/overview/sim-tool",
+    "bookId": "plasmabook",
+    "title": "플라즈마 장비 블록 다이어그램: 손잡이 → 플라즈마 변수",
+    "link": "chapters/overview.html#sim-tool"
+  },
+  {
+    "id": "plasmabook/overview/sim-chamber",
+    "bookId": "plasmabook",
+    "title": "3D ICP 챔버: 코일·창·글로·웨이퍼·입자",
+    "link": "chapters/overview.html#sim-chamber"
+  },
+  {
+    "id": "plasmabook/pulsed/sim-pw",
+    "bookId": "plasmabook",
+    "title": "펄스 계산기와 영역 지도: t_off를 τ_T·τ_n과 비교",
+    "link": "chapters/pulsed.html#sim-pw"
+  },
+  {
+    "id": "plasmabook/pulsed/sim-gm",
+    "bookId": "plasmabook",
+    "title": "펄스 Ar ICP 전역 모델: nₑ(t), Tₑ(t), 시간 평균 vs 피크",
+    "link": "chapters/pulsed.html#sim-gm"
+  },
+  {
+    "id": "plasmabook/pulsed/sim-os",
+    "bookId": "plasmabook",
+    "title": "꺼짐 시간과 재점화 오버슈트",
+    "link": "chapters/pulsed.html#sim-os"
+  },
+  {
+    "id": "plasmabook/pulsed/sim-en",
+    "bookId": "plasmabook",
+    "title": "전기 음성 잔광: 전자 → 음이온, 음이온 벽 플럭스",
+    "link": "chapters/pulsed.html#sim-en"
+  },
+  {
+    "id": "plasmabook/pulsed/sim-sync",
+    "bookId": "plasmabook",
+    "title": "소스·바이어스 타이밍과 이온 에너지·플럭스",
+    "link": "chapters/pulsed.html#sim-sync"
+  },
+  {
+    "id": "plasmabook/pulsed/sim-hip",
+    "bookId": "plasmabook",
+    "title": "HiPIMS 계산기: 순간 전력 밀도 → 금속 이온화와 증착 속도",
+    "link": "chapters/pulsed.html#sim-hip"
+  },
+  {
+    "id": "plasmabook/pulsed/sim-iedf",
+    "bookId": "plasmabook",
+    "title": "바이어스 파형 → 시스 전압 히스토그램 → IEDF",
+    "link": "chapters/pulsed.html#sim-iedf"
+  },
+  {
+    "id": "plasmabook/pulsed/sim-mt",
+    "bookId": "plasmabook",
+    "title": "펄스 정합: 반사 전력 스파이크와 주파수 튜닝",
+    "link": "chapters/pulsed.html#sim-mt"
+  },
+  {
+    "id": "plasmabook/rf/sim-wave",
+    "bookId": "plasmabook",
+    "title": "선로 위의 진행파·반사파·정상파",
+    "link": "chapters/rf.html#sim-wave"
+  },
+  {
+    "id": "plasmabook/rf/sim-gamma",
+    "bookId": "plasmabook",
+    "title": "반사 계수 계기판: 순방향·반사·전달 전력과 폴드백",
+    "link": "chapters/rf.html#sim-gamma"
+  },
+  {
+    "id": "plasmabook/rf/sim-smith",
+    "bookId": "plasmabook",
+    "title": "스미스 차트: 부하 찍기와 선로 따라 돌기",
+    "link": "chapters/rf.html#sim-smith"
+  },
+  {
+    "id": "plasmabook/rf/sim-load",
+    "bookId": "plasmabook",
+    "title": "플라즈마 부하 임피던스: 전력·압력을 바꾸면",
+    "link": "chapters/rf.html#sim-load"
+  },
+  {
+    "id": "plasmabook/rf/sim-lmatch",
+    "bookId": "plasmabook",
+    "title": "L형 정합 설계 계산기: 소자 값·경로·대역폭",
+    "link": "chapters/rf.html#sim-lmatch"
+  },
+  {
+    "id": "plasmabook/rf/sim-auto",
+    "bookId": "plasmabook",
+    "title": "자동 정합 vs 주파수 튜닝: 점화 순간부터",
+    "link": "chapters/rf.html#sim-auto"
+  },
+  {
+    "id": "plasmabook/rf/sim-eff",
+    "bookId": "plasmabook",
+    "title": "전력은 어디로 가나: 발생기에서 플라즈마까지",
+    "link": "chapters/rf.html#sim-eff"
+  },
+  {
+    "id": "plasmabook/rf/sim-imd",
+    "bookId": "plasmabook",
+    "title": "비선형 시스의 전압 스펙트럼 (DFT)",
+    "link": "chapters/rf.html#sim-imd"
+  },
+  {
+    "id": "plasmabook/rf/sim-arc",
+    "bookId": "plasmabook",
+    "title": "아크 감지: 지연 µs가 에너지 mJ로",
+    "link": "chapters/rf.html#sim-arc"
+  },
+  {
+    "id": "plasmabook/rf/sim-vi",
+    "bookId": "plasmabook",
+    "title": "V-I 탐침: |V|·|I|·φ에서 임피던스와 전력",
+    "link": "chapters/rf.html#sim-vi"
+  },
+  {
+    "id": "plasmabook/scales/sim-qn",
+    "bookId": "plasmabook",
+    "title": "전하 불균형 δ가 만드는 전위: 준중성의 크기",
+    "link": "chapters/scales.html#sim-qn"
+  },
+  {
+    "id": "plasmabook/scales/sim-shield",
+    "bookId": "plasmabook",
+    "title": "1D 포아송-볼츠만 풀이: 비선형 차폐 vs 선형 지수",
+    "link": "chapters/scales.html#sim-shield"
+  },
+  {
+    "id": "plasmabook/scales/sim-osc",
+    "bookId": "plasmabook",
+    "title": "전자 층 진동: 플라즈마 주파수, 보옴-그로스, 충돌 감쇠",
+    "link": "chapters/scales.html#sim-osc"
+  },
+  {
+    "id": "plasmabook/scales/sim-ladder",
+    "bookId": "plasmabook",
+    "title": "주파수 사다리: 누가 RF를 따라가는가",
+    "link": "chapters/scales.html#sim-ladder"
+  },
+  {
+    "id": "plasmabook/scales/sim-nd",
+    "bookId": "plasmabook",
+    "title": "데바이 구 안의 전자 수와 결합 파라미터",
+    "link": "chapters/scales.html#sim-nd"
+  },
+  {
+    "id": "plasmabook/scales/sim-saha",
+    "bookId": "plasmabook",
+    "title": "사하 평형 전리도 vs 공정 플라즈마",
+    "link": "chapters/scales.html#sim-saha"
+  },
+  {
+    "id": "plasmabook/scales/sim-cutoff",
+    "bookId": "plasmabook",
+    "title": "밀도 경사로 들어가는 전자기파: 차단과 표피 깊이",
+    "link": "chapters/scales.html#sim-cutoff"
+  },
+  {
+    "id": "plasmabook/scales/sim-calc",
+    "bookId": "plasmabook",
+    "title": "척도 계산기: nₑ, Tₑ, p, L → 플라즈마인가?",
+    "link": "chapters/scales.html#sim-calc"
+  },
+  {
+    "id": "plasmabook/sheath/sim-float",
+    "bookId": "plasmabook",
+    "title": "부유 전위 계산기: 전자·이온 전류 교차점",
+    "link": "chapters/sheath.html#sim-float"
+  },
+  {
+    "id": "plasmabook/sheath/sim-sheq",
+    "bookId": "plasmabook",
+    "title": "무충돌 시스 방정식 수치 풀이 (RK4)",
+    "link": "chapters/sheath.html#sim-sheq"
+  },
+  {
+    "id": "plasmabook/sheath/sim-pre",
+    "bookId": "plasmabook",
+    "title": "예비 시스 유체 모델: 충돌이 가장자리 밀도를 깎는다",
+    "link": "chapters/sheath.html#sim-pre"
+  },
+  {
+    "id": "plasmabook/sheath/sim-child",
+    "bookId": "plasmabook",
+    "title": "시스 두께: 행렬 · 차일드 · 충돌 시스",
+    "link": "chapters/sheath.html#sim-child"
+  },
+  {
+    "id": "plasmabook/sheath/sim-traj",
+    "bookId": "plasmabook",
+    "title": "시스 안 이온 궤적: 차일드 전기장 + 전하 교환 몬테카를로",
+    "link": "chapters/sheath.html#sim-traj"
+  },
+  {
+    "id": "plasmabook/sheath/sim-rect",
+    "bookId": "plasmabook",
+    "title": "블로킹 커패시터 충전과 자기 바이어스 형성",
+    "link": "chapters/sheath.html#sim-rect"
+  },
+  {
+    "id": "plasmabook/sheath/sim-area",
+    "bookId": "plasmabook",
+    "title": "면적비 법칙: 자기 바이어스와 두 시스의 이온 에너지",
+    "link": "chapters/sheath.html#sim-area"
+  },
+  {
+    "id": "plasmabook/sheath/sim-iedf",
+    "bookId": "plasmabook",
+    "title": "IEDF 계산기: RF 시스를 건너는 이온 1500개 적분",
+    "link": "chapters/sheath.html#sim-iedf"
+  },
+  {
+    "id": "plasmabook/surface/sim-heat",
+    "bookId": "plasmabook",
+    "title": "He 후면 냉각과 웨이퍼 온도",
+    "link": "chapters/surface.html#sim-heat"
+  },
+  {
+    "id": "plasmabook/surface/sim-sputter",
+    "bookId": "plasmabook",
+    "title": "야마무라형 스퍼터 수율: Ar → Si / SiO₂ / Cu",
+    "link": "chapters/surface.html#sim-sputter"
+  },
+  {
+    "id": "plasmabook/surface/sim-synergy",
+    "bookId": "plasmabook",
+    "title": "피복률 모델: 식각 속도 vs Γₙ/Γᵢ",
+    "link": "chapters/surface.html#sim-synergy"
+  },
+  {
+    "id": "plasmabook/surface/sim-cw",
+    "bookId": "plasmabook",
+    "title": "코번-윈터스 실험 다시 하기",
+    "link": "chapters/surface.html#sim-cw"
+  },
+  {
+    "id": "plasmabook/surface/sim-see",
+    "bookId": "plasmabook",
+    "title": "γ(이온, 표면, 에너지)와 파셴 곡선",
+    "link": "chapters/surface.html#sim-see"
+  },
+  {
+    "id": "plasmabook/surface/sim-season",
+    "bookId": "plasmabook",
+    "title": "첫 웨이퍼 효과와 시즈닝 전략",
+    "link": "chapters/surface.html#sim-season"
+  },
+  {
+    "id": "plasmabook/surface/sim-antenna",
+    "bookId": "plasmabook",
+    "title": "안테나 대전: 파울러-노드하임 전류와 주입 전하",
+    "link": "chapters/surface.html#sim-antenna"
+  },
+  {
+    "id": "plasmabook/surface/sim-shade",
+    "bookId": "plasmabook",
+    "title": "전자 그늘: 홈 바닥 대전 전위와 입자 궤적",
+    "link": "chapters/surface.html#sim-shade"
+  },
+  {
+    "id": "plasmabook/surface/sim-vuv",
+    "bookId": "plasmabook",
+    "title": "VUV 흡수 프로파일과 갇힌 전하",
+    "link": "chapters/surface.html#sim-vuv"
+  },
+  {
+    "id": "plasmabook/surface/sim-map",
+    "bookId": "plasmabook",
+    "title": "손상 지도: 바이어스 전력 × 압력",
+    "link": "chapters/surface.html#sim-map"
+  },
+  {
+    "id": "plasmabook/transport/sim-drift",
+    "bookId": "plasmabook",
+    "title": "표류-확산 몬테카를로: 구름의 중심은 μE로, 폭은 √(2Dt)로",
+    "link": "chapters/transport.html#sim-drift"
+  },
+  {
+    "id": "plasmabook/transport/sim-mob",
+    "bookId": "plasmabook",
+    "title": "Ar 플라즈마의 이동도·확산 계수 vs 압력",
+    "link": "chapters/transport.html#sim-mob"
+  },
+  {
+    "id": "plasmabook/transport/sim-amb",
+    "bookId": "plasmabook",
+    "title": "양극성 확산 풀이: 전자·이온 표류-확산 + 포아송 (1D)",
+    "link": "chapters/transport.html#sim-amb"
+  },
+  {
+    "id": "plasmabook/transport/sim-mode",
+    "bookId": "plasmabook",
+    "title": "고유모드 풀이: 어떤 초기 모양도 기본 모드로 간다",
+    "link": "chapters/transport.html#sim-mode"
+  },
+  {
+    "id": "plasmabook/transport/sim-lam",
+    "bookId": "plasmabook",
+    "title": "확산 손실 시간과 쇼트키 Tₑ: 챔버 크기·압력·기체",
+    "link": "chapters/transport.html#sim-lam"
+  },
+  {
+    "id": "plasmabook/transport/sim-edge",
+    "bookId": "plasmabook",
+    "title": "h_L · h_R · d_eff 계산기 (PL-300 IC 챔버)",
+    "link": "chapters/transport.html#sim-edge"
+  },
+  {
+    "id": "plasmabook/transport/sim-larmor",
+    "bookId": "plasmabook",
+    "title": "자기장 가로 확산 몬테카를로 + 라모어 계산기",
+    "link": "chapters/transport.html#sim-larmor"
   },
   {
     "id": "cmpbook/advanced/sim-hb-anneal",
