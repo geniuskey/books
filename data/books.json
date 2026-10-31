@@ -872,23 +872,6 @@
       "checkout": "semi-books/display"
     },
     {
-      "id": "gpubook",
-      "code": "GPU",
-      "title": "GPUBook",
-      "subtitle": "GPU 구조와 병렬 컴퓨팅",
-      "description": "스레드와 워프, SIMT 실행, 메모리 계층과 데이터 이동. 그래픽과 AI 연산이 GPU에서 실행되는 과정을 따라가며 병렬 처리와 대역폭의 병목을 비교합니다.",
-      "field": "semiconductor",
-      "status": "planned",
-      "phase": 2,
-      "ideas": [
-        "워프 실행과 분기 발산",
-        "메모리 접근 병합과 공유 메모리",
-        "행렬곱 타일링과 데이터 재사용",
-        "연산량·메모리 대역폭 루프라인"
-      ],
-      "stage": "device"
-    },
-    {
       "id": "powerbook",
       "code": "PWR",
       "title": "PowerBook",
@@ -970,6 +953,22 @@
         }
       ],
       "field": "computing"
+    },
+    {
+      "id": "gpubook",
+      "code": "GPU",
+      "title": "GPUBook",
+      "subtitle": "GPU 구조와 병렬 컴퓨팅",
+      "description": "스레드와 워프, SIMT 실행, 메모리 계층과 데이터 이동. 그래픽과 AI 연산이 GPU에서 실행되는 과정을 따라가며 병렬 처리와 대역폭의 병목을 비교합니다.",
+      "field": "computing",
+      "status": "planned",
+      "phase": 2,
+      "ideas": [
+        "워프 실행과 분기 발산",
+        "메모리 접근 병합과 공유 메모리",
+        "행렬곱 타일링과 데이터 재사용",
+        "연산량·메모리 대역폭 루프라인"
+      ]
     },
     {
       "id": "osbook",

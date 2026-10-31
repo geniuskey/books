@@ -40,7 +40,6 @@ window.FIELD_MAPS = {
       ["digitalbook", "designbook", "논리 회로에서 칩 설계로"],
       ["designbook", "socbook", "설계한 블록을 시스템으로 통합하기"],
       ["socbook", "memorybook", "캐시·DRAM 컨트롤러와 메모리 타이밍·대역폭"],
-      ["socbook", "gpubook", "SoC의 GPU 블록에서 SIMT 실행·병렬 처리로"],
       ["analogbook", "sensorbook", "센서 신호를 읽는 회로"],
       ["processbook", "lithobook", "회로 패턴을 웨이퍼에 옮기기"],
       ["processbook", "etchbook", "필요한 형상을 깎아 만들기"],
@@ -97,7 +96,6 @@ window.FIELD_MAPS = {
       ["testbook", "yieldbook", "웨이퍼 테스트·빈 분류 결과를 수율과 맵으로 해석하기"],
       ["memorybook", "testbook", "메모리 BIST·불량 검출·신뢰성 평가"],
       ["memorybook", "etchbook", "3D NAND의 깊은 채널 홀과 고종횡비 식각"],
-      ["memorybook", "gpubook", "병렬 연산을 제한하는 메모리 계층과 대역폭"],
       ["socbook", "sensorbook", "센서의 RAW 신호를 SoC의 ISP에서 처리하기"],
       ["socbook", "analogbook", "SoC의 클럭·전원에 쓰이는 PLL·LDO"],
     ],
@@ -117,6 +115,8 @@ window.FIELD_MAPS = {
       ["databasebook", "axbook", "업무 데이터의 저장 구조와 기준정보·데이터 정리"],
       ["databasebook", "aibook", "검색·인덱스와 RAG의 지식 검색"],
       ["networkbook", "aibook", "데이터센터 네트워크와 분산 학습의 통신 병목"],
+      ["computerbook", "gpubook", "컴퓨터의 GPU 기초에서 워프·SIMT·메모리 병목으로"],
+      ["gpubook", "aibook", "GPU의 병렬 실행·메모리 대역폭과 신경망 학습·추론"],
     ],
     "groups": [
       [
@@ -125,6 +125,7 @@ window.FIELD_MAPS = {
         "하드웨어와 운영체제가 프로그램을 실행하는 원리",
         [
           "computerbook",
+          "gpubook",
           "osbook"
         ]
       ],
@@ -351,14 +352,14 @@ window.FIELD_MAP_CROSS_LINKS = [
   ["fluid-mechanics", "infrabook", "관 유동·압력 손실과 팹의 공조·용수 공급"],
   ["electricbook", "analogbook", "전압·전류·커패시터의 기초에서 증폭·필터 회로로"],
   ["powerbook", "carbook", "전력 반도체와 전기차의 인버터·모터 구동"],
-  ["gpubook", "computerbook", "컴퓨터의 GPU 기초에서 워프·SIMT·메모리 병목으로"],
+  ["socbook", "gpubook", "SoC의 GPU 블록에서 SIMT 실행·병렬 처리로"],
+  ["memorybook", "gpubook", "병렬 연산을 제한하는 메모리 계층과 대역폭"],
   ["socbook", "aibook", "SoC의 NPU와 신경망 추론·양자화"],
   ["mathbook", "networkbook", "표본화·정보 이론과 통신 신호·대역폭"],
   ["mathbook", "electricbook", "복소수·미분방정식으로 이해하는 교류와 회로 응답"],
   ["computerbook", "digitalbook", "논리 게이트·순차 회로에서 CPU를 구성하는 회로로"],
   ["computerbook", "socbook", "CPU·캐시의 기초에서 SoC 내부 구조로"],
   ["computerbook", "memorybook", "메모리 계층·가상 메모리·저장장치와 실제 DRAM·SSD"],
-  ["gpubook", "aibook", "GPU의 병렬 실행·메모리 대역폭과 신경망 학습·추론"],
   ["memorybook", "aibook", "HBM·메모리 대역폭과 모델·KV 캐시의 메모리 요구량"],
   ["networkbook", "analogbook", "SerDes·통신 회로의 ADC·PLL·잡음"],
   ["networkbook", "opticsbook", "광섬유·실리콘 포토닉스와 빛의 전파·간섭"],
