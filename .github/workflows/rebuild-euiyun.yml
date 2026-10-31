@@ -1,0 +1,35 @@
+name: Rebuild euiyun.com after a catalog change
+
+# euiyun.com keeps a snapshot of data/books.json (home count, Projects card, /learn).
+# Once GitHub Pages has published a commit that changed the catalog, call the
+# euiyun Cloudflare Pages deploy hook so that snapshot is rebuilt from the live file.
+
+on:
+  workflow_run:
+    workflows: [pages-build-deployment]
+    types: [completed]
+  workflow_dispatch:
+
+jobs:
+  rebuild:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+          fetch-depth: 2
+      - name: Check whether the catalog changed
+        id: changed
+        run: |
+          if [ "${{ github.event_name }}" = workflow_dispatch ] || ! git diff --quiet HEAD~1 HEAD -- data/books.json; then
+            echo "catalog=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Call the euiyun deploy hook
+        if: steps.changed.outputs.catalog == 'true'
+        env:
+          HOOK: ${{ secrets.EUIYUN_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then echo "::warning::EUIYUN_DEPLOY_HOOK is not set; skipping."; exit 0; fi
+          curl -fsS -X POST "$HOOK" > /dev/null
+          echo "Triggered a euiyun.com rebuild."

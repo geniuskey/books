@@ -111,6 +111,7 @@ python3 -m http.server 8000   # → http://localhost:8000
 |---|---|
 | `id`, `code` | 저장소 이름, 웨이퍼 다이에 표시할 3글자 코드 (겹치지 않게) |
 | `title`, `subtitle`, `description` | 이름, 부제, 소개 |
+| `en` | 출간된 책의 영문 `title`·`description`. [euiyun.com](https://euiyun.com/en/learn) 영문 페이지가 빌드할 때 읽으므로 출간할 때 함께 채웁니다 |
 | `field`, `stage` | 분야 id, (단계가 있는 분야라면) 단계 id |
 | `status`, `phase` | 상태, 로드맵 단계 |
 | `ideas` | 집필 예정 책에서 만들고 싶은 시뮬레이터 |
