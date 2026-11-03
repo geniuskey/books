@@ -21,8 +21,13 @@ class Links(HTMLParser):
         self.links.extend(value for key, value in attrs if key in ('href', 'src') and value)
 
 
-def check_assets(path):
+VERSIONS = {}
+
+
+def check_assets(path, analytics=True):
     source = path.read_text()
+    for asset, version in re.findall(r'"(/(?:css|js)/[^"?]+)\?v=([^"]+)"', source):
+        VERSIONS.setdefault(asset, {}).setdefault(version, []).append(str(path.relative_to(ROOT)))
     parser = Links()
     parser.feed(source)
     route = '/' + str(path.parent.relative_to(ROOT)).strip('.') + '/'
@@ -34,13 +39,13 @@ def check_assets(path):
         if url.path.endswith('/'):
             target /= 'index.html'
         assert target.is_file(), f'{path}: missing {link}'
-    assert source.count('https://www.googletagmanager.com/gtag/js?id=G-LST8C5WL08') == 1, path
-    assert source.count("gtag('config', 'G-LST8C5WL08');") == 1, path
+    assert source.count('https://www.googletagmanager.com/gtag/js?id=G-LST8C5WL08') == analytics, path
+    assert source.count("gtag('config', 'G-LST8C5WL08');") == analytics, path
     assert 'static.cloudflareinsights.com/beacon.min.js' not in source, path
     return source
 
 
-admin = check_assets(ROOT / 'admin/index.html')
+admin = check_assets(ROOT / 'admin/index.html', analytics=False)
 assert 'name="robots" content="noindex"' in admin
 assert 'href="https://books.euiyun.com/admin/"' in admin
 assert 'id="feedback-admin"' in admin
@@ -99,6 +104,8 @@ aliases = json.loads((ROOT / 'data/books.json').read_text())['fieldAliases']
 for old, new in aliases.items():
     check_map_redirect(ROOT / 'field' / old / 'index.html', '?' + context.lstrip('&'), new)
     check_map_redirect(ROOT / 'field/index.html', '?f=' + old + context, new)
+for asset, versions in VERSIONS.items():
+    assert len(versions) == 1, f'{asset}: pages use different cache versions {versions}'
 sitemap = (ROOT / 'sitemap.xml').read_text()
 expected = {'https://books.euiyun.com' + (f'/{name}/' if name else '/') for name in PUBLIC}
 assert set(re.findall(r'<loc>(.*?)</loc>', sitemap)) == expected
