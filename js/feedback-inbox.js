@@ -36,11 +36,11 @@ function feedbackTime(value) {
   return time;
 }
 
-/* Public and authenticated inbox on the same feedback page. Credentials survive navigation within this tab until Google token expiry. */
+/* Public and authenticated inbox on the same feedback page. Admin credentials exist only on /admin/ and survive reloads of that tab until Google token expiry. */
 globalThis.FeedbackInbox = (() => {
   let refresh = () => {};
   let authHeaders = () => ({});
-  function start(config, catalog, { onUnavailable = () => {}, onSession = () => {} } = {}) {
+  function start(config, catalog, { admin = false, onUnavailable = () => {}, onSession = () => {} } = {}) {
     const $ = (id) => document.getElementById(id);
     const base = new URL(config.endpoint).origin;
     const books = new Map([...catalog.books, ...(catalog.sisterBooks || [])].map((book) => [book.id, book]));
@@ -325,7 +325,7 @@ globalThis.FeedbackInbox = (() => {
     });
     let googleLoaded = false;
     login.addEventListener('toggle', () => {
-      if (!login.open || googleLoaded) return;
+      if (!admin || !login.open || googleLoaded) return;
       if (!config.googleClientId) { $('admin-status').textContent = 'Google 로그인 설정을 준비 중입니다.'; return; }
       googleLoaded = true;
       const script = document.createElement('script');
@@ -369,7 +369,9 @@ globalThis.FeedbackInbox = (() => {
       } else if (saved) session(false);
       await refresh();
     }
-    restore();
+    // Public pages never read or keep the admin token; management happens only on /admin/.
+    if (admin) restore();
+    else { try { sessionStorage.removeItem(sessionKey); } catch {} refresh(); }
   }
   return { start, refresh: () => refresh(), authHeaders: () => authHeaders() };
 })();

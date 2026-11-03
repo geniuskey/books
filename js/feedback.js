@@ -98,7 +98,7 @@ EB.start("feedback", (data) => {
       const url = new URL(config.endpoint);
       if (url.protocol !== "https:" && !(url.protocol === "http:" && ["localhost", "127.0.0.1"].includes(url.hostname))) throw new Error();
       endpoint = url.href;
-      globalThis.FeedbackInbox?.start(config, data, { onUnavailable: showGitHubOnly, onSession });
+      globalThis.FeedbackInbox?.start(config, data, { admin: adminPage, onUnavailable: showGitHubOnly, onSession });
       if (adminPage) {
         document.getElementById("admin-login").open = true;
         if (location.hash === "#feedback-admin") adminPanel?.scrollIntoView();

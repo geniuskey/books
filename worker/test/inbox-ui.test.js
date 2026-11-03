@@ -12,7 +12,7 @@ class Element {
   replaceChildren(...children) { this.children = children; }
 }
 const tick = () => new Promise(resolve => setImmediate(resolve));
-async function setup({ deferAdmin = false, authorized = true, isAdmin = 0, reactionFetch, commentCount = 0, storage = new Map(), total = 42, ownerKey = "", deferMine = false } = {}) {
+async function setup({ deferAdmin = false, authorized = true, isAdmin = 0, reactionFetch, commentCount = 0, storage = new Map(), total = 42, ownerKey = "", deferMine = false, admin = true } = {}) {
   const nodes = new Map();
   const get = id => { if (!nodes.has(id)) nodes.set(id, new Element()); return nodes.get(id); };
   let callback, release, adminRequests = 0;
@@ -41,7 +41,7 @@ async function setup({ deferAdmin = false, authorized = true, isAdmin = 0, react
   const sessionStorage = { getItem: key => storage.get(key), setItem: (key, value) => storage.set(key, value), removeItem: key => storage.delete(key) };
   const context = vm.createContext({ FeedbackOwner: { headers: () => ownerKey ? { 'X-Feedback-Owner': ownerKey } : {} }, atob, sessionStorage, document: { getElementById: get, createElement: () => new Element(), head }, fetch, google, crypto, URL, URLSearchParams, AbortSignal, setTimeout: (fn, delay) => { timers.push({ fn, delay }); return timers.length; }, clearTimeout() {} });
   vm.runInContext(readFileSync(new URL('../../js/feedback-inbox.js', import.meta.url), 'utf8'), context);
-  context.FeedbackInbox.start({ endpoint: 'https://feedback.example/api/feedback', googleClientId: 'client' }, { books: [] });
+  context.FeedbackInbox.start({ endpoint: 'https://feedback.example/api/feedback', googleClientId: 'client' }, { books: [] }, { admin });
   await tick();
   get('admin-login').open = true;
   get('admin-login').events.toggle();
@@ -178,6 +178,16 @@ test('navigation restores a stored session only after server verification; logou
   assert.equal(first.storage.has('feedback-admin-session'), false);
   const loggedOut = await setup({ storage: first.storage });
   assert.equal(loggedOut.api.authHeaders().Authorization, undefined);
+});
+
+test('public pages never restore, offer or keep an admin session', async () => {
+  const saved = credential(Math.floor(Date.now() / 1000) + 1200);
+  const storage = new Map([['feedback-admin-session', saved]]);
+  const page = await setup({ storage, admin: false });
+  assert.equal(storage.has('feedback-admin-session'), false);
+  assert.equal(page.api.authHeaders().Authorization, undefined);
+  assert.throws(() => page.signIn(saved), TypeError, 'Google sign-in must not initialize');
+  assert.ok(page.get('inbox-list').children.every(card => card.children[1].textContent !== '비공개 내용'));
 });
 
 test('expired, malformed and server-rejected stored tokens cannot restore admin access', async () => {

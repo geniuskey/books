@@ -8,9 +8,10 @@ html = html.replace('독자 의견 · Books', '게시판 관리 · Books')
 html = html.replace('https://books.euiyun.com/feedback/', 'https://books.euiyun.com/admin/')
 html = html.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<meta name="robots" content="noindex">')
 html = html.replace('<h1>독자 의견</h1>', '<h1>게시판 관리</h1>')
-# The admin page holds a Google ID token in sessionStorage; keep third-party scripts off it.
+# The admin page holds a Google ID token in sessionStorage: keep it, and keep third-party scripts off.
+html = html.replace('<script>try { sessionStorage.removeItem("feedback-admin-session"); } catch (e) {}</script>\n', '', 1)
 tag = html.index('<!-- Google tag (gtag.js) -->')
-html = html[:tag] + html[html.index('</script>', html.index('<script>', tag)) + len('</script>\n'):]
+html = html[:tag] + html[html.index("gtag('config'", tag):].split('</script>\n', 1)[1]
 start = html.index('      <aside id="feedback-admin"')
 end = html.index('</aside>', start) + len('</aside>')
 panel = html[start:end]

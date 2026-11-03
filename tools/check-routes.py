@@ -42,6 +42,11 @@ def check_assets(path, analytics=True):
     assert source.count('https://www.googletagmanager.com/gtag/js?id=G-LST8C5WL08') == analytics, path
     assert source.count("gtag('config', 'G-LST8C5WL08');") == analytics, path
     assert 'static.cloudflareinsights.com/beacon.min.js' not in source, path
+    clear = source.find('sessionStorage.removeItem("feedback-admin-session")')
+    if analytics:
+        assert -1 < clear < source.index('googletagmanager.com'), f'{path}: clear the admin token before analytics'
+    else:
+        assert clear == -1, f'{path}: the admin page must keep its session'
     return source
 
 
@@ -50,6 +55,7 @@ assert 'name="robots" content="noindex"' in admin
 assert 'href="https://books.euiyun.com/admin/"' in admin
 assert 'id="feedback-admin"' in admin
 assert 'location.replace' not in admin
+assert 'removeItem("feedback-admin-session")' not in admin
 
 fields = json.loads((ROOT / 'data/books.json').read_text())['fields']
 for name in PUBLIC:
