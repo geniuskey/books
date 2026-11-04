@@ -99,9 +99,17 @@ def build_top(ga, books):
 
 
 def main():
-    property_id = os.environ.get("GA4_PROPERTY_ID", "").strip()
+    raw = os.environ.get("GA4_PROPERTY_ID", "")
+    property_id = raw.strip().strip('"\'').removeprefix("properties/").strip()
     if not property_id.isdigit():
-        sys.exit("GA4_PROPERTY_ID must be the numeric property ID")
+        # 값 자체는 남기지 않고 어떤 형식인지만 알려 준다.
+        if property_id.upper().startswith("G-"):
+            shape = "a measurement ID (G-...)"
+        elif property_id.startswith("{"):
+            shape = "JSON (the credentials?)"
+        else:
+            shape = f"{len(property_id)} characters, {sum(c.isdigit() for c in property_id)} digits"
+        sys.exit(f"GA4_PROPERTY_ID must be the numeric property ID (Admin > Property details), got {shape}")
     catalog = json.loads((ROOT / "data/books.json").read_text())
     books = [(normalize(b["url"]), b["id"]) for b in catalog["books"] if b.get("status") == "published" and b.get("url")]
 
