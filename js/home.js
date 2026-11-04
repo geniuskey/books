@@ -1,4 +1,4 @@
-/* 홈: GA4 방문 통계, 많이 펼치는 책과 인기순 분야별 서가, 대표 실험, 저자 노트 */
+/* 홈: GA4 방문 통계, 분야별 많이 펼치는 책과 분야별 서가, 대표 실험, 저자 노트 */
 EB.start("home", (d) => {
   "use strict";
   const { $, esc } = EB;
@@ -15,16 +15,19 @@ EB.start("home", (d) => {
   const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)");
   const arrow = (path) => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${path}"/></svg>`;
 
+  // 등수는 표지에 꽂힌 책갈피 리본으로 단다. 1~3위는 금·은·동, 4위는 가죽색. 1위엔 별을 얹는다.
+  const ribbon = (rank) => `<span class="shelf-rank rank-${Math.min(rank, 4)}" aria-hidden="true">${rank === 1 ? '<i class="rank-star">★</i>' : ""}<b>${rank}</b></span>`;
+
   function cover(b, placement, rank) {
-    return `<a class="shelf-cover" href="${esc(b.url)}" target="_blank" rel="noopener" data-book-id="${esc(b.id)}" data-placement="${placement}" style="--book-color:${esc(b.color)}" aria-label="${rank ? `${rank}위 · ` : ""}${esc(b.title)} · ${esc(b.subtitle)} 읽기 (새 탭)">${rank ? `<span class="shelf-rank" aria-hidden="true">${rank}</span>` : ""}<small>${esc(b.fieldObj.name)}</small><strong>${esc(EB.coverTitle(b))}</strong><span class="shelf-art" aria-hidden="true">${window.coverArt ? window.coverArt(b.motif) : ""}</span><span class="shelf-cover-title">${esc(b.title)}</span></a>`;
+    return `<a class="shelf-cover" href="${esc(b.url)}" target="_blank" rel="noopener" data-book-id="${esc(b.id)}" data-placement="${placement}" style="--book-color:${esc(b.color)}" aria-label="${rank ? `${rank}위 · ` : ""}${esc(b.title)} · ${esc(b.subtitle)} 읽기 (새 탭)">${rank ? ribbon(rank) : ""}<small>${esc(b.fieldObj.name)}</small><strong>${esc(EB.coverTitle(b))}</strong><span class="shelf-art" aria-hidden="true">${window.coverArt ? window.coverArt(b.motif) : ""}</span><span class="shelf-cover-title">${esc(b.title)}</span></a>`;
   }
 
-  function shelf({ id, title, note, link, linkLabel, books, placement, ranked, half }) {
+  function shelf({ id, title, note, link, linkLabel, books, placement, ranked, half, level = 2, extra = "" }) {
     const row = document.createElement("section");
-    row.className = "shelf-row" + (half ? " half" : "");
+    row.className = "shelf-row" + (half ? " half" : "") + (extra ? ` ${extra}` : "");
     row.id = id;
     row.setAttribute("aria-labelledby", `${id}-title`);
-    row.innerHTML = `<div class="shelf-head"><h2 id="${id}-title">${esc(title)}${note ? ` <small>${esc(note)}</small>` : ""}</h2>${link ? `<a href="${esc(link)}">${esc(linkLabel)} →</a>` : ""}
+    row.innerHTML = `<div class="shelf-head"><h${level} id="${id}-title">${esc(title)}${note ? ` <small>${esc(note)}</small>` : ""}</h${level}>${link ? `<a href="${esc(link)}">${esc(linkLabel)} →</a>` : ""}
       <div class="shelf-nav" hidden><button type="button" data-dir="-1" aria-label="${esc(title)} 이전 책">${arrow("m14 6-6 6 6 6")}</button><button type="button" data-dir="1" aria-label="${esc(title)} 다음 책">${arrow("m10 6 6 6-6 6")}</button></div></div>
       <div class="shelf-track" tabindex="0" role="region" aria-labelledby="${id}-title">${books.map((b, i) => cover(b, placement, ranked ? i + 1 : 0)).join("")}</div>`;
     shelves.appendChild(row);
@@ -64,12 +67,28 @@ EB.start("home", (d) => {
     const popular = (books) => books.map((b, i) => ({ b, i })).sort((x, y) => (opens[y.b.id] || 0) - (opens[x.b.id] || 0) || x.i - y.i).map((x) => x.b);
     const period = (ga && ga.opens && ga.opens.period) || "";
 
-    // 맨 위: 요즘 많이 펼치는 책. 한 번 이상 열린 책이 다섯 권 이상일 때만 둔다.
-    const top = popular(published).filter((b) => opens[b.id]).slice(0, 10);
-    if (top.length >= 5) shelf({ id: "shelf-top", title: "요즘 많이 펼치는 책", note: period, books: top, placement: "top", ranked: true, link: "/library/", linkLabel: `전체 ${published.length}권` });
+    // 맨 위: 요즘 많이 펼치는 책. 한 분야가 독차지하지 않도록 분야마다 4위까지 따로 뽑아 두 칸씩 나란히 둔다.
+    // 세 권 이상 낸 분야 중 조회가 있는 분야만, 분야 전체 조회수가 많은 순으로 놓는다.
+    const views = (books) => books.reduce((n, b) => n + (opens[b.id] || 0), 0);
+    const boards = d.fields.map((f) => ({ field: f, all: published.filter((b) => b.field === f.id) }))
+      .filter((x) => x.all.length >= 3 && x.all.some((b) => opens[b.id]))
+      .sort((x, y) => views(y.all) - views(x.all));
+    if (boards.length >= 2) {
+      if (boards.length % 2) boards.pop();
+      const head = document.createElement("h2");
+      head.className = "shelf-group-title";
+      head.id = "shelf-top";
+      head.innerHTML = `요즘 많이 펼치는 책${period ? ` <small>${esc(period)} · 분야별 4위까지</small>` : ""}`;
+      shelves.appendChild(head);
+      boards.forEach(({ field, all }) => {
+        const top = popular(all).filter((b) => opens[b.id]).slice(0, 4);
+        shelf({ id: `shelf-top-${field.id}`, title: field.name, books: top, placement: "top", ranked: true, half: true, level: 3, extra: "shelf-top",
+          link: `#shelf-${field.id}`, linkLabel: `${all.length}권 모두` });
+      });
+    }
 
-    // 분야별 서가: 각 분야 안에서 많이 펼친 순서. 책이 적은 분야끼리는 데스크톱에서 한 줄에 나란히 둔다.
-    const fieldShelves = d.fields.map((f) => ({ field: f, books: popular(published.filter((b) => b.field === f.id)) })).filter((x) => x.books.length);
+    // 분야별 서가: 위에서 인기순을 보였으니 여기서는 books.json에 정한 분야 안 순서(예: 소자 → 설계 → 공정)를 지킨다.
+    const fieldShelves = d.fields.map((f) => ({ field: f, books: published.filter((b) => b.field === f.id) })).filter((x) => x.books.length);
     fieldShelves.forEach((x) => { x.half = x.books.length <= 6; });
     // 짝이 없는 작은 서가는 한 줄 전체를 쓴다.
     let run = [];
