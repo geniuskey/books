@@ -1,0 +1,60 @@
+name: Update GA4 stats and top books
+
+# 매일 GA4에서 Books 방문 통계와 홈에서 많이 연 책(최근 28일)을 집계해 data/analytics.json을 갱신한다.
+# 필요한 저장소 설정(Settings → Secrets and variables → Actions, 환경이 아닌 Repository 수준):
+#   Secret GA4_CREDENTIALS  서비스 계정 JSON
+#   Variable GA4_PROPERTY_ID 숫자 속성 ID (Secret으로 넣어도 읽는다)
+
+on:
+  schedule:
+    - cron: '17 18 * * *'  # 03:17 KST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check GA4 settings
+        id: settings
+        env:
+          CREDENTIALS: ${{ secrets.GA4_CREDENTIALS }}
+          PROPERTY_ID: ${{ vars.GA4_PROPERTY_ID || secrets.GA4_PROPERTY_ID }}
+          MANUAL: ${{ github.event_name == 'workflow_dispatch' }}
+        run: |
+          if [ -z "$CREDENTIALS" ] || [ -z "$PROPERTY_ID" ]; then
+            message="Repository secret GA4_CREDENTIALS or variable GA4_PROPERTY_ID is missing. Environment secrets (e.g. github-pages) are not read."
+            # 직접 실행했을 때는 실패로 표시해 설정 누락을 바로 알 수 있게 한다.
+            if [ "$MANUAL" = "true" ]; then echo "::error::$message"; exit 1; fi
+            echo "::notice::$message Skipping."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            printf '%s' "$CREDENTIALS" > "$RUNNER_TEMP/ga4.json"
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/setup-python@v5
+        if: steps.settings.outputs.ready == 'true'
+        with:
+          python-version: '3.12'
+      - name: Build data/analytics.json
+        if: steps.settings.outputs.ready == 'true'
+        env:
+          GA4_PROPERTY_ID: ${{ vars.GA4_PROPERTY_ID || secrets.GA4_PROPERTY_ID }}
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/ga4.json
+        run: |
+          pip install --quiet google-analytics-data
+          python3 tools/build-analytics.py
+      - name: Commit when the numbers changed
+        if: steps.settings.outputs.ready == 'true'
+        run: |
+          if git ls-files --error-unmatch data/analytics.json >/dev/null 2>&1 && git diff --quiet -I'"updated"' -- data/analytics.json; then
+            echo "No change."; exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add data/analytics.json
+          git commit -m "Update GA4 stats and top books"
+          git push
