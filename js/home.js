@@ -76,6 +76,17 @@ EB.start("home", (d) => {
   }
   renderBrowse();
 
+  // 첫 서가 아래에 출간된 모든 책을 분야별 한 줄로 펼쳐, 10권 밖의 책으로도 바로 이어지게 한다.
+  const fieldIndex = $("#field-index");
+  publishedFields.forEach((field) => {
+    const books = published.filter((b) => b.field === field.id);
+    const row = document.createElement("div");
+    row.className = "field-index-row";
+    row.innerHTML = `<a class="field-index-name" href="${esc(EB.mapUrl(field.id))}">${esc(field.name)}<b>${books.length}</b></a>
+      <div class="field-index-books">${books.map((b) => `<a href="${esc(b.url)}" target="_blank" rel="noopener" data-book-id="${esc(b.id)}" data-placement="field-index" style="--book-color:${esc(b.color)}" title="${esc(b.title)} · ${esc(b.subtitle)}">${esc(EB.coverTitle(b))}</a>`).join("")}</div>`;
+    fieldIndex.appendChild(row);
+  });
+
   // 홈에서는 분야를 가로지르는 질문 여섯 개만 보여 준다. 전체 목록은 실험 탐색에 둔다.
   const all = [];
   d.books.filter(EB.isPublished).forEach((b) => (b.featured || []).forEach((f) => all.push({ ...f, book: b })));
@@ -147,6 +158,16 @@ EB.start("home", (d) => {
     });
     dockMedia.addEventListener("change", reset);
     new ResizeObserver(reset).observe(deck);
+  });
+
+  // 홈에서 책으로 넘어가는 클릭을 GA4 이벤트로 남긴다. 새 탭이 다른 도메인이라 기본 측정만으로는 이탈로 보인다.
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest("a[href^='http']");
+    if (!link || typeof window.gtag !== "function") return;
+    const card = link.closest(".home-experiment");
+    const bookId = link.dataset.bookId || (card && published.find((b) => link.href.startsWith(b.url))?.id) || "";
+    if (!bookId) return;
+    window.gtag("event", "open_book", { book_id: bookId, placement: link.dataset.placement || (card ? "experiment" : "shelf"), transport_type: "beacon" });
   });
 
   // 만든 사람

@@ -1528,3 +1528,24 @@ body[data-page="simulators"] .lib-filters { flex-direction: row; flex-wrap: wrap
 
 /* Field discovery opens the atlas. */
 .browse-fields-label { flex-basis: 100%; margin-bottom: 3px; font-size: 13px; }
+
+/* 홈: 출간된 모든 책을 분야별 한 줄로 보여 주는 조밀한 색인 */
+.field-index { margin-top: 30px; padding-top: 20px; border-top: 1px solid #ffffff1a; }
+.field-index-rows { display: grid; gap: 6px; margin-top: 12px; }
+.field-index-row { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 10px; align-items: start; }
+.field-index-name { display: flex; align-items: center; justify-content: space-between; gap: 6px; min-height: 32px; padding: 0 10px 0 0; color: #f5ce92; font-size: 13px; font-weight: 700; border-right: 1px solid #ffffff1f; }
+.field-index-name b { color: #b4a492; font: 500 11px var(--mono); }
+.field-index-name:hover { color: #fff3df; text-decoration: none; }
+.field-index-books { display: flex; flex-wrap: wrap; gap: 6px; }
+.field-index-books a { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 11px 0 9px; color: #e4dcd2; font-size: 13px; white-space: nowrap; background: #ffffff08; border: 1px solid #ffffff1c; border-radius: 6px; }
+.field-index-books a::before { content: ""; width: 7px; height: 7px; flex: none; border-radius: 2px; background: var(--book-color); box-shadow: 0 0 0 1px #ffffff30; }
+.field-index-books a:hover { color: #fff; background: #ffffff1a; border-color: #ffffff40; text-decoration: none; }
+@media (max-width: 640px) {
+  .field-index { margin-top: 22px; padding-top: 16px; }
+  .field-index-row { grid-template-columns: 74px minmax(0, 1fr); gap: 8px; align-items: center; }
+  .field-index-name { flex-direction: column; align-items: flex-start; justify-content: center; gap: 0; min-height: 40px; font-size: 12px; line-height: 1.25; }
+  /* 한 분야를 한 줄로 두고 옆으로 넘겨 세로 길이를 일정하게 유지한다. */
+  .field-index-books { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-right: 16px; margin-right: -16px; }
+  .field-index-books::-webkit-scrollbar { display: none; }
+  .field-index-books a { min-height: 40px; }
+}
