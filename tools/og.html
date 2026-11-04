@@ -100,14 +100,21 @@
   document.getElementById("s-sims").textContent = sims.toLocaleString("en-US");
   document.getElementById("s-fields").textContent = fieldsUsed.size;
   document.getElementById("s-head").textContent = `${pub.length}권 출간`;
+  // 홈 서가처럼 분야 안에서 많이 펼친 순서(data/analytics.json). 같거나 집계가 없으면 books.json 순서.
+  const ga = await fetch("../data/analytics.json").then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  const opens = Object.fromEntries(((ga && ga.opens && ga.opens.books) || []).map((x) => [x.id, x.opens]));
+  const fieldOrder = Object.fromEntries(data.fields.map((f, i) => [f.id, i]));
+  const popular = (books) => books.map((b, i) => ({ b, i }))
+    .sort((x, y) => fieldOrder[x.b.field] - fieldOrder[y.b.field] || (opens[y.b.id] || 0) - (opens[x.b.id] || 0) || x.i - y.i).map((x) => x.b);
   // 첫 칸은 과학·컴퓨터·전자, 둘째 칸은 살아가는 지식, 셋째 칸은 반도체.
   const wingOf = Object.fromEntries(data.fields.map((f) => [f.id, f.wing]));
   const rows = [
     pub.filter((b) => b.field !== "semiconductor" && wingOf[b.field] === "work"),
     pub.filter((b) => wingOf[b.field] !== "work"),
     pub.filter((b) => b.field === "semiconductor"),
-  ];
-  const pulled = new Set(["aibook", "moneybook", "devicebook"]);
+  ].map(popular);
+  // 칸마다 가장 많이 펼친 책을 살짝 꺼내 둔다.
+  const pulled = new Set(rows.map((books) => [...books].sort((x, y) => (opens[y.id] || 0) - (opens[x.id] || 0))[0]?.id));
   rows.forEach((books, i) => {
     const row = document.getElementById(`row${i + 1}`);
     books.forEach((b) => {
