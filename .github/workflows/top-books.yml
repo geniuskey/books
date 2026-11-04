@@ -1,0 +1,55 @@
+name: Update top books from GA4
+
+# 매일 GA4에서 최근 28일 동안 홈에서 많이 연 책을 집계해 data/top-books.json을 갱신한다.
+# 필요한 저장소 설정: Secrets GA4_CREDENTIALS(서비스 계정 JSON), Variables GA4_PROPERTY_ID(숫자 속성 ID)
+
+on:
+  schedule:
+    - cron: '17 18 * * *'  # 03:17 KST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check GA4 settings
+        id: settings
+        env:
+          CREDENTIALS: ${{ secrets.GA4_CREDENTIALS }}
+          PROPERTY_ID: ${{ vars.GA4_PROPERTY_ID }}
+        run: |
+          if [ -z "$CREDENTIALS" ] || [ -z "$PROPERTY_ID" ]; then
+            echo "::notice::GA4_CREDENTIALS secret or GA4_PROPERTY_ID variable is missing; skipping."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            printf '%s' "$CREDENTIALS" > "$RUNNER_TEMP/ga4.json"
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/setup-python@v5
+        if: steps.settings.outputs.ready == 'true'
+        with:
+          python-version: '3.12'
+      - name: Build data/top-books.json
+        if: steps.settings.outputs.ready == 'true'
+        env:
+          GA4_PROPERTY_ID: ${{ vars.GA4_PROPERTY_ID }}
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/ga4.json
+        run: |
+          pip install --quiet google-analytics-data
+          python3 tools/build-top-books.py
+      - name: Commit when the ranking changed
+        if: steps.settings.outputs.ready == 'true'
+        run: |
+          # 날짜만 바뀐 경우는 커밋하지 않는다.
+          if git diff --quiet -I'"updated"' -- data/top-books.json && git ls-files --error-unmatch data/top-books.json >/dev/null 2>&1; then
+            echo "Ranking unchanged."; exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add data/top-books.json
+          git commit -m "Update top books from GA4"
+          git push

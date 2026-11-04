@@ -6,7 +6,7 @@
 ## 페이지
 | 파일 | 내용 |
 |---|---|
-| `index.html` | 홈. 처음 펼치기 좋은 10권을 소개하고 분야별 책장으로 연결. 질문으로 고른 대표 실험 6개와 저자 노트 |
+| `index.html` | 홈. 온라인 서점처럼 아래로 내리며 보는 서가: 요즘 많이 펼치는 책(`data/top-books.json`), 처음 펼치기 좋은 10권, 분야별 서가(각각 옆으로 넘김). 질문으로 고른 대표 실험 6개와 저자 노트 |
 | `/field/`, `/field/<분야 id>/` | 예전 주소. 해당 지식 지도로 자동 이동 |
 | `/library/` | 전체 책장. 상단 즉시 검색, 분야 선택, 책별 즐겨찾기와 간결한 목록 (`?field=life&q=전세`처럼 주소로도 지정 가능) |
 | `/roadmap/` | 로드맵. 전체·분야별 진행률, 다음 차례와 후속 후보, 만들고 싶은 시뮬레이터. 아이디어는 진행률에서 제외 |
@@ -217,3 +217,9 @@ node tools/check-models.cjs
 음악 교과서는 [MusicBooks](https://music.euiyun.com/)(형제 저장소 `../music-books`)에서 통합 관리합니다. 책 주소는 `https://music.euiyun.com/{slug}/`이며 `checkout`은 `music-books/{slug}`입니다. MusicBook은 ID를 유지한 채 `fundamentals`로 옮겼고, 예정이던 GuitarBook·PianoBook·DrumBook과 새 BassBook을 출간 상태로 등록했습니다. 메타데이터와 장·시뮬레이터 수는 `music-books/catalog.js`를 기준으로 합니다. 서가 전체 의견(`musicbooks`)은 `sisterBooks`에 둡니다. 악기 표지(`guitar`·`piano`·`drums`·`bass`)는 MusicBooks와 같은 코드를 씁니다.
 
 반도체 교과서는 [SemiBooks](https://semi.euiyun.com/)에서 통합 관리합니다. 책 주소는 `https://semi.euiyun.com/{slug}/`이며, 산업 지도는 `industry`, 팹 인프라는 `infra`를 사용합니다. `books.json`의 기존 출간 책 ID는 유지하고 `checkout`은 `semi-books/{slug}`를 가리켜 실험 목록도 통합 저장소에서 수집합니다. 팹 인프라는 집필을 완료해 출간 상태로 등록했으며, 통합 사이트의 독자 의견 링크와 맞춰 ID를 `infrabook`으로 사용합니다. 2026-10-21에는 CMP·세정 교과서를 `cmp` 주소의 `cmpbook`으로 출간 등록하고, SemiBooks의 `cmp` 표지와 읽기 경로 `planarize-and-clean`(ProcessBook → CMPBook → YieldBook)을 추가했습니다. 2026-10-31에는 산화·박막 증착 교과서를 `thinfilm` 주소의 `thinfilmbook`으로, 플라즈마공학 교과서를 `plasma` 주소의 `plasmabook`으로 출간 등록했습니다. PlasmaBook은 SemiBooks에서 반도체 공정 장비를 기준으로 쓴 책이므로 `science`가 아닌 `semiconductor` 분야의 `process` 단계에 두고, 전자기학과는 분야를 넘는 연결로 잇습니다. 두 책에 SemiBooks의 `film`·`plasma` 표지와 읽기 경로 `deposit-with-plasma`(ProcessBook → ThinFilmBook → PlasmaBook)를 추가했습니다. 같은 날 전력 반도체 교과서를 `power` 주소의 `powerbook`으로 출간 등록하고(`device` 단계), SemiBooks의 `power` 표지와 읽기 경로 `switch-the-power`(DeviceBook → PowerBook → PackagingBook)를 추가했습니다. 일부 책만 갱신할 때는 `python3 tools/collect-experiments.py --book infrabook`처럼 `--book`을 반복 지정하면 나머지 책의 실험 스냅샷을 보존합니다.
+
+## 요즘 많이 펼치는 책 (GA4)
+
+홈의 책 링크는 클릭할 때 GA4 `open_book` 이벤트(`book_id`, `link_url`, `placement`)를 보냅니다. `.github/workflows/top-books.yml`이 매일 `tools/build-top-books.py`로 최근 28일 집계를 `data/top-books.json`에 커밋하고, 홈은 5권 이상일 때만 맨 위 서가로 보여 줍니다. `open_book`이 50건 미만이면 향상된 측정의 외부 링크 `click`으로 대신 셉니다.
+
+설정: GA4 속성에 뷰어 권한을 준 서비스 계정 JSON을 저장소 Secret `GA4_CREDENTIALS`에, 숫자 속성 ID를 Variable `GA4_PROPERTY_ID`에 넣습니다. 둘 중 하나라도 없으면 워크플로는 건너뜁니다.

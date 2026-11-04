@@ -206,7 +206,6 @@ a:hover { text-decoration: underline; }
   .library-welcome-side p { font-size: 13px; }
 }
 
-
 .stats {
   display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 32px;
   border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--border); gap: 1px;
@@ -1227,28 +1226,14 @@ body[data-page="simulators"] .lib-filters { flex-direction: row; flex-wrap: wrap
 .topbar .topnav { margin-left: 0; flex-shrink: 0; }
 .browse-fields { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .browse-fields { margin: 30px 0; }
-.browse-fields-label { color: #b9a58d; font-size: 12px; margin-right: 4px; }
 .browse-fields a { font: inherit; font-size: 13px; color: #d7cec3; background: #ffffff06; border: 1px solid #ffffff24; padding: 9px 14px; border-radius: 999px; }
 .browse-fields a:hover { background: #ffffff18; text-decoration: none; }
-.browse-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.browse-heading h2 { margin: 0; font-size: 20px; line-height: 1.4; letter-spacing: -.035em; }
-.browse-heading a { color: #f5ce92; white-space: nowrap; font-size: 13px; }
-.browse-count { color: #b4a492; font-size: 12px; margin: 18px 0 12px; }
-.browse-books { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 28px 24px; }
-.browse-book { min-width: 0; padding: 0 10px 8px; border-bottom: 7px solid #72533c; box-shadow: 0 6px 0 #30241f, 0 12px 12px -8px #000; }
-.browse-cover { position: relative; display: flex; flex-direction: column; min-height: 252px; padding: 18px 17px 14px 22px; overflow: hidden; color: #fff; border-radius: 3px 8px 8px 3px; background: linear-gradient(90deg,#0006, #ffffff20 5%, transparent 9%,#0002 95%,#fff3), var(--book-color); box-shadow: 4px 5px 0 #d1c5af, 7px 10px 16px #0005; transition: transform .18s ease; }
-.browse-cover:hover { transform: translateY(-5px); text-decoration: none; }
-.browse-cover small { font-size: 10px; opacity: .85; letter-spacing: .04em; }
-.browse-cover strong { font-size: clamp(17px, 1.7vw, 23px); line-height: 1.3; margin-top: 12px; letter-spacing: -.035em; overflow-wrap: anywhere; }
-.browse-art { display: flex; align-items: center; justify-content: center; height: 100px; margin: auto 0; opacity: .8; }
-.browse-art svg { width: 100%; height: 100%; }
-.browse-book-title { font-size: 11px; border-top: 1px solid #ffffff55; padding-top: 8px; overflow-wrap: anywhere; }
-.browse-empty { grid-column: 1 / -1; padding: 35px 0; color: #d2c8bd; }
+
 .home-library :focus-visible { outline: 2px solid #f5ce92; outline-offset: 4px; }
 @media (max-width: 1100px) {
   .topbar .wrap { gap: 10px; }
   .topnav a { padding-inline: 7px; font-size: 13px; }
-  .browse-books { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  
 }
 @media (max-width: 850px) and (min-width: 761px) {
   .topbar .wrap { flex-wrap: wrap; height: auto; padding-block: 8px; }
@@ -1260,147 +1245,21 @@ body[data-page="simulators"] .lib-filters { flex-direction: row; flex-wrap: wrap
   .topbar .topnav { order: 3; justify-content: center; margin: 0; padding: 0; }
   .topbar .actions { margin-left: auto; }
   html { scroll-padding-top: 170px; }
-  .browse-books { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 16px; }
-  .browse-heading { align-items: start; }
 }
 @media (max-width: 540px) {
-  .browse-books { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 14px; }
-  .browse-book { padding-inline: 4px; }
-  .browse-cover { min-height: 240px; padding-inline: 16px 12px; }
   .browse-fields { gap: 7px; margin: 22px 0; }
   .browse-fields a { padding: 7px 11px; font-size: 12px; }
-  .browse-heading { gap: 12px; }
-  .browse-heading h2 { font-size: 18px; }
-  .browse-heading a { font-size: 12px; }
 }
-@media (prefers-reduced-motion: reduce) { .browse-cover { transition: none; } }
-.browse-art .cover-art { position: static; width: 100%; height: 100%; mask-image: none; -webkit-mask-image: none; }
 
 @media (min-width: 1101px) {
   .home-library > .wrap { max-width: 1160px; }
-  .browse-cover { padding-inline: 16px 12px; }
-  .browse-cover strong { font-size: 20px; }
 }
 
-/* Keep the five-column shelf while making each cover 10% smaller. */
-.browse-cover { width: 90%; min-height: 227px; margin-inline: auto; padding: 16px 15px 13px 20px; }
-.browse-cover strong { font-size: 18px; }
-.browse-art { height: 90px; }
-@media (max-width: 540px) {
-  .browse-cover { min-height: 216px; padding-inline: 14px 11px; }
-  .browse-cover strong { font-size: 16px; }
-}
-
-/* Books rest directly on one thin timber ledge across each row. */
-.browse-books { column-gap: 24px; row-gap: 28px; padding: 0 12px; }
-.browse-book { position: relative; border: 0; box-shadow: none; padding-bottom: 0; }
-.browse-book::after { content: ""; position: absolute; z-index: 1; top: 232px; left: -12px; right: -12px; height: 9px; border-radius: 1px; background: repeating-linear-gradient(2deg, transparent 0 2px, #4b291b26 3px, transparent 4px 6px), linear-gradient(#b98c61 0 2px, #87603f 3px, #68452e 8px, #432b20 9px); box-shadow: 0 2px 1px #e9c49b18 inset, 0 6px 8px #0005, 0 15px 22px #0003; }
-.browse-cover { height: 227px; min-height: 0; -webkit-touch-callout: none; }
-.browse-cover small { display: flex; justify-content: space-between; gap: 4px; }
-.browse-art { height: auto; min-height: 25px; flex: 1; margin: 8px 0; }
-.browse-art .cover-art { min-height: 0; }
-.browse-book-title { flex-shrink: 0; }
-@media (max-width: 760px) {
-  .browse-books { column-gap: 16px; padding-inline: 8px; }
-  .browse-book::after { left: -8px; right: -8px; }
-}
-@media (max-width: 540px) {
-  .browse-books { column-gap: 14px; padding-inline: 7px; }
-  .browse-cover { height: 216px; min-height: 0; }
-  .browse-book::after { top: 221px; left: -7px; right: -7px; }
-}
-
-/* Full-width shelves remain visible even when the last row has fewer books. */
-.browse-books {
-  --ledge-top: 232px;
-  --shelf-row: 310px;
-  --shelf-columns: 5;
-  --shelf-rows: 1;
-  grid-template-columns: none;
-  grid-template-rows: repeat(var(--shelf-rows), var(--shelf-row));
-  grid-auto-flow: column;
-  grid-auto-columns: calc((100% - (var(--shelf-columns) - 1) * 24px) / var(--shelf-columns));
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-  padding-top: 6px;
-  background-origin: content-box;
-  scroll-snap-type: x proximity;
-  scroll-padding-inline: 12px;
-  row-gap: 0;
-  background-image: linear-gradient(to bottom,
-    transparent 0 var(--ledge-top),
-    #b98c61 var(--ledge-top) calc(var(--ledge-top) + 2px),
-    #87603f calc(var(--ledge-top) + 2px),
-    #68452e calc(var(--ledge-top) + 8px),
-    #432b20 calc(var(--ledge-top) + 9px),
-    #0005 calc(var(--ledge-top) + 10px),
-    transparent calc(var(--ledge-top) + 24px));
-  background-size: 100% var(--shelf-row);
-  background-repeat: repeat-y;
-}
-.browse-book { scroll-snap-align: start; }
-.browse-books:has(.browse-empty) { background: none; grid-template-rows: auto; grid-auto-columns: 100%; }
-@media (min-width: 1101px) {
-  .browse-books:has(.browse-book:nth-child(n+6)) { --shelf-rows: 2; }
-}
-@media (min-width: 761px) and (max-width: 1100px) {
-  .browse-books { --shelf-columns: 4; grid-auto-columns: max(180px, (100% - 96px) / 4.2); }
-  .browse-books:has(.browse-book:nth-child(n+5)) { --shelf-rows: 2; }
-}
-@media (min-width: 541px) and (max-width: 760px) {
-  .browse-books { --shelf-columns: 3; scroll-padding-inline: 8px; grid-auto-columns: max(180px, (100% - 48px) / 3.2); }
-  .browse-books:has(.browse-book:nth-child(n+4)) { --shelf-rows: 2; }
-}
-@media (max-width: 540px) {
-  .browse-books { --shelf-columns: 2; scroll-padding-inline: 7px; grid-auto-columns: max(180px, (100% - 28px) / 2.2); }
-  .browse-books:has(.browse-book:nth-child(n+3)) { --shelf-rows: 2; }
-}
-.browse-book::after { content: none; }
-@media (max-width: 540px) {
-  .browse-books { --ledge-top: 221px; --shelf-row: 300px; }
-}
-
-/* Fade into the actual page background only where more books remain. */
-.browse-books {
-  --fade-left: 0px;
-  --fade-right: 0px;
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 var(--fade-left), #000 calc(100% - var(--fade-right)), transparent);
-  mask-image: linear-gradient(to right, transparent, #000 var(--fade-left), #000 calc(100% - var(--fade-right)), transparent);
-}
-
-/* Keep both rows visible on desktop without reducing the book covers. */
 @media (min-width: 1101px) {
   .home-library { padding: 20px 0; }
   .library-welcome { margin-bottom: 16px; }
   .browse-fields { margin-block: 16px; }
-  .home-library .browse-books { --shelf-row: 294px; margin-top: 12px; }
 }
-
-/* Warm brass scroll controls echo the timber shelves and gold field tabs. */
-.browse-books {
-  margin-top: 22px;
-  padding-bottom: 10px;
-  scrollbar-width: thin;
-  scrollbar-color: #a9875d #ffffff09;
-}
-.browse-books::-webkit-scrollbar { height: 6px; }
-.browse-books::-webkit-scrollbar-track { background: #ffffff09; border-radius: 999px; }
-.browse-books::-webkit-scrollbar-thumb { background: #a9875d; border-radius: 999px; }
-.browse-books::-webkit-scrollbar-thumb:hover { background: #d5b17d; }
-.browse-scroll-nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 14px; }
-.browse-scroll-nav[hidden] { display: none; }
-.browse-scroll-hint { color: #b9a58d; font-size: 12px; letter-spacing: .02em; }
-.browse-scroll-actions { display: flex; gap: 8px; }
-.browse-scroll-actions button {
-  display: grid; place-items: center; width: 44px; height: 44px;
-  border: 1px solid #b998694d; border-radius: 50%;
-  background: #b998690a; color: #e2bf8c; cursor: pointer;
-  transition: background .18s ease, border-color .18s ease, color .18s ease;
-}
-.browse-scroll-actions button:hover:not(:disabled) { background: #b9986926; border-color: #d5b17d; color: #ffe0ae; }
-.browse-scroll-actions button:disabled { opacity: .3; cursor: default; }
-.browse-scroll-actions svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-@media (prefers-reduced-motion: reduce) { .browse-scroll-actions button { transition: none; } }
 
 /* Cover-led bookstore catalog with searchable fields and saved books. */
 .library-fields { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 20px; }
@@ -1518,34 +1377,62 @@ body[data-page="simulators"] .lib-filters { flex-direction: row; flex-wrap: wrap
   .catalog-list { grid-template-columns: repeat(6, minmax(0, 1fr)); }
 }
 
-/* Keep smaller home covers resting on the shelf without stretching them. */
-.browse-book { height: 227px; display: flex; align-items: end; }
-.browse-cover { width: min(90%, 158.9px); height: auto; aspect-ratio: var(--book-cover-ratio); flex-shrink: 0; }
-@media (max-width: 540px) {
-  .browse-book { height: 216px; }
-  .browse-cover { width: min(90%, 151.2px); }
+
+
+/* 홈: 온라인 서점처럼 아래로 내리며 분야별 서가를 훑고, 각 서가는 옆으로 넘긴다. */
+.home-library .browse-fields { margin: 14px 0 6px; gap: 6px; }
+.home-library .browse-fields a { padding: 6px 12px; font-size: 12.5px; }
+.home-shelves { --cover-w: 116px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 40px; margin-top: 8px; }
+.shelf-row { grid-column: 1 / -1; min-width: 0; }
+.shelf-row.half { grid-column: auto; }
+.shelf-head { display: flex; align-items: center; gap: 12px; min-height: 36px; }
+.shelf-head h2 { margin: 0; font-size: 17px; line-height: 1.3; letter-spacing: -.03em; }
+.shelf-head h2 small { margin-left: 4px; color: #b4a492; font: 500 11.5px var(--mono); letter-spacing: 0; }
+.shelf-head a { margin-left: auto; color: #f5ce92; font-size: 12.5px; white-space: nowrap; }
+.shelf-head a:hover { color: #fff3df; }
+.shelf-nav { display: flex; gap: 6px; }
+.shelf-head h2 + .shelf-nav { margin-left: auto; }
+.shelf-nav[hidden] { display: none; }
+.shelf-nav button { display: grid; place-items: center; width: 32px; height: 32px; padding: 0; border: 1px solid #b998694d; border-radius: 50%; background: #b998690a; color: #e2bf8c; cursor: pointer; }
+.shelf-nav button:hover:not(:disabled) { background: #b9986926; border-color: #d5b17d; color: #ffe0ae; }
+.shelf-nav button:disabled { opacity: .3; cursor: default; }
+.shelf-nav svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+@media (hover: none) { .shelf-nav { display: none; } }
+.shelf-track {
+  --fade-left: 0px; --fade-right: 0px;
+  display: grid; grid-auto-flow: column; grid-auto-columns: var(--cover-w); gap: 18px;
+  padding: 8px 6px 18px; overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity; scroll-padding-inline: 6px;
+  scrollbar-width: none;
+  background: linear-gradient(#b98c61 0 2px, #87603f 3px, #68452e 8px, #432b20 9px, #0005 10px, transparent 16px) left bottom 2px / 100% 16px no-repeat;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 var(--fade-left), #000 calc(100% - var(--fade-right)), transparent);
+  mask-image: linear-gradient(to right, transparent, #000 var(--fade-left), #000 calc(100% - var(--fade-right)), transparent);
 }
-
-/* Field discovery opens the atlas. */
-.browse-fields-label { flex-basis: 100%; margin-bottom: 3px; font-size: 13px; }
-
-/* 홈: 출간된 모든 책을 분야별 한 줄로 보여 주는 조밀한 색인 */
-.field-index { margin-top: 30px; padding-top: 20px; border-top: 1px solid #ffffff1a; }
-.field-index-rows { display: grid; gap: 6px; margin-top: 12px; }
-.field-index-row { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 10px; align-items: start; }
-.field-index-name { display: flex; align-items: center; justify-content: space-between; gap: 6px; min-height: 32px; padding: 0 10px 0 0; color: #f5ce92; font-size: 13px; font-weight: 700; border-right: 1px solid #ffffff1f; }
-.field-index-name b { color: #b4a492; font: 500 11px var(--mono); }
-.field-index-name:hover { color: #fff3df; text-decoration: none; }
-.field-index-books { display: flex; flex-wrap: wrap; gap: 6px; }
-.field-index-books a { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 11px 0 9px; color: #e4dcd2; font-size: 13px; white-space: nowrap; background: #ffffff08; border: 1px solid #ffffff1c; border-radius: 6px; }
-.field-index-books a::before { content: ""; width: 7px; height: 7px; flex: none; border-radius: 2px; background: var(--book-color); box-shadow: 0 0 0 1px #ffffff30; }
-.field-index-books a:hover { color: #fff; background: #ffffff1a; border-color: #ffffff40; text-decoration: none; }
-@media (max-width: 640px) {
-  .field-index { margin-top: 22px; padding-top: 16px; }
-  .field-index-row { grid-template-columns: 74px minmax(0, 1fr); gap: 8px; align-items: center; }
-  .field-index-name { flex-direction: column; align-items: flex-start; justify-content: center; gap: 0; min-height: 40px; font-size: 12px; line-height: 1.25; }
-  /* 한 분야를 한 줄로 두고 옆으로 넘겨 세로 길이를 일정하게 유지한다. */
-  .field-index-books { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-right: 16px; margin-right: -16px; }
-  .field-index-books::-webkit-scrollbar { display: none; }
-  .field-index-books a { min-height: 40px; }
+.shelf-track::-webkit-scrollbar { display: none; }
+.shelf-cover {
+  position: relative; display: flex; flex-direction: column; width: var(--cover-w); aspect-ratio: var(--book-cover-ratio);
+  padding: 10px 9px 8px 13px; overflow: hidden; color: #fff; border-radius: 2px 6px 6px 2px; scroll-snap-align: start;
+  background: linear-gradient(90deg, #0006, #ffffff20 5%, transparent 9%, #0002 95%, #fff3), var(--book-color);
+  box-shadow: 3px 3px 0 #d1c5af, 5px 7px 12px #0006; transition: transform .18s ease; -webkit-touch-callout: none;
+}
+.shelf-cover:hover { transform: translateY(-5px); text-decoration: none; }
+.shelf-cover small { font-size: 9px; opacity: .85; letter-spacing: .03em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.shelf-cover strong { margin-top: 6px; font-size: 14px; line-height: 1.28; letter-spacing: -.035em; overflow-wrap: anywhere; }
+.shelf-art { display: flex; flex: 1; min-height: 18px; align-items: center; justify-content: center; margin: 4px 0; opacity: .8; }
+.shelf-art svg, .shelf-art .cover-art { position: static; width: 100%; height: 100%; min-height: 0; mask-image: none; -webkit-mask-image: none; }
+.shelf-cover-title { flex-shrink: 0; padding-top: 5px; border-top: 1px solid #ffffff55; font-size: 9.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.shelf-rank { position: absolute; top: 6px; right: 6px; display: grid; place-items: center; min-width: 22px; height: 22px; padding: 0 5px; border-radius: 11px; background: #f5ce92; color: #2a1f16; font: 700 12px var(--mono); box-shadow: 0 1px 4px #0006; }
+.shelf-rank ~ small { padding-right: 26px; }
+.shelf-cover:focus-visible { outline: 2px solid #f5ce92; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { .shelf-cover { transition: none; } }
+@media (max-width: 760px) {
+  .home-shelves { --cover-w: 104px; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .shelf-track { gap: 14px; margin-inline: -16px; padding-inline: 16px; scroll-padding-inline: 16px; }
+  .shelf-head h2 { font-size: 16px; }
+  .shelf-cover strong { font-size: 13px; }
+}
+@media (max-width: 760px) {
+  .home-library .browse-fields { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-inline: -16px; padding-inline: 16px; }
+  .home-library .browse-fields::-webkit-scrollbar { display: none; }
+  .home-library .browse-fields a { flex: none; padding: 8px 12px; }
 }

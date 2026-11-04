@@ -19,10 +19,10 @@
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
-<link rel="stylesheet" href="/css/style.css?v=20261104-field-index">
+<link rel="stylesheet" href="/css/style.css?v=20261104-shelves">
 <script src="/js/covers.js?v=20261031-power-cover" defer></script>
 <script src="/js/core.js?v=20261017-six-fields" defer></script>
-<script src="/js/home.js?v=20261104-field-index" defer></script>
+<script src="/js/home.js?v=20261104-shelves" defer></script>
 <script>try { sessionStorage.removeItem("feedback-admin-session"); } catch (e) {}</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LST8C5WL08"></script>
@@ -50,20 +50,8 @@
           <a href="/library/">전체 책장 둘러보기 <span aria-hidden="true">↗</span></a>
         </div>
       </div>
-      <nav class="browse-fields" id="browse-fields" aria-label="분야별 지식 지도"><span class="browse-fields-label">관심 있는 분야를 탐험해 보세요</span></nav>
-      <div class="browse-heading"><h2 id="browse-title">처음 펼치기 좋은 책</h2><a href="/library/">전체 <span data-stat="published">–</span>권 보기 →</a></div>
-      <div id="browse-books" class="browse-books" tabindex="0" role="region" aria-labelledby="browse-title"></div>
-      <div class="browse-scroll-nav" id="browse-scroll-nav" hidden>
-        <span class="browse-scroll-hint">책장을 옆으로 넘겨 보세요</span>
-        <div class="browse-scroll-actions">
-          <button type="button" id="browse-prev" aria-label="이전 책 보기" aria-controls="browse-books"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
-          <button type="button" id="browse-next" aria-label="다음 책 보기" aria-controls="browse-books"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
-        </div>
-      </div>
-      <section class="field-index" aria-labelledby="field-index-title">
-        <div class="browse-heading"><h2 id="field-index-title">분야별로 모든 책 보기</h2><a href="/paths/">지식 지도에서 보기 →</a></div>
-        <div class="field-index-rows" id="field-index"></div>
-      </section>
+      <nav class="browse-fields" id="browse-fields" aria-label="분야 서가로 바로 가기"></nav>
+      <div class="home-shelves" id="home-shelves"></div>
     </div>
   </section>
 
