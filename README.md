@@ -6,7 +6,7 @@
 ## 페이지
 | 파일 | 내용 |
 |---|---|
-| `index.html` | 홈. 첫 화면에 GA4 방문 통계, 아래로 내리며 보는 서가: 요즘 많이 펼치는 책(분야별 4위까지, 두 칸씩)과 분야별 서가(books.json 순서, 옆으로 넘김). 질문으로 고른 대표 실험 6개와 저자 노트 |
+| `index.html` | 홈. 첫 화면에 GA4 방문 통계, 아래로 내리며 보는 서가: 분야별 서가(분야 안에서 인기순, 옆으로 넘김). 질문으로 고른 대표 실험 6개와 저자 노트 |
 | `/field/`, `/field/<분야 id>/` | 예전 주소. 해당 지식 지도로 자동 이동 |
 | `/library/` | 전체 책장. 상단 즉시 검색, 분야 선택, 책별 즐겨찾기와 간결한 목록 (`?field=life&q=전세`처럼 주소로도 지정 가능) |
 | `/roadmap/` | 로드맵. 전체·분야별 진행률, 다음 차례와 후속 후보, 만들고 싶은 시뮬레이터. 아이디어는 진행률에서 제외 |
@@ -223,6 +223,6 @@ node tools/check-models.cjs
 홈의 책 링크는 클릭할 때 GA4 `open_book` 이벤트(`book_id`, `link_url`, `placement`)를 보냅니다(홈 서가별 클릭 분석용). `.github/workflows/analytics.yml`이 매일 `tools/build-analytics.py`로 집계해 `data/analytics.json`을 커밋합니다.
 
 - `stats`: 2026-10-30(GA4 도입)부터 어제까지 `*.euiyun.com` 책 사이트의 다녀간 분·다시 찾아온 분·페이지 본 횟수. 홈 첫 화면에 표시
-- `opens`: 최근 28일 동안 책별 페이지 조회수(각 책 사이트의 `hostName`+`pagePath`를 책 URL 접두사로 묶음, GA4 '페이지 및 화면'의 조회수와 같은 기준). "요즘 많이 펼치는 책"은 세 권 이상 낸 분야마다 이 순서로 4위까지 뽑아 분야 전체 조회수 순으로 두 칸씩 놓습니다.
+- `opens`: 최근 28일 동안 책별 페이지 조회수(각 책 사이트의 `hostName`+`pagePath`를 책 URL 접두사로 묶음, GA4 '페이지 및 화면'의 조회수와 같은 기준). 홈의 분야별 서가는 분야 안에서 이 순서로 놓고, 같으면 `books.json` 순서를 따릅니다.
 
 설정은 Repository 수준(환경 Secret은 읽지 않음)에 둡니다. Secret `GA4_CREDENTIALS`(Books 속성 뷰어 권한이 있는 서비스 계정 JSON), Variable 또는 Secret `GA4_PROPERTY_ID`(숫자 속성 ID). 설정이 없으면 예약 실행은 건너뛰고 직접 실행은 실패로 표시합니다.
