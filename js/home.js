@@ -187,7 +187,7 @@ EB.start("home", (d) => {
     const card = link.closest(".home-experiment");
     const bookId = link.dataset.bookId || (card && published.find((b) => link.href.startsWith(b.url))?.id) || "";
     if (!bookId) return;
-    // link_url은 GA4 기본 측정기준(linkUrl)으로 잡혀, 맞춤 측정기준 없이 tools/build-analytics.py가 집계한다.
+    // 홈 서가별 클릭 분석용. 인기 순위는 tools/build-analytics.py가 책 사이트 조회수로 따로 집계한다.
     window.gtag("event", "open_book", { book_id: bookId, link_url: link.href, placement: link.dataset.placement || (card ? "experiment" : "other"), transport_type: "beacon" });
   });
 

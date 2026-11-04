@@ -3,10 +3,10 @@
 
 - stats: GA4를 단 날(SINCE)부터 어제까지 *.euiyun.com 책 사이트의 다녀간 분·다시 찾아온 분·페이지 본 횟수.
   같은 속성을 쓰는 책 사이트(shipbook, science 등)도 포함하고 euiyun.com 본 사이트는 뺀다.
-- opens: 최근 28일 동안 Books 홈에서 책별로 연 횟수(많은 순). 홈은 상위 10권을 맨 위 서가에,
-  분야별 서가는 이 순서대로 보여 준다. 홈(js/home.js)은 책 링크 클릭마다 open_book
-  이벤트에 link_url을 보낸다. link_url은 GA4 기본 측정기준(linkUrl)이라 맞춤 측정기준 없이 조회된다.
-  open_book이 아직 적으면 향상된 측정의 click(외부 링크) 이벤트로 대신 센다.
+- opens: 최근 28일 동안 책별 페이지 조회수(많은 순). 각 책 사이트(hostName + pagePath)의 조회수를
+  books.json의 책 URL 접두사로 묶어 센다. GA4 '페이지 및 화면' 보고서의 조회수와 같은 기준이다.
+  홈은 상위 10권을 맨 위 서가에, 분야별 서가는 이 순서대로 보여 준다.
+  (홈에서 링크를 누른 횟수만 세면 검색 등으로 책에 바로 들어온 독자가 빠져 실제 순위와 어긋난다.)
 
 환경 변수
   GA4_PROPERTY_ID                 숫자 속성 ID (G-로 시작하는 측정 ID가 아님)
@@ -21,10 +21,8 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parent.parent
 SINCE = "2026-10-30"  # Books에 GA4를 단 날 (04579c7)
-HOME_HOST = "books.euiyun.com"
 BOOK_HOSTS = r"[a-z0-9-]+\.euiyun\.com"  # www.euiyun.com은 아래에서 뺀다.
 DAYS = 28
-MIN_OPEN_BOOK = 50
 
 
 def normalize(url):
@@ -83,19 +81,15 @@ def build_stats(ga):
 
 
 def build_top(ga, books):
-    from_home = ga.string("hostName", HOME_HOST)
-    rows = {}
-    for event in ("open_book", "click"):
-        rows[event] = ga.report(f"{DAYS}daysAgo", ["linkUrl"], ["eventCount"], [from_home, ga.string("eventName", event)])
-    opened = sum(m[0] for _, m in rows["open_book"])
-    source = "open_book" if opened >= MIN_OPEN_BOOK else "click"
+    hosts = [ga.string("hostName", BOOK_HOSTS, "FULL_REGEXP")]
+    rows = ga.report(f"{DAYS}daysAgo", ["hostName", "pagePath"], ["screenPageViews"], hosts)
     counts = {}
-    for (url,), (n,) in rows[source]:
-        book_id = book_for(url, books) if url and url != "(not set)" else None
+    for (host, path), (n,) in rows:
+        book_id = book_for(f"https://{host}{path}", books)
         if book_id:
             counts[book_id] = counts.get(book_id, 0) + n
     ranked = sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))
-    return {"period": f"최근 {DAYS}일", "source": source, "books": [{"id": i, "opens": n} for i, n in ranked]}
+    return {"period": f"최근 {DAYS}일", "source": "screenPageViews", "books": [{"id": i, "opens": n} for i, n in ranked]}
 
 
 def main():
