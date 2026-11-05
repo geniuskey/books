@@ -1,17 +1,21 @@
 name: Update GA4 stats and top books
 
-# 매일 GA4에서 Books 방문 통계와 홈에서 많이 연 책(최근 28일)을 집계해 data/analytics.json을 갱신한다.
+# 매시간 GA4에서 Books 방문 통계와 홈에서 많이 연 책(최근 28일)을 집계해 data/analytics.json을 갱신한다.
 # 필요한 저장소 설정(Settings → Secrets and variables → Actions, 환경이 아닌 Repository 수준):
 #   Secret GA4_CREDENTIALS  서비스 계정 JSON
 #   Variable GA4_PROPERTY_ID 숫자 속성 ID (Secret으로 넣어도 읽는다)
 
 on:
   schedule:
-    - cron: '17 18 * * *'  # 03:17 KST
+    - cron: '17 * * * *'  # 매시 17분. GA4 당일 데이터는 몇 시간 늦게 채워질 수 있다.
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: analytics
+  cancel-in-progress: false
 
 jobs:
   update:
@@ -57,4 +61,5 @@ jobs:
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
           git add data/analytics.json
           git commit -m "Update GA4 stats and top books"
+          git pull --rebase --quiet origin main
           git push

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """GA4에서 Books 방문 통계와 홈에서 많이 연 책을 집계해 data/analytics.json에 쓴다.
 
-- stats: GA4를 단 날(SINCE)부터 어제까지 *.euiyun.com 책 사이트의 다녀간 분·다시 찾아온 분·페이지 본 횟수.
+- stats: GA4를 단 날(SINCE)부터 오늘(KST)까지 *.euiyun.com 책 사이트의 다녀간 분·다시 찾아온 분·페이지 본 횟수.
   같은 속성을 쓰는 책 사이트(shipbook, science 등)도 포함하고 euiyun.com 본 사이트는 뺀다.
 - opens: 최근 28일 동안 책별 페이지 조회수(많은 순). 각 책 사이트(hostName + pagePath)의 조회수를
   books.json의 책 URL 접두사로 묶어 센다. GA4 '페이지 및 화면' 보고서의 조회수와 같은 기준이다.
@@ -15,7 +15,8 @@
 import json
 import os
 import sys
-from datetime import date, timedelta
+from datetime import datetime
+from zoneinfo import ZoneInfo
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -23,6 +24,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SINCE = "2026-10-30"  # Books에 GA4를 단 날 (04579c7)
 BOOK_HOSTS = r"[a-z0-9-]+\.euiyun\.com"  # www.euiyun.com은 아래에서 뺀다.
 DAYS = 28
+KST = ZoneInfo("Asia/Seoul")  # GA4 속성 시간대. 러너는 UTC라 날짜를 직접 맞춘다.
 
 
 def normalize(url):
@@ -59,7 +61,7 @@ class GA4:
         t = self.t
         request = t.RunReportRequest(
             property=self.property,
-            date_ranges=[t.DateRange(start_date=start, end_date="yesterday")],
+            date_ranges=[t.DateRange(start_date=start, end_date="today")],
             dimensions=[t.Dimension(name=d) for d in dimensions],
             metrics=[t.Metric(name=m) for m in metrics],
             dimension_filter=t.FilterExpression(and_group=t.FilterExpressionList(expressions=filters)),
@@ -76,7 +78,7 @@ def build_stats(ga):
     split = ga.report(SINCE, ["newVsReturning"], ["totalUsers"], hosts)
     visitors, views = totals[0][1] if totals else (0, 0)
     returning = next((m[0] for d, m in split if d[0] == "returning"), 0)
-    until = (date.today() - timedelta(days=1)).isoformat()
+    until = datetime.now(KST).date().isoformat()
     return {"since": SINCE, "until": until, "visitors": visitors, "returning": returning, "pageViews": views}
 
 
@@ -108,7 +110,7 @@ def main():
     books = [(normalize(b["url"]), b["id"]) for b in catalog["books"] if b.get("status") == "published" and b.get("url")]
 
     ga = GA4(property_id)
-    out = {"updated": date.today().isoformat(), "stats": build_stats(ga), "opens": build_top(ga, books)}
+    out = {"updated": datetime.now(KST).date().isoformat(), "stats": build_stats(ga), "opens": build_top(ga, books)}
     path = ROOT / "data/analytics.json"
     path.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n")
     s, top = out["stats"], out["opens"]
