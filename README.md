@@ -220,7 +220,7 @@ node tools/check-models.cjs
 
 ## GA4 통계와 인기순 서가
 
-홈의 책 링크는 클릭할 때 GA4 `open_book` 이벤트(`book_id`, `link_url`, `placement`)를 보냅니다(홈 서가별 클릭 분석용). `.github/workflows/analytics.yml`이 매시간 `tools/build-analytics.py`로 집계해 `data/analytics.json`을 커밋합니다.
+홈의 책 링크는 클릭할 때 GA4 `open_book` 이벤트(`book_id`, `link_url`, `placement`)를 보냅니다(홈 서가별 클릭 분석용). `.github/workflows/analytics.yml`이 3시간마다 `tools/build-analytics.py`로 집계해 `data/analytics.json`을 커밋합니다.
 
 - `stats`: 2026-10-30(GA4 도입)부터 오늘(KST)까지 `*.euiyun.com` 책 사이트의 다녀간 분·다시 찾아온 분·페이지 본 횟수. 홈 첫 화면에 표시
 - `opens`: 최근 28일 동안 책별 페이지 조회수(각 책 사이트의 `hostName`+`pagePath`를 책 URL 접두사로 묶음, GA4 '페이지 및 화면'의 조회수와 같은 기준). 홈의 분야별 서가는 분야 안에서 이 순서로 놓고, 같으면 `books.json` 순서를 따릅니다.
