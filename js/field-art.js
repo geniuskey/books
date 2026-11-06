@@ -41,6 +41,12 @@
       <path d="M44 74 92 42" class="fa-accent"/><circle cx="68" cy="58" r="4" class="fa-solid"/>
       <path d="M78 96V77m8 19V73m8 23V70" class="fa-tint"/>
       <path d="M90 22h14M97 15v14M34 30l8 8m0-8-8 8" class="fa-accent"/>`,
+    construction: `<path d="M18 106h92" class="fa-muted"/>
+      <path d="M30 106V40h34v66M64 62h32v44" class="fa-paper"/>
+      <path d="M30 51h34M30 62h34M30 73h34M30 84h34M30 95h34M64 73h32M64 84h32M64 95h32" class="fa-muted"/>
+      <path d="M30 40 64 106M64 40 30 106" class="fa-tint"/>
+      <path d="M80 18v44M80 22h28M80 22l-14 8h14M102 22v14" class="fa-accent"/>
+      <rect x="96" y="36" width="12" height="7" class="fa-solid"/>`,
     health: `<path d="M64 104 29 70C7 47 36 18 56 38l8 8 8-8c20-20 49 9 27 32Z" class="fa-tint"/>
       <path d="M21 68h23l8-17 13 34 10-23 6 6h26" class="fa-accent"/>
       <path d="M98 23v14m-7-7h14" class="fa-muted"/>`,

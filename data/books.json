@@ -102,6 +102,15 @@
       "colorDark": "#a78bfa"
     },
     {
+      "id": "construction",
+      "wing": "work",
+      "name": "건설·건축",
+      "en": "Construction & Civil Engineering",
+      "desc": "구조역학과 건설재료에서 지반·건축구조·철근콘크리트, 교량·터널·도로, 시공과 BIM까지. ConstructionBooks에서 관리하는 건설·건축 교재입니다.",
+      "color": "#2f5f96",
+      "colorDark": "#8db8ea"
+    },
+    {
       "id": "computing",
       "wing": "work",
       "name": "컴퓨터·AI",
@@ -2728,6 +2737,199 @@
       "simulators": 165
     },
     {
+      "id": "mechanicsbook",
+      "code": "MEC",
+      "title": "MechanicsBook",
+      "subtitle": "구조역학 교과서",
+      "headline": "힘이 흐르는 길을 계산한다",
+      "description": "하중과 평형, 트러스, 보의 전단력과 휨모멘트, 라멘·아치·케이블, 영향선, 응력과 변형률, 단면의 성질, 휨·전단 응력과 모어 원, 처짐과 에너지 방법, 좌굴, 부정정 구조와 처짐각법, 매트릭스 구조해석까지 — 하중을 끌어 놓고 부재를 바꿔 보며 기준 건물 B-10과 보도교 T-36의 숫자로 익히는 구조역학 교과서.",
+      "en": {
+        "title": "Structural Mechanics",
+        "description": "Drag loads and swap members to compute trusses, beams, stresses, deflection, buckling and matrix structural analysis."
+      },
+      "field": "construction",
+      "status": "published",
+      "level": "건축·토목 2학년",
+      "url": "https://construction.euiyun.com/mechanics/",
+      "repo": "https://github.com/geniuskey/construction-books",
+      "checkout": "construction-books/mechanics",
+      "color": "#1d5fa8",
+      "colorDark": "#74b0f0",
+      "chapters": 17,
+      "simulators": 114,
+      "topics": [
+        "하중·평형",
+        "트러스",
+        "전단력·휨모멘트",
+        "영향선",
+        "응력·단면",
+        "처짐·좌굴",
+        "부정정·매트릭스"
+      ],
+      "motif": "beam"
+    },
+    {
+      "id": "materialsbook",
+      "code": "CMT",
+      "title": "MaterialsBook",
+      "subtitle": "건설재료 교과서",
+      "headline": "콘크리트는 어떻게 굳고 강재는 어떻게 버티나",
+      "description": "시멘트 수화와 골재, 콘크리트 배합 설계, 굳지 않은 콘크리트와 양생, 강도 시험, 수축·크리프와 내구성, 구조용 강재와 철근, 부식과 방식, 아스팔트, 목재, 조적·유리·단열·방수, 복합재료와 지속 가능한 재료까지 — 배합을 바꾸고 시편을 깨뜨려 보며 기준 배합 M-30과 B-10·T-36의 숫자로 익히는 건설재료 교과서.",
+      "en": {
+        "title": "Construction Materials",
+        "description": "Mix concrete and break specimens to learn cement, curing, durability, steel, asphalt and timber."
+      },
+      "field": "construction",
+      "status": "published",
+      "level": "건축·토목 2학년",
+      "url": "https://construction.euiyun.com/materials/",
+      "repo": "https://github.com/geniuskey/construction-books",
+      "checkout": "construction-books/materials",
+      "color": "#6b7280",
+      "colorDark": "#b6bcc6",
+      "chapters": 17,
+      "simulators": 124,
+      "topics": [
+        "시멘트·골재",
+        "배합 설계",
+        "양생·강도",
+        "수축·내구성",
+        "강재·철근",
+        "부식",
+        "아스팔트·목재",
+        "복합재료·탄소"
+      ],
+      "motif": "concrete"
+    },
+    {
+      "id": "geotechbook",
+      "code": "GEO",
+      "title": "GeotechBook",
+      "subtitle": "지반공학 교과서",
+      "headline": "모든 구조물은 땅 위에 선다",
+      "description": "흙과 지반 조사, 상 관계와 다짐, 흙의 분류, 유효응력, 투수와 침투, 지중 응력, 압밀과 연약지반 개량, 전단강도, 토압, 옹벽과 흙막이, 사면 안정, 얕은 기초와 지지력, 말뚝, 지반 동역학과 액상화, 암반 공학까지. 지층을 쌓고 하중을 올려 보며 배우는 지반공학 교과서.",
+      "field": "construction",
+      "status": "writing",
+      "phase": 1,
+      "repo": "https://github.com/geniuskey/construction-books",
+      "color": "#8a5a2b",
+      "colorDark": "#d8a06a",
+      "topics": [
+        "유효응력",
+        "압밀 침하",
+        "전단강도",
+        "지지력·기초",
+        "사면 안정",
+        "흙막이·말뚝"
+      ],
+      "motif": "soil"
+    },
+    {
+      "id": "structurebook",
+      "code": "STR",
+      "title": "StructureBook",
+      "subtitle": "건축구조 교과서",
+      "headline": "하중은 어떤 길로 땅에 닿는가",
+      "description": "하중 경로와 구조 시스템, 라멘·전단벽·코어·아웃리거, 장스팬 구조, 풍하중, 내진·면진·제진까지 건물의 뼈대를 3D로 돌려 보며 배우는 건축구조 교과서.",
+      "field": "construction",
+      "status": "planned",
+      "phase": 2,
+      "color": "#0b7285",
+      "colorDark": "#66d9e8",
+      "topics": [
+        "하중 경로",
+        "구조 시스템",
+        "풍하중",
+        "내진 설계",
+        "면진·제진"
+      ],
+      "motif": "tower"
+    },
+    {
+      "id": "concretebook",
+      "code": "RCS",
+      "title": "ConcreteBook",
+      "subtitle": "철근콘크리트 구조 교과서",
+      "headline": "인장은 철근이, 압축은 콘크리트가",
+      "description": "등가 응력 블록과 휨 설계, 철근비와 연성 파괴, 전단과 비틀림, 균열과 처짐, 기둥의 P-M 상관도, 슬래브와 기초까지 단면을 직접 설계해 보는 철근콘크리트 교과서.",
+      "field": "construction",
+      "status": "planned",
+      "phase": 2,
+      "color": "#5c677d",
+      "colorDark": "#a9b4c8",
+      "topics": [
+        "휨 설계",
+        "철근비·연성",
+        "전단",
+        "균열·처짐",
+        "P-M 상관도"
+      ],
+      "motif": "rebar"
+    },
+    {
+      "id": "civilbook",
+      "code": "CIV",
+      "title": "CivilBook",
+      "subtitle": "교량·터널·도로 교과서",
+      "headline": "강을 건너고 산을 뚫는 구조물",
+      "description": "교량 형식과 하중, 거더·아치·사장·현수교, 터널 굴착과 지보, 도로의 선형과 포장까지 토목 구조물을 끌고 돌려 보며 배우는 교과서.",
+      "field": "construction",
+      "status": "planned",
+      "phase": 2,
+      "color": "#2b8a3e",
+      "colorDark": "#8ce99a",
+      "topics": [
+        "교량 형식",
+        "사장교·현수교",
+        "터널 지보",
+        "도로 선형",
+        "포장"
+      ],
+      "motif": "bridge"
+    },
+    {
+      "id": "sitebook",
+      "code": "SIT",
+      "title": "SiteBook",
+      "subtitle": "시공과 건설관리 교과서",
+      "headline": "도면이 건물이 되기까지",
+      "description": "토공과 기초, 거푸집과 콘크리트 타설, 철골 세우기, 공정표와 주공정, 물량과 원가, 품질과 안전까지 공정을 직접 짜고 비용을 계산해 보는 시공·건설관리 교과서.",
+      "field": "construction",
+      "status": "planned",
+      "phase": 2,
+      "color": "#e8590c",
+      "colorDark": "#ffa94d",
+      "topics": [
+        "공종과 순서",
+        "CPM 공정표",
+        "물량·원가",
+        "EVM",
+        "품질·안전"
+      ],
+      "motif": "crane"
+    },
+    {
+      "id": "bimbook",
+      "code": "BIM",
+      "title": "BIMBook",
+      "subtitle": "BIM·디지털 건설 교과서",
+      "headline": "건물을 짓기 전에 컴퓨터 속에서 한 번 짓는다",
+      "description": "IFC 데이터 모델과 LOD, 간섭 검토, 4D 공정·5D 원가, 점군과 디지털 트윈까지 도구에 매이지 않고 원리부터 배우는 BIM·디지털 건설 교과서.",
+      "field": "construction",
+      "status": "planned",
+      "phase": 2,
+      "color": "#5f3dc4",
+      "colorDark": "#b197fc",
+      "topics": [
+        "IFC·LOD",
+        "간섭 검토",
+        "4D·5D",
+        "점군",
+        "디지털 트윈"
+      ],
+      "motif": "bim"
+    },
+    {
       "id": "thinfilmbook",
       "code": "FIL",
       "title": "ThinFilmBook",
@@ -3055,6 +3257,14 @@
       "status": "published",
       "url": "https://system.euiyun.com/",
       "checkout": "system-books"
+    },
+    {
+      "id": "constructionbooks",
+      "title": "ConstructionBooks",
+      "subtitle": "건설·건축 교과서 서가",
+      "status": "published",
+      "url": "https://construction.euiyun.com/",
+      "checkout": "construction-books"
     }
   ]
 }

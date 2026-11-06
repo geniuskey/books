@@ -42852,6 +42852,1434 @@
     "link": "chapters/tables.html#sim-pick"
   },
   {
+    "id": "mechanicsbook/beam-forces/sim-bf-cut",
+    "bookId": "mechanicsbook",
+    "title": "보를 잘라 단면력 꺼내기",
+    "link": "chapters/beam-forces.html#sim-bf-cut"
+  },
+  {
+    "id": "mechanicsbook/beam-forces/sim-bf-builder",
+    "bookId": "mechanicsbook",
+    "title": "하중을 끌어 놓고 SFD·BMD 그리기",
+    "link": "chapters/beam-forces.html#sim-bf-builder"
+  },
+  {
+    "id": "mechanicsbook/beam-forces/sim-bf-calculus",
+    "bookId": "mechanicsbook",
+    "title": "기울기와 넓이로 잇는 세 그래프",
+    "link": "chapters/beam-forces.html#sim-bf-calculus"
+  },
+  {
+    "id": "mechanicsbook/beam-forces/sim-bf-area",
+    "bookId": "mechanicsbook",
+    "title": "전단력도의 넓이 = 휨모멘트의 변화",
+    "link": "chapters/beam-forces.html#sim-bf-area"
+  },
+  {
+    "id": "mechanicsbook/beam-forces/sim-bf-overhang",
+    "bookId": "mechanicsbook",
+    "title": "부재를 들어 올릴 고리는 어디에 걸까",
+    "link": "chapters/beam-forces.html#sim-bf-overhang"
+  },
+  {
+    "id": "mechanicsbook/beam-forces/sim-bf-gerber",
+    "bookId": "mechanicsbook",
+    "title": "힌지를 옮겨 보는 3경간 게르버보",
+    "link": "chapters/beam-forces.html#sim-bf-gerber"
+  },
+  {
+    "id": "mechanicsbook/beam-forces/sim-bf-g1",
+    "bookId": "mechanicsbook",
+    "title": "B-10 큰보 G1의 휨모멘트 비교",
+    "link": "chapters/beam-forces.html#sim-bf-g1"
+  },
+  {
+    "id": "mechanicsbook/bending/sim-bd-curv",
+    "bookId": "mechanicsbook",
+    "title": "휘는 보와 곡률 반경",
+    "link": "chapters/bending.html#sim-bd-curv"
+  },
+  {
+    "id": "mechanicsbook/bending/sim-bd-stress",
+    "bookId": "mechanicsbook",
+    "title": "단면 속 휨응력 분포",
+    "link": "chapters/bending.html#sim-bd-stress"
+  },
+  {
+    "id": "mechanicsbook/bending/sim-bd-select",
+    "bookId": "mechanicsbook",
+    "title": "가장 가벼운 H형강 찾기",
+    "link": "chapters/bending.html#sim-bd-select"
+  },
+  {
+    "id": "mechanicsbook/bending/sim-bd-tau",
+    "bookId": "mechanicsbook",
+    "title": "단면 모양별 전단응력 분포",
+    "link": "chapters/bending.html#sim-bd-tau"
+  },
+  {
+    "id": "mechanicsbook/bending/sim-bd-planks",
+    "bookId": "mechanicsbook",
+    "title": "겹친 판과 붙인 판",
+    "link": "chapters/bending.html#sim-bd-planks"
+  },
+  {
+    "id": "mechanicsbook/bending/sim-bd-flow",
+    "bookId": "mechanicsbook",
+    "title": "전단 흐름으로 볼트 배치하기",
+    "link": "chapters/bending.html#sim-bd-flow"
+  },
+  {
+    "id": "mechanicsbook/bending/sim-bd-transform",
+    "bookId": "mechanicsbook",
+    "title": "탄성계수비로 만드는 환산 단면",
+    "link": "chapters/bending.html#sim-bd-transform"
+  },
+  {
+    "id": "mechanicsbook/bending/sim-bd-plastic",
+    "bookId": "mechanicsbook",
+    "title": "항복이 퍼지는 단면",
+    "link": "chapters/bending.html#sim-bd-plastic"
+  },
+  {
+    "id": "mechanicsbook/buckling/sim-bk-spring",
+    "bookId": "mechanicsbook",
+    "title": "막대–용수철 모형의 에너지와 평형 경로",
+    "link": "chapters/buckling.html#sim-bk-spring"
+  },
+  {
+    "id": "mechanicsbook/buckling/sim-bk-pcr",
+    "bookId": "mechanicsbook",
+    "title": "길이와 단면으로 정하는 좌굴 하중",
+    "link": "chapters/buckling.html#sim-bk-pcr"
+  },
+  {
+    "id": "mechanicsbook/buckling/sim-bk-modes",
+    "bookId": "mechanicsbook",
+    "title": "네 가지 지지 조건의 좌굴 모양",
+    "link": "chapters/buckling.html#sim-bk-modes"
+  },
+  {
+    "id": "mechanicsbook/buckling/sim-bk-curve",
+    "bookId": "mechanicsbook",
+    "title": "세장비–좌굴 응력 곡선",
+    "link": "chapters/buckling.html#sim-bk-curve"
+  },
+  {
+    "id": "mechanicsbook/buckling/sim-bk-imp",
+    "bookId": "mechanicsbook",
+    "title": "초기 결함은 얼마나 커지나",
+    "link": "chapters/buckling.html#sim-bk-imp"
+  },
+  {
+    "id": "mechanicsbook/buckling/sim-bk-brace",
+    "bookId": "mechanicsbook",
+    "title": "가새의 위치와 강성 바꾸기",
+    "link": "chapters/buckling.html#sim-bk-brace"
+  },
+  {
+    "id": "mechanicsbook/deflection/sim-df-curve",
+    "bookId": "mechanicsbook",
+    "title": "하중·지점·단면을 바꾸면 처짐 곡선은",
+    "link": "chapters/deflection.html#sim-df-curve"
+  },
+  {
+    "id": "mechanicsbook/deflection/sim-df-integrate",
+    "bookId": "mechanicsbook",
+    "title": "적분 상수를 맞혀라: M/EI → θ → v",
+    "link": "chapters/deflection.html#sim-df-integrate"
+  },
+  {
+    "id": "mechanicsbook/deflection/sim-df-ma",
+    "bookId": "mechanicsbook",
+    "title": "M/EI도의 넓이와 1차 모멘트로 읽는 처짐",
+    "link": "chapters/deflection.html#sim-df-ma"
+  },
+  {
+    "id": "mechanicsbook/deflection/sim-df-conj",
+    "bookId": "mechanicsbook",
+    "title": "실제 보의 처짐 = 공액보의 휨모멘트",
+    "link": "chapters/deflection.html#sim-df-conj"
+  },
+  {
+    "id": "mechanicsbook/deflection/sim-df-super",
+    "bookId": "mechanicsbook",
+    "title": "중첩으로 처짐 조립하기",
+    "link": "chapters/deflection.html#sim-df-super"
+  },
+  {
+    "id": "mechanicsbook/deflection/sim-df-span",
+    "bookId": "mechanicsbook",
+    "title": "경간이 두 배면 처짐은 몇 배일까",
+    "link": "chapters/deflection.html#sim-df-span"
+  },
+  {
+    "id": "mechanicsbook/deflection/sim-df-limit",
+    "bookId": "mechanicsbook",
+    "title": "처짐 제한 검토기",
+    "link": "chapters/deflection.html#sim-df-limit"
+  },
+  {
+    "id": "mechanicsbook/energy/sim-en-spring",
+    "bookId": "mechanicsbook",
+    "title": "천천히 걸 때와 갑자기 놓을 때의 에너지",
+    "link": "chapters/energy.html#sim-en-spring"
+  },
+  {
+    "id": "mechanicsbook/energy/sim-en-shear",
+    "bookId": "mechanicsbook",
+    "title": "휨 처짐과 전단 처짐, 무엇이 클까",
+    "link": "chapters/energy.html#sim-en-shear"
+  },
+  {
+    "id": "mechanicsbook/energy/sim-en-truss",
+    "bookId": "mechanicsbook",
+    "title": "단위하중법으로 T-36 처짐 구하기",
+    "link": "chapters/energy.html#sim-en-truss"
+  },
+  {
+    "id": "mechanicsbook/energy/sim-en-vwork",
+    "bookId": "mechanicsbook",
+    "title": "실제 M × 가상 m을 적분하면 처짐",
+    "link": "chapters/energy.html#sim-en-vwork"
+  },
+  {
+    "id": "mechanicsbook/energy/sim-en-cast",
+    "bookId": "mechanicsbook",
+    "title": "변형 에너지 곡선의 기울기 = 처짐",
+    "link": "chapters/energy.html#sim-en-cast"
+  },
+  {
+    "id": "mechanicsbook/energy/sim-en-recip",
+    "bookId": "mechanicsbook",
+    "title": "두 점을 바꿔도 처짐은 같다",
+    "link": "chapters/energy.html#sim-en-recip"
+  },
+  {
+    "id": "mechanicsbook/energy/sim-en-impact",
+    "bookId": "mechanicsbook",
+    "title": "떨어지는 하중과 동적 배율",
+    "link": "chapters/energy.html#sim-en-impact"
+  },
+  {
+    "id": "mechanicsbook/equilibrium/sim-eq-vector",
+    "bookId": "mechanicsbook",
+    "title": "두 힘의 합력과 평형력",
+    "link": "chapters/equilibrium.html#sim-eq-vector"
+  },
+  {
+    "id": "mechanicsbook/equilibrium/sim-eq-wrench",
+    "bookId": "mechanicsbook",
+    "title": "렌치로 보는 모멘트: 힘 × 수직 거리",
+    "link": "chapters/equilibrium.html#sim-eq-wrench"
+  },
+  {
+    "id": "mechanicsbook/equilibrium/sim-eq-fbd",
+    "bookId": "mechanicsbook",
+    "title": "자유물체도 완성하기",
+    "link": "chapters/equilibrium.html#sim-eq-fbd"
+  },
+  {
+    "id": "mechanicsbook/equilibrium/sim-eq-react",
+    "bookId": "mechanicsbook",
+    "title": "경사 하중을 끌어 반력 구하기",
+    "link": "chapters/equilibrium.html#sim-eq-react"
+  },
+  {
+    "id": "mechanicsbook/equilibrium/sim-eq-stab",
+    "bookId": "mechanicsbook",
+    "title": "지점을 바꿔 판별하기",
+    "link": "chapters/equilibrium.html#sim-eq-stab"
+  },
+  {
+    "id": "mechanicsbook/equilibrium/sim-eq-crane",
+    "bookId": "mechanicsbook",
+    "title": "타워크레인은 왜 넘어지지 않을까",
+    "link": "chapters/equilibrium.html#sim-eq-crane"
+  },
+  {
+    "id": "mechanicsbook/equilibrium/sim-eq-wall",
+    "bookId": "mechanicsbook",
+    "title": "옹벽의 전도와 활동",
+    "link": "chapters/equilibrium.html#sim-eq-wall"
+  },
+  {
+    "id": "mechanicsbook/frames-arches/sim-fa-lframe",
+    "bookId": "mechanicsbook",
+    "title": "L형 라멘: 모서리를 도는 휨모멘트",
+    "link": "chapters/frames-arches.html#sim-fa-lframe"
+  },
+  {
+    "id": "mechanicsbook/frames-arches/sim-fa-portal",
+    "bookId": "mechanicsbook",
+    "title": "문형 라멘의 지점과 힌지 바꾸기",
+    "link": "chapters/frames-arches.html#sim-fa-portal"
+  },
+  {
+    "id": "mechanicsbook/frames-arches/sim-fa-thrust",
+    "bookId": "mechanicsbook",
+    "title": "라이즈를 바꾸면 추력은 어떻게 변할까",
+    "link": "chapters/frames-arches.html#sim-fa-thrust"
+  },
+  {
+    "id": "mechanicsbook/frames-arches/sim-fa-eccentric",
+    "bookId": "mechanicsbook",
+    "title": "압력선과 아치 축선의 편심",
+    "link": "chapters/frames-arches.html#sim-fa-eccentric"
+  },
+  {
+    "id": "mechanicsbook/frames-arches/sim-fa-cable",
+    "bookId": "mechanicsbook",
+    "title": "하중을 끌어 케이블 모양 만들기",
+    "link": "chapters/frames-arches.html#sim-fa-cable"
+  },
+  {
+    "id": "mechanicsbook/frames-arches/sim-fa-sag",
+    "bookId": "mechanicsbook",
+    "title": "처짐비와 장력·길이의 맞바꿈",
+    "link": "chapters/frames-arches.html#sim-fa-sag"
+  },
+  {
+    "id": "mechanicsbook/frames-arches/sim-fa-chain",
+    "bookId": "mechanicsbook",
+    "title": "사슬을 매달고 뒤집어 아치 만들기",
+    "link": "chapters/frames-arches.html#sim-fa-chain"
+  },
+  {
+    "id": "mechanicsbook/glossary/sim-gl-beam",
+    "bookId": "mechanicsbook",
+    "title": "지점과 하중으로 고르는 보 공식",
+    "link": "chapters/glossary.html#sim-gl-beam"
+  },
+  {
+    "id": "mechanicsbook/indeterminate/sim-fx-degree",
+    "bookId": "mechanicsbook",
+    "title": "지점과 힌지를 바꾸며 부정정 차수 세기",
+    "link": "chapters/indeterminate.html#sim-fx-degree"
+  },
+  {
+    "id": "mechanicsbook/indeterminate/sim-fx-redundant",
+    "bookId": "mechanicsbook",
+    "title": "여유력을 골라 적합 조건 맞추기",
+    "link": "chapters/indeterminate.html#sim-fx-redundant"
+  },
+  {
+    "id": "mechanicsbook/indeterminate/sim-fx-twospan",
+    "bookId": "mechanicsbook",
+    "title": "2경간 연속보 위로 하중 끌기",
+    "link": "chapters/indeterminate.html#sim-fx-twospan"
+  },
+  {
+    "id": "mechanicsbook/indeterminate/sim-fx-settle",
+    "bookId": "mechanicsbook",
+    "title": "지점 침하가 만드는 휨모멘트",
+    "link": "chapters/indeterminate.html#sim-fx-settle"
+  },
+  {
+    "id": "mechanicsbook/indeterminate/sim-fx-share",
+    "bookId": "mechanicsbook",
+    "title": "교차하는 두 보의 하중 분담",
+    "link": "chapters/indeterminate.html#sim-fx-share"
+  },
+  {
+    "id": "mechanicsbook/indeterminate/sim-fx-remove",
+    "bookId": "mechanicsbook",
+    "title": "부재를 끊어 보는 부정정 트러스",
+    "link": "chapters/indeterminate.html#sim-fx-remove"
+  },
+  {
+    "id": "mechanicsbook/indeterminate/sim-fx-compare",
+    "bookId": "mechanicsbook",
+    "title": "세 가지 지지 조건의 처짐과 휨모멘트",
+    "link": "chapters/indeterminate.html#sim-fx-compare"
+  },
+  {
+    "id": "mechanicsbook/influence/sim-il-unit",
+    "bookId": "mechanicsbook",
+    "title": "단위 하중을 끌어 영향선 그리기",
+    "link": "chapters/influence.html#sim-il-unit"
+  },
+  {
+    "id": "mechanicsbook/influence/sim-il-muller",
+    "bookId": "mechanicsbook",
+    "title": "풀고 밀어 보기: 뮐러-브레슬라우 원리",
+    "link": "chapters/influence.html#sim-il-muller"
+  },
+  {
+    "id": "mechanicsbook/influence/sim-il-series",
+    "bookId": "mechanicsbook",
+    "title": "차량을 옮기며 ΣPη 찾기",
+    "link": "chapters/influence.html#sim-il-series"
+  },
+  {
+    "id": "mechanicsbook/influence/sim-il-truss",
+    "bookId": "mechanicsbook",
+    "title": "T-36 위를 지나는 관리 차량",
+    "link": "chapters/influence.html#sim-il-truss"
+  },
+  {
+    "id": "mechanicsbook/influence/sim-il-absmax",
+    "bookId": "mechanicsbook",
+    "title": "휨모멘트 포락선과 절대 최댓값",
+    "link": "chapters/influence.html#sim-il-absmax"
+  },
+  {
+    "id": "mechanicsbook/influence/sim-il-pattern",
+    "bookId": "mechanicsbook",
+    "title": "연속보 영향선과 패턴 재하",
+    "link": "chapters/influence.html#sim-il-pattern"
+  },
+  {
+    "id": "mechanicsbook/loads/sim-ld-b10",
+    "bookId": "mechanicsbook",
+    "title": "B-10의 하중 경로 따라가기",
+    "link": "chapters/loads.html#sim-ld-b10"
+  },
+  {
+    "id": "mechanicsbook/loads/sim-ld-sense",
+    "bookId": "mechanicsbook",
+    "title": "사람·물·눈·자동차는 몇 kN/m²일까",
+    "link": "chapters/loads.html#sim-ld-sense"
+  },
+  {
+    "id": "mechanicsbook/loads/sim-ld-resultant",
+    "bookId": "mechanicsbook",
+    "title": "분포 하중의 모양을 바꾸며 합력 찾기",
+    "link": "chapters/loads.html#sim-ld-resultant"
+  },
+  {
+    "id": "mechanicsbook/loads/sim-ld-trib",
+    "bookId": "mechanicsbook",
+    "title": "B-10 평면에서 기여 면적 나누기",
+    "link": "chapters/loads.html#sim-ld-trib"
+  },
+  {
+    "id": "mechanicsbook/loads/sim-ld-combo",
+    "bookId": "mechanicsbook",
+    "title": "어느 하중 조합이 지배할까",
+    "link": "chapters/loads.html#sim-ld-combo"
+  },
+  {
+    "id": "mechanicsbook/loads/sim-ld-model",
+    "bookId": "mechanicsbook",
+    "title": "이 장면은 어떤 모델일까",
+    "link": "chapters/loads.html#sim-ld-model"
+  },
+  {
+    "id": "mechanicsbook/loads/sim-ld-t36",
+    "bookId": "mechanicsbook",
+    "title": "T-36의 하중에서 패널 절점 하중까지",
+    "link": "chapters/loads.html#sim-ld-t36"
+  },
+  {
+    "id": "mechanicsbook/matrix/sim-mx-springs",
+    "bookId": "mechanicsbook",
+    "title": "스프링을 이어 강성 행렬 조립하기",
+    "link": "chapters/matrix.html#sim-mx-springs"
+  },
+  {
+    "id": "mechanicsbook/matrix/sim-mx-truss",
+    "bookId": "mechanicsbook",
+    "title": "트러스 강성 행렬 조립 애니메이션",
+    "link": "chapters/matrix.html#sim-mx-truss"
+  },
+  {
+    "id": "mechanicsbook/matrix/sim-mx-columns",
+    "bookId": "mechanicsbook",
+    "title": "강성 행렬의 열 = 단위 변위 모양",
+    "link": "chapters/matrix.html#sim-mx-columns"
+  },
+  {
+    "id": "mechanicsbook/matrix/sim-mx-bc",
+    "bookId": "mechanicsbook",
+    "title": "경계 조건과 특이 행렬",
+    "link": "chapters/matrix.html#sim-mx-bc"
+  },
+  {
+    "id": "mechanicsbook/matrix/sim-mx-editor",
+    "bookId": "mechanicsbook",
+    "title": "직접 모델링 에디터",
+    "link": "chapters/matrix.html#sim-mx-editor"
+  },
+  {
+    "id": "mechanicsbook/matrix/sim-mx-check",
+    "bookId": "mechanicsbook",
+    "title": "입력 실수를 찾아내는 검증 체크리스트",
+    "link": "chapters/matrix.html#sim-mx-check"
+  },
+  {
+    "id": "mechanicsbook/matrix/sim-mx-b10",
+    "bookId": "mechanicsbook",
+    "title": "B-10 골조의 층 변위와 층간 변위",
+    "link": "chapters/matrix.html#sim-mx-b10"
+  },
+  {
+    "id": "mechanicsbook/section/sim-sc-aspect",
+    "bookId": "mechanicsbook",
+    "title": "같은 넓이, 다른 높이",
+    "link": "chapters/section.html#sim-sc-aspect"
+  },
+  {
+    "id": "mechanicsbook/section/sim-sc-builder",
+    "bookId": "mechanicsbook",
+    "title": "직사각형 조각으로 단면 만들기",
+    "link": "chapters/section.html#sim-sc-builder"
+  },
+  {
+    "id": "mechanicsbook/section/sim-sc-strips",
+    "bookId": "mechanicsbook",
+    "title": "띠를 쌓아 I 구하기",
+    "link": "chapters/section.html#sim-sc-strips"
+  },
+  {
+    "id": "mechanicsbook/section/sim-sc-parallel",
+    "bookId": "mechanicsbook",
+    "title": "플랜지를 멀리 보내면",
+    "link": "chapters/section.html#sim-sc-parallel"
+  },
+  {
+    "id": "mechanicsbook/section/sim-sc-hb",
+    "bookId": "mechanicsbook",
+    "title": "높이를 키울까, 폭을 키울까",
+    "link": "chapters/section.html#sim-sc-hb"
+  },
+  {
+    "id": "mechanicsbook/section/sim-sc-shapes",
+    "bookId": "mechanicsbook",
+    "title": "같은 넓이 단면의 강성 순위",
+    "link": "chapters/section.html#sim-sc-shapes"
+  },
+  {
+    "id": "mechanicsbook/section/sim-sc-hshape",
+    "bookId": "mechanicsbook",
+    "title": "H형강 치수와 무게당 강성",
+    "link": "chapters/section.html#sim-sc-hshape"
+  },
+  {
+    "id": "mechanicsbook/section/sim-sc-principal",
+    "bookId": "mechanicsbook",
+    "title": "축을 돌리면 I가 바뀐다",
+    "link": "chapters/section.html#sim-sc-principal"
+  },
+  {
+    "id": "mechanicsbook/slope-deflection/sim-sd-fem",
+    "bookId": "mechanicsbook",
+    "title": "고정단 모멘트 탐색기",
+    "link": "chapters/slope-deflection.html#sim-sd-fem"
+  },
+  {
+    "id": "mechanicsbook/slope-deflection/sim-sd-solve",
+    "bookId": "mechanicsbook",
+    "title": "처짐각법 연립 방정식 풀이(3경간 연속보)",
+    "link": "chapters/slope-deflection.html#sim-sd-solve"
+  },
+  {
+    "id": "mechanicsbook/slope-deflection/sim-sd-sway",
+    "bookId": "mechanicsbook",
+    "title": "횡이동 골조: θ B , θ C , ψ 세 미지수 풀기",
+    "link": "chapters/slope-deflection.html#sim-sd-sway"
+  },
+  {
+    "id": "mechanicsbook/slope-deflection/sim-sd-df",
+    "bookId": "mechanicsbook",
+    "title": "분배율 감각: 한 절점에서 모멘트 나누기",
+    "link": "chapters/slope-deflection.html#sim-sd-df"
+  },
+  {
+    "id": "mechanicsbook/slope-deflection/sim-sd-cross",
+    "bookId": "mechanicsbook",
+    "title": "크로스법 단계 실행: B-10 큰보 G1",
+    "link": "chapters/slope-deflection.html#sim-sd-cross"
+  },
+  {
+    "id": "mechanicsbook/slope-deflection/sim-sd-converge",
+    "bookId": "mechanicsbook",
+    "title": "분배 방식과 강성 차이에 따른 수렴",
+    "link": "chapters/slope-deflection.html#sim-sd-converge"
+  },
+  {
+    "id": "mechanicsbook/slope-deflection/sim-sd-b10",
+    "bookId": "mechanicsbook",
+    "title": "B-10 부분 골조의 모멘트 분배",
+    "link": "chapters/slope-deflection.html#sim-sd-b10"
+  },
+  {
+    "id": "mechanicsbook/stress-strain/sim-ss-poisson",
+    "bookId": "mechanicsbook",
+    "title": "당기면 가늘어진다: 포아송 효과",
+    "link": "chapters/stress-strain.html#sim-ss-poisson"
+  },
+  {
+    "id": "mechanicsbook/stress-strain/sim-ss-tensile",
+    "bookId": "mechanicsbook",
+    "title": "인장 시험기로 강재 끊어 보기",
+    "link": "chapters/stress-strain.html#sim-ss-tensile"
+  },
+  {
+    "id": "mechanicsbook/stress-strain/sim-ss-concrete",
+    "bookId": "mechanicsbook",
+    "title": "콘크리트를 눌러 보기",
+    "link": "chapters/stress-strain.html#sim-ss-concrete"
+  },
+  {
+    "id": "mechanicsbook/stress-strain/sim-ss-step",
+    "bookId": "mechanicsbook",
+    "title": "단계 봉의 축력과 늘음",
+    "link": "chapters/stress-strain.html#sim-ss-step"
+  },
+  {
+    "id": "mechanicsbook/stress-strain/sim-ss-rc",
+    "bookId": "mechanicsbook",
+    "title": "철근과 콘크리트의 하중 나누기",
+    "link": "chapters/stress-strain.html#sim-ss-rc"
+  },
+  {
+    "id": "mechanicsbook/stress-strain/sim-ss-thermal",
+    "bookId": "mechanicsbook",
+    "title": "여름 햇볕과 막힌 부재",
+    "link": "chapters/stress-strain.html#sim-ss-thermal"
+  },
+  {
+    "id": "mechanicsbook/stress-strain/sim-ss-hole",
+    "bookId": "mechanicsbook",
+    "title": "구멍 주위의 응력 집중",
+    "link": "chapters/stress-strain.html#sim-ss-hole"
+  },
+  {
+    "id": "mechanicsbook/transformation/sim-tf-rotate",
+    "bookId": "mechanicsbook",
+    "title": "응력 요소 돌리기",
+    "link": "chapters/transformation.html#sim-tf-rotate"
+  },
+  {
+    "id": "mechanicsbook/transformation/sim-tf-mohr",
+    "bookId": "mechanicsbook",
+    "title": "모어 원 위의 점을 끌어 요소 돌리기",
+    "link": "chapters/transformation.html#sim-tf-mohr"
+  },
+  {
+    "id": "mechanicsbook/transformation/sim-tf-combined",
+    "bookId": "mechanicsbook",
+    "title": "축력과 휨을 더하면",
+    "link": "chapters/transformation.html#sim-tf-combined"
+  },
+  {
+    "id": "mechanicsbook/transformation/sim-tf-kern",
+    "bookId": "mechanicsbook",
+    "title": "하중점을 끌어 핵 찾기",
+    "link": "chapters/transformation.html#sim-tf-kern"
+  },
+  {
+    "id": "mechanicsbook/transformation/sim-tf-footing",
+    "bookId": "mechanicsbook",
+    "title": "기초가 들뜨는 순간",
+    "link": "chapters/transformation.html#sim-tf-footing"
+  },
+  {
+    "id": "mechanicsbook/transformation/sim-tf-torsion",
+    "bookId": "mechanicsbook",
+    "title": "꽉 찬 축, 원관, 틈 있는 관",
+    "link": "chapters/transformation.html#sim-tf-torsion"
+  },
+  {
+    "id": "mechanicsbook/transformation/sim-tf-trajectory",
+    "bookId": "mechanicsbook",
+    "title": "보 안의 주응력 방향",
+    "link": "chapters/transformation.html#sim-tf-trajectory"
+  },
+  {
+    "id": "mechanicsbook/transformation/sim-tf-yield",
+    "bookId": "mechanicsbook",
+    "title": "항복면 위의 응력 상태",
+    "link": "chapters/transformation.html#sim-tf-yield"
+  },
+  {
+    "id": "mechanicsbook/truss/sim-tr-rigid",
+    "bookId": "mechanicsbook",
+    "title": "대각선 하나의 힘",
+    "link": "chapters/truss.html#sim-tr-rigid"
+  },
+  {
+    "id": "mechanicsbook/truss/sim-tr-joints",
+    "bookId": "mechanicsbook",
+    "title": "절점법 한 단계씩",
+    "link": "chapters/truss.html#sim-tr-joints"
+  },
+  {
+    "id": "mechanicsbook/truss/sim-tr-cut",
+    "bookId": "mechanicsbook",
+    "title": "T-36 단면법 커터",
+    "link": "chapters/truss.html#sim-tr-cut"
+  },
+  {
+    "id": "mechanicsbook/truss/sim-tr-zero",
+    "bookId": "mechanicsbook",
+    "title": "영부재 찾기",
+    "link": "chapters/truss.html#sim-tr-zero"
+  },
+  {
+    "id": "mechanicsbook/truss/sim-tr-types",
+    "bookId": "mechanicsbook",
+    "title": "형식에 따라 바뀌는 인장과 압축",
+    "link": "chapters/truss.html#sim-tr-types"
+  },
+  {
+    "id": "mechanicsbook/truss/sim-tr-depth",
+    "bookId": "mechanicsbook",
+    "title": "T-36의 높이를 바꾸면",
+    "link": "chapters/truss.html#sim-tr-depth"
+  },
+  {
+    "id": "mechanicsbook/truss/sim-tr-t36",
+    "bookId": "mechanicsbook",
+    "title": "T-36 하중 배치와 부재력",
+    "link": "chapters/truss.html#sim-tr-t36"
+  },
+  {
+    "id": "materialsbook/aggregate/sim-ag-sieve",
+    "bookId": "materialsbook",
+    "title": "체가름 시험기: 잔류 질량 → 입도 곡선",
+    "link": "chapters/aggregate.html#sim-ag-sieve"
+  },
+  {
+    "id": "materialsbook/aggregate/sim-ag-blend",
+    "bookId": "materialsbook",
+    "title": "두 골재를 섞어 입도 맞추기",
+    "link": "chapters/aggregate.html#sim-ag-blend"
+  },
+  {
+    "id": "materialsbook/aggregate/sim-ag-moist",
+    "bookId": "materialsbook",
+    "title": "함수 상태 계산기: 질량 세 개 → 흡수율·표면수",
+    "link": "chapters/aggregate.html#sim-ag-moist"
+  },
+  {
+    "id": "materialsbook/aggregate/sim-ag-pack",
+    "bookId": "materialsbook",
+    "title": "입자 채움 2D: 크기 분포 → 공극률",
+    "link": "chapters/aggregate.html#sim-ag-pack"
+  },
+  {
+    "id": "materialsbook/aggregate/sim-ag-sp",
+    "bookId": "materialsbook",
+    "title": "감수제가 시멘트 입자를 떼어 놓으면",
+    "link": "chapters/aggregate.html#sim-ag-sp"
+  },
+  {
+    "id": "materialsbook/aggregate/sim-ag-pozz",
+    "bookId": "materialsbook",
+    "title": "포졸란 반응: 수산화칼슘이 줄어드는 시간",
+    "link": "chapters/aggregate.html#sim-ag-pozz"
+  },
+  {
+    "id": "materialsbook/aggregate/sim-ag-scm",
+    "bookId": "materialsbook",
+    "title": "혼화재 치환율 → 강도·발열·탄소",
+    "link": "chapters/aggregate.html#sim-ag-scm"
+  },
+  {
+    "id": "materialsbook/asphalt/sim-as-layers",
+    "bookId": "materialsbook",
+    "title": "포장 단면 속에서 퍼지는 압력",
+    "link": "chapters/asphalt.html#sim-as-layers"
+  },
+  {
+    "id": "materialsbook/asphalt/sim-as-pen",
+    "bookId": "materialsbook",
+    "title": "침입도·연화점 시험기",
+    "link": "chapters/asphalt.html#sim-as-pen"
+  },
+  {
+    "id": "materialsbook/asphalt/sim-as-visc",
+    "bookId": "materialsbook",
+    "title": "온도–점도 곡선과 혼합·다짐 온도",
+    "link": "chapters/asphalt.html#sim-as-visc"
+  },
+  {
+    "id": "materialsbook/asphalt/sim-as-pg",
+    "bookId": "materialsbook",
+    "title": "PG 등급 판정기: DSR과 BBR",
+    "link": "chapters/asphalt.html#sim-as-pg"
+  },
+  {
+    "id": "materialsbook/asphalt/sim-as-creep",
+    "bookId": "materialsbook",
+    "title": "스프링–대시포트 크리프·회복 시험",
+    "link": "chapters/asphalt.html#sim-as-creep"
+  },
+  {
+    "id": "materialsbook/asphalt/sim-as-marshall",
+    "bookId": "materialsbook",
+    "title": "마샬 배합 설계: 최적 아스팔트 함량 찾기",
+    "link": "chapters/asphalt.html#sim-as-marshall"
+  },
+  {
+    "id": "materialsbook/asphalt/sim-as-rut",
+    "bookId": "materialsbook",
+    "title": "바퀴 자국 깊이: 온도·교통량·바인더·공극률",
+    "link": "chapters/asphalt.html#sim-as-rut"
+  },
+  {
+    "id": "materialsbook/asphalt/sim-as-thermal",
+    "bookId": "materialsbook",
+    "title": "겨울밤의 저온 균열",
+    "link": "chapters/asphalt.html#sim-as-thermal"
+  },
+  {
+    "id": "materialsbook/cement/sim-cm-kiln",
+    "bookId": "materialsbook",
+    "title": "가마 온도를 올리면: 원료가 클링커 광물이 되는 과정",
+    "link": "chapters/cement.html#sim-cm-kiln"
+  },
+  {
+    "id": "materialsbook/cement/sim-cm-bogue",
+    "bookId": "materialsbook",
+    "title": "보그 계산기: 산화물 % → 광물 %",
+    "link": "chapters/cement.html#sim-cm-bogue"
+  },
+  {
+    "id": "materialsbook/cement/sim-cm-heat",
+    "bookId": "materialsbook",
+    "title": "수화 발열 곡선: 시멘트 종류·온도·W/C",
+    "link": "chapters/cement.html#sim-cm-heat"
+  },
+  {
+    "id": "materialsbook/cement/sim-cm-powers",
+    "bookId": "materialsbook",
+    "title": "파워스 모델: W/C와 수화도가 남기는 공극",
+    "link": "chapters/cement.html#sim-cm-powers"
+  },
+  {
+    "id": "materialsbook/cement/sim-cm-particle",
+    "bookId": "materialsbook",
+    "title": "입자 수화 애니메이션: C-S-H 껍질이 자라 이어질 때",
+    "link": "chapters/cement.html#sim-cm-particle"
+  },
+  {
+    "id": "materialsbook/cement/sim-cm-fineness",
+    "bookId": "materialsbook",
+    "title": "분말도와 초기 강도",
+    "link": "chapters/cement.html#sim-cm-fineness"
+  },
+  {
+    "id": "materialsbook/cement/sim-cm-co2",
+    "bookId": "materialsbook",
+    "title": "시멘트 CO₂ 계산기",
+    "link": "chapters/cement.html#sim-cm-co2"
+  },
+  {
+    "id": "materialsbook/composites/sim-cp-mix",
+    "bookId": "materialsbook",
+    "title": "혼합 법칙: 섬유 부피비와 방향",
+    "link": "chapters/composites.html#sim-cp-mix"
+  },
+  {
+    "id": "materialsbook/composites/sim-cp-angle",
+    "bookId": "materialsbook",
+    "title": "섬유 각도와 FRP의 강성(극좌표)",
+    "link": "chapters/composites.html#sim-cp-angle"
+  },
+  {
+    "id": "materialsbook/composites/sim-cp-rebar",
+    "bookId": "materialsbook",
+    "title": "철근과 FRP 보강근 당겨 보기",
+    "link": "chapters/composites.html#sim-cp-rebar"
+  },
+  {
+    "id": "materialsbook/composites/sim-cp-sheet",
+    "bookId": "materialsbook",
+    "title": "B-10 큰보 G1의 FRP 시트 휨 보강",
+    "link": "chapters/composites.html#sim-cp-sheet"
+  },
+  {
+    "id": "materialsbook/composites/sim-cp-frc",
+    "bookId": "materialsbook",
+    "title": "섬유 보강 콘크리트의 하중–처짐",
+    "link": "chapters/composites.html#sim-cp-frc"
+  },
+  {
+    "id": "materialsbook/composites/sim-cp-lca",
+    "bookId": "materialsbook",
+    "title": "전과정 단계별 탄소: 요람에서 무덤, 그리고 D",
+    "link": "chapters/composites.html#sim-cp-lca"
+  },
+  {
+    "id": "materialsbook/composites/sim-cp-b10",
+    "bookId": "materialsbook",
+    "title": "B-10 골조 내재 탄소 계산기",
+    "link": "chapters/composites.html#sim-cp-b10"
+  },
+  {
+    "id": "materialsbook/composites/sim-cp-column",
+    "bookId": "materialsbook",
+    "title": "같은 기둥을 RC·강·목재로: 질량과 탄소",
+    "link": "chapters/composites.html#sim-cp-column"
+  },
+  {
+    "id": "materialsbook/corrosion/sim-co-cell",
+    "bookId": "materialsbook",
+    "title": "부식 전지: 전자와 이온의 흐름",
+    "link": "chapters/corrosion.html#sim-co-cell"
+  },
+  {
+    "id": "materialsbook/corrosion/sim-co-galv",
+    "bookId": "materialsbook",
+    "title": "갈바닉 계열: 두 금속을 맞대면",
+    "link": "chapters/corrosion.html#sim-co-galv"
+  },
+  {
+    "id": "materialsbook/corrosion/sim-co-crack",
+    "bookId": "materialsbook",
+    "title": "녹의 팽창과 피복 균열",
+    "link": "chapters/corrosion.html#sim-co-crack"
+  },
+  {
+    "id": "materialsbook/corrosion/sim-co-atm",
+    "bookId": "materialsbook",
+    "title": "대기 부식: 남은 판 두께",
+    "link": "chapters/corrosion.html#sim-co-atm"
+  },
+  {
+    "id": "materialsbook/corrosion/sim-co-paint",
+    "bookId": "materialsbook",
+    "title": "도장 열화와 재도장 주기",
+    "link": "chapters/corrosion.html#sim-co-paint"
+  },
+  {
+    "id": "materialsbook/corrosion/sim-co-cp",
+    "bookId": "materialsbook",
+    "title": "희생 양극: 전위와 수명",
+    "link": "chapters/corrosion.html#sim-co-cp"
+  },
+  {
+    "id": "materialsbook/corrosion/sim-co-lcc",
+    "bookId": "materialsbook",
+    "title": "생애 비용 비교: 도장 · 아연 도금 · 내후성 강",
+    "link": "chapters/corrosion.html#sim-co-lcc"
+  },
+  {
+    "id": "materialsbook/curing/sim-cu-age",
+    "bookId": "materialsbook",
+    "title": "재령–강도 곡선: 시멘트와 양생 온도",
+    "link": "chapters/curing.html#sim-cu-age"
+  },
+  {
+    "id": "materialsbook/curing/sim-cu-maturity",
+    "bookId": "materialsbook",
+    "title": "적산온도 계산기: 날마다 기온을 끌어 보세요",
+    "link": "chapters/curing.html#sim-cu-maturity"
+  },
+  {
+    "id": "materialsbook/curing/sim-cu-cure",
+    "bookId": "materialsbook",
+    "title": "양생 조건 비교: 습윤·공기 중·처음 며칠만",
+    "link": "chapters/curing.html#sim-cu-cure"
+  },
+  {
+    "id": "materialsbook/curing/sim-cu-steam",
+    "bookId": "materialsbook",
+    "title": "증기 양생 사이클 설계",
+    "link": "chapters/curing.html#sim-cu-steam"
+  },
+  {
+    "id": "materialsbook/curing/sim-cu-cold",
+    "bookId": "materialsbook",
+    "title": "한중 콘크리트 보온: 첫 7일의 온도와 강도",
+    "link": "chapters/curing.html#sim-cu-cold"
+  },
+  {
+    "id": "materialsbook/curing/sim-cu-hot",
+    "bookId": "materialsbook",
+    "title": "서중 콘크리트 온도 계산기",
+    "link": "chapters/curing.html#sim-cu-hot"
+  },
+  {
+    "id": "materialsbook/curing/sim-cu-mass",
+    "bookId": "materialsbook",
+    "title": "B-10 기초 매트 2.5 m의 온도 해석(1차원 유한 차분)",
+    "link": "chapters/curing.html#sim-cu-mass"
+  },
+  {
+    "id": "materialsbook/curing/sim-cu-crack",
+    "bookId": "materialsbook",
+    "title": "온도 균열 지수 판정",
+    "link": "chapters/curing.html#sim-cu-crack"
+  },
+  {
+    "id": "materialsbook/durability/sim-du-pore",
+    "bookId": "materialsbook",
+    "title": "물–결합재비와 양생이 만드는 공극",
+    "link": "chapters/durability.html#sim-du-pore"
+  },
+  {
+    "id": "materialsbook/durability/sim-du-carb",
+    "bookId": "materialsbook",
+    "title": "탄산화 전선이 철근에 닿기까지",
+    "link": "chapters/durability.html#sim-du-carb"
+  },
+  {
+    "id": "materialsbook/durability/sim-du-phenol",
+    "bookId": "materialsbook",
+    "title": "페놀프탈레인 시험: 쪼갠 코어로 k 추정하기",
+    "link": "chapters/durability.html#sim-du-phenol"
+  },
+  {
+    "id": "materialsbook/durability/sim-du-cl",
+    "bookId": "materialsbook",
+    "title": "염화물 프로파일과 부식 개시",
+    "link": "chapters/durability.html#sim-du-cl"
+  },
+  {
+    "id": "materialsbook/durability/sim-du-fd",
+    "bookId": "materialsbook",
+    "title": "유한 차분 vs 해석해",
+    "link": "chapters/durability.html#sim-du-fd"
+  },
+  {
+    "id": "materialsbook/durability/sim-du-tuutti",
+    "bookId": "materialsbook",
+    "title": "투티 모델로 부식 수명 나누기",
+    "link": "chapters/durability.html#sim-du-tuutti"
+  },
+  {
+    "id": "materialsbook/durability/sim-du-ft",
+    "bookId": "materialsbook",
+    "title": "기포 간격과 동결융해 사이클",
+    "link": "chapters/durability.html#sim-du-ft"
+  },
+  {
+    "id": "materialsbook/durability/sim-du-map",
+    "bookId": "materialsbook",
+    "title": "피복 두께 × 품질 설계 지도",
+    "link": "chapters/durability.html#sim-du-map"
+  },
+  {
+    "id": "materialsbook/fresh/sim-fr-slump",
+    "bookId": "materialsbook",
+    "title": "슬럼프 콘 들어 올리기",
+    "link": "chapters/fresh.html#sim-fr-slump"
+  },
+  {
+    "id": "materialsbook/fresh/sim-fr-bingham",
+    "bookId": "materialsbook",
+    "title": "유동 곡선 끌어 보기",
+    "link": "chapters/fresh.html#sim-fr-bingham"
+  },
+  {
+    "id": "materialsbook/fresh/sim-fr-air",
+    "bookId": "materialsbook",
+    "title": "공기량 ↔ 강도와 동결융해 저항",
+    "link": "chapters/fresh.html#sim-fr-air"
+  },
+  {
+    "id": "materialsbook/fresh/sim-fr-bleed",
+    "bookId": "materialsbook",
+    "title": "블리딩과 침하: 시간 곡선",
+    "link": "chapters/fresh.html#sim-fr-bleed"
+  },
+  {
+    "id": "materialsbook/fresh/sim-fr-loss",
+    "bookId": "materialsbook",
+    "title": "시간에 따른 슬럼프 손실",
+    "link": "chapters/fresh.html#sim-fr-loss"
+  },
+  {
+    "id": "materialsbook/fresh/sim-fr-pump",
+    "bookId": "materialsbook",
+    "title": "펌프 압송 압력 계산기",
+    "link": "chapters/fresh.html#sim-fr-pump"
+  },
+  {
+    "id": "materialsbook/fresh/sim-fr-vib",
+    "bookId": "materialsbook",
+    "title": "진동기 삽입 간격과 다짐 빈틈",
+    "link": "chapters/fresh.html#sim-fr-vib"
+  },
+  {
+    "id": "materialsbook/fresh/sim-fr-form",
+    "bookId": "materialsbook",
+    "title": "거푸집 측압: 액압 vs 설계 측압",
+    "link": "chapters/fresh.html#sim-fr-form"
+  },
+  {
+    "id": "materialsbook/glossary/sim-gl-mix",
+    "bookId": "materialsbook",
+    "title": "1 m³ 배합과 현장 배합",
+    "link": "chapters/glossary.html#sim-gl-mix"
+  },
+  {
+    "id": "materialsbook/glossary/sim-gl-life",
+    "bookId": "materialsbook",
+    "title": "피복 두께와 부식 개시 시간",
+    "link": "chapters/glossary.html#sim-gl-life"
+  },
+  {
+    "id": "materialsbook/masonry/sim-ms-prism",
+    "bookId": "materialsbook",
+    "title": "프리즘 압축 시험: 줄눈이 두꺼우면 왜 약해지나",
+    "link": "chapters/masonry.html#sim-ms-prism"
+  },
+  {
+    "id": "materialsbook/masonry/sim-ms-griffith",
+    "bookId": "materialsbook",
+    "title": "그리피스 결함: 흠 깊이와 유리의 강도",
+    "link": "chapters/masonry.html#sim-ms-griffith"
+  },
+  {
+    "id": "materialsbook/masonry/sim-ms-thermal",
+    "bookId": "materialsbook",
+    "title": "햇볕과 그늘진 가장자리: 유리의 열파손",
+    "link": "chapters/masonry.html#sim-ms-thermal"
+  },
+  {
+    "id": "materialsbook/masonry/sim-ms-wall",
+    "bookId": "materialsbook",
+    "title": "벽체 단면 열관류율 계산기",
+    "link": "chapters/masonry.html#sim-ms-wall"
+  },
+  {
+    "id": "materialsbook/masonry/sim-ms-igu",
+    "bookId": "materialsbook",
+    "title": "복층 유리 구성과 U값",
+    "link": "chapters/masonry.html#sim-ms-igu"
+  },
+  {
+    "id": "materialsbook/masonry/sim-ms-bridge",
+    "bookId": "materialsbook",
+    "title": "슬래브 끝 열교의 2차원 온도장(유한 차분)",
+    "link": "chapters/masonry.html#sim-ms-bridge"
+  },
+  {
+    "id": "materialsbook/masonry/sim-ms-dew",
+    "bookId": "materialsbook",
+    "title": "이슬점 계산기와 결로 판정: 온도선 vs 이슬점선",
+    "link": "chapters/masonry.html#sim-ms-dew"
+  },
+  {
+    "id": "materialsbook/masonry/sim-ms-joint",
+    "bookId": "materialsbook",
+    "title": "실링재 줄눈 폭 설계",
+    "link": "chapters/masonry.html#sim-ms-joint"
+  },
+  {
+    "id": "materialsbook/mix-design/sim-mx-fcr",
+    "bookId": "materialsbook",
+    "title": "배합강도와 불합격 확률",
+    "link": "chapters/mix-design.html#sim-mx-fcr"
+  },
+  {
+    "id": "materialsbook/mix-design/sim-mx-abrams",
+    "bookId": "materialsbook",
+    "title": "시험 비빔 세 점으로 W/B 정하기",
+    "link": "chapters/mix-design.html#sim-mx-abrams"
+  },
+  {
+    "id": "materialsbook/mix-design/sim-mx-volume",
+    "bookId": "materialsbook",
+    "title": "절대용적 블록 쌓기",
+    "link": "chapters/mix-design.html#sim-mx-volume"
+  },
+  {
+    "id": "materialsbook/mix-design/sim-mx-wizard",
+    "bookId": "materialsbook",
+    "title": "배합 설계 마법사",
+    "link": "chapters/mix-design.html#sim-mx-wizard"
+  },
+  {
+    "id": "materialsbook/mix-design/sim-mx-field",
+    "bookId": "materialsbook",
+    "title": "현장 배합 보정기",
+    "link": "chapters/mix-design.html#sim-mx-field"
+  },
+  {
+    "id": "materialsbook/mix-design/sim-mx-water",
+    "bookId": "materialsbook",
+    "title": "물 10 kg을 더 넣으면",
+    "link": "chapters/mix-design.html#sim-mx-water"
+  },
+  {
+    "id": "materialsbook/mix-design/sim-mx-carbon",
+    "bookId": "materialsbook",
+    "title": "배합 비용·탄소 비교: OPC · 플라이애시 · 고로슬래그",
+    "link": "chapters/mix-design.html#sim-mx-carbon"
+  },
+  {
+    "id": "materialsbook/overview/sim-ov-b10",
+    "bookId": "materialsbook",
+    "title": "B-10 한 층의 재료 쌓기",
+    "link": "chapters/overview.html#sim-ov-b10"
+  },
+  {
+    "id": "materialsbook/overview/sim-ov-curves",
+    "bookId": "materialsbook",
+    "title": "일곱 재료의 응력–변형률 곡선과 인성 넓이",
+    "link": "chapters/overview.html#sim-ov-curves"
+  },
+  {
+    "id": "materialsbook/overview/sim-ov-fracture",
+    "bookId": "materialsbook",
+    "title": "같은 충격, 다른 결말: 연성과 취성의 에너지",
+    "link": "chapters/overview.html#sim-ov-fracture"
+  },
+  {
+    "id": "materialsbook/overview/sim-ov-pore",
+    "bookId": "materialsbook",
+    "title": "공극률과 강도: 빈틈이 하중 길을 끊는다",
+    "link": "chapters/overview.html#sim-ov-pore"
+  },
+  {
+    "id": "materialsbook/overview/sim-ov-ashby",
+    "bookId": "materialsbook",
+    "title": "재료 선택 지도(애시비 차트)",
+    "link": "chapters/overview.html#sim-ov-ashby"
+  },
+  {
+    "id": "materialsbook/overview/sim-ov-weight",
+    "bookId": "materialsbook",
+    "title": "같은 일을 하는 부재: 재료별 질량·가격·탄소",
+    "link": "chapters/overview.html#sim-ov-weight"
+  },
+  {
+    "id": "materialsbook/overview/sim-ov-stats",
+    "bookId": "materialsbook",
+    "title": "시험 결과의 흩어짐과 특성값",
+    "link": "chapters/overview.html#sim-ov-stats"
+  },
+  {
+    "id": "materialsbook/overview/sim-ov-units",
+    "bookId": "materialsbook",
+    "title": "단위 감각: MPa, GPa, kg/m³, MJ/m³",
+    "link": "chapters/overview.html#sim-ov-units"
+  },
+  {
+    "id": "materialsbook/rebar/sim-rb-ss",
+    "bookId": "materialsbook",
+    "title": "강종별 철근 응력–변형률 곡선",
+    "link": "chapters/rebar.html#sim-rb-ss"
+  },
+  {
+    "id": "materialsbook/rebar/sim-rb-area",
+    "bookId": "materialsbook",
+    "title": "철근 단면적과 배근 검토",
+    "link": "chapters/rebar.html#sim-rb-area"
+  },
+  {
+    "id": "materialsbook/rebar/sim-rb-pullout",
+    "bookId": "materialsbook",
+    "title": "뽑힘 시험: 빠질까, 끊어질까",
+    "link": "chapters/rebar.html#sim-rb-pullout"
+  },
+  {
+    "id": "materialsbook/rebar/sim-rb-ld",
+    "bookId": "materialsbook",
+    "title": "정착 길이 감각: 지름·강종·콘크리트 강도",
+    "link": "chapters/rebar.html#sim-rb-ld"
+  },
+  {
+    "id": "materialsbook/rebar/sim-rb-splice",
+    "bookId": "materialsbook",
+    "title": "겹침 이음 위치 고르기",
+    "link": "chapters/rebar.html#sim-rb-splice"
+  },
+  {
+    "id": "materialsbook/rebar/sim-rb-bend",
+    "bookId": "materialsbook",
+    "title": "구부림 반지름과 바깥 변형률",
+    "link": "chapters/rebar.html#sim-rb-bend"
+  },
+  {
+    "id": "materialsbook/rebar/sim-rb-qty",
+    "bookId": "materialsbook",
+    "title": "물량 산출기: G1 한 개에서 기준층까지",
+    "link": "chapters/rebar.html#sim-rb-qty"
+  },
+  {
+    "id": "materialsbook/shrinkage/sim-sh-evap",
+    "bookId": "materialsbook",
+    "title": "증발 속도 노모그램: 소성 수축 위험",
+    "link": "chapters/shrinkage.html#sim-sh-evap"
+  },
+  {
+    "id": "materialsbook/shrinkage/sim-sh-curve",
+    "bookId": "materialsbook",
+    "title": "수축 시간 곡선",
+    "link": "chapters/shrinkage.html#sim-sh-curve"
+  },
+  {
+    "id": "materialsbook/shrinkage/sim-sh-wall",
+    "bookId": "materialsbook",
+    "title": "구속된 벽의 수축 균열: 응력과 강도의 경주",
+    "link": "chapters/shrinkage.html#sim-sh-wall"
+  },
+  {
+    "id": "materialsbook/shrinkage/sim-sh-joint",
+    "bookId": "materialsbook",
+    "title": "바닥판 줄눈 간격과 줄눈 폭",
+    "link": "chapters/shrinkage.html#sim-sh-joint"
+  },
+  {
+    "id": "materialsbook/shrinkage/sim-sh-creep",
+    "bookId": "materialsbook",
+    "title": "크리프 계수 계산기",
+    "link": "chapters/shrinkage.html#sim-sh-creep"
+  },
+  {
+    "id": "materialsbook/shrinkage/sim-sh-deflect",
+    "bookId": "materialsbook",
+    "title": "지속 하중 처짐의 시간 곡선(B-10 G1)",
+    "link": "chapters/shrinkage.html#sim-sh-deflect"
+  },
+  {
+    "id": "materialsbook/shrinkage/sim-sh-column",
+    "bookId": "materialsbook",
+    "title": "RC 기둥의 하중 이동(B-10 C1)",
+    "link": "chapters/shrinkage.html#sim-sh-column"
+  },
+  {
+    "id": "materialsbook/steel/sim-sl-carbon",
+    "bookId": "materialsbook",
+    "title": "탄소량과 공정으로 조직 만들기",
+    "link": "chapters/steel.html#sim-sl-carbon"
+  },
+  {
+    "id": "materialsbook/steel/sim-sl-tensile",
+    "bookId": "materialsbook",
+    "title": "강종별 인장 시험과 0.2 % 오프셋",
+    "link": "chapters/steel.html#sim-sl-tensile"
+  },
+  {
+    "id": "materialsbook/steel/sim-sl-yr",
+    "bookId": "materialsbook",
+    "title": "항복비가 정하는 소성 힌지의 길이",
+    "link": "chapters/steel.html#sim-sl-yr"
+  },
+  {
+    "id": "materialsbook/steel/sim-sl-charpy",
+    "bookId": "materialsbook",
+    "title": "샤르피 시험과 천이 곡선",
+    "link": "chapters/steel.html#sim-sl-charpy"
+  },
+  {
+    "id": "materialsbook/steel/sim-sl-sn",
+    "bookId": "materialsbook",
+    "title": "S–N 곡선과 피로 수명",
+    "link": "chapters/steel.html#sim-sl-sn"
+  },
+  {
+    "id": "materialsbook/steel/sim-sl-miner",
+    "bookId": "materialsbook",
+    "title": "하중 블록과 누적 손상",
+    "link": "chapters/steel.html#sim-sl-miner"
+  },
+  {
+    "id": "materialsbook/steel/sim-sl-ceq",
+    "bookId": "materialsbook",
+    "title": "탄소당량 계산기와 예열",
+    "link": "chapters/steel.html#sim-sl-ceq"
+  },
+  {
+    "id": "materialsbook/steel/sim-sl-fire",
+    "bookId": "materialsbook",
+    "title": "화재 속 강재 온도와 강도 저감",
+    "link": "chapters/steel.html#sim-sl-fire"
+  },
+  {
+    "id": "materialsbook/strength/sim-st-press",
+    "bookId": "materialsbook",
+    "title": "압축 시험기로 공시체 깨뜨리기",
+    "link": "chapters/strength.html#sim-st-press"
+  },
+  {
+    "id": "materialsbook/strength/sim-st-normal",
+    "bookId": "materialsbook",
+    "title": "정규분포와 불량률",
+    "link": "chapters/strength.html#sim-st-normal"
+  },
+  {
+    "id": "materialsbook/strength/sim-st-accept",
+    "bookId": "materialsbook",
+    "title": "강도 판정기: 3회 이동 평균",
+    "link": "chapters/strength.html#sim-st-accept"
+  },
+  {
+    "id": "materialsbook/strength/sim-st-control",
+    "bookId": "materialsbook",
+    "title": "X–MR 관리도로 품질 변화 찾기",
+    "link": "chapters/strength.html#sim-st-control"
+  },
+  {
+    "id": "materialsbook/strength/sim-st-tension",
+    "bookId": "materialsbook",
+    "title": "쪼갬·휨 시험의 응력 분포",
+    "link": "chapters/strength.html#sim-st-tension"
+  },
+  {
+    "id": "materialsbook/strength/sim-st-ss",
+    "bookId": "materialsbook",
+    "title": "강도별 응력–변형률 곡선과 탄성계수",
+    "link": "chapters/strength.html#sim-st-ss"
+  },
+  {
+    "id": "materialsbook/strength/sim-st-rebound",
+    "bookId": "materialsbook",
+    "title": "반발 경도로 강도 추정하기",
+    "link": "chapters/strength.html#sim-st-rebound"
+  },
+  {
+    "id": "materialsbook/strength/sim-st-upv",
+    "bookId": "materialsbook",
+    "title": "초음파 속도에서 동탄성계수로",
+    "link": "chapters/strength.html#sim-st-upv"
+  },
+  {
+    "id": "materialsbook/timber/sim-tm-hankinson",
+    "bookId": "materialsbook",
+    "title": "결의 각도와 강도: 행킨슨 식",
+    "link": "chapters/timber.html#sim-tm-hankinson"
+  },
+  {
+    "id": "materialsbook/timber/sim-tm-emc",
+    "bookId": "materialsbook",
+    "title": "공기가 정하는 목재의 함수율",
+    "link": "chapters/timber.html#sim-tm-emc"
+  },
+  {
+    "id": "materialsbook/timber/sim-tm-shrink",
+    "bookId": "materialsbook",
+    "title": "마르면서 휘는 판: 통나무 속 위치와 수축",
+    "link": "chapters/timber.html#sim-tm-shrink"
+  },
+  {
+    "id": "materialsbook/timber/sim-tm-knot",
+    "bookId": "materialsbook",
+    "title": "옹이의 위치와 보의 휨 강도",
+    "link": "chapters/timber.html#sim-tm-knot"
+  },
+  {
+    "id": "materialsbook/timber/sim-tm-deck",
+    "bookId": "materialsbook",
+    "title": "T-36 데크판의 처짐: 함수율과 크리프",
+    "link": "chapters/timber.html#sim-tm-deck"
+  },
+  {
+    "id": "materialsbook/timber/sim-tm-glulam",
+    "bookId": "materialsbook",
+    "title": "집성재 쌓기: 층 수와 등급 배치",
+    "link": "chapters/timber.html#sim-tm-glulam"
+  },
+  {
+    "id": "materialsbook/timber/sim-tm-clt",
+    "bookId": "materialsbook",
+    "title": "CLT 층 구성과 두 방향 강성",
+    "link": "chapters/timber.html#sim-tm-clt"
+  },
+  {
+    "id": "materialsbook/timber/sim-tm-fire",
+    "bookId": "materialsbook",
+    "title": "화재 중 보의 잔존 단면과 저항",
+    "link": "chapters/timber.html#sim-tm-fire"
+  },
+  {
     "id": "thinfilmbook/ald/sim-qcm",
     "bookId": "thinfilmbook",
     "title": "인시투 QCM: 펄스 시간과 질량 계단",
