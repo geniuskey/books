@@ -556,6 +556,32 @@
       });
       return svg(s);
     },
+    // 카메라: 미러리스 바디 정면. 렌즈 속 조리개 날개가 열리고 닫히고, 빛줄기가 렌즈로 흘러든다
+    camera() {
+      const cx = 128, cy = 72; let s = "";
+      // 왼쪽에서 들어오는 빛줄기
+      [44, 60, 76, 92].forEach((y, k) => {
+        const d = `M8 ${y}L${cx - 40} ${(cy + (y - cy) * 0.55).toFixed(1)}`;
+        s += `<path d="${d}" stroke="${W}" stroke-opacity=".18" stroke-width="1.2"/><path class="cv-flow" style="animation-delay:-${(k * 0.23).toFixed(2)}s" d="${d}" stroke="#ffd27a" stroke-width="1.6" stroke-dasharray="4 10" stroke-linecap="round"/>`;
+      });
+      // 바디: 뷰파인더 혹, 그립, 셔터 버튼과 다이얼
+      s += `<path d="M66 34H104L110 22H146L152 34H190Q196 34 196 40V114Q196 120 190 120H72Q66 120 66 114Z" fill="${W}" fill-opacity=".26" stroke="${W}" stroke-opacity=".75" stroke-width="1.3" stroke-linejoin="round"/>`;
+      s += `<path d="M176 34V120" stroke="${W}" stroke-opacity=".35"/><rect x="178" y="28" width="12" height="6" rx="2" fill="${W}" fill-opacity=".85"/><rect x="160" y="29" width="13" height="5" rx="1.5" fill="${W}" fill-opacity=".5"/>`;
+      s += `<circle class="cv-blink" cx="84" cy="44" r="2.6" fill="#ff8a8a"/>`;
+      // 렌즈: 마운트 링, 경통, 앞 유리
+      s += `<circle cx="${cx}" cy="${cy}" r="40" fill="#000" fill-opacity=".22" stroke="${W}" stroke-width="2.4"/>`;
+      s += `<circle cx="${cx}" cy="${cy}" r="34" fill="none" stroke="${W}" stroke-opacity=".45" stroke-dasharray="2 3"/>`;
+      s += `<circle cx="${cx}" cy="${cy}" r="27" fill="${W}" fill-opacity=".14" stroke="${W}" stroke-opacity=".6"/>`;
+      const hex = range(7).map((k) => { const a = ((2 * Math.PI) / 7) * k + 0.3; return `${(cx + 13 * Math.cos(a)).toFixed(1)},${(cy + 13 * Math.sin(a)).toFixed(1)}`; }).join(" ");
+      let blades = "";
+      range(7).forEach((k) => {
+        const a = ((2 * Math.PI) / 7) * k + 0.3, b = a + 1.15;
+        blades += `<line x1="${(cx + 13 * Math.cos(a)).toFixed(1)}" y1="${(cy + 13 * Math.sin(a)).toFixed(1)}" x2="${(cx + 26 * Math.cos(b)).toFixed(1)}" y2="${(cy + 26 * Math.sin(b)).toFixed(1)}" stroke="${W}" stroke-opacity=".7" stroke-width="1.2"/>`;
+      });
+      s += `<g class="cv-iris" style="transform-origin:${cx}px ${cy}px"><polygon points="${hex}" fill="#000" fill-opacity=".45" stroke="${W}" stroke-width="1.3"/>${blades}</g>`;
+      s += `<path d="M${cx - 18} ${cy - 16}A24 24 0 0 1 ${cx + 4} ${cy - 24}" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/>`;
+      return svg(s);
+    },
     // 소자 물리: pn 접합의 에너지 밴드가 휘고, 전자와 정공이 떠 있다
     band() {
       let s = "";

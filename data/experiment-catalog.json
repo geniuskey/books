@@ -25332,6 +25332,24 @@
     "link": "chapters/weight.html#sim-wt-plan"
   },
   {
+    "id": "camerabook/anatomy/sim-explode",
+    "bookId": "camerabook",
+    "title": "분해 뷰어 — 부품을 눌러 보세요",
+    "link": "chapters/anatomy.html#sim-explode"
+  },
+  {
+    "id": "camerabook/anatomy/sim-mass",
+    "bookId": "camerabook",
+    "title": "무게 예산: 센서 포맷을 바꾸면",
+    "link": "chapters/anatomy.html#sim-mass"
+  },
+  {
+    "id": "camerabook/anatomy/sim-flange",
+    "bookId": "camerabook",
+    "title": "플랜지 백 오차와 초점 심도",
+    "link": "chapters/anatomy.html#sim-flange"
+  },
+  {
     "id": "camerabook/aperture/sim-iris",
     "bookId": "camerabook",
     "title": "조리개 날개 들여다보기",
@@ -25380,6 +25398,30 @@
     "link": "chapters/basics.html#sim-mp"
   },
   {
+    "id": "camerabook/body/sim-power",
+    "bookId": "camerabook",
+    "title": "전력 예산과 배터리 한 번 충전의 값어치",
+    "link": "chapters/body.html#sim-power"
+  },
+  {
+    "id": "camerabook/body/sim-thermal",
+    "bookId": "camerabook",
+    "title": "녹화 버튼을 누른 뒤의 온도 곡선",
+    "link": "chapters/body.html#sim-thermal"
+  },
+  {
+    "id": "camerabook/body/sim-dark",
+    "bookId": "camerabook",
+    "title": "센서 온도와 다크 프레임",
+    "link": "chapters/body.html#sim-dark"
+  },
+  {
+    "id": "camerabook/body/sim-design",
+    "bookId": "camerabook",
+    "title": "카메라 설계 플레이그라운드",
+    "link": "chapters/body.html#sim-design"
+  },
+  {
     "id": "camerabook/color/sim-wb",
     "bookId": "camerabook",
     "title": "화이트 밸런스 실험실",
@@ -25396,6 +25438,54 @@
     "bookId": "camerabook",
     "title": "픽처 스타일 비교",
     "link": "chapters/color.html#sim-style"
+  },
+  {
+    "id": "camerabook/control/sim-ae",
+    "bookId": "camerabook",
+    "title": "AE 루프: 그늘에서 햇빛으로 걸어 나갈 때",
+    "link": "chapters/control.html#sim-ae"
+  },
+  {
+    "id": "camerabook/control/sim-af",
+    "bookId": "camerabook",
+    "title": "AF 경주: 콘트라스트 vs 위상차 vs 하이브리드",
+    "link": "chapters/control.html#sim-af"
+  },
+  {
+    "id": "camerabook/control/sim-track",
+    "bookId": "camerabook",
+    "title": "다가오는 피사체 추적: 지연과 예측",
+    "link": "chapters/control.html#sim-track"
+  },
+  {
+    "id": "camerabook/control/sim-lag",
+    "bookId": "camerabook",
+    "title": "시간 예산: 셔터 랙과 EVF 지연",
+    "link": "chapters/control.html#sim-lag"
+  },
+  {
+    "id": "camerabook/engine/sim-isp",
+    "bookId": "camerabook",
+    "title": "ISP 파이프라인 실험실: 단계를 끄고 켜 보기",
+    "link": "chapters/engine.html#sim-isp"
+  },
+  {
+    "id": "camerabook/engine/sim-buffer",
+    "bookId": "camerabook",
+    "title": "연사와 버퍼: 언제 느려지고, 언제 다 비워지나",
+    "link": "chapters/engine.html#sim-buffer"
+  },
+  {
+    "id": "camerabook/engine/sim-codec",
+    "bookId": "camerabook",
+    "title": "비트레이트와 카드 용량 계산기",
+    "link": "chapters/engine.html#sim-codec"
+  },
+  {
+    "id": "camerabook/engine/sim-power",
+    "bookId": "camerabook",
+    "title": "모드별 전력 예산: 처리량이 곧 열이다",
+    "link": "chapters/engine.html#sim-power"
   },
   {
     "id": "camerabook/exposure/sim-bucket",
@@ -25554,6 +25644,30 @@
     "link": "chapters/iso.html#sim-size"
   },
   {
+    "id": "camerabook/mechanism/sim-curtain",
+    "bookId": "camerabook",
+    "title": "선막·후막과 슬릿, 슬로 모션으로 보기",
+    "link": "chapters/mechanism.html#sim-curtain"
+  },
+  {
+    "id": "camerabook/mechanism/sim-mirror",
+    "bookId": "camerabook",
+    "title": "한 장을 찍는 동안: DSLR과 미러리스의 시간표",
+    "link": "chapters/mechanism.html#sim-mirror"
+  },
+  {
+    "id": "camerabook/mechanism/sim-actuator",
+    "bookId": "camerabook",
+    "title": "AF 모터 비교: 초점 그룹을 1 mm 옮기기",
+    "link": "chapters/mechanism.html#sim-actuator"
+  },
+  {
+    "id": "camerabook/mechanism/sim-ibis",
+    "bookId": "camerabook",
+    "title": "IBIS 제어 루프: 흔들림, 스테이지, 남은 흔들림",
+    "link": "chapters/mechanism.html#sim-ibis"
+  },
+  {
     "id": "camerabook/modes/sim-mode",
     "bookId": "camerabook",
     "title": "모드 다이얼 가상 카메라",
@@ -25564,6 +25678,54 @@
     "bookId": "camerabook",
     "title": "측광 실험실",
     "link": "chapters/modes.html#sim-meter"
+  },
+  {
+    "id": "camerabook/optics/sim-aberr",
+    "bookId": "camerabook",
+    "title": "수차가 만드는 상: 스폿 다이어그램으로 찍기",
+    "link": "chapters/optics.html#sim-aberr"
+  },
+  {
+    "id": "camerabook/optics/sim-ray",
+    "bookId": "camerabook",
+    "title": "광선 추적기: 렌즈 구성별 초점과 스폿",
+    "link": "chapters/optics.html#sim-ray"
+  },
+  {
+    "id": "camerabook/optics/sim-coat",
+    "bookId": "camerabook",
+    "title": "면 수와 코팅: 투과율과 고스트",
+    "link": "chapters/optics.html#sim-coat"
+  },
+  {
+    "id": "camerabook/optics/sim-mtf",
+    "bookId": "camerabook",
+    "title": "MTF 곡선: 회절 · 수차 · 화소",
+    "link": "chapters/optics.html#sim-mtf"
+  },
+  {
+    "id": "camerabook/overview/sim-xray",
+    "bookId": "camerabook",
+    "title": "투시 카메라: 부품은 어디에 있는가",
+    "link": "chapters/overview.html#sim-xray"
+  },
+  {
+    "id": "camerabook/overview/sim-photon",
+    "bookId": "camerabook",
+    "title": "광자 예산: 픽셀 하나가 받는 빛",
+    "link": "chapters/overview.html#sim-photon"
+  },
+  {
+    "id": "camerabook/overview/sim-forms",
+    "bookId": "camerabook",
+    "title": "센서 크기 · 질량 · 빛의 총량",
+    "link": "chapters/overview.html#sim-forms"
+  },
+  {
+    "id": "camerabook/overview/sim-spec",
+    "bookId": "camerabook",
+    "title": "제원표 해독기",
+    "link": "chapters/overview.html#sim-spec"
   },
   {
     "id": "camerabook/playground/sim-cam",
@@ -25588,6 +25750,30 @@
     "bookId": "camerabook",
     "title": "JPEG 화질 슬라이더 (실제 8×8 DCT 압축)",
     "link": "chapters/raw.html#sim-jpeg"
+  },
+  {
+    "id": "camerabook/sensor/sim-pixel",
+    "bookId": "camerabook",
+    "title": "픽셀 하나의 일생: 광자 → 전자 → 전압 → 숫자",
+    "link": "chapters/sensor.html#sim-pixel"
+  },
+  {
+    "id": "camerabook/sensor/sim-bayer",
+    "bookId": "camerabook",
+    "title": "모자이크로 찍고 다시 색 채우기",
+    "link": "chapters/sensor.html#sim-bayer"
+  },
+  {
+    "id": "camerabook/sensor/sim-readout",
+    "bookId": "camerabook",
+    "title": "판독 시간과 롤링 셔터 왜곡",
+    "link": "chapters/sensor.html#sim-readout"
+  },
+  {
+    "id": "camerabook/sensor/sim-datarate",
+    "bookId": "camerabook",
+    "title": "센서 데이터 예산: 인터페이스가 따라가는가",
+    "link": "chapters/sensor.html#sim-datarate"
   },
   {
     "id": "camerabook/shutter/sim-motion",

@@ -1264,8 +1264,8 @@
         "title": "CarBook",
         "description": "Explore vehicles from engines and batteries to autonomy."
       },
-      "url": "https://carbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/carbook",
+      "url": "https://system.euiyun.com/car/",
+      "repo": "https://github.com/geniuskey/system-books",
       "status": "published",
       "color": "#dd5a16",
       "colorDark": "#ff8a47",
@@ -1281,7 +1281,7 @@
       "motif": "car",
       "field": "electronics",
       "chapters": 22,
-      "simulators": 140,
+      "simulators": 149,
       "level": "입문~공대 학부",
       "featured": [
         {
@@ -1296,27 +1296,28 @@
           "link": "chapters/aero.html#sim-fl",
           "image": "img/sims/carbook-sim-fl.jpg"
         }
-      ]
+      ],
+      "checkout": "system-books/car"
     },
     {
       "id": "shipbook",
       "code": "SHP",
       "title": "ShipBook",
-      "subtitle": "인터랙티브 선박 교과서",
+      "subtitle": "선박 교과서",
       "headline": "수만 톤의 강철이 어떻게 바다를 건너는가",
       "description": "부력과 복원성에서 프로펠러, 파도, 선체 구조, 친환경 연료와 자율운항까지. 슬라이더를 움직이고 3D 모델을 돌려 보며 선박의 원리를 배웁니다.",
       "en": {
         "title": "ShipBook",
         "description": "Explore buoyancy, propulsion, waves, and the design of ships."
       },
-      "url": "https://shipbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/shipbook",
+      "url": "https://system.euiyun.com/ship/",
+      "repo": "https://github.com/geniuskey/system-books",
       "status": "published",
       "color": "#0b6fb5",
       "colorDark": "#4fb3ff",
       "field": "electronics",
       "chapters": 23,
-      "simulators": 220,
+      "simulators": 229,
       "topics": [
         "부력·복원성",
         "저항·추진",
@@ -1326,7 +1327,8 @@
         "친환경 선박",
         "항해·자율운항"
       ],
-      "motif": "ship"
+      "motif": "ship",
+      "checkout": "system-books/ship"
     },
     {
       "id": "phonebook",
@@ -1339,13 +1341,13 @@
         "title": "PhoneBook",
         "description": "Take apart the hardware inside a smartphone."
       },
-      "url": "https://phonebook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/phonebook",
+      "url": "https://system.euiyun.com/phone/",
+      "repo": "https://github.com/geniuskey/system-books",
       "field": "electronics",
       "status": "published",
       "level": "공대 학부",
       "chapters": 14,
-      "simulators": 140,
+      "simulators": 146,
       "color": "#0b8a7c",
       "colorDark": "#2dd4bf",
       "topics": [
@@ -1372,7 +1374,8 @@
           "link": "chapters/camera.html#sim-mod",
           "image": "img/sims/phonebook-sim-mod.jpg"
         }
-      ]
+      ],
+      "checkout": "system-books/phone"
     },
     {
       "id": "colorbook",
@@ -1718,29 +1721,31 @@
       "code": "CAM",
       "title": "CameraBook",
       "subtitle": "카메라 교과서",
-      "headline": "다이얼을 돌리면 사진이 달라진다",
-      "description": "조리개·셔터·ISO부터 초점, 화이트 밸런스, RAW, 플래시, 동영상, 스마트폰 카메라까지 — 가상 카메라를 직접 조작하며 왜 그렇게 찍히는지 배웁니다.",
+      "headline": "빛을 숫자로 바꾸는 기계",
+      "description": "렌즈와 셔터, 센서와 처리 엔진, 3A 제어 루프로 카메라를 3D로 분해한 뒤, 조리개·셔터·ISO부터 초점, 화이트 밸런스, RAW, 동영상까지 가상 카메라를 직접 조작하며 배웁니다.",
       "en": {
         "title": "CameraBook",
-        "description": "Learn photography by changing the camera settings yourself."
+        "description": "Take a camera apart in 3D, then learn photography by changing its settings yourself."
       },
-      "url": "https://camerabook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/camerabook",
+      "url": "https://system.euiyun.com/camera/",
+      "repo": "https://github.com/geniuskey/system-books",
       "status": "published",
       "level": "입문",
-      "chapters": 17,
-      "simulators": 60,
-      "color": "#d9480f",
-      "colorDark": "#ff8a4c",
+      "chapters": 25,
+      "simulators": 91,
+      "color": "#6741d9",
+      "colorDark": "#b197fc",
       "topics": [
-        "노출 삼각형",
-        "피사계 심도",
-        "AF",
-        "화이트 밸런스",
-        "RAW 현상",
-        "스마트폰 카메라"
+        "3D 분해·조립",
+        "렌즈 광학",
+        "셔터·구동부",
+        "센서·판독",
+        "ISP·데이터",
+        "3A 제어",
+        "노출·초점",
+        "RAW·동영상"
       ],
-      "motif": "aperture",
+      "motif": "camera",
       "featured": [
         {
           "title": "빛망울 모양 실험실",
@@ -1755,7 +1760,8 @@
           "image": "img/sims/camerabook-sim-rolling.jpg"
         }
       ],
-      "field": "culture"
+      "field": "culture",
+      "checkout": "system-books/camera"
     },
     {
       "id": "musicbook",
@@ -3037,6 +3043,14 @@
       "status": "published",
       "url": "https://money.euiyun.com/",
       "checkout": "money-books"
+    },
+    {
+      "id": "systembooks",
+      "title": "SystemBooks",
+      "subtitle": "시스템 교과서 서가",
+      "status": "published",
+      "url": "https://system.euiyun.com/",
+      "checkout": "system-books"
     }
   ]
 }
