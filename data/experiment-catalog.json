@@ -36198,6 +36198,816 @@
     "link": "chapters/transformation-kinetics.html#sim-ch"
   },
   {
+    "id": "quantum-mechanics/angular-momentum/sim-comm",
+    "bookId": "quantum-mechanics",
+    "title": "교환자 계산기: 행렬로 확인하는 각운동량 대수",
+    "link": "chapters/angular-momentum.html#sim-comm"
+  },
+  {
+    "id": "quantum-mechanics/angular-momentum/sim-ladder",
+    "bookId": "quantum-mechanics",
+    "title": "사다리 놀이터: 막대를 끌어 상태를 만들고 연산자를 건다",
+    "link": "chapters/angular-momentum.html#sim-ladder"
+  },
+  {
+    "id": "quantum-mechanics/angular-momentum/sim-ylm",
+    "bookId": "quantum-mechanics",
+    "title": "구면 조화 함수 뷰어: 끌어서 돌려 보기",
+    "link": "chapters/angular-momentum.html#sim-ylm"
+  },
+  {
+    "id": "quantum-mechanics/angular-momentum/sim-cone",
+    "bookId": "quantum-mechanics",
+    "title": "벡터 모형 원뿔: L의 끝을 끌어 m을 고른다",
+    "link": "chapters/angular-momentum.html#sim-cone"
+  },
+  {
+    "id": "quantum-mechanics/angular-momentum/sim-meas",
+    "bookId": "quantum-mechanics",
+    "title": "측정 실험: 축 n을 끌어 기울이고 L n 을 잰다",
+    "link": "chapters/angular-momentum.html#sim-meas"
+  },
+  {
+    "id": "quantum-mechanics/angular-momentum/sim-dmat",
+    "bookId": "quantum-mechanics",
+    "title": "위그너 d 행렬: β를 끌어 돌리고 행렬 지수와 비교",
+    "link": "chapters/angular-momentum.html#sim-dmat"
+  },
+  {
+    "id": "quantum-mechanics/angular-momentum/sim-rot",
+    "bookId": "quantum-mechanics",
+    "title": "회전 스펙트럼 실험실: 봉우리를 끌어 온도를 바꾼다",
+    "link": "chapters/angular-momentum.html#sim-rot"
+  },
+  {
+    "id": "quantum-mechanics/angular-momentum/sim-game",
+    "bookId": "quantum-mechanics",
+    "title": "스펙트럼 맞히기 게임: 모형 손잡이 두 개로 B와 T를 찾아라",
+    "link": "chapters/angular-momentum.html#sim-game"
+  },
+  {
+    "id": "quantum-mechanics/central-potentials/sim-veff",
+    "bookId": "quantum-mechanics",
+    "title": "구형 우물 실험대: 벽과 바닥을 끌어 속박 상태를 세어라",
+    "link": "chapters/central-potentials.html#sim-veff"
+  },
+  {
+    "id": "quantum-mechanics/central-potentials/sim-dot",
+    "bookId": "quantum-mechanics",
+    "title": "양자점 색 맞히기: 반지름을 끌어 목표 파장을 내라",
+    "link": "chapters/central-potentials.html#sim-dot"
+  },
+  {
+    "id": "quantum-mechanics/central-potentials/sim-lv",
+    "bookId": "quantum-mechanics",
+    "title": "중심력 준위 비교기: 퍼텐셜을 바꾸고 손잡이를 끌어라",
+    "link": "chapters/central-potentials.html#sim-lv"
+  },
+  {
+    "id": "quantum-mechanics/central-potentials/sim-shoot",
+    "bookId": "quantum-mechanics",
+    "title": "사격법: ν 손잡이를 끌어 숨은 준위를 모두 찾아라",
+    "link": "chapters/central-potentials.html#sim-shoot"
+  },
+  {
+    "id": "quantum-mechanics/central-potentials/sim-orb",
+    "bookId": "quantum-mechanics",
+    "title": "닫힌 궤도와 룽게–렌츠 벡터: 처음 속도를 끌어라",
+    "link": "chapters/central-potentials.html#sim-orb"
+  },
+  {
+    "id": "quantum-mechanics/central-potentials/sim-fz",
+    "bookId": "quantum-mechanics",
+    "title": "도펀트 동결: 준위와 온도를 끌어 이온화를 보라",
+    "link": "chapters/central-potentials.html#sim-fz"
+  },
+  {
+    "id": "quantum-mechanics/density-matrix/sim-ball",
+    "bookId": "quantum-mechanics",
+    "title": "블로흐 공 안의 밀도 행렬",
+    "link": "chapters/density-matrix.html#sim-ball"
+  },
+  {
+    "id": "quantum-mechanics/density-matrix/sim-ptrace",
+    "bookId": "quantum-mechanics",
+    "title": "두 큐비트의 부분 대각합",
+    "link": "chapters/density-matrix.html#sim-ptrace"
+  },
+  {
+    "id": "quantum-mechanics/density-matrix/sim-thermal",
+    "bookId": "quantum-mechanics",
+    "title": "B–T 지도 위의 스핀 분극",
+    "link": "chapters/density-matrix.html#sim-thermal"
+  },
+  {
+    "id": "quantum-mechanics/density-matrix/sim-interf",
+    "bookId": "quantum-mechanics",
+    "title": "경로를 기록하는 간섭계와 양자 지우개",
+    "link": "chapters/density-matrix.html#sim-interf"
+  },
+  {
+    "id": "quantum-mechanics/density-matrix/sim-bloch",
+    "bookId": "quantum-mechanics",
+    "title": "블로흐 방정식 실험대",
+    "link": "chapters/density-matrix.html#sim-bloch"
+  },
+  {
+    "id": "quantum-mechanics/density-matrix/sim-echo",
+    "bookId": "quantum-mechanics",
+    "title": "펄스를 놓아 에코 살리기",
+    "link": "chapters/density-matrix.html#sim-echo"
+  },
+  {
+    "id": "quantum-mechanics/density-matrix/sim-lind",
+    "bookId": "quantum-mechanics",
+    "title": "린드블라드 실험대",
+    "link": "chapters/density-matrix.html#sim-lind"
+  },
+  {
+    "id": "quantum-mechanics/density-matrix/sim-qlab",
+    "bookId": "quantum-mechanics",
+    "title": "수수께끼 큐비트 진단하기",
+    "link": "chapters/density-matrix.html#sim-qlab"
+  },
+  {
+    "id": "quantum-mechanics/em-fields/sim-landau",
+    "bookId": "quantum-mechanics",
+    "title": "란다우 게이지 실험대: 띠를 끌어 가장자리로 보내라",
+    "link": "chapters/em-fields.html#sim-landau"
+  },
+  {
+    "id": "quantum-mechanics/em-fields/sim-ab",
+    "bookId": "quantum-mechanics",
+    "title": "아하로노프–봄 간섭계: 자속으로 무늬를 과녁에 맞혀라",
+    "link": "chapters/em-fields.html#sim-ab"
+  },
+  {
+    "id": "quantum-mechanics/em-fields/sim-squid",
+    "bookId": "quantum-mechanics",
+    "title": "SQUID 자속계: 숨은 자속을 상쇄해 전압을 바닥으로",
+    "link": "chapters/em-fields.html#sim-squid"
+  },
+  {
+    "id": "quantum-mechanics/em-fields/sim-qhe",
+    "bookId": "quantum-mechanics",
+    "title": "양자 홀 측정대: 자기장을 끌어 평탄면 한가운데를 찾아라",
+    "link": "chapters/em-fields.html#sim-qhe"
+  },
+  {
+    "id": "quantum-mechanics/em-fields/sim-sdh",
+    "bookId": "quantum-mechanics",
+    "title": "미지 시료의 SdH 진동: 빗을 맞춰 농도를 알아내라",
+    "link": "chapters/em-fields.html#sim-sdh"
+  },
+  {
+    "id": "quantum-mechanics/em-fields/sim-fd",
+    "bookId": "quantum-mechanics",
+    "title": "포크–다윈 스펙트럼: 자기장을 끌어 전자를 채워라",
+    "link": "chapters/em-fields.html#sim-fd"
+  },
+  {
+    "id": "quantum-mechanics/identical-particles/sim-pair",
+    "bookId": "quantum-mechanics",
+    "title": "두 입자 확률 지도: 교환 대칭이 만드는 뭉침과 비켜남",
+    "link": "chapters/identical-particles.html#sim-pair"
+  },
+  {
+    "id": "quantum-mechanics/identical-particles/sim-fill",
+    "bookId": "quantum-mechanics",
+    "title": "준위 채우기: 입자를 끌어 놓고 배타 원리를 겪어 보기",
+    "link": "chapters/identical-particles.html#sim-fill"
+  },
+  {
+    "id": "quantum-mechanics/identical-particles/sim-dot",
+    "bookId": "quantum-mechanics",
+    "title": "두 전자 양자점: 단일항–삼중항 간격을 직접 풀어 보기",
+    "link": "chapters/identical-particles.html#sim-dot"
+  },
+  {
+    "id": "quantum-mechanics/identical-particles/sim-h2",
+    "bookId": "quantum-mechanics",
+    "title": "하이틀러–런던 H₂: 핵 사이 거리를 끌어 결합을 만든다",
+    "link": "chapters/identical-particles.html#sim-h2"
+  },
+  {
+    "id": "quantum-mechanics/identical-particles/sim-hund",
+    "bookId": "quantum-mechanics",
+    "title": "훈트 상자: 전자를 칸에 놓아 바닥 항을 맞혀라",
+    "link": "chapters/identical-particles.html#sim-hund"
+  },
+  {
+    "id": "quantum-mechanics/identical-particles/sim-fock",
+    "bookId": "quantum-mechanics",
+    "title": "포크 공간 놀이터: 연산자를 눌러 상태와 부호를 만든다",
+    "link": "chapters/identical-particles.html#sim-fock"
+  },
+  {
+    "id": "quantum-mechanics/identical-particles/sim-hub",
+    "bookId": "quantum-mechanics",
+    "title": "허바드 이중 자리: U/t를 끌어 초교환을 만든다",
+    "link": "chapters/identical-particles.html#sim-hub"
+  },
+  {
+    "id": "quantum-mechanics/ladder-operators/sim-fock",
+    "bookId": "quantum-mechanics",
+    "title": "포크 공간의 행렬: 자르면 끝에서 깨진다",
+    "link": "chapters/ladder-operators.html#sim-fock"
+  },
+  {
+    "id": "quantum-mechanics/ladder-operators/sim-compose",
+    "bookId": "quantum-mechanics",
+    "title": "포크 계수를 끌어 파속 만들기",
+    "link": "chapters/ladder-operators.html#sim-compose"
+  },
+  {
+    "id": "quantum-mechanics/ladder-operators/sim-coh",
+    "bookId": "quantum-mechanics",
+    "title": "위상 공간에서 α를 끌어 놓기: 포아송 광자 수",
+    "link": "chapters/ladder-operators.html#sim-coh"
+  },
+  {
+    "id": "quantum-mechanics/ladder-operators/sim-kick",
+    "bookId": "quantum-mechanics",
+    "title": "과녁 맞히기: 힘 펄스의 타이밍으로 목표 α 만들기",
+    "link": "chapters/ladder-operators.html#sim-kick"
+  },
+  {
+    "id": "quantum-mechanics/ladder-operators/sim-sq",
+    "bookId": "quantum-mechanics",
+    "title": "타원 손잡이를 끌어 압축하기: 돌아가는 타원과 Δx(t)",
+    "link": "chapters/ladder-operators.html#sim-sq"
+  },
+  {
+    "id": "quantum-mechanics/ladder-operators/sim-wig",
+    "bookId": "quantum-mechanics",
+    "title": "위그너 함수 탐험: 음수 영역과 주변 분포",
+    "link": "chapters/ladder-operators.html#sim-wig"
+  },
+  {
+    "id": "quantum-mechanics/ladder-operators/sim-jn",
+    "bookId": "quantum-mechanics",
+    "title": "열잡음 스펙트럼: 꺾이는 점을 끌어 온도 바꾸기",
+    "link": "chapters/ladder-operators.html#sim-jn"
+  },
+  {
+    "id": "quantum-mechanics/math-tools/sim-conv",
+    "bookId": "quantum-mechanics",
+    "title": "에너지 단위 환산기와 에너지 사다리",
+    "link": "chapters/math-tools.html#sim-conv"
+  },
+  {
+    "id": "quantum-mechanics/math-tools/sim-eig",
+    "bookId": "quantum-mechanics",
+    "title": "에르미트 행렬 고유값 계산기",
+    "link": "chapters/math-tools.html#sim-eig"
+  },
+  {
+    "id": "quantum-mechanics/math-tools/sim-ft",
+    "bookId": "quantum-mechanics",
+    "title": "푸리에 쌍 뷰어: Δx·Δk 줄이기",
+    "link": "chapters/math-tools.html#sim-ft"
+  },
+  {
+    "id": "quantum-mechanics/math-tools/sim-sf",
+    "bookId": "quantum-mechanics",
+    "title": "특수 함수 그래프 도구",
+    "link": "chapters/math-tools.html#sim-sf"
+  },
+  {
+    "id": "quantum-mechanics/math-tools/sim-cg",
+    "bookId": "quantum-mechanics",
+    "title": "클레브시–고르단 표 생성기",
+    "link": "chapters/math-tools.html#sim-cg"
+  },
+  {
+    "id": "quantum-mechanics/measurement/sim-bloch",
+    "bookId": "quantum-mechanics",
+    "title": "블로흐 구 측정 실험대",
+    "link": "chapters/measurement.html#sim-bloch"
+  },
+  {
+    "id": "quantum-mechanics/measurement/sim-sg",
+    "bookId": "quantum-mechanics",
+    "title": "연속 슈테른–게를라흐 실험대",
+    "link": "chapters/measurement.html#sim-sg"
+  },
+  {
+    "id": "quantum-mechanics/measurement/sim-tomo",
+    "bookId": "quantum-mechanics",
+    "title": "숨은 스핀 상태 맞히기",
+    "link": "chapters/measurement.html#sim-tomo"
+  },
+  {
+    "id": "quantum-mechanics/measurement/sim-pol",
+    "bookId": "quantum-mechanics",
+    "title": "편광판과 단일 광자",
+    "link": "chapters/measurement.html#sim-pol"
+  },
+  {
+    "id": "quantum-mechanics/measurement/sim-comm",
+    "bookId": "quantum-mechanics",
+    "title": "교환자 계산기",
+    "link": "chapters/measurement.html#sim-comm"
+  },
+  {
+    "id": "quantum-mechanics/measurement/sim-rob",
+    "bookId": "quantum-mechanics",
+    "title": "로버트슨 부등식 지도",
+    "link": "chapters/measurement.html#sim-rob"
+  },
+  {
+    "id": "quantum-mechanics/measurement/sim-gauss",
+    "bookId": "quantum-mechanics",
+    "title": "최소 불확정 파속과 그 붕괴",
+    "link": "chapters/measurement.html#sim-gauss"
+  },
+  {
+    "id": "quantum-mechanics/measurement/sim-lw",
+    "bookId": "quantum-mechanics",
+    "title": "수명, 관측 시간, 선폭",
+    "link": "chapters/measurement.html#sim-lw"
+  },
+  {
+    "id": "quantum-mechanics/measurement/sim-spad",
+    "bookId": "quantum-mechanics",
+    "title": "SPAD 광자 계수기",
+    "link": "chapters/measurement.html#sim-spad"
+  },
+  {
+    "id": "quantum-mechanics/one-dimensional/sim-nodes",
+    "bookId": "quantum-mechanics",
+    "title": "마디 정리 실험실: 우물 속 혹",
+    "link": "chapters/one-dimensional.html#sim-nodes"
+  },
+  {
+    "id": "quantum-mechanics/one-dimensional/sim-delta",
+    "bookId": "quantum-mechanics",
+    "title": "델타 우물·장벽: 꺾인 파동함수와 T(E)",
+    "link": "chapters/one-dimensional.html#sim-delta"
+  },
+  {
+    "id": "quantum-mechanics/one-dimensional/sim-dw",
+    "bookId": "quantum-mechanics",
+    "title": "결합 양자 우물: 터널 분리와 반교차",
+    "link": "chapters/one-dimensional.html#sim-dw"
+  },
+  {
+    "id": "quantum-mechanics/one-dimensional/sim-smat",
+    "bookId": "quantum-mechanics",
+    "title": "S 행렬 탐색기: 복소 평면 위의 r, r′, t",
+    "link": "chapters/one-dimensional.html#sim-smat"
+  },
+  {
+    "id": "quantum-mechanics/one-dimensional/sim-sl",
+    "bookId": "quantum-mechanics",
+    "title": "장벽 N개: 공명 봉우리에서 미니띠로",
+    "link": "chapters/one-dimensional.html#sim-sl"
+  },
+  {
+    "id": "quantum-mechanics/one-dimensional/sim-game",
+    "bookId": "quantum-mechanics",
+    "title": "공명 과녁 맞히기: 우물과 장벽을 설계하라",
+    "link": "chapters/one-dimensional.html#sim-game"
+  },
+  {
+    "id": "quantum-mechanics/one-dimensional/sim-shoot",
+    "bookId": "quantum-mechanics",
+    "title": "사격법 시뮬레이터: 꼬리를 0에 착지시켜라",
+    "link": "chapters/one-dimensional.html#sim-shoot"
+  },
+  {
+    "id": "quantum-mechanics/perturbation/sim-well",
+    "bookId": "quantum-mechanics",
+    "title": "섭동 실험대: 우물 바닥을 끌어 준위를 원하는 만큼 옮겨라",
+    "link": "chapters/perturbation.html#sim-well"
+  },
+  {
+    "id": "quantum-mechanics/perturbation/sim-box",
+    "bookId": "quantum-mechanics",
+    "title": "축퇴 쪼개기: 혹을 끌어 두 상태를 원하는 만큼 갈라라",
+    "link": "chapters/perturbation.html#sim-box"
+  },
+  {
+    "id": "quantum-mechanics/perturbation/sim-qcse",
+    "bookId": "quantum-mechanics",
+    "title": "전계 흡수 변조기 설계: 전계를 끌어 흡수 끝을 옮겨라",
+    "link": "chapters/perturbation.html#sim-qcse"
+  },
+  {
+    "id": "quantum-mechanics/perturbation/sim-fs",
+    "bookId": "quantum-mechanics",
+    "title": "미세 구조 확대경: 보정을 하나씩 켜고 준위를 눌러 분해하라",
+    "link": "chapters/perturbation.html#sim-fs"
+  },
+  {
+    "id": "quantum-mechanics/perturbation/sim-zee",
+    "bookId": "quantum-mechanics",
+    "title": "제만 지도: 자기장을 끌어 약한 장에서 파셴–바크까지",
+    "link": "chapters/perturbation.html#sim-zee"
+  },
+  {
+    "id": "quantum-mechanics/perturbation/sim-kp",
+    "bookId": "quantum-mechanics",
+    "title": "2띠 k·p 실험대: 띠 간격을 끌어 목표 물질의 유효 질량을 맞춰라",
+    "link": "chapters/perturbation.html#sim-kp"
+  },
+  {
+    "id": "quantum-mechanics/quantum-information/sim-gate",
+    "bookId": "quantum-mechanics",
+    "title": "블로흐 구 게이트 실험실",
+    "link": "chapters/quantum-information.html#sim-gate"
+  },
+  {
+    "id": "quantum-mechanics/quantum-information/sim-circ",
+    "bookId": "quantum-mechanics",
+    "title": "3큐비트 회로판: 얽힘 만들기",
+    "link": "chapters/quantum-information.html#sim-circ"
+  },
+  {
+    "id": "quantum-mechanics/quantum-information/sim-chsh",
+    "bookId": "quantum-mechanics",
+    "title": "CHSH 벨 실험",
+    "link": "chapters/quantum-information.html#sim-chsh"
+  },
+  {
+    "id": "quantum-mechanics/quantum-information/sim-tele",
+    "bookId": "quantum-mechanics",
+    "title": "양자 순간이동 단계별 실행",
+    "link": "chapters/quantum-information.html#sim-tele"
+  },
+  {
+    "id": "quantum-mechanics/quantum-information/sim-bb84",
+    "bookId": "quantum-mechanics",
+    "title": "BB84 키 분배와 도청 탐지",
+    "link": "chapters/quantum-information.html#sim-bb84"
+  },
+  {
+    "id": "quantum-mechanics/quantum-information/sim-grover",
+    "bookId": "quantum-mechanics",
+    "title": "그로버 검색: 진폭 증폭",
+    "link": "chapters/quantum-information.html#sim-grover"
+  },
+  {
+    "id": "quantum-mechanics/quantum-information/sim-qec",
+    "bookId": "quantum-mechanics",
+    "title": "반복 부호 몬테카를로",
+    "link": "chapters/quantum-information.html#sim-qec"
+  },
+  {
+    "id": "quantum-mechanics/quantum-information/sim-tm",
+    "bookId": "quantum-mechanics",
+    "title": "트랜스몬: 전하 분산과 비조화성",
+    "link": "chapters/quantum-information.html#sim-tm"
+  },
+  {
+    "id": "quantum-mechanics/quantum-information/sim-th",
+    "bookId": "quantum-mechanics",
+    "title": "열 들뜸과 희석 냉동기의 온도 단",
+    "link": "chapters/quantum-information.html#sim-th"
+  },
+  {
+    "id": "quantum-mechanics/scattering/sim-born",
+    "bookId": "quantum-mechanics",
+    "title": "보른 근사 검증대: 우물을 끌어 정확한 단면적과 비교하라",
+    "link": "chapters/scattering.html#sim-born"
+  },
+  {
+    "id": "quantum-mechanics/scattering/sim-rbs",
+    "bookId": "quantum-mechanics",
+    "title": "RBS 분광기: 검출기를 끌어 미지 원소를 알아맞혀라",
+    "link": "chapters/scattering.html#sim-rbs"
+  },
+  {
+    "id": "quantum-mechanics/scattering/sim-pw",
+    "bookId": "quantum-mechanics",
+    "title": "부분파 작업대: 위상 이동에서 단면적과 광학 정리까지",
+    "link": "chapters/scattering.html#sim-pw"
+  },
+  {
+    "id": "quantum-mechanics/scattering/sim-alen",
+    "bookId": "quantum-mechanics",
+    "title": "산란 길이 만들기: 우물 바닥을 끌어 목표 aₛ를 맞혀라",
+    "link": "chapters/scattering.html#sim-alen"
+  },
+  {
+    "id": "quantum-mechanics/scattering/sim-res",
+    "bookId": "quantum-mechanics",
+    "title": "공명 사냥: 에너지를 끌어 준속박 상태를 찾아라",
+    "link": "chapters/scattering.html#sim-res"
+  },
+  {
+    "id": "quantum-mechanics/scattering/sim-mob",
+    "bookId": "quantum-mechanics",
+    "title": "이동도 지도: 도핑과 온도를 끌어 어느 산란이 이기는지 보라",
+    "link": "chapters/scattering.html#sim-mob"
+  },
+  {
+    "id": "quantum-mechanics/scattering/sim-imp",
+    "bookId": "quantum-mechanics",
+    "title": "주입 충돌 실험대: 충돌 변수를 끌어 Si 원자를 튕겨라",
+    "link": "chapters/scattering.html#sim-imp"
+  },
+  {
+    "id": "quantum-mechanics/spin/sim-pauli",
+    "bookId": "quantum-mechanics",
+    "title": "파울리 계산기: 곱·교환자·반교환자와 n·σ",
+    "link": "chapters/spin.html#sim-pauli"
+  },
+  {
+    "id": "quantum-mechanics/spin/sim-bloch",
+    "bookId": "quantum-mechanics",
+    "title": "블로흐 구: 상태를 끌어 놓고 세 축으로 재기",
+    "link": "chapters/spin.html#sim-bloch"
+  },
+  {
+    "id": "quantum-mechanics/spin/sim-gate",
+    "bookId": "quantum-mechanics",
+    "title": "게이트 퍼즐: 펄스 몇 번으로 목표 블로흐 벡터에 닿을까",
+    "link": "chapters/spin.html#sim-gate"
+  },
+  {
+    "id": "quantum-mechanics/spin/sim-larmor",
+    "bookId": "quantum-mechanics",
+    "title": "라모어 세차: 자기장과 스핀을 끌어 놓는다",
+    "link": "chapters/spin.html#sim-larmor"
+  },
+  {
+    "id": "quantum-mechanics/spin/sim-rabi",
+    "bookId": "quantum-mechanics",
+    "title": "라비 진동: 회전 좌표계의 블로흐 구와 펄스 길이",
+    "link": "chapters/spin.html#sim-rabi"
+  },
+  {
+    "id": "quantum-mechanics/spin/sim-chev",
+    "bookId": "quantum-mechanics",
+    "title": "셰브론 게임: 모르는 큐비트의 공명과 π 펄스를 맞혀라",
+    "link": "chapters/spin.html#sim-chev"
+  },
+  {
+    "id": "quantum-mechanics/spin/sim-cg",
+    "bookId": "quantum-mechanics",
+    "title": "클레브시–고르단 탐색기: M 블록마다 직교 행렬",
+    "link": "chapters/spin.html#sim-cg"
+  },
+  {
+    "id": "quantum-mechanics/spin/sim-zeeman",
+    "bookId": "quantum-mechanics",
+    "title": "p 준위의 제만 갈라짐: 이상 제만에서 파셴–바크까지",
+    "link": "chapters/spin.html#sim-zeeman"
+  },
+  {
+    "id": "quantum-mechanics/spin/sim-nv",
+    "bookId": "quantum-mechanics",
+    "title": "NV 자기계 게임: ODMR 두 골로 숨은 자기장을 맞혀라",
+    "link": "chapters/spin.html#sim-nv"
+  },
+  {
+    "id": "quantum-mechanics/state-space/sim-inner",
+    "bookId": "quantum-mechanics",
+    "title": "내적과 사영: 진폭의 머리–꼬리 덧셈",
+    "link": "chapters/state-space.html#sim-inner"
+  },
+  {
+    "id": "quantum-mechanics/state-space/sim-basis",
+    "bookId": "quantum-mechanics",
+    "title": "기저 변환 실험실: 같은 상태, 다른 성분",
+    "link": "chapters/state-space.html#sim-basis"
+  },
+  {
+    "id": "quantum-mechanics/state-space/sim-eig",
+    "bookId": "quantum-mechanics",
+    "title": "2×2 고유값 실험실과 과녁 맞히기",
+    "link": "chapters/state-space.html#sim-eig"
+  },
+  {
+    "id": "quantum-mechanics/state-space/sim-rep",
+    "bookId": "quantum-mechanics",
+    "title": "위치 표현 ⟷ 운동량 표현",
+    "link": "chapters/state-space.html#sim-rep"
+  },
+  {
+    "id": "quantum-mechanics/state-space/sim-fd",
+    "bookId": "quantum-mechanics",
+    "title": "유한 차분 해밀토니언과 격자 수렴",
+    "link": "chapters/state-space.html#sim-fd"
+  },
+  {
+    "id": "quantum-mechanics/state-space/sim-tensor",
+    "bookId": "quantum-mechanics",
+    "title": "두 큐비트: 곱 상태에서 얽힘까지",
+    "link": "chapters/state-space.html#sim-tensor"
+  },
+  {
+    "id": "quantum-mechanics/symmetry/sim-translate",
+    "bookId": "quantum-mechanics",
+    "title": "병진 연산자 T(a) = e −ip̂a/ħ : 파속을 생성자로 옮기기",
+    "link": "chapters/symmetry.html#sim-translate"
+  },
+  {
+    "id": "quantum-mechanics/symmetry/sim-conserve",
+    "bookId": "quantum-mechanics",
+    "title": "대칭이 깨지면 보존도 깨진다: ⟨p⟩와 ⟨H⟩ 추적",
+    "link": "chapters/symmetry.html#sim-conserve"
+  },
+  {
+    "id": "quantum-mechanics/symmetry/sim-ring",
+    "bookId": "quantum-mechanics",
+    "title": "원자 고리의 해밀토니언 대각화: 고유 상태는 e ikn",
+    "link": "chapters/symmetry.html#sim-ring"
+  },
+  {
+    "id": "quantum-mechanics/symmetry/sim-parity",
+    "bookId": "quantum-mechanics",
+    "title": "대칭을 깨면 쌍극자가 생긴다: 이중 양자 우물",
+    "link": "chapters/symmetry.html#sim-parity"
+  },
+  {
+    "id": "quantum-mechanics/symmetry/sim-kramers",
+    "bookId": "quantum-mechanics",
+    "title": "라시바 띠와 크라머스 쌍: 자기장으로 축퇴 풀기",
+    "link": "chapters/symmetry.html#sim-kramers"
+  },
+  {
+    "id": "quantum-mechanics/symmetry/sim-box",
+    "bookId": "quantum-mechanics",
+    "title": "대칭 낮추기: 정사각 상자를 직사각으로",
+    "link": "chapters/symmetry.html#sim-box"
+  },
+  {
+    "id": "quantum-mechanics/symmetry/sim-game",
+    "bookId": "quantum-mechanics",
+    "title": "섭동의 대칭을 골라 지정된 축퇴만 가르기",
+    "link": "chapters/symmetry.html#sim-game"
+  },
+  {
+    "id": "quantum-mechanics/symmetry/sim-valley",
+    "bookId": "quantum-mechanics",
+    "title": "골짜기 축퇴 가르기: 2축 변형과 나노시트 구속",
+    "link": "chapters/symmetry.html#sim-valley"
+  },
+  {
+    "id": "quantum-mechanics/time-dependent/sim-rabi",
+    "bookId": "quantum-mechanics",
+    "title": "라비 셰브런: 이조와 펄스 길이를 끌어 목표 상태를 만들어라",
+    "link": "chapters/time-dependent.html#sim-rabi"
+  },
+  {
+    "id": "quantum-mechanics/time-dependent/sim-pert",
+    "bookId": "quantum-mechanics",
+    "title": "1차 섭동 대 정확한 답: 시간을 끌어 선 모양이 좁아지는 것을 보라",
+    "link": "chapters/time-dependent.html#sim-pert"
+  },
+  {
+    "id": "quantum-mechanics/time-dependent/sim-golden",
+    "bookId": "quantum-mechanics",
+    "title": "준연속 상태로의 붕괴: 결합을 끌어 황금률을 확인하라",
+    "link": "chapters/time-dependent.html#sim-golden"
+  },
+  {
+    "id": "quantum-mechanics/time-dependent/sim-dipole",
+    "bookId": "quantum-mechanics",
+    "title": "전이 쌍극자 탐험기: 편광 화살표를 끌어 선택 규칙을 확인하라",
+    "link": "chapters/time-dependent.html#sim-dipole"
+  },
+  {
+    "id": "quantum-mechanics/time-dependent/sim-laser",
+    "bookId": "quantum-mechanics",
+    "title": "레이저 준위 실험대: 펌프를 끌어 밀도 반전을 만들어라",
+    "link": "chapters/time-dependent.html#sim-laser"
+  },
+  {
+    "id": "quantum-mechanics/time-dependent/sim-line",
+    "bookId": "quantum-mechanics",
+    "title": "자유 유도 감쇠와 스핀 메아리: T₂ 손잡이를 끌어 선폭을 읽어라",
+    "link": "chapters/time-dependent.html#sim-line"
+  },
+  {
+    "id": "quantum-mechanics/time-dependent/sim-pd",
+    "bookId": "quantum-mechanics",
+    "title": "포토다이오드 설계: 파장과 흡수층 두께를 끌어 양자 효율을 맞춰라",
+    "link": "chapters/time-dependent.html#sim-pd"
+  },
+  {
+    "id": "quantum-mechanics/time-evolution/sim-beats",
+    "bookId": "quantum-mechanics",
+    "title": "페이저 시계: 세 정상 상태의 중첩과 양자 재생",
+    "link": "chapters/time-evolution.html#sim-beats"
+  },
+  {
+    "id": "quantum-mechanics/time-evolution/sim-pictures",
+    "bookId": "quantum-mechanics",
+    "title": "같은 ⟨x⟩(t), 두 가지 계산",
+    "link": "chapters/time-evolution.html#sim-pictures"
+  },
+  {
+    "id": "quantum-mechanics/time-evolution/sim-dqd",
+    "bookId": "quantum-mechanics",
+    "title": "이중 양자점의 터널 진동",
+    "link": "chapters/time-evolution.html#sim-dqd"
+  },
+  {
+    "id": "quantum-mechanics/time-evolution/sim-game",
+    "bookId": "quantum-mechanics",
+    "title": "게임: 정해진 시각에 전자를 옮겨라",
+    "link": "chapters/time-evolution.html#sim-game"
+  },
+  {
+    "id": "quantum-mechanics/time-evolution/sim-huygens",
+    "bookId": "quantum-mechanics",
+    "title": "전파 인자로 만든 이중 슬릿 무늬",
+    "link": "chapters/time-evolution.html#sim-huygens"
+  },
+  {
+    "id": "quantum-mechanics/time-evolution/sim-num",
+    "bookId": "quantum-mechanics",
+    "title": "세 방법 경주: 오일러 · 크랭크–니콜슨 · 분할 연산자",
+    "link": "chapters/time-evolution.html#sim-num"
+  },
+  {
+    "id": "quantum-mechanics/variational-wkb/sim-trial",
+    "bookId": "quantum-mechanics",
+    "title": "시험 함수 실험실: 폭을 끌어 ⟨H⟩를 최소화하라",
+    "link": "chapters/variational-wkb.html#sim-trial"
+  },
+  {
+    "id": "quantum-mechanics/variational-wkb/sim-he",
+    "bookId": "quantum-mechanics",
+    "title": "유효 핵전하 ζ 최적화: 헬륨꼴 이온",
+    "link": "chapters/variational-wkb.html#sim-he"
+  },
+  {
+    "id": "quantum-mechanics/variational-wkb/sim-h2",
+    "bookId": "quantum-mechanics",
+    "title": "H₂⁺ 결합 만들기: 양성자를 끌어 평형 거리를 찾아라",
+    "link": "chapters/variational-wkb.html#sim-h2"
+  },
+  {
+    "id": "quantum-mechanics/variational-wkb/sim-rr",
+    "bookId": "quantum-mechanics",
+    "title": "레일리–리츠 실험실: 기저를 늘려 에어리 준위로 조여라",
+    "link": "chapters/variational-wkb.html#sim-rr"
+  },
+  {
+    "id": "quantum-mechanics/variational-wkb/sim-bs",
+    "bookId": "quantum-mechanics",
+    "title": "보어–조머펠트 사냥: 에너지를 끌어 위상 적분을 맞혀라",
+    "link": "chapters/variational-wkb.html#sim-bs"
+  },
+  {
+    "id": "quantum-mechanics/variational-wkb/sim-alpha",
+    "bookId": "quantum-mechanics",
+    "title": "알파 붕괴: 24자릿수의 반감기를 한 줄로 맞혀라",
+    "link": "chapters/variational-wkb.html#sim-alpha"
+  },
+  {
+    "id": "quantum-mechanics/variational-wkb/sim-fn",
+    "bookId": "quantum-mechanics",
+    "title": "파울러–노드하임 실험대: 전기장을 끌어 장벽을 기울여라",
+    "link": "chapters/variational-wkb.html#sim-fn"
+  },
+  {
+    "id": "quantum-mechanics/wave-function/sim-born",
+    "bookId": "quantum-mechanics",
+    "title": "보른 규칙 측정기: 히스토그램이 |Ψ|²이 될 때까지",
+    "link": "chapters/wave-function.html#sim-born"
+  },
+  {
+    "id": "quantum-mechanics/wave-function/sim-flow",
+    "bookId": "quantum-mechanics",
+    "title": "상자 회계: dP/dt = j(a) − j(b)",
+    "link": "chapters/wave-function.html#sim-flow"
+  },
+  {
+    "id": "quantum-mechanics/wave-function/sim-draw",
+    "bookId": "quantum-mechanics",
+    "title": "파동함수 그리기: 과녁 ⟨x⟩, Δx 맞히기",
+    "link": "chapters/wave-function.html#sim-draw"
+  },
+  {
+    "id": "quantum-mechanics/wave-function/sim-fourier",
+    "bookId": "quantum-mechanics",
+    "title": "위치 ↔ 운동량 푸리에 쌍",
+    "link": "chapters/wave-function.html#sim-fourier"
+  },
+  {
+    "id": "quantum-mechanics/wave-function/sim-spread",
+    "bookId": "quantum-mechanics",
+    "title": "파속 발사대: 퍼짐 σ(t), 군속도와 위상 속도",
+    "link": "chapters/wave-function.html#sim-spread"
+  },
+  {
+    "id": "quantum-mechanics/wave-function/sim-ehren",
+    "bookId": "quantum-mechanics",
+    "title": "에렌페스트 대 뉴턴: ⟨x⟩(t)와 고전 궤적",
+    "link": "chapters/wave-function.html#sim-ehren"
+  },
+  {
+    "id": "quantum-mechanics/wave-function/sim-coh",
+    "bookId": "quantum-mechanics",
+    "title": "전자 바이프리즘: 가시도와 결맞음 길이",
+    "link": "chapters/wave-function.html#sim-coh"
+  },
+  {
     "id": "fluid-mechanics/bernoulli/sim-pitot",
     "bookId": "fluid-mechanics",
     "title": "피토 정압관으로 비행 속도 재기",
