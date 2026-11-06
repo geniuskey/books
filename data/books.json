@@ -1388,13 +1388,13 @@
         "title": "ColorBook",
         "description": "Measure and reproduce color across lighting, cameras, and displays."
       },
-      "url": "https://colorbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/colorbook",
+      "url": "https://science.euiyun.com/color/",
+      "repo": "https://github.com/geniuskey/science-books",
       "field": "electronics",
       "status": "published",
       "level": "공대 학부",
       "chapters": 20,
-      "simulators": 100,
+      "simulators": 117,
       "color": "#c2255c",
       "colorDark": "#f783ac",
       "topics": [
@@ -1404,7 +1404,8 @@
         "조명·카메라·디스플레이",
         "HDR·색 관리·인쇄"
       ],
-      "motif": "subpixel"
+      "motif": "subpixel",
+      "checkout": "science-books/color"
     },
     {
       "id": "electricbook",
