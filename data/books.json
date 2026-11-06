@@ -27,7 +27,7 @@
       "id": "life",
       "name": "살아가는 지식",
       "en": "Knowledge for Life",
-      "desc": "돈과 투자, 주거와 몸의 원리, 카메라와 음악처럼 생활에서 만나는 지식"
+      "desc": "돈과 투자, 주거와 몸의 원리, 미술과 음악처럼 생활에서 만나는 지식"
     }
   ],
   "fieldAliases": {
@@ -90,7 +90,7 @@
       "en": "Science & Engineering",
       "color": "#0a7f6f",
       "colorDark": "#2fd1b5",
-      "desc": "일반물리·화학에서 전자기학·열역학·재료·역학까지. ScienceBooks에서 관리하는 대학 과학·공학 교재입니다."
+      "desc": "일반물리·화학에서 전자기학·열역학·재료·유체와 색채공학까지. ScienceBooks에서 관리하는 대학 과학·공학 교재입니다."
     },
     {
       "id": "math",
@@ -117,7 +117,7 @@
       "en": "Devices & Systems",
       "color": "#15803d",
       "colorDark": "#4ade80",
-      "desc": "회로의 원리에서 스마트폰, 자동차, 선박, 색 재현까지."
+      "desc": "회로의 원리에서 스마트폰, 카메라, 자동차, 선박까지."
     },
     {
       "id": "money",
@@ -144,7 +144,7 @@
       "en": "Arts & Culture",
       "color": "#c2410c",
       "colorDark": "#fb923c",
-      "desc": "사진·음악에서 미술과 시각 표현, 웹·제품·산업디자인까지."
+      "desc": "음악에서 미술과 시각 표현, 웹·제품·산업디자인까지."
     }
   ],
   "books": [
@@ -1390,7 +1390,7 @@
       },
       "url": "https://science.euiyun.com/color/",
       "repo": "https://github.com/geniuskey/science-books",
-      "field": "electronics",
+      "field": "science",
       "status": "published",
       "level": "공대 학부",
       "chapters": 20,
@@ -1761,7 +1761,7 @@
           "image": "img/sims/camerabook-sim-rolling.jpg"
         }
       ],
-      "field": "culture",
+      "field": "electronics",
       "checkout": "system-books/camera"
     },
     {

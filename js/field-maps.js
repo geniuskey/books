@@ -2,13 +2,14 @@
 window.FIELD_MAPS = {
   science: {
     title: "대학에서 배우는 과학과 공학의 기초",
-    desc: "ScienceBooks의 공통 기초 교재입니다. 물리·화학·재료와 열·유동을 공부하고 각 전공의 응용으로 이어갑니다.",
+    desc: "ScienceBooks의 공통 기초 교재입니다. 물리·화학·재료와 열·유동, 빛과 색을 공부하고 각 전공의 응용으로 이어갑니다.",
     // [왼쪽, 위, 열 수]. 화학은 한 줄로 세워 세 묶음이 한 행에 들어가게 합니다.
-    regions: [[12, 12, 2], [486, 12, 1], [742, 12, 2]],
+    regions: [[12, 12, 2], [486, 12, 1], [742, 12, 2], [742, 188, 1]],
     groups: [
       ["물리와 전자기", "Physics", "운동·파동에서 양자·고체, 전기장과 전자기파의 원리", ["general-physics", "modern-physics", "quantum-mechanics", "solid-state", "electromagnetics"]],
       ["화학과 재료", "Chemistry", "원자·분자·반응에서 재료의 구조와 물성까지", ["general-chemistry", "organic-chemistry", "materials-science"]],
       ["열과 유동", "Thermal & Fluids", "열·평형과 상변화, 유동 해석", ["thermal-physics", "fluid-mechanics"]],
+      ["빛과 색", "Color", "빛을 측정하고 기기에서 색을 재현하는 원리", ["colorbook"]],
     ],
     links: [
       ["general-physics", "modern-physics", "빛과 원자의 기초에서 양자역학과 에너지 띠로"],
@@ -23,6 +24,7 @@ window.FIELD_MAPS = {
       ["thermal-physics", "materials-science", "자유 에너지·상태도로 이해하는 상변태와 미세조직"],
       ["general-physics", "fluid-mechanics", "유체의 압력·흐름에서 검사 체적과 관 유동으로"],
       ["thermal-physics", "fluid-mechanics", "기체 운동론·확산·열전달과 유동"],
+      ["general-physics", "colorbook", "빛의 파동·스펙트럼에서 측색과 색공간으로"],
     ],
   },
   math: {
@@ -198,14 +200,13 @@ window.FIELD_MAPS = {
       ["electricbook", "phonebook", "회로가 모여 스마트폰이 되기까지"],
       ["electricbook", "carbook", "전압·전류·회로로 자동차 전장과 전원 이해하기"],
       ["electricbook", "shipbook", "전압·전류·회로로 선박 전기 시스템 이해하기"],
-      ["colorbook", "phonebook", "화면에서 빛과 색 재현하기"],
+      ["phonebook", "camerabook", "스마트폰 카메라 모듈과 전용 카메라의 센서·렌즈 크기 비교"],
       ["carbook", "shipbook", "전동 추진·에너지 관리와 자율 이동 시스템 비교"],
       ["phonebook", "carbook", "배터리 관리·열 설계의 기기별 제약 비교"],
     ],
     groups: [
       ["회로와 전기", "Circuits", "전자 기기를 이루는 회로의 기본 원리", ["electricbook"]],
-      ["빛과 색", "Color", "빛을 측정하고 기기에서 색을 재현하는 원리", ["colorbook"]],
-      ["기기와 이동 수단", "Systems", "스마트폰·자동차·선박의 작동 방식", ["phonebook", "carbook", "shipbook"]],
+      ["기기와 이동 수단", "Systems", "스마트폰·카메라·자동차·선박의 작동 방식", ["phonebook", "camerabook", "carbook", "shipbook"]],
     ],
   },
   money: {
@@ -239,7 +240,7 @@ window.FIELD_MAPS = {
   },
   culture: {
     "title": "세상을 이해하고 표현하는 방법",
-    "desc": "사진·음악에서 미술과 시각 표현, 웹·제품·산업디자인까지.",
+    "desc": "음악에서 미술과 시각 표현, 웹·제품·산업디자인까지.",
     "links": [
       ["musicbook", "guitarbook", "화성·음색을 지판과 연주로 연결하기"],
       ["musicbook", "pianobook", "음정·화성을 건반과 반주로 익히기"],
@@ -255,9 +256,6 @@ window.FIELD_MAPS = {
       ["artbook-type", "artbook-web", "웹 화면의 읽기 흐름 만들기"],
       ["artbook-web", "artbook-product", "화면에서 제품의 경험으로"],
       ["artbook-drawing", "artbook-industrial", "스케치에서 제품의 형태로"],
-      ["camerabook", "artbook-image", "촬영의 원리에서 이미지 표현으로"],
-      ["camerabook", "artbook-composition", "촬영 프레임·자르기와 시선의 흐름"],
-      ["camerabook", "artbook-color", "화이트 밸런스·색 보정과 색의 대비·조화"],
       ["artbook-composition", "artbook-image", "사진의 프레임·자르기와 구도"],
       ["artbook-composition", "artbook-web", "그리드·위계·여백으로 화면 구성하기"],
       ["artbook-color", "artbook-web", "팔레트·대비와 웹 접근성·디자인 토큰"],
@@ -266,14 +264,6 @@ window.FIELD_MAPS = {
       ["artbook-product", "artbook-industrial", "사용자 조사·사용성과 물리적 제품의 인간공학"],
     ],
     "groups": [
-      [
-        "관찰과 기록",
-        "Observe",
-        "카메라의 촬영 조건과 이미지의 관계",
-        [
-          "camerabook"
-        ]
-      ],
       [
         "감각과 표현",
         "Create",
@@ -370,6 +360,10 @@ window.FIELD_MAP_CROSS_LINKS = [
   ["colorbook", "sensorbook", "센서의 색 응답·ISP와 카메라 색 관리"],
   ["colorbook", "camerabook", "화이트 밸런스·색공간과 RAW 색 보정"],
   ["colorbook", "artbook-color", "측색·색공간과 지각·배색의 관계"],
+  ["colorbook", "phonebook", "화면에서 빛과 색 재현하기"],
+  ["camerabook", "artbook-image", "촬영의 원리에서 이미지 표현으로"],
+  ["camerabook", "artbook-composition", "촬영 프레임·자르기와 시선의 흐름"],
+  ["camerabook", "artbook-color", "화이트 밸런스·색 보정과 색의 대비·조화"],
   ["mathbook", "aibook", "벡터·행렬·최적화와 신경망 학습"],
   ["mathbook", "statbook", "확률·기댓값에서 표본과 통계적 판단으로"],
   ["mathbook", "opticsbook", "푸리에·표본화와 회절·광학 해상도"],
