@@ -126,7 +126,7 @@
       "en": "Money & Housing",
       "color": "#b45309",
       "colorDark": "#fbbf24",
-      "desc": "돈과 경제, 투자·보험·세금에서 집값과 전월세, 내 집 마련까지."
+      "desc": "돈과 경제, 주식과 부동산, 세금과 보험까지. MoneyBooks에서 관리하는 생활 속 돈 교과서입니다."
     },
     {
       "id": "health",
@@ -1429,12 +1429,12 @@
         "title": "MoneyBook",
         "description": "Explore budgeting, credit, investing, insurance, and retirement."
       },
-      "url": "https://moneybook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/moneybook",
+      "url": "https://money.euiyun.com/money/",
+      "repo": "https://github.com/geniuskey/money-books",
       "field": "money",
       "status": "published",
       "chapters": 23,
-      "simulators": 200,
+      "simulators": 225,
       "level": "입문",
       "color": "#0b8a63",
       "colorDark": "#4fd1a1",
@@ -1454,7 +1454,8 @@
           "link": "chapters/lab.html#sim-life",
           "image": "img/sims/moneybook-sim-life.jpg"
         }
-      ]
+      ],
+      "checkout": "money-books/money"
     },
     {
       "id": "economicsbook",
@@ -1467,8 +1468,8 @@
         "title": "EconomicsBook",
         "description": "Read economic news by changing rates, prices, and policy yourself."
       },
-      "url": "https://economicsbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/economicsbook",
+      "url": "https://money.euiyun.com/economics/",
+      "repo": "https://github.com/geniuskey/money-books",
       "status": "published",
       "level": "입문",
       "chapters": 15,
@@ -1497,7 +1498,8 @@
           "image": "img/sims/economicsbook-sim-ripple.jpg"
         }
       ],
-      "field": "money"
+      "field": "money",
+      "checkout": "money-books/economics"
     },
     {
       "id": "stockbook",
@@ -1510,13 +1512,13 @@
         "title": "StockBook",
         "description": "Trade in a simulated market and learn how stocks and portfolios work."
       },
-      "url": "https://stockbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/stockbook",
+      "url": "https://money.euiyun.com/stock/",
+      "repo": "https://github.com/geniuskey/money-books",
       "field": "money",
       "status": "published",
       "level": "입문",
       "chapters": 26,
-      "simulators": 390,
+      "simulators": 395,
       "color": "#6741d9",
       "colorDark": "#a78bfa",
       "topics": [
@@ -1527,7 +1529,22 @@
         "백테스트",
         "선물·옵션"
       ],
-      "motif": "candles"
+      "motif": "candles",
+      "checkout": "money-books/stock",
+      "featured": [
+        {
+          "title": "살아 있는 호가창",
+          "desc": "주문이 흘러드는 호가창에서 매도1호가가 다 팔리면 현재가가 한 칸 오르는 순간을 잡는다",
+          "link": "chapters/orderbook.html#sim-live",
+          "image": "img/sims/stockbook-sim-live.jpg"
+        },
+        {
+          "title": "생존 편향: 살아남은 종목만 돌린 백테스트",
+          "desc": "상장폐지 종목을 빼면 같은 전략의 수익률이 얼마나 부풀려지는지 두 곡선으로 비교한다",
+          "link": "chapters/backtest.html#sim-surv",
+          "image": "img/sims/stockbook-sim-surv.jpg"
+        }
+      ]
     },
     {
       "id": "insurebook",
@@ -1540,8 +1557,8 @@
         "title": "InsureBook",
         "description": "Explore insurance premiums, policies, claims, and coverage decisions."
       },
-      "url": "https://insurebook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/insurebook",
+      "url": "https://money.euiyun.com/insure/",
+      "repo": "https://github.com/geniuskey/money-books",
       "status": "published",
       "level": "입문",
       "chapters": 21,
@@ -1573,7 +1590,8 @@
           "image": "img/sims/insurebook-sim-ru.jpg"
         }
       ],
-      "field": "money"
+      "field": "money",
+      "checkout": "money-books/insure"
     },
     {
       "id": "taxbook",
@@ -1586,8 +1604,8 @@
         "title": "TaxBook",
         "description": "Change the numbers and follow taxes from payroll withholding to inheritance."
       },
-      "url": "https://taxbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/taxbook",
+      "url": "https://money.euiyun.com/tax/",
+      "repo": "https://github.com/geniuskey/money-books",
       "status": "published",
       "level": "입문",
       "chapters": 17,
@@ -1614,7 +1632,8 @@
           "image": "img/sims/taxbook-sim-calc.jpg"
         }
       ],
-      "field": "money"
+      "field": "money",
+      "checkout": "money-books/tax"
     },
     {
       "id": "estatebook",
@@ -1627,8 +1646,8 @@
         "title": "EstateBook",
         "description": "Work out home prices, rent deposits, mortgages, and buy-or-rent decisions with numbers."
       },
-      "url": "https://estatebook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/estatebook",
+      "url": "https://money.euiyun.com/estate/",
+      "repo": "https://github.com/geniuskey/money-books",
       "status": "published",
       "level": "입문",
       "chapters": 23,
@@ -1661,7 +1680,8 @@
           "image": "img/sims/estatebook-sim-af.jpg"
         }
       ],
-      "field": "money"
+      "field": "money",
+      "checkout": "money-books/estate"
     },
     {
       "id": "bodybook",
@@ -3009,6 +3029,14 @@
       "status": "published",
       "url": "https://math.euiyun.com/",
       "checkout": "math-books"
+    },
+    {
+      "id": "moneybooks",
+      "title": "MoneyBooks",
+      "subtitle": "돈 교과서 서가",
+      "status": "published",
+      "url": "https://money.euiyun.com/",
+      "checkout": "money-books"
     }
   ]
 }

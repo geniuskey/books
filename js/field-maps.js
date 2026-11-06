@@ -209,9 +209,10 @@ window.FIELD_MAPS = {
     ],
   },
   money: {
-    regions: [[12, 12, 2], [504, 12, 2], [12, 210, 1], [268, 210, 1]],
+    // MoneyBooks 서가의 분야 구분(돈과 경제 → 투자·집 → 세금·보험)을 따릅니다.
+    regions: [[12, 12, 2], [504, 12, 2], [12, 210, 2]],
     "title": "돈의 흐름에서 내 집 마련까지",
-    "desc": "돈과 경제, 투자·보험·세금에서 집값과 전월세, 내 집 마련까지.",
+    "desc": "MoneyBooks의 생활 속 돈 교과서입니다. 돈과 경제의 기본 언어에서 주식·부동산으로, 세금과 보험으로 이어갑니다.",
     "links": [
       ["moneybook", "economicsbook", "일상의 돈에서 경제 전체로"],
       ["economicsbook", "stockbook", "경제의 흐름과 기업·주식"],
@@ -224,40 +225,9 @@ window.FIELD_MAPS = {
       ["estatebook", "taxbook", "주택 거래·보유·양도 세금과 과세·공제의 기본 원리"],
     ],
     "groups": [
-      [
-        "돈과 경제",
-        "Understand",
-        "금리·물가·경제 뉴스의 기본 언어",
-        [
-          "moneybook",
-          "economicsbook"
-        ]
-      ],
-      [
-        "투자와 위험 대비",
-        "Manage",
-        "투자하는 돈과 위험에 대비하는 돈",
-        [
-          "stockbook",
-          "insurebook"
-        ]
-      ],
-      [
-        "세금",
-        "Tax",
-        "월급·투자·상속에 붙는 세금과 연말정산",
-        [
-          "taxbook"
-        ]
-      ],
-      [
-        "집값과 주거",
-        "Living",
-        "집값의 원리, 전월세 계약과 보증금, 대출·세금과 내 집 마련",
-        [
-          "estatebook"
-        ]
-      ]
+      ["돈과 경제", "Understand", "월급·예산·금리와 경제 뉴스의 기본 언어", ["moneybook", "economicsbook"]],
+      ["투자·집", "Invest & Housing", "주식의 위험과 수익, 집값의 원리와 전월세·대출", ["stockbook", "estatebook"]],
+      ["세금·보험", "Tax & Insurance", "월급·투자·상속에 붙는 세금과 위험에 대비하는 보험", ["taxbook", "insurebook"]]
     ]
   },
   health: {
