@@ -2643,13 +2643,20 @@
       "subtitle": "수치해석 교과서",
       "headline": "컴퓨터가 수학을 근사하는 방법",
       "description": "부동소수점과 오차, 조건수와 안정성, 근 찾기와 비선형 연립방정식, 보간·스플라인·최소제곱 근사와 FFT, 수치 미분과 적분, 미분방정식의 수치 해법, 직접·반복 선형 해법과 고유값 계산, 수치 최적화, 편미분방정식의 수치 해법까지 — 알고리즘을 한 단계씩 돌려 보며 배우는 수치해석 교과서.",
+      "en": {
+        "title": "NumericalBook",
+        "description": "Run numerical algorithms step by step, from floating-point error and root finding to linear solvers, optimization and PDEs."
+      },
       "field": "math",
-      "status": "writing",
-      "phase": 1,
+      "status": "published",
       "level": "공대 3학년",
+      "url": "https://math.euiyun.com/numerical/",
       "repo": "https://github.com/geniuskey/math-books",
+      "checkout": "math-books/numerical",
       "color": "#2b8a3e",
       "colorDark": "#8ce99a",
+      "chapters": 17,
+      "simulators": 127,
       "topics": [
         "오차",
         "근 찾기",

@@ -40104,6 +40104,768 @@
     "link": "chapters/transfer.html#sim-tf-pid"
   },
   {
+    "id": "numericalbook/approximation/sim-ap-projection",
+    "bookId": "numericalbook",
+    "title": "최소제곱은 사영이다: 데이터 평면과 ℝ³",
+    "link": "chapters/approximation.html#sim-ap-projection"
+  },
+  {
+    "id": "numericalbook/approximation/sim-ap-qr",
+    "bookId": "numericalbook",
+    "title": "정규 방정식 vs QR: 차수가 오르면 누가 자릿수를 잃나",
+    "link": "chapters/approximation.html#sim-ap-qr"
+  },
+  {
+    "id": "numericalbook/approximation/sim-ap-degree",
+    "bookId": "numericalbook",
+    "title": "차수 슬라이더: 학습 오차와 검증 오차",
+    "link": "chapters/approximation.html#sim-ap-degree"
+  },
+  {
+    "id": "numericalbook/approximation/sim-ap-robust",
+    "bookId": "numericalbook",
+    "title": "이상치 끌기: 최소제곱 · 후버 · L¹",
+    "link": "chapters/approximation.html#sim-ap-robust"
+  },
+  {
+    "id": "numericalbook/approximation/sim-ap-legendre",
+    "bookId": "numericalbook",
+    "title": "그람–슈미트로 르장드르 다항식 만들기와 연속 최소제곱",
+    "link": "chapters/approximation.html#sim-ap-legendre"
+  },
+  {
+    "id": "numericalbook/approximation/sim-ap-chebcoef",
+    "bookId": "numericalbook",
+    "title": "체비쇼프 계수 막대: 매끄러움이 감소 속도를 정한다",
+    "link": "chapters/approximation.html#sim-ap-chebcoef"
+  },
+  {
+    "id": "numericalbook/approximation/sim-ap-minimax",
+    "bookId": "numericalbook",
+    "title": "레메즈 알고리즘 한 단계씩: 오차가 등진동할 때까지",
+    "link": "chapters/approximation.html#sim-ap-minimax"
+  },
+  {
+    "id": "numericalbook/conditioning/sim-cn-perturb",
+    "bookId": "numericalbook",
+    "title": "입력 교란 → 출력 퍼짐: 조건수 실험",
+    "link": "chapters/conditioning.html#sim-cn-perturb"
+  },
+  {
+    "id": "numericalbook/conditioning/sim-cn-map",
+    "bookId": "numericalbook",
+    "title": "조건수 지도: 입력 평면에서 예민한 곳 찾기",
+    "link": "chapters/conditioning.html#sim-cn-map"
+  },
+  {
+    "id": "numericalbook/conditioning/sim-cn-wilkinson",
+    "bookId": "numericalbook",
+    "title": "윌킨슨 다항식 근 흔들기: 계수 하나에 근 열 개가 튄다",
+    "link": "chapters/conditioning.html#sim-cn-wilkinson"
+  },
+  {
+    "id": "numericalbook/conditioning/sim-cn-backward",
+    "bookId": "numericalbook",
+    "title": "후방 오차 그림: 문제 탓과 알고리즘 탓 가르기",
+    "link": "chapters/conditioning.html#sim-cn-backward"
+  },
+  {
+    "id": "numericalbook/conditioning/sim-cn-recur",
+    "bookId": "numericalbook",
+    "title": "점화식 앞으로 vs 뒤로: Iₙ = 1 − n·Iₙ₋₁",
+    "link": "chapters/conditioning.html#sim-cn-recur"
+  },
+  {
+    "id": "numericalbook/conditioning/sim-cn-series",
+    "bookId": "numericalbook",
+    "title": "e⁻ˣ 급수 vs 1/eˣ: 큰 항들의 상쇄",
+    "link": "chapters/conditioning.html#sim-cn-series"
+  },
+  {
+    "id": "numericalbook/conditioning/sim-cn-mixed",
+    "bookId": "numericalbook",
+    "title": "혼합 정밀도 내적: 저장 정밀도와 누적 정밀도",
+    "link": "chapters/conditioning.html#sim-cn-mixed"
+  },
+  {
+    "id": "numericalbook/differentiation/sim-df-secant",
+    "bookId": "numericalbook",
+    "title": "할선에서 접선으로: h를 줄이면 무엇이 얼마나 빨리 맞는가",
+    "link": "chapters/differentiation.html#sim-df-secant"
+  },
+  {
+    "id": "numericalbook/differentiation/sim-df-vshape",
+    "bookId": "numericalbook",
+    "title": "오차–간격 V자: 절단 오차와 반올림 오차의 줄다리기",
+    "link": "chapters/differentiation.html#sim-df-vshape"
+  },
+  {
+    "id": "numericalbook/differentiation/sim-df-stencil",
+    "bookId": "numericalbook",
+    "title": "스텐실 계수 계산기: 점을 고르면 공식과 차수가 나온다",
+    "link": "chapters/differentiation.html#sim-df-stencil"
+  },
+  {
+    "id": "numericalbook/differentiation/sim-df-richardson",
+    "bookId": "numericalbook",
+    "title": "리처드슨 외삽 표: 한 행씩 쌓으며 대각선이 수렴하는 속도",
+    "link": "chapters/differentiation.html#sim-df-richardson"
+  },
+  {
+    "id": "numericalbook/differentiation/sim-df-noise",
+    "bookId": "numericalbook",
+    "title": "잡음 데이터 미분: 차분 간격과 평활 창의 거래",
+    "link": "chapters/differentiation.html#sim-df-noise"
+  },
+  {
+    "id": "numericalbook/differentiation/sim-df-complex",
+    "bookId": "numericalbook",
+    "title": "복소 스텝 vs 차분: 바닥이 사라지는 오차 그래프",
+    "link": "chapters/differentiation.html#sim-df-complex"
+  },
+  {
+    "id": "numericalbook/differentiation/sim-df-dual",
+    "bookId": "numericalbook",
+    "title": "이중수 전진 모드 AD: 값과 도함수를 한 줄씩",
+    "link": "chapters/differentiation.html#sim-df-dual"
+  },
+  {
+    "id": "numericalbook/differentiation/sim-df-reverse",
+    "bookId": "numericalbook",
+    "title": "후진 모드(역전파): 계산 그래프를 앞으로, 그리고 거꾸로",
+    "link": "chapters/differentiation.html#sim-df-reverse"
+  },
+  {
+    "id": "numericalbook/direct-solvers/sim-ds-pivot",
+    "bookId": "numericalbook",
+    "title": "피벗팅 전략 비교: 유효 숫자 d자리 기계의 소거",
+    "link": "chapters/direct-solvers.html#sim-ds-pivot"
+  },
+  {
+    "id": "numericalbook/direct-solvers/sim-ds-growth",
+    "bookId": "numericalbook",
+    "title": "성장 인자: 윌킨슨 행렬과 무작위 행렬",
+    "link": "chapters/direct-solvers.html#sim-ds-growth"
+  },
+  {
+    "id": "numericalbook/direct-solvers/sim-ds-lu",
+    "bookId": "numericalbook",
+    "title": "분해 한 단계씩: PA = LU · 촐레스키 A = LLᵀ",
+    "link": "chapters/direct-solvers.html#sim-ds-lu"
+  },
+  {
+    "id": "numericalbook/direct-solvers/sim-ds-thomas",
+    "bookId": "numericalbook",
+    "title": "토머스 알고리즘 한 행씩, 그리고 실제 걸리는 시간",
+    "link": "chapters/direct-solvers.html#sim-ds-thomas"
+  },
+  {
+    "id": "numericalbook/direct-solvers/sim-ds-cond",
+    "bookId": "numericalbook",
+    "title": "두 직선의 교점: 조건수가 측정 오차를 키우는 모습",
+    "link": "chapters/direct-solvers.html#sim-ds-cond"
+  },
+  {
+    "id": "numericalbook/direct-solvers/sim-ds-hilbert",
+    "bookId": "numericalbook",
+    "title": "힐베르트 행렬 κ의 증가와 잃는 자릿수",
+    "link": "chapters/direct-solvers.html#sim-ds-hilbert"
+  },
+  {
+    "id": "numericalbook/direct-solvers/sim-ds-refine",
+    "bookId": "numericalbook",
+    "title": "혼합 정밀도 반복 개선: 단정밀도 LU에서 배정밀도 답까지",
+    "link": "chapters/direct-solvers.html#sim-ds-refine"
+  },
+  {
+    "id": "numericalbook/direct-solvers/sim-ds-fill",
+    "bookId": "numericalbook",
+    "title": "희소 채움 시각화: 같은 격자, 다른 번호 매기기",
+    "link": "chapters/direct-solvers.html#sim-ds-fill"
+  },
+  {
+    "id": "numericalbook/eigenvalues/sim-ev-charpoly",
+    "bookId": "numericalbook",
+    "title": "특성 다항식의 근 vs 직교 닮음 변환: 고유값 1, 2, …, n",
+    "link": "chapters/eigenvalues.html#sim-ev-charpoly"
+  },
+  {
+    "id": "numericalbook/eigenvalues/sim-ev-power",
+    "bookId": "numericalbook",
+    "title": "거듭제곱법: 벡터가 지배 고유벡터 쪽으로 돈다",
+    "link": "chapters/eigenvalues.html#sim-ev-power"
+  },
+  {
+    "id": "numericalbook/eigenvalues/sim-ev-shift",
+    "bookId": "numericalbook",
+    "title": "이동량 σ와 수렴 속도: 원하는 고유값 골라 잡기",
+    "link": "chapters/eigenvalues.html#sim-ev-shift"
+  },
+  {
+    "id": "numericalbook/eigenvalues/sim-ev-rqi",
+    "bookId": "numericalbook",
+    "title": "레일리 몫 반복의 수렴 표: 자릿수가 세 배씩",
+    "link": "chapters/eigenvalues.html#sim-ev-rqi"
+  },
+  {
+    "id": "numericalbook/eigenvalues/sim-ev-gersh",
+    "bookId": "numericalbook",
+    "title": "게르시고린 원판 편집기",
+    "link": "chapters/eigenvalues.html#sim-ev-gersh"
+  },
+  {
+    "id": "numericalbook/eigenvalues/sim-ev-qr",
+    "bookId": "numericalbook",
+    "title": "QR 반복 히트맵: 대각 아래가 사라지는 속도",
+    "link": "chapters/eigenvalues.html#sim-ev-qr"
+  },
+  {
+    "id": "numericalbook/eigenvalues/sim-ev-jacobi",
+    "bookId": "numericalbook",
+    "title": "야코비 회전: 비대각이 한 칸씩 사라진다",
+    "link": "chapters/eigenvalues.html#sim-ev-jacobi"
+  },
+  {
+    "id": "numericalbook/eigenvalues/sim-ev-pagerank",
+    "bookId": "numericalbook",
+    "title": "작은 웹 그래프의 페이지랭크: 거듭제곱법",
+    "link": "chapters/eigenvalues.html#sim-ev-pagerank"
+  },
+  {
+    "id": "numericalbook/fft/sim-ff-triginterp",
+    "bookId": "numericalbook",
+    "title": "점을 끌어 만드는 삼각 보간",
+    "link": "chapters/fft.html#sim-ff-triginterp"
+  },
+  {
+    "id": "numericalbook/fft/sim-ff-synth",
+    "bookId": "numericalbook",
+    "title": "신호 합성 → 스펙트럼",
+    "link": "chapters/fft.html#sim-ff-synth"
+  },
+  {
+    "id": "numericalbook/fft/sim-ff-roots",
+    "bookId": "numericalbook",
+    "title": "단위근과 DFT 행렬: Xₖ는 회전 화살표의 합",
+    "link": "chapters/fft.html#sim-ff-roots"
+  },
+  {
+    "id": "numericalbook/fft/sim-ff-alias",
+    "bookId": "numericalbook",
+    "title": "앨리어싱: 표본화 주파수 슬라이더",
+    "link": "chapters/fft.html#sim-ff-alias"
+  },
+  {
+    "id": "numericalbook/fft/sim-ff-butterfly",
+    "bookId": "numericalbook",
+    "title": "8점 FFT 나비 그림 한 단계씩",
+    "link": "chapters/fft.html#sim-ff-butterfly"
+  },
+  {
+    "id": "numericalbook/fft/sim-ff-timing",
+    "bookId": "numericalbook",
+    "title": "O(N²) vs O(N log N): 이 브라우저에서 시간 재기",
+    "link": "chapters/fft.html#sim-ff-timing"
+  },
+  {
+    "id": "numericalbook/fft/sim-ff-conv",
+    "bookId": "numericalbook",
+    "title": "FFT 합성곱: 다항식 · 큰 수 · 이동 평균",
+    "link": "chapters/fft.html#sim-ff-conv"
+  },
+  {
+    "id": "numericalbook/fft/sim-ff-window",
+    "bookId": "numericalbook",
+    "title": "창 함수와 누설, 제로 패딩",
+    "link": "chapters/fft.html#sim-ff-window"
+  },
+  {
+    "id": "numericalbook/floating-point/sim-fp-bits",
+    "bookId": "numericalbook",
+    "title": "64비트 편집기: 비트를 눌러 배정밀도 수 만들기",
+    "link": "chapters/floating-point.html#sim-fp-bits"
+  },
+  {
+    "id": "numericalbook/floating-point/sim-fp-line",
+    "bookId": "numericalbook",
+    "title": "장난감 부동소수점 수직선: 간격과 반올림",
+    "link": "chapters/floating-point.html#sim-fp-line"
+  },
+  {
+    "id": "numericalbook/floating-point/sim-fp-eps",
+    "bookId": "numericalbook",
+    "title": "기계 엡실론 찾기: 1이 움직이지 않을 때까지 반으로",
+    "link": "chapters/floating-point.html#sim-fp-eps"
+  },
+  {
+    "id": "numericalbook/floating-point/sim-fp-range",
+    "bookId": "numericalbook",
+    "title": "범위의 양 끝: 빗변 계산의 오버플로와 언더플로",
+    "link": "chapters/floating-point.html#sim-fp-range"
+  },
+  {
+    "id": "numericalbook/floating-point/sim-fp-cancel",
+    "bookId": "numericalbook",
+    "title": "상쇄 오차 그래프: x → 0에서 잃는 자릿수",
+    "link": "chapters/floating-point.html#sim-fp-cancel"
+  },
+  {
+    "id": "numericalbook/floating-point/sim-fp-quad",
+    "bookId": "numericalbook",
+    "title": "근의 공식 해부: 사라지는 자릿수를 세기",
+    "link": "chapters/floating-point.html#sim-fp-quad"
+  },
+  {
+    "id": "numericalbook/floating-point/sim-fp-sum",
+    "bookId": "numericalbook",
+    "title": "합산 순서와 카한 합산: 오차–항 수 그래프",
+    "link": "chapters/floating-point.html#sim-fp-sum"
+  },
+  {
+    "id": "numericalbook/floating-point/sim-fp-tenth",
+    "bookId": "numericalbook",
+    "title": "0.1을 n번: 시계가 얼마나 어긋나는가",
+    "link": "chapters/floating-point.html#sim-fp-tenth"
+  },
+  {
+    "id": "numericalbook/glossary/sim-gl-chooser",
+    "bookId": "numericalbook",
+    "title": "이 문제, 어떤 알고리즘으로?",
+    "link": "chapters/glossary.html#sim-gl-chooser"
+  },
+  {
+    "id": "numericalbook/glossary/sim-gl-race",
+    "bookId": "numericalbook",
+    "title": "수렴 차수 경주: 10⁻¹⁵까지 몇 번?",
+    "link": "chapters/glossary.html#sim-gl-race"
+  },
+  {
+    "id": "numericalbook/glossary/sim-gl-step",
+    "bookId": "numericalbook",
+    "title": "안정성이 정하는 걸음 폭",
+    "link": "chapters/glossary.html#sim-gl-step"
+  },
+  {
+    "id": "numericalbook/integration/sim-ig-rules",
+    "bookId": "numericalbook",
+    "title": "구적 공식의 그림: 상수·직선·포물선·3차식의 넓이",
+    "link": "chapters/integration.html#sim-ig-rules"
+  },
+  {
+    "id": "numericalbook/integration/sim-ig-order",
+    "bookId": "numericalbook",
+    "title": "오차–비용 로그 그래프: 기울기로 읽는 수렴 차수",
+    "link": "chapters/integration.html#sim-ig-order"
+  },
+  {
+    "id": "numericalbook/integration/sim-ig-romberg",
+    "bookId": "numericalbook",
+    "title": "롬베르크 표 쌓기: 사다리꼴에서 외삽으로",
+    "link": "chapters/integration.html#sim-ig-romberg"
+  },
+  {
+    "id": "numericalbook/integration/sim-ig-gauss",
+    "bookId": "numericalbook",
+    "title": "가우스 노드와 가중치: 르장드르 근 vs 등간격",
+    "link": "chapters/integration.html#sim-ig-gauss"
+  },
+  {
+    "id": "numericalbook/integration/sim-ig-adaptive",
+    "bookId": "numericalbook",
+    "title": "적응 심프슨: 오차 추정으로 쪼개는 구간 트리",
+    "link": "chapters/integration.html#sim-ig-adaptive"
+  },
+  {
+    "id": "numericalbook/integration/sim-ig-transform",
+    "bookId": "numericalbook",
+    "title": "변수 변환 전후: 피적분 함수의 모양과 수렴 속도",
+    "link": "chapters/integration.html#sim-ig-transform"
+  },
+  {
+    "id": "numericalbook/integration/sim-ig-mc",
+    "bookId": "numericalbook",
+    "title": "몬테카를로: 다트로 π와 d차원 공의 부피를",
+    "link": "chapters/integration.html#sim-ig-mc"
+  },
+  {
+    "id": "numericalbook/interpolation/sim-ip-drag",
+    "bookId": "numericalbook",
+    "title": "점을 끌어 보간 다항식 만들기",
+    "link": "chapters/interpolation.html#sim-ip-drag"
+  },
+  {
+    "id": "numericalbook/interpolation/sim-ip-lagrange",
+    "bookId": "numericalbook",
+    "title": "라그랑주 기저 함수의 합으로 보는 보간",
+    "link": "chapters/interpolation.html#sim-ip-lagrange"
+  },
+  {
+    "id": "numericalbook/interpolation/sim-ip-divdiff",
+    "bookId": "numericalbook",
+    "title": "분할 차분표를 한 칸씩 채우기",
+    "link": "chapters/interpolation.html#sim-ip-divdiff"
+  },
+  {
+    "id": "numericalbook/interpolation/sim-ip-error",
+    "bookId": "numericalbook",
+    "title": "오차 곡선과 오차 한계: 노드를 옮겨 보기",
+    "link": "chapters/interpolation.html#sim-ip-error"
+  },
+  {
+    "id": "numericalbook/interpolation/sim-ip-runge",
+    "bookId": "numericalbook",
+    "title": "룽게 현상: 차수 n 슬라이더",
+    "link": "chapters/interpolation.html#sim-ip-runge"
+  },
+  {
+    "id": "numericalbook/interpolation/sim-ip-nodepoly",
+    "bookId": "numericalbook",
+    "title": "노드 다항식 |ω(x)|: 등간격 vs 체비쇼프",
+    "link": "chapters/interpolation.html#sim-ip-nodepoly"
+  },
+  {
+    "id": "numericalbook/interpolation/sim-ip-convergence",
+    "bookId": "numericalbook",
+    "title": "오차–차수 그래프: 노드와 계산 방법",
+    "link": "chapters/interpolation.html#sim-ip-convergence"
+  },
+  {
+    "id": "numericalbook/interpolation/sim-ip-hermite",
+    "bookId": "numericalbook",
+    "title": "같은 정보량, 다른 보간: 라그랑주 vs 에르미트",
+    "link": "chapters/interpolation.html#sim-ip-hermite"
+  },
+  {
+    "id": "numericalbook/iterative/sim-it-path",
+    "bookId": "numericalbook",
+    "title": "2 × 2 반복 경로: 야코비 · 가우스–자이델 · SOR",
+    "link": "chapters/iterative.html#sim-it-path"
+  },
+  {
+    "id": "numericalbook/iterative/sim-it-omega",
+    "bookId": "numericalbook",
+    "title": "ω 슬라이더와 반복 수: 영의 곡선을 실험으로",
+    "link": "chapters/iterative.html#sim-it-omega"
+  },
+  {
+    "id": "numericalbook/iterative/sim-it-sdcg",
+    "bookId": "numericalbook",
+    "title": "최급 강하의 지그재그 vs CG의 두 걸음",
+    "link": "chapters/iterative.html#sim-it-sdcg"
+  },
+  {
+    "id": "numericalbook/iterative/sim-it-cgspec",
+    "bookId": "numericalbook",
+    "title": "CG의 수렴은 고유값 분포가 정한다 (n = 100)",
+    "link": "chapters/iterative.html#sim-it-cgspec"
+  },
+  {
+    "id": "numericalbook/iterative/sim-it-precond",
+    "bookId": "numericalbook",
+    "title": "전처리 CG: 없음 · 야코비 · 불완전 촐레스키",
+    "link": "chapters/iterative.html#sim-it-precond"
+  },
+  {
+    "id": "numericalbook/iterative/sim-it-gmres",
+    "bookId": "numericalbook",
+    "title": "대류–확산 방정식: 완전 GMRES vs 재시작 GMRES(m) vs CG",
+    "link": "chapters/iterative.html#sim-it-gmres"
+  },
+  {
+    "id": "numericalbook/iterative/sim-it-smooth",
+    "bookId": "numericalbook",
+    "title": "오차 모드의 평활화: 고주파가 먼저 사라진다",
+    "link": "chapters/iterative.html#sim-it-smooth"
+  },
+  {
+    "id": "numericalbook/iterative/sim-it-heat",
+    "bookId": "numericalbook",
+    "title": "2차원 푸아송 판: 다섯 방법의 경주",
+    "link": "chapters/iterative.html#sim-it-heat"
+  },
+  {
+    "id": "numericalbook/nonlinear-systems/sim-ns-newton2d",
+    "bookId": "numericalbook",
+    "title": "2변수 뉴턴: 두 등고선과 선형화 직선의 교점",
+    "link": "chapters/nonlinear-systems.html#sim-ns-newton2d"
+  },
+  {
+    "id": "numericalbook/nonlinear-systems/sim-ns-broyden",
+    "bookId": "numericalbook",
+    "title": "뉴턴 vs 차분 뉴턴 vs 브로이든: 반복 수와 계산 비용",
+    "link": "chapters/nonlinear-systems.html#sim-ns-broyden"
+  },
+  {
+    "id": "numericalbook/nonlinear-systems/sim-ns-horner",
+    "bookId": "numericalbook",
+    "title": "호너 방법 한 칸씩: 조립제법 표와 뉴턴–호너",
+    "link": "chapters/nonlinear-systems.html#sim-ns-horner"
+  },
+  {
+    "id": "numericalbook/nonlinear-systems/sim-ns-deflate",
+    "bookId": "numericalbook",
+    "title": "수축 순서와 근의 오차: 작은 근부터 vs 큰 근부터",
+    "link": "chapters/nonlinear-systems.html#sim-ns-deflate"
+  },
+  {
+    "id": "numericalbook/nonlinear-systems/sim-ns-companion",
+    "bookId": "numericalbook",
+    "title": "동반 행렬의 QR 반복: 대각선이 근으로 모인다",
+    "link": "chapters/nonlinear-systems.html#sim-ns-companion"
+  },
+  {
+    "id": "numericalbook/nonlinear-systems/sim-ns-fractal",
+    "bookId": "numericalbook",
+    "title": "뉴턴 프랙털: 복소평면의 끌개 영역",
+    "link": "chapters/nonlinear-systems.html#sim-ns-fractal"
+  },
+  {
+    "id": "numericalbook/nonlinear-systems/sim-ns-homotopy",
+    "bookId": "numericalbook",
+    "title": "연속법 경로: 문제를 바꾸며 해를 따라가기",
+    "link": "chapters/nonlinear-systems.html#sim-ns-homotopy"
+  },
+  {
+    "id": "numericalbook/nonlinear-systems/sim-ns-robot",
+    "bookId": "numericalbook",
+    "title": "로봇 팔 역기구학: 목표를 끌면 뉴턴이 따라간다",
+    "link": "chapters/nonlinear-systems.html#sim-ns-robot"
+  },
+  {
+    "id": "numericalbook/ode-solvers/sim-od-zero",
+    "bookId": "numericalbook",
+    "title": "영 안정성: 걸음을 줄일수록 터지는 공식",
+    "link": "chapters/ode-solvers.html#sim-od-zero"
+  },
+  {
+    "id": "numericalbook/ode-solvers/sim-od-butcher",
+    "bookId": "numericalbook",
+    "title": "부처 표 → 방법 실행: 차수 조건과 측정 기울기",
+    "link": "chapters/ode-solvers.html#sim-od-butcher"
+  },
+  {
+    "id": "numericalbook/ode-solvers/sim-od-adaptive",
+    "bookId": "numericalbook",
+    "title": "적응 간격 오차 제어: 세 임베디드 쌍의 걸음과 작업–정밀도",
+    "link": "chapters/ode-solvers.html#sim-od-adaptive"
+  },
+  {
+    "id": "numericalbook/ode-solvers/sim-od-adams",
+    "bookId": "numericalbook",
+    "title": "애덤스 예측–수정: 과거 기울기의 다항식을 한 걸음씩",
+    "link": "chapters/ode-solvers.html#sim-od-adams"
+  },
+  {
+    "id": "numericalbook/ode-solvers/sim-od-stability",
+    "bookId": "numericalbook",
+    "title": "안정성 영역 지도: 복소 hλ 평면과 특성근",
+    "link": "chapters/ode-solvers.html#sim-od-stability"
+  },
+  {
+    "id": "numericalbook/ode-solvers/sim-od-robertson",
+    "bookId": "numericalbook",
+    "title": "강성 로버트슨 반응: 명시적 DP 5(4) vs BDF2 + 뉴턴",
+    "link": "chapters/ode-solvers.html#sim-od-robertson"
+  },
+  {
+    "id": "numericalbook/ode-solvers/sim-od-verlet",
+    "bookId": "numericalbook",
+    "title": "위상 공간의 넓이: 오일러 · RK4 · 스퇴르머–베를레",
+    "link": "chapters/ode-solvers.html#sim-od-verlet"
+  },
+  {
+    "id": "numericalbook/ode-solvers/sim-od-bvp",
+    "bookId": "numericalbook",
+    "title": "브라투 경계값 문제: 슈팅(할선법) vs 유한 차분(뉴턴)",
+    "link": "chapters/ode-solvers.html#sim-od-bvp"
+  },
+  {
+    "id": "numericalbook/optimization/sim-op-golden",
+    "bookId": "numericalbook",
+    "title": "구간 줄이기: 황금 분할 vs 포물선 보간",
+    "link": "chapters/optimization.html#sim-op-golden"
+  },
+  {
+    "id": "numericalbook/optimization/sim-op-momentum",
+    "bookId": "numericalbook",
+    "title": "학습률과 모멘텀: 좁은 골짜기의 지그재그",
+    "link": "chapters/optimization.html#sim-op-momentum"
+  },
+  {
+    "id": "numericalbook/optimization/sim-op-rosenbrock",
+    "bookId": "numericalbook",
+    "title": "바나나 골짜기 경주: 경사 하강 · 뉴턴 · BFGS",
+    "link": "chapters/optimization.html#sim-op-rosenbrock"
+  },
+  {
+    "id": "numericalbook/optimization/sim-op-nelder",
+    "bookId": "numericalbook",
+    "title": "넬더–미드: 기어가는 삼각형",
+    "link": "chapters/optimization.html#sim-op-nelder"
+  },
+  {
+    "id": "numericalbook/optimization/sim-op-lm",
+    "bookId": "numericalbook",
+    "title": "곡선 맞춤: 가우스–뉴턴 vs 레벤버그–마쿼트",
+    "link": "chapters/optimization.html#sim-op-lm"
+  },
+  {
+    "id": "numericalbook/optimization/sim-op-penalty",
+    "bookId": "numericalbook",
+    "title": "벌칙법과 KKT: 벌금을 키우면 제약 위로",
+    "link": "chapters/optimization.html#sim-op-penalty"
+  },
+  {
+    "id": "numericalbook/optimization/sim-op-sgd",
+    "bookId": "numericalbook",
+    "title": "미니배치 크기와 걸음: SGD로 직선 맞추기",
+    "link": "chapters/optimization.html#sim-op-sgd"
+  },
+  {
+    "id": "numericalbook/optimization/sim-op-anneal",
+    "bookId": "numericalbook",
+    "title": "담금질 기법: 오르막을 받아들여 골짜기 탈출",
+    "link": "chapters/optimization.html#sim-op-anneal"
+  },
+  {
+    "id": "numericalbook/pde-numerics/sim-pn-order",
+    "bookId": "numericalbook",
+    "title": "격자 수렴: 점을 두 배로, 오차는 4분의 1",
+    "link": "chapters/pde-numerics.html#sim-pn-order"
+  },
+  {
+    "id": "numericalbook/pde-numerics/sim-pn-poisson",
+    "bookId": "numericalbook",
+    "title": "판의 정상 온도: 경계를 바꾸고 열원을 찍기",
+    "link": "chapters/pde-numerics.html#sim-pn-poisson"
+  },
+  {
+    "id": "numericalbook/pde-numerics/sim-pn-heat",
+    "bookId": "numericalbook",
+    "title": "세 방법 나란히: FTCS · BTCS · 크랭크–니콜슨",
+    "link": "chapters/pde-numerics.html#sim-pn-heat"
+  },
+  {
+    "id": "numericalbook/pde-numerics/sim-pn-amplification",
+    "bookId": "numericalbook",
+    "title": "증폭 인자 그래프: 모드마다 한 걸음에 몇 배인가",
+    "link": "chapters/pde-numerics.html#sim-pn-amplification"
+  },
+  {
+    "id": "numericalbook/pde-numerics/sim-pn-advection",
+    "bookId": "numericalbook",
+    "title": "펄스 실어 나르기: 중앙 · 풍상 · 랙스–프리드리히스 · 랙스–벤드로프",
+    "link": "chapters/pde-numerics.html#sim-pn-advection"
+  },
+  {
+    "id": "numericalbook/pde-numerics/sim-pn-wave",
+    "bookId": "numericalbook",
+    "title": "줄 위의 펄스: CFL 수와 수치 분산",
+    "link": "chapters/pde-numerics.html#sim-pn-wave"
+  },
+  {
+    "id": "numericalbook/pde-numerics/sim-pn-fem",
+    "bookId": "numericalbook",
+    "title": "1차원 FEM: 모자 함수 조립하기",
+    "link": "chapters/pde-numerics.html#sim-pn-fem"
+  },
+  {
+    "id": "numericalbook/roots/sim-rt-bisect",
+    "bookId": "numericalbook",
+    "title": "이분법 한 단계씩: 가둠 구간이 반으로",
+    "link": "chapters/roots.html#sim-rt-bisect"
+  },
+  {
+    "id": "numericalbook/roots/sim-rt-cobweb",
+    "bookId": "numericalbook",
+    "title": "거미줄 그림: 고정점 반복의 수렴과 발산",
+    "link": "chapters/roots.html#sim-rt-cobweb"
+  },
+  {
+    "id": "numericalbook/roots/sim-rt-newton",
+    "bookId": "numericalbook",
+    "title": "뉴턴 접선 · 할선 · 수정 뉴턴 한 단계씩",
+    "link": "chapters/roots.html#sim-rt-newton"
+  },
+  {
+    "id": "numericalbook/roots/sim-rt-falsi",
+    "bookId": "numericalbook",
+    "title": "가위치법 vs 일리노이 vs 이분법: 묶인 끝점",
+    "link": "chapters/roots.html#sim-rt-falsi"
+  },
+  {
+    "id": "numericalbook/roots/sim-rt-compare",
+    "bookId": "numericalbook",
+    "title": "여섯 방법의 오차 경주: 수렴 차수를 기울기로 읽기",
+    "link": "chapters/roots.html#sim-rt-compare"
+  },
+  {
+    "id": "numericalbook/roots/sim-rt-noise",
+    "bookId": "numericalbook",
+    "title": "근 근처의 반올림 잡음: 불확실 구간 확대경",
+    "link": "chapters/roots.html#sim-rt-noise"
+  },
+  {
+    "id": "numericalbook/roots/sim-rt-fail",
+    "bookId": "numericalbook",
+    "title": "뉴턴 방법 실패 갤러리와 안전장치",
+    "link": "chapters/roots.html#sim-rt-fail"
+  },
+  {
+    "id": "numericalbook/roots/sim-rt-kepler",
+    "bookId": "numericalbook",
+    "title": "케플러 방정식: 궤도 위 행성의 위치를 뉴턴으로",
+    "link": "chapters/roots.html#sim-rt-kepler"
+  },
+  {
+    "id": "numericalbook/splines/sim-sl-drag",
+    "bookId": "numericalbook",
+    "title": "점을 끌어 비교하기: 다항식 vs 꺾은선 vs 3차 스플라인",
+    "link": "chapters/splines.html#sim-sl-drag"
+  },
+  {
+    "id": "numericalbook/splines/sim-sl-pchip",
+    "bookId": "numericalbook",
+    "title": "PCHIP는 넘치지 않는다: 스플라인과의 비교",
+    "link": "chapters/splines.html#sim-sl-pchip"
+  },
+  {
+    "id": "numericalbook/splines/sim-sl-system",
+    "bookId": "numericalbook",
+    "title": "삼중대각계를 토머스 알고리즘으로 한 줄씩 풀기",
+    "link": "chapters/splines.html#sim-sl-system"
+  },
+  {
+    "id": "numericalbook/splines/sim-sl-bc",
+    "bookId": "numericalbook",
+    "title": "경계 조건 비교: 끝에서 생기는 오차",
+    "link": "chapters/splines.html#sim-sl-bc"
+  },
+  {
+    "id": "numericalbook/splines/sim-sl-order",
+    "bookId": "numericalbook",
+    "title": "오차–간격 로그–로그 그래프: 방법별 차수",
+    "link": "chapters/splines.html#sim-sl-order"
+  },
+  {
+    "id": "numericalbook/splines/sim-sl-casteljau",
+    "bookId": "numericalbook",
+    "title": "드 카스텔조 알고리즘 단계별로 보기",
+    "link": "chapters/splines.html#sim-sl-casteljau"
+  },
+  {
+    "id": "numericalbook/splines/sim-sl-bezier",
+    "bookId": "numericalbook",
+    "title": "베지에 경로 편집기: 이음매의 연속성",
+    "link": "chapters/splines.html#sim-sl-bezier"
+  },
+  {
+    "id": "numericalbook/splines/sim-sl-bspline",
+    "bookId": "numericalbook",
+    "title": "B-스플라인 국소 제어 vs 베지에 전역 제어",
+    "link": "chapters/splines.html#sim-sl-bspline"
+  },
+  {
     "id": "probability-statistics/anova-doe/sim-flab",
     "bookId": "probability-statistics",
     "title": "F 검정 실험실",
