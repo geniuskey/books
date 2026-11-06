@@ -7,10 +7,15 @@ const vm = require('node:vm');
 
 const root = resolve(__dirname, '..');
 const records = JSON.parse(readFileSync(resolve(root, 'data/model-validation.json'), 'utf8')).experiments;
+// A book that moved into a shelf repository (e.g. semi-books/yield) is found through its checkout.
+const booksPath = resolve(root, 'data/books.json');
+const checkouts = existsSync(booksPath)
+  ? Object.fromEntries(JSON.parse(readFileSync(booksPath, 'utf8')).books.map((book) => [book.id, book.checkout || book.id]))
+  : {};
 let checked = 0;
 let skipped = 0;
 for (const [id, record] of Object.entries(records)) {
-  const sourcePath = resolve(root, '..', record.bookId, record.sourceFile);
+  const sourcePath = resolve(root, '..', checkouts[record.bookId] || record.bookId, record.sourceFile);
   if (!existsSync(sourcePath)) { skipped++; continue; }
   const source = readFileSync(sourcePath, 'utf8').replace(/\r\n/g, '\n');
   const window = {};
