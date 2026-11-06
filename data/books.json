@@ -93,6 +93,15 @@
       "desc": "일반물리·화학에서 전자기학·열역학·재료·역학까지. ScienceBooks에서 관리하는 대학 과학·공학 교재입니다."
     },
     {
+      "id": "math",
+      "wing": "work",
+      "name": "수학",
+      "en": "Mathematics",
+      "desc": "공학 수학 입문에서 선형대수·미적분·미분방정식·수치해석, 확률과 통계까지. MathBooks에서 관리하는 대학 수학 교재입니다.",
+      "color": "#7c3aed",
+      "colorDark": "#a78bfa"
+    },
+    {
       "id": "computing",
       "wing": "work",
       "name": "컴퓨터·AI",
@@ -135,7 +144,7 @@
       "en": "Arts & Culture",
       "color": "#c2410c",
       "colorDark": "#fb923c",
-      "desc": "사진·음악·수학에서 미술과 시각 표현, 웹·제품·산업디자인까지."
+      "desc": "사진·음악에서 미술과 시각 표현, 웹·제품·산업디자인까지."
     }
   ],
   "books": [
@@ -1774,52 +1783,6 @@
       "checkout": "music-books/fundamentals"
     },
     {
-      "id": "mathbook",
-      "code": "MTH",
-      "title": "MathBook",
-      "subtitle": "문제에서 출발하는 수학 교과서",
-      "headline": "이 수식이 없었다면 못 만들었을 물건",
-      "description": "전력망에서 복소수를, MRI에서 푸리에를, QR 코드에서 오류 정정 부호를 만납니다. 극한과 급수, 선형대수, 미분방정식, 표본화, 확률, 정보 이론, 최적화, 수치 해석, 기하와 대칭까지 — 정의보다 공학 문제에서 출발해 그림을 직접 끌며 직관을 만들도록 썼습니다.",
-      "en": {
-        "title": "MathBook",
-        "description": "Explore mathematics through engineering problems and interactive diagrams."
-      },
-      "url": "https://mathbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/mathbook",
-      "status": "published",
-      "level": "공대 학부",
-      "chapters": 13,
-      "simulators": 91,
-      "color": "#2b54d4",
-      "colorDark": "#7d9bff",
-      "topics": [
-        "극한·급수",
-        "복소수·페이저",
-        "선형대수·SVD",
-        "미분방정식",
-        "푸리에·표본화",
-        "확률·정보",
-        "최적화·수치 해석",
-        "기하·대칭"
-      ],
-      "motif": "matrix",
-      "featured": [
-        {
-          "title": "격자를 휘는 행렬",
-          "desc": "기저 벡터를 끌면 공간 전체가 따라 휜다. 행렬식은 넓이 배율",
-          "link": "chapters/linalg.html#sim-la-grid",
-          "image": "img/sims/mathbook-sim-la-grid.jpg"
-        },
-        {
-          "title": "해밍 부호로 비트 고치기",
-          "desc": "아무 비트나 뒤집으면 세 검사의 신드롬이 오류 위치를 가리킨다",
-          "link": "chapters/information.html#sim-inf-hamming",
-          "image": "img/sims/mathbook-sim-inf-hamming.jpg"
-        }
-      ],
-      "field": "culture"
-    },
-    {
       "id": "artbook-color",
       "code": "ART",
       "title": "ArtBook 색채",
@@ -2474,36 +2437,6 @@
       "phase": 1
     },
     {
-      "id": "probability-statistics",
-      "motif": "probability-statistics",
-      "code": "PRB",
-      "title": "확률과 통계",
-      "subtitle": "확률과 통계 교과서",
-      "description": "자료 요약과 확률의 기초에서 출발해 조건부 확률과 베이즈 정리, 이산·연속 분포, 중심 극한 정리, 표본 분포와 추정, 가설 검정, 회귀와 분산 분석, 실험 계획, 확률 과정, 통계적 공정 관리, 신뢰성과 수율까지 — 동전을 던지고 공을 떨어뜨리고 표본을 수천 번 다시 뽑으며 눈으로 익히는 인터랙티브 교과서.",
-      "en": {
-        "title": "Probability & Statistics",
-        "description": "Probability, inference, regression, and process control through simulation."
-      },
-      "field": "science",
-      "status": "published",
-      "level": "대학 1–2학년 · 반도체 기초",
-      "url": "https://science.euiyun.com/probability-statistics/",
-      "repo": "https://github.com/geniuskey/science-books",
-      "checkout": "science-books/probability-statistics",
-      "color": "#15803d",
-      "colorDark": "#4ade80",
-      "chapters": 19,
-      "topics": [
-        "자료와 확률",
-        "확률 변수와 분포",
-        "통계적 추론",
-        "통계 모형",
-        "공학 응용",
-        "부록"
-      ],
-      "simulators": 165
-    },
-    {
       "id": "fluid-mechanics",
       "motif": "fluid-mechanics",
       "code": "FLD",
@@ -2538,11 +2471,224 @@
       "code": "ORG",
       "title": "유기화학",
       "subtitle": "유기화학 교과서",
-      "description": "구조와 결합, 입체화학, 반응 메커니즘(치환·제거·첨가), 작용기별 반응, 분광학 — 화살표로 전자를 따라간다.",
+      "description": "골격 구조식을 읽고 그리는 법에서 출발해 형태 분석과 입체화학, 굽은 화살표로 따라가는 치환·제거·첨가·라디칼 메커니즘, 질량·IR·NMR 분광학, 공액과 방향족성, 작용기별 반응(알코올·카보닐·카복실산 유도체·엔올레이트·아민), 합성 고분자와 유기규소·유기금속 전구체, 화학 증폭형 감광막의 광화학까지 — 분자를 돌리고 전자를 직접 밀어 보며 반도체 공정의 유기 재료를 이해하는 인터랙티브 교과서.",
+      "en": {
+        "title": "Organic Chemistry",
+        "description": "Push electrons with curved arrows through mechanisms, spectroscopy, and the organic materials of chipmaking."
+      },
       "field": "science",
-      "status": "planned",
-      "level": "대학 2학년",
-      "phase": 2
+      "status": "published",
+      "level": "대학 2학년 · 반도체 기초",
+      "url": "https://science.euiyun.com/organic-chemistry/",
+      "repo": "https://github.com/geniuskey/science-books",
+      "checkout": "science-books/organic-chemistry",
+      "color": "#b45309",
+      "colorDark": "#fbbf24",
+      "chapters": 25,
+      "topics": [
+        "구조와 결합",
+        "반응의 원리",
+        "구조 결정",
+        "공액과 방향족성",
+        "작용기의 화학",
+        "반도체 재료의 유기화학",
+        "부록"
+      ],
+      "simulators": 155
+    },
+    {
+      "id": "mathbook",
+      "code": "MTH",
+      "title": "MathBook",
+      "subtitle": "문제에서 출발하는 수학 교과서",
+      "headline": "이 수식이 없었다면 못 만들었을 물건",
+      "description": "전력망에서 복소수를, MRI에서 푸리에를, QR 코드에서 오류 정정 부호를 만납니다. 극한과 급수, 선형대수, 미분방정식, 표본화, 확률, 정보 이론, 최적화, 수치 해석, 기하와 대칭까지 — 정의보다 공학 문제에서 출발해 그림을 직접 끌며 직관을 만들도록 썼습니다.",
+      "en": {
+        "title": "MathBook",
+        "description": "Explore mathematics through engineering problems and interactive diagrams."
+      },
+      "url": "https://math.euiyun.com/foundations/",
+      "repo": "https://github.com/geniuskey/math-books",
+      "status": "published",
+      "level": "공대 학부",
+      "chapters": 13,
+      "simulators": 91,
+      "color": "#2b54d4",
+      "colorDark": "#7d9bff",
+      "topics": [
+        "극한·급수",
+        "복소수·페이저",
+        "선형대수·SVD",
+        "미분방정식",
+        "푸리에·표본화",
+        "확률·정보",
+        "최적화·수치 해석",
+        "기하·대칭"
+      ],
+      "motif": "matrix",
+      "featured": [
+        {
+          "title": "격자를 휘는 행렬",
+          "desc": "기저 벡터를 끌면 공간 전체가 따라 휜다. 행렬식은 넓이 배율",
+          "link": "chapters/linalg.html#sim-la-grid",
+          "image": "img/sims/mathbook-sim-la-grid.jpg"
+        },
+        {
+          "title": "해밍 부호로 비트 고치기",
+          "desc": "아무 비트나 뒤집으면 세 검사의 신드롬이 오류 위치를 가리킨다",
+          "link": "chapters/information.html#sim-inf-hamming",
+          "image": "img/sims/mathbook-sim-inf-hamming.jpg"
+        }
+      ],
+      "field": "math",
+      "checkout": "math-books/foundations"
+    },
+    {
+      "id": "linearbook",
+      "code": "LIN",
+      "title": "LinearBook",
+      "subtitle": "선형대수 교과서",
+      "headline": "숫자의 표가 아니라 공간을 움직이는 기계",
+      "description": "벡터와 행렬에서 시작해 가우스 소거와 LU 분해, 벡터 공간과 계수, 직교성과 최소제곱, 행렬식, 고유값과 동역학, 대칭 행렬, 특이값 분해와 PCA, 수치 선형대수까지 — 격자를 직접 휘고 벡터를 끌며 한 학기 선형대수를 익히는 교과서.",
+      "en": {
+        "title": "LinearBook",
+        "description": "Bend grids and drag vectors to learn elimination, subspaces, eigenvalues, and the SVD."
+      },
+      "field": "math",
+      "status": "published",
+      "level": "공대 1–2학년",
+      "url": "https://math.euiyun.com/linear/",
+      "repo": "https://github.com/geniuskey/math-books",
+      "checkout": "math-books/linear",
+      "color": "#5f3dc4",
+      "colorDark": "#b197fc",
+      "chapters": 17,
+      "simulators": 114,
+      "topics": [
+        "벡터·행렬",
+        "가우스 소거·LU",
+        "부분공간·계수",
+        "직교성·최소제곱",
+        "고유값",
+        "SVD·PCA"
+      ],
+      "motif": "linear"
+    },
+    {
+      "id": "calculusbook",
+      "code": "CAL",
+      "title": "CalculusBook",
+      "subtitle": "미적분 교과서",
+      "headline": "변화율과 누적, 두 개의 눈으로 보는 세계",
+      "description": "극한과 연속에서 시작해 도함수와 연쇄 법칙, 평균값 정리와 최적화, 정적분과 미적분의 기본 정리, 적분 기법과 응용, 수열과 급수, 테일러 전개, 편미분과 그래디언트, 중적분과 벡터 미적분까지 — 접선을 끌고 직사각형을 쌓으며 1년 미적분을 익히는 교과서.",
+      "en": {
+        "title": "CalculusBook",
+        "description": "Drag tangents and stack rectangles to learn limits, derivatives, integrals, series, and vector calculus."
+      },
+      "field": "math",
+      "status": "published",
+      "level": "공대 1학년",
+      "url": "https://math.euiyun.com/calculus/",
+      "repo": "https://github.com/geniuskey/math-books",
+      "checkout": "math-books/calculus",
+      "color": "#c2255c",
+      "colorDark": "#f783ac",
+      "chapters": 17,
+      "simulators": 125,
+      "topics": [
+        "극한·연속",
+        "미분·최적화",
+        "적분·기본 정리",
+        "급수·테일러",
+        "편미분·그래디언트",
+        "중적분·벡터 미적분"
+      ],
+      "motif": "calculus"
+    },
+    {
+      "id": "odebook",
+      "code": "ODE",
+      "title": "ODEBook",
+      "subtitle": "미분방정식 교과서",
+      "headline": "변화의 법칙에서 미래를 계산한다",
+      "description": "방향장과 1계 방정식, 위상선과 수치 해법, 2계 선형 방정식과 진동·공진, 라플라스 변환과 전달 함수, 연립 방정식과 위상 평면, 비선형 안정성과 혼돈, 급수해와 푸리에 급수, 편미분방정식 입문까지 — 회로·기계·열을 직접 시뮬레이션하며 익히는 미분방정식 교과서.",
+      "en": {
+        "title": "ODEBook",
+        "description": "Follow direction fields to solve differential equations, from oscillators and Laplace transforms to chaos."
+      },
+      "field": "math",
+      "status": "published",
+      "level": "공대 2학년",
+      "url": "https://math.euiyun.com/ode/",
+      "repo": "https://github.com/geniuskey/math-books",
+      "checkout": "math-books/ode",
+      "color": "#e8590c",
+      "colorDark": "#ffa94d",
+      "chapters": 17,
+      "simulators": 121,
+      "topics": [
+        "방향장·1계 방정식",
+        "수치 해법",
+        "진동·공진",
+        "라플라스·전달 함수",
+        "위상 평면·안정성",
+        "혼돈·편미분방정식"
+      ],
+      "motif": "ode"
+    },
+    {
+      "id": "numericalbook",
+      "code": "NUM",
+      "title": "NumericalBook",
+      "subtitle": "수치해석 교과서",
+      "headline": "컴퓨터가 수학을 근사하는 방법",
+      "description": "부동소수점과 오차, 조건수와 안정성, 근 찾기와 비선형 연립방정식, 보간·스플라인·최소제곱 근사와 FFT, 수치 미분과 적분, 미분방정식의 수치 해법, 직접·반복 선형 해법과 고유값 계산, 수치 최적화, 편미분방정식의 수치 해법까지 — 알고리즘을 한 단계씩 돌려 보며 배우는 수치해석 교과서.",
+      "field": "math",
+      "status": "writing",
+      "phase": 1,
+      "level": "공대 3학년",
+      "repo": "https://github.com/geniuskey/math-books",
+      "color": "#2b8a3e",
+      "colorDark": "#8ce99a",
+      "topics": [
+        "오차",
+        "근 찾기",
+        "보간",
+        "수치 적분",
+        "ODE 해법",
+        "수치 선형대수"
+      ],
+      "motif": "numerical"
+    },
+    {
+      "id": "probability-statistics",
+      "motif": "probability-statistics",
+      "code": "PRB",
+      "title": "확률과 통계",
+      "subtitle": "확률과 통계 교과서",
+      "description": "자료 요약과 확률의 기초에서 출발해 조건부 확률과 베이즈 정리, 이산·연속 분포, 중심 극한 정리, 표본 분포와 추정, 가설 검정, 회귀와 분산 분석, 실험 계획, 확률 과정, 통계적 공정 관리, 신뢰성과 수율까지 — 동전을 던지고 공을 떨어뜨리고 표본을 수천 번 다시 뽑으며 눈으로 익히는 인터랙티브 교과서.",
+      "en": {
+        "title": "Probability & Statistics",
+        "description": "Probability, inference, regression, and process control through simulation."
+      },
+      "field": "math",
+      "status": "published",
+      "level": "대학 1–2학년",
+      "url": "https://math.euiyun.com/probability/",
+      "repo": "https://github.com/geniuskey/math-books",
+      "checkout": "math-books/probability",
+      "color": "#15803d",
+      "colorDark": "#4ade80",
+      "chapters": 19,
+      "topics": [
+        "자료와 확률",
+        "확률 변수와 분포",
+        "통계적 추론",
+        "통계 모형",
+        "공학 응용",
+        "부록"
+      ],
+      "simulators": 165
     },
     {
       "id": "thinfilmbook",
@@ -2848,6 +2994,14 @@
       "status": "published",
       "url": "https://music.euiyun.com/",
       "checkout": "music-books"
+    },
+    {
+      "id": "mathbooks",
+      "title": "MathBooks",
+      "subtitle": "수학 교과서 서가",
+      "status": "published",
+      "url": "https://math.euiyun.com/",
+      "checkout": "math-books"
     }
   ]
 }

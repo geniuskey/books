@@ -26382,552 +26382,6 @@
     "link": "chapters/tuning.html#sim-tun-pitch"
   },
   {
-    "id": "mathbook/complex/sim-cx-multiply",
-    "bookId": "mathbook",
-    "title": "곱셈 = 회전 + 확대, 덧셈 = 평행이동",
-    "link": "chapters/complex.html#sim-cx-multiply"
-  },
-  {
-    "id": "mathbook/complex/sim-cx-euler",
-    "bookId": "mathbook",
-    "title": "\\((1 + i\\theta/n)^n\\) → \\(e^{i\\theta}\\): 작은 회전을 n번",
-    "link": "chapters/complex.html#sim-cx-euler"
-  },
-  {
-    "id": "mathbook/complex/sim-cx-phasor",
-    "bookId": "mathbook",
-    "title": "두 페이저의 합 = 두 사인파의 합",
-    "link": "chapters/complex.html#sim-cx-phasor"
-  },
-  {
-    "id": "mathbook/complex/sim-cx-rlc",
-    "bookId": "mathbook",
-    "title": "RLC 직렬 회로의 페이저 다이어그램과 공진",
-    "link": "chapters/complex.html#sim-cx-rlc"
-  },
-  {
-    "id": "mathbook/complex/sim-cx-power",
-    "bookId": "mathbook",
-    "title": "공장의 역률 보상: P, Q, S 삼각형",
-    "link": "chapters/complex.html#sim-cx-power"
-  },
-  {
-    "id": "mathbook/complex/sim-cx-film",
-    "bookId": "mathbook",
-    "title": "반사 방지 코팅 설계: 반사 페이저와 가시광 스펙트럼",
-    "link": "chapters/complex.html#sim-cx-film"
-  },
-  {
-    "id": "mathbook/complex/sim-cx-qam",
-    "bookId": "mathbook",
-    "title": "QAM 성상도와 잡음: 점을 촘촘히 할수록 생기는 일",
-    "link": "chapters/complex.html#sim-cx-qam"
-  },
-  {
-    "id": "mathbook/complex/sim-cx-roots",
-    "bookId": "mathbook",
-    "title": "s-평면의 근을 끌어 응답 바꾸기",
-    "link": "chapters/complex.html#sim-cx-roots"
-  },
-  {
-    "id": "mathbook/fourier/sim-ft-heat",
-    "bookId": "mathbook",
-    "title": "막대의 열: 모드마다 다른 속도로 식는다",
-    "link": "chapters/fourier.html#sim-ft-heat"
-  },
-  {
-    "id": "mathbook/fourier/sim-ft-epi",
-    "bookId": "mathbook",
-    "title": "원 N개로 파형 그리기 — 깁스 현상",
-    "link": "chapters/fourier.html#sim-ft-epi"
-  },
-  {
-    "id": "mathbook/fourier/sim-ft-wind",
-    "bookId": "mathbook",
-    "title": "감기 기계: 질량중심이 튀어나오는 주파수 찾기",
-    "link": "chapters/fourier.html#sim-ft-wind"
-  },
-  {
-    "id": "mathbook/fourier/sim-ft-spec",
-    "bookId": "mathbook",
-    "title": "시간과 주파수를 동시에 보기",
-    "link": "chapters/fourier.html#sim-ft-spec"
-  },
-  {
-    "id": "mathbook/fourier/sim-ft-unc",
-    "bookId": "mathbook",
-    "title": "짧은 소리 ↔ 넓은 스펙트럼",
-    "link": "chapters/fourier.html#sim-ft-unc"
-  },
-  {
-    "id": "mathbook/fourier/sim-ft-conv",
-    "bookId": "mathbook",
-    "title": "필터 = 스펙트럼에 H를 곱하기",
-    "link": "chapters/fourier.html#sim-ft-conv"
-  },
-  {
-    "id": "mathbook/fourier/sim-ft-2d",
-    "bookId": "mathbook",
-    "title": "스펙트럼에 구멍 뚫기: 저역·고역 필터",
-    "link": "chapters/fourier.html#sim-ft-2d"
-  },
-  {
-    "id": "mathbook/fourier/sim-ft-psf",
-    "bookId": "mathbook",
-    "title": "조리개 모양 → PSF → MTF (2D FFT로 계산)",
-    "link": "chapters/fourier.html#sim-ft-psf"
-  },
-  {
-    "id": "mathbook/fourier/sim-ft-jpeg",
-    "bookId": "mathbook",
-    "title": "JPEG 품질 슬라이더: 8×8 DCT 양자화",
-    "link": "chapters/fourier.html#sim-ft-jpeg"
-  },
-  {
-    "id": "mathbook/fourier/sim-ft-kspace",
-    "bookId": "mathbook",
-    "title": "k-공간 채우기: 스캔하는 동안 영상이 나타난다",
-    "link": "chapters/fourier.html#sim-ft-kspace"
-  },
-  {
-    "id": "mathbook/geometry/sim-geo-euler",
-    "bookId": "mathbook",
-    "title": "V − E + F는 무엇을 세는가",
-    "link": "chapters/geometry.html#sim-geo-euler"
-  },
-  {
-    "id": "mathbook/geometry/sim-geo-curv",
-    "bookId": "mathbook",
-    "title": "접촉원을 끌고 다니며 곡률 읽기",
-    "link": "chapters/geometry.html#sim-geo-curv"
-  },
-  {
-    "id": "mathbook/geometry/sim-geo-sphere",
-    "bookId": "mathbook",
-    "title": "구 위의 삼각형: 내각의 합은 180°가 아니다",
-    "link": "chapters/geometry.html#sim-geo-sphere"
-  },
-  {
-    "id": "mathbook/geometry/sim-geo-tissot",
-    "bookId": "mathbook",
-    "title": "티소 지시원: 같은 원이 지도마다 어떻게 변하나",
-    "link": "chapters/geometry.html#sim-geo-tissot"
-  },
-  {
-    "id": "mathbook/geometry/sim-geo-homo",
-    "bookId": "mathbook",
-    "title": "문서 스캐너: 네 꼭짓점으로 원근 펴기",
-    "link": "chapters/geometry.html#sim-geo-homo"
-  },
-  {
-    "id": "mathbook/geometry/sim-geo-ray",
-    "bookId": "mathbook",
-    "title": "스넬 법칙으로 광선 추적: 구면수차와 비구면 보정",
-    "link": "chapters/geometry.html#sim-geo-ray"
-  },
-  {
-    "id": "mathbook/geometry/sim-geo-dist",
-    "bookId": "mathbook",
-    "title": "직접 해 보는 렌즈 왜곡 보정",
-    "link": "chapters/geometry.html#sim-geo-dist"
-  },
-  {
-    "id": "mathbook/glossary/sim-gl-map",
-    "bookId": "mathbook",
-    "title": "책별 수학 도구 지도",
-    "link": "chapters/glossary.html#sim-gl-map"
-  },
-  {
-    "id": "mathbook/information/sim-inf-guess",
-    "bookId": "mathbook",
-    "title": "숫자 맞히기: 질문 하나는 몇 비트인가",
-    "link": "chapters/information.html#sim-inf-guess"
-  },
-  {
-    "id": "mathbook/information/sim-inf-entropy",
-    "bookId": "mathbook",
-    "title": "확률 막대를 끌어 엔트로피 바꾸기",
-    "link": "chapters/information.html#sim-inf-entropy"
-  },
-  {
-    "id": "mathbook/information/sim-inf-huffman",
-    "bookId": "mathbook",
-    "title": "허프만 트리 만들기",
-    "link": "chapters/information.html#sim-inf-huffman"
-  },
-  {
-    "id": "mathbook/information/sim-inf-bsc",
-    "bookId": "mathbook",
-    "title": "잡음 채널로 그림 보내기: 반복 부호의 비용",
-    "link": "chapters/information.html#sim-inf-bsc"
-  },
-  {
-    "id": "mathbook/information/sim-inf-hamming",
-    "bookId": "mathbook",
-    "title": "해밍(7,4): 비트를 뒤집으면 신드롬이 위치를 가리킨다",
-    "link": "chapters/information.html#sim-inf-hamming"
-  },
-  {
-    "id": "mathbook/information/sim-inf-capacity",
-    "bookId": "mathbook",
-    "title": "대역폭과 SNR로 채널 용량 재기",
-    "link": "chapters/information.html#sim-inf-capacity"
-  },
-  {
-    "id": "mathbook/information/sim-inf-rs",
-    "bookId": "mathbook",
-    "title": "다항식 부호: 점을 지우고 곡선 되살리기",
-    "link": "chapters/information.html#sim-inf-rs"
-  },
-  {
-    "id": "mathbook/limits/sim-lim-zeno",
-    "bookId": "mathbook",
-    "title": "정사각형을 반씩 채우기",
-    "link": "chapters/limits.html#sim-lim-zeno"
-  },
-  {
-    "id": "mathbook/limits/sim-lim-overhang",
-    "bookId": "mathbook",
-    "title": "조화 쌓기와 두 급수의 경주",
-    "link": "chapters/limits.html#sim-lim-overhang"
-  },
-  {
-    "id": "mathbook/limits/sim-lim-epsdelta",
-    "bookId": "mathbook",
-    "title": "ε 띠를 좁혀라, δ 띠가 답한다",
-    "link": "chapters/limits.html#sim-lim-epsdelta"
-  },
-  {
-    "id": "mathbook/limits/sim-lim-secant",
-    "bookId": "mathbook",
-    "title": "h → 0: 할선을 접선으로 접기",
-    "link": "chapters/limits.html#sim-lim-secant"
-  },
-  {
-    "id": "mathbook/limits/sim-lim-riemann",
-    "bookId": "mathbook",
-    "title": "리만 합 네 가지와 오차 차수",
-    "link": "chapters/limits.html#sim-lim-riemann"
-  },
-  {
-    "id": "mathbook/limits/sim-lim-ebase",
-    "bookId": "mathbook",
-    "title": "밑 b를 돌려 기울기 곡선과 겹쳐라",
-    "link": "chapters/limits.html#sim-lim-ebase"
-  },
-  {
-    "id": "mathbook/limits/sim-lim-taylor",
-    "bookId": "mathbook",
-    "title": "테일러 다항식 실험실",
-    "link": "chapters/limits.html#sim-lim-taylor"
-  },
-  {
-    "id": "mathbook/linalg/sim-la-grid",
-    "bookId": "mathbook",
-    "title": "격자를 휘는 기계: 2×2 행렬",
-    "link": "chapters/linalg.html#sim-la-grid"
-  },
-  {
-    "id": "mathbook/linalg/sim-la-compose",
-    "bookId": "mathbook",
-    "title": "순서를 바꾸면 결과가 바뀐다: BA vs AB",
-    "link": "chapters/linalg.html#sim-la-compose"
-  },
-  {
-    "id": "mathbook/linalg/sim-la-solve",
-    "bookId": "mathbook",
-    "title": "열 그림으로 연립방정식 풀기와 조건수",
-    "link": "chapters/linalg.html#sim-la-solve"
-  },
-  {
-    "id": "mathbook/linalg/sim-la-ccm",
-    "bookId": "mathbook",
-    "title": "색 보정 행렬: 색을 살리면 잡음도 자란다",
-    "link": "chapters/linalg.html#sim-la-ccm"
-  },
-  {
-    "id": "mathbook/linalg/sim-la-eig",
-    "bookId": "mathbook",
-    "title": "고유벡터를 손으로 찾기",
-    "link": "chapters/linalg.html#sim-la-eig"
-  },
-  {
-    "id": "mathbook/linalg/sim-la-modes",
-    "bookId": "mathbook",
-    "title": "3층 건물의 고유진동수와 모드 형상",
-    "link": "chapters/linalg.html#sim-la-modes"
-  },
-  {
-    "id": "mathbook/linalg/sim-la-svd",
-    "bookId": "mathbook",
-    "title": "단위원 → 타원: SVD 세 단계 분해",
-    "link": "chapters/linalg.html#sim-la-svd"
-  },
-  {
-    "id": "mathbook/linalg/sim-la-lowrank",
-    "bookId": "mathbook",
-    "title": "SVD 이미지 압축: rank-k 근사",
-    "link": "chapters/linalg.html#sim-la-lowrank"
-  },
-  {
-    "id": "mathbook/numerics/sim-num-bits",
-    "bookId": "mathbook",
-    "title": "배정밀도 해부기: 저장된 값은 정확히 얼마인가",
-    "link": "chapters/numerics.html#sim-num-bits"
-  },
-  {
-    "id": "mathbook/numerics/sim-num-minifloat",
-    "bookId": "mathbook",
-    "title": "미니플로트의 모든 수를 수직선에",
-    "link": "chapters/numerics.html#sim-num-minifloat"
-  },
-  {
-    "id": "mathbook/numerics/sim-num-patriot",
-    "bookId": "mathbook",
-    "title": "0.1초 시계의 누적 오차",
-    "link": "chapters/numerics.html#sim-num-patriot"
-  },
-  {
-    "id": "mathbook/numerics/sim-num-cancel",
-    "bookId": "mathbook",
-    "title": "순진한 식 vs 안정적인 식",
-    "link": "chapters/numerics.html#sim-num-cancel"
-  },
-  {
-    "id": "mathbook/numerics/sim-num-ushape",
-    "bookId": "mathbook",
-    "title": "미분 오차 vs 간격 h (로그–로그)",
-    "link": "chapters/numerics.html#sim-num-ushape"
-  },
-  {
-    "id": "mathbook/numerics/sim-num-wave",
-    "bookId": "mathbook",
-    "title": "1D 파동 방정식과 CFL 조건",
-    "link": "chapters/numerics.html#sim-num-wave"
-  },
-  {
-    "id": "mathbook/numerics/sim-num-fdtd",
-    "bookId": "mathbook",
-    "title": "1D FDTD: 유전체 판에 부딪히는 펄스",
-    "link": "chapters/numerics.html#sim-num-fdtd"
-  },
-  {
-    "id": "mathbook/numerics/sim-num-grating",
-    "bookId": "mathbook",
-    "title": "회절 차수의 방향",
-    "link": "chapters/numerics.html#sim-num-grating"
-  },
-  {
-    "id": "mathbook/numerics/sim-num-cond",
-    "bookId": "mathbook",
-    "title": "거의 평행한 두 직선의 교점",
-    "link": "chapters/numerics.html#sim-num-cond"
-  },
-  {
-    "id": "mathbook/ode/sim-ode-lens",
-    "bookId": "mathbook",
-    "title": "해석 렌즈: 같은 곡선에 이름표만 바꾸기",
-    "link": "chapters/ode.html#sim-ode-lens"
-  },
-  {
-    "id": "mathbook/ode/sim-ode-field",
-    "bookId": "mathbook",
-    "title": "기울기장 위에 해곡선 흘려 보내기",
-    "link": "chapters/ode.html#sim-ode-field"
-  },
-  {
-    "id": "mathbook/ode/sim-ode-euler",
-    "bookId": "mathbook",
-    "title": "오일러 vs RK4: 단계 크기 h와 오차·불안정",
-    "link": "chapters/ode.html#sim-ode-euler"
-  },
-  {
-    "id": "mathbook/ode/sim-ode-damping",
-    "bookId": "mathbook",
-    "title": "감쇠비 ζ와 특성근: 계단 응답 ↔ 복소평면",
-    "link": "chapters/ode.html#sim-ode-damping"
-  },
-  {
-    "id": "mathbook/ode/sim-ode-resonance",
-    "bookId": "mathbook",
-    "title": "주파수 응답 곡선과 공진의 성장",
-    "link": "chapters/ode.html#sim-ode-resonance"
-  },
-  {
-    "id": "mathbook/ode/sim-ode-sir",
-    "bookId": "mathbook",
-    "title": "SIR 모델: R₀, 회복 기간, 접종률",
-    "link": "chapters/ode.html#sim-ode-sir"
-  },
-  {
-    "id": "mathbook/ode/sim-ode-heat",
-    "bookId": "mathbook",
-    "title": "1D 열확산: 핫스팟과 도펀트가 퍼지는 모습",
-    "link": "chapters/ode.html#sim-ode-heat"
-  },
-  {
-    "id": "mathbook/optimization/sim-opt-descent",
-    "bookId": "mathbook",
-    "title": "손실 지형 위의 경사 하강",
-    "link": "chapters/optimization.html#sim-opt-descent"
-  },
-  {
-    "id": "mathbook/optimization/sim-opt-lr",
-    "bookId": "mathbook",
-    "title": "포물선 위의 걸음: 학습률의 세 영역",
-    "link": "chapters/optimization.html#sim-opt-lr"
-  },
-  {
-    "id": "mathbook/optimization/sim-opt-race",
-    "bookId": "mathbook",
-    "title": "경사 하강 vs 모멘텀 vs Adam",
-    "link": "chapters/optimization.html#sim-opt-race"
-  },
-  {
-    "id": "mathbook/optimization/sim-opt-lsq",
-    "bookId": "mathbook",
-    "title": "잔차 제곱의 넓이를 최소로",
-    "link": "chapters/optimization.html#sim-opt-lsq"
-  },
-  {
-    "id": "mathbook/optimization/sim-opt-lagrange",
-    "bookId": "mathbook",
-    "title": "제약 곡선 위의 최적점과 그림자 가격",
-    "link": "chapters/optimization.html#sim-opt-lagrange"
-  },
-  {
-    "id": "mathbook/optimization/sim-opt-lp",
-    "bookId": "mathbook",
-    "title": "생산 계획: 이익 직선을 밀어 꼭짓점 찾기",
-    "link": "chapters/optimization.html#sim-opt-lp"
-  },
-  {
-    "id": "mathbook/probability/sim-pr-photons",
-    "bookId": "mathbook",
-    "title": "픽셀 격자에 광자 떨어뜨리기",
-    "link": "chapters/probability.html#sim-pr-photons"
-  },
-  {
-    "id": "mathbook/probability/sim-pr-shot",
-    "bookId": "mathbook",
-    "title": "샷 노이즈 사진과 멀티프레임 평균",
-    "link": "chapters/probability.html#sim-pr-shot"
-  },
-  {
-    "id": "mathbook/probability/sim-pr-clt",
-    "bookId": "mathbook",
-    "title": "요인 n개를 더하면",
-    "link": "chapters/probability.html#sim-pr-clt"
-  },
-  {
-    "id": "mathbook/probability/sim-pr-cpk",
-    "bookId": "mathbook",
-    "title": "선폭 분포와 규격: Cpk와 ppm",
-    "link": "chapters/probability.html#sim-pr-cpk"
-  },
-  {
-    "id": "mathbook/probability/sim-pr-tail",
-    "bookId": "mathbook",
-    "title": "소자 N개 칩의 수율과 설계 마진",
-    "link": "chapters/probability.html#sim-pr-tail"
-  },
-  {
-    "id": "mathbook/probability/sim-pr-bayes",
-    "bookId": "mathbook",
-    "title": "칩 10,000개로 보는 베이즈 정리",
-    "link": "chapters/probability.html#sim-pr-bayes"
-  },
-  {
-    "id": "mathbook/probability/sim-pr-yield",
-    "bookId": "mathbook",
-    "title": "웨이퍼 맵: 결함 밀도와 다이 크기",
-    "link": "chapters/probability.html#sim-pr-yield"
-  },
-  {
-    "id": "mathbook/sampling/sim-smp-wheel",
-    "bookId": "mathbook",
-    "title": "수레바퀴 효과: 회전 속도 × 프레임률",
-    "link": "chapters/sampling.html#sim-smp-wheel"
-  },
-  {
-    "id": "mathbook/sampling/sim-smp-alias",
-    "bookId": "mathbook",
-    "title": "사인파 샘플링과 에일리어스 (소리 포함)",
-    "link": "chapters/sampling.html#sim-smp-alias"
-  },
-  {
-    "id": "mathbook/sampling/sim-smp-sinc",
-    "bookId": "mathbook",
-    "title": "샘플을 끌어서 sinc 재구성 보기",
-    "link": "chapters/sampling.html#sim-smp-sinc"
-  },
-  {
-    "id": "mathbook/sampling/sim-smp-aaf",
-    "bookId": "mathbook",
-    "title": "안티앨리어싱 필터 설계: 얼마나 가팔라야 하나",
-    "link": "chapters/sampling.html#sim-smp-aaf"
-  },
-  {
-    "id": "mathbook/sampling/sim-smp-moire",
-    "bookId": "mathbook",
-    "title": "모아레: 줄무늬 × 픽셀 격자, 그리고 두 격자 겹치기",
-    "link": "chapters/sampling.html#sim-smp-moire"
-  },
-  {
-    "id": "mathbook/sampling/sim-smp-bayer",
-    "bookId": "mathbook",
-    "title": "베이어 샘플링과 디모자이킹의 위색",
-    "link": "chapters/sampling.html#sim-smp-bayer"
-  },
-  {
-    "id": "mathbook/sampling/sim-smp-quant",
-    "bookId": "mathbook",
-    "title": "양자화 비트 수, 잡음 바닥, 디더",
-    "link": "chapters/sampling.html#sim-smp-quant"
-  },
-  {
-    "id": "mathbook/symmetry/sim-sym-d4",
-    "bookId": "mathbook",
-    "title": "정사각형의 대칭 8개와 케일리 표",
-    "link": "chapters/symmetry.html#sim-sym-d4"
-  },
-  {
-    "id": "mathbook/symmetry/sim-sym-fifteen",
-    "bookId": "mathbook",
-    "title": "15 퍼즐과 패리티 계기판",
-    "link": "chapters/symmetry.html#sim-sym-fifteen"
-  },
-  {
-    "id": "mathbook/symmetry/sim-sym-comm",
-    "bookId": "mathbook",
-    "title": "교환자 [A, B]는 조금만 바꾼다",
-    "link": "chapters/symmetry.html#sim-sym-comm"
-  },
-  {
-    "id": "mathbook/symmetry/sim-sym-wallpaper",
-    "bookId": "mathbook",
-    "title": "17가지 벽지군 그리기판",
-    "link": "chapters/symmetry.html#sim-sym-wallpaper"
-  },
-  {
-    "id": "mathbook/symmetry/sim-sym-restrict",
-    "bookId": "mathbook",
-    "title": "정다각형 채우기 vs 격자 논증",
-    "link": "chapters/symmetry.html#sim-sym-restrict"
-  },
-  {
-    "id": "mathbook/symmetry/sim-sym-miller",
-    "bookId": "mathbook",
-    "title": "밀러 지수 평면 단면 (드래그로 회전)",
-    "link": "chapters/symmetry.html#sim-sym-miller"
-  },
-  {
-    "id": "mathbook/symmetry/sim-sym-koh",
-    "bookId": "mathbook",
-    "title": "KOH 이방성 식각 단면",
-    "link": "chapters/symmetry.html#sim-sym-koh"
-  },
-  {
     "id": "artbook-color/access/sim-ac-web",
     "bookId": "artbook-color",
     "title": "책방 E 웹사이트, 다른 눈으로",
@@ -36558,6 +36012,4098 @@
     "link": "chapters/transformation-kinetics.html#sim-ch"
   },
   {
+    "id": "fluid-mechanics/bernoulli/sim-pitot",
+    "bookId": "fluid-mechanics",
+    "title": "피토 정압관으로 비행 속도 재기",
+    "link": "chapters/bernoulli.html#sim-pitot"
+  },
+  {
+    "id": "fluid-mechanics/bernoulli/sim-venturi",
+    "bookId": "fluid-mechanics",
+    "title": "벤투리관: 목을 좁혀 보라",
+    "link": "chapters/bernoulli.html#sim-venturi"
+  },
+  {
+    "id": "fluid-mechanics/bernoulli/sim-drain",
+    "bookId": "fluid-mechanics",
+    "title": "탱크 배수: h–t 실시간 그래프",
+    "link": "chapters/bernoulli.html#sim-drain"
+  },
+  {
+    "id": "fluid-mechanics/bernoulli/sim-siphon",
+    "bookId": "fluid-mechanics",
+    "title": "사이펀: 벽을 넘겨 최대 유량을 뽑아라",
+    "link": "chapters/bernoulli.html#sim-siphon"
+  },
+  {
+    "id": "fluid-mechanics/bernoulli/sim-egl",
+    "bookId": "fluid-mechanics",
+    "title": "관로를 따라 EGL·HGL 그리기",
+    "link": "chapters/bernoulli.html#sim-egl"
+  },
+  {
+    "id": "fluid-mechanics/compressible-flow/sim-pulse",
+    "bookId": "fluid-mechanics",
+    "title": "관 속 압력파: 피스톤을 밀어 음파를 보내라",
+    "link": "chapters/compressible-flow.html#sim-pulse"
+  },
+  {
+    "id": "fluid-mechanics/compressible-flow/sim-mach",
+    "bookId": "fluid-mechanics",
+    "title": "슐리렌 사진 판독: 마하 각을 재서 탄환의 속도를 맞혀라",
+    "link": "chapters/compressible-flow.html#sim-mach"
+  },
+  {
+    "id": "fluid-mechanics/compressible-flow/sim-duct",
+    "bookId": "fluid-mechanics",
+    "title": "면적–속도 관계: 관 벽을 끌어 모양을 바꿔라",
+    "link": "chapters/compressible-flow.html#sim-duct"
+  },
+  {
+    "id": "fluid-mechanics/compressible-flow/sim-conv",
+    "bookId": "fluid-mechanics",
+    "title": "수축 노즐: 배압을 끌어 내려 초크시켜라",
+    "link": "chapters/compressible-flow.html#sim-conv"
+  },
+  {
+    "id": "fluid-mechanics/compressible-flow/sim-nozzle",
+    "bookId": "fluid-mechanics",
+    "title": "라발 노즐 시뮬레이터: 배압으로 충격파를 과녁에 세워라",
+    "link": "chapters/compressible-flow.html#sim-nozzle"
+  },
+  {
+    "id": "fluid-mechanics/compressible-flow/sim-shock",
+    "bookId": "fluid-mechanics",
+    "title": "수직 충격파 계산기: 상류 속도 화살표를 끌어라",
+    "link": "chapters/compressible-flow.html#sim-shock"
+  },
+  {
+    "id": "fluid-mechanics/compressible-flow/sim-wedge",
+    "bookId": "fluid-mechanics",
+    "title": "쐐기와 코너: 경사 충격파와 팽창 부채",
+    "link": "chapters/compressible-flow.html#sim-wedge"
+  },
+  {
+    "id": "fluid-mechanics/control-volume/sim-tank",
+    "bookId": "fluid-mechanics",
+    "title": "탱크 질량 수지: 목표 수위를 지켜라",
+    "link": "chapters/control-volume.html#sim-tank"
+  },
+  {
+    "id": "fluid-mechanics/control-volume/sim-vane",
+    "bookId": "fluid-mechanics",
+    "title": "날개 시뮬레이터: 목표 힘을 맞혀라",
+    "link": "chapters/control-volume.html#sim-vane"
+  },
+  {
+    "id": "fluid-mechanics/control-volume/sim-elbow",
+    "bookId": "fluid-mechanics",
+    "title": "엘보와 축소 노즐을 붙잡는 힘",
+    "link": "chapters/control-volume.html#sim-elbow"
+  },
+  {
+    "id": "fluid-mechanics/control-volume/sim-sprinkler",
+    "bookId": "fluid-mechanics",
+    "title": "회전 스프링클러: 목표 회전수를 맞혀라",
+    "link": "chapters/control-volume.html#sim-sprinkler"
+  },
+  {
+    "id": "fluid-mechanics/control-volume/sim-pipe",
+    "bookId": "fluid-mechanics",
+    "title": "펌프·터빈이 있는 관로의 수두 막대",
+    "link": "chapters/control-volume.html#sim-pipe"
+  },
+  {
+    "id": "fluid-mechanics/differential-analysis/sim-div",
+    "bookId": "fluid-mechanics",
+    "title": "검사 체적 상자: 면 유량과 유체 덩어리의 넓이",
+    "link": "chapters/differential-analysis.html#sim-div"
+  },
+  {
+    "id": "fluid-mechanics/differential-analysis/sim-start",
+    "bookId": "fluid-mechanics",
+    "title": "출발 유동: 점성이 운동량을 퍼뜨리는 시간",
+    "link": "chapters/differential-analysis.html#sim-start"
+  },
+  {
+    "id": "fluid-mechanics/differential-analysis/sim-cp",
+    "bookId": "fluid-mechanics",
+    "title": "쿠에트–푸아죄유 유동: 판을 끌고 압력을 올려라",
+    "link": "chapters/differential-analysis.html#sim-cp"
+  },
+  {
+    "id": "fluid-mechanics/differential-analysis/sim-super",
+    "bookId": "fluid-mechanics",
+    "title": "중첩 빌더: 요소를 놓아 목표 모양을 만들어라",
+    "link": "chapters/differential-analysis.html#sim-super"
+  },
+  {
+    "id": "fluid-mechanics/differential-analysis/sim-cyl",
+    "bookId": "fluid-mechanics",
+    "title": "회전하는 원주: 순환, 정체점, 표면 압력, 양력",
+    "link": "chapters/differential-analysis.html#sim-cyl"
+  },
+  {
+    "id": "fluid-mechanics/dimensional-analysis/sim-fall",
+    "bookId": "fluid-mechanics",
+    "title": "던지기의 무차원화: 서로 다른 던지기로 같은 곡선 만들기",
+    "link": "chapters/dimensional-analysis.html#sim-fall"
+  },
+  {
+    "id": "fluid-mechanics/dimensional-analysis/sim-pi",
+    "bookId": "fluid-mechanics",
+    "title": "Π 정리 빌더: 변수를 고르면 Π 그룹이 만들어진다",
+    "link": "chapters/dimensional-analysis.html#sim-pi"
+  },
+  {
+    "id": "fluid-mechanics/dimensional-analysis/sim-wave",
+    "bookId": "fluid-mechanics",
+    "title": "수면파 수조: 바닥과 파장을 끌어 보라",
+    "link": "chapters/dimensional-analysis.html#sim-wave"
+  },
+  {
+    "id": "fluid-mechanics/dimensional-analysis/sim-model",
+    "bookId": "fluid-mechanics",
+    "title": "모형 실험 설계기: 시설 한계 안에서 Re를 맞춰라",
+    "link": "chapters/dimensional-analysis.html#sim-model"
+  },
+  {
+    "id": "fluid-mechanics/dimensional-analysis/sim-ship",
+    "bookId": "fluid-mechanics",
+    "title": "예인 수조: 모형 배의 파형을 원형과 똑같이",
+    "link": "chapters/dimensional-analysis.html#sim-ship"
+  },
+  {
+    "id": "fluid-mechanics/dimensional-analysis/sim-collapse",
+    "bookId": "fluid-mechanics",
+    "title": "데이터 정리기: 올바른 무차원 묶음을 찾아 곡선을 붕괴시켜라",
+    "link": "chapters/dimensional-analysis.html#sim-collapse"
+  },
+  {
+    "id": "fluid-mechanics/external-flow/sim-bl",
+    "bookId": "fluid-mechanics",
+    "title": "경계층 탐침: 평판 위 어디서든 속도 분포를 재라",
+    "link": "chapters/external-flow.html#sim-bl"
+  },
+  {
+    "id": "fluid-mechanics/external-flow/sim-sep",
+    "bookId": "fluid-mechanics",
+    "title": "원주 주위 박리: 표면 압력을 탐침으로 재라",
+    "link": "chapters/external-flow.html#sim-sep"
+  },
+  {
+    "id": "fluid-mechanics/external-flow/sim-cdre",
+    "bookId": "fluid-mechanics",
+    "title": "C D –Re 곡선 탐험: 점을 끌어 레이놀즈 수를 바꿔라",
+    "link": "chapters/external-flow.html#sim-cdre"
+  },
+  {
+    "id": "fluid-mechanics/external-flow/sim-sphere",
+    "bookId": "fluid-mechanics",
+    "title": "떨어지는 구: 종단 속도와 C D –Re 위의 점",
+    "link": "chapters/external-flow.html#sim-sphere"
+  },
+  {
+    "id": "fluid-mechanics/external-flow/sim-chute",
+    "bookId": "fluid-mechanics",
+    "title": "도전: 낙하산을 설계해 5 m/s 이하로 착지하라",
+    "link": "chapters/external-flow.html#sim-chute"
+  },
+  {
+    "id": "fluid-mechanics/external-flow/sim-airfoil",
+    "bookId": "fluid-mechanics",
+    "title": "에어포일 풍동: 받음각을 끌어 실속을 찾아라",
+    "link": "chapters/external-flow.html#sim-airfoil"
+  },
+  {
+    "id": "fluid-mechanics/external-flow/sim-takeoff",
+    "bookId": "fluid-mechanics",
+    "title": "도전: 짧은 활주로에서 이륙하라",
+    "link": "chapters/external-flow.html#sim-takeoff"
+  },
+  {
+    "id": "fluid-mechanics/fluid-kinematics/sim-le",
+    "bookId": "fluid-mechanics",
+    "title": "입자 따라가기(라그랑주) vs 고정 탐침(오일러)",
+    "link": "chapters/fluid-kinematics.html#sim-le"
+  },
+  {
+    "id": "fluid-mechanics/fluid-kinematics/sim-noz",
+    "bookId": "fluid-mechanics",
+    "title": "수축 노즐: 국소 가속도와 대류 가속도의 분해",
+    "link": "chapters/fluid-kinematics.html#sim-noz"
+  },
+  {
+    "id": "fluid-mechanics/fluid-kinematics/sim-lines",
+    "bookId": "fluid-mechanics",
+    "title": "유선·유적선·유맥선 동시에 그리기",
+    "link": "chapters/fluid-kinematics.html#sim-lines"
+  },
+  {
+    "id": "fluid-mechanics/fluid-kinematics/sim-elem",
+    "bookId": "fluid-mechanics",
+    "title": "유체 요소 띄우기: 회전하는가, 변형하는가?",
+    "link": "chapters/fluid-kinematics.html#sim-elem"
+  },
+  {
+    "id": "fluid-mechanics/fluid-kinematics/sim-circ",
+    "bookId": "fluid-mechanics",
+    "title": "순환 재기: 폐곡선을 끌어 Γ = ∮V·ds 구하기",
+    "link": "chapters/fluid-kinematics.html#sim-circ"
+  },
+  {
+    "id": "fluid-mechanics/fluid-kinematics/sim-rtt",
+    "bookId": "fluid-mechanics",
+    "title": "움직이는 계 vs 고정된 검사 체적",
+    "link": "chapters/fluid-kinematics.html#sim-rtt"
+  },
+  {
+    "id": "fluid-mechanics/fluid-properties/sim-couette",
+    "bookId": "fluid-mechanics",
+    "title": "평판 사이 유체: 목표 전단 응력을 만들어라",
+    "link": "chapters/fluid-properties.html#sim-couette"
+  },
+  {
+    "id": "fluid-mechanics/fluid-properties/sim-journal",
+    "bookId": "fluid-mechanics",
+    "title": "저널 베어링의 점성 토크",
+    "link": "chapters/fluid-properties.html#sim-journal"
+  },
+  {
+    "id": "fluid-mechanics/fluid-properties/sim-rheo",
+    "bookId": "fluid-mechanics",
+    "title": "유변 측정기: 미지 시료의 정체를 밝혀라",
+    "link": "chapters/fluid-properties.html#sim-rheo"
+  },
+  {
+    "id": "fluid-mechanics/fluid-properties/sim-piston",
+    "bookId": "fluid-mechanics",
+    "title": "피스톤으로 눌러 보는 체적 탄성 계수",
+    "link": "chapters/fluid-properties.html#sim-piston"
+  },
+  {
+    "id": "fluid-mechanics/fluid-properties/sim-cap",
+    "bookId": "fluid-mechanics",
+    "title": "모세관: 관 지름을 맞혀 목표 높이에 세워라",
+    "link": "chapters/fluid-properties.html#sim-cap"
+  },
+  {
+    "id": "fluid-mechanics/fluid-properties/sim-cavit",
+    "bookId": "fluid-mechanics",
+    "title": "펌프 흡입부의 공동 현상",
+    "link": "chapters/fluid-properties.html#sim-cavit"
+  },
+  {
+    "id": "fluid-mechanics/fluid-statics/sim-paradox",
+    "bookId": "fluid-mechanics",
+    "title": "정수압 역설: 모양이 다른 세 용기",
+    "link": "chapters/fluid-statics.html#sim-paradox"
+  },
+  {
+    "id": "fluid-mechanics/fluid-statics/sim-mano",
+    "bookId": "fluid-mechanics",
+    "title": "U자관 차압 마노미터",
+    "link": "chapters/fluid-statics.html#sim-mano"
+  },
+  {
+    "id": "fluid-mechanics/fluid-statics/sim-gate",
+    "bookId": "fluid-mechanics",
+    "title": "경사 수문: 압력 분포, 압력 중심, 힌지 모멘트",
+    "link": "chapters/fluid-statics.html#sim-gate"
+  },
+  {
+    "id": "fluid-mechanics/fluid-statics/sim-curved",
+    "bookId": "fluid-mechanics",
+    "title": "1/4 원통 곡면 수문의 힘 성분",
+    "link": "chapters/fluid-statics.html#sim-curved"
+  },
+  {
+    "id": "fluid-mechanics/fluid-statics/sim-float",
+    "bookId": "fluid-mechanics",
+    "title": "부양체 상자의 안정성과 복원 팔 곡선",
+    "link": "chapters/fluid-statics.html#sim-float"
+  },
+  {
+    "id": "fluid-mechanics/fluid-statics/sim-accel",
+    "bookId": "fluid-mechanics",
+    "title": "가속하는 탱크: 기울어진 수면과 등압선",
+    "link": "chapters/fluid-statics.html#sim-accel"
+  },
+  {
+    "id": "fluid-mechanics/fluid-statics/sim-rot",
+    "bookId": "fluid-mechanics",
+    "title": "회전하는 원통: 포물면 수면 — 넘치기 직전을 맞혀라",
+    "link": "chapters/fluid-statics.html#sim-rot"
+  },
+  {
+    "id": "fluid-mechanics/open-channel/sim-wave",
+    "bookId": "fluid-mechanics",
+    "title": "흐르는 물에 돌 던지기 (위에서 본 수로)",
+    "link": "chapters/open-channel.html#sim-wave"
+  },
+  {
+    "id": "fluid-mechanics/open-channel/sim-energy",
+    "bookId": "fluid-mechanics",
+    "title": "비에너지 선도와 바닥 융기 (도전: 초크 직전까지)",
+    "link": "chapters/open-channel.html#sim-energy"
+  },
+  {
+    "id": "fluid-mechanics/open-channel/sim-manning",
+    "bookId": "fluid-mechanics",
+    "title": "매닝 수로 설계기 (도전: 목표 유량을 가장 작은 단면으로)",
+    "link": "chapters/open-channel.html#sim-manning"
+  },
+  {
+    "id": "fluid-mechanics/open-channel/sim-gvf",
+    "bookId": "fluid-mechanics",
+    "title": "수면 곡선 적분기 (M · S · H · A 곡선)",
+    "link": "chapters/open-channel.html#sim-gvf"
+  },
+  {
+    "id": "fluid-mechanics/open-channel/sim-jump",
+    "bookId": "fluid-mechanics",
+    "title": "수력 도약 계산기",
+    "link": "chapters/open-channel.html#sim-jump"
+  },
+  {
+    "id": "fluid-mechanics/open-channel/sim-gate",
+    "bookId": "fluid-mechanics",
+    "title": "수문 아래 흐름: 자유 유출과 잠긴 유출",
+    "link": "chapters/open-channel.html#sim-gate"
+  },
+  {
+    "id": "fluid-mechanics/pipe-flow/sim-entry",
+    "bookId": "fluid-mechanics",
+    "title": "입구 영역: 속도 분포가 자라는 모습",
+    "link": "chapters/pipe-flow.html#sim-entry"
+  },
+  {
+    "id": "fluid-mechanics/pipe-flow/sim-profile",
+    "bookId": "fluid-mechanics",
+    "title": "층류 포물선 vs 난류 멱법칙 (같은 평균 속도)",
+    "link": "chapters/pipe-flow.html#sim-profile"
+  },
+  {
+    "id": "fluid-mechanics/pipe-flow/sim-moody",
+    "bookId": "fluid-mechanics",
+    "title": "인터랙티브 무디 선도",
+    "link": "chapters/pipe-flow.html#sim-moody"
+  },
+  {
+    "id": "fluid-mechanics/pipe-flow/sim-tanks",
+    "bookId": "fluid-mechanics",
+    "title": "두 탱크 사이 관로 계산기 + 도전: 최소 지름 고르기",
+    "link": "chapters/pipe-flow.html#sim-tanks"
+  },
+  {
+    "id": "fluid-mechanics/pipe-flow/sim-parallel",
+    "bookId": "fluid-mechanics",
+    "title": "병렬 관로의 유량 분배",
+    "link": "chapters/pipe-flow.html#sim-parallel"
+  },
+  {
+    "id": "fluid-mechanics/property-tables/sim-water",
+    "bookId": "fluid-mechanics",
+    "title": "물의 물성 계산기",
+    "link": "chapters/property-tables.html#sim-water"
+  },
+  {
+    "id": "fluid-mechanics/property-tables/sim-air",
+    "bookId": "fluid-mechanics",
+    "title": "공기의 물성 계산기",
+    "link": "chapters/property-tables.html#sim-air"
+  },
+  {
+    "id": "fluid-mechanics/property-tables/sim-atm",
+    "bookId": "fluid-mechanics",
+    "title": "고도를 끌어 대기 상태 읽기",
+    "link": "chapters/property-tables.html#sim-atm"
+  },
+  {
+    "id": "fluid-mechanics/property-tables/sim-conv",
+    "bookId": "fluid-mechanics",
+    "title": "단위 환산기",
+    "link": "chapters/property-tables.html#sim-conv"
+  },
+  {
+    "id": "fluid-mechanics/property-tables/sim-moody",
+    "bookId": "fluid-mechanics",
+    "title": "인터랙티브 무디 선도",
+    "link": "chapters/property-tables.html#sim-moody"
+  },
+  {
+    "id": "fluid-mechanics/property-tables/sim-gas",
+    "bookId": "fluid-mechanics",
+    "title": "등엔트로피 · 수직 충격파 계산기",
+    "link": "chapters/property-tables.html#sim-gas"
+  },
+  {
+    "id": "fluid-mechanics/turbomachinery/sim-tri",
+    "bookId": "fluid-mechanics",
+    "title": "속도 삼각형: V₂ 끝을 끌어 날개 출구각과 유량을 바꿔라",
+    "link": "chapters/turbomachinery.html#sim-tri"
+  },
+  {
+    "id": "fluid-mechanics/turbomachinery/sim-op",
+    "bookId": "fluid-mechanics",
+    "title": "작동점: 시스템 곡선을 끌고, 회전수로 목표 유량을 맞혀라",
+    "link": "chapters/turbomachinery.html#sim-op"
+  },
+  {
+    "id": "fluid-mechanics/turbomachinery/sim-npsh",
+    "bookId": "fluid-mechanics",
+    "title": "NPSH와 공동 현상: 펌프를 끌어 올리고 내려 보라",
+    "link": "chapters/turbomachinery.html#sim-npsh"
+  },
+  {
+    "id": "fluid-mechanics/turbomachinery/sim-ns",
+    "bookId": "fluid-mechanics",
+    "title": "비속도로 펌프 형식 고르기: 주문서를 받아 회전수를 정하라",
+    "link": "chapters/turbomachinery.html#sim-ns"
+  },
+  {
+    "id": "fluid-mechanics/turbomachinery/sim-pelton",
+    "bookId": "fluid-mechanics",
+    "title": "펠턴 휠: 버킷 속도비와 출력, 발전기 동기 속도 맞추기",
+    "link": "chapters/turbomachinery.html#sim-pelton"
+  },
+  {
+    "id": "organic-chemistry/acids-bases/sim-res",
+    "bookId": "organic-chemistry",
+    "title": "공명 구조 탐색기: 전자쌍을 끌어 화살표 긋기",
+    "link": "chapters/acids-bases.html#sim-res"
+  },
+  {
+    "id": "organic-chemistry/acids-bases/sim-eq",
+    "bookId": "organic-chemistry",
+    "title": "pKa 사다리: 산과 염기를 골라 평형 읽기",
+    "link": "chapters/acids-bases.html#sim-eq"
+  },
+  {
+    "id": "organic-chemistry/acids-bases/sim-frac",
+    "bookId": "organic-chemistry",
+    "title": "pH에 따른 이온화 비율과 미지 산 맞히기",
+    "link": "chapters/acids-bases.html#sim-frac"
+  },
+  {
+    "id": "organic-chemistry/acids-bases/sim-ario",
+    "bookId": "organic-chemistry",
+    "title": "ARIO 대결: 더 센 산을 골라라",
+    "link": "chapters/acids-bases.html#sim-ario"
+  },
+  {
+    "id": "organic-chemistry/acids-bases/sim-level",
+    "bookId": "organic-chemistry",
+    "title": "물과 DMSO의 pKa 사다리와 수평 효과",
+    "link": "chapters/acids-bases.html#sim-level"
+  },
+  {
+    "id": "organic-chemistry/acids-bases/sim-car",
+    "bookId": "organic-chemistry",
+    "title": "화학 증폭 레지스트: 산 생성 → 중화 → 촉매 탈보호 → TMAH 현상",
+    "link": "chapters/acids-bases.html#sim-car"
+  },
+  {
+    "id": "organic-chemistry/alcohols-ethers/sim-bp",
+    "bookId": "organic-chemistry",
+    "title": "끓는점과 물 용해도 탐색기",
+    "link": "chapters/alcohols-ethers.html#sim-bp"
+  },
+  {
+    "id": "organic-chemistry/alcohols-ethers/sim-grig",
+    "bookId": "organic-chemistry",
+    "title": "그리냐르·환원 조립기: 목표 알코올 만들기",
+    "link": "chapters/alcohols-ethers.html#sim-grig"
+  },
+  {
+    "id": "organic-chemistry/alcohols-ethers/sim-ox",
+    "bookId": "organic-chemistry",
+    "title": "산화 사다리: 시약을 끌어 목표 화합물 만들기",
+    "link": "chapters/alcohols-ethers.html#sim-ox"
+  },
+  {
+    "id": "organic-chemistry/alcohols-ethers/sim-phen",
+    "bookId": "organic-chemistry",
+    "title": "페놀 산성 탐색기: 치환기를 고리에 끌어 놓기",
+    "link": "chapters/alcohols-ethers.html#sim-phen"
+  },
+  {
+    "id": "organic-chemistry/alcohols-ethers/sim-will",
+    "bookId": "organic-chemistry",
+    "title": "윌리엄슨 설계 게임: 어느 C–O 결합을 끊을까?",
+    "link": "chapters/alcohols-ethers.html#sim-will"
+  },
+  {
+    "id": "organic-chemistry/alcohols-ethers/sim-ep3d",
+    "bookId": "organic-chemistry",
+    "title": "에폭사이드 개환 실험실: 조건·친핵체 → 위치와 입체",
+    "link": "chapters/alcohols-ethers.html#sim-ep3d"
+  },
+  {
+    "id": "organic-chemistry/alcohols-ethers/sim-cure",
+    "bookId": "organic-chemistry",
+    "title": "에폭시 경화 반응 속도: 겔화·유리화·후경화",
+    "link": "chapters/alcohols-ethers.html#sim-cure"
+  },
+  {
+    "id": "organic-chemistry/aldehydes-ketones/sim-spec",
+    "bookId": "organic-chemistry",
+    "title": "미지 카보닐 맞히기: IR과 ¹H NMR",
+    "link": "chapters/aldehydes-ketones.html#sim-spec"
+  },
+  {
+    "id": "organic-chemistry/aldehydes-ketones/sim-ladder",
+    "bookId": "organic-chemistry",
+    "title": "카보닐 반응성 사다리: log K hyd 에 카드 놓기",
+    "link": "chapters/aldehydes-ketones.html#sim-ladder"
+  },
+  {
+    "id": "organic-chemistry/aldehydes-ketones/sim-design",
+    "bookId": "organic-chemistry",
+    "title": "알코올 설계실: 카보닐과 시약을 끌어 목표 맞히기",
+    "link": "chapters/aldehydes-ketones.html#sim-design"
+  },
+  {
+    "id": "organic-chemistry/aldehydes-ketones/sim-acetal",
+    "bookId": "organic-chemistry",
+    "title": "아세탈 평형 반응기: 물을 빼면 무슨 일이",
+    "link": "chapters/aldehydes-ketones.html#sim-acetal"
+  },
+  {
+    "id": "organic-chemistry/aldehydes-ketones/sim-imine",
+    "bookId": "organic-chemistry",
+    "title": "이민 생성 속도의 pH 종 모양 곡선",
+    "link": "chapters/aldehydes-ketones.html#sim-imine"
+  },
+  {
+    "id": "organic-chemistry/aldehydes-ketones/sim-wittig",
+    "bookId": "organic-chemistry",
+    "title": "비티히 재생기: 일라이드를 끌어 알켄 만들기",
+    "link": "chapters/aldehydes-ketones.html#sim-wittig"
+  },
+  {
+    "id": "organic-chemistry/alkanes/sim-name",
+    "bookId": "organic-chemistry",
+    "title": "주사슬 고르기 실험실",
+    "link": "chapters/alkanes.html#sim-name"
+  },
+  {
+    "id": "organic-chemistry/alkanes/sim-newman",
+    "bookId": "organic-chemistry",
+    "title": "뉴먼 회전 실험실",
+    "link": "chapters/alkanes.html#sim-newman"
+  },
+  {
+    "id": "organic-chemistry/alkanes/sim-strain",
+    "bookId": "organic-chemistry",
+    "title": "고리 크기와 변형 에너지",
+    "link": "chapters/alkanes.html#sim-strain"
+  },
+  {
+    "id": "organic-chemistry/alkanes/sim-ring3d",
+    "bookId": "organic-chemistry",
+    "title": "고리 모양 3D 관찰",
+    "link": "chapters/alkanes.html#sim-ring3d"
+  },
+  {
+    "id": "organic-chemistry/alkanes/sim-chair",
+    "bookId": "organic-chemistry",
+    "title": "의자 뒤집기와 A 값",
+    "link": "chapters/alkanes.html#sim-chair"
+  },
+  {
+    "id": "organic-chemistry/alkanes/sim-ct",
+    "bookId": "organic-chemistry",
+    "title": "더 안정한 의자 고르기 게임",
+    "link": "chapters/alkanes.html#sim-ct"
+  },
+  {
+    "id": "organic-chemistry/alkenes/sim-ez",
+    "bookId": "organic-chemistry",
+    "title": "E/Z 판정대: 치환기를 끌어 자리 바꾸기",
+    "link": "chapters/alkenes.html#sim-ez"
+  },
+  {
+    "id": "organic-chemistry/alkenes/sim-hyd",
+    "bookId": "organic-chemistry",
+    "title": "수소화열 사다리: 이성질체의 에너지 맞히기",
+    "link": "chapters/alkenes.html#sim-hyd"
+  },
+  {
+    "id": "organic-chemistry/alkenes/sim-markov",
+    "bookId": "organic-chemistry",
+    "title": "두 갈래 에너지 도표: 장벽을 끌어 생성물 비 바꾸기",
+    "link": "chapters/alkenes.html#sim-markov"
+  },
+  {
+    "id": "organic-chemistry/alkenes/sim-shift",
+    "bookId": "organic-chemistry",
+    "title": "재배열 퍼즐: 옮길 기를 양이온 탄소로 끌어 놓기",
+    "link": "chapters/alkenes.html#sim-shift"
+  },
+  {
+    "id": "organic-chemistry/alkenes/sim-br3d",
+    "bookId": "organic-chemistry",
+    "title": "브로모늄 이온의 anti 개환 (3D)",
+    "link": "chapters/alkenes.html#sim-br3d"
+  },
+  {
+    "id": "organic-chemistry/alkenes/sim-ozone",
+    "bookId": "organic-chemistry",
+    "title": "오존 분해: 가위로 C=C 자르기와 거꾸로 맞히기",
+    "link": "chapters/alkenes.html#sim-ozone"
+  },
+  {
+    "id": "organic-chemistry/alkenes/sim-lab",
+    "bookId": "organic-chemistry",
+    "title": "첨가 반응 비교 실험실: 알켄 × 시약",
+    "link": "chapters/alkenes.html#sim-lab"
+  },
+  {
+    "id": "organic-chemistry/alkynes-synthesis/sim-base",
+    "bookId": "organic-chemistry",
+    "title": "염기 고르기: pKa 사다리와 탈양성자화 평형",
+    "link": "chapters/alkynes-synthesis.html#sim-base"
+  },
+  {
+    "id": "organic-chemistry/alkynes-synthesis/sim-chain",
+    "bookId": "organic-chemistry",
+    "title": "사슬 키우기: 아세틸렌에서 목표 알카인 만들기",
+    "link": "chapters/alkynes-synthesis.html#sim-chain"
+  },
+  {
+    "id": "organic-chemistry/alkynes-synthesis/sim-hydra",
+    "bookId": "organic-chemistry",
+    "title": "수화 비교기: Hg²⁺ 수화 대 수소붕소화, 엔올에서 카보닐로",
+    "link": "chapters/alkynes-synthesis.html#sim-hydra"
+  },
+  {
+    "id": "organic-chemistry/alkynes-synthesis/sim-red",
+    "bookId": "organic-chemistry",
+    "title": "환원 선택기: 같은 알카인에서 cis 알켄·trans 알켄·알케인",
+    "link": "chapters/alkynes-synthesis.html#sim-red"
+  },
+  {
+    "id": "organic-chemistry/alkynes-synthesis/sim-ozone",
+    "bookId": "organic-chemistry",
+    "title": "오존 가위: 삼중 결합을 잘라 생성물 보기, 미지 알카인 맞히기",
+    "link": "chapters/alkynes-synthesis.html#sim-ozone"
+  },
+  {
+    "id": "organic-chemistry/alkynes-synthesis/sim-retro",
+    "bookId": "organic-chemistry",
+    "title": "역합성 게임: 끊을 결합 고르기 → 합성 경로 만들기",
+    "link": "chapters/alkynes-synthesis.html#sim-retro"
+  },
+  {
+    "id": "organic-chemistry/alkynes-synthesis/sim-fgi",
+    "bookId": "organic-chemistry",
+    "title": "작용기 상호 변환 지도: 경로 찾기",
+    "link": "chapters/alkynes-synthesis.html#sim-fgi"
+  },
+  {
+    "id": "organic-chemistry/amines/sim-inv",
+    "bookId": "organic-chemistry",
+    "title": "질소 반전: 질소를 끌어 평면을 넘겨 보기",
+    "link": "chapters/amines.html#sim-inv"
+  },
+  {
+    "id": "organic-chemistry/amines/sim-base",
+    "bookId": "organic-chemistry",
+    "title": "염기도 탐색기: 아민을 고르면 pKaH와 이유가 보인다",
+    "link": "chapters/amines.html#sim-base"
+  },
+  {
+    "id": "organic-chemistry/amines/sim-ext",
+    "bookId": "organic-chemistry",
+    "title": "추출 분리 게임: 네 성분을 네 플라스크로",
+    "link": "chapters/amines.html#sim-ext"
+  },
+  {
+    "id": "organic-chemistry/amines/sim-alk",
+    "bookId": "organic-chemistry",
+    "title": "과알킬화: 암모니아를 얼마나 넣어야 1차 아민만 얻나",
+    "link": "chapters/amines.html#sim-alk"
+  },
+  {
+    "id": "organic-chemistry/amines/sim-hof",
+    "bookId": "organic-chemistry",
+    "title": "호프만 대 자이체프: 어느 β-H를 떼나",
+    "link": "chapters/amines.html#sim-hof"
+  },
+  {
+    "id": "organic-chemistry/amines/sim-diaz",
+    "bookId": "organic-chemistry",
+    "title": "다이아조늄 변환 실험실: 목표 화합물 만들기",
+    "link": "chapters/amines.html#sim-diaz"
+  },
+  {
+    "id": "organic-chemistry/amines/sim-amc",
+    "bookId": "organic-chemistry",
+    "title": "T-top 공정 실험실: 단면 프로파일을 지켜라",
+    "link": "chapters/amines.html#sim-amc"
+  },
+  {
+    "id": "organic-chemistry/aromatic-substitution/sim-energy",
+    "bookId": "organic-chemistry",
+    "title": "EAS 에너지 도표: 시그마 착물을 끌어 속도 바꾸기",
+    "link": "chapters/aromatic-substitution.html#sim-energy"
+  },
+  {
+    "id": "organic-chemistry/aromatic-substitution/sim-fc",
+    "bookId": "organic-chemistry",
+    "title": "프리델–크래프츠 실험실: 한계와 우회로",
+    "link": "chapters/aromatic-substitution.html#sim-fc"
+  },
+  {
+    "id": "organic-chemistry/aromatic-substitution/sim-sub",
+    "bookId": "organic-chemistry",
+    "title": "치환기 효과 탐색기: E⁺를 끌어 시그마 착물 비교하기",
+    "link": "chapters/aromatic-substitution.html#sim-sub"
+  },
+  {
+    "id": "organic-chemistry/aromatic-substitution/sim-dir",
+    "bookId": "organic-chemistry",
+    "title": "지향 효과 게임: 주생성물 자리 누르기",
+    "link": "chapters/aromatic-substitution.html#sim-dir"
+  },
+  {
+    "id": "organic-chemistry/aromatic-substitution/sim-route",
+    "bookId": "organic-chemistry",
+    "title": "합성 순서 퍼즐: 시약 카드를 끌어 순서 맞추기",
+    "link": "chapters/aromatic-substitution.html#sim-route"
+  },
+  {
+    "id": "organic-chemistry/aromatic-substitution/sim-snar",
+    "bookId": "organic-chemistry",
+    "title": "SNAr 실험실: 나이트로기를 끌어 놓아 속도 맞추기",
+    "link": "chapters/aromatic-substitution.html#sim-snar"
+  },
+  {
+    "id": "organic-chemistry/aromatic-substitution/sim-nov",
+    "bookId": "organic-chemistry",
+    "title": "노볼락 반응기: 크레졸 비율과 F/P로 분자량·용해 속도 맞추기",
+    "link": "chapters/aromatic-substitution.html#sim-nov"
+  },
+  {
+    "id": "organic-chemistry/aromaticity/sim-ladder",
+    "bookId": "organic-chemistry",
+    "title": "수소화열 사다리: 공명 에너지를 끌어서 맞히기",
+    "link": "chapters/aromaticity.html#sim-ladder"
+  },
+  {
+    "id": "organic-chemistry/aromaticity/sim-frost",
+    "bookId": "organic-chemistry",
+    "title": "프로스트 원 실험실: 휘켈 계산과 맞춰 보기",
+    "link": "chapters/aromaticity.html#sim-frost"
+  },
+  {
+    "id": "organic-chemistry/aromaticity/sim-judge",
+    "bookId": "organic-chemistry",
+    "title": "방향족 판정대: 조건을 하나씩 확인하기",
+    "link": "chapters/aromaticity.html#sim-judge"
+  },
+  {
+    "id": "organic-chemistry/aromaticity/sim-het",
+    "bookId": "organic-chemistry",
+    "title": "헤테로 방향족의 비공유쌍: 3D로 보는 p와 sp²",
+    "link": "chapters/aromaticity.html#sim-het"
+  },
+  {
+    "id": "organic-chemistry/aromaticity/sim-acene",
+    "bookId": "organic-chemistry",
+    "title": "고리를 이어 붙이면: 아센·페나센의 휘켈 띠 간격",
+    "link": "chapters/aromaticity.html#sim-acene"
+  },
+  {
+    "id": "organic-chemistry/aromaticity/sim-ring",
+    "bookId": "organic-chemistry",
+    "title": "고리 전류 지도: 수소를 끌어 차폐·탈차폐 재기",
+    "link": "chapters/aromaticity.html#sim-ring"
+  },
+  {
+    "id": "organic-chemistry/carboxylic-acids/sim-acid",
+    "bookId": "organic-chemistry",
+    "title": "산성 탐색기: 치환기를 끌어 pKa 바꾸기",
+    "link": "chapters/carboxylic-acids.html#sim-acid"
+  },
+  {
+    "id": "organic-chemistry/carboxylic-acids/sim-ladder",
+    "bookId": "organic-chemistry",
+    "title": "반응성 사다리: 끌어서 내려가기와 올라가기",
+    "link": "chapters/carboxylic-acids.html#sim-ladder"
+  },
+  {
+    "id": "organic-chemistry/carboxylic-acids/sim-map",
+    "bookId": "organic-chemistry",
+    "title": "변환 지도 게임: 시약을 골라 목표 유도체까지",
+    "link": "chapters/carboxylic-acids.html#sim-map"
+  },
+  {
+    "id": "organic-chemistry/carboxylic-acids/sim-fischer",
+    "bookId": "organic-chemistry",
+    "title": "피셔 에스터화 평형: 과량 알코올과 물 제거",
+    "link": "chapters/carboxylic-acids.html#sim-fischer"
+  },
+  {
+    "id": "organic-chemistry/carboxylic-acids/sim-sap",
+    "bookId": "organic-chemistry",
+    "title": "비누화 속도: 온도와 염기 농도",
+    "link": "chapters/carboxylic-acids.html#sim-sap"
+  },
+  {
+    "id": "organic-chemistry/carboxylic-acids/sim-pi",
+    "bookId": "organic-chemistry",
+    "title": "폴리이미드 경화: 온도 프로파일을 끌어 이미드화도 맞추기",
+    "link": "chapters/carboxylic-acids.html#sim-pi"
+  },
+  {
+    "id": "organic-chemistry/conjugation/sim-huckel",
+    "bookId": "organic-chemistry",
+    "title": "휘켈 MO 탐색기",
+    "link": "chapters/conjugation.html#sim-huckel"
+  },
+  {
+    "id": "organic-chemistry/conjugation/sim-control",
+    "bookId": "organic-chemistry",
+    "title": "1,2/1,4-첨가 온도·시간 시뮬레이터",
+    "link": "chapters/conjugation.html#sim-control"
+  },
+  {
+    "id": "organic-chemistry/conjugation/sim-fmo",
+    "bookId": "organic-chemistry",
+    "title": "딜스–알더 FMO 짝짓기",
+    "link": "chapters/conjugation.html#sim-fmo"
+  },
+  {
+    "id": "organic-chemistry/conjugation/sim-endo",
+    "bookId": "organic-chemistry",
+    "title": "endo와 exo 접근 3D",
+    "link": "chapters/conjugation.html#sim-endo"
+  },
+  {
+    "id": "organic-chemistry/conjugation/sim-uv",
+    "bookId": "organic-chemistry",
+    "title": "UV–Vis 스펙트럼 읽기",
+    "link": "chapters/conjugation.html#sim-uv"
+  },
+  {
+    "id": "organic-chemistry/conjugation/sim-wf",
+    "bookId": "organic-chemistry",
+    "title": "우드워드–피저 계산기 게임",
+    "link": "chapters/conjugation.html#sim-wf"
+  },
+  {
+    "id": "organic-chemistry/conjugation/sim-resist",
+    "bookId": "organic-chemistry",
+    "title": "노광 파장과 레지스트 수지의 흡수",
+    "link": "chapters/conjugation.html#sim-resist"
+  },
+  {
+    "id": "organic-chemistry/data-tables/sim-pka",
+    "bookId": "organic-chemistry",
+    "title": "pKa 사다리: 염기 고르기",
+    "link": "chapters/data-tables.html#sim-pka"
+  },
+  {
+    "id": "organic-chemistry/data-tables/sim-dh",
+    "bookId": "organic-chemistry",
+    "title": "결합 해리 에너지로 ΔH° 계산하기",
+    "link": "chapters/data-tables.html#sim-dh"
+  },
+  {
+    "id": "organic-chemistry/data-tables/sim-corr",
+    "bookId": "organic-chemistry",
+    "title": "특성값 막대 그림과 예 분자",
+    "link": "chapters/data-tables.html#sim-corr"
+  },
+  {
+    "id": "organic-chemistry/data-tables/sim-map",
+    "bookId": "organic-chemistry",
+    "title": "반응 지도: 탐색 · 최단 경로 · 합성 게임",
+    "link": "chapters/data-tables.html#sim-map"
+  },
+  {
+    "id": "organic-chemistry/data-tables/sim-solv",
+    "bookId": "organic-chemistry",
+    "title": "용매 지도: 끓는점 × 유전 상수",
+    "link": "chapters/data-tables.html#sim-solv"
+  },
+  {
+    "id": "organic-chemistry/data-tables/sim-calc",
+    "bookId": "organic-chemistry",
+    "title": "구조 계산기",
+    "link": "chapters/data-tables.html#sim-calc"
+  },
+  {
+    "id": "organic-chemistry/elimination/sim-anti",
+    "bookId": "organic-chemistry",
+    "title": "뉴먼 투영으로 안티 동일 평면 찾기: 2-브로모뷰테인",
+    "link": "chapters/elimination.html#sim-anti"
+  },
+  {
+    "id": "organic-chemistry/elimination/sim-zaitsev",
+    "bookId": "organic-chemistry",
+    "title": "염기의 크기와 자이체프·호프만 생성물 비율",
+    "link": "chapters/elimination.html#sim-zaitsev"
+  },
+  {
+    "id": "organic-chemistry/elimination/sim-chair",
+    "bookId": "organic-chemistry",
+    "title": "고리 뒤집기로 트랜스-이축 H 찾기",
+    "link": "chapters/elimination.html#sim-chair"
+  },
+  {
+    "id": "organic-chemistry/elimination/sim-profile",
+    "bookId": "organic-chemistry",
+    "title": "에너지 도표로 보는 E2 · E1 · E1cB와 염기 농도",
+    "link": "chapters/elimination.html#sim-profile"
+  },
+  {
+    "id": "organic-chemistry/elimination/sim-dehyd",
+    "bookId": "organic-chemistry",
+    "title": "탈수 온도 찾기: 1° · 2° · 3° 알코올",
+    "link": "chapters/elimination.html#sim-dehyd"
+  },
+  {
+    "id": "organic-chemistry/elimination/sim-car",
+    "bookId": "organic-chemistry",
+    "title": "PEB 시뮬레이터: 산 확산과 탈보호로 선폭 맞히기",
+    "link": "chapters/elimination.html#sim-car"
+  },
+  {
+    "id": "organic-chemistry/enolates/sim-enol",
+    "bookId": "organic-chemistry",
+    "title": "엔올 함량 탐색기: 로그 눈금 위에 과녁 맞히기",
+    "link": "chapters/enolates.html#sim-enol"
+  },
+  {
+    "id": "organic-chemistry/enolates/sim-pka",
+    "bookId": "organic-chemistry",
+    "title": "pKa 사다리: 염기를 끌어 엔올레이트 만들기",
+    "link": "chapters/enolates.html#sim-pka"
+  },
+  {
+    "id": "organic-chemistry/enolates/sim-kt",
+    "bookId": "organic-chemistry",
+    "title": "속도론적 대 열역학적 엔올레이트: 2-메틸사이클로헥산온",
+    "link": "chapters/enolates.html#sim-kt"
+  },
+  {
+    "id": "organic-chemistry/enolates/sim-mal",
+    "bookId": "organic-chemistry",
+    "title": "합성 설계: 카드를 끌어 목표 분자 만들기",
+    "link": "chapters/enolates.html#sim-mal"
+  },
+  {
+    "id": "organic-chemistry/enolates/sim-aldol",
+    "bookId": "organic-chemistry",
+    "title": "알돌 짝 맞추기: 친핵체와 친전자체 칸에 끌어 놓기",
+    "link": "chapters/enolates.html#sim-aldol"
+  },
+  {
+    "id": "organic-chemistry/enolates/sim-chel",
+    "bookId": "organic-chemistry",
+    "title": "킬레이트 분포: pH를 끌어 금속 감싸기",
+    "link": "chapters/enolates.html#sim-chel"
+  },
+  {
+    "id": "organic-chemistry/ms-ir/sim-sector",
+    "bookId": "organic-chemistry",
+    "title": "180° 자기 섹터로 잔류 기체 나누기",
+    "link": "chapters/ms-ir.html#sim-sector"
+  },
+  {
+    "id": "organic-chemistry/ms-ir/sim-iso",
+    "bookId": "organic-chemistry",
+    "title": "동위원소 패턴 게임: 염소·브로민 몇 개?",
+    "link": "chapters/ms-ir.html#sim-iso"
+  },
+  {
+    "id": "organic-chemistry/ms-ir/sim-frag",
+    "bookId": "organic-chemistry",
+    "title": "조각 내기 실험실",
+    "link": "chapters/ms-ir.html#sim-frag"
+  },
+  {
+    "id": "organic-chemistry/ms-ir/sim-formula",
+    "bookId": "organic-chemistry",
+    "title": "분자식 찾기: 정확 질량 → 후보",
+    "link": "chapters/ms-ir.html#sim-formula"
+  },
+  {
+    "id": "organic-chemistry/ms-ir/sim-spring",
+    "bookId": "organic-chemistry",
+    "title": "용수철 모형: 결합 차수와 원자 질량",
+    "link": "chapters/ms-ir.html#sim-spring"
+  },
+  {
+    "id": "organic-chemistry/ms-ir/sim-ir",
+    "bookId": "organic-chemistry",
+    "title": "IR 스펙트럼 탐색기 (예측 모형)",
+    "link": "chapters/ms-ir.html#sim-ir"
+  },
+  {
+    "id": "organic-chemistry/ms-ir/sim-unk",
+    "bookId": "organic-chemistry",
+    "title": "미지 시료 맞히기: MS + IR",
+    "link": "chapters/ms-ir.html#sim-unk"
+  },
+  {
+    "id": "organic-chemistry/nmr/sim-fid",
+    "bookId": "organic-chemistry",
+    "title": "FID와 푸리에 변환",
+    "link": "chapters/nmr.html#sim-fid"
+  },
+  {
+    "id": "organic-chemistry/nmr/sim-equiv",
+    "bookId": "organic-chemistry",
+    "title": "화학적 동등성 게임: 같은 환경끼리 묶기",
+    "link": "chapters/nmr.html#sim-equiv"
+  },
+  {
+    "id": "organic-chemistry/nmr/sim-tree",
+    "bookId": "organic-chemistry",
+    "title": "갈라짐 나무 빌더",
+    "link": "chapters/nmr.html#sim-tree"
+  },
+  {
+    "id": "organic-chemistry/nmr/sim-spec",
+    "bookId": "organic-chemistry",
+    "title": "¹H NMR 스펙트럼 시뮬레이터",
+    "link": "chapters/nmr.html#sim-spec"
+  },
+  {
+    "id": "organic-chemistry/nmr/sim-dept",
+    "bookId": "organic-chemistry",
+    "title": "¹³C·DEPT 전환과 탄소 종류 맞히기",
+    "link": "chapters/nmr.html#sim-dept"
+  },
+  {
+    "id": "organic-chemistry/nmr/sim-unknown",
+    "bookId": "organic-chemistry",
+    "title": "미지 시료 맞히기",
+    "link": "chapters/nmr.html#sim-unknown"
+  },
+  {
+    "id": "organic-chemistry/nmr/sim-qnmr",
+    "bookId": "organic-chemistry",
+    "title": "적분 구간 끌기: qNMR 순도와 t-BOC 보호율",
+    "link": "chapters/nmr.html#sim-qnmr"
+  },
+  {
+    "id": "organic-chemistry/organosilicon/sim-bond",
+    "bookId": "organic-chemistry",
+    "title": "C냐 Si냐: 같은 모양, 다른 결합",
+    "link": "chapters/organosilicon.html#sim-bond"
+  },
+  {
+    "id": "organic-chemistry/organosilicon/sim-chain",
+    "bookId": "organic-chemistry",
+    "title": "사슬 유연성: PDMS 대 폴리에틸렌",
+    "link": "chapters/organosilicon.html#sim-chain"
+  },
+  {
+    "id": "organic-chemistry/organosilicon/sim-silyl",
+    "bookId": "organic-chemistry",
+    "title": "탈보호 사다리: 하나만 떼어 내기",
+    "link": "chapters/organosilicon.html#sim-silyl"
+  },
+  {
+    "id": "organic-chemistry/organosilicon/sim-sam",
+    "bookId": "organic-chemistry",
+    "title": "SAM 덮기: 농도·물·사슬 길이",
+    "link": "chapters/organosilicon.html#sim-sam"
+  },
+  {
+    "id": "organic-chemistry/organosilicon/sim-pd",
+    "bookId": "organic-chemistry",
+    "title": "촉매 순환 돌리기",
+    "link": "chapters/organosilicon.html#sim-pd"
+  },
+  {
+    "id": "organic-chemistry/organosilicon/sim-ald",
+    "bookId": "organic-chemistry",
+    "title": "TMA/H₂O ALD: 포화 곡선과 ALD 창",
+    "link": "chapters/organosilicon.html#sim-ald"
+  },
+  {
+    "id": "organic-chemistry/organosilicon/sim-prec",
+    "bookId": "organic-chemistry",
+    "title": "전구체 설계 실험실: 리간드를 끼워 창 만들기",
+    "link": "chapters/organosilicon.html#sim-prec"
+  },
+  {
+    "id": "organic-chemistry/photoresists/sim-jab",
+    "bookId": "organic-chemistry",
+    "title": "야블론스키 도표 탐색기: 속도 상수로 빛의 운명 정하기",
+    "link": "chapters/photoresists.html#sim-jab"
+  },
+  {
+    "id": "organic-chemistry/photoresists/sim-dill",
+    "bookId": "organic-chemistry",
+    "title": "딜 ABC 표백 시뮬레이터: 깊이별 노광과 바닥까지 녹이기",
+    "link": "chapters/photoresists.html#sim-dill"
+  },
+  {
+    "id": "organic-chemistry/photoresists/sim-peb",
+    "bookId": "organic-chemistry",
+    "title": "화학 증폭 PEB 2D 반응–확산: 잠상과 LER, 목표 선폭 맞히기",
+    "link": "chapters/photoresists.html#sim-peb"
+  },
+  {
+    "id": "organic-chemistry/photoresists/sim-dev",
+    "bookId": "organic-chemistry",
+    "title": "맥 현상 속도와 대비 곡선: 문턱을 끌어 γ 만들기",
+    "link": "chapters/photoresists.html#sim-dev"
+  },
+  {
+    "id": "organic-chemistry/photoresists/sim-shot",
+    "bookId": "organic-chemistry",
+    "title": "EUV 광자 산탄 잡음: 노광량·홀 크기·흡수로 결함률 낮추기",
+    "link": "chapters/photoresists.html#sim-shot"
+  },
+  {
+    "id": "organic-chemistry/polymers/sim-cmp",
+    "bookId": "organic-chemistry",
+    "title": "분자량–전환율: 단계 성장 · 라디칼 연쇄 · 리빙 연쇄",
+    "link": "chapters/polymers.html#sim-cmp"
+  },
+  {
+    "id": "organic-chemistry/polymers/sim-rad",
+    "bookId": "organic-chemistry",
+    "title": "레지스트 수지 합성 레시피: 점을 끌어 개시제 농도와 온도 정하기",
+    "link": "chapters/polymers.html#sim-rad"
+  },
+  {
+    "id": "organic-chemistry/polymers/sim-dist",
+    "bookId": "organic-chemistry",
+    "title": "사슬 길이 분포: 플로리 · 라디칼 · 리빙 푸아송",
+    "link": "chapters/polymers.html#sim-dist"
+  },
+  {
+    "id": "organic-chemistry/polymers/sim-car",
+    "bookId": "organic-chemistry",
+    "title": "카로더스 게임: p와 r을 끌어 목표 분자량 맞히기",
+    "link": "chapters/polymers.html#sim-car"
+  },
+  {
+    "id": "organic-chemistry/polymers/sim-copo",
+    "bookId": "organic-chemistry",
+    "title": "공중합 조성 곡선: r₁·r₂ 지도 위 점 끌기",
+    "link": "chapters/polymers.html#sim-copo"
+  },
+  {
+    "id": "organic-chemistry/polymers/sim-dsa",
+    "bookId": "organic-chemistry",
+    "title": "블록 공중합체 상 지도: χN–f 위 점을 끌어 구조와 주기 맞히기",
+    "link": "chapters/polymers.html#sim-dsa"
+  },
+  {
+    "id": "organic-chemistry/radicals/sim-bde",
+    "bookId": "organic-chemistry",
+    "title": "결합 해리 에너지 탐색기: 원자를 끌어 결합 끊기",
+    "link": "chapters/radicals.html#sim-bde"
+  },
+  {
+    "id": "organic-chemistry/radicals/sim-chain",
+    "bookId": "organic-chemistry",
+    "title": "연쇄 반응 속도 시뮬레이터: 램프를 끌어 개시 속도 바꾸기",
+    "link": "chapters/radicals.html#sim-chain"
+  },
+  {
+    "id": "organic-chemistry/radicals/sim-hal",
+    "bookId": "organic-chemistry",
+    "title": "F·Cl·Br·I 전파 단계 에너지 도표",
+    "link": "chapters/radicals.html#sim-hal"
+  },
+  {
+    "id": "organic-chemistry/radicals/sim-sel",
+    "bookId": "organic-chemistry",
+    "title": "선택성 계산기와 생성물 비율 맞히기",
+    "link": "chapters/radicals.html#sim-sel"
+  },
+  {
+    "id": "organic-chemistry/radicals/sim-ham",
+    "bookId": "organic-chemistry",
+    "title": "하몬드 가설과 선택성: H–X 결합 세기를 끌어 할로젠 바꾸기",
+    "link": "chapters/radicals.html#sim-ham"
+  },
+  {
+    "id": "organic-chemistry/radicals/sim-ox",
+    "bookId": "organic-chemistry",
+    "title": "자동 산화와 BHT: 유통 기한 맞히기",
+    "link": "chapters/radicals.html#sim-ox"
+  },
+  {
+    "id": "organic-chemistry/radicals/sim-etch",
+    "bookId": "organic-chemistry",
+    "title": "플루오로카본 플라스마 식각: 코번–윈터스 도표에서 공정점 끌기",
+    "link": "chapters/radicals.html#sim-etch"
+  },
+  {
+    "id": "organic-chemistry/reactions/sim-nue",
+    "bookId": "organic-chemistry",
+    "title": "친핵 자리·친전자 자리 찾기",
+    "link": "chapters/reactions.html#sim-nue"
+  },
+  {
+    "id": "organic-chemistry/reactions/sim-arrow",
+    "bookId": "organic-chemistry",
+    "title": "굽은 화살표 트레이너",
+    "link": "chapters/reactions.html#sim-arrow"
+  },
+  {
+    "id": "organic-chemistry/reactions/sim-prof",
+    "bookId": "organic-chemistry",
+    "title": "에너지 도표 빌더: 고개를 끌어 k·K·속도 결정 단계 바꾸기",
+    "link": "chapters/reactions.html#sim-prof"
+  },
+  {
+    "id": "organic-chemistry/reactions/sim-ham",
+    "bookId": "organic-chemistry",
+    "title": "하몬드 가설: 생성물 골짜기를 끌어 전이 상태 옮기기",
+    "link": "chapters/reactions.html#sim-ham"
+  },
+  {
+    "id": "organic-chemistry/reactions/sim-hyp",
+    "bookId": "organic-chemistry",
+    "title": "초공액 보기: 빈 p 오비탈과 이웃 C–H",
+    "link": "chapters/reactions.html#sim-hyp"
+  },
+  {
+    "id": "organic-chemistry/reactions/sim-ctl",
+    "bookId": "organic-chemistry",
+    "title": "속도 지배 대 열역학 지배: 시간이 지나면 뒤집히는 생성물 비율",
+    "link": "chapters/reactions.html#sim-ctl"
+  },
+  {
+    "id": "organic-chemistry/reactions/sim-ald",
+    "bookId": "organic-chemistry",
+    "title": "ALD 공정 창을 두 장벽으로 만들기",
+    "link": "chapters/reactions.html#sim-ald"
+  },
+  {
+    "id": "organic-chemistry/stereochemistry/sim-mirror",
+    "bookId": "organic-chemistry",
+    "title": "거울상 포개기 도전",
+    "link": "chapters/stereochemistry.html#sim-mirror"
+  },
+  {
+    "id": "organic-chemistry/stereochemistry/sim-cip",
+    "bookId": "organic-chemistry",
+    "title": "CIP 순위 탐색기: 구(sphere)별 비교",
+    "link": "chapters/stereochemistry.html#sim-cip"
+  },
+  {
+    "id": "organic-chemistry/stereochemistry/sim-rs",
+    "bookId": "organic-chemistry",
+    "title": "R/S 판정 게임: 3D 모형 돌려 읽기",
+    "link": "chapters/stereochemistry.html#sim-rs"
+  },
+  {
+    "id": "organic-chemistry/stereochemistry/sim-fischer",
+    "bookId": "organic-chemistry",
+    "title": "피셔 투영 ↔ 쐐기 구조식 변환기",
+    "link": "chapters/stereochemistry.html#sim-fischer"
+  },
+  {
+    "id": "organic-chemistry/stereochemistry/sim-pol",
+    "bookId": "organic-chemistry",
+    "title": "편광계: 분석기를 돌려 미지 시료 맞히기",
+    "link": "chapters/stereochemistry.html#sim-pol"
+  },
+  {
+    "id": "organic-chemistry/stereochemistry/sim-ez",
+    "bookId": "organic-chemistry",
+    "title": "E/Z 조립대: 치환기를 끌어 이중 결합에 붙이기",
+    "link": "chapters/stereochemistry.html#sim-ez"
+  },
+  {
+    "id": "organic-chemistry/stereochemistry/sim-lc",
+    "bookId": "organic-chemistry",
+    "title": "키랄 도펀트와 나선 피치",
+    "link": "chapters/stereochemistry.html#sim-lc"
+  },
+  {
+    "id": "organic-chemistry/structure-bonding/sim-lewis",
+    "bookId": "organic-chemistry",
+    "title": "루이스 구조 퍼즐: 결합과 비공유쌍 놓기",
+    "link": "chapters/structure-bonding.html#sim-lewis"
+  },
+  {
+    "id": "organic-chemistry/structure-bonding/sim-hyb",
+    "bookId": "organic-chemistry",
+    "title": "혼성 오비탈 만들기: s와 p를 섞는 비율",
+    "link": "chapters/structure-bonding.html#sim-hyb"
+  },
+  {
+    "id": "organic-chemistry/structure-bonding/sim-twist",
+    "bookId": "organic-chemistry",
+    "title": "π 결합 비틀기",
+    "link": "chapters/structure-bonding.html#sim-twist"
+  },
+  {
+    "id": "organic-chemistry/structure-bonding/sim-dip",
+    "bookId": "organic-chemistry",
+    "title": "결합 쌍극자의 벡터 합",
+    "link": "chapters/structure-bonding.html#sim-dip"
+  },
+  {
+    "id": "organic-chemistry/structure-bonding/sim-skel",
+    "bookId": "organic-chemistry",
+    "title": "골격 구조식 해독 게임",
+    "link": "chapters/structure-bonding.html#sim-skel"
+  },
+  {
+    "id": "organic-chemistry/structure-bonding/sim-grp",
+    "bookId": "organic-chemistry",
+    "title": "작용기 탐색기: 반도체 공정의 유기 분자",
+    "link": "chapters/structure-bonding.html#sim-grp"
+  },
+  {
+    "id": "organic-chemistry/structure-bonding/sim-bp",
+    "bookId": "organic-chemistry",
+    "title": "끓는점 지도와 예측 게임",
+    "link": "chapters/structure-bonding.html#sim-bp"
+  },
+  {
+    "id": "organic-chemistry/substitution/sim-order",
+    "bookId": "organic-chemistry",
+    "title": "속도식 실험실: 로그–로그 기울기로 차수 정하기",
+    "link": "chapters/substitution.html#sim-order"
+  },
+  {
+    "id": "organic-chemistry/substitution/sim-steric",
+    "bookId": "organic-chemistry",
+    "title": "공간 채움 모형으로 보는 뒤쪽 길목",
+    "link": "chapters/substitution.html#sim-steric"
+  },
+  {
+    "id": "organic-chemistry/substitution/sim-sn1",
+    "bookId": "organic-chemistry",
+    "title": "S N 1 에너지 도표: 양이온 안정성·이탈기·용매와 반감기",
+    "link": "chapters/substitution.html#sim-sn1"
+  },
+  {
+    "id": "organic-chemistry/substitution/sim-solv",
+    "bookId": "organic-chemistry",
+    "title": "용매가 정하는 친핵성 순서",
+    "link": "chapters/substitution.html#sim-solv"
+  },
+  {
+    "id": "organic-chemistry/substitution/sim-hmds",
+    "bookId": "organic-chemistry",
+    "title": "HMDS 프라이밍: 표면 치환과 접촉각",
+    "link": "chapters/substitution.html#sim-hmds"
+  },
+  {
+    "id": "mathbook/complex/sim-cx-multiply",
+    "bookId": "mathbook",
+    "title": "곱셈 = 회전 + 확대, 덧셈 = 평행이동",
+    "link": "chapters/complex.html#sim-cx-multiply"
+  },
+  {
+    "id": "mathbook/complex/sim-cx-euler",
+    "bookId": "mathbook",
+    "title": "\\((1 + i\\theta/n)^n\\) → \\(e^{i\\theta}\\): 작은 회전을 n번",
+    "link": "chapters/complex.html#sim-cx-euler"
+  },
+  {
+    "id": "mathbook/complex/sim-cx-phasor",
+    "bookId": "mathbook",
+    "title": "두 페이저의 합 = 두 사인파의 합",
+    "link": "chapters/complex.html#sim-cx-phasor"
+  },
+  {
+    "id": "mathbook/complex/sim-cx-rlc",
+    "bookId": "mathbook",
+    "title": "RLC 직렬 회로의 페이저 다이어그램과 공진",
+    "link": "chapters/complex.html#sim-cx-rlc"
+  },
+  {
+    "id": "mathbook/complex/sim-cx-power",
+    "bookId": "mathbook",
+    "title": "공장의 역률 보상: P, Q, S 삼각형",
+    "link": "chapters/complex.html#sim-cx-power"
+  },
+  {
+    "id": "mathbook/complex/sim-cx-film",
+    "bookId": "mathbook",
+    "title": "반사 방지 코팅 설계: 반사 페이저와 가시광 스펙트럼",
+    "link": "chapters/complex.html#sim-cx-film"
+  },
+  {
+    "id": "mathbook/complex/sim-cx-qam",
+    "bookId": "mathbook",
+    "title": "QAM 성상도와 잡음: 점을 촘촘히 할수록 생기는 일",
+    "link": "chapters/complex.html#sim-cx-qam"
+  },
+  {
+    "id": "mathbook/complex/sim-cx-roots",
+    "bookId": "mathbook",
+    "title": "s-평면의 근을 끌어 응답 바꾸기",
+    "link": "chapters/complex.html#sim-cx-roots"
+  },
+  {
+    "id": "mathbook/fourier/sim-ft-heat",
+    "bookId": "mathbook",
+    "title": "막대의 열: 모드마다 다른 속도로 식는다",
+    "link": "chapters/fourier.html#sim-ft-heat"
+  },
+  {
+    "id": "mathbook/fourier/sim-ft-epi",
+    "bookId": "mathbook",
+    "title": "원 N개로 파형 그리기 — 깁스 현상",
+    "link": "chapters/fourier.html#sim-ft-epi"
+  },
+  {
+    "id": "mathbook/fourier/sim-ft-wind",
+    "bookId": "mathbook",
+    "title": "감기 기계: 질량중심이 튀어나오는 주파수 찾기",
+    "link": "chapters/fourier.html#sim-ft-wind"
+  },
+  {
+    "id": "mathbook/fourier/sim-ft-spec",
+    "bookId": "mathbook",
+    "title": "시간과 주파수를 동시에 보기",
+    "link": "chapters/fourier.html#sim-ft-spec"
+  },
+  {
+    "id": "mathbook/fourier/sim-ft-unc",
+    "bookId": "mathbook",
+    "title": "짧은 소리 ↔ 넓은 스펙트럼",
+    "link": "chapters/fourier.html#sim-ft-unc"
+  },
+  {
+    "id": "mathbook/fourier/sim-ft-conv",
+    "bookId": "mathbook",
+    "title": "필터 = 스펙트럼에 H를 곱하기",
+    "link": "chapters/fourier.html#sim-ft-conv"
+  },
+  {
+    "id": "mathbook/fourier/sim-ft-2d",
+    "bookId": "mathbook",
+    "title": "스펙트럼에 구멍 뚫기: 저역·고역 필터",
+    "link": "chapters/fourier.html#sim-ft-2d"
+  },
+  {
+    "id": "mathbook/fourier/sim-ft-psf",
+    "bookId": "mathbook",
+    "title": "조리개 모양 → PSF → MTF (2D FFT로 계산)",
+    "link": "chapters/fourier.html#sim-ft-psf"
+  },
+  {
+    "id": "mathbook/fourier/sim-ft-jpeg",
+    "bookId": "mathbook",
+    "title": "JPEG 품질 슬라이더: 8×8 DCT 양자화",
+    "link": "chapters/fourier.html#sim-ft-jpeg"
+  },
+  {
+    "id": "mathbook/fourier/sim-ft-kspace",
+    "bookId": "mathbook",
+    "title": "k-공간 채우기: 스캔하는 동안 영상이 나타난다",
+    "link": "chapters/fourier.html#sim-ft-kspace"
+  },
+  {
+    "id": "mathbook/geometry/sim-geo-euler",
+    "bookId": "mathbook",
+    "title": "V − E + F는 무엇을 세는가",
+    "link": "chapters/geometry.html#sim-geo-euler"
+  },
+  {
+    "id": "mathbook/geometry/sim-geo-curv",
+    "bookId": "mathbook",
+    "title": "접촉원을 끌고 다니며 곡률 읽기",
+    "link": "chapters/geometry.html#sim-geo-curv"
+  },
+  {
+    "id": "mathbook/geometry/sim-geo-sphere",
+    "bookId": "mathbook",
+    "title": "구 위의 삼각형: 내각의 합은 180°가 아니다",
+    "link": "chapters/geometry.html#sim-geo-sphere"
+  },
+  {
+    "id": "mathbook/geometry/sim-geo-tissot",
+    "bookId": "mathbook",
+    "title": "티소 지시원: 같은 원이 지도마다 어떻게 변하나",
+    "link": "chapters/geometry.html#sim-geo-tissot"
+  },
+  {
+    "id": "mathbook/geometry/sim-geo-homo",
+    "bookId": "mathbook",
+    "title": "문서 스캐너: 네 꼭짓점으로 원근 펴기",
+    "link": "chapters/geometry.html#sim-geo-homo"
+  },
+  {
+    "id": "mathbook/geometry/sim-geo-ray",
+    "bookId": "mathbook",
+    "title": "스넬 법칙으로 광선 추적: 구면수차와 비구면 보정",
+    "link": "chapters/geometry.html#sim-geo-ray"
+  },
+  {
+    "id": "mathbook/geometry/sim-geo-dist",
+    "bookId": "mathbook",
+    "title": "직접 해 보는 렌즈 왜곡 보정",
+    "link": "chapters/geometry.html#sim-geo-dist"
+  },
+  {
+    "id": "mathbook/glossary/sim-gl-map",
+    "bookId": "mathbook",
+    "title": "책별 수학 도구 지도",
+    "link": "chapters/glossary.html#sim-gl-map"
+  },
+  {
+    "id": "mathbook/information/sim-inf-guess",
+    "bookId": "mathbook",
+    "title": "숫자 맞히기: 질문 하나는 몇 비트인가",
+    "link": "chapters/information.html#sim-inf-guess"
+  },
+  {
+    "id": "mathbook/information/sim-inf-entropy",
+    "bookId": "mathbook",
+    "title": "확률 막대를 끌어 엔트로피 바꾸기",
+    "link": "chapters/information.html#sim-inf-entropy"
+  },
+  {
+    "id": "mathbook/information/sim-inf-huffman",
+    "bookId": "mathbook",
+    "title": "허프만 트리 만들기",
+    "link": "chapters/information.html#sim-inf-huffman"
+  },
+  {
+    "id": "mathbook/information/sim-inf-bsc",
+    "bookId": "mathbook",
+    "title": "잡음 채널로 그림 보내기: 반복 부호의 비용",
+    "link": "chapters/information.html#sim-inf-bsc"
+  },
+  {
+    "id": "mathbook/information/sim-inf-hamming",
+    "bookId": "mathbook",
+    "title": "해밍(7,4): 비트를 뒤집으면 신드롬이 위치를 가리킨다",
+    "link": "chapters/information.html#sim-inf-hamming"
+  },
+  {
+    "id": "mathbook/information/sim-inf-capacity",
+    "bookId": "mathbook",
+    "title": "대역폭과 SNR로 채널 용량 재기",
+    "link": "chapters/information.html#sim-inf-capacity"
+  },
+  {
+    "id": "mathbook/information/sim-inf-rs",
+    "bookId": "mathbook",
+    "title": "다항식 부호: 점을 지우고 곡선 되살리기",
+    "link": "chapters/information.html#sim-inf-rs"
+  },
+  {
+    "id": "mathbook/limits/sim-lim-zeno",
+    "bookId": "mathbook",
+    "title": "정사각형을 반씩 채우기",
+    "link": "chapters/limits.html#sim-lim-zeno"
+  },
+  {
+    "id": "mathbook/limits/sim-lim-overhang",
+    "bookId": "mathbook",
+    "title": "조화 쌓기와 두 급수의 경주",
+    "link": "chapters/limits.html#sim-lim-overhang"
+  },
+  {
+    "id": "mathbook/limits/sim-lim-epsdelta",
+    "bookId": "mathbook",
+    "title": "ε 띠를 좁혀라, δ 띠가 답한다",
+    "link": "chapters/limits.html#sim-lim-epsdelta"
+  },
+  {
+    "id": "mathbook/limits/sim-lim-secant",
+    "bookId": "mathbook",
+    "title": "h → 0: 할선을 접선으로 접기",
+    "link": "chapters/limits.html#sim-lim-secant"
+  },
+  {
+    "id": "mathbook/limits/sim-lim-riemann",
+    "bookId": "mathbook",
+    "title": "리만 합 네 가지와 오차 차수",
+    "link": "chapters/limits.html#sim-lim-riemann"
+  },
+  {
+    "id": "mathbook/limits/sim-lim-ebase",
+    "bookId": "mathbook",
+    "title": "밑 b를 돌려 기울기 곡선과 겹쳐라",
+    "link": "chapters/limits.html#sim-lim-ebase"
+  },
+  {
+    "id": "mathbook/limits/sim-lim-taylor",
+    "bookId": "mathbook",
+    "title": "테일러 다항식 실험실",
+    "link": "chapters/limits.html#sim-lim-taylor"
+  },
+  {
+    "id": "mathbook/linalg/sim-la-grid",
+    "bookId": "mathbook",
+    "title": "격자를 휘는 기계: 2×2 행렬",
+    "link": "chapters/linalg.html#sim-la-grid"
+  },
+  {
+    "id": "mathbook/linalg/sim-la-compose",
+    "bookId": "mathbook",
+    "title": "순서를 바꾸면 결과가 바뀐다: BA vs AB",
+    "link": "chapters/linalg.html#sim-la-compose"
+  },
+  {
+    "id": "mathbook/linalg/sim-la-solve",
+    "bookId": "mathbook",
+    "title": "열 그림으로 연립방정식 풀기와 조건수",
+    "link": "chapters/linalg.html#sim-la-solve"
+  },
+  {
+    "id": "mathbook/linalg/sim-la-ccm",
+    "bookId": "mathbook",
+    "title": "색 보정 행렬: 색을 살리면 잡음도 자란다",
+    "link": "chapters/linalg.html#sim-la-ccm"
+  },
+  {
+    "id": "mathbook/linalg/sim-la-eig",
+    "bookId": "mathbook",
+    "title": "고유벡터를 손으로 찾기",
+    "link": "chapters/linalg.html#sim-la-eig"
+  },
+  {
+    "id": "mathbook/linalg/sim-la-modes",
+    "bookId": "mathbook",
+    "title": "3층 건물의 고유진동수와 모드 형상",
+    "link": "chapters/linalg.html#sim-la-modes"
+  },
+  {
+    "id": "mathbook/linalg/sim-la-svd",
+    "bookId": "mathbook",
+    "title": "단위원 → 타원: SVD 세 단계 분해",
+    "link": "chapters/linalg.html#sim-la-svd"
+  },
+  {
+    "id": "mathbook/linalg/sim-la-lowrank",
+    "bookId": "mathbook",
+    "title": "SVD 이미지 압축: rank-k 근사",
+    "link": "chapters/linalg.html#sim-la-lowrank"
+  },
+  {
+    "id": "mathbook/numerics/sim-num-bits",
+    "bookId": "mathbook",
+    "title": "배정밀도 해부기: 저장된 값은 정확히 얼마인가",
+    "link": "chapters/numerics.html#sim-num-bits"
+  },
+  {
+    "id": "mathbook/numerics/sim-num-minifloat",
+    "bookId": "mathbook",
+    "title": "미니플로트의 모든 수를 수직선에",
+    "link": "chapters/numerics.html#sim-num-minifloat"
+  },
+  {
+    "id": "mathbook/numerics/sim-num-patriot",
+    "bookId": "mathbook",
+    "title": "0.1초 시계의 누적 오차",
+    "link": "chapters/numerics.html#sim-num-patriot"
+  },
+  {
+    "id": "mathbook/numerics/sim-num-cancel",
+    "bookId": "mathbook",
+    "title": "순진한 식 vs 안정적인 식",
+    "link": "chapters/numerics.html#sim-num-cancel"
+  },
+  {
+    "id": "mathbook/numerics/sim-num-ushape",
+    "bookId": "mathbook",
+    "title": "미분 오차 vs 간격 h (로그–로그)",
+    "link": "chapters/numerics.html#sim-num-ushape"
+  },
+  {
+    "id": "mathbook/numerics/sim-num-wave",
+    "bookId": "mathbook",
+    "title": "1D 파동 방정식과 CFL 조건",
+    "link": "chapters/numerics.html#sim-num-wave"
+  },
+  {
+    "id": "mathbook/numerics/sim-num-fdtd",
+    "bookId": "mathbook",
+    "title": "1D FDTD: 유전체 판에 부딪히는 펄스",
+    "link": "chapters/numerics.html#sim-num-fdtd"
+  },
+  {
+    "id": "mathbook/numerics/sim-num-grating",
+    "bookId": "mathbook",
+    "title": "회절 차수의 방향",
+    "link": "chapters/numerics.html#sim-num-grating"
+  },
+  {
+    "id": "mathbook/numerics/sim-num-cond",
+    "bookId": "mathbook",
+    "title": "거의 평행한 두 직선의 교점",
+    "link": "chapters/numerics.html#sim-num-cond"
+  },
+  {
+    "id": "mathbook/ode/sim-ode-lens",
+    "bookId": "mathbook",
+    "title": "해석 렌즈: 같은 곡선에 이름표만 바꾸기",
+    "link": "chapters/ode.html#sim-ode-lens"
+  },
+  {
+    "id": "mathbook/ode/sim-ode-field",
+    "bookId": "mathbook",
+    "title": "기울기장 위에 해곡선 흘려 보내기",
+    "link": "chapters/ode.html#sim-ode-field"
+  },
+  {
+    "id": "mathbook/ode/sim-ode-euler",
+    "bookId": "mathbook",
+    "title": "오일러 vs RK4: 단계 크기 h와 오차·불안정",
+    "link": "chapters/ode.html#sim-ode-euler"
+  },
+  {
+    "id": "mathbook/ode/sim-ode-damping",
+    "bookId": "mathbook",
+    "title": "감쇠비 ζ와 특성근: 계단 응답 ↔ 복소평면",
+    "link": "chapters/ode.html#sim-ode-damping"
+  },
+  {
+    "id": "mathbook/ode/sim-ode-resonance",
+    "bookId": "mathbook",
+    "title": "주파수 응답 곡선과 공진의 성장",
+    "link": "chapters/ode.html#sim-ode-resonance"
+  },
+  {
+    "id": "mathbook/ode/sim-ode-sir",
+    "bookId": "mathbook",
+    "title": "SIR 모델: R₀, 회복 기간, 접종률",
+    "link": "chapters/ode.html#sim-ode-sir"
+  },
+  {
+    "id": "mathbook/ode/sim-ode-heat",
+    "bookId": "mathbook",
+    "title": "1D 열확산: 핫스팟과 도펀트가 퍼지는 모습",
+    "link": "chapters/ode.html#sim-ode-heat"
+  },
+  {
+    "id": "mathbook/optimization/sim-opt-descent",
+    "bookId": "mathbook",
+    "title": "손실 지형 위의 경사 하강",
+    "link": "chapters/optimization.html#sim-opt-descent"
+  },
+  {
+    "id": "mathbook/optimization/sim-opt-lr",
+    "bookId": "mathbook",
+    "title": "포물선 위의 걸음: 학습률의 세 영역",
+    "link": "chapters/optimization.html#sim-opt-lr"
+  },
+  {
+    "id": "mathbook/optimization/sim-opt-race",
+    "bookId": "mathbook",
+    "title": "경사 하강 vs 모멘텀 vs Adam",
+    "link": "chapters/optimization.html#sim-opt-race"
+  },
+  {
+    "id": "mathbook/optimization/sim-opt-lsq",
+    "bookId": "mathbook",
+    "title": "잔차 제곱의 넓이를 최소로",
+    "link": "chapters/optimization.html#sim-opt-lsq"
+  },
+  {
+    "id": "mathbook/optimization/sim-opt-lagrange",
+    "bookId": "mathbook",
+    "title": "제약 곡선 위의 최적점과 그림자 가격",
+    "link": "chapters/optimization.html#sim-opt-lagrange"
+  },
+  {
+    "id": "mathbook/optimization/sim-opt-lp",
+    "bookId": "mathbook",
+    "title": "생산 계획: 이익 직선을 밀어 꼭짓점 찾기",
+    "link": "chapters/optimization.html#sim-opt-lp"
+  },
+  {
+    "id": "mathbook/probability/sim-pr-photons",
+    "bookId": "mathbook",
+    "title": "픽셀 격자에 광자 떨어뜨리기",
+    "link": "chapters/probability.html#sim-pr-photons"
+  },
+  {
+    "id": "mathbook/probability/sim-pr-shot",
+    "bookId": "mathbook",
+    "title": "샷 노이즈 사진과 멀티프레임 평균",
+    "link": "chapters/probability.html#sim-pr-shot"
+  },
+  {
+    "id": "mathbook/probability/sim-pr-clt",
+    "bookId": "mathbook",
+    "title": "요인 n개를 더하면",
+    "link": "chapters/probability.html#sim-pr-clt"
+  },
+  {
+    "id": "mathbook/probability/sim-pr-cpk",
+    "bookId": "mathbook",
+    "title": "선폭 분포와 규격: Cpk와 ppm",
+    "link": "chapters/probability.html#sim-pr-cpk"
+  },
+  {
+    "id": "mathbook/probability/sim-pr-tail",
+    "bookId": "mathbook",
+    "title": "소자 N개 칩의 수율과 설계 마진",
+    "link": "chapters/probability.html#sim-pr-tail"
+  },
+  {
+    "id": "mathbook/probability/sim-pr-bayes",
+    "bookId": "mathbook",
+    "title": "칩 10,000개로 보는 베이즈 정리",
+    "link": "chapters/probability.html#sim-pr-bayes"
+  },
+  {
+    "id": "mathbook/probability/sim-pr-yield",
+    "bookId": "mathbook",
+    "title": "웨이퍼 맵: 결함 밀도와 다이 크기",
+    "link": "chapters/probability.html#sim-pr-yield"
+  },
+  {
+    "id": "mathbook/sampling/sim-smp-wheel",
+    "bookId": "mathbook",
+    "title": "수레바퀴 효과: 회전 속도 × 프레임률",
+    "link": "chapters/sampling.html#sim-smp-wheel"
+  },
+  {
+    "id": "mathbook/sampling/sim-smp-alias",
+    "bookId": "mathbook",
+    "title": "사인파 샘플링과 에일리어스 (소리 포함)",
+    "link": "chapters/sampling.html#sim-smp-alias"
+  },
+  {
+    "id": "mathbook/sampling/sim-smp-sinc",
+    "bookId": "mathbook",
+    "title": "샘플을 끌어서 sinc 재구성 보기",
+    "link": "chapters/sampling.html#sim-smp-sinc"
+  },
+  {
+    "id": "mathbook/sampling/sim-smp-aaf",
+    "bookId": "mathbook",
+    "title": "안티앨리어싱 필터 설계: 얼마나 가팔라야 하나",
+    "link": "chapters/sampling.html#sim-smp-aaf"
+  },
+  {
+    "id": "mathbook/sampling/sim-smp-moire",
+    "bookId": "mathbook",
+    "title": "모아레: 줄무늬 × 픽셀 격자, 그리고 두 격자 겹치기",
+    "link": "chapters/sampling.html#sim-smp-moire"
+  },
+  {
+    "id": "mathbook/sampling/sim-smp-bayer",
+    "bookId": "mathbook",
+    "title": "베이어 샘플링과 디모자이킹의 위색",
+    "link": "chapters/sampling.html#sim-smp-bayer"
+  },
+  {
+    "id": "mathbook/sampling/sim-smp-quant",
+    "bookId": "mathbook",
+    "title": "양자화 비트 수, 잡음 바닥, 디더",
+    "link": "chapters/sampling.html#sim-smp-quant"
+  },
+  {
+    "id": "mathbook/symmetry/sim-sym-d4",
+    "bookId": "mathbook",
+    "title": "정사각형의 대칭 8개와 케일리 표",
+    "link": "chapters/symmetry.html#sim-sym-d4"
+  },
+  {
+    "id": "mathbook/symmetry/sim-sym-fifteen",
+    "bookId": "mathbook",
+    "title": "15 퍼즐과 패리티 계기판",
+    "link": "chapters/symmetry.html#sim-sym-fifteen"
+  },
+  {
+    "id": "mathbook/symmetry/sim-sym-comm",
+    "bookId": "mathbook",
+    "title": "교환자 [A, B]는 조금만 바꾼다",
+    "link": "chapters/symmetry.html#sim-sym-comm"
+  },
+  {
+    "id": "mathbook/symmetry/sim-sym-wallpaper",
+    "bookId": "mathbook",
+    "title": "17가지 벽지군 그리기판",
+    "link": "chapters/symmetry.html#sim-sym-wallpaper"
+  },
+  {
+    "id": "mathbook/symmetry/sim-sym-restrict",
+    "bookId": "mathbook",
+    "title": "정다각형 채우기 vs 격자 논증",
+    "link": "chapters/symmetry.html#sim-sym-restrict"
+  },
+  {
+    "id": "mathbook/symmetry/sim-sym-miller",
+    "bookId": "mathbook",
+    "title": "밀러 지수 평면 단면 (드래그로 회전)",
+    "link": "chapters/symmetry.html#sim-sym-miller"
+  },
+  {
+    "id": "mathbook/symmetry/sim-sym-koh",
+    "bookId": "mathbook",
+    "title": "KOH 이방성 식각 단면",
+    "link": "chapters/symmetry.html#sim-sym-koh"
+  },
+  {
+    "id": "linearbook/change-of-basis/sim-cb-coords",
+    "bookId": "linearbook",
+    "title": "두 잣대로 잰 같은 점",
+    "link": "chapters/change-of-basis.html#sim-cb-coords"
+  },
+  {
+    "id": "linearbook/change-of-basis/sim-cb-similar",
+    "bookId": "linearbook",
+    "title": "같은 변환을 두 좌표계로 보기",
+    "link": "chapters/change-of-basis.html#sim-cb-similar"
+  },
+  {
+    "id": "linearbook/change-of-basis/sim-cb-reflect",
+    "bookId": "linearbook",
+    "title": "비스듬한 직선에 맞춘 기저",
+    "link": "chapters/change-of-basis.html#sim-cb-reflect"
+  },
+  {
+    "id": "linearbook/change-of-basis/sim-cb-deriv",
+    "bookId": "linearbook",
+    "title": "다항식 공간의 선형 사상",
+    "link": "chapters/change-of-basis.html#sim-cb-deriv"
+  },
+  {
+    "id": "linearbook/change-of-basis/sim-cb-kernel",
+    "bookId": "linearbook",
+    "title": "사라지는 방향, 남는 방향",
+    "link": "chapters/change-of-basis.html#sim-cb-kernel"
+  },
+  {
+    "id": "linearbook/change-of-basis/sim-cb-ycc",
+    "bookId": "linearbook",
+    "title": "RGB ↔ YCbCr 변환기",
+    "link": "chapters/change-of-basis.html#sim-cb-ycc"
+  },
+  {
+    "id": "linearbook/change-of-basis/sim-cb-jpeg",
+    "bookId": "linearbook",
+    "title": "어느 좌표에서 버릴 것인가: 색차 부표본화",
+    "link": "chapters/change-of-basis.html#sim-cb-jpeg"
+  },
+  {
+    "id": "linearbook/determinants/sim-dt-volume",
+    "bookId": "linearbook",
+    "title": "세 열이 만드는 평행육면체",
+    "link": "chapters/determinants.html#sim-dt-volume"
+  },
+  {
+    "id": "linearbook/determinants/sim-dt-rowops",
+    "bookId": "linearbook",
+    "title": "행 연산 하나마다 행렬식은 몇 배가 되나",
+    "link": "chapters/determinants.html#sim-dt-rowops"
+  },
+  {
+    "id": "linearbook/determinants/sim-dt-pivots",
+    "bookId": "linearbook",
+    "title": "소거하며 행렬식 모으기",
+    "link": "chapters/determinants.html#sim-dt-pivots"
+  },
+  {
+    "id": "linearbook/determinants/sim-dt-cofactor",
+    "bookId": "linearbook",
+    "title": "여인수 전개 펼치기와 n!의 벽",
+    "link": "chapters/determinants.html#sim-dt-cofactor"
+  },
+  {
+    "id": "linearbook/determinants/sim-dt-cramer",
+    "bookId": "linearbook",
+    "title": "넓이의 비로 해를 읽는 크라메르 공식",
+    "link": "chapters/determinants.html#sim-dt-cramer"
+  },
+  {
+    "id": "linearbook/determinants/sim-dt-jacobian",
+    "bookId": "linearbook",
+    "title": "작은 정사각형은 몇 배가 되나: 야코비안",
+    "link": "chapters/determinants.html#sim-dt-jacobian"
+  },
+  {
+    "id": "linearbook/determinants/sim-dt-shoelace",
+    "bookId": "linearbook",
+    "title": "신발끈 공식: 원점에서 펼친 부채",
+    "link": "chapters/determinants.html#sim-dt-shoelace"
+  },
+  {
+    "id": "linearbook/dynamics/sim-dy-iterate",
+    "bookId": "linearbook",
+    "title": "u₀, Au₀, A²u₀, …의 궤적",
+    "link": "chapters/dynamics.html#sim-dy-iterate"
+  },
+  {
+    "id": "linearbook/dynamics/sim-dy-markov",
+    "bookId": "linearbook",
+    "title": "장비 상태의 마르코프 연쇄: 정상 분포로 가는 길",
+    "link": "chapters/dynamics.html#sim-dy-markov"
+  },
+  {
+    "id": "linearbook/dynamics/sim-dy-pagerank",
+    "bookId": "linearbook",
+    "title": "다섯 페이지의 페이지랭크",
+    "link": "chapters/dynamics.html#sim-dy-pagerank"
+  },
+  {
+    "id": "linearbook/dynamics/sim-dy-leslie",
+    "bookId": "linearbook",
+    "title": "레슬리 행렬로 30세대 내다보기",
+    "link": "chapters/dynamics.html#sim-dy-leslie"
+  },
+  {
+    "id": "linearbook/dynamics/sim-dy-trdet",
+    "bookId": "linearbook",
+    "title": "대각합–행렬식 평면과 위상 초상",
+    "link": "chapters/dynamics.html#sim-dy-trdet"
+  },
+  {
+    "id": "linearbook/dynamics/sim-dy-spring",
+    "bookId": "linearbook",
+    "title": "질량–감쇠기–스프링: 감쇠비와 고유값",
+    "link": "chapters/dynamics.html#sim-dy-spring"
+  },
+  {
+    "id": "linearbook/dynamics/sim-dy-coupled",
+    "bookId": "linearbook",
+    "title": "결합 진동자: 정규 모드와 맥놀이",
+    "link": "chapters/dynamics.html#sim-dy-coupled"
+  },
+  {
+    "id": "linearbook/eigen/sim-eg-sweep",
+    "bookId": "linearbook",
+    "title": "단위원을 한 바퀴: x와 Ax가 겹치는 방향 찾기",
+    "link": "chapters/eigen.html#sim-eg-sweep"
+  },
+  {
+    "id": "linearbook/eigen/sim-eg-charpoly",
+    "bookId": "linearbook",
+    "title": "특성 다항식과 (tr, det) 지도",
+    "link": "chapters/eigen.html#sim-eg-charpoly"
+  },
+  {
+    "id": "linearbook/eigen/sim-eg-defect",
+    "bookId": "linearbook",
+    "title": "고유 방향이 합쳐지는 순간: 결함 행렬",
+    "link": "chapters/eigen.html#sim-eg-defect"
+  },
+  {
+    "id": "linearbook/eigen/sim-eg-diag",
+    "bookId": "linearbook",
+    "title": "A = XΛX⁻¹ 세 단계로 나눠 보기",
+    "link": "chapters/eigen.html#sim-eg-diag"
+  },
+  {
+    "id": "linearbook/eigen/sim-eg-powers",
+    "bookId": "linearbook",
+    "title": "곱할수록 지배 고유벡터로 끌려간다",
+    "link": "chapters/eigen.html#sim-eg-powers"
+  },
+  {
+    "id": "linearbook/eigen/sim-eg-complex",
+    "bookId": "linearbook",
+    "title": "복소 고유값과 나선 궤적",
+    "link": "chapters/eigen.html#sim-eg-complex"
+  },
+  {
+    "id": "linearbook/eigen/sim-eg-modes",
+    "bookId": "linearbook",
+    "title": "질량–용수철 사슬의 진동 모드",
+    "link": "chapters/eigen.html#sim-eg-modes"
+  },
+  {
+    "id": "linearbook/elimination/sim-ge-rows",
+    "bookId": "linearbook",
+    "title": "행 그림: 두 직선의 교점",
+    "link": "chapters/elimination.html#sim-ge-rows"
+  },
+  {
+    "id": "linearbook/elimination/sim-ge-planes",
+    "bookId": "linearbook",
+    "title": "세 평면은 어떻게 만나는가",
+    "link": "chapters/elimination.html#sim-ge-planes"
+  },
+  {
+    "id": "linearbook/elimination/sim-ge-columns",
+    "bookId": "linearbook",
+    "title": "열 그림: x·a₁ + y·a₂ 로 b에 닿기",
+    "link": "chapters/elimination.html#sim-ge-columns"
+  },
+  {
+    "id": "linearbook/elimination/sim-ge-stepper",
+    "bookId": "linearbook",
+    "title": "가우스 소거 한 단계씩",
+    "link": "chapters/elimination.html#sim-ge-stepper"
+  },
+  {
+    "id": "linearbook/elimination/sim-ge-pivot",
+    "bookId": "linearbook",
+    "title": "작은 피벗의 함정: 피벗팅 있이 vs 없이",
+    "link": "chapters/elimination.html#sim-ge-pivot"
+  },
+  {
+    "id": "linearbook/elimination/sim-ge-cost",
+    "bookId": "linearbook",
+    "title": "n³의 벽: 연산량과 실측 시간",
+    "link": "chapters/elimination.html#sim-ge-cost"
+  },
+  {
+    "id": "linearbook/elimination/sim-ge-bridge",
+    "bookId": "linearbook",
+    "title": "휘트스톤 브리지를 소거로 풀기",
+    "link": "chapters/elimination.html#sim-ge-bridge"
+  },
+  {
+    "id": "linearbook/glossary/sim-gl-chooser",
+    "bookId": "linearbook",
+    "title": "어떤 분해를 쓸까?",
+    "link": "chapters/glossary.html#sim-gl-chooser"
+  },
+  {
+    "id": "linearbook/lu/sim-lu-undo",
+    "bookId": "linearbook",
+    "title": "변환하고 되돌리기: A와 A⁻¹",
+    "link": "chapters/lu.html#sim-lu-undo"
+  },
+  {
+    "id": "linearbook/lu/sim-lu-gj",
+    "bookId": "linearbook",
+    "title": "가우스–조르당 단계별 실행기",
+    "link": "chapters/lu.html#sim-lu-gj"
+  },
+  {
+    "id": "linearbook/lu/sim-lu-factor",
+    "bookId": "linearbook",
+    "title": "L이 채워지고 U가 만들어진다",
+    "link": "chapters/lu.html#sim-lu-factor"
+  },
+  {
+    "id": "linearbook/lu/sim-lu-cost",
+    "bookId": "linearbook",
+    "title": "연산량 비교: 소거·역행렬·LU",
+    "link": "chapters/lu.html#sim-lu-cost"
+  },
+  {
+    "id": "linearbook/lu/sim-lu-heat",
+    "bookId": "linearbook",
+    "title": "열전도 막대: 토머스 알고리즘으로 푸는 온도 분포",
+    "link": "chapters/lu.html#sim-lu-heat"
+  },
+  {
+    "id": "linearbook/lu/sim-lu-fill",
+    "bookId": "linearbook",
+    "title": "희소 LU의 채움: 순서가 메모리를 정한다",
+    "link": "chapters/lu.html#sim-lu-fill"
+  },
+  {
+    "id": "linearbook/lu/sim-lu-circuit",
+    "bookId": "linearbook",
+    "title": "노드 해석기: 저항을 바꾸면 G와 전압이 바뀐다",
+    "link": "chapters/lu.html#sim-lu-circuit"
+  },
+  {
+    "id": "linearbook/matrices/sim-mx-linear",
+    "bookId": "linearbook",
+    "title": "선형성 검사기: 더하고 보내기 = 보내고 더하기?",
+    "link": "chapters/matrices.html#sim-mx-linear"
+  },
+  {
+    "id": "linearbook/matrices/sim-mx-colrow",
+    "bookId": "linearbook",
+    "title": "같은 곱, 두 그림: 열 그림 ↔ 행 그림",
+    "link": "chapters/matrices.html#sim-mx-colrow"
+  },
+  {
+    "id": "linearbook/matrices/sim-mx-four",
+    "bookId": "linearbook",
+    "title": "한 단계씩 곱하기: 성분 · 열 · 행 · 외적",
+    "link": "chapters/matrices.html#sim-mx-four"
+  },
+  {
+    "id": "linearbook/matrices/sim-mx-compose",
+    "bookId": "linearbook",
+    "title": "합성 실험실: BA(먼저 A)와 AB(먼저 B)",
+    "link": "chapters/matrices.html#sim-mx-compose"
+  },
+  {
+    "id": "linearbook/matrices/sim-mx-special",
+    "bookId": "linearbook",
+    "title": "특수 행렬 도감: 모양과 성질 확인하기",
+    "link": "chapters/matrices.html#sim-mx-special"
+  },
+  {
+    "id": "linearbook/matrices/sim-mx-cube",
+    "bookId": "linearbook",
+    "title": "3×3 행렬로 정육면체 돌리고 찌그러뜨리기",
+    "link": "chapters/matrices.html#sim-mx-cube"
+  },
+  {
+    "id": "linearbook/matrices/sim-mx-arm",
+    "bookId": "linearbook",
+    "title": "2관절 로봇 팔: 동차 행렬의 사슬",
+    "link": "chapters/matrices.html#sim-mx-arm"
+  },
+  {
+    "id": "linearbook/matrices/sim-mx-cost",
+    "bookId": "linearbook",
+    "title": "루프라인: 행렬 곱은 연산에, 행렬–벡터 곱은 메모리에 묶인다",
+    "link": "chapters/matrices.html#sim-mx-cost"
+  },
+  {
+    "id": "linearbook/numerical/sim-nm-float",
+    "bookId": "linearbook",
+    "title": "상쇄 오차: 같은 식, 다른 정확도",
+    "link": "chapters/numerical.html#sim-nm-float"
+  },
+  {
+    "id": "linearbook/numerical/sim-nm-perturb",
+    "bookId": "linearbook",
+    "title": "거의 평행한 두 직선: 측정 오차가 해를 흔든다",
+    "link": "chapters/numerical.html#sim-nm-perturb"
+  },
+  {
+    "id": "linearbook/numerical/sim-nm-hilbert",
+    "bookId": "linearbook",
+    "title": "힐베르트 행렬이 잃는 자릿수",
+    "link": "chapters/numerical.html#sim-nm-hilbert"
+  },
+  {
+    "id": "linearbook/numerical/sim-nm-power",
+    "bookId": "linearbook",
+    "title": "거듭제곱법 · 역반복 · 레일리 몫 반복",
+    "link": "chapters/numerical.html#sim-nm-power"
+  },
+  {
+    "id": "linearbook/numerical/sim-nm-qr",
+    "bookId": "linearbook",
+    "title": "QR 알고리즘: Aₖ₊₁ = RₖQₖ 를 되풀이하면",
+    "link": "chapters/numerical.html#sim-nm-qr"
+  },
+  {
+    "id": "linearbook/numerical/sim-nm-iter",
+    "bookId": "linearbook",
+    "title": "금속판의 온도: 반복법 경주",
+    "link": "chapters/numerical.html#sim-nm-iter"
+  },
+  {
+    "id": "linearbook/numerical/sim-nm-cg",
+    "bookId": "linearbook",
+    "title": "최급강하법 대 켤레 기울기법",
+    "link": "chapters/numerical.html#sim-nm-cg"
+  },
+  {
+    "id": "linearbook/orthogonality/sim-or-complement",
+    "bookId": "linearbook",
+    "title": "ℝ³에서 직선과 그 직교 여공간",
+    "link": "chapters/orthogonality.html#sim-or-complement"
+  },
+  {
+    "id": "linearbook/orthogonality/sim-or-four",
+    "bookId": "linearbook",
+    "title": "2×2 행렬의 네 부분공간",
+    "link": "chapters/orthogonality.html#sim-or-four"
+  },
+  {
+    "id": "linearbook/orthogonality/sim-or-projline",
+    "bookId": "linearbook",
+    "title": "수선의 발 찾기: b를 a의 직선으로",
+    "link": "chapters/orthogonality.html#sim-or-projline"
+  },
+  {
+    "id": "linearbook/orthogonality/sim-or-projplane",
+    "bookId": "linearbook",
+    "title": "ℝ³의 b를 평면 C(A)로 사영하기",
+    "link": "chapters/orthogonality.html#sim-or-projplane"
+  },
+  {
+    "id": "linearbook/orthogonality/sim-or-linefit",
+    "bookId": "linearbook",
+    "title": "점을 끌며 맞추는 최소제곱 직선",
+    "link": "chapters/orthogonality.html#sim-or-linefit"
+  },
+  {
+    "id": "linearbook/orthogonality/sim-or-polyfit",
+    "bookId": "linearbook",
+    "title": "차수를 올리면: 훈련 오차와 시험 오차",
+    "link": "chapters/orthogonality.html#sim-or-polyfit"
+  },
+  {
+    "id": "linearbook/orthogonality/sim-or-gps",
+    "bookId": "linearbook",
+    "title": "2차원 GPS: 선형화와 최소제곱을 되풀이하기",
+    "link": "chapters/orthogonality.html#sim-or-gps"
+  },
+  {
+    "id": "linearbook/pca/sim-pc-axis",
+    "bookId": "linearbook",
+    "title": "축을 돌려 분산이 가장 큰 방향 찾기",
+    "link": "chapters/pca.html#sim-pc-axis"
+  },
+  {
+    "id": "linearbook/pca/sim-pc-scree",
+    "bookId": "linearbook",
+    "title": "센서 10개의 스크리 그림",
+    "link": "chapters/pca.html#sim-pc-scree"
+  },
+  {
+    "id": "linearbook/pca/sim-pc-scores",
+    "bookId": "linearbook",
+    "title": "원래 센서 두 개 vs 주성분 점수 두 개",
+    "link": "chapters/pca.html#sim-pc-scores"
+  },
+  {
+    "id": "linearbook/pca/sim-pc-faces",
+    "bookId": "linearbook",
+    "title": "고유 패턴으로 이미지 다시 쌓기",
+    "link": "chapters/pca.html#sim-pc-faces"
+  },
+  {
+    "id": "linearbook/pca/sim-pc-units",
+    "bookId": "linearbook",
+    "title": "압력의 단위를 바꾸면 PC1이 어디로 가나",
+    "link": "chapters/pca.html#sim-pc-units"
+  },
+  {
+    "id": "linearbook/pca/sim-pc-whiten",
+    "bookId": "linearbook",
+    "title": "타원을 원으로: 화이트닝 한 단계씩",
+    "link": "chapters/pca.html#sim-pc-whiten"
+  },
+  {
+    "id": "linearbook/pca/sim-pc-limits",
+    "bookId": "linearbook",
+    "title": "PCA가 속는 세 가지 데이터",
+    "link": "chapters/pca.html#sim-pc-limits"
+  },
+  {
+    "id": "linearbook/qr/sim-qr-coords",
+    "bookId": "linearbook",
+    "title": "좌표 읽기: 정규직교 기저 vs 비스듬한 기저",
+    "link": "chapters/qr.html#sim-qr-coords"
+  },
+  {
+    "id": "linearbook/qr/sim-qr-gs",
+    "bookId": "linearbook",
+    "title": "그람–슈미트 한 단계씩 (2차원)",
+    "link": "chapters/qr.html#sim-qr-gs"
+  },
+  {
+    "id": "linearbook/qr/sim-qr-factor",
+    "bookId": "linearbook",
+    "title": "QR 분해 실험실: 열을 하나씩 직교화",
+    "link": "chapters/qr.html#sim-qr-factor"
+  },
+  {
+    "id": "linearbook/qr/sim-qr-stability",
+    "bookId": "linearbook",
+    "title": "직교성 손실 측정: CGS · MGS · 하우스홀더",
+    "link": "chapters/qr.html#sim-qr-stability"
+  },
+  {
+    "id": "linearbook/qr/sim-qr-reflect",
+    "bookId": "linearbook",
+    "title": "거울과 회전으로 x를 축 위에 눕히기",
+    "link": "chapters/qr.html#sim-qr-reflect"
+  },
+  {
+    "id": "linearbook/qr/sim-qr-lsq",
+    "bookId": "linearbook",
+    "title": "다항식 적합: 정규 방정식 vs QR",
+    "link": "chapters/qr.html#sim-qr-lsq"
+  },
+  {
+    "id": "linearbook/qr/sim-qr-poly",
+    "bookId": "linearbook",
+    "title": "단항식에 그람–슈미트: 르장드르와 체비쇼프",
+    "link": "chapters/qr.html#sim-qr-poly"
+  },
+  {
+    "id": "linearbook/rank/sim-rk-indep",
+    "bookId": "linearbook",
+    "title": "세 벡터는 독립인가: 생성과 종속 관계식",
+    "link": "chapters/rank.html#sim-rk-indep"
+  },
+  {
+    "id": "linearbook/rank/sim-rk-coords",
+    "bookId": "linearbook",
+    "title": "내 기저로 좌표 재기",
+    "link": "chapters/rank.html#sim-rk-coords"
+  },
+  {
+    "id": "linearbook/rank/sim-rk-rref",
+    "bookId": "linearbook",
+    "title": "RREF와 네 부분공간 계산기",
+    "link": "chapters/rank.html#sim-rk-rref"
+  },
+  {
+    "id": "linearbook/rank/sim-rk-perp",
+    "bookId": "linearbook",
+    "title": "큰 그림: 행공간 ⟂ 영공간, 그리고 Ax = Axᵣ",
+    "link": "chapters/rank.html#sim-rk-perp"
+  },
+  {
+    "id": "linearbook/rank/sim-rk-cases",
+    "bookId": "linearbook",
+    "title": "해의 개수 판정기: rank A와 rank [A | b]",
+    "link": "chapters/rank.html#sim-rk-cases"
+  },
+  {
+    "id": "linearbook/rank/sim-rk-numrank",
+    "bookId": "linearbook",
+    "title": "거의 종속인 센서: 수치 계수는 허용 오차가 정한다",
+    "link": "chapters/rank.html#sim-rk-numrank"
+  },
+  {
+    "id": "linearbook/rank/sim-rk-graph",
+    "bookId": "linearbook",
+    "title": "가지를 켜고 끄며 독립 루프 세기",
+    "link": "chapters/rank.html#sim-rk-graph"
+  },
+  {
+    "id": "linearbook/subspaces/sim-sp-test",
+    "bookId": "linearbook",
+    "title": "부분공간 판정기: 더하고 늘여도 남아 있나",
+    "link": "chapters/subspaces.html#sim-sp-test"
+  },
+  {
+    "id": "linearbook/subspaces/sim-sp-colspace",
+    "bookId": "linearbook",
+    "title": "열공간 C(A): b가 평면 위에 있어야 풀린다",
+    "link": "chapters/subspaces.html#sim-sp-colspace"
+  },
+  {
+    "id": "linearbook/subspaces/sim-sp-null",
+    "bookId": "linearbook",
+    "title": "영공간은 모든 행에 수직이다",
+    "link": "chapters/subspaces.html#sim-sp-null"
+  },
+  {
+    "id": "linearbook/subspaces/sim-sp-rref",
+    "bookId": "linearbook",
+    "title": "RREF 스테퍼: 피벗 열과 자유 열 찾기",
+    "link": "chapters/subspaces.html#sim-sp-rref"
+  },
+  {
+    "id": "linearbook/subspaces/sim-sp-special",
+    "bookId": "linearbook",
+    "title": "특수해를 섞어 영공간 전체 만들기",
+    "link": "chapters/subspaces.html#sim-sp-special"
+  },
+  {
+    "id": "linearbook/subspaces/sim-sp-complete",
+    "bookId": "linearbook",
+    "title": "해집합 = 영공간의 평행이동 (ℝ³)",
+    "link": "chapters/subspaces.html#sim-sp-complete"
+  },
+  {
+    "id": "linearbook/subspaces/sim-sp-flow",
+    "bookId": "linearbook",
+    "title": "교통망: 바깥 감지기로는 보이지 않는 순환",
+    "link": "chapters/subspaces.html#sim-sp-flow"
+  },
+  {
+    "id": "linearbook/svd/sim-sv-geometry",
+    "bookId": "linearbook",
+    "title": "단위원을 세 단계로 타원으로",
+    "link": "chapters/svd.html#sim-sv-geometry"
+  },
+  {
+    "id": "linearbook/svd/sim-sv-stretch",
+    "bookId": "linearbook",
+    "title": "방향마다 얼마나 늘어나나: ‖Ax‖의 최대와 최소",
+    "link": "chapters/svd.html#sim-sv-stretch"
+  },
+  {
+    "id": "linearbook/svd/sim-sv-rankone",
+    "bookId": "linearbook",
+    "title": "체크무늬 레이어를 한 장씩 쌓기",
+    "link": "chapters/svd.html#sim-sv-rankone"
+  },
+  {
+    "id": "linearbook/svd/sim-sv-image",
+    "bookId": "linearbook",
+    "title": "SVD로 사진 압축하기",
+    "link": "chapters/svd.html#sim-sv-image"
+  },
+  {
+    "id": "linearbook/svd/sim-sv-pinv",
+    "bookId": "linearbook",
+    "title": "해 직선 위에서 가장 짧은 해",
+    "link": "chapters/svd.html#sim-sv-pinv"
+  },
+  {
+    "id": "linearbook/svd/sim-sv-condition",
+    "bookId": "linearbook",
+    "title": "측정 오차의 원이 해의 타원이 된다",
+    "link": "chapters/svd.html#sim-sv-condition"
+  },
+  {
+    "id": "linearbook/svd/sim-sv-truncation",
+    "bookId": "linearbook",
+    "title": "몇 개의 특이값까지 믿을 것인가",
+    "link": "chapters/svd.html#sim-sv-truncation"
+  },
+  {
+    "id": "linearbook/symmetric/sim-sy-spectral",
+    "bookId": "linearbook",
+    "title": "대칭 행렬의 고유분해: 단위원 → 타원",
+    "link": "chapters/symmetric.html#sim-sy-spectral"
+  },
+  {
+    "id": "linearbook/symmetric/sim-sy-quad",
+    "bookId": "linearbook",
+    "title": "이차 형식의 지형과 등위선",
+    "link": "chapters/symmetric.html#sim-sy-quad"
+  },
+  {
+    "id": "linearbook/symmetric/sim-sy-pd",
+    "bookId": "linearbook",
+    "title": "양의 정부호 판정기: 다섯 가지 시험",
+    "link": "chapters/symmetric.html#sim-sy-pd"
+  },
+  {
+    "id": "linearbook/symmetric/sim-sy-spring",
+    "bookId": "linearbook",
+    "title": "스프링 사슬: K = AᵀCA와 에너지",
+    "link": "chapters/symmetric.html#sim-sy-spring"
+  },
+  {
+    "id": "linearbook/symmetric/sim-sy-hess",
+    "bookId": "linearbook",
+    "title": "지형 위의 점: 기울기와 헤세 행렬",
+    "link": "chapters/symmetric.html#sim-sy-hess"
+  },
+  {
+    "id": "linearbook/symmetric/sim-sy-gd",
+    "bookId": "linearbook",
+    "title": "길쭉한 그릇에서 지그재그로 내려가기",
+    "link": "chapters/symmetric.html#sim-sy-gd"
+  },
+  {
+    "id": "linearbook/symmetric/sim-sy-mohr",
+    "bookId": "linearbook",
+    "title": "면을 돌리면 응력이 바뀐다: 레일리 몫과 모어 원",
+    "link": "chapters/symmetric.html#sim-sy-mohr"
+  },
+  {
+    "id": "linearbook/vectors/sim-vec-forms",
+    "bookId": "linearbook",
+    "title": "숫자 셋, 세 가지 얼굴",
+    "link": "chapters/vectors.html#sim-vec-forms"
+  },
+  {
+    "id": "linearbook/vectors/sim-vec-ops",
+    "bookId": "linearbook",
+    "title": "화살표를 이어 붙이기: 덧셈·뺄셈·상수배",
+    "link": "chapters/vectors.html#sim-vec-ops"
+  },
+  {
+    "id": "linearbook/vectors/sim-vec-span",
+    "bookId": "linearbook",
+    "title": "목표 점에 닿는 계수 찾기",
+    "link": "chapters/vectors.html#sim-vec-span"
+  },
+  {
+    "id": "linearbook/vectors/sim-vec-indep",
+    "bookId": "linearbook",
+    "title": "영벡터로 돌아오는 고리: 종속 관계 찾기",
+    "link": "chapters/vectors.html#sim-vec-indep"
+  },
+  {
+    "id": "linearbook/vectors/sim-vec-dot",
+    "bookId": "linearbook",
+    "title": "내적 = 그림자 길이 × 길이",
+    "link": "chapters/vectors.html#sim-vec-dot"
+  },
+  {
+    "id": "linearbook/vectors/sim-vec-norms",
+    "bookId": "linearbook",
+    "title": "단위 공의 모양: p를 바꾸며 보는 노름",
+    "link": "chapters/vectors.html#sim-vec-norms"
+  },
+  {
+    "id": "linearbook/vectors/sim-vec-cosine",
+    "bookId": "linearbook",
+    "title": "검색어 벡터를 끌어 문서 순위 매기기",
+    "link": "chapters/vectors.html#sim-vec-cosine"
+  },
+  {
+    "id": "calculusbook/applications/sim-ap-between",
+    "bookId": "calculusbook",
+    "title": "띠로 채우기: 세로 띠와 가로 띠",
+    "link": "chapters/applications.html#sim-ap-between"
+  },
+  {
+    "id": "calculusbook/applications/sim-ap-washer",
+    "bookId": "calculusbook",
+    "title": "회전체를 와셔로 쌓기 (3D, 끌어서 돌리기)",
+    "link": "chapters/applications.html#sim-ap-washer"
+  },
+  {
+    "id": "calculusbook/applications/sim-ap-shells",
+    "bookId": "calculusbook",
+    "title": "원통 껍질 쌓기 (3D, 끌어서 돌리기)",
+    "link": "chapters/applications.html#sim-ap-shells"
+  },
+  {
+    "id": "calculusbook/applications/sim-ap-arclen",
+    "bookId": "calculusbook",
+    "title": "꺾은선으로 곡선 길이 재기",
+    "link": "chapters/applications.html#sim-ap-arclen"
+  },
+  {
+    "id": "calculusbook/applications/sim-ap-pump",
+    "bookId": "calculusbook",
+    "title": "물 퍼 올리기: 층마다 무게 × 거리",
+    "link": "chapters/applications.html#sim-ap-pump"
+  },
+  {
+    "id": "calculusbook/applications/sim-ap-pressure",
+    "bookId": "calculusbook",
+    "title": "잠긴 판의 수압: 깊이마다 다른 압력을 더하기",
+    "link": "chapters/applications.html#sim-ap-pressure"
+  },
+  {
+    "id": "calculusbook/applications/sim-ap-balance",
+    "bookId": "calculusbook",
+    "title": "무게 중심 균형 잡기",
+    "link": "chapters/applications.html#sim-ap-balance"
+  },
+  {
+    "id": "calculusbook/applications/sim-ap-pdf",
+    "bookId": "calculusbook",
+    "title": "확률 = 넓이, 기댓값 = 균형점",
+    "link": "chapters/applications.html#sim-ap-pdf"
+  },
+  {
+    "id": "calculusbook/chain-rule/sim-cr-chain",
+    "bookId": "calculusbook",
+    "title": "연쇄 법칙 배율 체인: x → u → y",
+    "link": "chapters/chain-rule.html#sim-cr-chain"
+  },
+  {
+    "id": "calculusbook/chain-rule/sim-cr-trig",
+    "bookId": "calculusbook",
+    "title": "sin과 cos: 도는 점과 그래프의 기울기",
+    "link": "chapters/chain-rule.html#sim-cr-trig"
+  },
+  {
+    "id": "calculusbook/chain-rule/sim-cr-base",
+    "bookId": "calculusbook",
+    "title": "기울기 ÷ 값이 1인 밑 a 찾기",
+    "link": "chapters/chain-rule.html#sim-cr-base"
+  },
+  {
+    "id": "calculusbook/chain-rule/sim-cr-inverse",
+    "bookId": "calculusbook",
+    "title": "역함수의 접선: 기울기 m과 1/m",
+    "link": "chapters/chain-rule.html#sim-cr-inverse"
+  },
+  {
+    "id": "calculusbook/chain-rule/sim-cr-implicit",
+    "bookId": "calculusbook",
+    "title": "음함수 곡선 위의 접선",
+    "link": "chapters/chain-rule.html#sim-cr-implicit"
+  },
+  {
+    "id": "calculusbook/chain-rule/sim-cr-ladder",
+    "bookId": "calculusbook",
+    "title": "미끄러지는 사다리",
+    "link": "chapters/chain-rule.html#sim-cr-ladder"
+  },
+  {
+    "id": "calculusbook/chain-rule/sim-cr-tank",
+    "bookId": "calculusbook",
+    "title": "물탱크 채우기: 수위 상승 속도 = 유입량 ÷ 수면 넓이",
+    "link": "chapters/chain-rule.html#sim-cr-tank"
+  },
+  {
+    "id": "calculusbook/continuity/sim-ct-fix",
+    "bookId": "calculusbook",
+    "title": "불연속 고치기: f(a)를 옮겨서 틈을 메울 수 있나",
+    "link": "chapters/continuity.html#sim-ct-fix"
+  },
+  {
+    "id": "calculusbook/continuity/sim-ct-glue",
+    "bookId": "calculusbook",
+    "title": "조각 함수 이음매 맞추기",
+    "link": "chapters/continuity.html#sim-ct-glue"
+  },
+  {
+    "id": "calculusbook/continuity/sim-ct-ivt",
+    "bookId": "calculusbook",
+    "title": "중간값 정리: 어느 높이든 지나간다",
+    "link": "chapters/continuity.html#sim-ct-ivt"
+  },
+  {
+    "id": "calculusbook/continuity/sim-ct-hiker",
+    "bookId": "calculusbook",
+    "title": "등산로 문제: 올라간 날과 내려온 날",
+    "link": "chapters/continuity.html#sim-ct-hiker"
+  },
+  {
+    "id": "calculusbook/continuity/sim-ct-bisect",
+    "bookId": "calculusbook",
+    "title": "이분법 한 단계씩",
+    "link": "chapters/continuity.html#sim-ct-bisect"
+  },
+  {
+    "id": "calculusbook/continuity/sim-ct-extreme",
+    "bookId": "calculusbook",
+    "title": "최댓값은 있는가: 끝점과 불연속 바꿔 보기",
+    "link": "chapters/continuity.html#sim-ct-extreme"
+  },
+  {
+    "id": "calculusbook/continuity/sim-ct-sector",
+    "bookId": "calculusbook",
+    "title": "부채꼴 넓이로 sin x / x 조이기",
+    "link": "chapters/continuity.html#sim-ct-sector"
+  },
+  {
+    "id": "calculusbook/continuity/sim-ct-compound",
+    "bookId": "calculusbook",
+    "title": "복리에서 e로",
+    "link": "chapters/continuity.html#sim-ct-compound"
+  },
+  {
+    "id": "calculusbook/derivative/sim-dv-secant",
+    "bookId": "calculusbook",
+    "title": "할선을 접선으로: Q를 P에 붙이기",
+    "link": "chapters/derivative.html#sim-dv-secant"
+  },
+  {
+    "id": "calculusbook/derivative/sim-dv-difftable",
+    "bookId": "calculusbook",
+    "title": "차분몫 표: h를 줄이면 정말 정확해질까",
+    "link": "chapters/derivative.html#sim-dv-difftable"
+  },
+  {
+    "id": "calculusbook/derivative/sim-dv-zoom",
+    "bookId": "calculusbook",
+    "title": "확대경: 확대하면 직선이 되는가",
+    "link": "chapters/derivative.html#sim-dv-zoom"
+  },
+  {
+    "id": "calculusbook/derivative/sim-dv-sketch",
+    "bookId": "calculusbook",
+    "title": "기울기를 찍어 f′ 그리기",
+    "link": "chapters/derivative.html#sim-dv-sketch"
+  },
+  {
+    "id": "calculusbook/derivative/sim-dv-match",
+    "bookId": "calculusbook",
+    "title": "도함수 짝 맞추기",
+    "link": "chapters/derivative.html#sim-dv-match"
+  },
+  {
+    "id": "calculusbook/derivative/sim-dv-product",
+    "bookId": "calculusbook",
+    "title": "곱의 법칙: 자라는 직사각형",
+    "link": "chapters/derivative.html#sim-dv-product"
+  },
+  {
+    "id": "calculusbook/derivative/sim-dv-motion",
+    "bookId": "calculusbook",
+    "title": "위치–속도–가속도 동기화",
+    "link": "chapters/derivative.html#sim-dv-motion"
+  },
+  {
+    "id": "calculusbook/fundamental/sim-ft-accumulate",
+    "bookId": "calculusbook",
+    "title": "f를 끌면 A가 바뀐다: 누적 함수 그리기",
+    "link": "chapters/fundamental.html#sim-ft-accumulate"
+  },
+  {
+    "id": "calculusbook/fundamental/sim-ft-slope",
+    "bookId": "calculusbook",
+    "title": "띠의 넓이 ÷ 폭 → f(x): A의 기울기 확인",
+    "link": "chapters/fundamental.html#sim-ft-slope"
+  },
+  {
+    "id": "calculusbook/fundamental/sim-ft-telescope",
+    "bookId": "calculusbook",
+    "title": "오르막을 쌓으면 넓이: 망원 합 증명",
+    "link": "chapters/fundamental.html#sim-ft-telescope"
+  },
+  {
+    "id": "calculusbook/fundamental/sim-ft-family",
+    "bookId": "calculusbook",
+    "title": "역도함수의 가족 F(x) + C: 한 점을 지나는 하나 고르기",
+    "link": "chapters/fundamental.html#sim-ft-family"
+  },
+  {
+    "id": "calculusbook/fundamental/sim-ft-subst",
+    "bookId": "calculusbook",
+    "title": "넓이를 지키는 변환: x 세계에서 u 세계로",
+    "link": "chapters/fundamental.html#sim-ft-subst"
+  },
+  {
+    "id": "calculusbook/fundamental/sim-ft-tank",
+    "bookId": "calculusbook",
+    "title": "물탱크: 유량을 쌓으면 부피",
+    "link": "chapters/fundamental.html#sim-ft-tank"
+  },
+  {
+    "id": "calculusbook/fundamental/sim-ft-distance",
+    "bookId": "calculusbook",
+    "title": "변위 ∫v와 이동 거리 ∫|v|",
+    "link": "chapters/fundamental.html#sim-ft-distance"
+  },
+  {
+    "id": "calculusbook/fundamental/sim-ft-limits",
+    "bookId": "calculusbook",
+    "title": "움직이는 한계: G(x) = ∫ h(x) g(x) f(t) dt의 기울기",
+    "link": "chapters/fundamental.html#sim-ft-limits"
+  },
+  {
+    "id": "calculusbook/glossary/sim-gl-series",
+    "bookId": "calculusbook",
+    "title": "이 급수, 어떤 판정법으로?",
+    "link": "chapters/glossary.html#sim-gl-series"
+  },
+  {
+    "id": "calculusbook/gradient/sim-gd-compass",
+    "bookId": "calculusbook",
+    "title": "방향 도함수 나침반",
+    "link": "chapters/gradient.html#sim-gd-compass"
+  },
+  {
+    "id": "calculusbook/gradient/sim-gd-field",
+    "bookId": "calculusbook",
+    "title": "그래디언트 장과 최급 경로",
+    "link": "chapters/gradient.html#sim-gd-field"
+  },
+  {
+    "id": "calculusbook/gradient/sim-gd-levelsurf",
+    "bookId": "calculusbook",
+    "title": "타원체 위의 법선과 접평면",
+    "link": "chapters/gradient.html#sim-gd-levelsurf"
+  },
+  {
+    "id": "calculusbook/gradient/sim-gd-classify",
+    "bookId": "calculusbook",
+    "title": "임계점 찾기와 분류: 곡면과 2차 근사",
+    "link": "chapters/gradient.html#sim-gd-classify"
+  },
+  {
+    "id": "calculusbook/gradient/sim-gd-region",
+    "bookId": "calculusbook",
+    "title": "닫힌 영역 탐색: 내부 임계점 + 경계",
+    "link": "chapters/gradient.html#sim-gd-region"
+  },
+  {
+    "id": "calculusbook/gradient/sim-gd-lagrange",
+    "bookId": "calculusbook",
+    "title": "라그랑주 접점 찾기",
+    "link": "chapters/gradient.html#sim-gd-lagrange"
+  },
+  {
+    "id": "calculusbook/gradient/sim-gd-descent",
+    "bookId": "calculusbook",
+    "title": "경사 하강: 학습률이 길을 바꾼다",
+    "link": "chapters/gradient.html#sim-gd-descent"
+  },
+  {
+    "id": "calculusbook/gradient/sim-gd-lsq",
+    "bookId": "calculusbook",
+    "title": "최소제곱: 데이터 평면과 (m, b) 평면",
+    "link": "chapters/gradient.html#sim-gd-lsq"
+  },
+  {
+    "id": "calculusbook/integral/sim-in-velocity",
+    "bookId": "calculusbook",
+    "title": "속도계만 보고 달린 거리 재기",
+    "link": "chapters/integral.html#sim-in-velocity"
+  },
+  {
+    "id": "calculusbook/integral/sim-in-sigma",
+    "bookId": "calculusbook",
+    "title": "블록 쌓기로 보는 합 공식, 그리고 넓이",
+    "link": "chapters/integral.html#sim-in-sigma"
+  },
+  {
+    "id": "calculusbook/integral/sim-in-riemann",
+    "bookId": "calculusbook",
+    "title": "리만 합: n을 키우면 직사각형이 곡선이 된다",
+    "link": "chapters/integral.html#sim-in-riemann"
+  },
+  {
+    "id": "calculusbook/integral/sim-in-darboux",
+    "bookId": "calculusbook",
+    "title": "상합과 하합 사이에 참값을 가두기",
+    "link": "chapters/integral.html#sim-in-darboux"
+  },
+  {
+    "id": "calculusbook/integral/sim-in-signed",
+    "bookId": "calculusbook",
+    "title": "곡선을 끌어 부호 있는 넓이 만들기",
+    "link": "chapters/integral.html#sim-in-signed"
+  },
+  {
+    "id": "calculusbook/integral/sim-in-average",
+    "bookId": "calculusbook",
+    "title": "물을 고르듯이: 평균 높이와 c",
+    "link": "chapters/integral.html#sim-in-average"
+  },
+  {
+    "id": "calculusbook/integral/sim-in-error",
+    "bookId": "calculusbook",
+    "title": "오차의 로그–로그 그래프: 기울기가 차수다",
+    "link": "chapters/integral.html#sim-in-error"
+  },
+  {
+    "id": "calculusbook/limits/sim-lm-zoom",
+    "bookId": "calculusbook",
+    "title": "확대경: a 근처를 점점 크게",
+    "link": "chapters/limits.html#sim-lm-zoom"
+  },
+  {
+    "id": "calculusbook/limits/sim-lm-table",
+    "bookId": "calculusbook",
+    "title": "h 표 만들기: h → 0의 수치 실험",
+    "link": "chapters/limits.html#sim-lm-table"
+  },
+  {
+    "id": "calculusbook/limits/sim-lm-onesided",
+    "bookId": "calculusbook",
+    "title": "왼쪽과 오른쪽에서 따로 다가가기",
+    "link": "chapters/limits.html#sim-lm-onesided"
+  },
+  {
+    "id": "calculusbook/limits/sim-lm-zero",
+    "bookId": "calculusbook",
+    "title": "0/0이냐 k/0이냐: 구멍과 점근선",
+    "link": "chapters/limits.html#sim-lm-zero"
+  },
+  {
+    "id": "calculusbook/limits/sim-lm-squeeze",
+    "bookId": "calculusbook",
+    "title": "조임 정리: |x|ᵖ sin(1/x)를 누르는 두 벽",
+    "link": "chapters/limits.html#sim-lm-squeeze"
+  },
+  {
+    "id": "calculusbook/limits/sim-lm-asym",
+    "bookId": "calculusbook",
+    "title": "멀리서 보기: 점근선 찾기",
+    "link": "chapters/limits.html#sim-lm-asym"
+  },
+  {
+    "id": "calculusbook/limits/sim-lm-epsdelta",
+    "bookId": "calculusbook",
+    "title": "ε–δ 게임: ε을 주면 δ를 골라라",
+    "link": "chapters/limits.html#sim-lm-epsdelta"
+  },
+  {
+    "id": "calculusbook/mean-value/sim-mv-rolle",
+    "bookId": "calculusbook",
+    "title": "롤의 정리: 곡선을 주물러도 평평한 점은 남는다",
+    "link": "chapters/mean-value.html#sim-mv-rolle"
+  },
+  {
+    "id": "calculusbook/mean-value/sim-mv-mvt",
+    "bookId": "calculusbook",
+    "title": "평균값 정리의 점 c 찾기",
+    "link": "chapters/mean-value.html#sim-mv-mvt"
+  },
+  {
+    "id": "calculusbook/mean-value/sim-mv-trap",
+    "bookId": "calculusbook",
+    "title": "구간 단속 15 km: 평균 속력을 지나는 순간",
+    "link": "chapters/mean-value.html#sim-mv-trap"
+  },
+  {
+    "id": "calculusbook/mean-value/sim-mv-concave",
+    "bookId": "calculusbook",
+    "title": "접선을 굴리면 보이는 오목성",
+    "link": "chapters/mean-value.html#sim-mv-concave"
+  },
+  {
+    "id": "calculusbook/mean-value/sim-mv-signs",
+    "bookId": "calculusbook",
+    "title": "f · f′ · f″ 세 그래프 동기화",
+    "link": "chapters/mean-value.html#sim-mv-signs"
+  },
+  {
+    "id": "calculusbook/mean-value/sim-mv-lhopital",
+    "bookId": "calculusbook",
+    "title": "로피탈 확대경: 분자와 분모가 직선이 될 때까지",
+    "link": "chapters/mean-value.html#sim-mv-lhopital"
+  },
+  {
+    "id": "calculusbook/mean-value/sim-mv-sketch",
+    "bookId": "calculusbook",
+    "title": "그래프 그리기 여섯 단계",
+    "link": "chapters/mean-value.html#sim-mv-sketch"
+  },
+  {
+    "id": "calculusbook/mean-value/sim-mv-race",
+    "bookId": "calculusbook",
+    "title": "성장 경주: ln x, xᵖ, aˣ",
+    "link": "chapters/mean-value.html#sim-mv-race"
+  },
+  {
+    "id": "calculusbook/multiple/sim-mi-columns",
+    "bookId": "calculusbook",
+    "title": "기둥 리만 합: 끌어서 돌려 보는 3차원 기둥",
+    "link": "chapters/multiple.html#sim-mi-columns"
+  },
+  {
+    "id": "calculusbook/multiple/sim-mi-slices",
+    "bookId": "calculusbook",
+    "title": "단면 넓이 A(x)를 쌓으면 부피",
+    "link": "chapters/multiple.html#sim-mi-slices"
+  },
+  {
+    "id": "calculusbook/multiple/sim-mi-order",
+    "bookId": "calculusbook",
+    "title": "세로 띠와 가로 띠: 적분 순서 바꾸기",
+    "link": "chapters/multiple.html#sim-mi-order"
+  },
+  {
+    "id": "calculusbook/multiple/sim-mi-polar",
+    "bookId": "calculusbook",
+    "title": "극좌표 격자: 바깥 조각이 더 크다",
+    "link": "chapters/multiple.html#sim-mi-polar"
+  },
+  {
+    "id": "calculusbook/multiple/sim-mi-gauss",
+    "bookId": "calculusbook",
+    "title": "원판–정사각형–원판으로 조이는 가우스 적분",
+    "link": "chapters/multiple.html#sim-mi-gauss"
+  },
+  {
+    "id": "calculusbook/multiple/sim-mi-coords",
+    "bookId": "calculusbook",
+    "title": "부피 요소 해부: 직교·원기둥·구면 상자",
+    "link": "chapters/multiple.html#sim-mi-coords"
+  },
+  {
+    "id": "calculusbook/multiple/sim-mi-jacobian",
+    "bookId": "calculusbook",
+    "title": "야코비안: 작은 칸이 얼마나 늘어나는가",
+    "link": "chapters/multiple.html#sim-mi-jacobian"
+  },
+  {
+    "id": "calculusbook/multiple/sim-mi-inertia",
+    "bookId": "calculusbook",
+    "title": "구르기 경주: 관성 모멘트가 승부를 가른다",
+    "link": "chapters/multiple.html#sim-mi-inertia"
+  },
+  {
+    "id": "calculusbook/optimization/sim-op-closed",
+    "bookId": "calculusbook",
+    "title": "후보표 만들기: 임계점 + 끝점",
+    "link": "chapters/optimization.html#sim-op-closed"
+  },
+  {
+    "id": "calculusbook/optimization/sim-op-box",
+    "bookId": "calculusbook",
+    "title": "판지 상자의 부피 최대화",
+    "link": "chapters/optimization.html#sim-op-box"
+  },
+  {
+    "id": "calculusbook/optimization/sim-op-can",
+    "bookId": "calculusbook",
+    "title": "캔의 재료비 최소화: h = 2kr",
+    "link": "chapters/optimization.html#sim-op-can"
+  },
+  {
+    "id": "calculusbook/optimization/sim-op-snell",
+    "bookId": "calculusbook",
+    "title": "최소 시간 경로: 구조원과 빛",
+    "link": "chapters/optimization.html#sim-op-snell"
+  },
+  {
+    "id": "calculusbook/optimization/sim-op-linzoom",
+    "bookId": "calculusbook",
+    "title": "선형 근사 확대경과 오차의 기울기 2",
+    "link": "chapters/optimization.html#sim-op-linzoom"
+  },
+  {
+    "id": "calculusbook/optimization/sim-op-err",
+    "bookId": "calculusbook",
+    "title": "오차 전파 계산기",
+    "link": "chapters/optimization.html#sim-op-err"
+  },
+  {
+    "id": "calculusbook/optimization/sim-op-newton",
+    "bookId": "calculusbook",
+    "title": "뉴턴 방법 한 단계씩: 수렴과 실패",
+    "link": "chapters/optimization.html#sim-op-newton"
+  },
+  {
+    "id": "calculusbook/optimization/sim-op-quad",
+    "bookId": "calculusbook",
+    "title": "접선 vs 접하는 포물선",
+    "link": "chapters/optimization.html#sim-op-quad"
+  },
+  {
+    "id": "calculusbook/partial/sim-pd-surface",
+    "bookId": "calculusbook",
+    "title": "곡면과 등고선도: 높이 c로 자르기",
+    "link": "chapters/partial.html#sim-pd-surface"
+  },
+  {
+    "id": "calculusbook/partial/sim-pd-paths",
+    "bookId": "calculusbook",
+    "title": "경로마다 다른 극한: 직선 vs 포물선",
+    "link": "chapters/partial.html#sim-pd-paths"
+  },
+  {
+    "id": "calculusbook/partial/sim-pd-slice",
+    "bookId": "calculusbook",
+    "title": "단면 자르기: x 고정, y 고정",
+    "link": "chapters/partial.html#sim-pd-slice"
+  },
+  {
+    "id": "calculusbook/partial/sim-pd-mixed",
+    "bookId": "calculusbook",
+    "title": "혼합 차분 Δ(h, k)/(hk): 확대하면 한 값으로 모이나",
+    "link": "chapters/partial.html#sim-pd-mixed"
+  },
+  {
+    "id": "calculusbook/partial/sim-pd-tangent",
+    "bookId": "calculusbook",
+    "title": "접평면 확대경: 곡면이 평면에 붙는가",
+    "link": "chapters/partial.html#sim-pd-tangent"
+  },
+  {
+    "id": "calculusbook/partial/sim-pd-error",
+    "bookId": "calculusbook",
+    "title": "오차 전파 계산기: 전미분 vs 몬테카를로",
+    "link": "chapters/partial.html#sim-pd-error"
+  },
+  {
+    "id": "calculusbook/partial/sim-pd-chain",
+    "bookId": "calculusbook",
+    "title": "경로 위의 변화율: 기울기와 속도의 내적",
+    "link": "chapters/partial.html#sim-pd-chain"
+  },
+  {
+    "id": "calculusbook/partial/sim-pd-heat",
+    "bookId": "calculusbook",
+    "title": "막대 위의 열과 줄 위의 파동: u xx 가 움직임을 정한다",
+    "link": "chapters/partial.html#sim-pd-heat"
+  },
+  {
+    "id": "calculusbook/series/sim-sr-seq",
+    "bookId": "calculusbook",
+    "title": "ε 띠 안으로: N은 얼마인가",
+    "link": "chapters/series.html#sim-sr-seq"
+  },
+  {
+    "id": "calculusbook/series/sim-sr-cobweb",
+    "bookId": "calculusbook",
+    "title": "거미줄 그림: 점화식 a n+1 = g(a n ) 한 단계씩",
+    "link": "chapters/series.html#sim-sr-cobweb"
+  },
+  {
+    "id": "calculusbook/series/sim-sr-partial",
+    "bookId": "calculusbook",
+    "title": "항과 부분합: 막대는 줄어드는데 합은 어디로",
+    "link": "chapters/series.html#sim-sr-partial"
+  },
+  {
+    "id": "calculusbook/series/sim-sr-geosquare",
+    "bookId": "calculusbook",
+    "title": "정사각형 쪼개기로 보는 기하 급수",
+    "link": "chapters/series.html#sim-sr-geosquare"
+  },
+  {
+    "id": "calculusbook/series/sim-sr-harmonic",
+    "bookId": "calculusbook",
+    "title": "조화 급수 vs 적분: 계단과 곡선 사이의 틈",
+    "link": "chapters/series.html#sim-sr-harmonic"
+  },
+  {
+    "id": "calculusbook/series/sim-sr-ptest",
+    "bookId": "calculusbook",
+    "title": "p-급수와 적분 꼬리: p = 1이 경계인 이유",
+    "link": "chapters/series.html#sim-sr-ptest"
+  },
+  {
+    "id": "calculusbook/series/sim-sr-alt",
+    "bookId": "calculusbook",
+    "title": "교대 급수: 지그재그와 오차 띠, 그리고 재배열",
+    "link": "chapters/series.html#sim-sr-alt"
+  },
+  {
+    "id": "calculusbook/series/sim-sr-chooser",
+    "bookId": "calculusbook",
+    "title": "판정법 선택기",
+    "link": "chapters/series.html#sim-sr-chooser"
+  },
+  {
+    "id": "calculusbook/taylor/sim-ty-interval",
+    "bookId": "calculusbook",
+    "title": "부분합 곡선과 수렴 구간: 끝점에서는 무슨 일이",
+    "link": "chapters/taylor.html#sim-ty-interval"
+  },
+  {
+    "id": "calculusbook/taylor/sim-ty-radius",
+    "bookId": "calculusbook",
+    "title": "수렴 원판: 중심을 끌어 특이점까지 재기",
+    "link": "chapters/taylor.html#sim-ty-radius"
+  },
+  {
+    "id": "calculusbook/taylor/sim-ty-poly",
+    "bookId": "calculusbook",
+    "title": "테일러 다항식: 차수 슬라이더와 움직이는 전개점",
+    "link": "chapters/taylor.html#sim-ty-poly"
+  },
+  {
+    "id": "calculusbook/taylor/sim-ty-remainder",
+    "bookId": "calculusbook",
+    "title": "실제 오차 vs 라그랑주 상한 (로그 눈금)",
+    "link": "chapters/taylor.html#sim-ty-remainder"
+  },
+  {
+    "id": "calculusbook/taylor/sim-ty-binomial",
+    "bookId": "calculusbook",
+    "title": "이항 급수: k가 정수가 아니면 끝나지 않는다",
+    "link": "chapters/taylor.html#sim-ty-binomial"
+  },
+  {
+    "id": "calculusbook/taylor/sim-ty-euler",
+    "bookId": "calculusbook",
+    "title": "오일러 나선: Σ(iθ)ⁿ/n!이 단위원에 내려앉는 길",
+    "link": "chapters/taylor.html#sim-ty-euler"
+  },
+  {
+    "id": "calculusbook/taylor/sim-ty-pendulum",
+    "bookId": "calculusbook",
+    "title": "진자: sin θ 와 θ, 두 진자의 경주",
+    "link": "chapters/taylor.html#sim-ty-pendulum"
+  },
+  {
+    "id": "calculusbook/taylor/sim-ty-erf",
+    "bookId": "calculusbook",
+    "title": "∫₀ˣ e^(−t²) dt: 급수 몇 항이면 되나",
+    "link": "chapters/taylor.html#sim-ty-erf"
+  },
+  {
+    "id": "calculusbook/techniques/sim-tq-parts",
+    "bookId": "calculusbook",
+    "title": "부분 적분 넓이 그림: 두 넓이가 직사각형을 채운다",
+    "link": "chapters/techniques.html#sim-tq-parts"
+  },
+  {
+    "id": "calculusbook/techniques/sim-tq-tabular",
+    "bookId": "calculusbook",
+    "title": "표 방법 계산기: xᵏ · g(x)",
+    "link": "chapters/techniques.html#sim-tq-tabular"
+  },
+  {
+    "id": "calculusbook/techniques/sim-tq-ortho",
+    "bookId": "calculusbook",
+    "title": "직교성: 곱의 부호 있는 넓이가 상쇄된다",
+    "link": "chapters/techniques.html#sim-tq-ortho"
+  },
+  {
+    "id": "calculusbook/techniques/sim-tq-trigsub",
+    "bookId": "calculusbook",
+    "title": "삼각 치환 삼각형: x를 끌면 θ가 따라온다",
+    "link": "chapters/techniques.html#sim-tq-trigsub"
+  },
+  {
+    "id": "calculusbook/techniques/sim-tq-pf",
+    "bookId": "calculusbook",
+    "title": "부분 분수 분해기: 그래프가 조각의 합이 된다",
+    "link": "chapters/techniques.html#sim-tq-pf"
+  },
+  {
+    "id": "calculusbook/techniques/sim-tq-tail",
+    "bookId": "calculusbook",
+    "title": "꼬리 넓이: 1/xᵖ는 어디서 유한해지나",
+    "link": "chapters/techniques.html#sim-tq-tail"
+  },
+  {
+    "id": "calculusbook/techniques/sim-tq-numeric",
+    "bookId": "calculusbook",
+    "title": "사다리꼴·중점·심프슨 오차 비교",
+    "link": "chapters/techniques.html#sim-tq-numeric"
+  },
+  {
+    "id": "calculusbook/techniques/sim-tq-series",
+    "bookId": "calculusbook",
+    "title": "닫힌 꼴이 없는 적분을 숫자로: 수치 적분 vs 급수",
+    "link": "chapters/techniques.html#sim-tq-series"
+  },
+  {
+    "id": "calculusbook/vector-calculus/sim-vc-field",
+    "bookId": "calculusbook",
+    "title": "벡터장과 흐르는 입자",
+    "link": "chapters/vector-calculus.html#sim-vc-field"
+  },
+  {
+    "id": "calculusbook/vector-calculus/sim-vc-work",
+    "bookId": "calculusbook",
+    "title": "경로를 끌어 일 계산하기",
+    "link": "chapters/vector-calculus.html#sim-vc-work"
+  },
+  {
+    "id": "calculusbook/vector-calculus/sim-vc-path",
+    "bookId": "calculusbook",
+    "title": "세 경로 비교: 경로 독립인가?",
+    "link": "chapters/vector-calculus.html#sim-vc-path"
+  },
+  {
+    "id": "calculusbook/vector-calculus/sim-vc-green",
+    "bookId": "calculusbook",
+    "title": "그린 정리: 경계 순환 = 회전의 이중 적분",
+    "link": "chapters/vector-calculus.html#sim-vc-green"
+  },
+  {
+    "id": "calculusbook/vector-calculus/sim-vc-planimeter",
+    "bookId": "calculusbook",
+    "title": "플라니미터: 경계를 그리면 넓이가 나온다",
+    "link": "chapters/vector-calculus.html#sim-vc-planimeter"
+  },
+  {
+    "id": "calculusbook/vector-calculus/sim-vc-probe",
+    "bookId": "calculusbook",
+    "title": "발산·회전 탐침: 바람개비와 작은 원",
+    "link": "chapters/vector-calculus.html#sim-vc-probe"
+  },
+  {
+    "id": "calculusbook/vector-calculus/sim-vc-flux",
+    "bookId": "calculusbook",
+    "title": "곡면을 뚫고 지나가는 플럭스",
+    "link": "chapters/vector-calculus.html#sim-vc-flux"
+  },
+  {
+    "id": "calculusbook/vector-calculus/sim-vc-stokes",
+    "bookId": "calculusbook",
+    "title": "비누막을 부풀려도 회전의 플럭스는 그대로",
+    "link": "chapters/vector-calculus.html#sim-vc-stokes"
+  },
+  {
+    "id": "odebook/autonomous/sim-au-picard",
+    "bookId": "odebook",
+    "title": "피카르 반복: y n 이 한 겹씩 해에 붙는다",
+    "link": "chapters/autonomous.html#sim-au-picard"
+  },
+  {
+    "id": "odebook/autonomous/sim-au-nonunique",
+    "bookId": "odebook",
+    "title": "같은 초기값, 다른 미래: y′ = √y의 해 다발",
+    "link": "chapters/autonomous.html#sim-au-nonunique"
+  },
+  {
+    "id": "odebook/autonomous/sim-au-bucket",
+    "bookId": "odebook",
+    "title": "물 새는 양동이: 비고 나면 과거를 모른다",
+    "link": "chapters/autonomous.html#sim-au-bucket"
+  },
+  {
+    "id": "odebook/autonomous/sim-au-blowup",
+    "bookId": "odebook",
+    "title": "폭발 시각 T*는 초기값에 어떻게 달려 있나",
+    "link": "chapters/autonomous.html#sim-au-blowup"
+  },
+  {
+    "id": "odebook/autonomous/sim-au-phaseline",
+    "bookId": "odebook",
+    "title": "위상선과 해곡선 동기화: f(y)의 부호가 운명을 정한다",
+    "link": "chapters/autonomous.html#sim-au-phaseline"
+  },
+  {
+    "id": "odebook/autonomous/sim-au-harvest",
+    "bookId": "odebook",
+    "title": "어획량 h를 올리면: 위상선 · 분기도 · 개체 수",
+    "link": "chapters/autonomous.html#sim-au-harvest"
+  },
+  {
+    "id": "odebook/autonomous/sim-au-switch",
+    "bookId": "odebook",
+    "title": "쌍안정 스위치: 펄스로 켜고 끄기",
+    "link": "chapters/autonomous.html#sim-au-switch"
+  },
+  {
+    "id": "odebook/boundary/sim-bv-shoot",
+    "bookId": "odebook",
+    "title": "슈팅 방법: 처음 기울기를 골라 목표에 맞히기",
+    "link": "chapters/boundary.html#sim-bv-shoot"
+  },
+  {
+    "id": "odebook/boundary/sim-bv-eigen",
+    "bookId": "odebook",
+    "title": "λ를 쓸어 고유값 찾기: 오른쪽 끝이 맞는 순간",
+    "link": "chapters/boundary.html#sim-bv-eigen"
+  },
+  {
+    "id": "odebook/boundary/sim-bv-buckle",
+    "bookId": "odebook",
+    "title": "기둥 누르기: 하중이 고유값에 닿을 때",
+    "link": "chapters/boundary.html#sim-bv-buckle"
+  },
+  {
+    "id": "odebook/boundary/sim-bv-orth",
+    "bookId": "odebook",
+    "title": "두 고유함수의 곱을 적분하면 0",
+    "link": "chapters/boundary.html#sim-bv-orth"
+  },
+  {
+    "id": "odebook/boundary/sim-bv-fourier",
+    "bookId": "odebook",
+    "title": "항을 하나씩 더하기: 확장을 고르면 급수가 바뀐다",
+    "link": "chapters/boundary.html#sim-bv-fourier"
+  },
+  {
+    "id": "odebook/boundary/sim-bv-gibbs",
+    "bookId": "odebook",
+    "title": "기브스의 귀: 항을 늘려도 줄지 않는 넘침",
+    "link": "chapters/boundary.html#sim-bv-gibbs"
+  },
+  {
+    "id": "odebook/boundary/sim-bv-spectrum",
+    "bookId": "odebook",
+    "title": "계수 막대와 누적 에너지",
+    "link": "chapters/boundary.html#sim-bv-spectrum"
+  },
+  {
+    "id": "odebook/boundary/sim-bv-forced",
+    "bookId": "odebook",
+    "title": "하중을 모드로 나누어 풀기: μ가 고유값에 다가가면",
+    "link": "chapters/boundary.html#sim-bv-forced"
+  },
+  {
+    "id": "odebook/chaos/sim-cs-bifurcation",
+    "bookId": "odebook",
+    "title": "분기도와 위상선: r을 끌어 평형점 만들고 없애기",
+    "link": "chapters/chaos.html#sim-cs-bifurcation"
+  },
+  {
+    "id": "odebook/chaos/sim-cs-hysteresis",
+    "bookId": "odebook",
+    "title": "이력 고리: 기울어지는 이중 우물과 도약",
+    "link": "chapters/chaos.html#sim-cs-hysteresis"
+  },
+  {
+    "id": "odebook/chaos/sim-cs-hopf",
+    "bookId": "odebook",
+    "title": "호프 분기: 고유값이 허수축을 건너면 나선이 순환이 된다",
+    "link": "chapters/chaos.html#sim-cs-hopf"
+  },
+  {
+    "id": "odebook/chaos/sim-cs-poincare",
+    "bookId": "odebook",
+    "title": "푸앵카레 사상: 한 바퀴마다 한 점, 거미줄로 읽는 안정성",
+    "link": "chapters/chaos.html#sim-cs-poincare"
+  },
+  {
+    "id": "odebook/chaos/sim-cs-duffing",
+    "bookId": "odebook",
+    "title": "더핑 진동자: 위상 궤적과 스트로보 단면",
+    "link": "chapters/chaos.html#sim-cs-duffing"
+  },
+  {
+    "id": "odebook/chaos/sim-cs-lorenz",
+    "bookId": "odebook",
+    "title": "로렌즈 끌개: 끌어서 돌리고, 두 궤적이 갈라지는 것 보기",
+    "link": "chapters/chaos.html#sim-cs-lorenz"
+  },
+  {
+    "id": "odebook/chaos/sim-cs-lyapunov",
+    "bookId": "odebook",
+    "title": "오차의 지수 성장: ln|δ(t)|의 기울기와 예측 가능 시간",
+    "link": "chapters/chaos.html#sim-cs-lyapunov"
+  },
+  {
+    "id": "odebook/chaos/sim-cs-logistic",
+    "bookId": "odebook",
+    "title": "로지스틱 사상: 분기도 확대와 거미줄 그림",
+    "link": "chapters/chaos.html#sim-cs-logistic"
+  },
+  {
+    "id": "odebook/forced/sim-fo-drive",
+    "bookId": "odebook",
+    "title": "강제 진동: 구동 진동수 ω를 바꾸면",
+    "link": "chapters/forced.html#sim-fo-drive"
+  },
+  {
+    "id": "odebook/forced/sim-fo-guess",
+    "bookId": "odebook",
+    "title": "미정계수 꼴 고르기",
+    "link": "chapters/forced.html#sim-fo-guess"
+  },
+  {
+    "id": "odebook/forced/sim-fo-varpar",
+    "bookId": "odebook",
+    "title": "움직이는 계수: u₁(t), u₂(t)와 얼린 동차해",
+    "link": "chapters/forced.html#sim-fo-varpar"
+  },
+  {
+    "id": "odebook/forced/sim-fo-beats",
+    "bookId": "odebook",
+    "title": "맥놀이: 두 진동수가 가까울수록 느리고 크게",
+    "link": "chapters/forced.html#sim-fo-beats"
+  },
+  {
+    "id": "odebook/forced/sim-fo-growth",
+    "bookId": "odebook",
+    "title": "공진 성장: 직선으로 자라거나, 포화하거나",
+    "link": "chapters/forced.html#sim-fo-growth"
+  },
+  {
+    "id": "odebook/forced/sim-fo-response",
+    "bookId": "odebook",
+    "title": "주파수 응답: 진폭비 M(r)과 위상 φ(r)",
+    "link": "chapters/forced.html#sim-fo-response"
+  },
+  {
+    "id": "odebook/forced/sim-fo-isolation",
+    "bookId": "odebook",
+    "title": "진동 절연: 받침대가 힘을 줄이는 조건 r > √2",
+    "link": "chapters/forced.html#sim-fo-isolation"
+  },
+  {
+    "id": "odebook/glossary/sim-gl-chooser",
+    "bookId": "odebook",
+    "title": "이 방정식, 어떻게 풀까?",
+    "link": "chapters/glossary.html#sim-gl-chooser"
+  },
+  {
+    "id": "odebook/glossary/sim-gl-trdet",
+    "bookId": "odebook",
+    "title": "점을 끌어 평형점 분류하기",
+    "link": "chapters/glossary.html#sim-gl-trdet"
+  },
+  {
+    "id": "odebook/laplace/sim-lp-area",
+    "bookId": "odebook",
+    "title": "e −st f(t) 아래 넓이로 F(s) 그리기",
+    "link": "chapters/laplace.html#sim-lp-area"
+  },
+  {
+    "id": "odebook/laplace/sim-lp-pairs",
+    "bookId": "odebook",
+    "title": "변환 쌍 탐색기: f(t) ↔ F(s)와 극점",
+    "link": "chapters/laplace.html#sim-lp-pairs"
+  },
+  {
+    "id": "odebook/laplace/sim-lp-shift",
+    "bookId": "odebook",
+    "title": "s-이동 = 감쇠 곱하기: e at 을 곱하면 극점이 a만큼",
+    "link": "chapters/laplace.html#sim-lp-shift"
+  },
+  {
+    "id": "odebook/laplace/sim-lp-pf",
+    "bookId": "odebook",
+    "title": "부분 분수 분해기: 극점을 끌어 F(s)를 만들고 역변환",
+    "link": "chapters/laplace.html#sim-lp-pf"
+  },
+  {
+    "id": "odebook/laplace/sim-lp-ivp",
+    "bookId": "odebook",
+    "title": "IVP 세 단계: 변환 → 대수 → 역변환",
+    "link": "chapters/laplace.html#sim-lp-ivp"
+  },
+  {
+    "id": "odebook/laplace/sim-lp-tanks",
+    "bookId": "odebook",
+    "title": "연결된 두 탱크: 크라메르 공식으로 푼 수위",
+    "link": "chapters/laplace.html#sim-lp-tanks"
+  },
+  {
+    "id": "odebook/laplace/sim-lp-fvt",
+    "bookId": "odebook",
+    "title": "최종값 정리 확인: s → 0은 먼 미래, s → ∞는 첫 순간",
+    "link": "chapters/laplace.html#sim-lp-fvt"
+  },
+  {
+    "id": "odebook/linear-first/sim-lf-factor",
+    "bookId": "odebook",
+    "title": "μ를 곱하면 적분만 남는다: (μy)′ = μg",
+    "link": "chapters/linear-first.html#sim-lf-factor"
+  },
+  {
+    "id": "odebook/linear-first/sim-lf-rc",
+    "bookId": "odebook",
+    "title": "RC 회로 충전·방전: 회로와 그래프 동기화",
+    "link": "chapters/linear-first.html#sim-lf-rc"
+  },
+  {
+    "id": "odebook/linear-first/sim-lf-tau",
+    "bookId": "odebook",
+    "title": "잡음 낀 측정에서 τ 맞히기",
+    "link": "chapters/linear-first.html#sim-lf-tau"
+  },
+  {
+    "id": "odebook/linear-first/sim-lf-mixing",
+    "bookId": "odebook",
+    "title": "혼합 탱크: 유량·농도를 바꾸며 농도 곡선 보기",
+    "link": "chapters/linear-first.html#sim-lf-mixing"
+  },
+  {
+    "id": "odebook/linear-first/sim-lf-sine",
+    "bookId": "odebook",
+    "title": "사인 입력: 과도 응답이 사라지고 정상 상태가 남는다",
+    "link": "chapters/linear-first.html#sim-lf-sine"
+  },
+  {
+    "id": "odebook/linear-first/sim-lf-structure",
+    "bookId": "odebook",
+    "title": "방향장 위에 해 놓기: 모든 해는 y p + Ce −∫p",
+    "link": "chapters/linear-first.html#sim-lf-structure"
+  },
+  {
+    "id": "odebook/linear-first/sim-lf-exact",
+    "bookId": "odebook",
+    "title": "퍼텐셜 지형도와 해곡선: 클릭한 점의 등고선 따라가기",
+    "link": "chapters/linear-first.html#sim-lf-exact"
+  },
+  {
+    "id": "odebook/linear-first/sim-lf-bernoulli",
+    "bookId": "odebook",
+    "title": "베르누이 치환: 구부러진 y가 v = y 1−n 에서는 지수 곡선",
+    "link": "chapters/linear-first.html#sim-lf-bernoulli"
+  },
+  {
+    "id": "odebook/modeling/sim-md-drag",
+    "bookId": "odebook",
+    "title": "스카이다이빙: 힘의 균형과 종단 속도",
+    "link": "chapters/modeling.html#sim-md-drag"
+  },
+  {
+    "id": "odebook/modeling/sim-md-family",
+    "bookId": "odebook",
+    "title": "해곡선 족과 매개변수 c: 한 점을 지나는 해 고르기",
+    "link": "chapters/modeling.html#sim-md-family"
+  },
+  {
+    "id": "odebook/modeling/sim-md-check",
+    "bookId": "odebook",
+    "title": "대입 검산기: 좌변과 우변이 겹치는가",
+    "link": "chapters/modeling.html#sim-md-check"
+  },
+  {
+    "id": "odebook/modeling/sim-md-field",
+    "bookId": "odebook",
+    "title": "방향장 위에 초기값 놓기: 해곡선이 흐름을 따라간다",
+    "link": "chapters/modeling.html#sim-md-field"
+  },
+  {
+    "id": "odebook/modeling/sim-md-isocline",
+    "bookId": "odebook",
+    "title": "등경사선 f(t, y) = m: 같은 기울기끼리 모으기",
+    "link": "chapters/modeling.html#sim-md-isocline"
+  },
+  {
+    "id": "odebook/modeling/sim-md-euler",
+    "bookId": "odebook",
+    "title": "오일러 걸음: h를 바꾸면 꺾은선이 해에 붙는다",
+    "link": "chapters/modeling.html#sim-md-euler"
+  },
+  {
+    "id": "odebook/modeling/sim-md-fit",
+    "bookId": "odebook",
+    "title": "모델 맞추기: 데이터에 k를 맞추고 예측을 검증하기",
+    "link": "chapters/modeling.html#sim-md-fit"
+  },
+  {
+    "id": "odebook/nonlinear/sim-nl-linearize",
+    "bookId": "odebook",
+    "title": "선형화 확대경: 평형점 근처를 키워 보기",
+    "link": "chapters/nonlinear.html#sim-nl-linearize"
+  },
+  {
+    "id": "odebook/nonlinear/sim-nl-pendulum",
+    "bookId": "odebook",
+    "title": "진자의 위상 평면",
+    "link": "chapters/nonlinear.html#sim-nl-pendulum"
+  },
+  {
+    "id": "odebook/nonlinear/sim-nl-lv",
+    "bookId": "odebook",
+    "title": "포식자–피식자 궤도와 볼테라 원리",
+    "link": "chapters/nonlinear.html#sim-nl-lv"
+  },
+  {
+    "id": "odebook/nonlinear/sim-nl-compete",
+    "bookId": "odebook",
+    "title": "경쟁 모델: 널클라인과 운명",
+    "link": "chapters/nonlinear.html#sim-nl-compete"
+  },
+  {
+    "id": "odebook/nonlinear/sim-nl-lyapunov",
+    "bookId": "odebook",
+    "title": "리아푸노프 함수: 등위선을 가로지르는 궤적",
+    "link": "chapters/nonlinear.html#sim-nl-lyapunov"
+  },
+  {
+    "id": "odebook/nonlinear/sim-nl-vdp",
+    "bookId": "odebook",
+    "title": "반 데어 폴: 어디서 출발해도 같은 고리로",
+    "link": "chapters/nonlinear.html#sim-nl-vdp"
+  },
+  {
+    "id": "odebook/nonlinear/sim-nl-sir",
+    "bookId": "odebook",
+    "title": "SIR: 정점의 시기와 높이",
+    "link": "chapters/nonlinear.html#sim-nl-sir"
+  },
+  {
+    "id": "odebook/numerical/sim-nu-euler-error",
+    "bookId": "odebook",
+    "title": "오일러 걸음: 국소 오차가 전역 오차로 쌓이는 과정",
+    "link": "chapters/numerical.html#sim-nu-euler-error"
+  },
+  {
+    "id": "odebook/numerical/sim-nu-loglog",
+    "bookId": "odebook",
+    "title": "오차–간격 로그–로그 그래프: 기울기가 차수다",
+    "link": "chapters/numerical.html#sim-nu-loglog"
+  },
+  {
+    "id": "odebook/numerical/sim-nu-compare",
+    "bookId": "odebook",
+    "title": "세 방법 나란히: 오일러 · 호인 · 중점법 (+ RK4)",
+    "link": "chapters/numerical.html#sim-nu-compare"
+  },
+  {
+    "id": "odebook/numerical/sim-nu-rk4",
+    "bookId": "odebook",
+    "title": "RK4 한 걸음 해부: 기울기 네 개 k₁ … k₄",
+    "link": "chapters/numerical.html#sim-nu-rk4"
+  },
+  {
+    "id": "odebook/numerical/sim-nu-adaptive",
+    "bookId": "odebook",
+    "title": "적응 간격 점 찍기: 혜성 궤도의 도르만드–프린스 RK45",
+    "link": "chapters/numerical.html#sim-nu-adaptive"
+  },
+  {
+    "id": "odebook/numerical/sim-nu-stability",
+    "bookId": "odebook",
+    "title": "안정성 영역 지도: z = hλ를 끌어 보기",
+    "link": "chapters/numerical.html#sim-nu-stability"
+  },
+  {
+    "id": "odebook/numerical/sim-nu-stiff",
+    "bookId": "odebook",
+    "title": "강성 방정식: 명시적 오일러의 폭발 vs 음적 오일러",
+    "link": "chapters/numerical.html#sim-nu-stiff"
+  },
+  {
+    "id": "odebook/numerical/sim-nu-orbit",
+    "bookId": "odebook",
+    "title": "행성 궤도의 에너지 표류: 오일러 vs 심플렉틱 오일러 vs RK4",
+    "link": "chapters/numerical.html#sim-nu-orbit"
+  },
+  {
+    "id": "odebook/oscillations/sim-os-spring",
+    "bookId": "odebook",
+    "title": "용수철–질량–감쇠기: 끌어 놓으면 x(t)가 그려진다",
+    "link": "chapters/oscillations.html#sim-os-spring"
+  },
+  {
+    "id": "odebook/oscillations/sim-os-phasor",
+    "bookId": "odebook",
+    "title": "회전하는 막대의 그림자: 진폭과 위상 끌어 정하기",
+    "link": "chapters/oscillations.html#sim-os-phasor"
+  },
+  {
+    "id": "odebook/oscillations/sim-os-regimes",
+    "bookId": "odebook",
+    "title": "c를 키우면 특성근이 움직인다: 세 영역 지도",
+    "link": "chapters/oscillations.html#sim-os-regimes"
+  },
+  {
+    "id": "odebook/oscillations/sim-os-measure",
+    "bookId": "odebook",
+    "title": "측정 데이터에서 ζ 읽기: 봉우리 두 개 고르기",
+    "link": "chapters/oscillations.html#sim-os-measure"
+  },
+  {
+    "id": "odebook/oscillations/sim-os-phase",
+    "bookId": "odebook",
+    "title": "위상 평면 궤적과 에너지 막대",
+    "link": "chapters/oscillations.html#sim-os-phase"
+  },
+  {
+    "id": "odebook/oscillations/sim-os-pendulum",
+    "bookId": "odebook",
+    "title": "진짜 진자 vs 작은 각 근사: 진폭이 크면 주기가 길어진다",
+    "link": "chapters/oscillations.html#sim-os-pendulum"
+  },
+  {
+    "id": "odebook/oscillations/sim-os-rlc",
+    "bookId": "odebook",
+    "title": "RLC 방전 ↔ 기계 진동 상사표",
+    "link": "chapters/oscillations.html#sim-os-rlc"
+  },
+  {
+    "id": "odebook/oscillations/sim-os-design",
+    "bookId": "odebook",
+    "title": "정착 시간이 가장 짧은 ζ 찾기",
+    "link": "chapters/oscillations.html#sim-os-design"
+  },
+  {
+    "id": "odebook/pde/sim-pe-heat",
+    "bookId": "odebook",
+    "title": "막대 온도의 시공간 지도",
+    "link": "chapters/pde.html#sim-pe-heat"
+  },
+  {
+    "id": "odebook/pde/sim-pe-modes",
+    "bookId": "odebook",
+    "title": "모드 계수의 경주: e −n²π²τ",
+    "link": "chapters/pde.html#sim-pe-modes"
+  },
+  {
+    "id": "odebook/pde/sim-pe-pluck",
+    "bookId": "odebook",
+    "title": "줄 뜯기: 튕기는 위치가 배음을 정한다",
+    "link": "chapters/pde.html#sim-pe-pluck"
+  },
+  {
+    "id": "odebook/pde/sim-pe-dalembert",
+    "bookId": "odebook",
+    "title": "두 파의 행진과 끝에서의 반사",
+    "link": "chapters/pde.html#sim-pe-dalembert"
+  },
+  {
+    "id": "odebook/pde/sim-pe-laplace",
+    "bookId": "odebook",
+    "title": "판의 정상 상태 온도: 이웃 평균을 되풀이하기",
+    "link": "chapters/pde.html#sim-pe-laplace"
+  },
+  {
+    "id": "odebook/pde/sim-pe-ftcs",
+    "bookId": "odebook",
+    "title": "FTCS: r을 1/2 위로 올리면",
+    "link": "chapters/pde.html#sim-pe-ftcs"
+  },
+  {
+    "id": "odebook/pde/sim-pe-cfl",
+    "bookId": "odebook",
+    "title": "CFL: 수치 원뿔이 특성선을 품어야 한다",
+    "link": "chapters/pde.html#sim-pe-cfl"
+  },
+  {
+    "id": "odebook/pde/sim-pe-dopant",
+    "bookId": "odebook",
+    "title": "도펀트 확산과 p–n 접합 깊이",
+    "link": "chapters/pde.html#sim-pe-dopant"
+  },
+  {
+    "id": "odebook/second-order/sim-so-initial",
+    "bookId": "odebook",
+    "title": "초기 조건 두 개: 점과 기울기를 끌어 해 정하기",
+    "link": "chapters/second-order.html#sim-so-initial"
+  },
+  {
+    "id": "odebook/second-order/sim-so-superpose",
+    "bookId": "odebook",
+    "title": "중첩 슬라이더: c₁y₁ + c₂y₂는 정말 해인가",
+    "link": "chapters/second-order.html#sim-so-superpose"
+  },
+  {
+    "id": "odebook/second-order/sim-so-wronskian",
+    "bookId": "odebook",
+    "title": "론스키안 판정: 상태 벡터의 넓이와 아벨 정리",
+    "link": "chapters/second-order.html#sim-so-wronskian"
+  },
+  {
+    "id": "odebook/second-order/sim-so-roots",
+    "bookId": "odebook",
+    "title": "특성근을 끌면 해 모양이 바뀐다",
+    "link": "chapters/second-order.html#sim-so-roots"
+  },
+  {
+    "id": "odebook/second-order/sim-so-double",
+    "bookId": "odebook",
+    "title": "두 근이 합쳐질 때: 차분 몫이 te rt 로",
+    "link": "chapters/second-order.html#sim-so-double"
+  },
+  {
+    "id": "odebook/second-order/sim-so-locus",
+    "bookId": "odebook",
+    "title": "근 경로: 감쇠 b를 키우면 근이 원을 돌아 실수축에서 갈라진다",
+    "link": "chapters/second-order.html#sim-so-locus"
+  },
+  {
+    "id": "odebook/second-order/sim-so-euler-eq",
+    "bookId": "odebook",
+    "title": "코시–오일러 방정식: 로그 눈금에서는 상수계수다",
+    "link": "chapters/second-order.html#sim-so-euler-eq"
+  },
+  {
+    "id": "odebook/separable/sim-sp-halflife",
+    "bookId": "odebook",
+    "title": "원자 하나하나의 붕괴 vs 지수 곡선",
+    "link": "chapters/separable.html#sim-sp-halflife"
+  },
+  {
+    "id": "odebook/separable/sim-sp-coffee",
+    "bookId": "odebook",
+    "title": "뉴턴 냉각: 커피 식히기와 거꾸로 계산하기",
+    "link": "chapters/separable.html#sim-sp-coffee"
+  },
+  {
+    "id": "odebook/separable/sim-sp-logistic",
+    "bookId": "odebook",
+    "title": "로지스틱 성장: r과 K가 S자 곡선을 빚는다",
+    "link": "chapters/separable.html#sim-sp-logistic"
+  },
+  {
+    "id": "odebook/separable/sim-sp-tank",
+    "bookId": "odebook",
+    "title": "탱크 비우기: 수위가 내려가는 빠르기",
+    "link": "chapters/separable.html#sim-sp-tank"
+  },
+  {
+    "id": "odebook/separable/sim-sp-interval",
+    "bookId": "odebook",
+    "title": "해의 정의 구간: 공식은 이어져도 해는 끊긴다",
+    "link": "chapters/separable.html#sim-sp-interval"
+  },
+  {
+    "id": "odebook/separable/sim-sp-orthogonal",
+    "bookId": "odebook",
+    "title": "직교 궤적 족: 어디서나 직각으로 만나는 두 곡선 족",
+    "link": "chapters/separable.html#sim-sp-orthogonal"
+  },
+  {
+    "id": "odebook/separable/sim-sp-homog",
+    "bookId": "odebook",
+    "title": "동차형: 원점을 지나는 직선 위에서 기울기가 같다",
+    "link": "chapters/separable.html#sim-sp-homog"
+  },
+  {
+    "id": "odebook/series-solutions/sim-ss-partial",
+    "bookId": "odebook",
+    "title": "급수해의 부분합: 항을 늘리면 맞는 구간이 넓어진다",
+    "link": "chapters/series-solutions.html#sim-ss-partial"
+  },
+  {
+    "id": "odebook/series-solutions/sim-ss-recurrence",
+    "bookId": "odebook",
+    "title": "점화식 계수표: 급수가 끝나는 순간과 계수가 줄어드는 속도",
+    "link": "chapters/series-solutions.html#sim-ss-recurrence"
+  },
+  {
+    "id": "odebook/series-solutions/sim-ss-airy",
+    "bookId": "odebook",
+    "title": "에어리 함수: 왼쪽은 진동, 오른쪽은 지수",
+    "link": "chapters/series-solutions.html#sim-ss-airy"
+  },
+  {
+    "id": "odebook/series-solutions/sim-ss-radius",
+    "bookId": "odebook",
+    "title": "수렴 원: 전개 중심을 옮기면 반지름이 바뀐다",
+    "link": "chapters/series-solutions.html#sim-ss-radius"
+  },
+  {
+    "id": "odebook/series-solutions/sim-ss-frobenius",
+    "bookId": "odebook",
+    "title": "지표 방정식: 근의 종류가 특이점 근처 해의 모양을 정한다",
+    "link": "chapters/series-solutions.html#sim-ss-frobenius"
+  },
+  {
+    "id": "odebook/series-solutions/sim-ss-legendre",
+    "bookId": "odebook",
+    "title": "르장드르 다항식: 곱의 넓이로 보는 직교성",
+    "link": "chapters/series-solutions.html#sim-ss-legendre"
+  },
+  {
+    "id": "odebook/series-solutions/sim-ss-bessel",
+    "bookId": "odebook",
+    "title": "베셀 함수와 영점: 차수 ν를 바꿔 보기",
+    "link": "chapters/series-solutions.html#sim-ss-bessel"
+  },
+  {
+    "id": "odebook/series-solutions/sim-ss-drum",
+    "bookId": "odebook",
+    "title": "원형 북의 모드: J n 의 영점이 정하는 마디선과 진동수",
+    "link": "chapters/series-solutions.html#sim-ss-drum"
+  },
+  {
+    "id": "odebook/systems/sim-sy-phase",
+    "bookId": "odebook",
+    "title": "위상 평면과 고유벡터 직선",
+    "link": "chapters/systems.html#sim-sy-phase"
+  },
+  {
+    "id": "odebook/systems/sim-sy-modes",
+    "bookId": "odebook",
+    "title": "해를 고유 성분으로 쪼개 보기",
+    "link": "chapters/systems.html#sim-sy-modes"
+  },
+  {
+    "id": "odebook/systems/sim-sy-repeated",
+    "bookId": "odebook",
+    "title": "두 고유벡터가 하나로 합쳐질 때",
+    "link": "chapters/systems.html#sim-sy-repeated"
+  },
+  {
+    "id": "odebook/systems/sim-sy-trdet",
+    "bookId": "odebook",
+    "title": "행렬 성분 ↔ 대각합–행렬식 평면",
+    "link": "chapters/systems.html#sim-sy-trdet"
+  },
+  {
+    "id": "odebook/systems/sim-sy-expm",
+    "bookId": "odebook",
+    "title": "e At 급수: 몇 항이면 충분할까",
+    "link": "chapters/systems.html#sim-sy-expm"
+  },
+  {
+    "id": "odebook/systems/sim-sy-tanks",
+    "bookId": "odebook",
+    "title": "두 탱크의 소금 농도",
+    "link": "chapters/systems.html#sim-sy-tanks"
+  },
+  {
+    "id": "odebook/systems/sim-sy-coupled",
+    "bookId": "odebook",
+    "title": "결합 진자: 정규 모드와 에너지 주고받기",
+    "link": "chapters/systems.html#sim-sy-coupled"
+  },
+  {
+    "id": "odebook/transfer/sim-tf-switch",
+    "bookId": "odebook",
+    "title": "스위치 켜고 끄기: 늦춰진 계단 응답의 합",
+    "link": "chapters/transfer.html#sim-tf-switch"
+  },
+  {
+    "id": "odebook/transfer/sim-tf-impulse",
+    "bookId": "odebook",
+    "title": "충격의 크기와 폭: 좁은 펄스가 델타가 될 때",
+    "link": "chapters/transfer.html#sim-tf-impulse"
+  },
+  {
+    "id": "odebook/transfer/sim-tf-conv",
+    "bookId": "odebook",
+    "title": "합성곱 슬라이딩: h(t − τ)를 끌며 넓이 쌓기",
+    "link": "chapters/transfer.html#sim-tf-conv"
+  },
+  {
+    "id": "odebook/transfer/sim-tf-poles",
+    "bookId": "odebook",
+    "title": "s-평면 극점 끌기 ↔ 충격 응답",
+    "link": "chapters/transfer.html#sim-tf-poles"
+  },
+  {
+    "id": "odebook/transfer/sim-tf-bode",
+    "bookId": "odebook",
+    "title": "보드 선도: 이득·위상과 사인 입력의 정상 응답",
+    "link": "chapters/transfer.html#sim-tf-bode"
+  },
+  {
+    "id": "odebook/transfer/sim-tf-step2",
+    "bookId": "odebook",
+    "title": "2차 계단 응답: 오버슈트와 정착 시간",
+    "link": "chapters/transfer.html#sim-tf-step2"
+  },
+  {
+    "id": "odebook/transfer/sim-tf-pid",
+    "bookId": "odebook",
+    "title": "PID 맛보기: G(s) = 1/(s + 1)²의 계단 추종",
+    "link": "chapters/transfer.html#sim-tf-pid"
+  },
+  {
     "id": "probability-statistics/anova-doe/sim-flab",
     "bookId": "probability-statistics",
     "title": "F 검정 실험실",
@@ -37546,462 +41092,6 @@
     "bookId": "probability-statistics",
     "title": "분포·검정 고르기 도우미",
     "link": "chapters/tables.html#sim-pick"
-  },
-  {
-    "id": "fluid-mechanics/bernoulli/sim-pitot",
-    "bookId": "fluid-mechanics",
-    "title": "피토 정압관으로 비행 속도 재기",
-    "link": "chapters/bernoulli.html#sim-pitot"
-  },
-  {
-    "id": "fluid-mechanics/bernoulli/sim-venturi",
-    "bookId": "fluid-mechanics",
-    "title": "벤투리관: 목을 좁혀 보라",
-    "link": "chapters/bernoulli.html#sim-venturi"
-  },
-  {
-    "id": "fluid-mechanics/bernoulli/sim-drain",
-    "bookId": "fluid-mechanics",
-    "title": "탱크 배수: h–t 실시간 그래프",
-    "link": "chapters/bernoulli.html#sim-drain"
-  },
-  {
-    "id": "fluid-mechanics/bernoulli/sim-siphon",
-    "bookId": "fluid-mechanics",
-    "title": "사이펀: 벽을 넘겨 최대 유량을 뽑아라",
-    "link": "chapters/bernoulli.html#sim-siphon"
-  },
-  {
-    "id": "fluid-mechanics/bernoulli/sim-egl",
-    "bookId": "fluid-mechanics",
-    "title": "관로를 따라 EGL·HGL 그리기",
-    "link": "chapters/bernoulli.html#sim-egl"
-  },
-  {
-    "id": "fluid-mechanics/compressible-flow/sim-pulse",
-    "bookId": "fluid-mechanics",
-    "title": "관 속 압력파: 피스톤을 밀어 음파를 보내라",
-    "link": "chapters/compressible-flow.html#sim-pulse"
-  },
-  {
-    "id": "fluid-mechanics/compressible-flow/sim-mach",
-    "bookId": "fluid-mechanics",
-    "title": "슐리렌 사진 판독: 마하 각을 재서 탄환의 속도를 맞혀라",
-    "link": "chapters/compressible-flow.html#sim-mach"
-  },
-  {
-    "id": "fluid-mechanics/compressible-flow/sim-duct",
-    "bookId": "fluid-mechanics",
-    "title": "면적–속도 관계: 관 벽을 끌어 모양을 바꿔라",
-    "link": "chapters/compressible-flow.html#sim-duct"
-  },
-  {
-    "id": "fluid-mechanics/compressible-flow/sim-conv",
-    "bookId": "fluid-mechanics",
-    "title": "수축 노즐: 배압을 끌어 내려 초크시켜라",
-    "link": "chapters/compressible-flow.html#sim-conv"
-  },
-  {
-    "id": "fluid-mechanics/compressible-flow/sim-nozzle",
-    "bookId": "fluid-mechanics",
-    "title": "라발 노즐 시뮬레이터: 배압으로 충격파를 과녁에 세워라",
-    "link": "chapters/compressible-flow.html#sim-nozzle"
-  },
-  {
-    "id": "fluid-mechanics/compressible-flow/sim-shock",
-    "bookId": "fluid-mechanics",
-    "title": "수직 충격파 계산기: 상류 속도 화살표를 끌어라",
-    "link": "chapters/compressible-flow.html#sim-shock"
-  },
-  {
-    "id": "fluid-mechanics/compressible-flow/sim-wedge",
-    "bookId": "fluid-mechanics",
-    "title": "쐐기와 코너: 경사 충격파와 팽창 부채",
-    "link": "chapters/compressible-flow.html#sim-wedge"
-  },
-  {
-    "id": "fluid-mechanics/control-volume/sim-tank",
-    "bookId": "fluid-mechanics",
-    "title": "탱크 질량 수지: 목표 수위를 지켜라",
-    "link": "chapters/control-volume.html#sim-tank"
-  },
-  {
-    "id": "fluid-mechanics/control-volume/sim-vane",
-    "bookId": "fluid-mechanics",
-    "title": "날개 시뮬레이터: 목표 힘을 맞혀라",
-    "link": "chapters/control-volume.html#sim-vane"
-  },
-  {
-    "id": "fluid-mechanics/control-volume/sim-elbow",
-    "bookId": "fluid-mechanics",
-    "title": "엘보와 축소 노즐을 붙잡는 힘",
-    "link": "chapters/control-volume.html#sim-elbow"
-  },
-  {
-    "id": "fluid-mechanics/control-volume/sim-sprinkler",
-    "bookId": "fluid-mechanics",
-    "title": "회전 스프링클러: 목표 회전수를 맞혀라",
-    "link": "chapters/control-volume.html#sim-sprinkler"
-  },
-  {
-    "id": "fluid-mechanics/control-volume/sim-pipe",
-    "bookId": "fluid-mechanics",
-    "title": "펌프·터빈이 있는 관로의 수두 막대",
-    "link": "chapters/control-volume.html#sim-pipe"
-  },
-  {
-    "id": "fluid-mechanics/differential-analysis/sim-div",
-    "bookId": "fluid-mechanics",
-    "title": "검사 체적 상자: 면 유량과 유체 덩어리의 넓이",
-    "link": "chapters/differential-analysis.html#sim-div"
-  },
-  {
-    "id": "fluid-mechanics/differential-analysis/sim-start",
-    "bookId": "fluid-mechanics",
-    "title": "출발 유동: 점성이 운동량을 퍼뜨리는 시간",
-    "link": "chapters/differential-analysis.html#sim-start"
-  },
-  {
-    "id": "fluid-mechanics/differential-analysis/sim-cp",
-    "bookId": "fluid-mechanics",
-    "title": "쿠에트–푸아죄유 유동: 판을 끌고 압력을 올려라",
-    "link": "chapters/differential-analysis.html#sim-cp"
-  },
-  {
-    "id": "fluid-mechanics/differential-analysis/sim-super",
-    "bookId": "fluid-mechanics",
-    "title": "중첩 빌더: 요소를 놓아 목표 모양을 만들어라",
-    "link": "chapters/differential-analysis.html#sim-super"
-  },
-  {
-    "id": "fluid-mechanics/differential-analysis/sim-cyl",
-    "bookId": "fluid-mechanics",
-    "title": "회전하는 원주: 순환, 정체점, 표면 압력, 양력",
-    "link": "chapters/differential-analysis.html#sim-cyl"
-  },
-  {
-    "id": "fluid-mechanics/dimensional-analysis/sim-fall",
-    "bookId": "fluid-mechanics",
-    "title": "던지기의 무차원화: 서로 다른 던지기로 같은 곡선 만들기",
-    "link": "chapters/dimensional-analysis.html#sim-fall"
-  },
-  {
-    "id": "fluid-mechanics/dimensional-analysis/sim-pi",
-    "bookId": "fluid-mechanics",
-    "title": "Π 정리 빌더: 변수를 고르면 Π 그룹이 만들어진다",
-    "link": "chapters/dimensional-analysis.html#sim-pi"
-  },
-  {
-    "id": "fluid-mechanics/dimensional-analysis/sim-wave",
-    "bookId": "fluid-mechanics",
-    "title": "수면파 수조: 바닥과 파장을 끌어 보라",
-    "link": "chapters/dimensional-analysis.html#sim-wave"
-  },
-  {
-    "id": "fluid-mechanics/dimensional-analysis/sim-model",
-    "bookId": "fluid-mechanics",
-    "title": "모형 실험 설계기: 시설 한계 안에서 Re를 맞춰라",
-    "link": "chapters/dimensional-analysis.html#sim-model"
-  },
-  {
-    "id": "fluid-mechanics/dimensional-analysis/sim-ship",
-    "bookId": "fluid-mechanics",
-    "title": "예인 수조: 모형 배의 파형을 원형과 똑같이",
-    "link": "chapters/dimensional-analysis.html#sim-ship"
-  },
-  {
-    "id": "fluid-mechanics/dimensional-analysis/sim-collapse",
-    "bookId": "fluid-mechanics",
-    "title": "데이터 정리기: 올바른 무차원 묶음을 찾아 곡선을 붕괴시켜라",
-    "link": "chapters/dimensional-analysis.html#sim-collapse"
-  },
-  {
-    "id": "fluid-mechanics/external-flow/sim-bl",
-    "bookId": "fluid-mechanics",
-    "title": "경계층 탐침: 평판 위 어디서든 속도 분포를 재라",
-    "link": "chapters/external-flow.html#sim-bl"
-  },
-  {
-    "id": "fluid-mechanics/external-flow/sim-sep",
-    "bookId": "fluid-mechanics",
-    "title": "원주 주위 박리: 표면 압력을 탐침으로 재라",
-    "link": "chapters/external-flow.html#sim-sep"
-  },
-  {
-    "id": "fluid-mechanics/external-flow/sim-cdre",
-    "bookId": "fluid-mechanics",
-    "title": "C D –Re 곡선 탐험: 점을 끌어 레이놀즈 수를 바꿔라",
-    "link": "chapters/external-flow.html#sim-cdre"
-  },
-  {
-    "id": "fluid-mechanics/external-flow/sim-sphere",
-    "bookId": "fluid-mechanics",
-    "title": "떨어지는 구: 종단 속도와 C D –Re 위의 점",
-    "link": "chapters/external-flow.html#sim-sphere"
-  },
-  {
-    "id": "fluid-mechanics/external-flow/sim-chute",
-    "bookId": "fluid-mechanics",
-    "title": "도전: 낙하산을 설계해 5 m/s 이하로 착지하라",
-    "link": "chapters/external-flow.html#sim-chute"
-  },
-  {
-    "id": "fluid-mechanics/external-flow/sim-airfoil",
-    "bookId": "fluid-mechanics",
-    "title": "에어포일 풍동: 받음각을 끌어 실속을 찾아라",
-    "link": "chapters/external-flow.html#sim-airfoil"
-  },
-  {
-    "id": "fluid-mechanics/external-flow/sim-takeoff",
-    "bookId": "fluid-mechanics",
-    "title": "도전: 짧은 활주로에서 이륙하라",
-    "link": "chapters/external-flow.html#sim-takeoff"
-  },
-  {
-    "id": "fluid-mechanics/fluid-kinematics/sim-le",
-    "bookId": "fluid-mechanics",
-    "title": "입자 따라가기(라그랑주) vs 고정 탐침(오일러)",
-    "link": "chapters/fluid-kinematics.html#sim-le"
-  },
-  {
-    "id": "fluid-mechanics/fluid-kinematics/sim-noz",
-    "bookId": "fluid-mechanics",
-    "title": "수축 노즐: 국소 가속도와 대류 가속도의 분해",
-    "link": "chapters/fluid-kinematics.html#sim-noz"
-  },
-  {
-    "id": "fluid-mechanics/fluid-kinematics/sim-lines",
-    "bookId": "fluid-mechanics",
-    "title": "유선·유적선·유맥선 동시에 그리기",
-    "link": "chapters/fluid-kinematics.html#sim-lines"
-  },
-  {
-    "id": "fluid-mechanics/fluid-kinematics/sim-elem",
-    "bookId": "fluid-mechanics",
-    "title": "유체 요소 띄우기: 회전하는가, 변형하는가?",
-    "link": "chapters/fluid-kinematics.html#sim-elem"
-  },
-  {
-    "id": "fluid-mechanics/fluid-kinematics/sim-circ",
-    "bookId": "fluid-mechanics",
-    "title": "순환 재기: 폐곡선을 끌어 Γ = ∮V·ds 구하기",
-    "link": "chapters/fluid-kinematics.html#sim-circ"
-  },
-  {
-    "id": "fluid-mechanics/fluid-kinematics/sim-rtt",
-    "bookId": "fluid-mechanics",
-    "title": "움직이는 계 vs 고정된 검사 체적",
-    "link": "chapters/fluid-kinematics.html#sim-rtt"
-  },
-  {
-    "id": "fluid-mechanics/fluid-properties/sim-couette",
-    "bookId": "fluid-mechanics",
-    "title": "평판 사이 유체: 목표 전단 응력을 만들어라",
-    "link": "chapters/fluid-properties.html#sim-couette"
-  },
-  {
-    "id": "fluid-mechanics/fluid-properties/sim-journal",
-    "bookId": "fluid-mechanics",
-    "title": "저널 베어링의 점성 토크",
-    "link": "chapters/fluid-properties.html#sim-journal"
-  },
-  {
-    "id": "fluid-mechanics/fluid-properties/sim-rheo",
-    "bookId": "fluid-mechanics",
-    "title": "유변 측정기: 미지 시료의 정체를 밝혀라",
-    "link": "chapters/fluid-properties.html#sim-rheo"
-  },
-  {
-    "id": "fluid-mechanics/fluid-properties/sim-piston",
-    "bookId": "fluid-mechanics",
-    "title": "피스톤으로 눌러 보는 체적 탄성 계수",
-    "link": "chapters/fluid-properties.html#sim-piston"
-  },
-  {
-    "id": "fluid-mechanics/fluid-properties/sim-cap",
-    "bookId": "fluid-mechanics",
-    "title": "모세관: 관 지름을 맞혀 목표 높이에 세워라",
-    "link": "chapters/fluid-properties.html#sim-cap"
-  },
-  {
-    "id": "fluid-mechanics/fluid-properties/sim-cavit",
-    "bookId": "fluid-mechanics",
-    "title": "펌프 흡입부의 공동 현상",
-    "link": "chapters/fluid-properties.html#sim-cavit"
-  },
-  {
-    "id": "fluid-mechanics/fluid-statics/sim-paradox",
-    "bookId": "fluid-mechanics",
-    "title": "정수압 역설: 모양이 다른 세 용기",
-    "link": "chapters/fluid-statics.html#sim-paradox"
-  },
-  {
-    "id": "fluid-mechanics/fluid-statics/sim-mano",
-    "bookId": "fluid-mechanics",
-    "title": "U자관 차압 마노미터",
-    "link": "chapters/fluid-statics.html#sim-mano"
-  },
-  {
-    "id": "fluid-mechanics/fluid-statics/sim-gate",
-    "bookId": "fluid-mechanics",
-    "title": "경사 수문: 압력 분포, 압력 중심, 힌지 모멘트",
-    "link": "chapters/fluid-statics.html#sim-gate"
-  },
-  {
-    "id": "fluid-mechanics/fluid-statics/sim-curved",
-    "bookId": "fluid-mechanics",
-    "title": "1/4 원통 곡면 수문의 힘 성분",
-    "link": "chapters/fluid-statics.html#sim-curved"
-  },
-  {
-    "id": "fluid-mechanics/fluid-statics/sim-float",
-    "bookId": "fluid-mechanics",
-    "title": "부양체 상자의 안정성과 복원 팔 곡선",
-    "link": "chapters/fluid-statics.html#sim-float"
-  },
-  {
-    "id": "fluid-mechanics/fluid-statics/sim-accel",
-    "bookId": "fluid-mechanics",
-    "title": "가속하는 탱크: 기울어진 수면과 등압선",
-    "link": "chapters/fluid-statics.html#sim-accel"
-  },
-  {
-    "id": "fluid-mechanics/fluid-statics/sim-rot",
-    "bookId": "fluid-mechanics",
-    "title": "회전하는 원통: 포물면 수면 — 넘치기 직전을 맞혀라",
-    "link": "chapters/fluid-statics.html#sim-rot"
-  },
-  {
-    "id": "fluid-mechanics/open-channel/sim-wave",
-    "bookId": "fluid-mechanics",
-    "title": "흐르는 물에 돌 던지기 (위에서 본 수로)",
-    "link": "chapters/open-channel.html#sim-wave"
-  },
-  {
-    "id": "fluid-mechanics/open-channel/sim-energy",
-    "bookId": "fluid-mechanics",
-    "title": "비에너지 선도와 바닥 융기 (도전: 초크 직전까지)",
-    "link": "chapters/open-channel.html#sim-energy"
-  },
-  {
-    "id": "fluid-mechanics/open-channel/sim-manning",
-    "bookId": "fluid-mechanics",
-    "title": "매닝 수로 설계기 (도전: 목표 유량을 가장 작은 단면으로)",
-    "link": "chapters/open-channel.html#sim-manning"
-  },
-  {
-    "id": "fluid-mechanics/open-channel/sim-gvf",
-    "bookId": "fluid-mechanics",
-    "title": "수면 곡선 적분기 (M · S · H · A 곡선)",
-    "link": "chapters/open-channel.html#sim-gvf"
-  },
-  {
-    "id": "fluid-mechanics/open-channel/sim-jump",
-    "bookId": "fluid-mechanics",
-    "title": "수력 도약 계산기",
-    "link": "chapters/open-channel.html#sim-jump"
-  },
-  {
-    "id": "fluid-mechanics/open-channel/sim-gate",
-    "bookId": "fluid-mechanics",
-    "title": "수문 아래 흐름: 자유 유출과 잠긴 유출",
-    "link": "chapters/open-channel.html#sim-gate"
-  },
-  {
-    "id": "fluid-mechanics/pipe-flow/sim-entry",
-    "bookId": "fluid-mechanics",
-    "title": "입구 영역: 속도 분포가 자라는 모습",
-    "link": "chapters/pipe-flow.html#sim-entry"
-  },
-  {
-    "id": "fluid-mechanics/pipe-flow/sim-profile",
-    "bookId": "fluid-mechanics",
-    "title": "층류 포물선 vs 난류 멱법칙 (같은 평균 속도)",
-    "link": "chapters/pipe-flow.html#sim-profile"
-  },
-  {
-    "id": "fluid-mechanics/pipe-flow/sim-moody",
-    "bookId": "fluid-mechanics",
-    "title": "인터랙티브 무디 선도",
-    "link": "chapters/pipe-flow.html#sim-moody"
-  },
-  {
-    "id": "fluid-mechanics/pipe-flow/sim-tanks",
-    "bookId": "fluid-mechanics",
-    "title": "두 탱크 사이 관로 계산기 + 도전: 최소 지름 고르기",
-    "link": "chapters/pipe-flow.html#sim-tanks"
-  },
-  {
-    "id": "fluid-mechanics/pipe-flow/sim-parallel",
-    "bookId": "fluid-mechanics",
-    "title": "병렬 관로의 유량 분배",
-    "link": "chapters/pipe-flow.html#sim-parallel"
-  },
-  {
-    "id": "fluid-mechanics/property-tables/sim-water",
-    "bookId": "fluid-mechanics",
-    "title": "물의 물성 계산기",
-    "link": "chapters/property-tables.html#sim-water"
-  },
-  {
-    "id": "fluid-mechanics/property-tables/sim-air",
-    "bookId": "fluid-mechanics",
-    "title": "공기의 물성 계산기",
-    "link": "chapters/property-tables.html#sim-air"
-  },
-  {
-    "id": "fluid-mechanics/property-tables/sim-atm",
-    "bookId": "fluid-mechanics",
-    "title": "고도를 끌어 대기 상태 읽기",
-    "link": "chapters/property-tables.html#sim-atm"
-  },
-  {
-    "id": "fluid-mechanics/property-tables/sim-conv",
-    "bookId": "fluid-mechanics",
-    "title": "단위 환산기",
-    "link": "chapters/property-tables.html#sim-conv"
-  },
-  {
-    "id": "fluid-mechanics/property-tables/sim-moody",
-    "bookId": "fluid-mechanics",
-    "title": "인터랙티브 무디 선도",
-    "link": "chapters/property-tables.html#sim-moody"
-  },
-  {
-    "id": "fluid-mechanics/property-tables/sim-gas",
-    "bookId": "fluid-mechanics",
-    "title": "등엔트로피 · 수직 충격파 계산기",
-    "link": "chapters/property-tables.html#sim-gas"
-  },
-  {
-    "id": "fluid-mechanics/turbomachinery/sim-tri",
-    "bookId": "fluid-mechanics",
-    "title": "속도 삼각형: V₂ 끝을 끌어 날개 출구각과 유량을 바꿔라",
-    "link": "chapters/turbomachinery.html#sim-tri"
-  },
-  {
-    "id": "fluid-mechanics/turbomachinery/sim-op",
-    "bookId": "fluid-mechanics",
-    "title": "작동점: 시스템 곡선을 끌고, 회전수로 목표 유량을 맞혀라",
-    "link": "chapters/turbomachinery.html#sim-op"
-  },
-  {
-    "id": "fluid-mechanics/turbomachinery/sim-npsh",
-    "bookId": "fluid-mechanics",
-    "title": "NPSH와 공동 현상: 펌프를 끌어 올리고 내려 보라",
-    "link": "chapters/turbomachinery.html#sim-npsh"
-  },
-  {
-    "id": "fluid-mechanics/turbomachinery/sim-ns",
-    "bookId": "fluid-mechanics",
-    "title": "비속도로 펌프 형식 고르기: 주문서를 받아 회전수를 정하라",
-    "link": "chapters/turbomachinery.html#sim-ns"
-  },
-  {
-    "id": "fluid-mechanics/turbomachinery/sim-pelton",
-    "bookId": "fluid-mechanics",
-    "title": "펠턴 휠: 버킷 속도비와 출력, 발전기 동기 속도 맞추기",
-    "link": "chapters/turbomachinery.html#sim-pelton"
   },
   {
     "id": "thinfilmbook/ald/sim-qcm",

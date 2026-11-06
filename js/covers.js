@@ -1064,5 +1064,78 @@
   };
   Object.assign(M, SCI);
 
+  // MathBooks covers (math-books), MIT: linear, calculus, ode, numerical.
+  const poly = (f, x0, x1, step = 2) => { const out = []; for (let x = x0; x <= x1 + 1e-9; x += step) out.push(`${+x.toFixed(1)},${+f(x).toFixed(1)}`); return out; };
+  const MATH = {
+    linear() {
+      // 단위원이 대칭 행렬 [[2,1],[1,2]]로 타원이 된다. 화면 좌표(y 아래)에서는 matrix(2,-1,-1,2)이고,
+      // 격자·단위원·벡터가 함께 변환되는 동안 두 고유벡터만 제 방향을 지킨 채 3배·1배로 늘어난다.
+      const cx = 112, cy = 66, u = 20, c = Math.SQRT1_2, ns = ' vector-effect="non-scaling-stroke"';
+      let s = "", g = "";
+      range(11).forEach((k) => { const d = (k - 5) * u; s += `<path d="M${cx + d} -10V140M10 ${cy + d}H214" stroke="${W}" stroke-opacity=".08"/>`; });
+      const ell = range(73).map((i) => { const t = (i / 72) * 2 * Math.PI, x = Math.cos(t), y = Math.sin(t); return `${(cx + u * (2 * x + y)).toFixed(1)},${(cy - u * (x + 2 * y)).toFixed(1)}`; }).join(" ");
+      s += `<polygon points="${ell}" fill="${W}" fill-opacity=".1" stroke="${W}" stroke-opacity=".45" stroke-dasharray="3 3"/>`;
+      s += `<path d="M${cx - 64 * c} ${cy + 64 * c}L${cx + 64 * c} ${cy - 64 * c}M${cx - 30 * c} ${cy - 30 * c}L${cx + 30 * c} ${cy + 30 * c}" stroke="${W}" stroke-opacity=".3" stroke-dasharray="5 4"/>`;
+      range(5).forEach((k) => { const d = (k - 2) * u; g += `<path d="M${cx + d} ${cy - 2 * u}V${cy + 2 * u}M${cx - 2 * u} ${cy + d}H${cx + 2 * u}" stroke="${W}" stroke-opacity=".28"${ns}/>`; });
+      g += `<circle cx="${cx}" cy="${cy}" r="${u}" fill="${W}" fill-opacity=".14" stroke="${W}" stroke-width="1.8"${ns}/>`;
+      const arrow = (x, y, col, w = 2.6) => `<path d="M${cx} ${cy}L${x} ${y}" stroke="${col}" stroke-width="${w}" stroke-linecap="round"${ns}/><circle cx="${x}" cy="${y}" r="2.4" fill="${col}"/>`;
+      g += arrow(cx + u * c, cy - u * c, "#ffd43b") + arrow(cx + u * c, cy + u * c, "#7deaa0") + arrow(cx + u, cy, W, 1.6);
+      s += `<g class="mt-map" style="transform-origin:${cx}px ${cy}px">${g}</g>`;
+      s += `<text x="${cx + 3 * u * c + 6}" y="${cy - 3 * u * c - 2}" fill="${W}" font-size="10" font-family="monospace">λ=3</text><text x="${cx + u * c + 8}" y="${cy + u * c + 12}" fill="${W}" font-size="10" font-family="monospace">λ=1</text>`;
+      return svg(s);
+    },
+    calculus() {
+      // 접선이 곡선을 따라 미끄러지며 기울기(f′)를 바꾸고, 그 아래 리만 합 막대가 차례로 넓이(∫)를 채운다.
+      const f = (x) => 104 - 62 * Math.exp(-((x - 112) ** 2) / 1800) - 0.12 * (x - 40);
+      let s = `<path d="M24 108H190M30 112V16" stroke="${W}" stroke-opacity=".45"/>`;
+      s += `<polygon points="70,108 ${poly(f, 70, 132).join(" ")} 132,108" fill="${W}" fill-opacity=".1"/>`;
+      range(8).forEach((i) => { const x = 70 + i * 8, y = f(x + 4); s += `<rect class="mt-sum" style="animation-delay:${(i * 0.18 - 1.6).toFixed(2)}s" x="${x}" y="${y.toFixed(1)}" width="7" height="${(108 - y).toFixed(1)}" fill="${W}" fill-opacity=".22"/>`; });
+      const curve = poly(f, 30, 188);
+      s += `<polyline points="${curve.join(" ")}" fill="none" stroke="${W}" stroke-width="2.4"/>`;
+      // 수평 접선 조각을 곡선 경로 위에 얹고 offset-rotate:auto로 곡선 방향을 따라 돌린다.
+      const track = "M" + poly(f, 40, 182).join("L");
+      s += `<g class="mt-tangent" style="offset-path:path('${track}')"><path d="M-30 0H30" stroke="#ffd43b" stroke-width="2"/><circle r="3.4" fill="#ffd43b"/></g>`;
+      s += `<text x="86" y="122" fill="${W}" font-size="10" font-family="monospace">∫f dx</text><text x="168" y="${(f(160) - 14).toFixed(1)}" fill="${W}" font-size="10" font-family="monospace">f′</text>`;
+      return svg(s);
+    },
+    ode() {
+      // 감쇠 진동자의 방향장과 궤적: x′ = y, y′ = −x − 0.35y. 점이 방향장을 따라 평형점으로 감겨 들어간다.
+      const cx = 100, cy = 65, k = 13 * 1.25; let s = "";
+      for (let i = -6; i <= 6; i++) for (let j = -4; j <= 4; j++) {
+        const x = i * 0.6, y = j * 0.6, dx = y, dy = -x - 0.35 * y, n = Math.hypot(dx, dy) || 1;
+        const px = cx + x * k, py = cy - y * k, L = 5;
+        s += `<path d="M${(px - L * dx / n).toFixed(1)} ${(py + L * dy / n).toFixed(1)}L${(px + L * dx / n).toFixed(1)} ${(py - L * dy / n).toFixed(1)}" stroke="${W}" stroke-opacity=".32" stroke-width="1.2"/>`;
+      }
+      let x = 3.2, y = 0; const path = [];
+      for (let n = 0; n < 900; n++) { if (n % 3 === 0) path.push(`${(cx + x * k).toFixed(1)},${(cy - y * k).toFixed(1)}`); const dx = y, dy = -x - 0.35 * y; x += dx * 0.02; y += dy * 0.02; }
+      const d = "M" + path.join("L");
+      s += `<path d="${d}" fill="none" stroke="#ffd43b" stroke-opacity=".3" stroke-width="1.6"/>`;
+      s += `<path class="mt-trace" style="animation-delay:-4.6s" pathLength="1" stroke-dasharray="1" d="${d}" fill="none" stroke="#ffd43b" stroke-width="2.2"/>`;
+      s += `<circle cx="${cx}" cy="${cy}" r="2.6" fill="${W}"/>`;
+      s += `<circle class="mt-ride" style="offset-path:path('${d}');animation-delay:-4.6s" r="3.4" fill="#ffd43b"/>`;
+      return svg(s);
+    },
+    numerical() {
+      // 뉴턴 방법으로 √2 찾기: f(x) = x² − 2의 접선이 x축과 만나는 곳이 다음 근삿값이다. 2.8 → 1.76 → 1.45 → 1.414.
+      const X = (x) => 30 + 66 * (x - 0.6), Y = (v) => 92 - 11 * v, f = (x) => x * x - 2;
+      let s = `<path d="M22 ${Y(0)}H194M${X(0.8)} 124V10" stroke="${W}" stroke-opacity=".45"/>`;
+      s += `<polyline points="${range(48).map((i) => { const x = 0.6 + i * 0.05; return `${X(x).toFixed(1)},${Y(f(x)).toFixed(1)}`; }).join(" ")}" fill="none" stroke="${W}" stroke-width="2.4"/>`;
+      let x = 2.8; const zig = [[X(x), Y(0)]], xs = [x];
+      for (let n = 0; n < 3; n++) { const nx = x - f(x) / (2 * x); zig.push([X(x), Y(f(x))], [X(nx), Y(0)]); x = nx; xs.push(x); }
+      const d = "M" + zig.map(([a, b]) => `${a.toFixed(1)} ${b.toFixed(1)}`).join("L");
+      // 접선은 곡선 위 점에서 x축 너머까지 조금 더 그어 둔다.
+      xs.slice(0, 3).forEach((x0) => { const m = 2 * x0, x1 = x0 - f(x0) / m - 0.25; s += `<path d="M${X(x0).toFixed(1)} ${Y(f(x0)).toFixed(1)}L${X(x1).toFixed(1)} ${Y(f(x0) + m * (x1 - x0)).toFixed(1)}" stroke="${W}" stroke-opacity=".3"/>`; });
+      s += `<path d="${d}" fill="none" stroke="#ffd43b" stroke-opacity=".3" stroke-width="1.4"/>`;
+      s += `<path class="mt-trace" style="animation-delay:-4.6s" pathLength="1" stroke-dasharray="1" d="${d}" fill="none" stroke="#ffd43b" stroke-width="2" stroke-linejoin="round"/>`;
+      xs.forEach((x0, i) => { s += `<circle cx="${X(x0).toFixed(1)}" cy="${Y(0)}" r="${i === 3 ? 3.2 : 2}" fill="${i === 3 ? "#7deaa0" : W}"/>`; });
+      s += `<circle class="mt-ride" style="offset-path:path('${d}');animation-delay:-4.6s" r="3.4" fill="#ffd43b"/>`;
+      s += `<text x="${X(Math.SQRT2) - 10}" y="${Y(0) + 15}" fill="${W}" font-size="10" font-family="monospace">√2</text>`;
+      s += `<text x="${X(xs[0]) - 8}" y="${Y(0) + 15}" fill="${W}" fill-opacity=".8" font-size="9" font-family="monospace">x₀</text>`;
+      s += `<text x="${X(0.8) + 6}" y="20" fill="${W}" fill-opacity=".85" font-size="10" font-family="monospace">x−f/f′</text>`;
+      return svg(s);
+    },
+  };
+  Object.assign(M, MATH);
+
   window.coverArt = (motif) => (M[motif] || M.grid)();
 })();

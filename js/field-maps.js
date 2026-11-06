@@ -2,13 +2,13 @@
 window.FIELD_MAPS = {
   science: {
     title: "대학에서 배우는 과학과 공학의 기초",
-    desc: "ScienceBooks의 공통 기초 교재입니다. 물리·화학·재료와 열·유동, 확률·통계를 공부하고 각 전공의 응용으로 이어갑니다.",
+    desc: "ScienceBooks의 공통 기초 교재입니다. 물리·화학·재료와 열·유동을 공부하고 각 전공의 응용으로 이어갑니다.",
     // [왼쪽, 위, 열 수]. 화학은 한 줄로 세워 세 묶음이 한 행에 들어가게 합니다.
     regions: [[12, 12, 2], [486, 12, 1], [742, 12, 2]],
     groups: [
       ["물리와 전자기", "Physics", "운동·파동에서 양자·고체, 전기장과 전자기파의 원리", ["general-physics", "modern-physics", "quantum-mechanics", "solid-state", "electromagnetics"]],
       ["화학과 재료", "Chemistry", "원자·분자·반응에서 재료의 구조와 물성까지", ["general-chemistry", "organic-chemistry", "materials-science"]],
-      ["열·유동과 통계", "Thermal, Fluids & Statistics", "열·평형과 유동 해석, 측정 데이터의 통계", ["thermal-physics", "fluid-mechanics", "probability-statistics"]],
+      ["열과 유동", "Thermal & Fluids", "열·평형과 상변화, 유동 해석", ["thermal-physics", "fluid-mechanics"]],
     ],
     links: [
       ["general-physics", "modern-physics", "빛과 원자의 기초에서 양자역학과 에너지 띠로"],
@@ -23,7 +23,30 @@ window.FIELD_MAPS = {
       ["thermal-physics", "materials-science", "자유 에너지·상태도로 이해하는 상변태와 미세조직"],
       ["general-physics", "fluid-mechanics", "유체의 압력·흐름에서 검사 체적과 관 유동으로"],
       ["thermal-physics", "fluid-mechanics", "기체 운동론·확산·열전달과 유동"],
-      ["probability-statistics", "thermal-physics", "확률 분포에서 볼츠만 분포와 통계역학으로"],
+    ],
+  },
+  math: {
+    title: "공학 문제를 푸는 수학의 도구",
+    desc: "MathBooks의 대학 수학 교재입니다. 공학 수학 입문에서 선형대수·미적분·미분방정식으로, 확률·통계와 수치해석으로 이어갑니다.",
+    regions: [[12, 12, 1], [268, 12, 3], [998, 12, 1]],
+    groups: [
+      ["입문", "Foundations", "공학 문제에서 출발해 수학 도구 전체를 훑어보기", ["mathbook"]],
+      ["대수·해석", "Algebra & Analysis", "공간을 움직이는 행렬, 변화율과 누적, 변화의 법칙", ["linearbook", "calculusbook", "odebook"]],
+      ["확률·계산", "Probability & Computing", "불확실성을 다루는 통계와 컴퓨터로 근사하는 계산", ["probability-statistics", "numericalbook"]],
+    ],
+    links: [
+      ["mathbook", "linearbook", "격자를 휘는 행렬에서 소거·부분공간·SVD로"],
+      ["mathbook", "calculusbook", "극한·급수의 직관에서 미분·적분·다변수로"],
+      ["mathbook", "odebook", "미분방정식 입문에서 진동·라플라스·위상 평면으로"],
+      ["mathbook", "probability-statistics", "확률·정보의 기초에서 분포·추정·검정으로"],
+      ["mathbook", "numericalbook", "수치 해석 맛보기에서 오차·근 찾기·수치 선형대수로"],
+      ["calculusbook", "odebook", "도함수·적분과 테일러 전개로 미분방정식 풀기"],
+      ["linearbook", "odebook", "고유값·고유벡터로 연립 방정식과 위상 평면 읽기"],
+      ["linearbook", "numericalbook", "LU·QR·고유값 분해를 컴퓨터에서 계산하기"],
+      ["calculusbook", "numericalbook", "테일러 전개로 수치 미분·적분과 오차 분석하기"],
+      ["odebook", "numericalbook", "오일러·룽게–쿠타 해법과 안정성"],
+      ["calculusbook", "probability-statistics", "적분으로 정의하는 연속 분포와 기댓값"],
+      ["linearbook", "probability-statistics", "최소제곱·PCA와 회귀 분석"],
     ],
   },
   semiconductor: {
@@ -246,7 +269,7 @@ window.FIELD_MAPS = {
   },
   culture: {
     "title": "세상을 이해하고 표현하는 방법",
-    "desc": "사진·음악·수학에서 미술과 시각 표현, 웹·제품·산업디자인까지.",
+    "desc": "사진·음악에서 미술과 시각 표현, 웹·제품·산업디자인까지.",
     "links": [
       ["musicbook", "guitarbook", "화성·음색을 지판과 연주로 연결하기"],
       ["musicbook", "pianobook", "음정·화성을 건반과 반주로 익히기"],
@@ -254,7 +277,6 @@ window.FIELD_MAPS = {
       ["musicbook", "bassbook", "근음·코드톤·리듬을 베이스라인으로 연결하기"],
       ["guitarbook", "bassbook", "같은 지판·TAB에서 코드 반주와 베이스라인으로"],
       ["drumbook", "bassbook", "킥 드럼과 맞물리는 리듬 섹션의 그루브"],
-      ["mathbook", "musicbook", "푸리에·표본화·수의 비율로 음색과 조율 이해하기"],
       ["artbook-color", "artbook-composition", "색과 형태로 시선 이끌기"],
       ["artbook-color", "artbook-image", "이미지의 색을 읽는 눈"],
       ["artbook-composition", "artbook-drawing", "구도를 손으로 표현하기"],
@@ -288,14 +310,6 @@ window.FIELD_MAPS = {
         "음·화음·리듬을 직접 듣고 구성하기",
         [
           "musicbook", "guitarbook", "pianobook", "drumbook", "bassbook"
-        ]
-      ],
-      [
-        "수학으로 이해하기",
-        "Discover",
-        "문제를 풀며 수의 관계와 구조 발견하기",
-        [
-          "mathbook"
         ]
       ],
       [
@@ -352,6 +366,11 @@ window.FIELD_MAP_CROSS_LINKS = [
   ["thermal-physics", "infrabook", "에너지 수지·열기관과 팹의 냉동·냉각 설비"],
   ["modern-physics", "devicebook", "양자 우물·터널링·에너지 띠에서 반도체 소자 물리로"],
   ["solid-state", "devicebook", "캐리어 통계·수송·재결합과 접합에서 소자 동작으로"],
+  ["probability-statistics", "thermal-physics", "확률 분포에서 볼츠만 분포와 통계역학으로"],
+  ["mathbook", "musicbook", "푸리에·표본화·수의 비율로 음색과 조율 이해하기"],
+  ["linearbook", "aibook", "행렬 곱·SVD·PCA와 신경망의 표현·차원 축소"],
+  ["odebook", "electricbook", "RLC 회로의 2계 방정식·라플라스 변환과 과도 응답"],
+  ["numericalbook", "tcadbook", "이산화·뉴턴 반복·희소 행렬 해법과 소자 시뮬레이션"],
   ["probability-statistics", "yieldbook", "통계적 공정 관리·신뢰성 분포로 읽는 수율과 불량"],
   ["general-chemistry", "processbook", "반응·평형·속도론으로 이해하는 제조 공정"],
   ["general-chemistry", "cmpbook", "산화·착화·pH와 제타 전위로 이해하는 슬러리와 세정액"],
