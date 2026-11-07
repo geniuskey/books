@@ -1094,12 +1094,15 @@
         "title": "ComputerBook",
         "description": "Build an understanding of computers from switches to networks."
       },
-      "url": "https://computerbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/computerbook",
+      "url": "https://computing.euiyun.com/computer/",
+      "legacyUrls": [
+        "https://computerbook.euiyun.com/"
+      ],
+      "repo": "https://github.com/geniuskey/computing-books",
       "status": "published",
       "level": "입문",
-      "chapters": 15,
-      "simulators": 57,
+      "chapters": 23,
+      "simulators": 82,
       "color": "#4f46e5",
       "colorDark": "#8b85ff",
       "topics": [
@@ -1125,7 +1128,8 @@
           "image": "img/sims/computerbook-sim-add.jpg"
         }
       ],
-      "field": "computing"
+      "field": "computing",
+      "checkout": "computing-books/computer"
     },
     {
       "id": "gpubook",
@@ -1169,8 +1173,11 @@
         "title": "NetworkBook",
         "description": "Send signals across networks and explore the hardware behind each layer."
       },
-      "url": "https://networkbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/networkbook",
+      "url": "https://computing.euiyun.com/network/",
+      "legacyUrls": [
+        "https://networkbook.euiyun.com/"
+      ],
+      "repo": "https://github.com/geniuskey/computing-books",
       "status": "published",
       "level": "입문",
       "chapters": 26,
@@ -1201,7 +1208,8 @@
           "image": "img/sims/networkbook-sim-eq.jpg"
         }
       ],
-      "field": "computing"
+      "field": "computing",
+      "checkout": "computing-books/network"
     },
     {
       "id": "databasebook",
@@ -1229,12 +1237,15 @@
         "title": "AIBook",
         "description": "Experiment with neural networks, attention, and LLMs."
       },
-      "url": "https://aibook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/aibook",
+      "url": "https://computing.euiyun.com/ai/",
+      "legacyUrls": [
+        "https://aibook.euiyun.com/"
+      ],
+      "repo": "https://github.com/geniuskey/computing-books",
       "status": "published",
       "level": "공대 학부",
-      "chapters": 13,
-      "simulators": 100,
+      "chapters": 18,
+      "simulators": 136,
       "color": "#6e56cf",
       "colorDark": "#a18cff",
       "topics": [
@@ -1259,7 +1270,8 @@
           "image": "img/sims/aibook-sim-space.jpg"
         }
       ],
-      "field": "computing"
+      "field": "computing",
+      "checkout": "computing-books/ai"
     },
     {
       "id": "axbook",
@@ -1272,12 +1284,15 @@
         "title": "AXBook",
         "description": "Turn legacy files, email, and processes into an organization where AI can work."
       },
-      "url": "https://axbook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/axbook",
+      "url": "https://computing.euiyun.com/ax/",
+      "legacyUrls": [
+        "https://axbook.euiyun.com/"
+      ],
+      "repo": "https://github.com/geniuskey/computing-books",
       "status": "published",
       "level": "실무자·관리자",
-      "chapters": 16,
-      "simulators": 44,
+      "chapters": 21,
+      "simulators": 62,
       "color": "#0d8a72",
       "colorDark": "#2fd4ad",
       "topics": [
@@ -1302,7 +1317,8 @@
           "image": "img/sims/axbook-sim-trap.jpg"
         }
       ],
-      "field": "computing"
+      "field": "computing",
+      "checkout": "computing-books/ax"
     },
     {
       "id": "statbook",
@@ -1794,8 +1810,11 @@
         "title": "BodyBook",
         "description": "Explore the connected systems that keep the human body running."
       },
-      "url": "https://bodybook.euiyun.com/",
-      "repo": "https://github.com/geniuskey/bodybook",
+      "url": "https://medical.euiyun.com/body/",
+      "legacyUrls": [
+        "https://bodybook.euiyun.com/"
+      ],
+      "repo": "https://github.com/geniuskey/medical-books",
       "field": "health",
       "status": "published",
       "level": "입문",
@@ -1811,7 +1830,8 @@
         "혈당·인슐린",
         "호르몬 피드백"
       ],
-      "motif": "heart"
+      "motif": "heart",
+      "checkout": "medical-books/body"
     },
     {
       "id": "camerabook",
@@ -1926,8 +1946,8 @@
       "legacyUrls": [
         "https://artbook.euiyun.com/color/"
       ],
-      "repo": "https://github.com/geniuskey/artbook",
-      "checkout": "artbook/color",
+      "repo": "https://github.com/geniuskey/art-books",
+      "checkout": "art-books/color",
       "field": "culture",
       "status": "published",
       "level": "입문",
@@ -1975,8 +1995,8 @@
       "legacyUrls": [
         "https://artbook.euiyun.com/composition/"
       ],
-      "repo": "https://github.com/geniuskey/artbook",
-      "checkout": "artbook/composition",
+      "repo": "https://github.com/geniuskey/art-books",
+      "checkout": "art-books/composition",
       "field": "culture",
       "status": "published",
       "level": "입문",
@@ -2024,8 +2044,8 @@
       "legacyUrls": [
         "https://artbook.euiyun.com/drawing/"
       ],
-      "repo": "https://github.com/geniuskey/artbook",
-      "checkout": "artbook/drawing",
+      "repo": "https://github.com/geniuskey/art-books",
+      "checkout": "art-books/drawing",
       "field": "culture",
       "status": "published",
       "level": "입문",
@@ -2073,8 +2093,8 @@
       "legacyUrls": [
         "https://artbook.euiyun.com/type/"
       ],
-      "repo": "https://github.com/geniuskey/artbook",
-      "checkout": "artbook/type",
+      "repo": "https://github.com/geniuskey/art-books",
+      "checkout": "art-books/type",
       "field": "culture",
       "status": "published",
       "level": "입문",
@@ -2122,8 +2142,8 @@
       "legacyUrls": [
         "https://artbook.euiyun.com/history/"
       ],
-      "repo": "https://github.com/geniuskey/artbook",
-      "checkout": "artbook/history",
+      "repo": "https://github.com/geniuskey/art-books",
+      "checkout": "art-books/history",
       "field": "culture",
       "status": "published",
       "level": "입문",
@@ -2171,8 +2191,8 @@
       "legacyUrls": [
         "https://artbook.euiyun.com/image/"
       ],
-      "repo": "https://github.com/geniuskey/artbook",
-      "checkout": "artbook/image",
+      "repo": "https://github.com/geniuskey/art-books",
+      "checkout": "art-books/image",
       "field": "culture",
       "status": "published",
       "level": "입문",
@@ -2220,8 +2240,8 @@
       "legacyUrls": [
         "https://artbook.euiyun.com/web/"
       ],
-      "repo": "https://github.com/geniuskey/artbook",
-      "checkout": "artbook/web",
+      "repo": "https://github.com/geniuskey/art-books",
+      "checkout": "art-books/web",
       "field": "culture",
       "status": "published",
       "level": "입문",
@@ -2269,8 +2289,8 @@
       "legacyUrls": [
         "https://artbook.euiyun.com/product/"
       ],
-      "repo": "https://github.com/geniuskey/artbook",
-      "checkout": "artbook/product",
+      "repo": "https://github.com/geniuskey/art-books",
+      "checkout": "art-books/product",
       "field": "culture",
       "status": "published",
       "level": "입문",
@@ -2318,8 +2338,8 @@
       "legacyUrls": [
         "https://artbook.euiyun.com/industrial/"
       ],
-      "repo": "https://github.com/geniuskey/artbook",
-      "checkout": "artbook/industrial",
+      "repo": "https://github.com/geniuskey/art-books",
+      "checkout": "art-books/industrial",
       "field": "culture",
       "status": "published",
       "level": "입문",
@@ -3391,6 +3411,22 @@
       "status": "published",
       "url": "https://construction.euiyun.com/",
       "checkout": "construction-books"
+    },
+    {
+      "id": "computingbooks",
+      "title": "ComputingBooks",
+      "subtitle": "컴퓨터·AI 교과서 서가",
+      "status": "published",
+      "url": "https://computing.euiyun.com/",
+      "checkout": "computing-books"
+    },
+    {
+      "id": "medicalbooks",
+      "title": "MedicalBooks",
+      "subtitle": "의학·건강 교과서 서가",
+      "status": "published",
+      "url": "https://medical.euiyun.com/",
+      "checkout": "medical-books"
     }
   ]
 }

@@ -174,6 +174,60 @@
     "link": "chapters/diode.html#sim-rr"
   },
   {
+    "id": "devicebook/esd/sim-wf",
+    "bookId": "devicebook",
+    "title": "세 가지 ESD 펄스 비교",
+    "link": "chapters/esd.html#sim-wf"
+  },
+  {
+    "id": "devicebook/esd/sim-tlp",
+    "bookId": "devicebook",
+    "title": "가상 TLP 측정: 펄스를 하나씩 올려 I–V를 그리기",
+    "link": "chapters/esd.html#sim-tlp"
+  },
+  {
+    "id": "devicebook/esd/sim-gg",
+    "bookId": "devicebook",
+    "title": "GGNMOS 스냅백 곡선 만들기",
+    "link": "chapters/esd.html#sim-gg"
+  },
+  {
+    "id": "devicebook/esd/sim-fg",
+    "bookId": "devicebook",
+    "title": "핑거가 모두 켜질까? 실리사이드 블록 설계",
+    "link": "chapters/esd.html#sim-fg"
+  },
+  {
+    "id": "devicebook/esd/sim-rc",
+    "bookId": "devicebook",
+    "title": "RC 트리거 레일 클램프의 시상수 고르기",
+    "link": "chapters/esd.html#sim-rc"
+  },
+  {
+    "id": "devicebook/esd/sim-cdm",
+    "bookId": "devicebook",
+    "title": "CDM에서 영역 경계 게이트 지키기",
+    "link": "chapters/esd.html#sim-cdm"
+  },
+  {
+    "id": "devicebook/esd/sim-lu",
+    "bookId": "devicebook",
+    "title": "래치업: 탭 간격·가드 링·전원 전압",
+    "link": "chapters/esd.html#sim-lu"
+  },
+  {
+    "id": "devicebook/esd/sim-seed",
+    "bookId": "devicebook",
+    "title": "IEC 펄스에서 TVS와 칩의 전류 나누기 (SEED)",
+    "link": "chapters/esd.html#sim-seed"
+  },
+  {
+    "id": "devicebook/esd/sim-hs",
+    "bookId": "devicebook",
+    "title": "고속 I/O의 ESD 용량 예산",
+    "link": "chapters/esd.html#sim-hs"
+  },
+  {
     "id": "devicebook/gr/sim-srh",
     "bookId": "devicebook",
     "title": "SRH 트랩 실험실: 네 과정과 트랩 준위",
@@ -2792,7 +2846,7 @@
   {
     "id": "processbook/metrology/sim-spc",
     "bookId": "processbook",
-    "title": "관리도와 Cpk",
+    "title": "관리도와 C pk",
     "link": "chapters/metrology.html#sim-spc"
   },
   {
@@ -7806,6 +7860,12 @@
     "link": "chapters/ssd.html#sim-qd"
   },
   {
+    "id": "memorybook/ssd/sim-kvs",
+    "bookId": "memorybook",
+    "title": "KV 캐시: 다시 계산할까, SSD에서 불러올까",
+    "link": "chapters/ssd.html#sim-kvs"
+  },
+  {
     "id": "memorybook/test/sim-ttime",
     "bookId": "memorybook",
     "title": "테스트 시간 계산기: n, n√n, n²",
@@ -8670,10 +8730,34 @@
     "link": "chapters/advanced.html#sim-tof"
   },
   {
+    "id": "sensorbook/advanced/sim-coa",
+    "bookId": "sensorbook",
+    "title": "TCSPC 파일업: 코츠 보정, 데드 타임, DCR, 애프터펄스",
+    "link": "chapters/advanced.html#sim-coa"
+  },
+  {
+    "id": "sensorbook/advanced/sim-itf",
+    "bookId": "sensorbook",
+    "title": "iToF 4위상 복조: 노이즈, 언래핑, 다중 경로",
+    "link": "chapters/advanced.html#sim-itf"
+  },
+  {
+    "id": "sensorbook/advanced/sim-qis",
+    "bookId": "sensorbook",
+    "title": "QIS 비트 평면: 합산, 최대우도 복원, 동적 범위",
+    "link": "chapters/advanced.html#sim-qis"
+  },
+  {
     "id": "sensorbook/advanced/sim-dvs",
     "bookId": "sensorbook",
     "title": "회전 막대를 보는 이벤트 카메라",
     "link": "chapters/advanced.html#sim-dvs"
+  },
+  {
+    "id": "sensorbook/advanced/sim-isc",
+    "bookId": "sensorbook",
+    "title": "인센서 처리: 움직임 게이트 읽기와 전력",
+    "link": "chapters/advanced.html#sim-isc"
   },
   {
     "id": "sensorbook/automotive/sim-tn",
@@ -8694,10 +8778,34 @@
     "link": "chapters/automotive.html#sim-hs"
   },
   {
+    "id": "sensorbook/automotive/sim-cd",
+    "bookId": "sensorbook",
+    "title": "대비 검출 확률(CDP) 몬테카를로 — HDR 전환점의 딥",
+    "link": "chapters/automotive.html#sim-cd"
+  },
+  {
     "id": "sensorbook/automotive/sim-tp",
     "bookId": "sensorbook",
     "title": "접합 온도와 야간 화질",
     "link": "chapters/automotive.html#sim-tp"
+  },
+  {
+    "id": "sensorbook/automotive/sim-fs",
+    "bookId": "sensorbook",
+    "title": "ISO 26262 하드웨어 지표 계산기와 고장 주입 몬테카를로",
+    "link": "chapters/automotive.html#sim-fs"
+  },
+  {
+    "id": "sensorbook/automotive/sim-rl",
+    "bookId": "sensorbook",
+    "title": "HTOL 가속 수명 시험 에뮬레이터 — 와이블 적합 · Eₐ 추정 · FIT 상한",
+    "link": "chapters/automotive.html#sim-rl"
+  },
+  {
+    "id": "sensorbook/automotive/sim-dm",
+    "bookId": "sensorbook",
+    "title": "NIR 운전자 모니터링 — 940 nm QE · 펄스 동기 · 태양광 · 눈 영역 SNR",
+    "link": "chapters/automotive.html#sim-dm"
   },
   {
     "id": "sensorbook/characterization/sim-lin",
@@ -8710,6 +8818,12 @@
     "bookId": "sensorbook",
     "title": "암 프레임 히스토그램과 핫 픽셀 세기",
     "link": "chapters/characterization.html#sim-dk"
+  },
+  {
+    "id": "sensorbook/characterization/sim-arr",
+    "bookId": "sensorbook",
+    "title": "암전류 온도 시험: 노출 스윕 → 아레니우스 맞춤",
+    "link": "chapters/characterization.html#sim-arr"
   },
   {
     "id": "sensorbook/characterization/sim-rts",
@@ -8728,6 +8842,18 @@
     "bookId": "sensorbook",
     "title": "래그 측정: 밝은 프레임 뒤의 암 프레임",
     "link": "chapters/characterization.html#sim-lag"
+  },
+  {
+    "id": "sensorbook/characterization/sim-qe",
+    "bookId": "sensorbook",
+    "title": "가상 QE 측정: 단색광기 주사와 오차 예산",
+    "link": "chapters/characterization.html#sim-qe"
+  },
+  {
+    "id": "sensorbook/characterization/sim-emva",
+    "bookId": "sensorbook",
+    "title": "가상 EMVA 1288 측정: 숨은 참값을 가진 센서의 보고서",
+    "link": "chapters/characterization.html#sim-emva"
   },
   {
     "id": "sensorbook/color/sim-spec",
@@ -8766,16 +8892,46 @@
     "link": "chapters/color.html#sim-snr"
   },
   {
+    "id": "sensorbook/color/sim-ccmn",
+    "bookId": "sensorbook",
+    "title": "필터 폭 스윕 — 최소자승 CCM, 노이즈 이득, 색 SNR 파레토",
+    "link": "chapters/color.html#sim-ccmn"
+  },
+  {
+    "id": "sensorbook/color/sim-gamut",
+    "bookId": "sensorbook",
+    "title": "CIE xy 다이어그램 — 카메라 궤적, 가상 원색, 루터–아이브스 품질",
+    "link": "chapters/color.html#sim-gamut"
+  },
+  {
+    "id": "sensorbook/color/sim-meta",
+    "bookId": "sensorbook",
+    "title": "메타머 쌍 생성기 — 조명·센서 메타메리즘과 몬테카를로 지수",
+    "link": "chapters/color.html#sim-meta"
+  },
+  {
     "id": "sensorbook/computational/sim-bu",
     "bookId": "sensorbook",
     "title": "버스트 병합: 긴 노출 1장 대 짧은 노출 N장",
     "link": "chapters/computational.html#sim-bu"
   },
   {
+    "id": "sensorbook/computational/sim-rg",
+    "bookId": "sensorbook",
+    "title": "서브픽셀 정렬: 위상 상관 · 블록 매칭 · 루카스–카나데",
+    "link": "chapters/computational.html#sim-rg"
+  },
+  {
     "id": "sensorbook/computational/sim-al",
     "bookId": "sensorbook",
     "title": "타일 정렬과 고스트",
     "link": "chapters/computational.html#sim-al"
+  },
+  {
+    "id": "sensorbook/computational/sim-fm",
+    "bookId": "sensorbook",
+    "title": "강건 병합 비교: 단순 평균 · 화소 영역 · 주파수 영역",
+    "link": "chapters/computational.html#sim-fm"
   },
   {
     "id": "sensorbook/computational/sim-sr",
@@ -8790,6 +8946,18 @@
     "link": "chapters/computational.html#sim-bk"
   },
   {
+    "id": "sensorbook/computational/sim-ef",
+    "bookId": "sensorbook",
+    "title": "노출 융합: 화소별 가중 평균 대 라플라시안 피라미드",
+    "link": "chapters/computational.html#sim-ef"
+  },
+  {
+    "id": "sensorbook/computational/sim-db",
+    "bookId": "sensorbook",
+    "title": "자이로 PSF 디컨볼루션: 위너 대 리처드슨–루시",
+    "link": "chapters/computational.html#sim-db"
+  },
+  {
     "id": "sensorbook/design/sim-pg",
     "bookId": "sensorbook",
     "title": "이미지 센서 설계 플레이그라운드",
@@ -8802,10 +8970,40 @@
     "link": "chapters/design.html#sim-wafer"
   },
   {
+    "id": "sensorbook/design/sim-power",
+    "bookId": "sensorbook",
+    "title": "전력 예산 · 자기 발열 · 암전류 되먹임",
+    "link": "chapters/design.html#sim-power"
+  },
+  {
+    "id": "sensorbook/design/sim-module",
+    "bookId": "sensorbook",
+    "title": "광학 포맷 → 렌즈 TTL · 모듈 높이 · CRA (근축 광선 추적)",
+    "link": "chapters/design.html#sim-module"
+  },
+  {
+    "id": "sensorbook/design/sim-mission",
+    "bookId": "sensorbook",
+    "title": "설계 미션 · 요구사항 검증 · 격자 탐색",
+    "link": "chapters/design.html#sim-mission"
+  },
+  {
+    "id": "sensorbook/design/sim-tornado",
+    "bookId": "sensorbook",
+    "title": "토네이도 민감도 · 탄력성 · 영역 경계 스윕",
+    "link": "chapters/design.html#sim-tornado"
+  },
+  {
     "id": "sensorbook/fabrication/sim-im",
     "bookId": "sensorbook",
     "title": "이온 주입 깊이 프로파일",
     "link": "chapters/fabrication.html#sim-im"
+  },
+  {
+    "id": "sensorbook/fabrication/sim-an",
+    "bookId": "sensorbook",
+    "title": "어닐링 확산 풀이기 — 열 예산, 접합 깊이, 면저항",
+    "link": "chapters/fabrication.html#sim-an"
   },
   {
     "id": "sensorbook/fabrication/sim-st",
@@ -8820,10 +9018,82 @@
     "link": "chapters/fabrication.html#sim-th"
   },
   {
+    "id": "sensorbook/fabrication/sim-dt",
+    "bookId": "sensorbook",
+    "title": "DTI 식각 프로파일(ARDE)과 측벽 암전류 몬테카를로",
+    "link": "chapters/fabrication.html#sim-dt"
+  },
+  {
+    "id": "sensorbook/fabrication/sim-hb",
+    "bookId": "sensorbook",
+    "title": "하이브리드 본딩 수율 몬테카를로 — 오버레이 · Cu 리세스 · 패드 피치",
+    "link": "chapters/fabrication.html#sim-hb"
+  },
+  {
+    "id": "sensorbook/fabrication/sim-ml",
+    "bookId": "sensorbook",
+    "title": "마이크로렌즈 리플로우 공정 창 — 부피 보존 · 초점 · 브리징 몬테카를로",
+    "link": "chapters/fabrication.html#sim-ml"
+  },
+  {
     "id": "sensorbook/fabrication/sim-yd",
     "bookId": "sensorbook",
     "title": "결함 밀도와 웨이퍼 수율",
     "link": "chapters/fabrication.html#sim-yd"
+  },
+  {
+    "id": "sensorbook/interface/sim-dphy",
+    "bookId": "sensorbook",
+    "title": "D-PHY 레인 상태 기계: LP ↔ HS 파형과 블랭킹 비용",
+    "link": "chapters/interface.html#sim-dphy"
+  },
+  {
+    "id": "sensorbook/interface/sim-cphy",
+    "bookId": "sensorbook",
+    "title": "C-PHY 부호기: 16비트 → 7심벌 → 와이어 상태 → 수신기 출력",
+    "link": "chapters/interface.html#sim-cphy"
+  },
+  {
+    "id": "sensorbook/interface/sim-eye",
+    "bookId": "sensorbook",
+    "title": "아이 다이어그램: PRBS → 손실 채널 → 지터·잡음 → CTLE, 통계적 BER과 배스텁",
+    "link": "chapters/interface.html#sim-eye"
+  },
+  {
+    "id": "sensorbook/interface/sim-pkt",
+    "bookId": "sensorbook",
+    "title": "CSI-2 패킷 빌더: 패킹 → 헤더·ECC·CRC → 레인 분배 → 오류 주입과 복구",
+    "link": "chapters/interface.html#sim-pkt"
+  },
+  {
+    "id": "sensorbook/interface/sim-bw",
+    "bookId": "sensorbook",
+    "title": "대역폭·레인 계획기: D-PHY vs C-PHY, HDR 가상 채널, 라인 버스트 여유",
+    "link": "chapters/interface.html#sim-bw"
+  },
+  {
+    "id": "sensorbook/interface/sim-frame",
+    "bookId": "sensorbook",
+    "title": "프레임 타이밍 다이어그램: 롤링 노출을 끌어서 바꾸기",
+    "link": "chapters/interface.html#sim-frame"
+  },
+  {
+    "id": "sensorbook/interface/sim-pll",
+    "bookId": "sensorbook",
+    "title": "PLL 구성기: 분주비 제약 검사, 자동 해 찾기, 락 과도 응답",
+    "link": "chapters/interface.html#sim-pll"
+  },
+  {
+    "id": "sensorbook/interface/sim-reg",
+    "bookId": "sensorbook",
+    "title": "레지스터 갱신 위험: 래치 경계, 바이트 찢김, 그룹 홀드와 지연 보정",
+    "link": "chapters/interface.html#sim-reg"
+  },
+  {
+    "id": "sensorbook/interface/sim-sync",
+    "bookId": "sensorbook",
+    "title": "다중 카메라 드리프트와 스테레오 롤링 스큐 → 깊이 오차",
+    "link": "chapters/interface.html#sim-sync"
   },
   {
     "id": "sensorbook/invisible/sim-th",
@@ -8838,10 +9108,28 @@
     "link": "chapters/invisible.html#sim-bo"
   },
   {
+    "id": "sensorbook/invisible/sim-dri",
+    "bookId": "sensorbook",
+    "title": "열화상 작전 거리: MRTD 교점과 존슨 확률",
+    "link": "chapters/invisible.html#sim-dri"
+  },
+  {
     "id": "sensorbook/invisible/sim-sc",
     "bookId": "sensorbook",
     "title": "신틸레이터 두께: 흡수 효율과 MTF",
     "link": "chapters/invisible.html#sim-sc"
+  },
+  {
+    "id": "sensorbook/invisible/sim-pcd",
+    "bookId": "sensorbook",
+    "title": "CdTe 광자 계수 화소 몬테카를로: 스펙트럼 · 전하 공유 · 파일업",
+    "link": "chapters/invisible.html#sim-pcd"
+  },
+  {
+    "id": "sensorbook/invisible/sim-uv",
+    "bookId": "sensorbook",
+    "title": "UV 내부 양자효율: 수집 확률 유한차분 풀이",
+    "link": "chapters/invisible.html#sim-uv"
   },
   {
     "id": "sensorbook/invisible/sim-hy",
@@ -8850,10 +9138,82 @@
     "link": "chapters/invisible.html#sim-hy"
   },
   {
+    "id": "sensorbook/invisible/sim-unmix",
+    "bookId": "sensorbook",
+    "title": "선형 분광 분해: 최소제곱 대 NNLS/FCLS",
+    "link": "chapters/invisible.html#sim-unmix"
+  },
+  {
     "id": "sensorbook/invisible/sim-po",
     "bookId": "sensorbook",
     "title": "네 방향 화소에서 편광 복원",
     "link": "chapters/invisible.html#sim-po"
+  },
+  {
+    "id": "sensorbook/iq/sim-jnd",
+    "bookId": "sensorbook",
+    "title": "가상 관찰자 패널: 쌍대 비교에서 JND 척도로",
+    "link": "chapters/iq.html#sim-jnd"
+  },
+  {
+    "id": "sensorbook/iq/sim-sfr",
+    "bookId": "sensorbook",
+    "title": "슬랜티드 에지 SFR 측정: 합성 에지 → ESF → LSF → MTF",
+    "link": "chapters/iq.html#sim-sfr"
+  },
+  {
+    "id": "sensorbook/iq/sim-usm",
+    "bookId": "sensorbook",
+    "title": "샤프닝 과처리: 헤일로, MTF > 1, 대비에 따라 달라지는 MTF",
+    "link": "chapters/iq.html#sim-usm"
+  },
+  {
+    "id": "sensorbook/iq/sim-dl",
+    "bookId": "sensorbook",
+    "title": "데드리브스 텍스처 손실: 같은 파이프라인의 에지 MTF와 텍스처 MTF",
+    "link": "chapters/iq.html#sim-dl"
+  },
+  {
+    "id": "sensorbook/iq/sim-vn",
+    "bookId": "sensorbook",
+    "title": "시각 노이즈: SNR이 같아도, 더 좋아도 더 지저분할 수 있다",
+    "link": "chapters/iq.html#sim-vn"
+  },
+  {
+    "id": "sensorbook/iq/sim-de",
+    "bookId": "sensorbook",
+    "title": "ΔE 탐색기: ΔE*ab와 ΔE00가 갈라지는 곳",
+    "link": "chapters/iq.html#sim-de"
+  },
+  {
+    "id": "sensorbook/iq/sim-cc",
+    "bookId": "sensorbook",
+    "title": "컬러체커 측정: 분광 → 카메라 RGB → WB·CCM → ΔE00",
+    "link": "chapters/iq.html#sim-cc"
+  },
+  {
+    "id": "sensorbook/iq/sim-oecf",
+    "bookId": "sensorbook",
+    "title": "투과형 스텝 차트로 OECF와 다이내믹 레인지 재기",
+    "link": "chapters/iq.html#sim-oecf"
+  },
+  {
+    "id": "sensorbook/iq/sim-dist",
+    "bookId": "sensorbook",
+    "title": "점 격자 측정: 왜곡 계수와 배율 색수차 맞추기",
+    "link": "chapters/iq.html#sim-dist"
+  },
+  {
+    "id": "sensorbook/iq/sim-glare",
+    "bookId": "sensorbook",
+    "title": "광 트랩 차트로 베일링 글레어 재기 (FFT 컨볼루션)",
+    "link": "chapters/iq.html#sim-glare"
+  },
+  {
+    "id": "sensorbook/iq/sim-acu",
+    "bookId": "sensorbook",
+    "title": "어큐턴스와 SQF: 보는 조건에 따라 바뀌는 순위",
+    "link": "chapters/iq.html#sim-acu"
   },
   {
     "id": "sensorbook/isp/sim-isp",
@@ -8862,10 +9222,34 @@
     "link": "chapters/isp.html#sim-isp"
   },
   {
+    "id": "sensorbook/isp/sim-dpc",
+    "bookId": "sensorbook",
+    "title": "결함 픽셀 보정 — 별·글자 위에서의 검출과 오검출",
+    "link": "chapters/isp.html#sim-dpc"
+  },
+  {
+    "id": "sensorbook/isp/sim-lsc",
+    "bookId": "sensorbook",
+    "title": "렌즈 쉐이딩 교정 — 플랫 필드에서 게인 맵 만들기",
+    "link": "chapters/isp.html#sim-lsc"
+  },
+  {
+    "id": "sensorbook/isp/sim-awb",
+    "bookId": "sensorbook",
+    "title": "AWB 대결 — 다섯 알고리즘의 각도 오차",
+    "link": "chapters/isp.html#sim-awb"
+  },
+  {
     "id": "sensorbook/isp/sim-ord",
     "bookId": "sensorbook",
     "title": "NR과 샤프닝의 순서 (ISO 1600)",
     "link": "chapters/isp.html#sim-ord"
+  },
+  {
+    "id": "sensorbook/isp/sim-nr",
+    "bookId": "sensorbook",
+    "title": "NR 비교 — PSNR·질감 손실과 ISO 스윕",
+    "link": "chapters/isp.html#sim-nr"
   },
   {
     "id": "sensorbook/isp/sim-bd",
@@ -8892,10 +9276,40 @@
     "link": "chapters/light.html#sim-bb"
   },
   {
+    "id": "sensorbook/light/sim-cct",
+    "bookId": "sensorbook",
+    "title": "색도 도표에서 CCT·D uv 찾기와 센서의 메타메리즘",
+    "link": "chapters/light.html#sim-cct"
+  },
+  {
+    "id": "sensorbook/light/sim-illum",
+    "bookId": "sensorbook",
+    "title": "분광 적분 엔진: 광원 × V(λ) × 센서 감도 → 픽셀당 전자",
+    "link": "chapters/light.html#sim-illum"
+  },
+  {
+    "id": "sensorbook/light/sim-sun",
+    "bookId": "sensorbook",
+    "title": "대기를 통과한 햇빛: 태양 고도 → 스펙트럼, 조도, 색온도",
+    "link": "chapters/light.html#sim-sun"
+  },
+  {
+    "id": "sensorbook/light/sim-cam",
+    "bookId": "sensorbook",
+    "title": "카메라 방정식 사슬과 노출 사다리: EV·F-넘버·ISO → 픽셀 전자",
+    "link": "chapters/light.html#sim-cam"
+  },
+  {
     "id": "sensorbook/light/sim-pc",
     "bookId": "sensorbook",
     "title": "광자 계산기 + 광자 비 애니메이션",
     "link": "chapters/light.html#sim-pc"
+  },
+  {
+    "id": "sensorbook/light/sim-arr",
+    "bookId": "sensorbook",
+    "title": "광자 도착 몬테카를로: 계수 분포, 파노 인자, g²(τ)",
+    "link": "chapters/light.html#sim-arr"
   },
   {
     "id": "sensorbook/module/sim-vcm",
@@ -8904,10 +9318,22 @@
     "link": "chapters/module.html#sim-vcm"
   },
   {
+    "id": "sensorbook/module/sim-afmc",
+    "bookId": "sensorbook",
+    "title": "AF 알고리즘 몬테카를로: 언덕 오르기 대 위상차 + 미세 탐색",
+    "link": "chapters/module.html#sim-afmc"
+  },
+  {
     "id": "sensorbook/module/sim-ois",
     "bookId": "sensorbook",
     "title": "손떨림과 OIS: 점 하나가 그리는 궤적",
     "link": "chapters/module.html#sim-ois"
+  },
+  {
+    "id": "sensorbook/module/sim-ol",
+    "bookId": "sensorbook",
+    "title": "OIS 서보 설계: 보드 선도, 감도 함수, 스텝 응답, 잔류 떨림",
+    "link": "chapters/module.html#sim-ol"
   },
   {
     "id": "sensorbook/module/sim-fold",
@@ -8916,10 +9342,82 @@
     "link": "chapters/module.html#sim-fold"
   },
   {
+    "id": "sensorbook/module/sim-zoom",
+    "bookId": "sensorbook",
+    "title": "줌 전환: 광각 크롭 대 망원, 지멘스 스타로 잰 해상도와 SNR",
+    "link": "chapters/module.html#sim-zoom"
+  },
+  {
     "id": "sensorbook/module/sim-aa",
     "bookId": "sensorbook",
     "title": "액티브 얼라인: 9지점 MTF와 스루포커스 곡선",
     "link": "chapters/module.html#sim-aa"
+  },
+  {
+    "id": "sensorbook/module/sim-thermal",
+    "bookId": "sensorbook",
+    "title": "열 초점 드리프트: 성분 분해와 스루포커스 MTF",
+    "link": "chapters/module.html#sim-thermal"
+  },
+  {
+    "id": "sensorbook/nanophotonics/sim-asm",
+    "bookId": "sensorbook",
+    "title": "마이크로렌즈의 회절 집광: 광선 대 파동",
+    "link": "chapters/nanophotonics.html#sim-asm"
+  },
+  {
+    "id": "sensorbook/nanophotonics/sim-fd1",
+    "bookId": "sensorbook",
+    "title": "1-D FDTD 실험실: 해상도, Courant 수, 경계",
+    "link": "chapters/nanophotonics.html#sim-fd1"
+  },
+  {
+    "id": "sensorbook/nanophotonics/sim-fd2",
+    "bookId": "sensorbook",
+    "title": "실시간 2-D FDTD: 픽셀 안을 흐르는 빛",
+    "link": "chapters/nanophotonics.html#sim-fd2"
+  },
+  {
+    "id": "sensorbook/nanophotonics/sim-tmm",
+    "bookId": "sensorbook",
+    "title": "다층 박막 설계기 (TMM)",
+    "link": "chapters/nanophotonics.html#sim-tmm"
+  },
+  {
+    "id": "sensorbook/nanophotonics/sim-fp",
+    "bookId": "sensorbook",
+    "title": "얇은 Si의 파브리–페로 QE 리플",
+    "link": "chapters/nanophotonics.html#sim-fp"
+  },
+  {
+    "id": "sensorbook/nanophotonics/sim-wg",
+    "bookId": "sensorbook",
+    "title": "DTI 도파로 모드 풀이와 결합 길이",
+    "link": "chapters/nanophotonics.html#sim-wg"
+  },
+  {
+    "id": "sensorbook/nanophotonics/sim-lt",
+    "bookId": "sensorbook",
+    "title": "람베르트 광 포획 몬테카를로와 크로스토크",
+    "link": "chapters/nanophotonics.html#sim-lt"
+  },
+  {
+    "id": "sensorbook/nanophotonics/sim-gr",
+    "bookId": "sensorbook",
+    "title": "회절 격자의 k-공간: 어떤 차수가 갇히는가",
+    "link": "chapters/nanophotonics.html#sim-gr"
+  },
+  {
+    "id": "sensorbook/nanophotonics/sim-gmr",
+    "bookId": "sensorbook",
+    "title": "도파 모드 공진 필터 (RCWA, TE)",
+    "link": "chapters/nanophotonics.html#sim-gmr"
+  },
+  {
+    "id": "sensorbook/nanophotonics/sim-rt",
+    "bookId": "sensorbook",
+    "title": "스칼라 컬러 라우터 역설계 (2×2 베이어, DBS)",
+    "link": "chapters/nanophotonics.html#sim-rt"
   },
   {
     "id": "sensorbook/noise/sim-poi",
@@ -8932,6 +9430,24 @@
     "bookId": "sensorbook",
     "title": "아레니우스 그래프 — 온도에 따른 암전류",
     "link": "chapters/noise.html#sim-dark"
+  },
+  {
+    "id": "sensorbook/noise/sim-rnb",
+    "bookId": "sensorbook",
+    "title": "읽기 노이즈 예산 워터폴 + RTS 몬테카를로",
+    "link": "chapters/noise.html#sim-rnb"
+  },
+  {
+    "id": "sensorbook/noise/sim-pc",
+    "bookId": "sensorbook",
+    "title": "광자 계수 — 서브전자 노이즈의 히스토그램과 오류율",
+    "link": "chapters/noise.html#sim-pc"
+  },
+  {
+    "id": "sensorbook/noise/sim-nps",
+    "bookId": "sensorbook",
+    "title": "다크 프레임 2-D FFT — 노이즈 파워 스펙트럼으로 성분 분리",
+    "link": "chapters/noise.html#sim-nps"
   },
   {
     "id": "sensorbook/noise/sim-snr",
@@ -8970,6 +9486,12 @@
     "link": "chapters/noise.html#sim-gain"
   },
   {
+    "id": "sensorbook/noise/sim-ispn",
+    "bookId": "sensorbook",
+    "title": "회색 패치 노이즈의 ISP 전파 — WB · CCM · 감마 · 색 NR",
+    "link": "chapters/noise.html#sim-ispn"
+  },
+  {
     "id": "sensorbook/optics/sim-ray",
     "bookId": "sensorbook",
     "title": "광선 추적: 얇은 렌즈 결상과 착란원",
@@ -9000,6 +9522,18 @@
     "link": "chapters/optics.html#sim-mtf"
   },
   {
+    "id": "sensorbook/optics/sim-rt",
+    "bookId": "sensorbook",
+    "title": "광선 추적기: 실제 렌즈의 광선 팬과 스폿 다이어그램",
+    "link": "chapters/optics.html#sim-rt"
+  },
+  {
+    "id": "sensorbook/optics/sim-psf",
+    "bookId": "sensorbook",
+    "title": "동공 → PSF → MTF: 128² FFT 파동광학 계산",
+    "link": "chapters/optics.html#sim-psf"
+  },
+  {
     "id": "sensorbook/optics/sim-cra",
     "bookId": "sensorbook",
     "title": "마이크로렌즈 시프트와 주변부 감도",
@@ -9010,6 +9544,12 @@
     "bookId": "sensorbook",
     "title": "상대 조도 지도와 쉐이딩 보정 게인",
     "link": "chapters/optics.html#sim-shade"
+  },
+  {
+    "id": "sensorbook/optics/sim-ircf",
+    "bookId": "sensorbook",
+    "title": "IR 컷 필터: 전달 행렬로 본 엣지 이동, 컬러 쉐이딩, 적색 고스트",
+    "link": "chapters/optics.html#sim-ircf"
   },
   {
     "id": "sensorbook/photodiode/sim-abs",
@@ -9024,10 +9564,40 @@
     "link": "chapters/photodiode.html#sim-band"
   },
   {
+    "id": "sensorbook/photodiode/sim-cv",
+    "bookId": "sensorbook",
+    "title": "3T 적분 과도 응답과 변환 이득의 변화 (C(V) 뉴턴 풀이)",
+    "link": "chapters/photodiode.html#sim-cv"
+  },
+  {
+    "id": "sensorbook/photodiode/sim-iv",
+    "bookId": "sensorbook",
+    "title": "빛을 받는 다이오드의 I–V, 개방 전압, 로그 대 선형 응답",
+    "link": "chapters/photodiode.html#sim-iv"
+  },
+  {
+    "id": "sensorbook/photodiode/sim-ppd",
+    "bookId": "sensorbook",
+    "title": "PPD 1-D 푸아송 풀이: 도핑 → 피닝 전압, 풀웰, 잔류 전하",
+    "link": "chapters/photodiode.html#sim-ppd"
+  },
+  {
     "id": "sensorbook/photodiode/sim-qe",
     "bookId": "sensorbook",
     "title": "QE 곡선 빌더",
     "link": "chapters/photodiode.html#sim-qe"
+  },
+  {
+    "id": "sensorbook/photodiode/sim-iqe",
+    "bookId": "sensorbook",
+    "title": "수집 확률 φ(z)와 IQE(λ): FSI 대 BSI (유한차분 풀이)",
+    "link": "chapters/photodiode.html#sim-iqe"
+  },
+  {
+    "id": "sensorbook/photodiode/sim-speed",
+    "bookId": "sensorbook",
+    "title": "임펄스 응답과 주파수 응답: iToF 변조 대비 계산",
+    "link": "chapters/photodiode.html#sim-speed"
   },
   {
     "id": "sensorbook/pixel/sim-p3",
@@ -9048,10 +9618,34 @@
     "link": "chapters/pixel.html#sim-xt"
   },
   {
+    "id": "sensorbook/pixel/sim-lg",
+    "bookId": "sensorbook",
+    "title": "DTI 광 가이드 — NIR 경로 증대와 크로스토크",
+    "link": "chapters/pixel.html#sim-lg"
+  },
+  {
+    "id": "sensorbook/pixel/sim-mc",
+    "bookId": "sensorbook",
+    "title": "전하 수집 3-D 몬테카를로 — 확산 · 드리프트 · DTI · 표면 재결합",
+    "link": "chapters/pixel.html#sim-mc"
+  },
+  {
+    "id": "sensorbook/pixel/sim-ar",
+    "bookId": "sensorbook",
+    "title": "각도 응답 광선 추적 — 스택 높이 · 그리드 · DTI",
+    "link": "chapters/pixel.html#sim-ar"
+  },
+  {
     "id": "sensorbook/pixel/sim-fw",
     "bookId": "sensorbook",
     "title": "픽셀 크기 → 풀웰 · 최대 SNR · 다이내믹 레인지",
     "link": "chapters/pixel.html#sim-fw"
+  },
+  {
+    "id": "sensorbook/pixel/sim-pd",
+    "bookId": "sensorbook",
+    "title": "PD 단면 2-D 포아송 해석 — 피닝 전압과 풀웰",
+    "link": "chapters/pixel.html#sim-pd"
   },
   {
     "id": "sensorbook/readout/sim-4t",
@@ -9066,16 +9660,40 @@
     "link": "chapters/readout.html#sim-cg"
   },
   {
+    "id": "sensorbook/readout/sim-dcg",
+    "bookId": "sensorbook",
+    "title": "DCG 픽셀 — FD 전달 곡선 · 노이즈 · 풀웰",
+    "link": "chapters/readout.html#sim-dcg"
+  },
+  {
     "id": "sensorbook/readout/sim-cds",
     "bookId": "sensorbook",
     "title": "CDS가 kTC 노이즈를 지우는 과정",
     "link": "chapters/readout.html#sim-cds"
   },
   {
+    "id": "sensorbook/readout/sim-rnpsd",
+    "bookId": "sensorbook",
+    "title": "읽기 노이즈 계산기 — 노이즈 PSD × CDS/CMS 전달 함수",
+    "link": "chapters/readout.html#sim-rnpsd"
+  },
+  {
     "id": "sensorbook/readout/sim-adc",
     "bookId": "sensorbook",
     "title": "싱글 슬로프 ADC — 램프 · 비교기 · 카운터",
     "link": "chapters/readout.html#sim-adc"
+  },
+  {
+    "id": "sensorbook/readout/sim-adcarch",
+    "bookId": "sensorbook",
+    "title": "컬럼 ADC 구조 비교 — 변환 과정과 코드 밀도 시험",
+    "link": "chapters/readout.html#sim-adcarch"
+  },
+  {
+    "id": "sensorbook/readout/sim-settle",
+    "bookId": "sensorbook",
+    "title": "컬럼 라인 정착 — 슬루잉 · 선형 정착 · 라인 시간",
+    "link": "chapters/readout.html#sim-settle"
   },
   {
     "id": "sensorbook/readout/sim-fps",
@@ -9090,10 +9708,34 @@
     "link": "chapters/shutter.html#sim-rs"
   },
   {
+    "id": "sensorbook/shutter/sim-prop",
+    "bookId": "sensorbook",
+    "title": "프로펠러 캡처 — 행별 샘플링, 날개 조각 수(연결 성분), 스트로보 겉보기 회전",
+    "link": "chapters/shutter.html#sim-prop"
+  },
+  {
+    "id": "sensorbook/shutter/sim-gsn",
+    "bookId": "sensorbook",
+    "title": "GS 저장 오차 에뮬레이터 — PLS 유령, 저장 누설, kTC (전하 vs 전압 영역)",
+    "link": "chapters/shutter.html#sim-gsn"
+  },
+  {
     "id": "sensorbook/shutter/sim-fl",
     "bookId": "sensorbook",
     "title": "조명 플리커와 롤링 셔터 띠",
     "link": "chapters/shutter.html#sim-fl"
+  },
+  {
+    "id": "sensorbook/shutter/sim-dol",
+    "bookId": "sensorbook",
+    "title": "스태거드 DOL 타이밍 다이어그램 — 라인 버퍼, 노출 간격, 모션 어긋남",
+    "link": "chapters/shutter.html#sim-dol"
+  },
+  {
+    "id": "sensorbook/shutter/sim-sehdr",
+    "bookId": "sensorbook",
+    "title": "단일 노출 HDR — DCG · LOFIC · 분할 픽셀의 SNR 곡선과 램프 차트 몬테카를로",
+    "link": "chapters/shutter.html#sim-sehdr"
   },
   {
     "id": "sensorbook/shutter/sim-hdr",
@@ -9102,10 +9744,28 @@
     "link": "chapters/shutter.html#sim-hdr"
   },
   {
+    "id": "sensorbook/shutter/sim-tmo",
+    "bookId": "sensorbook",
+    "title": "톤 매핑 연산자 비교 — 전역 곡선, 로컬 가우시안 vs 가이디드 필터, 헤일로 측정",
+    "link": "chapters/shutter.html#sim-tmo"
+  },
+  {
+    "id": "sensorbook/space/sim-phot",
+    "bookId": "sensorbook",
+    "title": "구경 측광 몬테카를로: CCD 방정식과 한계 등급",
+    "link": "chapters/space.html#sim-phot"
+  },
+  {
     "id": "sensorbook/space/sim-cte",
     "bookId": "sensorbook",
     "title": "궤도 누적 방사선과 CTE 트레일",
     "link": "chapters/space.html#sim-cte"
+  },
+  {
+    "id": "sensorbook/space/sim-cr",
+    "bookId": "sensorbook",
+    "title": "우주선 제거: 평균 · 중앙값 · 시그마 클리핑 스택",
+    "link": "chapters/space.html#sim-cr"
   },
   {
     "id": "sensorbook/space/sim-utr",
@@ -9114,16 +9774,34 @@
     "link": "chapters/space.html#sim-utr"
   },
   {
+    "id": "sensorbook/space/sim-cool",
+    "bookId": "sensorbook",
+    "title": "냉각 목표 찾기: 암전류 모델과 방열판 면적",
+    "link": "chapters/space.html#sim-cool"
+  },
+  {
     "id": "sensorbook/space/sim-tdi",
     "bookId": "sensorbook",
     "title": "TDI 단 수와 속도 동기",
     "link": "chapters/space.html#sim-tdi"
   },
   {
+    "id": "sensorbook/space/sim-eo",
+    "bookId": "sensorbook",
+    "title": "지구 관측 TDI 카메라: 궤도 · 복사량 · MTF 사슬과 FFT 영상",
+    "link": "chapters/space.html#sim-eo"
+  },
+  {
     "id": "sensorbook/space/sim-pc",
     "bookId": "sensorbook",
     "title": "저조도 SNR 비교: CCD · EMCCD · sCMOS · 스키퍼",
     "link": "chapters/space.html#sim-pc"
+  },
+  {
+    "id": "sensorbook/space/sim-em",
+    "bookId": "sensorbook",
+    "title": "EMCCD 증배 몬테카를로: 과잉 잡음과 광자 계수 문턱",
+    "link": "chapters/space.html#sim-em"
   },
   {
     "id": "displaybook/addressing/sim-pm",
@@ -13152,6 +13830,66 @@
     "link": "chapters/agent.html#sim-ctx"
   },
   {
+    "id": "aibook/aisystem/sim-wfa",
+    "bookId": "aibook",
+    "title": "같은 과업, 두 방식: 워크플로 vs 에이전트 (정확한 확률 계산)",
+    "link": "chapters/aisystem.html#sim-wfa"
+  },
+  {
+    "id": "aibook/aisystem/sim-tc",
+    "bookId": "aibook",
+    "title": "툴 콜링 단계별 재생기: 모델의 요청 vs 앱의 실행",
+    "link": "chapters/aisystem.html#sim-tc"
+  },
+  {
+    "id": "aibook/aisystem/sim-quiz",
+    "bookId": "aibook",
+    "title": "개념 판별기: 이 시나리오의 핵심은 무엇인가?",
+    "link": "chapters/aisystem.html#sim-quiz"
+  },
+  {
+    "id": "aibook/aisystem/sim-ma",
+    "bookId": "aibook",
+    "title": "단일 vs 멀티 에이전트: 누적 토큰 · 최대 컨텍스트 · 벽시계 시간",
+    "link": "chapters/aisystem.html#sim-ma"
+  },
+  {
+    "id": "aibook/aisystem/sim-hitl",
+    "bookId": "aibook",
+    "title": "위험도 기반 에스컬레이션: 임계값과 사고·검토 부담의 트레이드오프",
+    "link": "chapters/aisystem.html#sim-hitl"
+  },
+  {
+    "id": "aibook/aisystem/sim-pk",
+    "bookId": "aibook",
+    "title": "pass@k vs pass^k: 과업 난이도가 고르지 않을 때",
+    "link": "chapters/aisystem.html#sim-pk"
+  },
+  {
+    "id": "aibook/aisystem/sim-guard",
+    "bookId": "aibook",
+    "title": "가드레일 파이프라인 검사기: 어느 층이 무엇을 막나",
+    "link": "chapters/aisystem.html#sim-guard"
+  },
+  {
+    "id": "aibook/aisystem/sim-trace",
+    "bookId": "aibook",
+    "title": "가상 트레이스 워터폴: 어디서 시간과 돈이 새나",
+    "link": "chapters/aisystem.html#sim-trace"
+  },
+  {
+    "id": "aibook/aisystem/sim-retry",
+    "bookId": "aibook",
+    "title": "재시도 설계기: 성공률 · 기대 지연 · 재시도 몰림",
+    "link": "chapters/aisystem.html#sim-retry"
+  },
+  {
+    "id": "aibook/aisystem/sim-fp",
+    "bookId": "aibook",
+    "title": "온도 0인데 왜 답이 바뀌나: float32 리덕션 순서와 argmax 뒤집힘",
+    "link": "chapters/aisystem.html#sim-fp"
+  },
+  {
     "id": "aibook/attention/sim-lookup",
     "bookId": "aibook",
     "title": "소프트 룩업: 쿼리를 끌어 키 사이를 돌아다니기",
@@ -13434,6 +14172,78 @@
     "link": "chapters/llm.html#sim-lm-diff"
   },
   {
+    "id": "aibook/ml/sim-ml-kmeans",
+    "bookId": "aibook",
+    "title": "k-means를 한 단계씩",
+    "link": "chapters/ml.html#sim-ml-kmeans"
+  },
+  {
+    "id": "aibook/ml/sim-ml-fit",
+    "bookId": "aibook",
+    "title": "다항 회귀: 복잡도 곡선과 학습 곡선으로 진단하기",
+    "link": "chapters/ml.html#sim-ml-fit"
+  },
+  {
+    "id": "aibook/ml/sim-ml-bv",
+    "bookId": "aibook",
+    "title": "곡선 다발로 보는 편향² + 분산",
+    "link": "chapters/ml.html#sim-ml-bv"
+  },
+  {
+    "id": "aibook/ml/sim-ml-leak",
+    "bookId": "aibook",
+    "title": "순수한 잡음에서 90% 정확도 만들기: 특성 선택 누수",
+    "link": "chapters/ml.html#sim-ml-leak"
+  },
+  {
+    "id": "aibook/ml/sim-ml-cv",
+    "bookId": "aibook",
+    "title": "fold 나누기와 점수: 무작위 vs 층화 vs 그룹 vs 시계열",
+    "link": "chapters/ml.html#sim-ml-cv"
+  },
+  {
+    "id": "aibook/ml/sim-ml-thr",
+    "bookId": "aibook",
+    "title": "임계값 하나로 움직이는 혼동 행렬, 정밀도·재현율, ROC·PR 곡선",
+    "link": "chapters/ml.html#sim-ml-thr"
+  },
+  {
+    "id": "aibook/multimodal/sim-clip",
+    "bookId": "aibook",
+    "title": "CLIP 유사도 행렬과 InfoNCE 손실",
+    "link": "chapters/multimodal.html#sim-clip"
+  },
+  {
+    "id": "aibook/multimodal/sim-patch",
+    "bookId": "aibook",
+    "title": "이미지 → 시각 토큰 수 계산기",
+    "link": "chapters/multimodal.html#sim-patch"
+  },
+  {
+    "id": "aibook/multimodal/sim-wer",
+    "bookId": "aibook",
+    "title": "WER 계산기: 편집 거리 DP와 역추적",
+    "link": "chapters/multimodal.html#sim-wer"
+  },
+  {
+    "id": "aibook/multimodal/sim-diff",
+    "bookId": "aibook",
+    "title": "2D 디퓨전: 순방향 잡음과 해석적 스코어 역과정",
+    "link": "chapters/multimodal.html#sim-diff"
+  },
+  {
+    "id": "aibook/multimodal/sim-video",
+    "bookId": "aibook",
+    "title": "영상 토큰 수와 어텐션 규모",
+    "link": "chapters/multimodal.html#sim-video"
+  },
+  {
+    "id": "aibook/multimodal/sim-ondevice",
+    "bookId": "aibook",
+    "title": "온디바이스 토큰/초 상한 계산기",
+    "link": "chapters/multimodal.html#sim-ondevice"
+  },
+  {
     "id": "aibook/neuron/sim-nr-perc",
     "bookId": "aibook",
     "title": "퍼셉트론: 경계선을 직접 돌리거나 학습시키기",
@@ -13474,6 +14284,84 @@
     "bookId": "aibook",
     "title": "MLP 파라미터 계산기",
     "link": "chapters/neuron.html#sim-nr-params"
+  },
+  {
+    "id": "aibook/practice/sim-halluc",
+    "bookId": "aibook",
+    "title": "문장별 근거 지지도 하이라이터",
+    "link": "chapters/practice.html#sim-halluc"
+  },
+  {
+    "id": "aibook/practice/sim-pareto",
+    "bookId": "aibook",
+    "title": "실패 범주 파레토: 빈도 vs 빈도×영향",
+    "link": "chapters/practice.html#sim-pareto"
+  },
+  {
+    "id": "aibook/practice/sim-cost",
+    "bookId": "aibook",
+    "title": "월 비용 · 기대 정확도 · 지연 계산기",
+    "link": "chapters/practice.html#sim-cost"
+  },
+  {
+    "id": "aibook/practice/sim-pii",
+    "bookId": "aibook",
+    "title": "정규식 PII 마스킹기 (가상 데이터)",
+    "link": "chapters/practice.html#sim-pii"
+  },
+  {
+    "id": "aibook/practice/sim-ci",
+    "bookId": "aibook",
+    "title": "평가 세트 크기와 정확도 차이의 신뢰구간",
+    "link": "chapters/practice.html#sim-ci"
+  },
+  {
+    "id": "aibook/practice/sim-code",
+    "bookId": "aibook",
+    "title": "결함 찾기: AI가 생성한 코드 리뷰하기",
+    "link": "chapters/practice.html#sim-code"
+  },
+  {
+    "id": "aibook/prompt/sim-fewshot",
+    "bookId": "aibook",
+    "title": "Few-shot 비용 계산기: 예시 k개는 얼마인가",
+    "link": "chapters/prompt.html#sim-fewshot"
+  },
+  {
+    "id": "aibook/prompt/sim-builder",
+    "bookId": "aibook",
+    "title": "프롬프트 빌더: 부품을 켜고 끄며 조립하기",
+    "link": "chapters/prompt.html#sim-builder"
+  },
+  {
+    "id": "aibook/prompt/sim-schema",
+    "bookId": "aibook",
+    "title": "미니 JSON 스키마 검증기",
+    "link": "chapters/prompt.html#sim-schema"
+  },
+  {
+    "id": "aibook/prompt/sim-sc",
+    "bookId": "aibook",
+    "title": "Self-consistency 계산기: 샘플 k개의 다수결 정확도",
+    "link": "chapters/prompt.html#sim-sc"
+  },
+  {
+    "id": "aibook/prompt/sim-chain",
+    "bookId": "aibook",
+    "title": "체인 오류 누적: 단계 수, 성공률, 검증 게이트",
+    "link": "chapters/prompt.html#sim-chain"
+  },
+  {
+    "id": "aibook/prompt/sim-inject",
+    "bookId": "aibook",
+    "title": "인젝션 하이라이터: 어느 줄이 '지시처럼' 보이는가",
+    "link": "chapters/prompt.html#sim-inject"
+  },
+  {
+    "id": "aibook/prompt/sim-ab",
+    "bookId": "aibook",
+    "title": "A/B 평가: 평가 세트 크기와 신뢰구간",
+    "link": "chapters/prompt.html#sim-ab"
   },
   {
     "id": "aibook/quantization/sim-bits",
@@ -13758,6 +14646,18 @@
     "link": "chapters/cases.html#sim-lessons"
   },
   {
+    "id": "axbook/experiments/sim-read",
+    "bookId": "axbook",
+    "title": "AI 가독성 점검기: 실험 기록 한 건에 무엇이 있어야 AI가 답하나",
+    "link": "chapters/experiments.html#sim-read"
+  },
+  {
+    "id": "axbook/experiments/sim-drift",
+    "bookId": "axbook",
+    "title": "기준 드리프트 시뮬레이터: 시간이 갈수록 비교할 수 있는 실험이 줄어든다",
+    "link": "chapters/experiments.html#sim-drift"
+  },
+  {
     "id": "axbook/foundation/sim-dq",
     "bookId": "axbook",
     "title": "데이터 품질 스코어카드 — 오류를 주입해 보자",
@@ -13800,6 +14700,12 @@
     "link": "chapters/goals.html#sim-check"
   },
   {
+    "id": "axbook/goals/sim-trust",
+    "bookId": "axbook",
+    "title": "성과 신뢰도 점검기: 보고된 절감 시간 중 얼마를 믿을 수 있나",
+    "link": "chapters/goals.html#sim-trust"
+  },
+  {
     "id": "axbook/governance/sim-risk",
     "bookId": "axbook",
     "title": "유스케이스 리스크 분류 마법사",
@@ -13810,6 +14716,12 @@
     "bookId": "axbook",
     "title": "데이터 등급 × 배포 방식 허용 매트릭스",
     "link": "chapters/governance.html#sim-matrix"
+  },
+  {
+    "id": "axbook/governance/sim-pareto",
+    "bookId": "axbook",
+    "title": "보안 정책 파레토 프런티어: 우리 회사는 어디에 설 것인가",
+    "link": "chapters/governance.html#sim-pareto"
   },
   {
     "id": "axbook/governance/sim-hallu",
@@ -13854,6 +14766,24 @@
     "link": "chapters/legacy.html#sim-mail"
   },
   {
+    "id": "axbook/measure/sim-design",
+    "bookId": "axbook",
+    "title": "지표 설계기: 우리 과제는 무엇으로 재나",
+    "link": "chapters/measure.html#sim-design"
+  },
+  {
+    "id": "axbook/measure/sim-did",
+    "bookId": "axbook",
+    "title": "전후 비교와 이중차분: 외부 변화가 섞일 때",
+    "link": "chapters/measure.html#sim-did"
+  },
+  {
+    "id": "axbook/measure/sim-n",
+    "bookId": "axbook",
+    "title": "표본 크기 계산기",
+    "link": "chapters/measure.html#sim-n"
+  },
+  {
     "id": "axbook/people/sim-om",
     "bookId": "axbook",
     "title": "운영 모델 선택기",
@@ -13896,6 +14826,54 @@
     "link": "chapters/process.html#sim-exp"
   },
   {
+    "id": "axbook/questions/sim-fad",
+    "bookId": "axbook",
+    "title": "우리 AX는 캠페인형인가, 체질 전환형인가",
+    "link": "chapters/questions.html#sim-fad"
+  },
+  {
+    "id": "axbook/questions/sim-j",
+    "bookId": "axbook",
+    "title": "J-커브와 중단 시점: 언제 멈추면 손해인가",
+    "link": "chapters/questions.html#sim-j"
+  },
+  {
+    "id": "axbook/questions/sim-senior",
+    "bookId": "axbook",
+    "title": "숙련자 병목 시뮬레이터: 질문이 한 사람에게 몰릴 때",
+    "link": "chapters/questions.html#sim-senior"
+  },
+  {
+    "id": "axbook/reporting/sim-cost",
+    "bookId": "axbook",
+    "title": "보고 증폭 계산기: 질문 하나의 값",
+    "link": "chapters/reporting.html#sim-cost"
+  },
+  {
+    "id": "axbook/reporting/sim-tri",
+    "bookId": "axbook",
+    "title": "이 보고, 어떤 형태여야 하나",
+    "link": "chapters/reporting.html#sim-tri"
+  },
+  {
+    "id": "axbook/reporting/sim-worth",
+    "bookId": "axbook",
+    "title": "산출물 가치–비용 점검기",
+    "link": "chapters/reporting.html#sim-worth"
+  },
+  {
+    "id": "axbook/reporting/sim-cad",
+    "bookId": "axbook",
+    "title": "우선순위 변동 시뮬레이터: 골고루 챙길 때와 순서대로 끝낼 때",
+    "link": "chapters/reporting.html#sim-cad"
+  },
+  {
+    "id": "axbook/reporting/sim-staff",
+    "bookId": "axbook",
+    "title": "평가하는 조직의 AX 자가진단",
+    "link": "chapters/reporting.html#sim-staff"
+  },
+  {
     "id": "axbook/roadmap/sim-stage",
     "bookId": "axbook",
     "title": "단계 판정기: 현재 단계와 다음 졸업 조건",
@@ -13912,6 +14890,12 @@
     "bookId": "axbook",
     "title": "투자 배분 시뮬레이터: 누적 가치 곡선",
     "link": "chapters/roadmap.html#sim-invest"
+  },
+  {
+    "id": "axbook/roadmap/sim-balance",
+    "bookId": "axbook",
+    "title": "투자 균형 시뮬레이터: 가장 약한 고리가 성과를 정한다",
+    "link": "chapters/roadmap.html#sim-balance"
   },
   {
     "id": "axbook/semantics/sim-mapping",
@@ -13948,6 +14932,18 @@
     "bookId": "axbook",
     "title": "보전 전략 비용 비교 — 사후 · 예방 · 예지",
     "link": "chapters/shopfloor.html#sim-pm"
+  },
+  {
+    "id": "axbook/system/sim-flow",
+    "bookId": "axbook",
+    "title": "흐름 시뮬레이터: 팀 안을 줄일까, 팀 사이를 줄일까",
+    "link": "chapters/system.html#sim-flow"
+  },
+  {
+    "id": "axbook/system/sim-value",
+    "bookId": "axbook",
+    "title": "가치 실현 계산기: 장부상 가치와 실현된 가치",
+    "link": "chapters/system.html#sim-value"
   },
   {
     "id": "axbook/usecases/sim-decomp",
@@ -24576,6 +25572,12 @@
     "link": "chapters/glossary.html#sim-units"
   },
   {
+    "id": "bodybook/glucose/sim-gl-3d",
+    "bookId": "bodybook",
+    "title": "3D로 보는 이자와 간",
+    "link": "chapters/glucose.html#sim-gl-3d"
+  },
+  {
     "id": "bodybook/glucose/sim-gl-ogtt",
     "bookId": "bodybook",
     "title": "포도당 부하 검사의 네 곡선",
@@ -24634,6 +25636,12 @@
     "bookId": "bodybook",
     "title": "한 박동을 느린 화면으로",
     "link": "chapters/heart.html#sim-beat"
+  },
+  {
+    "id": "bodybook/heart/sim-ht-3d",
+    "bookId": "bodybook",
+    "title": "3D로 보는 심장",
+    "link": "chapters/heart.html#sim-ht-3d"
   },
   {
     "id": "bodybook/heart/sim-wiggers",
@@ -24738,6 +25746,12 @@
     "link": "chapters/homeostasis.html#sim-hs-build"
   },
   {
+    "id": "bodybook/hormone/sim-hm-3d",
+    "bookId": "bodybook",
+    "title": "3D로 보는 내분비샘",
+    "link": "chapters/hormone.html#sim-hm-3d"
+  },
+  {
     "id": "bodybook/hormone/sim-hm-wire",
     "bookId": "bodybook",
     "title": "전선으로 보낼까, 방송할까",
@@ -24796,6 +25810,12 @@
     "bookId": "bodybook",
     "title": "180 L가 1.5 L가 되기까지",
     "link": "chapters/kidney.html#sim-kd-nephron"
+  },
+  {
+    "id": "bodybook/kidney/sim-kd-3d",
+    "bookId": "bodybook",
+    "title": "3D로 보는 콩팥과 요로",
+    "link": "chapters/kidney.html#sim-kd-3d"
   },
   {
     "id": "bodybook/kidney/sim-kd-gfr",
@@ -24918,6 +25938,12 @@
     "link": "chapters/lungs.html#sim-lu-lap"
   },
   {
+    "id": "bodybook/lungs/sim-lu-3d",
+    "bookId": "bodybook",
+    "title": "3D로 보는 기관지 나무",
+    "link": "chapters/lungs.html#sim-lu-3d"
+  },
+  {
     "id": "bodybook/lungs/sim-lu-aw",
     "bookId": "bodybook",
     "title": "기관지 반지름과 저항",
@@ -25000,6 +26026,12 @@
     "bookId": "bodybook",
     "title": "근육에서 분자까지 확대하기",
     "link": "chapters/muscle.html#mu-zoom"
+  },
+  {
+    "id": "bodybook/muscle/sim-mu-3d",
+    "bookId": "bodybook",
+    "title": "3D로 보는 골격근",
+    "link": "chapters/muscle.html#sim-mu-3d"
   },
   {
     "id": "bodybook/muscle/mu-slide",
@@ -25104,6 +26136,12 @@
     "link": "chapters/nerve.html#sim-nv-reflex"
   },
   {
+    "id": "bodybook/nerve/sim-nv-3d",
+    "bookId": "bodybook",
+    "title": "3D로 보는 뇌와 척수",
+    "link": "chapters/nerve.html#sim-nv-3d"
+  },
+  {
     "id": "bodybook/nerve/sim-nv-ans",
     "bookId": "bodybook",
     "title": "교감과 부교감의 줄다리기",
@@ -25114,6 +26152,12 @@
     "bookId": "bodybook",
     "title": "출발 신호에서 첫발까지",
     "link": "chapters/nerve.html#sim-nv-react"
+  },
+  {
+    "id": "bodybook/overview/sim-ov-3d",
+    "bookId": "bodybook",
+    "title": "3D로 보는 몸 속",
+    "link": "chapters/overview.html#sim-ov-3d"
   },
   {
     "id": "bodybook/overview/sim-ov-map",
@@ -25234,6 +26278,12 @@
     "bookId": "bodybook",
     "title": "병렬 회로: 장기마다 따로 여닫는 꼭지",
     "link": "chapters/vessels.html#sim-parallel"
+  },
+  {
+    "id": "bodybook/vessels/sim-vs-3d",
+    "bookId": "bodybook",
+    "title": "3D로 보는 온몸의 혈관",
+    "link": "chapters/vessels.html#sim-vs-3d"
   },
   {
     "id": "bodybook/vessels/sim-circuit",

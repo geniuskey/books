@@ -25,8 +25,8 @@ jobs:
           path: semi-books
       - uses: actions/checkout@v4
         with:
-          repository: geniuskey/computerbook
-          path: computerbook
+          repository: geniuskey/computing-books
+          path: computing-books
       - uses: actions/setup-node@v4
         with:
           node-version: '22'

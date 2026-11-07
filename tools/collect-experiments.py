@@ -36,7 +36,7 @@ def collect(book_ids=None):
         if book_ids is not None and book['id'] not in book_ids:
             entries.extend(cached.get(book['id'], []))
             continue
-        # 서가 저장소의 한 권은 checkout에 하위 경로를 적는다(예: artbook/color). 없으면 책 ID 폴더.
+        # 서가 저장소의 한 권은 checkout에 하위 경로를 적는다(예: art-books/color). 없으면 책 ID 폴더.
         chapters = ROOT.parent / book.get('checkout', book['id']) / 'chapters'
         if not chapters.is_dir():
             raise FileNotFoundError(f'Book checkout is required: {chapters}')
