@@ -45330,6 +45330,3852 @@
     "link": "chapters/timber.html#sim-tm-fire"
   },
   {
+    "id": "geotechbook/bearing/sim-br-mech",
+    "bookId": "geotechbook",
+    "title": "파괴 메커니즘: φ′가 커지면 파괴 영역이 커진다",
+    "link": "chapters/bearing.html#sim-br-mech"
+  },
+  {
+    "id": "geotechbook/bearing/sim-br-factors",
+    "bookId": "geotechbook",
+    "title": "φ′와 지지력 계수: Vesic vs Meyerhof",
+    "link": "chapters/bearing.html#sim-br-factors"
+  },
+  {
+    "id": "geotechbook/bearing/sim-br-calc",
+    "bookId": "geotechbook",
+    "title": "지지력 계산기: 세 항으로 나누어 보기",
+    "link": "chapters/bearing.html#sim-br-calc"
+  },
+  {
+    "id": "geotechbook/bearing/sim-br-gwl",
+    "bookId": "geotechbook",
+    "title": "지하수위가 올라오면",
+    "link": "chapters/bearing.html#sim-br-gwl"
+  },
+  {
+    "id": "geotechbook/bearing/sim-br-ecc",
+    "bookId": "geotechbook",
+    "title": "편심 하중: 접지압과 유효 폭",
+    "link": "chapters/bearing.html#sim-br-ecc"
+  },
+  {
+    "id": "geotechbook/bearing/sim-br-comp",
+    "bookId": "geotechbook",
+    "title": "보상 기초: 얼마나 파면 침하가 사라지나",
+    "link": "chapters/bearing.html#sim-br-comp"
+  },
+  {
+    "id": "geotechbook/bearing/sim-br-plt",
+    "bookId": "geotechbook",
+    "title": "평판 재하 시험 곡선 읽기",
+    "link": "chapters/bearing.html#sim-br-plt"
+  },
+  {
+    "id": "geotechbook/bearing/sim-br-layer",
+    "bookId": "geotechbook",
+    "title": "강한 층의 두께와 아래 점토의 관입",
+    "link": "chapters/bearing.html#sim-br-layer"
+  },
+  {
+    "id": "geotechbook/classification/sim-cl-sieve",
+    "bookId": "geotechbook",
+    "title": "입도 곡선 만들기: 점을 끌어 D₁₀·D₆₀·C u ·C c",
+    "link": "chapters/classification.html#sim-cl-sieve"
+  },
+  {
+    "id": "geotechbook/classification/sim-cl-stokes",
+    "bookId": "geotechbook",
+    "title": "스토크스 침강: 입자 크기와 시간",
+    "link": "chapters/classification.html#sim-cl-stokes"
+  },
+  {
+    "id": "geotechbook/classification/sim-cl-ll",
+    "bookId": "geotechbook",
+    "title": "액성 한계 시험: 유동 곡선에서 LL 읽기",
+    "link": "chapters/classification.html#sim-cl-ll"
+  },
+  {
+    "id": "geotechbook/classification/sim-cl-chart",
+    "bookId": "geotechbook",
+    "title": "소성도 위에 점 끌기 → 기호와 이름",
+    "link": "chapters/classification.html#sim-cl-chart"
+  },
+  {
+    "id": "geotechbook/classification/sim-cl-uscs",
+    "bookId": "geotechbook",
+    "title": "USCS 판정 흐름도 마법사",
+    "link": "chapters/classification.html#sim-cl-uscs"
+  },
+  {
+    "id": "geotechbook/classification/sim-cl-aashto",
+    "bookId": "geotechbook",
+    "title": "AASHTO 분류와 군지수 계산기",
+    "link": "chapters/classification.html#sim-cl-aashto"
+  },
+  {
+    "id": "geotechbook/classification/sim-cl-mineral",
+    "bookId": "geotechbook",
+    "title": "점토 광물 비교: 활성도와 이중층",
+    "link": "chapters/classification.html#sim-cl-mineral"
+  },
+  {
+    "id": "geotechbook/classification/sim-cl-game",
+    "bookId": "geotechbook",
+    "title": "흙 표본 맞히기: 성질 → 분류 기호",
+    "link": "chapters/classification.html#sim-cl-game"
+  },
+  {
+    "id": "geotechbook/consolidation/sim-cn-piston",
+    "bookId": "geotechbook",
+    "title": "스프링–피스톤 모형: 물이 빠지며 스프링이 하중을 넘겨받는다",
+    "link": "chapters/consolidation.html#sim-cn-piston"
+  },
+  {
+    "id": "geotechbook/consolidation/sim-cn-oedo",
+    "bookId": "geotechbook",
+    "title": "압밀 시험기: 하중 단계를 하나씩 걸어 e–log σ′ 곡선 만들기",
+    "link": "chapters/consolidation.html#sim-cn-oedo"
+  },
+  {
+    "id": "geotechbook/consolidation/sim-cn-casa",
+    "bookId": "geotechbook",
+    "title": "캐사그란데 작도: 최대 곡률점을 끌어 σ′ p 찾기",
+    "link": "chapters/consolidation.html#sim-cn-casa"
+  },
+  {
+    "id": "geotechbook/consolidation/sim-cn-settle",
+    "bookId": "geotechbook",
+    "title": "1차 압밀 침하량 계산기: 정규압밀·과압밀 분기",
+    "link": "chapters/consolidation.html#sim-cn-settle"
+  },
+  {
+    "id": "geotechbook/consolidation/sim-cn-iso",
+    "bookId": "geotechbook",
+    "title": "등시곡선: E-4 점토층 속 과잉간극수압이 빠지는 모습",
+    "link": "chapters/consolidation.html#sim-cn-iso"
+  },
+  {
+    "id": "geotechbook/consolidation/sim-cn-time",
+    "bookId": "geotechbook",
+    "title": "U–T v 곡선과 압밀 시간 계산",
+    "link": "chapters/consolidation.html#sim-cn-time"
+  },
+  {
+    "id": "geotechbook/consolidation/sim-cn-fit",
+    "bookId": "geotechbook",
+    "title": "시간–침하 데이터에 직선을 끌어 c v 구하기",
+    "link": "chapters/consolidation.html#sim-cn-fit"
+  },
+  {
+    "id": "geotechbook/consolidation/sim-cn-e4",
+    "bookId": "geotechbook",
+    "title": "E-4 시간–침하: 개통 뒤에 얼마나 더 내려앉나",
+    "link": "chapters/consolidation.html#sim-cn-e4"
+  },
+  {
+    "id": "geotechbook/dynamics/sim-dy-wave",
+    "bookId": "geotechbook",
+    "title": "전단파가 G-10을 올라오는 모습",
+    "link": "chapters/dynamics.html#sim-dy-wave"
+  },
+  {
+    "id": "geotechbook/dynamics/sim-dy-ggmax",
+    "bookId": "geotechbook",
+    "title": "이력 곡선, G/G max , 감쇠 곡선",
+    "link": "chapters/dynamics.html#sim-dy-ggmax"
+  },
+  {
+    "id": "geotechbook/dynamics/sim-dy-tf",
+    "bookId": "geotechbook",
+    "title": "흙층의 증폭 곡선과 공진",
+    "link": "chapters/dynamics.html#sim-dy-tf"
+  },
+  {
+    "id": "geotechbook/dynamics/sim-dy-vs30",
+    "bookId": "geotechbook",
+    "title": "V s30 과 지반 분류 계산기",
+    "link": "chapters/dynamics.html#sim-dy-vs30"
+  },
+  {
+    "id": "geotechbook/dynamics/sim-dy-cyclic",
+    "bookId": "geotechbook",
+    "title": "반복 삼축 시험: 간극수압이 쌓이는 과정",
+    "link": "chapters/dynamics.html#sim-dy-cyclic"
+  },
+  {
+    "id": "geotechbook/dynamics/sim-dy-profile",
+    "bookId": "geotechbook",
+    "title": "G-10 액상화 판정 단면",
+    "link": "chapters/dynamics.html#sim-dy-profile"
+  },
+  {
+    "id": "geotechbook/dynamics/sim-dy-remedy",
+    "bookId": "geotechbook",
+    "title": "대책 비교: 다짐과 지하수위 저하",
+    "link": "chapters/dynamics.html#sim-dy-remedy"
+  },
+  {
+    "id": "geotechbook/dynamics/sim-dy-machine",
+    "bookId": "geotechbook",
+    "title": "기계 기초의 공진 회피",
+    "link": "chapters/dynamics.html#sim-dy-machine"
+  },
+  {
+    "id": "geotechbook/earth-pressure/sim-ep-move",
+    "bookId": "geotechbook",
+    "title": "벽을 움직여 토압 계수 바꾸기",
+    "link": "chapters/earth-pressure.html#sim-ep-move"
+  },
+  {
+    "id": "geotechbook/earth-pressure/sim-ep-mohr",
+    "bookId": "geotechbook",
+    "title": "랭킨의 모어 원: σ′ h 를 줄이고 늘리기",
+    "link": "chapters/earth-pressure.html#sim-ep-mohr"
+  },
+  {
+    "id": "geotechbook/earth-pressure/sim-ep-dist",
+    "bookId": "geotechbook",
+    "title": "토압 분포 그리기: 층 · 지하수 · 상재 하중 · 점착력",
+    "link": "chapters/earth-pressure.html#sim-ep-dist"
+  },
+  {
+    "id": "geotechbook/earth-pressure/sim-ep-crack",
+    "bookId": "geotechbook",
+    "title": "인장 균열과 자립 높이",
+    "link": "chapters/earth-pressure.html#sim-ep-crack"
+  },
+  {
+    "id": "geotechbook/earth-pressure/sim-ep-wedge",
+    "bookId": "geotechbook",
+    "title": "시행 쐐기: 활동면을 끌어 최대 토압 찾기",
+    "link": "chapters/earth-pressure.html#sim-ep-wedge"
+  },
+  {
+    "id": "geotechbook/earth-pressure/sim-ep-coef",
+    "bookId": "geotechbook",
+    "title": "K a ·K p 비교: 랭킨 vs 쿨롱",
+    "link": "chapters/earth-pressure.html#sim-ep-coef"
+  },
+  {
+    "id": "geotechbook/earth-pressure/sim-ep-mo",
+    "bookId": "geotechbook",
+    "title": "지진 계수 k h → K AE (모노노베–오카베)",
+    "link": "chapters/earth-pressure.html#sim-ep-mo"
+  },
+  {
+    "id": "geotechbook/earth-pressure/sim-ep-t36",
+    "bookId": "geotechbook",
+    "title": "T-36 교대 토압 계산기",
+    "link": "chapters/earth-pressure.html#sim-ep-t36"
+  },
+  {
+    "id": "geotechbook/effective-stress/sim-es-contact",
+    "bookId": "geotechbook",
+    "title": "입자 접촉력 모형: 물을 넣으면 접촉력이 준다",
+    "link": "chapters/effective-stress.html#sim-es-contact"
+  },
+  {
+    "id": "geotechbook/effective-stress/sim-es-profile",
+    "bookId": "geotechbook",
+    "title": "G-10 응력 단면: 지하수위를 끌어 보세요",
+    "link": "chapters/effective-stress.html#sim-es-profile"
+  },
+  {
+    "id": "geotechbook/effective-stress/sim-es-drawdown",
+    "bookId": "geotechbook",
+    "title": "양수 → 지하수위 저하 → 유효응력 증가 → 침하",
+    "link": "chapters/effective-stress.html#sim-es-drawdown"
+  },
+  {
+    "id": "geotechbook/effective-stress/sim-es-cap",
+    "bookId": "geotechbook",
+    "title": "모관 상승관과 흙 속 부(−)의 간극수압",
+    "link": "chapters/effective-stress.html#sim-es-cap"
+  },
+  {
+    "id": "geotechbook/effective-stress/sim-es-quick",
+    "bookId": "geotechbook",
+    "title": "상향 침투 탱크: 분사 현상 만들기",
+    "link": "chapters/effective-stress.html#sim-es-quick"
+  },
+  {
+    "id": "geotechbook/effective-stress/sim-es-b",
+    "bookId": "geotechbook",
+    "title": "하중 직후 간극수압: 포화도와 B 계수",
+    "link": "chapters/effective-stress.html#sim-es-b"
+  },
+  {
+    "id": "geotechbook/effective-stress/sim-es-uplift",
+    "bookId": "geotechbook",
+    "title": "굴착 바닥 양압력과 들림 안전율 (B-10)",
+    "link": "chapters/effective-stress.html#sim-es-uplift"
+  },
+  {
+    "id": "geotechbook/effective-stress/sim-es-build",
+    "bookId": "geotechbook",
+    "title": "수압·유효응력 퀴즈형 단면",
+    "link": "chapters/effective-stress.html#sim-es-build"
+  },
+  {
+    "id": "geotechbook/glossary/sim-gl-stress",
+    "bookId": "geotechbook",
+    "title": "G-10 응력 단면과 점토층 압밀",
+    "link": "chapters/glossary.html#sim-gl-stress"
+  },
+  {
+    "id": "geotechbook/glossary/sim-gl-coef",
+    "bookId": "geotechbook",
+    "title": "φ′ → K a , K p , K 0 , N c , N q , N γ",
+    "link": "chapters/glossary.html#sim-gl-coef"
+  },
+  {
+    "id": "geotechbook/ground-improvement/sim-gi-imm",
+    "bookId": "geotechbook",
+    "title": "즉시 침하 계산기: 크기·형상·강성·포아송비",
+    "link": "chapters/ground-improvement.html#sim-gi-imm"
+  },
+  {
+    "id": "geotechbook/ground-improvement/sim-gi-diff",
+    "bookId": "geotechbook",
+    "title": "부등 침하와 각변위: 기둥 침하점을 끌어 손상 판정",
+    "link": "chapters/ground-improvement.html#sim-gi-diff"
+  },
+  {
+    "id": "geotechbook/ground-improvement/sim-gi-pre",
+    "bookId": "geotechbook",
+    "title": "선행 재하 계획: 과재하 높이와 제거 시점",
+    "link": "chapters/ground-improvement.html#sim-gi-pre"
+  },
+  {
+    "id": "geotechbook/ground-improvement/sim-gi-cell",
+    "bookId": "geotechbook",
+    "title": "배수재 평면 배치와 단위 셀의 방사 방향 압밀",
+    "link": "chapters/ground-improvement.html#sim-gi-cell"
+  },
+  {
+    "id": "geotechbook/ground-improvement/sim-gi-pvd",
+    "bookId": "geotechbook",
+    "title": "PVD 간격 설계: 간격·배치·c h → 압밀도–시간",
+    "link": "chapters/ground-improvement.html#sim-gi-pvd"
+  },
+  {
+    "id": "geotechbook/ground-improvement/sim-gi-scp",
+    "bookId": "geotechbook",
+    "title": "SCP 치환율: 지름·간격 → 응력 분담·침하·강도",
+    "link": "chapters/ground-improvement.html#sim-gi-scp"
+  },
+  {
+    "id": "geotechbook/ground-improvement/sim-gi-asaoka",
+    "bookId": "geotechbook",
+    "title": "아사오카법: 계측 침하로 최종 침하 예측하기",
+    "link": "chapters/ground-improvement.html#sim-gi-asaoka"
+  },
+  {
+    "id": "geotechbook/ground-improvement/sim-gi-e4",
+    "bookId": "geotechbook",
+    "title": "E-4 시간–침하: 무처리와 PVD 비교",
+    "link": "chapters/ground-improvement.html#sim-gi-e4"
+  },
+  {
+    "id": "geotechbook/investigation/sim-iv-grain",
+    "bookId": "geotechbook",
+    "title": "입자 크기 감각: 자갈에서 점토까지 확대",
+    "link": "chapters/investigation.html#sim-iv-grain"
+  },
+  {
+    "id": "geotechbook/investigation/sim-iv-cost",
+    "bookId": "geotechbook",
+    "title": "조사 비용과 불확실성: 몇 공을 뚫을까",
+    "link": "chapters/investigation.html#sim-iv-cost"
+  },
+  {
+    "id": "geotechbook/investigation/sim-iv-spt",
+    "bookId": "geotechbook",
+    "title": "표준관입시험: 해머를 떨어뜨려 N을 센다",
+    "link": "chapters/investigation.html#sim-iv-spt"
+  },
+  {
+    "id": "geotechbook/investigation/sim-iv-ncorr",
+    "bookId": "geotechbook",
+    "title": "N값 → 상대 밀도·φ′·c u 상관과 흩어짐",
+    "link": "chapters/investigation.html#sim-iv-ncorr"
+  },
+  {
+    "id": "geotechbook/investigation/sim-iv-cpt",
+    "bookId": "geotechbook",
+    "title": "CPT 로그와 흙 거동 유형 도표",
+    "link": "chapters/investigation.html#sim-iv-cpt"
+  },
+  {
+    "id": "geotechbook/investigation/sim-iv-seis",
+    "bookId": "geotechbook",
+    "title": "탄성파 굴절법: 주시 곡선에서 기반 깊이 읽기",
+    "link": "chapters/investigation.html#sim-iv-seis"
+  },
+  {
+    "id": "geotechbook/investigation/sim-iv-log",
+    "bookId": "geotechbook",
+    "title": "G-10 시추 주상도: 층을 누르면 정보가 열린다",
+    "link": "chapters/investigation.html#sim-iv-log"
+  },
+  {
+    "id": "geotechbook/investigation/sim-iv-section",
+    "bookId": "geotechbook",
+    "title": "시추공 몇 개로 지층 단면 그리기",
+    "link": "chapters/investigation.html#sim-iv-section"
+  },
+  {
+    "id": "geotechbook/phase/sim-ph-calc",
+    "bookId": "geotechbook",
+    "title": "3상 막대 계산기: 세 값을 알면 나머지가 모두 나온다",
+    "link": "chapters/phase.html#sim-ph-calc"
+  },
+  {
+    "id": "geotechbook/phase/sim-ph-block",
+    "bookId": "geotechbook",
+    "title": "흙 블록 확대: 알갱이를 채우고 물을 붓는다",
+    "link": "chapters/phase.html#sim-ph-block"
+  },
+  {
+    "id": "geotechbook/phase/sim-ph-dr",
+    "bookId": "geotechbook",
+    "title": "상대 밀도 → 액상화 민감도 맛보기",
+    "link": "chapters/phase.html#sim-ph-dr"
+  },
+  {
+    "id": "geotechbook/phase/sim-ph-proctor",
+    "bookId": "geotechbook",
+    "title": "다짐 시험: 몰드에 다져 점을 찍고 곡선을 맞춘다",
+    "link": "chapters/phase.html#sim-ph-proctor"
+  },
+  {
+    "id": "geotechbook/phase/sim-ph-kstr",
+    "bookId": "geotechbook",
+    "title": "다짐 함수비가 투수 계수와 강도를 바꾼다",
+    "link": "chapters/phase.html#sim-ph-kstr"
+  },
+  {
+    "id": "geotechbook/phase/sim-ph-sandcone",
+    "bookId": "geotechbook",
+    "title": "들밀도 시험 계산기: 모래 치환 → γ d → 합격 판정",
+    "link": "chapters/phase.html#sim-ph-sandcone"
+  },
+  {
+    "id": "geotechbook/phase/sim-ph-cbr",
+    "bookId": "geotechbook",
+    "title": "CBR 시험: 하중–관입 곡선과 원점 보정",
+    "link": "chapters/phase.html#sim-ph-cbr"
+  },
+  {
+    "id": "geotechbook/phase/sim-ph-volume",
+    "bookId": "geotechbook",
+    "title": "성토 물량 계산: 자연 상태 → 운반 → 다짐",
+    "link": "chapters/phase.html#sim-ph-volume"
+  },
+  {
+    "id": "geotechbook/piles/sim-pl-transfer",
+    "bookId": "geotechbook",
+    "title": "하중 전달 곡선: 깊이별 축력과 주면 동원",
+    "link": "chapters/piles.html#sim-pl-transfer"
+  },
+  {
+    "id": "geotechbook/piles/sim-pl-cap",
+    "bookId": "geotechbook",
+    "title": "단일 말뚝 지지력 계산기: 말뚝 끝을 끌어 보세요",
+    "link": "chapters/piles.html#sim-pl-cap"
+  },
+  {
+    "id": "geotechbook/piles/sim-pl-nsf",
+    "bookId": "geotechbook",
+    "title": "부주면 마찰력: 성토가 말뚝을 끌어내린다",
+    "link": "chapters/piles.html#sim-pl-nsf"
+  },
+  {
+    "id": "geotechbook/piles/sim-pl-group",
+    "bookId": "geotechbook",
+    "title": "무리 말뚝 효율과 블록 파괴(균질한 점토, 교육용)",
+    "link": "chapters/piles.html#sim-pl-group"
+  },
+  {
+    "id": "geotechbook/piles/sim-pl-lateral",
+    "bookId": "geotechbook",
+    "title": "수평 하중 말뚝: 변위와 휨모멘트",
+    "link": "chapters/piles.html#sim-pl-lateral"
+  },
+  {
+    "id": "geotechbook/piles/sim-pl-slt",
+    "bookId": "geotechbook",
+    "title": "정재하 시험 곡선과 데이비슨 판정",
+    "link": "chapters/piles.html#sim-pl-slt"
+  },
+  {
+    "id": "geotechbook/piles/sim-pl-layout",
+    "bookId": "geotechbook",
+    "title": "B-10 기둥 C1 아래 말뚝 배치",
+    "link": "chapters/piles.html#sim-pl-layout"
+  },
+  {
+    "id": "geotechbook/retaining/sim-rt-wall",
+    "bookId": "geotechbook",
+    "title": "캔틸레버 옹벽 안정 검토기",
+    "link": "chapters/retaining.html#sim-rt-wall"
+  },
+  {
+    "id": "geotechbook/retaining/sim-rt-drain",
+    "bookId": "geotechbook",
+    "title": "물이 차면 세 안전율은 어떻게 떨어지나",
+    "link": "chapters/retaining.html#sim-rt-drain"
+  },
+  {
+    "id": "geotechbook/retaining/sim-rt-mse",
+    "bookId": "geotechbook",
+    "title": "보강토 옹벽: 보강재 길이와 간격",
+    "link": "chapters/retaining.html#sim-rt-mse"
+  },
+  {
+    "id": "geotechbook/retaining/sim-rt-sheet",
+    "bookId": "geotechbook",
+    "title": "자립식 널말뚝: 근입 깊이와 벽의 휨모멘트",
+    "link": "chapters/retaining.html#sim-rt-sheet"
+  },
+  {
+    "id": "geotechbook/retaining/sim-rt-peck",
+    "bookId": "geotechbook",
+    "title": "Peck 겉보기 토압과 버팀보 축력",
+    "link": "chapters/retaining.html#sim-rt-peck"
+  },
+  {
+    "id": "geotechbook/retaining/sim-rt-heave",
+    "bookId": "geotechbook",
+    "title": "점토 히빙 안전율",
+    "link": "chapters/retaining.html#sim-rt-heave"
+  },
+  {
+    "id": "geotechbook/retaining/sim-rt-boil",
+    "bookId": "geotechbook",
+    "title": "보일링과 바닥 들림",
+    "link": "chapters/retaining.html#sim-rt-boil"
+  },
+  {
+    "id": "geotechbook/retaining/sim-rt-settle",
+    "bookId": "geotechbook",
+    "title": "굴착 배면 침하와 인접 건물의 각변위",
+    "link": "chapters/retaining.html#sim-rt-settle"
+  },
+  {
+    "id": "geotechbook/rock/sim-rk-pl",
+    "bookId": "geotechbook",
+    "title": "점하중 시험 → 일축압축강도 환산",
+    "link": "chapters/rock.html#sim-rk-pl"
+  },
+  {
+    "id": "geotechbook/rock/sim-rk-barton",
+    "bookId": "geotechbook",
+    "title": "절리 거칠기와 전단강도(바튼 식)",
+    "link": "chapters/rock.html#sim-rk-barton"
+  },
+  {
+    "id": "geotechbook/rock/sim-rk-rqd",
+    "bookId": "geotechbook",
+    "title": "코어 상자에서 RQD 세기",
+    "link": "chapters/rock.html#sim-rk-rqd"
+  },
+  {
+    "id": "geotechbook/rock/sim-rk-rmr",
+    "bookId": "geotechbook",
+    "title": "RMR 계산기와 지보 개념",
+    "link": "chapters/rock.html#sim-rk-rmr"
+  },
+  {
+    "id": "geotechbook/rock/sim-rk-hb",
+    "bookId": "geotechbook",
+    "title": "호크–브라운 파괴 포락선",
+    "link": "chapters/rock.html#sim-rk-hb"
+  },
+  {
+    "id": "geotechbook/rock/sim-rk-planar",
+    "bookId": "geotechbook",
+    "title": "평면 파괴 안전율: 인장 균열과 수압",
+    "link": "chapters/rock.html#sim-rk-planar"
+  },
+  {
+    "id": "geotechbook/rock/sim-rk-wedge",
+    "bookId": "geotechbook",
+    "title": "쐐기 파괴 3D: 두 절리의 교선",
+    "link": "chapters/rock.html#sim-rk-wedge"
+  },
+  {
+    "id": "geotechbook/rock/sim-rk-grc",
+    "bookId": "geotechbook",
+    "title": "지반 응답 곡선과 지보 특성 곡선",
+    "link": "chapters/rock.html#sim-rk-grc"
+  },
+  {
+    "id": "geotechbook/seepage/sim-sp-darcy",
+    "bookId": "geotechbook",
+    "title": "다르시 탱크: 수위 차 → 유량, 유출 속도 vs 침투 속도",
+    "link": "chapters/seepage.html#sim-sp-darcy"
+  },
+  {
+    "id": "geotechbook/seepage/sim-sp-lab",
+    "bookId": "geotechbook",
+    "title": "투수 시험기: 정수두·변수두로 k 재기",
+    "link": "chapters/seepage.html#sim-sp-lab"
+  },
+  {
+    "id": "geotechbook/seepage/sim-sp-pump",
+    "bookId": "geotechbook",
+    "title": "양수 시험: 관측정 두 개로 k 역산하기",
+    "link": "chapters/seepage.html#sim-sp-pump"
+  },
+  {
+    "id": "geotechbook/seepage/sim-sp-layer",
+    "bookId": "geotechbook",
+    "title": "층 쌓기: 수평·연직 등가 투수 계수와 수두 손실",
+    "link": "chapters/seepage.html#sim-sp-layer"
+  },
+  {
+    "id": "geotechbook/seepage/sim-sp-net",
+    "bookId": "geotechbook",
+    "title": "유한 차분 유선망: 널말뚝·지하연속벽 아래 침투",
+    "link": "chapters/seepage.html#sim-sp-net"
+  },
+  {
+    "id": "geotechbook/seepage/sim-sp-weir",
+    "bookId": "geotechbook",
+    "title": "콘크리트 보 아래 양압력: 차수벽 위치 바꾸기",
+    "link": "chapters/seepage.html#sim-sp-weir"
+  },
+  {
+    "id": "geotechbook/seepage/sim-sp-dam",
+    "bookId": "geotechbook",
+    "title": "흙댐 침윤선: 카사그란데 포물선과 배수층",
+    "link": "chapters/seepage.html#sim-sp-dam"
+  },
+  {
+    "id": "geotechbook/seepage/sim-sp-filter",
+    "bookId": "geotechbook",
+    "title": "필터 설계: 두 입도 곡선과 기준 띠",
+    "link": "chapters/seepage.html#sim-sp-filter"
+  },
+  {
+    "id": "geotechbook/shear-strength/sim-ss-tooth",
+    "bookId": "geotechbook",
+    "title": "톱니 모형: 마찰 + 맞물림",
+    "link": "chapters/shear-strength.html#sim-ss-tooth"
+  },
+  {
+    "id": "geotechbook/shear-strength/sim-ss-mohr",
+    "bookId": "geotechbook",
+    "title": "모어 원과 파괴 포락선",
+    "link": "chapters/shear-strength.html#sim-ss-mohr"
+  },
+  {
+    "id": "geotechbook/shear-strength/sim-ss-shearbox",
+    "bookId": "geotechbook",
+    "title": "직접 전단 시험기: 조밀 vs 느슨",
+    "link": "chapters/shear-strength.html#sim-ss-shearbox"
+  },
+  {
+    "id": "geotechbook/shear-strength/sim-ss-triax",
+    "bookId": "geotechbook",
+    "title": "삼축 시험기: UU · CU · CD를 한 시료로",
+    "link": "chapters/shear-strength.html#sim-ss-triax"
+  },
+  {
+    "id": "geotechbook/shear-strength/sim-ss-ab",
+    "bookId": "geotechbook",
+    "title": "간극수압 계수: B로 포화 확인, A로 전단",
+    "link": "chapters/shear-strength.html#sim-ss-ab"
+  },
+  {
+    "id": "geotechbook/shear-strength/sim-ss-path",
+    "bookId": "geotechbook",
+    "title": "응력 경로 그리기",
+    "link": "chapters/shear-strength.html#sim-ss-path"
+  },
+  {
+    "id": "geotechbook/shear-strength/sim-ss-cu",
+    "bookId": "geotechbook",
+    "title": "G-10 c u 단면: 시험 결과와 맞추기",
+    "link": "chapters/shear-strength.html#sim-ss-cu"
+  },
+  {
+    "id": "geotechbook/shear-strength/sim-ss-sens",
+    "bookId": "geotechbook",
+    "title": "일축 압축 시험과 예민비",
+    "link": "chapters/shear-strength.html#sim-ss-sens"
+  },
+  {
+    "id": "geotechbook/slope/sim-sl-infinite",
+    "bookId": "geotechbook",
+    "title": "무한 사면: 경사·깊이·지하수위",
+    "link": "chapters/slope.html#sim-sl-infinite"
+  },
+  {
+    "id": "geotechbook/slope/sim-sl-planar",
+    "bookId": "geotechbook",
+    "title": "평면 쐐기 활동: 불연속면·균열·수압",
+    "link": "chapters/slope.html#sim-sl-planar"
+  },
+  {
+    "id": "geotechbook/slope/sim-sl-circle",
+    "bookId": "geotechbook",
+    "title": "원호 활동 탐색기: 중심을 끌어 절편 보기",
+    "link": "chapters/slope.html#sim-sl-circle"
+  },
+  {
+    "id": "geotechbook/slope/sim-sl-slice",
+    "bookId": "geotechbook",
+    "title": "절편 하나의 힘 다각형",
+    "link": "chapters/slope.html#sim-sl-slice"
+  },
+  {
+    "id": "geotechbook/slope/sim-sl-grid",
+    "bookId": "geotechbook",
+    "title": "최소 안전율 격자 탐색",
+    "link": "chapters/slope.html#sim-sl-grid"
+  },
+  {
+    "id": "geotechbook/slope/sim-sl-rain",
+    "bookId": "geotechbook",
+    "title": "강우 → 간극수압비 → 안전율의 시간 변화 (S-10)",
+    "link": "chapters/slope.html#sim-sl-rain"
+  },
+  {
+    "id": "geotechbook/slope/sim-sl-embank",
+    "bookId": "geotechbook",
+    "title": "E-4 성토: 단기·단계 성토·장기 (G-10 위 다층 원호)",
+    "link": "chapters/slope.html#sim-sl-embank"
+  },
+  {
+    "id": "geotechbook/slope/sim-sl-remedy",
+    "bookId": "geotechbook",
+    "title": "S-10 대책 비교: 경사 완화 · 배수 · 보강",
+    "link": "chapters/slope.html#sim-sl-remedy"
+  },
+  {
+    "id": "geotechbook/stress-distribution/sim-sd-point",
+    "bookId": "geotechbook",
+    "title": "집중 하중 아래 응력 등고선: 하중과 측점 끌기",
+    "link": "chapters/stress-distribution.html#sim-sd-point"
+  },
+  {
+    "id": "geotechbook/stress-distribution/sim-sd-rect",
+    "bookId": "geotechbook",
+    "title": "직사각형 중첩 계산기: 점을 끌어 모서리 네 개의 합·차 보기",
+    "link": "chapters/stress-distribution.html#sim-sd-rect"
+  },
+  {
+    "id": "geotechbook/stress-distribution/sim-sd-bulb",
+    "bookId": "geotechbook",
+    "title": "압력 구근 비교: 띠·정사각형·원형",
+    "link": "chapters/stress-distribution.html#sim-sd-bulb"
+  },
+  {
+    "id": "geotechbook/stress-distribution/sim-sd-21",
+    "bookId": "geotechbook",
+    "title": "2:1법 vs 부시네스크: 깊이별 오차 곡선",
+    "link": "chapters/stress-distribution.html#sim-sd-21"
+  },
+  {
+    "id": "geotechbook/stress-distribution/sim-sd-nm",
+    "bookId": "geotechbook",
+    "title": "뉴마크 칸 세기: 기초를 끌어 덮인 칸 수와 정답 비교",
+    "link": "chapters/stress-distribution.html#sim-sd-nm"
+  },
+  {
+    "id": "geotechbook/stress-distribution/sim-sd-contact",
+    "bookId": "geotechbook",
+    "title": "접지압 분포: 강성·연성, 점토·모래",
+    "link": "chapters/stress-distribution.html#sim-sd-contact"
+  },
+  {
+    "id": "geotechbook/stress-distribution/sim-sd-adj",
+    "bookId": "geotechbook",
+    "title": "이웃한 기초 두 개의 중첩: 간격 끌기",
+    "link": "chapters/stress-distribution.html#sim-sd-adj"
+  },
+  {
+    "id": "geotechbook/stress-distribution/sim-sd-emb",
+    "bookId": "geotechbook",
+    "title": "성토(사다리꼴) 하중 아래 응력: E-4",
+    "link": "chapters/stress-distribution.html#sim-sd-emb"
+  },
+  {
+    "id": "structurebook/assessment/sim-as-fire",
+    "bookId": "structurebook",
+    "title": "화재 곡선과 부재 온도: 피복 두께 정하기",
+    "link": "chapters/assessment.html#sim-as-fire"
+  },
+  {
+    "id": "structurebook/assessment/sim-as-heat",
+    "bookId": "structurebook",
+    "title": "고온 강도 저감 곡선과 RC 슬래브의 내화 시간",
+    "link": "chapters/assessment.html#sim-as-heat"
+  },
+  {
+    "id": "structurebook/assessment/sim-as-remove",
+    "bookId": "structurebook",
+    "title": "기둥 제거와 대체 하중 경로(B-10 골조, CB.frame)",
+    "link": "chapters/assessment.html#sim-as-remove"
+  },
+  {
+    "id": "structurebook/assessment/sim-as-cat",
+    "bookId": "structurebook",
+    "title": "캐터너리 작용: 처짐–저항 곡선",
+    "link": "chapters/assessment.html#sim-as-cat"
+  },
+  {
+    "id": "structurebook/assessment/sim-as-load",
+    "bookId": "structurebook",
+    "title": "재하 시험 판정: 하중–처짐 곡선",
+    "link": "chapters/assessment.html#sim-as-load"
+  },
+  {
+    "id": "structurebook/assessment/sim-as-str",
+    "bookId": "structurebook",
+    "title": "보강 공법 비교: B-10 큰보 G1",
+    "link": "chapters/assessment.html#sim-as-str"
+  },
+  {
+    "id": "structurebook/assessment/sim-as-seis",
+    "bookId": "structurebook",
+    "title": "내진 보강 효과: 벽·가새 추가 전후 층간 변위(CB.frame)",
+    "link": "chapters/assessment.html#sim-as-seis"
+  },
+  {
+    "id": "structurebook/composite/sim-cm-slip",
+    "bookId": "structurebook",
+    "title": "연결 강성과 미끄럼: 두 겹 보에서 한 단면으로",
+    "link": "chapters/composite.html#sim-cm-slip"
+  },
+  {
+    "id": "structurebook/composite/sim-cm-section",
+    "bookId": "structurebook",
+    "title": "합성보 단면: 유효 폭 → 환산 단면 → 소성 중립축과 M n",
+    "link": "chapters/composite.html#sim-cm-section"
+  },
+  {
+    "id": "structurebook/composite/sim-cm-partial",
+    "bookId": "structurebook",
+    "title": "완전 vs 부분 합성: 스터드 수 → 강도·강성",
+    "link": "chapters/composite.html#sim-cm-partial"
+  },
+  {
+    "id": "structurebook/composite/sim-cm-studs",
+    "bookId": "structurebook",
+    "title": "스터드 배치: 전단 흐름과 간격",
+    "link": "chapters/composite.html#sim-cm-studs"
+  },
+  {
+    "id": "structurebook/composite/sim-cm-cft",
+    "bookId": "structurebook",
+    "title": "CFT 구속 효과: 강관 두께 → 콘크리트 강도와 축력 곡선",
+    "link": "chapters/composite.html#sim-cm-cft"
+  },
+  {
+    "id": "structurebook/composite/sim-cm-pcspan",
+    "bookId": "structurebook",
+    "title": "프리캐스트 바닥 경간표: 부재 종류·경간 → 깊이·자중",
+    "link": "chapters/composite.html#sim-cm-pcspan"
+  },
+  {
+    "id": "structurebook/composite/sim-cm-joint",
+    "bookId": "structurebook",
+    "title": "PC 부재 접합: 단순 지지 · 습식 연속 · 일체, 그리고 기둥 하나가 사라지면",
+    "link": "chapters/composite.html#sim-cm-joint"
+  },
+  {
+    "id": "structurebook/composite/sim-cm-prestress",
+    "bookId": "structurebook",
+    "title": "프리스트레스 응력: 긴장력·편심 → 상하연 응력",
+    "link": "chapters/composite.html#sim-cm-prestress"
+  },
+  {
+    "id": "structurebook/dynamics/sim-dy-free",
+    "bookId": "structurebook",
+    "title": "1자유도 자유 진동",
+    "link": "chapters/dynamics.html#sim-dy-free"
+  },
+  {
+    "id": "structurebook/dynamics/sim-dy-logdec",
+    "bookId": "structurebook",
+    "title": "감쇠 측정: 기록에서 ζ 찾기",
+    "link": "chapters/dynamics.html#sim-dy-logdec"
+  },
+  {
+    "id": "structurebook/dynamics/sim-dy-res",
+    "bookId": "structurebook",
+    "title": "공진 곡선과 위상",
+    "link": "chapters/dynamics.html#sim-dy-res"
+  },
+  {
+    "id": "structurebook/dynamics/sim-dy-quake",
+    "bookId": "structurebook",
+    "title": "지진 시간 이력: 1자유도 건물의 응답",
+    "link": "chapters/dynamics.html#sim-dy-quake"
+  },
+  {
+    "id": "structurebook/dynamics/sim-dy-nm",
+    "bookId": "structurebook",
+    "title": "뉴마크 방법의 정확도와 안정성",
+    "link": "chapters/dynamics.html#sim-dy-nm"
+  },
+  {
+    "id": "structurebook/dynamics/sim-dy-spec",
+    "bookId": "structurebook",
+    "title": "응답 스펙트럼 만들기",
+    "link": "chapters/dynamics.html#sim-dy-spec"
+  },
+  {
+    "id": "structurebook/dynamics/sim-dy-modes",
+    "bookId": "structurebook",
+    "title": "전단 건물의 모드 형상",
+    "link": "chapters/dynamics.html#sim-dy-modes"
+  },
+  {
+    "id": "structurebook/dynamics/sim-dy-sup",
+    "bookId": "structurebook",
+    "title": "B-10 모드 중첩 시간 이력",
+    "link": "chapters/dynamics.html#sim-dy-sup"
+  },
+  {
+    "id": "structurebook/floors/sim-fl-3d",
+    "bookId": "structurebook",
+    "title": "B-10 기준층: 연직 하중 경로와 격막",
+    "link": "chapters/floors.html#sim-fl-3d"
+  },
+  {
+    "id": "structurebook/floors/sim-fl-share",
+    "bookId": "structurebook",
+    "title": "슬래브 판별과 하중 분담",
+    "link": "chapters/floors.html#sim-fl-share"
+  },
+  {
+    "id": "structurebook/floors/sim-fl-ddm",
+    "bookId": "structurebook",
+    "title": "2방향 슬래브 정적 모멘트 분배",
+    "link": "chapters/floors.html#sim-fl-ddm"
+  },
+  {
+    "id": "structurebook/floors/sim-fl-punch",
+    "bookId": "structurebook",
+    "title": "뚫림 전단 검토",
+    "link": "chapters/floors.html#sim-fl-punch"
+  },
+  {
+    "id": "structurebook/floors/sim-fl-layout",
+    "bookId": "structurebook",
+    "title": "보 배치 비교: 두께·춤·콘크리트 물량",
+    "link": "chapters/floors.html#sim-fl-layout"
+  },
+  {
+    "id": "structurebook/floors/sim-fl-deck",
+    "bookId": "structurebook",
+    "title": "합성 슬래브 단면: 자중과 강성",
+    "link": "chapters/floors.html#sim-fl-deck"
+  },
+  {
+    "id": "structurebook/floors/sim-fl-defl",
+    "bookId": "structurebook",
+    "title": "슬래브 띠의 즉시·장기 처짐",
+    "link": "chapters/floors.html#sim-fl-defl"
+  },
+  {
+    "id": "structurebook/floors/sim-fl-vib",
+    "bookId": "structurebook",
+    "title": "바닥 진동: 고유 진동수와 보행 가속도",
+    "link": "chapters/floors.html#sim-fl-vib"
+  },
+  {
+    "id": "structurebook/frames/sim-fr-multi",
+    "bookId": "structurebook",
+    "title": "다층 골조 수평 하중 해석기",
+    "link": "chapters/frames.html#sim-fr-multi"
+  },
+  {
+    "id": "structurebook/frames/sim-fr-inflect",
+    "bookId": "structurebook",
+    "title": "반곡점 위치 탐색: 기초 고정도와 보 강성",
+    "link": "chapters/frames.html#sim-fr-inflect"
+  },
+  {
+    "id": "structurebook/frames/sim-fr-portal",
+    "bookId": "structurebook",
+    "title": "포털법 vs 강성법: 같은 골조, 두 답",
+    "link": "chapters/frames.html#sim-fr-portal"
+  },
+  {
+    "id": "structurebook/frames/sim-fr-cant",
+    "bookId": "structurebook",
+    "title": "캔틸레버법 기둥 축력",
+    "link": "chapters/frames.html#sim-fr-cant"
+  },
+  {
+    "id": "structurebook/frames/sim-fr-ratio",
+    "bookId": "structurebook",
+    "title": "보–기둥 강성 비와 변형 형상",
+    "link": "chapters/frames.html#sim-fr-ratio"
+  },
+  {
+    "id": "structurebook/frames/sim-fr-mech",
+    "bookId": "structurebook",
+    "title": "소성 힌지 메커니즘: 강기둥 vs 약기둥",
+    "link": "chapters/frames.html#sim-fr-mech"
+  },
+  {
+    "id": "structurebook/frames/sim-fr-pdelta",
+    "bookId": "structurebook",
+    "title": "P–Δ 증폭과 안정 계수",
+    "link": "chapters/frames.html#sim-fr-pdelta"
+  },
+  {
+    "id": "structurebook/frames/sim-fr-b10",
+    "bookId": "structurebook",
+    "title": "B-10 골조 한 줄: 바람과 지진",
+    "link": "chapters/frames.html#sim-fr-b10"
+  },
+  {
+    "id": "structurebook/glossary/sim-gl-lateral",
+    "bookId": "structurebook",
+    "title": "설계 스펙트럼 → C s → 층 지진력, 그리고 층 풍하중",
+    "link": "chapters/glossary.html#sim-gl-lateral"
+  },
+  {
+    "id": "structurebook/glossary/sim-gl-sdof",
+    "bookId": "structurebook",
+    "title": "m, k, ζ → T, R d 곡선 · 층 수 → 1–3차 모드",
+    "link": "chapters/glossary.html#sim-gl-sdof"
+  },
+  {
+    "id": "structurebook/isolation/sim-is-shift",
+    "bookId": "structurebook",
+    "title": "면진 전후의 스펙트럼: 가속도는 내려가고 변위는 올라간다",
+    "link": "chapters/isolation.html#sim-is-shift"
+  },
+  {
+    "id": "structurebook/isolation/sim-is-tr",
+    "bookId": "structurebook",
+    "title": "전달률 곡선: 주기 비와 감쇠",
+    "link": "chapters/isolation.html#sim-is-tr"
+  },
+  {
+    "id": "structurebook/isolation/sim-is-lrb",
+    "bookId": "structurebook",
+    "title": "납 고무 받침의 이력 곡선: 루프 넓이가 소산 에너지다",
+    "link": "chapters/isolation.html#sim-is-lrb"
+  },
+  {
+    "id": "structurebook/isolation/sim-is-fps",
+    "bookId": "structurebook",
+    "title": "마찰 진자: 곡률 반경이 주기를 정한다",
+    "link": "chapters/isolation.html#sim-is-fps"
+  },
+  {
+    "id": "structurebook/isolation/sim-is-dampers",
+    "bookId": "structurebook",
+    "title": "감쇠기 비교: 점성·마찰·이력의 힘–변위 루프",
+    "link": "chapters/isolation.html#sim-is-dampers"
+  },
+  {
+    "id": "structurebook/isolation/sim-is-tmd",
+    "bookId": "structurebook",
+    "title": "TMD 튜닝: 질량비·진동수비·감쇠로 봉우리를 깎는다",
+    "link": "chapters/isolation.html#sim-is-tmd"
+  },
+  {
+    "id": "structurebook/isolation/sim-is-th",
+    "bookId": "structurebook",
+    "title": "시간 이력 비교: 고정 기초 vs 면진 vs 감쇠기",
+    "link": "chapters/isolation.html#sim-is-th"
+  },
+  {
+    "id": "structurebook/loads/sim-ld-dead",
+    "bookId": "structurebook",
+    "title": "바닥 하중 쌓기",
+    "link": "chapters/loads.html#sim-ld-dead"
+  },
+  {
+    "id": "structurebook/loads/sim-ld-reduce",
+    "bookId": "structurebook",
+    "title": "활하중 저감 계산기",
+    "link": "chapters/loads.html#sim-ld-reduce"
+  },
+  {
+    "id": "structurebook/loads/sim-ld-pattern",
+    "bookId": "structurebook",
+    "title": "경간마다 활하중 켜기: 가장 나쁜 배치 찾기",
+    "link": "chapters/loads.html#sim-ld-pattern"
+  },
+  {
+    "id": "structurebook/loads/sim-ld-snow",
+    "bookId": "structurebook",
+    "title": "지붕 형상과 적설 하중 분포",
+    "link": "chapters/loads.html#sim-ld-snow"
+  },
+  {
+    "id": "structurebook/loads/sim-ld-combo",
+    "bookId": "structurebook",
+    "title": "하중 조합 탐색기",
+    "link": "chapters/loads.html#sim-ld-combo"
+  },
+  {
+    "id": "structurebook/loads/sim-ld-beta",
+    "bookId": "structurebook",
+    "title": "신뢰도 지수: 두 분포가 겹치는 넓이",
+    "link": "chapters/loads.html#sim-ld-beta"
+  },
+  {
+    "id": "structurebook/loads/sim-ld-takedown",
+    "bookId": "structurebook",
+    "title": "기둥 축력 누적: 층마다 쌓고 줄이기",
+    "link": "chapters/loads.html#sim-ld-takedown"
+  },
+  {
+    "id": "structurebook/long-span/sim-lsp-forms",
+    "bookId": "structurebook",
+    "title": "경간–형식 선택: 경간 → 춤·높이와 자중 비교",
+    "link": "chapters/long-span.html#sim-lsp-forms"
+  },
+  {
+    "id": "structurebook/long-span/sim-lsp-truss",
+    "bookId": "structurebook",
+    "title": "L-60 트러스 지붕: 춤을 바꾸면 현재력·처짐·강재량은",
+    "link": "chapters/long-span.html#sim-lsp-truss"
+  },
+  {
+    "id": "structurebook/long-span/sim-lsp-grid",
+    "bookId": "structurebook",
+    "title": "3D 스페이스 프레임: 모듈·춤 → 2방향 처짐과 현재력",
+    "link": "chapters/long-span.html#sim-lsp-grid"
+  },
+  {
+    "id": "structurebook/long-span/sim-lsp-arch",
+    "bookId": "structurebook",
+    "title": "아치 추력: 라이즈·타이·편재 하중",
+    "link": "chapters/long-span.html#sim-lsp-arch"
+  },
+  {
+    "id": "structurebook/long-span/sim-lsp-dome",
+    "bookId": "structurebook",
+    "title": "돔 막 응력: 자오선·위선 응력과 51.8°",
+    "link": "chapters/long-span.html#sim-lsp-dome"
+  },
+  {
+    "id": "structurebook/long-span/sim-lsp-cable",
+    "bookId": "structurebook",
+    "title": "케이블 지붕: 처짐비·프리스트레스 → 장력과 강성",
+    "link": "chapters/long-span.html#sim-lsp-cable"
+  },
+  {
+    "id": "structurebook/long-span/sim-lsp-form",
+    "bookId": "structurebook",
+    "title": "형태 찾기: 매단 그물 → 뒤집은 압축 셸",
+    "link": "chapters/long-span.html#sim-lsp-form"
+  },
+  {
+    "id": "structurebook/long-span/sim-lsp-uplift",
+    "bookId": "structurebook",
+    "title": "L-60 트러스의 들림: 하중 조합에 따라 뒤집히는 부재",
+    "link": "chapters/long-span.html#sim-lsp-uplift"
+  },
+  {
+    "id": "structurebook/modeling/sim-md-zone",
+    "bookId": "structurebook",
+    "title": "강역 효과: B-10 골조 한 줄",
+    "link": "chapters/modeling.html#sim-md-zone"
+  },
+  {
+    "id": "structurebook/modeling/sim-md-crack",
+    "bookId": "structurebook",
+    "title": "균열 강성 저감: 주기·변위·분담",
+    "link": "chapters/modeling.html#sim-md-crack"
+  },
+  {
+    "id": "structurebook/modeling/sim-md-diaph",
+    "bookId": "structurebook",
+    "title": "강막 vs 유연 바닥: 다섯 줄의 분담",
+    "link": "chapters/modeling.html#sim-md-diaph"
+  },
+  {
+    "id": "structurebook/modeling/sim-md-torsion",
+    "bookId": "structurebook",
+    "title": "질량 중심·강성 중심과 바닥 비틀림",
+    "link": "chapters/modeling.html#sim-md-torsion"
+  },
+  {
+    "id": "structurebook/modeling/sim-md-trib",
+    "bookId": "structurebook",
+    "title": "면 하중 분배와 하중 합 검사",
+    "link": "chapters/modeling.html#sim-md-trib"
+  },
+  {
+    "id": "structurebook/modeling/sim-md-game",
+    "bookId": "structurebook",
+    "title": "오류 찾기: 이 모델에서 무엇이 틀렸나",
+    "link": "chapters/modeling.html#sim-md-game"
+  },
+  {
+    "id": "structurebook/modeling/sim-md-simplify",
+    "bookId": "structurebook",
+    "title": "모델 단순화와 지점 조건 비교",
+    "link": "chapters/modeling.html#sim-md-simplify"
+  },
+  {
+    "id": "structurebook/modeling/sim-md-b10",
+    "bookId": "structurebook",
+    "title": "B-10 3D 변형과 모드 애니메이션",
+    "link": "chapters/modeling.html#sim-md-b10"
+  },
+  {
+    "id": "structurebook/overview/sim-ov-b10",
+    "bookId": "structurebook",
+    "title": "B-10 구조 시스템 탐색",
+    "link": "chapters/overview.html#sim-ov-b10"
+  },
+  {
+    "id": "structurebook/overview/sim-ov-system",
+    "bookId": "structurebook",
+    "title": "층수로 구조 시스템 고르기",
+    "link": "chapters/overview.html#sim-ov-system"
+  },
+  {
+    "id": "structurebook/overview/sim-ov-material",
+    "bookId": "structurebook",
+    "title": "같은 바닥을 RC·강·목재 보로 받치면",
+    "link": "chapters/overview.html#sim-ov-material"
+  },
+  {
+    "id": "structurebook/overview/sim-ov-grid",
+    "bookId": "structurebook",
+    "title": "그리드 계획: 경간을 바꾸면 무엇이 바뀌나",
+    "link": "chapters/overview.html#sim-ov-grid"
+  },
+  {
+    "id": "structurebook/overview/sim-ov-core",
+    "bookId": "structurebook",
+    "title": "코어를 옮기면 건물이 비틀린다",
+    "link": "chapters/overview.html#sim-ov-core"
+  },
+  {
+    "id": "structurebook/overview/sim-ov-size",
+    "bookId": "structurebook",
+    "title": "부재 크기 가늠 계산기",
+    "link": "chapters/overview.html#sim-ov-size"
+  },
+  {
+    "id": "structurebook/overview/sim-ov-lrfd",
+    "bookId": "structurebook",
+    "title": "강도 설계 vs 허용응력 설계: 안전 수준은 고른가",
+    "link": "chapters/overview.html#sim-ov-lrfd"
+  },
+  {
+    "id": "structurebook/seismic/sim-sd-spec",
+    "bookId": "structurebook",
+    "title": "설계 응답 스펙트럼",
+    "link": "chapters/seismic.html#sim-sd-spec"
+  },
+  {
+    "id": "structurebook/seismic/sim-sd-rmu",
+    "bookId": "structurebook",
+    "title": "R과 연성: 탄소성 1자유도 시간 이력",
+    "link": "chapters/seismic.html#sim-sd-rmu"
+  },
+  {
+    "id": "structurebook/seismic/sim-sd-els",
+    "bookId": "structurebook",
+    "title": "B-10 등가 정적 해석기",
+    "link": "chapters/seismic.html#sim-sd-els"
+  },
+  {
+    "id": "structurebook/seismic/sim-sd-rsa",
+    "bookId": "structurebook",
+    "title": "응답 스펙트럼 해석 vs 등가 정적 해석",
+    "link": "chapters/seismic.html#sim-sd-rsa"
+  },
+  {
+    "id": "structurebook/seismic/sim-sd-drift",
+    "bookId": "structurebook",
+    "title": "층간 변위 검토",
+    "link": "chapters/seismic.html#sim-sd-drift"
+  },
+  {
+    "id": "structurebook/seismic/sim-sd-soft",
+    "bookId": "structurebook",
+    "title": "필로티 연층: 1층 강성을 줄이면",
+    "link": "chapters/seismic.html#sim-sd-soft"
+  },
+  {
+    "id": "structurebook/seismic/sim-sd-tor",
+    "bookId": "structurebook",
+    "title": "비틀림 비정형: 코어 위치와 가장자리 변위",
+    "link": "chapters/seismic.html#sim-sd-tor"
+  },
+  {
+    "id": "structurebook/seismic/sim-sd-push",
+    "bookId": "structurebook",
+    "title": "푸시오버: 용량 곡선과 성능점(교육용)",
+    "link": "chapters/seismic.html#sim-sd-push"
+  },
+  {
+    "id": "structurebook/serviceability/sim-sv-deflect",
+    "bookId": "structurebook",
+    "title": "처짐 제한 검토기",
+    "link": "chapters/serviceability.html#sim-sv-deflect"
+  },
+  {
+    "id": "structurebook/serviceability/sim-sv-floor",
+    "bookId": "structurebook",
+    "title": "보행자 하중과 바닥 응답",
+    "link": "chapters/serviceability.html#sim-sv-floor"
+  },
+  {
+    "id": "structurebook/serviceability/sim-sv-t36",
+    "bookId": "structurebook",
+    "title": "T-36 보도교 연직 고유 진동수(레일리, CB.truss)",
+    "link": "chapters/serviceability.html#sim-sv-t36"
+  },
+  {
+    "id": "structurebook/serviceability/sim-sv-crowd",
+    "bookId": "structurebook",
+    "title": "군중 동기화 수평 진동",
+    "link": "chapters/serviceability.html#sim-sv-crowd"
+  },
+  {
+    "id": "structurebook/serviceability/sim-sv-drift",
+    "bookId": "structurebook",
+    "title": "풍하중 횡변위와 거주성(B-10)",
+    "link": "chapters/serviceability.html#sim-sv-drift"
+  },
+  {
+    "id": "structurebook/serviceability/sim-sv-shorten",
+    "bookId": "structurebook",
+    "title": "기둥 축소 누적: 기둥 vs 코어",
+    "link": "chapters/serviceability.html#sim-sv-shorten"
+  },
+  {
+    "id": "structurebook/serviceability/sim-sv-thermal",
+    "bookId": "structurebook",
+    "title": "온도 신축과 이음 간격",
+    "link": "chapters/serviceability.html#sim-sv-thermal"
+  },
+  {
+    "id": "structurebook/serviceability/sim-sv-iso",
+    "bookId": "structurebook",
+    "title": "설비 방진: 받침 처짐과 전달률",
+    "link": "chapters/serviceability.html#sim-sv-iso"
+  },
+  {
+    "id": "structurebook/steel-structures/sim-sts-systems",
+    "bookId": "structurebook",
+    "title": "골조 형식 비교: 같은 부재, 같은 하중, 다른 강성",
+    "link": "chapters/steel-structures.html#sim-sts-systems"
+  },
+  {
+    "id": "structurebook/steel-structures/sim-sts-net",
+    "bookId": "structurebook",
+    "title": "인장재 순단면: 파단 경로 찾기",
+    "link": "chapters/steel-structures.html#sim-sts-net"
+  },
+  {
+    "id": "structurebook/steel-structures/sim-sts-column",
+    "bookId": "structurebook",
+    "title": "압축재 설계 강도 곡선: 세장비 → F cr",
+    "link": "chapters/steel-structures.html#sim-sts-column"
+  },
+  {
+    "id": "structurebook/steel-structures/sim-sts-ltb",
+    "bookId": "structurebook",
+    "title": "횡비틀림 좌굴: 비지지 길이 → 설계 휨 강도",
+    "link": "chapters/steel-structures.html#sim-sts-ltb"
+  },
+  {
+    "id": "structurebook/steel-structures/sim-sts-pm",
+    "bookId": "structurebook",
+    "title": "상호작용도: B-10S 1층 기둥 H-400×400×13×21",
+    "link": "chapters/steel-structures.html#sim-sts-pm"
+  },
+  {
+    "id": "structurebook/steel-structures/sim-sts-bolts",
+    "bookId": "structurebook",
+    "title": "볼트 접합: 볼트 수·배치·편심 → 볼트마다의 힘",
+    "link": "chapters/steel-structures.html#sim-sts-bolts"
+  },
+  {
+    "id": "structurebook/steel-structures/sim-sts-weld",
+    "bookId": "structurebook",
+    "title": "필릿 용접 강도: 다리 길이·길이·하중 방향",
+    "link": "chapters/steel-structures.html#sim-sts-weld"
+  },
+  {
+    "id": "structurebook/steel-structures/sim-sts-brace",
+    "bookId": "structurebook",
+    "title": "가새 좌굴과 BRB: 반복 하중의 이력 곡선",
+    "link": "chapters/steel-structures.html#sim-sts-brace"
+  },
+  {
+    "id": "structurebook/timber-modular/sim-tmb-shrink",
+    "bookId": "structurebook",
+    "title": "층마다 쌓이는 축소: 플랫폼 공법 vs 기둥 연속형",
+    "link": "chapters/timber-modular.html#sim-tmb-shrink"
+  },
+  {
+    "id": "structurebook/timber-modular/sim-tmb-slip",
+    "bookId": "structurebook",
+    "title": "접합부 하중–미끄럼 곡선 비교",
+    "link": "chapters/timber-modular.html#sim-tmb-slip"
+  },
+  {
+    "id": "structurebook/timber-modular/sim-tmb-wall",
+    "bookId": "structurebook",
+    "title": "목조 전단벽 강성: 못 간격과 덮개판",
+    "link": "chapters/timber-modular.html#sim-tmb-wall"
+  },
+  {
+    "id": "structurebook/timber-modular/sim-tmb-hold",
+    "bookId": "structurebook",
+    "title": "홀다운 인발력: 벽 길이와 층 수",
+    "link": "chapters/timber-modular.html#sim-tmb-hold"
+  },
+  {
+    "id": "structurebook/timber-modular/sim-tmb-clt",
+    "bookId": "structurebook",
+    "title": "CLT 바닥 경간표: 처짐과 고유 진동수",
+    "link": "chapters/timber-modular.html#sim-tmb-clt"
+  },
+  {
+    "id": "structurebook/timber-modular/sim-tmb-lift",
+    "bookId": "structurebook",
+    "title": "양중 하중: 인양점 위치와 줄 각도",
+    "link": "chapters/timber-modular.html#sim-tmb-lift"
+  },
+  {
+    "id": "structurebook/timber-modular/sim-tmb-stack",
+    "bookId": "structurebook",
+    "title": "모듈러 적층: 층 수, 축력, 유닛 간 접합",
+    "link": "chapters/timber-modular.html#sim-tmb-stack"
+  },
+  {
+    "id": "structurebook/timber-modular/sim-tmb-carbon",
+    "bookId": "structurebook",
+    "title": "같은 바닥 면적의 구조 무게·탄소·공기 비교",
+    "link": "chapters/timber-modular.html#sim-tmb-carbon"
+  },
+  {
+    "id": "structurebook/walls/sim-wl-stiff",
+    "bookId": "structurebook",
+    "title": "전단벽의 휨 변형과 전단 변형",
+    "link": "chapters/walls.html#sim-wl-stiff"
+  },
+  {
+    "id": "structurebook/walls/sim-wl-shapes",
+    "bookId": "structurebook",
+    "title": "벽과 골조의 변형 형상 비교",
+    "link": "chapters/walls.html#sim-wl-shapes"
+  },
+  {
+    "id": "structurebook/walls/sim-wl-interact",
+    "bookId": "structurebook",
+    "title": "벽–골조 상호작용: B-10 코어와 골조의 층별 분담",
+    "link": "chapters/walls.html#sim-wl-interact"
+  },
+  {
+    "id": "structurebook/walls/sim-wl-coupled",
+    "bookId": "structurebook",
+    "title": "연결벽: 연결보 춤과 연결도",
+    "link": "chapters/walls.html#sim-wl-coupled"
+  },
+  {
+    "id": "structurebook/walls/sim-wl-torsion",
+    "bookId": "structurebook",
+    "title": "코어 위치와 비틀림: 코어를 끌어 보세요",
+    "link": "chapters/walls.html#sim-wl-torsion"
+  },
+  {
+    "id": "structurebook/walls/sim-wl-outrigger",
+    "bookId": "structurebook",
+    "title": "아웃리거 높이 최적화: 40층 타워",
+    "link": "chapters/walls.html#sim-wl-outrigger"
+  },
+  {
+    "id": "structurebook/walls/sim-wl-tube",
+    "bookId": "structurebook",
+    "title": "튜브의 전단 지연: 기둥 축력 분포 3D",
+    "link": "chapters/walls.html#sim-wl-tube"
+  },
+  {
+    "id": "structurebook/walls/sim-wl-height",
+    "bookId": "structurebook",
+    "title": "높이–시스템 선택 도표(교육용)",
+    "link": "chapters/walls.html#sim-wl-height"
+  },
+  {
+    "id": "structurebook/wind/sim-wd-profile",
+    "bookId": "structurebook",
+    "title": "높이에 따른 풍속과 속도압",
+    "link": "chapters/wind.html#sim-wd-profile"
+  },
+  {
+    "id": "structurebook/wind/sim-wd-pressure",
+    "bookId": "structurebook",
+    "title": "건물 주위의 풍압 분포: 풍향 바꾸기",
+    "link": "chapters/wind.html#sim-wd-pressure"
+  },
+  {
+    "id": "structurebook/wind/sim-wd-gust",
+    "bookId": "structurebook",
+    "title": "난류 풍속 기록과 순간 최대 풍속",
+    "link": "chapters/wind.html#sim-wd-gust"
+  },
+  {
+    "id": "structurebook/wind/sim-wd-gf",
+    "bookId": "structurebook",
+    "title": "가스트 영향 계수: 배경 성분과 공진 성분",
+    "link": "chapters/wind.html#sim-wd-gf"
+  },
+  {
+    "id": "structurebook/wind/sim-wd-story",
+    "bookId": "structurebook",
+    "title": "층 풍하중과 밑면 전단: 지진하중과 비교",
+    "link": "chapters/wind.html#sim-wd-story"
+  },
+  {
+    "id": "structurebook/wind/sim-wd-vortex",
+    "bookId": "structurebook",
+    "title": "와류 방출과 공진 풍속",
+    "link": "chapters/wind.html#sim-wd-vortex"
+  },
+  {
+    "id": "structurebook/wind/sim-wd-comfort",
+    "bookId": "structurebook",
+    "title": "거주성 판정: 진동수–가속도 평면",
+    "link": "chapters/wind.html#sim-wd-comfort"
+  },
+  {
+    "id": "structurebook/wind/sim-wd-shape",
+    "bookId": "structurebook",
+    "title": "공력 형상 비교(교육용 지수)",
+    "link": "chapters/wind.html#sim-wd-shape"
+  },
+  {
+    "id": "concretebook/case-study/sim-cs-env",
+    "bookId": "concretebook",
+    "title": "연속보 모멘트 포락선과 배근 계단",
+    "link": "chapters/case-study.html#sim-cs-env"
+  },
+  {
+    "id": "concretebook/case-study/sim-cs-sheet",
+    "bookId": "concretebook",
+    "title": "G1 연쇄 계산서 (단계 카드)",
+    "link": "chapters/case-study.html#sim-cs-sheet"
+  },
+  {
+    "id": "concretebook/case-study/sim-cs-col",
+    "bookId": "concretebook",
+    "title": "C1 층별 P–M 검토 표",
+    "link": "chapters/case-study.html#sim-cs-col"
+  },
+  {
+    "id": "concretebook/case-study/sim-cs-fnd",
+    "bookId": "concretebook",
+    "title": "슬래브 띠 설계와 말뚝 캡 검토",
+    "link": "chapters/case-study.html#sim-cs-fnd"
+  },
+  {
+    "id": "concretebook/case-study/sim-cs-qty",
+    "bookId": "concretebook",
+    "title": "철근 물량 산출: G1 한 개에서 기준층까지",
+    "link": "chapters/case-study.html#sim-cs-qty"
+  },
+  {
+    "id": "concretebook/case-study/sim-cs-alt",
+    "bookId": "concretebook",
+    "title": "G1 설계 대안: 콘크리트 · 철근 · 비용 · 탄소",
+    "link": "chapters/case-study.html#sim-cs-alt"
+  },
+  {
+    "id": "concretebook/case-study/sim-cs-3d",
+    "bookId": "concretebook",
+    "title": "G1–C1 내부 접합부 3D 배근",
+    "link": "chapters/case-study.html#sim-cs-3d"
+  },
+  {
+    "id": "concretebook/case-study/sim-cs-game",
+    "bookId": "concretebook",
+    "title": "체크리스트 게임: 틀린 계산서 찾기",
+    "link": "chapters/case-study.html#sim-cs-game"
+  },
+  {
+    "id": "concretebook/columns/sim-co-axial",
+    "bookId": "concretebook",
+    "title": "중심 축하중 강도 계산",
+    "link": "chapters/columns.html#sim-co-axial"
+  },
+  {
+    "id": "concretebook/columns/sim-co-ties",
+    "bookId": "concretebook",
+    "title": "띠철근 상세 검토기",
+    "link": "chapters/columns.html#sim-co-ties"
+  },
+  {
+    "id": "concretebook/columns/sim-co-spiral",
+    "bookId": "concretebook",
+    "title": "띠 vs 나선: 나선 설계와 설계 강도 차이",
+    "link": "chapters/columns.html#sim-co-spiral"
+  },
+  {
+    "id": "concretebook/columns/sim-co-build",
+    "bookId": "concretebook",
+    "title": "P–M 상관도 만들기: 중립축을 옮기며 점 찍기",
+    "link": "chapters/columns.html#sim-co-build"
+  },
+  {
+    "id": "concretebook/columns/sim-co-load",
+    "bookId": "concretebook",
+    "title": "하중점 끌기: C1 검토",
+    "link": "chapters/columns.html#sim-co-load"
+  },
+  {
+    "id": "concretebook/columns/sim-co-bars",
+    "bookId": "concretebook",
+    "title": "철근 배치와 철근비 바꾸기",
+    "link": "chapters/columns.html#sim-co-bars"
+  },
+  {
+    "id": "concretebook/columns/sim-co-biax",
+    "bookId": "concretebook",
+    "title": "2축 휨 상호작용 면(3D)과 브레슬러 비교",
+    "link": "chapters/columns.html#sim-co-biax"
+  },
+  {
+    "id": "concretebook/columns/sim-co-storey",
+    "bookId": "concretebook",
+    "title": "C1 층별 검토: 단면과 철근 줄이기",
+    "link": "chapters/columns.html#sim-co-storey"
+  },
+  {
+    "id": "concretebook/design-basis/sim-db-combo",
+    "bookId": "concretebook",
+    "title": "하중 조합과 설계 강도: 소요 vs 설계",
+    "link": "chapters/design-basis.html#sim-db-combo"
+  },
+  {
+    "id": "concretebook/design-basis/sim-db-reliab",
+    "bookId": "concretebook",
+    "title": "신뢰도 맛보기: γ와 φ가 파괴 확률에 미치는 영향",
+    "link": "chapters/design-basis.html#sim-db-reliab"
+  },
+  {
+    "id": "concretebook/design-basis/sim-db-block",
+    "bookId": "concretebook",
+    "title": "응력 블록의 근거: 포물선–직선 vs 등가 직사각형",
+    "link": "chapters/design-basis.html#sim-db-block"
+  },
+  {
+    "id": "concretebook/design-basis/sim-db-strain",
+    "bookId": "concretebook",
+    "title": "변형률 적합 끌기: C = T가 될 때까지",
+    "link": "chapters/design-basis.html#sim-db-strain"
+  },
+  {
+    "id": "concretebook/design-basis/sim-db-phi",
+    "bookId": "concretebook",
+    "title": "φ 곡선: εt를 끌어 단면 분류 보기",
+    "link": "chapters/design-basis.html#sim-db-phi"
+  },
+  {
+    "id": "concretebook/design-basis/sim-db-rho",
+    "bookId": "concretebook",
+    "title": "철근비 → a, c, εt, φMn: 구간과 상한",
+    "link": "chapters/design-basis.html#sim-db-rho"
+  },
+  {
+    "id": "concretebook/design-basis/sim-db-coef",
+    "bookId": "concretebook",
+    "title": "블록 계수 탐색: fck → εcu · η · β₁",
+    "link": "chapters/design-basis.html#sim-db-coef"
+  },
+  {
+    "id": "concretebook/development/sim-dv-bond",
+    "bookId": "concretebook",
+    "title": "부착 응력 분포: 정착 · 휨 부착 · 균열 사이",
+    "link": "chapters/development.html#sim-dv-bond"
+  },
+  {
+    "id": "concretebook/development/sim-dv-ld",
+    "bookId": "concretebook",
+    "title": "정착 길이 계산기: 간이식 · 정밀식 · 압축",
+    "link": "chapters/development.html#sim-dv-ld"
+  },
+  {
+    "id": "concretebook/development/sim-dv-hook",
+    "bookId": "concretebook",
+    "title": "직선 정착 vs 갈고리: 기둥 안에 들어가나",
+    "link": "chapters/development.html#sim-dv-hook"
+  },
+  {
+    "id": "concretebook/development/sim-dv-bundle",
+    "bookId": "concretebook",
+    "title": "다발 철근: 둘레와 정착 길이",
+    "link": "chapters/development.html#sim-dv-bundle"
+  },
+  {
+    "id": "concretebook/development/sim-dv-cutoff",
+    "bookId": "concretebook",
+    "title": "G1 절단점 결정기: 포락선 · φM n 계단 · 정착 검토",
+    "link": "chapters/development.html#sim-dv-cutoff"
+  },
+  {
+    "id": "concretebook/development/sim-dv-splice",
+    "bookId": "concretebook",
+    "title": "겹침 이음 위치 고르기: 포락선 위의 A급·B급",
+    "link": "chapters/development.html#sim-dv-splice"
+  },
+  {
+    "id": "concretebook/development/sim-dv-lap",
+    "bookId": "concretebook",
+    "title": "이음 구간의 응력 전달 애니메이션",
+    "link": "chapters/development.html#sim-dv-lap"
+  },
+  {
+    "id": "concretebook/development/sim-dv-plan",
+    "bookId": "concretebook",
+    "title": "G1 배근 계획과 철근 물량",
+    "link": "chapters/development.html#sim-dv-plan"
+  },
+  {
+    "id": "concretebook/flexure/sim-fx-section",
+    "bookId": "concretebook",
+    "title": "단면 휨강도 계산기: 철근을 놓고 끌기",
+    "link": "chapters/flexure.html#sim-fx-section"
+  },
+  {
+    "id": "concretebook/flexure/sim-fx-yield",
+    "bookId": "concretebook",
+    "title": "철근은 항복하는가: 가정하고 확인하기",
+    "link": "chapters/flexure.html#sim-fx-yield"
+  },
+  {
+    "id": "concretebook/flexure/sim-fx-rho",
+    "bookId": "concretebook",
+    "title": "철근비 슬라이더: 강도·φ·연성과 파괴 형태",
+    "link": "chapters/flexure.html#sim-fx-rho"
+  },
+  {
+    "id": "concretebook/flexure/sim-fx-mincr",
+    "bookId": "concretebook",
+    "title": "최소 철근의 이유: 균열 모멘트와 공칭 강도",
+    "link": "chapters/flexure.html#sim-fx-mincr"
+  },
+  {
+    "id": "concretebook/flexure/sim-fx-design",
+    "bookId": "concretebook",
+    "title": "소요 철근 설계기: A s 소요 → 철근 조합 후보",
+    "link": "chapters/flexure.html#sim-fx-design"
+  },
+  {
+    "id": "concretebook/flexure/sim-fx-layers",
+    "bookId": "concretebook",
+    "title": "2단 배근 효과: 층이 늘면 d가 준다",
+    "link": "chapters/flexure.html#sim-fx-layers"
+  },
+  {
+    "id": "concretebook/flexure/sim-fx-econ",
+    "bookId": "concretebook",
+    "title": "단면 크기 최적화: 보 춤 h → 철근·콘크리트·비용",
+    "link": "chapters/flexure.html#sim-fx-econ"
+  },
+  {
+    "id": "concretebook/flexure/sim-fx-g1",
+    "bookId": "concretebook",
+    "title": "G1 정모멘트 단면 설계 마법사",
+    "link": "chapters/flexure.html#sim-fx-g1"
+  },
+  {
+    "id": "concretebook/footings/sim-ft-shear",
+    "bookId": "concretebook",
+    "title": "1방향·뚫림 전단 위험 단면",
+    "link": "chapters/footings.html#sim-ft-shear"
+  },
+  {
+    "id": "concretebook/footings/sim-ft-bear",
+    "bookId": "concretebook",
+    "title": "기둥–기초 지압 검토",
+    "link": "chapters/footings.html#sim-ft-bear"
+  },
+  {
+    "id": "concretebook/footings/sim-ft-design",
+    "bookId": "concretebook",
+    "title": "독립 기초 설계기",
+    "link": "chapters/footings.html#sim-ft-design"
+  },
+  {
+    "id": "concretebook/footings/sim-ft-ecc",
+    "bookId": "concretebook",
+    "title": "편심 하중 접지압",
+    "link": "chapters/footings.html#sim-ft-ecc"
+  },
+  {
+    "id": "concretebook/footings/sim-ft-comb",
+    "bookId": "concretebook",
+    "title": "복합 기초의 접지압과 휨모멘트도",
+    "link": "chapters/footings.html#sim-ft-comb"
+  },
+  {
+    "id": "concretebook/footings/sim-ft-pile",
+    "bookId": "concretebook",
+    "title": "말뚝 머리 반력 분배",
+    "link": "chapters/footings.html#sim-ft-pile"
+  },
+  {
+    "id": "concretebook/footings/sim-ft-cappunch",
+    "bookId": "concretebook",
+    "title": "말뚝 캡 펀칭 검토 (C1, 5본)",
+    "link": "chapters/footings.html#sim-ft-cappunch"
+  },
+  {
+    "id": "concretebook/footings/sim-ft-3d",
+    "bookId": "concretebook",
+    "title": "C1 말뚝 캡 3D: 위험 단면과 배근",
+    "link": "chapters/footings.html#sim-ft-3d"
+  },
+  {
+    "id": "concretebook/glossary/sim-gl-beam",
+    "bookId": "concretebook",
+    "title": "단면 → 변형률 적합 → a, c, ε t , φM n · 스터럽 → φV n",
+    "link": "chapters/glossary.html#sim-gl-beam"
+  },
+  {
+    "id": "concretebook/glossary/sim-gl-pm",
+    "bookId": "concretebook",
+    "title": "단면·배근 → P–M 상관도 → 하중점 판정",
+    "link": "chapters/glossary.html#sim-gl-pm"
+  },
+  {
+    "id": "concretebook/overview/sim-ov-mat",
+    "bookId": "concretebook",
+    "title": "재료 곡선 겹치기: 콘크리트 압축·인장 vs 철근",
+    "link": "chapters/overview.html#sim-ov-mat"
+  },
+  {
+    "id": "concretebook/overview/sim-ov-plain",
+    "bookId": "concretebook",
+    "title": "무근 보 vs 철근콘크리트 보: 파괴 하중 비",
+    "link": "chapters/overview.html#sim-ov-plain"
+  },
+  {
+    "id": "concretebook/overview/sim-ov-pos",
+    "bookId": "concretebook",
+    "title": "철근 위치 실험: 같은 철근, 다른 자리",
+    "link": "chapters/overview.html#sim-ov-pos"
+  },
+  {
+    "id": "concretebook/overview/sim-ov-thermal",
+    "bookId": "concretebook",
+    "title": "열팽창 적합: 철근 vs 다른 봉재",
+    "link": "chapters/overview.html#sim-ov-thermal"
+  },
+  {
+    "id": "concretebook/overview/sim-ov-load",
+    "bookId": "concretebook",
+    "title": "보 재하 실험: 균열 → 항복 → 극한",
+    "link": "chapters/overview.html#sim-ov-load"
+  },
+  {
+    "id": "concretebook/overview/sim-ov-stages",
+    "bookId": "concretebook",
+    "title": "단면 응력 분포 단계별: 변형률도와 응력도",
+    "link": "chapters/overview.html#sim-ov-stages"
+  },
+  {
+    "id": "concretebook/overview/sim-ov-modes",
+    "bookId": "concretebook",
+    "title": "과소·균형·과다 철근: 파괴 모드와 연성 지수",
+    "link": "chapters/overview.html#sim-ov-modes"
+  },
+  {
+    "id": "concretebook/overview/sim-ov-3d",
+    "bookId": "concretebook",
+    "title": "B-10 배근 3D: G1 한 경간과 C1",
+    "link": "chapters/overview.html#sim-ov-3d"
+  },
+  {
+    "id": "concretebook/prestressed/sim-ps-method",
+    "bookId": "concretebook",
+    "title": "프리텐션 vs 포스트텐션 제작 과정",
+    "link": "chapters/prestressed.html#sim-ps-method"
+  },
+  {
+    "id": "concretebook/prestressed/sim-ps-stress",
+    "bookId": "concretebook",
+    "title": "응력 분포 계산기: 전달 시와 사용 시",
+    "link": "chapters/prestressed.html#sim-ps-stress"
+  },
+  {
+    "id": "concretebook/prestressed/sim-ps-balance",
+    "bookId": "concretebook",
+    "title": "하중 평형: 텐던 처짐 → 상향 하중 → 순 하중",
+    "link": "chapters/prestressed.html#sim-ps-balance"
+  },
+  {
+    "id": "concretebook/prestressed/sim-ps-zone",
+    "bookId": "concretebook",
+    "title": "텐던 배치 영역: 텐던을 끌어 보자",
+    "link": "chapters/prestressed.html#sim-ps-zone"
+  },
+  {
+    "id": "concretebook/prestressed/sim-ps-loss",
+    "bookId": "concretebook",
+    "title": "손실 막대: 잭에서 유효 긴장력까지",
+    "link": "chapters/prestressed.html#sim-ps-loss"
+  },
+  {
+    "id": "concretebook/prestressed/sim-ps-strength",
+    "bookId": "concretebook",
+    "title": "공칭 휨강도: 부착 vs 비부착",
+    "link": "chapters/prestressed.html#sim-ps-strength"
+  },
+  {
+    "id": "concretebook/prestressed/sim-ps-camber",
+    "bookId": "concretebook",
+    "title": "캠버의 시간 이력: 솟음과 처짐의 줄다리기",
+    "link": "chapters/prestressed.html#sim-ps-camber"
+  },
+  {
+    "id": "concretebook/prestressed/sim-ps-compare",
+    "bookId": "concretebook",
+    "title": "같은 경간, PSC 보 vs RC 보",
+    "link": "chapters/prestressed.html#sim-ps-compare"
+  },
+  {
+    "id": "concretebook/serviceability/sim-sv-crack",
+    "bookId": "concretebook",
+    "title": "균열 단면 계산기: 환산 단면과 응력",
+    "link": "chapters/serviceability.html#sim-sv-crack"
+  },
+  {
+    "id": "concretebook/serviceability/sim-sv-ie",
+    "bookId": "concretebook",
+    "title": "I e 곡선: 균열이 강성을 얼마나 빼앗나",
+    "link": "chapters/serviceability.html#sim-sv-ie"
+  },
+  {
+    "id": "concretebook/serviceability/sim-sv-ld",
+    "bookId": "concretebook",
+    "title": "하중–처짐 곡선: 균열 전 강성에서 균열 후 강성으로",
+    "link": "chapters/serviceability.html#sim-sv-ld"
+  },
+  {
+    "id": "concretebook/serviceability/sim-sv-long",
+    "bookId": "concretebook",
+    "title": "장기 처짐 시간 곡선",
+    "link": "chapters/serviceability.html#sim-sv-long"
+  },
+  {
+    "id": "concretebook/serviceability/sim-sv-hmin",
+    "bookId": "concretebook",
+    "title": "최소 두께 검토",
+    "link": "chapters/serviceability.html#sim-sv-hmin"
+  },
+  {
+    "id": "concretebook/serviceability/sim-sv-gl",
+    "bookId": "concretebook",
+    "title": "균열 폭 영향 인자: 같은 철근량을 어떻게 나눌까",
+    "link": "chapters/serviceability.html#sim-sv-gl"
+  },
+  {
+    "id": "concretebook/serviceability/sim-sv-smax",
+    "bookId": "concretebook",
+    "title": "균열 간격 검토기",
+    "link": "chapters/serviceability.html#sim-sv-smax"
+  },
+  {
+    "id": "concretebook/serviceability/sim-sv-ts",
+    "bookId": "concretebook",
+    "title": "수축·온도 철근 간격 정하기",
+    "link": "chapters/serviceability.html#sim-sv-ts"
+  },
+  {
+    "id": "concretebook/shear/sim-sh-traj",
+    "bookId": "concretebook",
+    "title": "보 안의 주응력과 균열 방향",
+    "link": "chapters/shear.html#sim-sh-traj"
+  },
+  {
+    "id": "concretebook/shear/sim-sh-ad",
+    "bookId": "concretebook",
+    "title": "전단 경간비 실험과 전단 계곡(교육용)",
+    "link": "chapters/shear.html#sim-sh-ad"
+  },
+  {
+    "id": "concretebook/shear/sim-sh-vc",
+    "bookId": "concretebook",
+    "title": "V c 식 비교: 간단식 · 정밀식 · 크기 효과",
+    "link": "chapters/shear.html#sim-sh-vc"
+  },
+  {
+    "id": "concretebook/shear/sim-sh-truss",
+    "bookId": "concretebook",
+    "title": "트러스 모형 애니메이션: 스트럿과 스터럽의 힘",
+    "link": "chapters/shear.html#sim-sh-truss"
+  },
+  {
+    "id": "concretebook/shear/sim-sh-space",
+    "bookId": "concretebook",
+    "title": "스터럽 간격 계산기와 단면 한계",
+    "link": "chapters/shear.html#sim-sh-space"
+  },
+  {
+    "id": "concretebook/shear/sim-sh-design",
+    "bookId": "concretebook",
+    "title": "G1 전단 설계기: 전단력도 위의 φV n 계단",
+    "link": "chapters/shear.html#sim-sh-design"
+  },
+  {
+    "id": "concretebook/shear/sim-sh-incl",
+    "bookId": "concretebook",
+    "title": "경사 스터럽: 각도와 효율",
+    "link": "chapters/shear.html#sim-sh-incl"
+  },
+  {
+    "id": "concretebook/shear/sim-sh-deep",
+    "bookId": "concretebook",
+    "title": "깊은 보의 아치: 스트럿–타이 맛보기",
+    "link": "chapters/shear.html#sim-sh-deep"
+  },
+  {
+    "id": "concretebook/slabs/sim-sl-thick",
+    "bookId": "concretebook",
+    "title": "처짐 최소 두께 표 탐색",
+    "link": "chapters/slabs.html#sim-sl-thick"
+  },
+  {
+    "id": "concretebook/slabs/sim-sl-coef",
+    "bookId": "concretebook",
+    "title": "모멘트 계수 vs 연속보 해석",
+    "link": "chapters/slabs.html#sim-sl-coef"
+  },
+  {
+    "id": "concretebook/slabs/sim-sl-oneway",
+    "bookId": "concretebook",
+    "title": "1방향 슬래브 설계기",
+    "link": "chapters/slabs.html#sim-sl-oneway"
+  },
+  {
+    "id": "concretebook/slabs/sim-sl-shrink",
+    "bookId": "concretebook",
+    "title": "수축·온도 철근 간격",
+    "link": "chapters/slabs.html#sim-sl-shrink"
+  },
+  {
+    "id": "concretebook/slabs/sim-sl-ddm",
+    "bookId": "concretebook",
+    "title": "2방향 슬래브 띠 모멘트와 철근 간격",
+    "link": "chapters/slabs.html#sim-sl-ddm"
+  },
+  {
+    "id": "concretebook/slabs/sim-sl-plan",
+    "bookId": "concretebook",
+    "title": "B-10 슬래브 배근 평면도 검토",
+    "link": "chapters/slabs.html#sim-sl-plan"
+  },
+  {
+    "id": "concretebook/slabs/sim-sl-punch",
+    "bookId": "concretebook",
+    "title": "뚫림 전단 검토와 전단 보강",
+    "link": "chapters/slabs.html#sim-sl-punch"
+  },
+  {
+    "id": "concretebook/slabs/sim-sl-open",
+    "bookId": "concretebook",
+    "title": "개구부를 끌어 놓기: 임계 둘레의 무효 구간",
+    "link": "chapters/slabs.html#sim-sl-open"
+  },
+  {
+    "id": "concretebook/slender/sim-sc-limit",
+    "bookId": "concretebook",
+    "title": "세장비 판정기",
+    "link": "chapters/slender.html#sim-sc-limit"
+  },
+  {
+    "id": "concretebook/slender/sim-sc-kfactor",
+    "bookId": "concretebook",
+    "title": "정렬 도표와 근사식",
+    "link": "chapters/slender.html#sim-sc-kfactor"
+  },
+  {
+    "id": "concretebook/slender/sim-sc-modes",
+    "bookId": "concretebook",
+    "title": "좌굴 모드: 비횡이동 vs 횡이동",
+    "link": "chapters/slender.html#sim-sc-modes"
+  },
+  {
+    "id": "concretebook/slender/sim-sc-magnifier",
+    "bookId": "concretebook",
+    "title": "모멘트 확대 계산기",
+    "link": "chapters/slender.html#sim-sc-magnifier"
+  },
+  {
+    "id": "concretebook/slender/sim-sc-sway",
+    "bookId": "concretebook",
+    "title": "층의 안정 지수와 횡이동 확대",
+    "link": "chapters/slender.html#sim-sc-sway"
+  },
+  {
+    "id": "concretebook/slender/sim-sc-pdelta",
+    "bookId": "concretebook",
+    "title": "2차 해석 비교: 반복 P–Δ(CB.frame) vs 확대 계수",
+    "link": "chapters/slender.html#sim-sc-pdelta"
+  },
+  {
+    "id": "concretebook/slender/sim-sc-pm",
+    "bookId": "concretebook",
+    "title": "상관도 위 하중점 이동",
+    "link": "chapters/slender.html#sim-sc-pm"
+  },
+  {
+    "id": "concretebook/slender/sim-sc-thin",
+    "bookId": "concretebook",
+    "title": "가늘어지는 기둥: 세장비와 강도 감소",
+    "link": "chapters/slender.html#sim-sc-thin"
+  },
+  {
+    "id": "concretebook/strut-tie/sim-st-fe",
+    "bookId": "concretebook",
+    "title": "B·D 영역과 주응력 궤적(탄성 유한 요소)",
+    "link": "chapters/strut-tie.html#sim-st-fe"
+  },
+  {
+    "id": "concretebook/strut-tie/sim-st-node",
+    "bookId": "concretebook",
+    "title": "절점 영역 검토(확장 절점)",
+    "link": "chapters/strut-tie.html#sim-st-node"
+  },
+  {
+    "id": "concretebook/strut-tie/sim-st-bottle",
+    "bookId": "concretebook",
+    "title": "병 모양 스트럿의 가로 인장",
+    "link": "chapters/strut-tie.html#sim-st-bottle"
+  },
+  {
+    "id": "concretebook/strut-tie/sim-st-truss",
+    "bookId": "concretebook",
+    "title": "깊은 보 STM: 절점을 끌어 부재력 보기",
+    "link": "chapters/strut-tie.html#sim-st-truss"
+  },
+  {
+    "id": "concretebook/strut-tie/sim-st-deep",
+    "bookId": "concretebook",
+    "title": "깊은 보 STM 설계 검토",
+    "link": "chapters/strut-tie.html#sim-st-deep"
+  },
+  {
+    "id": "concretebook/strut-tie/sim-st-corbel",
+    "bookId": "concretebook",
+    "title": "코벨 설계: STM과 단면식",
+    "link": "chapters/strut-tie.html#sim-st-corbel"
+  },
+  {
+    "id": "concretebook/strut-tie/sim-st-open",
+    "bookId": "concretebook",
+    "title": "개구부를 돌아가는 하중 경로",
+    "link": "chapters/strut-tie.html#sim-st-open"
+  },
+  {
+    "id": "concretebook/strut-tie/sim-st-cap3d",
+    "bookId": "concretebook",
+    "title": "말뚝 캡 3D 스트럿–타이 모델",
+    "link": "chapters/strut-tie.html#sim-st-cap3d"
+  },
+  {
+    "id": "concretebook/t-beam/sim-tb-doubly",
+    "bookId": "concretebook",
+    "title": "복철근 단면 계산기",
+    "link": "chapters/t-beam.html#sim-tb-doubly"
+  },
+  {
+    "id": "concretebook/t-beam/sim-tb-duct",
+    "bookId": "concretebook",
+    "title": "압축 철근의 연성 효과",
+    "link": "chapters/t-beam.html#sim-tb-duct"
+  },
+  {
+    "id": "concretebook/t-beam/sim-tb-env",
+    "bookId": "concretebook",
+    "title": "연속보 모멘트 포락선과 소요 철근량 분포",
+    "link": "chapters/t-beam.html#sim-tb-env"
+  },
+  {
+    "id": "concretebook/t-beam/sim-tb-cut",
+    "bookId": "concretebook",
+    "title": "절단점 맛보기: 포락선 위의 철근 계단",
+    "link": "chapters/t-beam.html#sim-tb-cut"
+  },
+  {
+    "id": "concretebook/t-beam/sim-tb-width",
+    "bookId": "concretebook",
+    "title": "유효 폭 규칙 비교기",
+    "link": "chapters/t-beam.html#sim-tb-width"
+  },
+  {
+    "id": "concretebook/t-beam/sim-tb-tee",
+    "bookId": "concretebook",
+    "title": "T형 보 계산기",
+    "link": "chapters/t-beam.html#sim-tb-tee"
+  },
+  {
+    "id": "concretebook/t-beam/sim-tb-neg",
+    "bookId": "concretebook",
+    "title": "G1 지점 부모멘트 설계 마법사",
+    "link": "chapters/t-beam.html#sim-tb-neg"
+  },
+  {
+    "id": "concretebook/t-beam/sim-tb-elev",
+    "bookId": "concretebook",
+    "title": "G1 배근도와 임의 단면 검토",
+    "link": "chapters/t-beam.html#sim-tb-elev"
+  },
+  {
+    "id": "concretebook/torsion/sim-to-compat",
+    "bookId": "concretebook",
+    "title": "평형 vs 적합 비틀림: 가장자리 보 강성과 슬래브 모멘트",
+    "link": "chapters/torsion.html#sim-to-compat"
+  },
+  {
+    "id": "concretebook/torsion/sim-to-tube",
+    "bookId": "concretebook",
+    "title": "박벽관의 전단 흐름",
+    "link": "chapters/torsion.html#sim-to-tube"
+  },
+  {
+    "id": "concretebook/torsion/sim-to-tcr",
+    "bookId": "concretebook",
+    "title": "균열 비틀림 모멘트와 무시 한계",
+    "link": "chapters/torsion.html#sim-to-tcr"
+  },
+  {
+    "id": "concretebook/torsion/sim-to-truss",
+    "bookId": "concretebook",
+    "title": "입체 트러스: θ가 스터럽과 종철근을 나눈다",
+    "link": "chapters/torsion.html#sim-to-truss"
+  },
+  {
+    "id": "concretebook/torsion/sim-to-tt",
+    "bookId": "concretebook",
+    "title": "비틀림 모멘트–비틀림각: 철근량과 스터럽 형태(교육용)",
+    "link": "chapters/torsion.html#sim-to-tt"
+  },
+  {
+    "id": "concretebook/torsion/sim-to-3d",
+    "bookId": "concretebook",
+    "title": "폐쇄 스터럽 상세 3D",
+    "link": "chapters/torsion.html#sim-to-3d"
+  },
+  {
+    "id": "concretebook/torsion/sim-to-design",
+    "bookId": "concretebook",
+    "title": "비틀림 + 전단 설계기",
+    "link": "chapters/torsion.html#sim-to-design"
+  },
+  {
+    "id": "concretebook/walls-detailing/sim-wd-wallpm",
+    "bookId": "concretebook",
+    "title": "전단벽 단면의 P–M 상관도",
+    "link": "chapters/walls-detailing.html#sim-wd-wallpm"
+  },
+  {
+    "id": "concretebook/walls-detailing/sim-wd-wallshear",
+    "bookId": "concretebook",
+    "title": "전단벽 전단강도 검토",
+    "link": "chapters/walls-detailing.html#sim-wd-wallshear"
+  },
+  {
+    "id": "concretebook/walls-detailing/sim-wd-boundary",
+    "bookId": "concretebook",
+    "title": "경계 요소가 필요한가",
+    "link": "chapters/walls-detailing.html#sim-wd-boundary"
+  },
+  {
+    "id": "concretebook/walls-detailing/sim-wd-mander",
+    "bookId": "concretebook",
+    "title": "띠철근 구속 효과: 만더 모형(교육용)",
+    "link": "chapters/walls-detailing.html#sim-wd-mander"
+  },
+  {
+    "id": "concretebook/walls-detailing/sim-wd-beam",
+    "bookId": "concretebook",
+    "title": "특수 모멘트 골조 보 상세 검토기",
+    "link": "chapters/walls-detailing.html#sim-wd-beam"
+  },
+  {
+    "id": "concretebook/walls-detailing/sim-wd-scwb",
+    "bookId": "concretebook",
+    "title": "강기둥–약보와 접합부 전단 검토",
+    "link": "chapters/walls-detailing.html#sim-wd-scwb"
+  },
+  {
+    "id": "concretebook/walls-detailing/sim-wd-joint3d",
+    "bookId": "concretebook",
+    "title": "B-10 C1–G1 내부 접합부 배근",
+    "link": "chapters/walls-detailing.html#sim-wd-joint3d"
+  },
+  {
+    "id": "concretebook/walls-detailing/sim-wd-coupling",
+    "bookId": "concretebook",
+    "title": "연결보 대각 철근",
+    "link": "chapters/walls-detailing.html#sim-wd-coupling"
+  },
+  {
+    "id": "civilbook/alignment/sim-al-ssd",
+    "bookId": "civilbook",
+    "title": "정지 시거 계산기: 공주 거리와 제동 거리",
+    "link": "chapters/alignment.html#sim-al-ssd"
+  },
+  {
+    "id": "civilbook/alignment/sim-al-force",
+    "bookId": "civilbook",
+    "title": "곡선 주행 힘의 평형: 편경사가 할 일, 마찰이 할 일",
+    "link": "chapters/alignment.html#sim-al-force"
+  },
+  {
+    "id": "civilbook/alignment/sim-al-curve",
+    "bookId": "civilbook",
+    "title": "원곡선 요소 계산기와 편각법 측설표",
+    "link": "chapters/alignment.html#sim-al-curve"
+  },
+  {
+    "id": "civilbook/alignment/sim-al-super",
+    "bookId": "civilbook",
+    "title": "편경사 접속 다이어그램",
+    "link": "chapters/alignment.html#sim-al-super"
+  },
+  {
+    "id": "civilbook/alignment/sim-al-clothoid",
+    "bookId": "civilbook",
+    "title": "클로소이드 완화 곡선: 평면과 곡률 그래프",
+    "link": "chapters/alignment.html#sim-al-clothoid"
+  },
+  {
+    "id": "civilbook/alignment/sim-al-grade",
+    "bookId": "civilbook",
+    "title": "오르막에서 트럭 속도와 임계 경사 길이",
+    "link": "chapters/alignment.html#sim-al-grade"
+  },
+  {
+    "id": "civilbook/alignment/sim-al-vcurve",
+    "bookId": "civilbook",
+    "title": "종단 곡선 설계: 표고, 시거선, 최소 길이",
+    "link": "chapters/alignment.html#sim-al-vcurve"
+  },
+  {
+    "id": "civilbook/alignment/sim-al-drive",
+    "bookId": "civilbook",
+    "title": "R-60 3D 주행: 운전자 시점과 조감",
+    "link": "chapters/alignment.html#sim-al-drive"
+  },
+  {
+    "id": "civilbook/arch-truss/sim-at-thrust",
+    "bookId": "civilbook",
+    "title": "아치 추력: 라이즈 비 → 추력·반력·리브 축력",
+    "link": "chapters/arch-truss.html#sim-at-thrust"
+  },
+  {
+    "id": "civilbook/arch-truss/sim-at-tied",
+    "bookId": "civilbook",
+    "title": "타이드 아치: 타이 장력과 리브·타이의 휨 나눔",
+    "link": "chapters/arch-truss.html#sim-at-tied"
+  },
+  {
+    "id": "civilbook/arch-truss/sim-at-partial",
+    "bookId": "civilbook",
+    "title": "편재 하중의 휨: 압력선 편차와 아치 지지 형식",
+    "link": "chapters/arch-truss.html#sim-at-partial"
+  },
+  {
+    "id": "civilbook/arch-truss/sim-at-buckle",
+    "bookId": "civilbook",
+    "title": "아치 좌굴 하중: 라이즈 비 → γ와 좌굴 모드",
+    "link": "chapters/arch-truss.html#sim-at-buckle"
+  },
+  {
+    "id": "civilbook/arch-truss/sim-at-truss",
+    "bookId": "civilbook",
+    "title": "트러스교 해석: 형식·패널 수·높이 → 부재력과 강재량",
+    "link": "chapters/arch-truss.html#sim-at-truss"
+  },
+  {
+    "id": "civilbook/arch-truss/sim-at-moving",
+    "bookId": "civilbook",
+    "title": "트럭 주행과 트러스 부재력 이력: TR-60",
+    "link": "chapters/arch-truss.html#sim-at-moving"
+  },
+  {
+    "id": "civilbook/arch-truss/sim-at-secondary",
+    "bookId": "civilbook",
+    "title": "2차 응력: 강접 T-36의 부재 휨",
+    "link": "chapters/arch-truss.html#sim-at-secondary"
+  },
+  {
+    "id": "civilbook/arch-truss/sim-at-3d",
+    "bookId": "civilbook",
+    "title": "AR-100 3D: 트럭이 지나갈 때 행어 장력",
+    "link": "chapters/arch-truss.html#sim-at-3d"
+  },
+  {
+    "id": "civilbook/bridge-loads/sim-bl-drive",
+    "bookId": "civilbook",
+    "title": "트럭 주행: 휨모멘트·전단력의 시간 이력과 최댓값",
+    "link": "chapters/bridge-loads.html#sim-bl-drive"
+  },
+  {
+    "id": "civilbook/bridge-loads/sim-bl-il",
+    "bookId": "civilbook",
+    "title": "영향선 그리기: 위치 c → R A · V · M 영향선과 트럭 배치",
+    "link": "chapters/bridge-loads.html#sim-bl-il"
+  },
+  {
+    "id": "civilbook/bridge-loads/sim-bl-abs",
+    "bookId": "civilbook",
+    "title": "절대 최대 모멘트 찾기: 포락선과 규칙 배치",
+    "link": "chapters/bridge-loads.html#sim-bl-abs"
+  },
+  {
+    "id": "civilbook/bridge-loads/sim-bl-impact",
+    "bookId": "civilbook",
+    "title": "충격 계수 곡선과 이동 하중의 동적 증폭",
+    "link": "chapters/bridge-loads.html#sim-bl-impact"
+  },
+  {
+    "id": "civilbook/bridge-loads/sim-bl-cont",
+    "bookId": "civilbook",
+    "title": "연속교 영향선: 단위 하중을 옮겨 B-130 영향선 그리기",
+    "link": "chapters/bridge-loads.html#sim-bl-cont"
+  },
+  {
+    "id": "civilbook/bridge-loads/sim-bl-lane",
+    "bookId": "civilbook",
+    "title": "차로 하중 재하 구간 고르기: 영향선의 양·음 구간",
+    "link": "chapters/bridge-loads.html#sim-bl-lane"
+  },
+  {
+    "id": "civilbook/bridge-loads/sim-bl-multi",
+    "bookId": "civilbook",
+    "title": "다차로 재하 계수 효과: 차도 폭 → 설계 차로 수 → 지배 경우",
+    "link": "chapters/bridge-loads.html#sim-bl-multi"
+  },
+  {
+    "id": "civilbook/bridge-loads/sim-bl-combo",
+    "bookId": "civilbook",
+    "title": "B-130 경간별 최대 효과: 활하중 포락선과 하중 조합",
+    "link": "chapters/bridge-loads.html#sim-bl-combo"
+  },
+  {
+    "id": "civilbook/bridges/sim-br-3d",
+    "bookId": "civilbook",
+    "title": "B-130 3D 탐색: 부재를 켜고 끄고 눌러 보기",
+    "link": "chapters/bridges.html#sim-br-3d"
+  },
+  {
+    "id": "civilbook/bridges/sim-br-path",
+    "bookId": "civilbook",
+    "title": "하중 경로 애니메이션: 트럭 → 바닥판 → 거더 → 받침 → 교각 → 말뚝",
+    "link": "chapters/bridges.html#sim-br-path"
+  },
+  {
+    "id": "civilbook/bridges/sim-br-span",
+    "bookId": "civilbook",
+    "title": "경간–형식 선택 도표",
+    "link": "chapters/bridges.html#sim-br-span"
+  },
+  {
+    "id": "civilbook/bridges/sim-br-weight",
+    "bookId": "civilbook",
+    "title": "형식별 자중 비교: 자기 무게가 강도를 먹는 비율",
+    "link": "chapters/bridges.html#sim-br-weight"
+  },
+  {
+    "id": "civilbook/bridges/sim-br-cont",
+    "bookId": "civilbook",
+    "title": "단순 vs 연속 거더: 같은 하중, 다른 휨모멘트와 처짐",
+    "link": "chapters/bridges.html#sim-br-cont"
+  },
+  {
+    "id": "civilbook/bridges/sim-br-erect",
+    "bookId": "civilbook",
+    "title": "가설 공법 단계 애니메이션과 가설 중 휨모멘트",
+    "link": "chapters/bridges.html#sim-br-erect"
+  },
+  {
+    "id": "civilbook/bridges/sim-br-river",
+    "bookId": "civilbook",
+    "title": "교량 높이와 하천 단면 배치: 형하 여유 판정",
+    "link": "chapters/bridges.html#sim-br-river"
+  },
+  {
+    "id": "civilbook/cable-bridges/sim-cb-main",
+    "bookId": "civilbook",
+    "title": "주케이블 형상과 장력",
+    "link": "chapters/cable-bridges.html#sim-cb-main"
+  },
+  {
+    "id": "civilbook/cable-bridges/sim-cb-anchor",
+    "bookId": "civilbook",
+    "title": "앵커리지 반력과 행어 장력",
+    "link": "chapters/cable-bridges.html#sim-cb-anchor"
+  },
+  {
+    "id": "civilbook/cable-bridges/sim-cb-stay",
+    "bookId": "civilbook",
+    "title": "사장교 케이블 장력과 거더 압축",
+    "link": "chapters/cable-bridges.html#sim-cb-stay"
+  },
+  {
+    "id": "civilbook/cable-bridges/sim-cb-layout",
+    "bookId": "civilbook",
+    "title": "케이블 배치 비교: 방사·부채·하프",
+    "link": "chapters/cable-bridges.html#sim-cb-layout"
+  },
+  {
+    "id": "civilbook/cable-bridges/sim-cb-ernst",
+    "bookId": "civilbook",
+    "title": "에른스트 등가 탄성계수",
+    "link": "chapters/cable-bridges.html#sim-cb-ernst"
+  },
+  {
+    "id": "civilbook/cable-bridges/sim-cb-wind",
+    "bookId": "civilbook",
+    "title": "와류 공진 풍속",
+    "link": "chapters/cable-bridges.html#sim-cb-wind"
+  },
+  {
+    "id": "civilbook/cable-bridges/sim-cb-erect",
+    "bookId": "civilbook",
+    "title": "캔틸레버 가설 단계",
+    "link": "chapters/cable-bridges.html#sim-cb-erect"
+  },
+  {
+    "id": "civilbook/cable-bridges/sim-cb-3d",
+    "bookId": "civilbook",
+    "title": "3D 사장교 CS-420",
+    "link": "chapters/cable-bridges.html#sim-cb-3d"
+  },
+  {
+    "id": "civilbook/earthwork/sim-ew-section",
+    "bookId": "civilbook",
+    "title": "횡단면 토량: 지반선을 끌어 깎기·쌓기 면적 구하기",
+    "link": "chapters/earthwork.html#sim-ew-section"
+  },
+  {
+    "id": "civilbook/earthwork/sim-ew-prism",
+    "bookId": "civilbook",
+    "title": "평균 단면법 vs 각주 공식",
+    "link": "chapters/earthwork.html#sim-ew-prism"
+  },
+  {
+    "id": "civilbook/earthwork/sim-ew-mass",
+    "bookId": "civilbook",
+    "title": "토적곡선: 평형선을 끌어 운반 계획 세우기",
+    "link": "chapters/earthwork.html#sim-ew-mass"
+  },
+  {
+    "id": "civilbook/earthwork/sim-ew-equip",
+    "bookId": "civilbook",
+    "title": "운반 거리와 장비 선택(교육용 단가)",
+    "link": "chapters/earthwork.html#sim-ew-equip"
+  },
+  {
+    "id": "civilbook/earthwork/sim-ew-idf",
+    "bookId": "civilbook",
+    "title": "강우 강도 곡선과 합리식 첨두 유량",
+    "link": "chapters/earthwork.html#sim-ew-idf"
+  },
+  {
+    "id": "civilbook/earthwork/sim-ew-ditch",
+    "bookId": "civilbook",
+    "title": "측구 단면 설계: 수심, 유속, 침식·퇴적 판정",
+    "link": "chapters/earthwork.html#sim-ew-ditch"
+  },
+  {
+    "id": "civilbook/earthwork/sim-ew-culvert",
+    "bookId": "civilbook",
+    "title": "암거 수리: 유입 지배와 유출 지배",
+    "link": "chapters/earthwork.html#sim-ew-culvert"
+  },
+  {
+    "id": "civilbook/earthwork/sim-ew-drain",
+    "bookId": "civilbook",
+    "title": "맹암거 간격과 지하수위",
+    "link": "chapters/earthwork.html#sim-ew-drain"
+  },
+  {
+    "id": "civilbook/girders/sim-gd-composite",
+    "bookId": "civilbook",
+    "title": "합성 단면 계산기: 세 단면, 세 단계의 응력",
+    "link": "chapters/girders.html#sim-gd-composite"
+  },
+  {
+    "id": "civilbook/girders/sim-gd-lateral",
+    "bookId": "civilbook",
+    "title": "횡분배: 트럭을 끌어 거더별 몫 보기",
+    "link": "chapters/girders.html#sim-gd-lateral"
+  },
+  {
+    "id": "civilbook/girders/sim-gd-envelope",
+    "bookId": "civilbook",
+    "title": "B-130 모멘트 포락선: 트럭이 건너가는 동안",
+    "link": "chapters/girders.html#sim-gd-envelope"
+  },
+  {
+    "id": "civilbook/girders/sim-gd-negative",
+    "bookId": "civilbook",
+    "title": "부모멘트 구간: 균열 단면과 종방향 철근",
+    "link": "chapters/girders.html#sim-gd-negative"
+  },
+  {
+    "id": "civilbook/girders/sim-gd-deck",
+    "bookId": "civilbook",
+    "title": "바닥판 휨: 거더 간격과 두께 → 단위 폭 모멘트와 철근",
+    "link": "chapters/girders.html#sim-gd-deck"
+  },
+  {
+    "id": "civilbook/girders/sim-gd-box",
+    "bookId": "civilbook",
+    "title": "편재 하중 비틀림: 박스 vs I형 두 줄",
+    "link": "chapters/girders.html#sim-gd-box"
+  },
+  {
+    "id": "civilbook/girders/sim-gd-depth",
+    "bookId": "civilbook",
+    "title": "거더 높이–경간 비: 강재량이 가장 작은 높이",
+    "link": "chapters/girders.html#sim-gd-depth"
+  },
+  {
+    "id": "civilbook/girders/sim-gd-3d",
+    "bookId": "civilbook",
+    "title": "B-130 3D: 트럭 아래 거더 네 줄의 처짐",
+    "link": "chapters/girders.html#sim-gd-3d"
+  },
+  {
+    "id": "civilbook/glossary/sim-gl-bridge",
+    "bookId": "civilbook",
+    "title": "경간 → 트럭 주사 최대 M · 차로 하중 · 충격 → 차로당 설계 M",
+    "link": "chapters/glossary.html#sim-gl-bridge"
+  },
+  {
+    "id": "civilbook/glossary/sim-gl-tunnel",
+    "bookId": "civilbook",
+    "title": "p 0 · E · c · φ · a → GRC(p cr , u, R p ) · 숏크리트 → 평형 지보압",
+    "link": "chapters/glossary.html#sim-gl-tunnel"
+  },
+  {
+    "id": "civilbook/glossary/sim-gl-road",
+    "bookId": "civilbook",
+    "title": "V → 정지 시거 · R min · 볼록 곡선 길이 · ESAL → 소요 SN · 층 두께",
+    "link": "chapters/glossary.html#sim-gl-road"
+  },
+  {
+    "id": "civilbook/glossary/sim-gl-river",
+    "bookId": "civilbook",
+    "title": "하도 단면 · Q → 등류 수심 · 유속 · 프루드 수 · 한계 수심 · 형하 여유",
+    "link": "chapters/glossary.html#sim-gl-river"
+  },
+  {
+    "id": "civilbook/hydraulics/sim-hy-rational",
+    "bookId": "civilbook",
+    "title": "합리식 첨두 유량",
+    "link": "chapters/hydraulics.html#sim-hy-rational"
+  },
+  {
+    "id": "civilbook/hydraulics/sim-hy-manning",
+    "bookId": "civilbook",
+    "title": "매닝 수로 계산기",
+    "link": "chapters/hydraulics.html#sim-hy-manning"
+  },
+  {
+    "id": "civilbook/hydraulics/sim-hy-energy",
+    "bookId": "civilbook",
+    "title": "비에너지 곡선과 도수",
+    "link": "chapters/hydraulics.html#sim-hy-energy"
+  },
+  {
+    "id": "civilbook/hydraulics/sim-hy-normal",
+    "bookId": "civilbook",
+    "title": "등류 수심 역산과 홍수위 판정",
+    "link": "chapters/hydraulics.html#sim-hy-normal"
+  },
+  {
+    "id": "civilbook/hydraulics/sim-hy-levee",
+    "bookId": "civilbook",
+    "title": "제방 침윤선과 파이핑",
+    "link": "chapters/hydraulics.html#sim-hy-levee"
+  },
+  {
+    "id": "civilbook/hydraulics/sim-hy-dam",
+    "bookId": "civilbook",
+    "title": "중력식 댐 안정 검토",
+    "link": "chapters/hydraulics.html#sim-hy-dam"
+  },
+  {
+    "id": "civilbook/hydraulics/sim-hy-scour",
+    "bookId": "civilbook",
+    "title": "교각 세굴 깊이(경험식 형태)",
+    "link": "chapters/hydraulics.html#sim-hy-scour"
+  },
+  {
+    "id": "civilbook/hydraulics/sim-hy-river3d",
+    "bookId": "civilbook",
+    "title": "B-130 하천 3D: 홍수위와 세굴",
+    "link": "chapters/hydraulics.html#sim-hy-river3d"
+  },
+  {
+    "id": "civilbook/maintenance/sim-mt-inspect",
+    "bookId": "civilbook",
+    "title": "B-130 3D 상태 평가",
+    "link": "chapters/maintenance.html#sim-mt-inspect"
+  },
+  {
+    "id": "civilbook/maintenance/sim-mt-markov",
+    "bookId": "civilbook",
+    "title": "상태 등급 마르코프 예측",
+    "link": "chapters/maintenance.html#sim-mt-markov"
+  },
+  {
+    "id": "civilbook/maintenance/sim-mt-lcc",
+    "bookId": "civilbook",
+    "title": "보수 시점 최적화(LCC)",
+    "link": "chapters/maintenance.html#sim-mt-lcc"
+  },
+  {
+    "id": "civilbook/maintenance/sim-mt-rating",
+    "bookId": "civilbook",
+    "title": "내하율과 통행 제한 판정",
+    "link": "chapters/maintenance.html#sim-mt-rating"
+  },
+  {
+    "id": "civilbook/maintenance/sim-mt-loadtest",
+    "bookId": "civilbook",
+    "title": "재하 시험 해석: 측정 vs 계산",
+    "link": "chapters/maintenance.html#sim-mt-loadtest"
+  },
+  {
+    "id": "civilbook/maintenance/sim-mt-strengthen",
+    "bookId": "civilbook",
+    "title": "보강 효과: 외부 긴장 + FRP 판",
+    "link": "chapters/maintenance.html#sim-mt-strengthen"
+  },
+  {
+    "id": "civilbook/maintenance/sim-mt-shm",
+    "bookId": "civilbook",
+    "title": "계측 이상 탐지: 온도 보정",
+    "link": "chapters/maintenance.html#sim-mt-shm"
+  },
+  {
+    "id": "civilbook/maintenance/sim-mt-budget",
+    "bookId": "civilbook",
+    "title": "시설별 예산 배분(우선순위)",
+    "link": "chapters/maintenance.html#sim-mt-budget"
+  },
+  {
+    "id": "civilbook/pavement/sim-pv-fourth",
+    "bookId": "civilbook",
+    "title": "4제곱 법칙: 축하중과 손상",
+    "link": "chapters/pavement.html#sim-pv-fourth"
+  },
+  {
+    "id": "civilbook/pavement/sim-pv-esal",
+    "bookId": "civilbook",
+    "title": "누적 ESAL 계산기",
+    "link": "chapters/pavement.html#sim-pv-esal"
+  },
+  {
+    "id": "civilbook/pavement/sim-pv-aashto",
+    "bookId": "civilbook",
+    "title": "AASHTO 93 설계: 소요 SN과 층 두께 조합",
+    "link": "chapters/pavement.html#sim-pv-aashto"
+  },
+  {
+    "id": "civilbook/pavement/sim-pv-layer",
+    "bookId": "civilbook",
+    "title": "층별 응력·변형률(오데마르크 + 부시네스크, 교육용)",
+    "link": "chapters/pavement.html#sim-pv-layer"
+  },
+  {
+    "id": "civilbook/pavement/sim-pv-me",
+    "bookId": "civilbook",
+    "title": "역학적–경험적 검토: 피로와 소성 변형 손상",
+    "link": "chapters/pavement.html#sim-pv-me"
+  },
+  {
+    "id": "civilbook/pavement/sim-pv-wg",
+    "bookId": "civilbook",
+    "title": "웨스터가드 응력과 판의 처짐(3D)",
+    "link": "chapters/pavement.html#sim-pv-wg"
+  },
+  {
+    "id": "civilbook/pavement/sim-pv-curl",
+    "bookId": "civilbook",
+    "title": "줄눈 간격·컬링·하중 전달",
+    "link": "chapters/pavement.html#sim-pv-curl"
+  },
+  {
+    "id": "civilbook/pavement/sim-pv-lcc",
+    "bookId": "civilbook",
+    "title": "공용성 곡선과 생애 주기 비용: 연성 vs 강성",
+    "link": "chapters/pavement.html#sim-pv-lcc"
+  },
+  {
+    "id": "civilbook/railway/sim-rw-3d",
+    "bookId": "civilbook",
+    "title": "3D 궤도 단면 탐색",
+    "link": "chapters/railway.html#sim-rw-3d"
+  },
+  {
+    "id": "civilbook/railway/sim-rw-beam",
+    "bookId": "civilbook",
+    "title": "레일 처짐·휨모멘트(탄성 지반 위 보)",
+    "link": "chapters/railway.html#sim-rw-beam"
+  },
+  {
+    "id": "civilbook/railway/sim-rw-sleeper",
+    "bookId": "civilbook",
+    "title": "침목 분담과 도상·노반 압력",
+    "link": "chapters/railway.html#sim-rw-sleeper"
+  },
+  {
+    "id": "civilbook/railway/sim-rw-cant",
+    "bookId": "civilbook",
+    "title": "평형 캔트와 부족 캔트",
+    "link": "chapters/railway.html#sim-rw-cant"
+  },
+  {
+    "id": "civilbook/railway/sim-rw-rmin",
+    "bookId": "civilbook",
+    "title": "최소 곡선 반지름과 완화 곡선 길이",
+    "link": "chapters/railway.html#sim-rw-rmin"
+  },
+  {
+    "id": "civilbook/railway/sim-rw-reso",
+    "bookId": "civilbook",
+    "title": "고속 열차의 교량 공진(1차 모드, 교육용)",
+    "link": "chapters/railway.html#sim-rw-reso"
+  },
+  {
+    "id": "civilbook/railway/sim-rw-irreg",
+    "bookId": "civilbook",
+    "title": "궤도 틀림 → 차체 진동(1자유도, 교육용)",
+    "link": "chapters/railway.html#sim-rw-irreg"
+  },
+  {
+    "id": "civilbook/railway/sim-rw-lwr",
+    "bookId": "civilbook",
+    "title": "장대 레일의 온도 축력과 신축 구간",
+    "link": "chapters/railway.html#sim-rw-lwr"
+  },
+  {
+    "id": "civilbook/substructure/sim-sb-abut",
+    "bookId": "civilbook",
+    "title": "역T형 교대 안정",
+    "link": "chapters/substructure.html#sim-sb-abut"
+  },
+  {
+    "id": "civilbook/substructure/sim-sb-bearing",
+    "bookId": "civilbook",
+    "title": "받침 반력과 들림",
+    "link": "chapters/substructure.html#sim-sb-bearing"
+  },
+  {
+    "id": "civilbook/substructure/sim-sb-elasto",
+    "bookId": "civilbook",
+    "title": "적층 고무 받침 설계",
+    "link": "chapters/substructure.html#sim-sb-elasto"
+  },
+  {
+    "id": "civilbook/substructure/sim-sb-thermal",
+    "bookId": "civilbook",
+    "title": "온도 신축량과 신축 이음 유간",
+    "link": "chapters/substructure.html#sim-sb-thermal"
+  },
+  {
+    "id": "civilbook/substructure/sim-sb-pier",
+    "bookId": "civilbook",
+    "title": "교각 수평력 분배(교축 방향 지진)",
+    "link": "chapters/substructure.html#sim-sb-pier"
+  },
+  {
+    "id": "civilbook/substructure/sim-sb-seat",
+    "bookId": "civilbook",
+    "title": "받침 지지 길이와 낙교 판정",
+    "link": "chapters/substructure.html#sim-sb-seat"
+  },
+  {
+    "id": "civilbook/substructure/sim-sb-iso",
+    "bookId": "civilbook",
+    "title": "면진 받침의 효과",
+    "link": "chapters/substructure.html#sim-sb-iso"
+  },
+  {
+    "id": "civilbook/substructure/sim-sb-3d",
+    "bookId": "civilbook",
+    "title": "3D 하부 구조 B-130",
+    "link": "chapters/substructure.html#sim-sb-3d"
+  },
+  {
+    "id": "civilbook/tbm/sim-tb-face",
+    "bookId": "civilbook",
+    "title": "막장압 계산: G-10 지반의 토압 + 수압과 챔버 압력",
+    "link": "chapters/tbm.html#sim-tb-face"
+  },
+  {
+    "id": "civilbook/tbm/sim-tb-adv",
+    "bookId": "civilbook",
+    "title": "TBM 굴진 애니메이션: 굴진 → 링 조립 사이클",
+    "link": "chapters/tbm.html#sim-tb-adv"
+  },
+  {
+    "id": "civilbook/tbm/sim-tb-ring",
+    "bookId": "civilbook",
+    "title": "세그먼트 링 하중: 축력과 휨모멘트",
+    "link": "chapters/tbm.html#sim-tb-ring"
+  },
+  {
+    "id": "civilbook/tbm/sim-tb-trough",
+    "bookId": "civilbook",
+    "title": "지표 침하 곡선: 지반 손실 · 깊이 · K → 정규 분포",
+    "link": "chapters/tbm.html#sim-tb-trough"
+  },
+  {
+    "id": "civilbook/tbm/sim-tb-bldg",
+    "bookId": "civilbook",
+    "title": "인접 건물 손상 평가: 건물을 끌어 침하 곡선 위에 놓기",
+    "link": "chapters/tbm.html#sim-tb-bldg"
+  },
+  {
+    "id": "civilbook/tbm/sim-tb-cc",
+    "bookId": "civilbook",
+    "title": "개착 vs TBM: 깊이와 연장에 따른 상대 비용(교육용)",
+    "link": "chapters/tbm.html#sim-tb-cc"
+  },
+  {
+    "id": "civilbook/tbm/sim-tb-3d",
+    "bookId": "civilbook",
+    "title": "3D 도심 단면: 지층 · TBM · 건물 · 침하 골짜기",
+    "link": "chapters/tbm.html#sim-tb-3d"
+  },
+  {
+    "id": "civilbook/traffic/sim-tf-dhv",
+    "bookId": "civilbook",
+    "title": "설계 시간 교통량 계산기: AADT · K · D → DHV → 필요 차로 수",
+    "link": "chapters/traffic.html#sim-tf-dhv"
+  },
+  {
+    "id": "civilbook/traffic/sim-tf-fd",
+    "bookId": "civilbook",
+    "title": "교통류 3관계: 밀도를 움직여 세 곡선 위의 점을 보기",
+    "link": "chapters/traffic.html#sim-tf-fd"
+  },
+  {
+    "id": "civilbook/traffic/sim-tf-los",
+    "bookId": "civilbook",
+    "title": "서비스 수준: 교통량/용량 → LOS 띠",
+    "link": "chapters/traffic.html#sim-tf-los"
+  },
+  {
+    "id": "civilbook/traffic/sim-tf-shock",
+    "bookId": "civilbook",
+    "title": "충격파: 차로 차단 병목 → 정체 전파 애니메이션",
+    "link": "chapters/traffic.html#sim-tf-shock"
+  },
+  {
+    "id": "civilbook/traffic/sim-tf-ca",
+    "bookId": "civilbook",
+    "title": "나겔–슈레켄베르크 셀 오토마타: 밀도 → 정체파",
+    "link": "chapters/traffic.html#sim-tf-ca"
+  },
+  {
+    "id": "civilbook/traffic/sim-tf-signal",
+    "bookId": "civilbook",
+    "title": "신호 교차로: 주기 · 녹색 시간 → 용량 · 지체 (웹스터)",
+    "link": "chapters/traffic.html#sim-tf-signal"
+  },
+  {
+    "id": "civilbook/traffic/sim-tf-3d",
+    "bookId": "civilbook",
+    "title": "3D 신호 교차로: 대기 행렬이 쌓이고 빠지는 모습",
+    "link": "chapters/traffic.html#sim-tf-3d"
+  },
+  {
+    "id": "civilbook/traffic/sim-tf-plan",
+    "bookId": "civilbook",
+    "title": "차로 수–용량 계획: 교통량 증가 → 확장 시기",
+    "link": "chapters/traffic.html#sim-tf-plan"
+  },
+  {
+    "id": "civilbook/tunnel-support/sim-ts-grc",
+    "bookId": "civilbook",
+    "title": "지반 반응 곡선: 깊이와 암반 강도로 곡선 바꾸기",
+    "link": "chapters/tunnel-support.html#sim-ts-grc"
+  },
+  {
+    "id": "civilbook/tunnel-support/sim-ts-ldp",
+    "bookId": "civilbook",
+    "title": "종방향 변위 곡선: 막장으로부터의 거리와 변위 비",
+    "link": "chapters/tunnel-support.html#sim-ts-ldp"
+  },
+  {
+    "id": "civilbook/tunnel-support/sim-ts-timing",
+    "bookId": "civilbook",
+    "title": "지보 설치 시기: u 0 를 끌어 평형점과 안전율 찾기",
+    "link": "chapters/tunnel-support.html#sim-ts-timing"
+  },
+  {
+    "id": "civilbook/tunnel-support/sim-ts-combo",
+    "bookId": "civilbook",
+    "title": "지보 조합: 숏크리트 + 록볼트 + 강지보의 합성 특성 곡선",
+    "link": "chapters/tunnel-support.html#sim-ts-combo"
+  },
+  {
+    "id": "civilbook/tunnel-support/sim-ts-plastic",
+    "bookId": "civilbook",
+    "title": "소성 영역 단면: R p 원, 볼트 길이, 응력 재분배",
+    "link": "chapters/tunnel-support.html#sim-ts-plastic"
+  },
+  {
+    "id": "civilbook/tunnel-support/sim-ts-monitor",
+    "bookId": "civilbook",
+    "title": "계측 데이터 해석: 내공 변위 시간 곡선의 수렴 판정",
+    "link": "chapters/tunnel-support.html#sim-ts-monitor"
+  },
+  {
+    "id": "civilbook/tunnel-support/sim-ts-pattern",
+    "bookId": "civilbook",
+    "title": "암반 등급별 지보 패턴 탐색: 패턴의 지보 능력과 암반 하중",
+    "link": "chapters/tunnel-support.html#sim-ts-pattern"
+  },
+  {
+    "id": "civilbook/tunnel-support/sim-ts-3d",
+    "bookId": "civilbook",
+    "title": "막장 주변 3D: 종방향 변위(과장)와 소성 영역, 지보 설치 위치",
+    "link": "chapters/tunnel-support.html#sim-ts-3d"
+  },
+  {
+    "id": "civilbook/tunnels/sim-tn-cover",
+    "bookId": "civilbook",
+    "title": "토피와 초기 응력: 층을 쌓아 p 0 와 Kp 0 계산하기",
+    "link": "chapters/tunnels.html#sim-tn-cover"
+  },
+  {
+    "id": "civilbook/tunnels/sim-tn-blast",
+    "bookId": "civilbook",
+    "title": "발파 패턴: 공 배치와 지발 순서, 진동 제한",
+    "link": "chapters/tunnels.html#sim-tn-blast"
+  },
+  {
+    "id": "civilbook/tunnels/sim-tn-seq",
+    "bookId": "civilbook",
+    "title": "굴착 분할 단계: 막장 면적과 고리 폐합까지의 거리",
+    "link": "chapters/tunnels.html#sim-tn-seq"
+  },
+  {
+    "id": "civilbook/tunnels/sim-tn-kirsch",
+    "bookId": "civilbook",
+    "title": "커쉬 응력장: 터널 둘레의 σ θ ·σ r ·주응력 등고선",
+    "link": "chapters/tunnels.html#sim-tn-kirsch"
+  },
+  {
+    "id": "civilbook/tunnels/sim-tn-kwall",
+    "bookId": "civilbook",
+    "title": "측압 계수와 벽면 응력: 천단·측벽 응력과 거리에 따른 감쇠",
+    "link": "chapters/tunnels.html#sim-tn-kwall"
+  },
+  {
+    "id": "civilbook/tunnels/sim-tn-shape",
+    "bookId": "civilbook",
+    "title": "단면 형상 비교: 벽 둘레 접선 응력(경계 요소 수치 해)",
+    "link": "chapters/tunnels.html#sim-tn-shape"
+  },
+  {
+    "id": "civilbook/tunnels/sim-tn-water",
+    "bookId": "civilbook",
+    "title": "막장 안정 수와 지하수 유입량",
+    "link": "chapters/tunnels.html#sim-tn-water"
+  },
+  {
+    "id": "civilbook/tunnels/sim-tn-3d",
+    "bookId": "civilbook",
+    "title": "TN-11 굴진 3D: 막장 진행, 숏크리트·록볼트·라이닝이 따라오는 순서",
+    "link": "chapters/tunnels.html#sim-tn-3d"
+  },
+  {
+    "id": "sitebook/concrete-work/sim-cw-cycle",
+    "bookId": "sitebook",
+    "title": "층 사이클 간트: 작업 조 인원 · 생산성 · 겹치기 → 사이클 일수와 10개 층 공기",
+    "link": "chapters/concrete-work.html#sim-cw-cycle"
+  },
+  {
+    "id": "sitebook/concrete-work/sim-cw-rebar",
+    "bookId": "sitebook",
+    "title": "철근 물량·가공 손실: 정척 · 이음 방식 · 잔재 활용 → 주문량과 할증률",
+    "link": "chapters/concrete-work.html#sim-cw-rebar"
+  },
+  {
+    "id": "sitebook/concrete-work/sim-cw-forms",
+    "bookId": "sitebook",
+    "title": "거푸집 시스템 비교: 반복 층수 → 층당 비용(교육용 단가)",
+    "link": "chapters/concrete-work.html#sim-cw-forms"
+  },
+  {
+    "id": "sitebook/concrete-work/sim-cw-pressure",
+    "bookId": "sitebook",
+    "title": "거푸집 측압 계산기: 타설 속도 · 온도 · 높이 → 측압 분포와 폼타이 축력",
+    "link": "chapters/concrete-work.html#sim-cw-pressure"
+  },
+  {
+    "id": "sitebook/concrete-work/sim-cw-shore",
+    "bookId": "sitebook",
+    "title": "동바리 하중 검토: 슬래브 두께 · 간격 · 높이 · 수평 연결재 → 축력과 좌굴 여유",
+    "link": "chapters/concrete-work.html#sim-cw-shore"
+  },
+  {
+    "id": "sitebook/concrete-work/sim-cw-dispatch",
+    "bookId": "sitebook",
+    "title": "레미콘 배차: 트럭 대수 · 거리 · 펌프 능력 → 대기 · 펌프 유휴 · 경과 시간",
+    "link": "chapters/concrete-work.html#sim-cw-dispatch"
+  },
+  {
+    "id": "sitebook/concrete-work/sim-cw-joint",
+    "bookId": "sitebook",
+    "title": "슬래브 타설 순서와 콜드 조인트: 띠 폭 · 진행 방식 · 공급 중단 → 이음 간격 지도",
+    "link": "chapters/concrete-work.html#sim-cw-joint"
+  },
+  {
+    "id": "sitebook/concrete-work/sim-cw-4d",
+    "bookId": "sitebook",
+    "title": "3D 골조 진행: 주 슬라이더 → 층 · 사이클 단계 · 동바리가 남은 층",
+    "link": "chapters/concrete-work.html#sim-cw-4d"
+  },
+  {
+    "id": "sitebook/contracts/sim-ct-share",
+    "bookId": "sitebook",
+    "title": "위험 분담 몬테카를로: 원가 불확실성 → 발주자 지급액 · 시공자 이익의 분포",
+    "link": "chapters/contracts.html#sim-ct-share"
+  },
+  {
+    "id": "sitebook/contracts/sim-ct-costplus",
+    "bookId": "sitebook",
+    "title": "실비 정산 + 보수 비교: 실제 원가 → 발주자 지급액 · 시공자 이익",
+    "link": "chapters/contracts.html#sim-ct-costplus"
+  },
+  {
+    "id": "sitebook/contracts/sim-ct-bid",
+    "bookId": "sitebook",
+    "title": "입찰 가격 결정: 이윤율 · 경쟁자 수 → 낙찰 확률 · 기대 이익",
+    "link": "chapters/contracts.html#sim-ct-bid"
+  },
+  {
+    "id": "sitebook/contracts/sim-ct-change",
+    "bookId": "sitebook",
+    "title": "설계 변경 정산: 물량 증감 · 신규 비목 → 계약 금액 변화",
+    "link": "chapters/contracts.html#sim-ct-change"
+  },
+  {
+    "id": "sitebook/contracts/sim-ct-esc",
+    "bookId": "sitebook",
+    "title": "물가 변동 조정: 조정 기준일 · 등락률 → 요건 판정 · 조정 금액",
+    "link": "chapters/contracts.html#sim-ct-esc"
+  },
+  {
+    "id": "sitebook/contracts/sim-ct-ld",
+    "bookId": "sitebook",
+    "title": "지체상금 계산: 지체 일수 · 요율 · 면책 → 금액, 만회 비용과 비교",
+    "link": "chapters/contracts.html#sim-ct-ld"
+  },
+  {
+    "id": "sitebook/contracts/sim-ct-register",
+    "bookId": "sitebook",
+    "title": "위험 등록부: 위험을 끌어 놓기 → 빈도 · 영향 매트릭스와 대응",
+    "link": "chapters/contracts.html#sim-ct-register"
+  },
+  {
+    "id": "sitebook/contracts/sim-ct-decide",
+    "bookId": "sitebook",
+    "title": "발주 방식 선택: 기준 가중치 → 가중 점수와 순위",
+    "link": "chapters/contracts.html#sim-ct-decide"
+  },
+  {
+    "id": "sitebook/cpm/sim-cp-dur",
+    "bookId": "sitebook",
+    "title": "기간 산정기: 물량 ÷ (생산성 × 조 수 × 작업 가능률)",
+    "link": "chapters/cpm.html#sim-cp-dur"
+  },
+  {
+    "id": "sitebook/cpm/sim-cp-lob",
+    "bookId": "sitebook",
+    "title": "사선식 공정표: 층별 작업 속도와 간섭",
+    "link": "chapters/cpm.html#sim-cp-lob"
+  },
+  {
+    "id": "sitebook/cpm/sim-cp-rel",
+    "bookId": "sitebook",
+    "title": "선후행 관계의 종류: FS · SS · FF · SF와 지연",
+    "link": "chapters/cpm.html#sim-cp-rel"
+  },
+  {
+    "id": "sitebook/cpm/sim-cp-pass",
+    "bookId": "sitebook",
+    "title": "전진·후진 계산 단계별 애니메이션",
+    "link": "chapters/cpm.html#sim-cp-pass"
+  },
+  {
+    "id": "sitebook/cpm/sim-cp-float",
+    "bookId": "sitebook",
+    "title": "여유 시간 이해: 비주공정 활동을 늦춰 보기(P-B10)",
+    "link": "chapters/cpm.html#sim-cp-float"
+  },
+  {
+    "id": "sitebook/cpm/sim-cp-net",
+    "bookId": "sitebook",
+    "title": "네트워크 편집기: 활동·관계·기간을 바꾸면 즉시 CPM",
+    "link": "chapters/cpm.html#sim-cp-net"
+  },
+  {
+    "id": "sitebook/cpm/sim-cp-gantt",
+    "bookId": "sitebook",
+    "title": "P-B10 간트 차트: 기간을 바꾸면 주공정이 움직인다",
+    "link": "chapters/cpm.html#sim-cp-gantt"
+  },
+  {
+    "id": "sitebook/cpm/sim-cp-update",
+    "bookId": "sitebook",
+    "title": "공정 갱신: 실적을 넣고 남은 공정 재계산(P-B10)",
+    "link": "chapters/cpm.html#sim-cp-update"
+  },
+  {
+    "id": "sitebook/earthworks/sim-ew-excavator",
+    "bookId": "sitebook",
+    "title": "굴삭기 작업량 계산기: 버킷 · 사이클 · 효율 → m³/h · 일 작업량 · 굴착 일수",
+    "link": "chapters/earthworks.html#sim-ew-excavator"
+  },
+  {
+    "id": "sitebook/earthworks/sim-ew-trucks",
+    "bookId": "sitebook",
+    "title": "덤프트럭 배차: 운반 거리 · 속도 · 대수 → 사이클과 대기 행렬 애니메이션",
+    "link": "chapters/earthworks.html#sim-ew-trucks"
+  },
+  {
+    "id": "sitebook/earthworks/sim-ew-fleet",
+    "bookId": "sitebook",
+    "title": "장비 조합 비용: 굴삭기 · 트럭 대수 → 굴착 일수와 총비용 최소점",
+    "link": "chapters/earthworks.html#sim-ew-fleet"
+  },
+  {
+    "id": "sitebook/earthworks/sim-ew-dwall",
+    "bookId": "sitebook",
+    "title": "지하연속벽 패널 시공 순서: 패널 길이 · 장비 · 굴착 속도 → 패널 사이클과 흙막이 공기",
+    "link": "chapters/earthworks.html#sim-ew-dwall"
+  },
+  {
+    "id": "sitebook/earthworks/sim-ew-stages",
+    "bookId": "sitebook",
+    "title": "3D 단계 굴착: 굴착 깊이와 버팀보 설치 순서 → 단계별 일수와 굴착 공기",
+    "link": "chapters/earthworks.html#sim-ew-stages"
+  },
+  {
+    "id": "sitebook/earthworks/sim-ew-dewater",
+    "bookId": "sitebook",
+    "title": "감압정 배수: 목표 안전율 · 투수 계수 · 펌프 능력 → 수두 저하 · 양수량 · 감압정 수",
+    "link": "chapters/earthworks.html#sim-ew-dewater"
+  },
+  {
+    "id": "sitebook/earthworks/sim-ew-monitor",
+    "bookId": "sitebook",
+    "title": "계측 관리도: 경사계 최대 변위 시계열 → 1·2차 관리 기준 판정",
+    "link": "chapters/earthworks.html#sim-ew-monitor"
+  },
+  {
+    "id": "sitebook/earthworks/sim-ew-spoil",
+    "bookId": "sitebook",
+    "title": "사토 운반 계획: 사토장 거리 · 수수료 → 운반비 · 트럭 대수 · 탄소 배출",
+    "link": "chapters/earthworks.html#sim-ew-spoil"
+  },
+  {
+    "id": "sitebook/estimating/sim-es-qto",
+    "bookId": "sitebook",
+    "title": "수량 산출기: 부재 치수 → 콘크리트 · 거푸집 · 철근",
+    "link": "chapters/estimating.html#sim-es-qto"
+  },
+  {
+    "id": "sitebook/estimating/sim-es-unit",
+    "bookId": "sitebook",
+    "title": "일위대가 구성: 재료 · 노무 · 장비 → 단위 단가 · 층 공사비",
+    "link": "chapters/estimating.html#sim-es-unit"
+  },
+  {
+    "id": "sitebook/estimating/sim-es-comp",
+    "bookId": "sitebook",
+    "title": "원가 구성 막대: 직접비 → 간접노무비 · 경비 → 일반관리비 · 이윤 → 부가세",
+    "link": "chapters/estimating.html#sim-es-comp"
+  },
+  {
+    "id": "sitebook/estimating/sim-es-funnel",
+    "bookId": "sitebook",
+    "title": "견적 정확도 깔때기: 설계 성숙도 → 등급 · 범위",
+    "link": "chapters/estimating.html#sim-es-funnel"
+  },
+  {
+    "id": "sitebook/estimating/sim-es-scurve",
+    "bookId": "sitebook",
+    "title": "P-B10 비용 S 곡선: ES · LS 기준과 사이 띠",
+    "link": "chapters/estimating.html#sim-es-scurve"
+  },
+  {
+    "id": "sitebook/estimating/sim-es-cash",
+    "bookId": "sitebook",
+    "title": "P-B10 현금 흐름: 기성 지급 지연 · 유보율 · 선급금 → 현금 수지",
+    "link": "chapters/estimating.html#sim-es-cash"
+  },
+  {
+    "id": "sitebook/estimating/sim-es-npv",
+    "bookId": "sitebook",
+    "title": "NPV · IRR 계산기: 현금 흐름 막대 끌기 → NPV 곡선과 IRR",
+    "link": "chapters/estimating.html#sim-es-npv"
+  },
+  {
+    "id": "sitebook/estimating/sim-es-lcc",
+    "bookId": "sitebook",
+    "title": "생애 주기 비용 비교: 초기비 vs 운영비, 할인율 · 기간",
+    "link": "chapters/estimating.html#sim-es-lcc"
+  },
+  {
+    "id": "sitebook/evm/sim-ev-method",
+    "bookId": "sitebook",
+    "title": "진도 측정 규칙 비교: 지하 골조 F(8주, 16억)",
+    "link": "chapters/evm.html#sim-ev-method"
+  },
+  {
+    "id": "sitebook/evm/sim-ev-weighted",
+    "bookId": "sitebook",
+    "title": "가중 진도 계산기: P-B10 공종 진도 → 전체 진도",
+    "link": "chapters/evm.html#sim-ev-weighted"
+  },
+  {
+    "id": "sitebook/evm/sim-ev-scurve",
+    "bookId": "sitebook",
+    "title": "P-B10 S 곡선 기준선: ES·LS 띠와 여유 활동의 위치",
+    "link": "chapters/evm.html#sim-ev-scurve"
+  },
+  {
+    "id": "sitebook/evm/sim-ev-calc",
+    "bookId": "sitebook",
+    "title": "EVM 계산기: PV · EV · AC → 모든 지표와 판정",
+    "link": "chapters/evm.html#sim-ev-calc"
+  },
+  {
+    "id": "sitebook/evm/sim-ev-track",
+    "bookId": "sitebook",
+    "title": "P-B10 EVM 추적: 주 슬라이더로 세 곡선과 지수 시계열",
+    "link": "chapters/evm.html#sim-ev-track"
+  },
+  {
+    "id": "sitebook/evm/sim-ev-eac",
+    "bookId": "sitebook",
+    "title": "EAC 예측 방법 비교: 시점에 따라 어느 공식이 맞나",
+    "link": "chapters/evm.html#sim-ev-eac"
+  },
+  {
+    "id": "sitebook/evm/sim-ev-recover",
+    "bookId": "sitebook",
+    "title": "회복 대책 효과: 50주 시점 남은 공정 단축 → 준공 주·비용",
+    "link": "chapters/evm.html#sim-ev-recover"
+  },
+  {
+    "id": "sitebook/evm/sim-ev-dash",
+    "bookId": "sitebook",
+    "title": "대시보드 신호등: 공종별 SPI·CPI와 판정 기준",
+    "link": "chapters/evm.html#sim-ev-dash"
+  },
+  {
+    "id": "sitebook/finishes/sim-fn-cw",
+    "bookId": "sitebook",
+    "title": "커튼월 설치 속도: 유닛 수 · 설치 속도 · 버퍼 → 층별 간트와 H 완료",
+    "link": "chapters/finishes.html#sim-fn-cw"
+  },
+  {
+    "id": "sitebook/finishes/sim-fn-water",
+    "bookId": "sitebook",
+    "title": "방수 담수 시험 판정: 구획 면적 · 누수량 · 시간 → 검출 확률 (교육용)",
+    "link": "chapters/finishes.html#sim-fn-water"
+  },
+  {
+    "id": "sitebook/finishes/sim-fn-lob",
+    "bookId": "sitebook",
+    "title": "마감 공종 흐름: 작업 구역 × 공종 → 공기 (LOB 맛보기)",
+    "link": "chapters/finishes.html#sim-fn-lob"
+  },
+  {
+    "id": "sitebook/finishes/sim-fn-matrix",
+    "bookId": "sitebook",
+    "title": "공종 간섭 매트릭스: 순서 재배치 → 간섭 점수 · 선후 위반",
+    "link": "chapters/finishes.html#sim-fn-matrix"
+  },
+  {
+    "id": "sitebook/finishes/sim-fn-mep",
+    "bookId": "sitebook",
+    "title": "설비 공정 S 곡선: ES · LS 기준 → 설비 비중 · 인원 부하 (CB.pm.spread)",
+    "link": "chapters/finishes.html#sim-fn-mep"
+  },
+  {
+    "id": "sitebook/finishes/sim-fn-tab",
+    "bookId": "sitebook",
+    "title": "TAB 풍량 조정: 댐퍼 개도 · 팬 속도 → 출구별 풍량 (교육용)",
+    "link": "chapters/finishes.html#sim-fn-tab"
+  },
+  {
+    "id": "sitebook/finishes/sim-fn-done",
+    "bookId": "sitebook",
+    "title": "준공 체크리스트: 완료 항목 체크 → 남은 공정 (CB.pm.cpm)",
+    "link": "chapters/finishes.html#sim-fn-done"
+  },
+  {
+    "id": "sitebook/finishes/sim-fn-pareto",
+    "bookId": "sitebook",
+    "title": "하자 파레토: 공종별 · 원인별 → 누적 비율과 개선 효과 (교육용 데이터)",
+    "link": "chapters/finishes.html#sim-fn-pareto"
+  },
+  {
+    "id": "sitebook/foundations/sim-fd-3d",
+    "bookId": "sitebook",
+    "title": "3D 말뚝과 매트: 단계별 기초 공사 장면",
+    "link": "chapters/foundations.html#sim-fd-3d"
+  },
+  {
+    "id": "sitebook/foundations/sim-fd-route",
+    "bookId": "sitebook",
+    "title": "말뚝 시공 순서 최적화: 번호순 · 행 지그재그 · 최근접 · 2-opt · 가운데→바깥",
+    "link": "chapters/foundations.html#sim-fd-route"
+  },
+  {
+    "id": "sitebook/foundations/sim-fd-driving",
+    "bookId": "sitebook",
+    "title": "항타 관리 기록: 깊이별 타격 수와 관입량 → 지지 판정",
+    "link": "chapters/foundations.html#sim-fd-driving"
+  },
+  {
+    "id": "sitebook/foundations/sim-fd-length",
+    "bookId": "sitebook",
+    "title": "말뚝 주문 길이: 지지층 깊이의 변동 → 절단 손실 vs 연장 비용",
+    "link": "chapters/foundations.html#sim-fd-length"
+  },
+  {
+    "id": "sitebook/foundations/sim-fd-pilecost",
+    "bookId": "sitebook",
+    "title": "말뚝 공기·비용: 본수·장비 대수·사이클 → 일수와 직접비",
+    "link": "chapters/foundations.html#sim-fd-pilecost"
+  },
+  {
+    "id": "sitebook/foundations/sim-fd-mat",
+    "bookId": "sitebook",
+    "title": "매트 타설 계획: 펌프 · 레미콘 사이클 → 트럭 대수 · 타설 시간 · 콜드 조인트 위험",
+    "link": "chapters/foundations.html#sim-fd-mat"
+  },
+  {
+    "id": "sitebook/foundations/sim-fd-seq",
+    "bookId": "sitebook",
+    "title": "타설 순서 애니메이션: 칸마다 타설 시각 → 이어치기 간격 지도",
+    "link": "chapters/foundations.html#sim-fd-seq"
+  },
+  {
+    "id": "sitebook/foundations/sim-fd-heat",
+    "bookId": "sitebook",
+    "title": "매트 수화열 온도 이력: 보온 방법과 해체 시기 → 중심·표면 온도 차",
+    "link": "chapters/foundations.html#sim-fd-heat"
+  },
+  {
+    "id": "sitebook/glossary/sim-gl-cpm",
+    "bookId": "sitebook",
+    "title": "활동 기간 → CPM 공기 · 주공정 · 여유 → PERT · 몬테카를로 완료 확률",
+    "link": "chapters/glossary.html#sim-gl-cpm"
+  },
+  {
+    "id": "sitebook/glossary/sim-gl-crash",
+    "bookId": "sitebook",
+    "title": "목표 공기 → 가장 싼 절단 순서 · 추가 직접비 · 간접비 → 최적 공기",
+    "link": "chapters/glossary.html#sim-gl-crash"
+  },
+  {
+    "id": "sitebook/glossary/sim-gl-evm",
+    "bookId": "sitebook",
+    "title": "BAC · 데이터 날짜 · EV · AC → SV · CV · SPI · CPI · EAC · TCPI · 획득 일정",
+    "link": "chapters/glossary.html#sim-gl-evm"
+  },
+  {
+    "id": "sitebook/glossary/sim-gl-prod",
+    "bookId": "sitebook",
+    "title": "버킷 · 사이클 · 효율 → 굴삭기 작업량 · 굴착 일수 · 트럭 대수 · 학습률 → 층별 기간 · 공기",
+    "link": "chapters/glossary.html#sim-gl-prod"
+  },
+  {
+    "id": "sitebook/overview/sim-ov-scale",
+    "bookId": "sitebook",
+    "title": "규모 감각: 층수·면적 → 공사비·물량·인원·공기 (P-B10 원단위)",
+    "link": "chapters/overview.html#sim-ov-scale"
+  },
+  {
+    "id": "sitebook/overview/sim-ov-life",
+    "bookId": "sitebook",
+    "title": "생애 주기: 변경 시점 → 영향력 · 누적 지출 · 변경 비용 배수",
+    "link": "chapters/overview.html#sim-ov-life"
+  },
+  {
+    "id": "sitebook/overview/sim-ov-party",
+    "bookId": "sitebook",
+    "title": "참여자 관계도: 발주 방식 → 계약선 · 소통선",
+    "link": "chapters/overview.html#sim-ov-party"
+  },
+  {
+    "id": "sitebook/overview/sim-ov-tri",
+    "bookId": "sitebook",
+    "title": "철의 삼각형: 공기 · 품질 · 예산 중 둘을 정하면 나머지 하나",
+    "link": "chapters/overview.html#sim-ov-tri"
+  },
+  {
+    "id": "sitebook/overview/sim-ov-control",
+    "bookId": "sitebook",
+    "title": "관리 고리: 측정 간격 → 편차 · 회복 비용 · 준공 주",
+    "link": "chapters/overview.html#sim-ov-control"
+  },
+  {
+    "id": "sitebook/overview/sim-ov-order",
+    "bookId": "sitebook",
+    "title": "공종 순서 맞히기: P-B10 활동을 시작할 수 있는 순서대로 누르기",
+    "link": "chapters/overview.html#sim-ov-order"
+  },
+  {
+    "id": "sitebook/overview/sim-ov-4d",
+    "bookId": "sitebook",
+    "title": "P-B10 4D 장면: 주 슬라이더 → 공정에 따라 올라가는 건물",
+    "link": "chapters/overview.html#sim-ov-4d"
+  },
+  {
+    "id": "sitebook/overview/sim-ov-cost",
+    "bookId": "sitebook",
+    "title": "P-B10 공사비 구성: 활동별 · 공종별 · 시간에 따른 누적",
+    "link": "chapters/overview.html#sim-ov-cost"
+  },
+  {
+    "id": "sitebook/pert/sim-pt-dist",
+    "bookId": "sitebook",
+    "title": "3점 추정 분포: a · m · b를 움직여 베타와 삼각 비교",
+    "link": "chapters/pert.html#sim-pt-dist"
+  },
+  {
+    "id": "sitebook/pert/sim-pt-prob",
+    "bookId": "sitebook",
+    "title": "완료 확률 계산기: 목표 공기 → 정규 곡선 아래 면적",
+    "link": "chapters/pert.html#sim-pt-prob"
+  },
+  {
+    "id": "sitebook/pert/sim-pt-merge",
+    "bookId": "sitebook",
+    "title": "합류 편향 실험: 병렬 경로 수 → 최대값 분포",
+    "link": "chapters/pert.html#sim-pt-merge"
+  },
+  {
+    "id": "sitebook/pert/sim-pt-mc",
+    "bookId": "sitebook",
+    "title": "P-B10 몬테카를로: 공기 분포 · 누적 곡선 · 주공정 지수",
+    "link": "chapters/pert.html#sim-pt-mc"
+  },
+  {
+    "id": "sitebook/pert/sim-pt-tornado",
+    "bookId": "sitebook",
+    "title": "토네이도 차트: 활동별 공기 위험 기여",
+    "link": "chapters/pert.html#sim-pt-tornado"
+  },
+  {
+    "id": "sitebook/pert/sim-pt-buffer",
+    "bookId": "sitebook",
+    "title": "버퍼 크기 정하기: 목표 신뢰도 → 버퍼 주수",
+    "link": "chapters/pert.html#sim-pt-buffer"
+  },
+  {
+    "id": "sitebook/pert/sim-pt-weather",
+    "bookId": "sitebook",
+    "title": "날씨 위험: 착공 월과 장마 → 옥외 공종 지연(교육용)",
+    "link": "chapters/pert.html#sim-pt-weather"
+  },
+  {
+    "id": "sitebook/productivity/sim-pr-learning",
+    "bookId": "sitebook",
+    "title": "학습 곡선: 학습률·첫 층 기간 → 층별 기간과 P-B10 공기",
+    "link": "chapters/productivity.html#sim-pr-learning"
+  },
+  {
+    "id": "sitebook/productivity/sim-pr-ppc",
+    "bookId": "sitebook",
+    "title": "라스트 플래너 PPC 추적: 준비 수준·약속 크기 → 주별 PPC와 미완료 원인",
+    "link": "chapters/productivity.html#sim-pr-ppc"
+  },
+  {
+    "id": "sitebook/productivity/sim-pr-flow",
+    "bookId": "sitebook",
+    "title": "작업 흐름 변동: 변동 크기·능력 여유 → 대기와 공종 행렬 공기",
+    "link": "chapters/productivity.html#sim-pr-flow"
+  },
+  {
+    "id": "sitebook/productivity/sim-pr-sampling",
+    "bookId": "sitebook",
+    "title": "부가가치 시간 분석: 작업 표본 → 부가가치·필수 비부가가치·낭비 비율",
+    "link": "chapters/productivity.html#sim-pr-sampling"
+  },
+  {
+    "id": "sitebook/productivity/sim-pr-modular",
+    "bookId": "sitebook",
+    "title": "모듈러 vs 현장 시공: 유닛 수·공장 속도·설치 속도 → CPM 공기와 비용",
+    "link": "chapters/productivity.html#sim-pr-modular"
+  },
+  {
+    "id": "sitebook/productivity/sim-pr-drone",
+    "bookId": "sitebook",
+    "title": "드론 물량 산출: 측량 격자·오차 → 굴착 체적과 기성 진도",
+    "link": "chapters/productivity.html#sim-pr-drone"
+  },
+  {
+    "id": "sitebook/productivity/sim-pr-4d",
+    "bookId": "sitebook",
+    "title": "4D 진행 비교: P-B10 계획(CPM) 대 실적(교육용 시나리오) 3D",
+    "link": "chapters/productivity.html#sim-pr-4d"
+  },
+  {
+    "id": "sitebook/quality/sim-ql-cost",
+    "bookId": "sitebook",
+    "title": "품질 비용 최적: 적합 품질 수준 → 총 품질 비용",
+    "link": "chapters/quality.html#sim-ql-cost"
+  },
+  {
+    "id": "sitebook/quality/sim-ql-xbar",
+    "bookId": "sitebook",
+    "title": "X̄–R 관리도: P-B10 레미콘 슬럼프와 이상 판정",
+    "link": "chapters/quality.html#sim-ql-xbar"
+  },
+  {
+    "id": "sitebook/quality/sim-ql-p",
+    "bookId": "sitebook",
+    "title": "p 관리도: 철근 검측 부적합 항목 비율",
+    "link": "chapters/quality.html#sim-ql-p"
+  },
+  {
+    "id": "sitebook/quality/sim-ql-cap",
+    "bookId": "sitebook",
+    "title": "공정 능력: 평균·표준편차·규격 → C p ·C pk 와 규격 밖 비율",
+    "link": "chapters/quality.html#sim-ql-cap"
+  },
+  {
+    "id": "sitebook/quality/sim-ql-oc",
+    "bookId": "sitebook",
+    "title": "OC 곡선: 표본 크기 n · 합격 판정 개수 c → 합격 확률",
+    "link": "chapters/quality.html#sim-ql-oc"
+  },
+  {
+    "id": "sitebook/quality/sim-ql-cover",
+    "bookId": "sitebook",
+    "title": "피복 두께 검측 판정: 측정값 분포 → 합격률과 보수 위치",
+    "link": "chapters/quality.html#sim-ql-cover"
+  },
+  {
+    "id": "sitebook/quality/sim-ql-pareto",
+    "bookId": "sitebook",
+    "title": "파레토 차트: 부적합 유형 → 누적 비율과 개선 효과",
+    "link": "chapters/quality.html#sim-ql-pareto"
+  },
+  {
+    "id": "sitebook/quality/sim-ql-fishbone",
+    "bookId": "sitebook",
+    "title": "특성 요인도 만들기: 원인을 범주에 놓고 근본 원인 찾기",
+    "link": "chapters/quality.html#sim-ql-fishbone"
+  },
+  {
+    "id": "sitebook/resources/sim-rs-hist",
+    "bookId": "sitebook",
+    "title": "P-B10 자원 부하도: ES·LS 전환과 활동 끌어 옮기기",
+    "link": "chapters/resources.html#sim-rs-hist"
+  },
+  {
+    "id": "sitebook/resources/sim-rs-level",
+    "bookId": "sitebook",
+    "title": "자동 평준화: 제곱합 휴리스틱 실행 → 전후 비교",
+    "link": "chapters/resources.html#sim-rs-level"
+  },
+  {
+    "id": "sitebook/resources/sim-rs-limit",
+    "bookId": "sitebook",
+    "title": "자원 제약 공정: 인원 한도 → 공기 연장",
+    "link": "chapters/resources.html#sim-rs-limit"
+  },
+  {
+    "id": "sitebook/resources/sim-rs-tradeoff",
+    "bookId": "sitebook",
+    "title": "공기 단축 비용 곡선: 목표 공기 → 추가 직접비 · 간접비 · 최적 공기",
+    "link": "chapters/resources.html#sim-rs-tradeoff"
+  },
+  {
+    "id": "sitebook/resources/sim-rs-crash",
+    "bookId": "sitebook",
+    "title": "단계별 공기 단축: 1주씩 가장 싼 절단 → 새 주공정",
+    "link": "chapters/resources.html#sim-rs-crash"
+  },
+  {
+    "id": "sitebook/resources/sim-rs-lob",
+    "bookId": "sitebook",
+    "title": "LOB: 공종별 층당 기간 → 선의 기울기 · 버퍼 · 지상부 공기",
+    "link": "chapters/resources.html#sim-rs-lob"
+  },
+  {
+    "id": "sitebook/resources/sim-rs-overtime",
+    "bookId": "sitebook",
+    "title": "초과 근무 효율: 주당 시간 · 지속 주 → 실질 산출 · 단위 인건비",
+    "link": "chapters/resources.html#sim-rs-overtime"
+  },
+  {
+    "id": "sitebook/resources/sim-rs-cum",
+    "bookId": "sitebook",
+    "title": "인력 히스토그램과 누적 인일: ES · LS · 평준화 비교",
+    "link": "chapters/resources.html#sim-rs-cum"
+  },
+  {
+    "id": "sitebook/safety/sim-sf-rates",
+    "bookId": "sitebook",
+    "title": "재해 지표 계산기: 재해 건수·손실 일수·근로 시간 → 도수율·강도율과 불확실성",
+    "link": "chapters/safety.html#sim-sf-rates"
+  },
+  {
+    "id": "sitebook/safety/sim-sf-pyramid",
+    "bookId": "sitebook",
+    "title": "사고 피라미드: 아차 사고 보고 → 예상 사고와 그 한계",
+    "link": "chapters/safety.html#sim-sf-pyramid"
+  },
+  {
+    "id": "sitebook/safety/sim-sf-cheese",
+    "bookId": "sitebook",
+    "title": "스위스 치즈: 방호 겹 수·구멍 크기·공통 잠재 조건 → 사고 확률",
+    "link": "chapters/safety.html#sim-sf-cheese"
+  },
+  {
+    "id": "sitebook/safety/sim-sf-matrix",
+    "bookId": "sitebook",
+    "title": "위험성 평가 매트릭스: P-B10 위험을 끌어 놓고 대책 적용",
+    "link": "chapters/safety.html#sim-sf-matrix"
+  },
+  {
+    "id": "sitebook/safety/sim-sf-fall",
+    "bookId": "sitebook",
+    "title": "추락 거리와 충격: 고리 높이·죔줄·흡수 장치 → 제동력과 클리어런스",
+    "link": "chapters/safety.html#sim-sf-fall"
+  },
+  {
+    "id": "sitebook/safety/sim-sf-shore",
+    "bookId": "sitebook",
+    "title": "동바리 붕괴 검토: 슬래브 두께·간격·높이·수평 연결재 → 축력 vs 좌굴 하중",
+    "link": "chapters/safety.html#sim-sf-shore"
+  },
+  {
+    "id": "sitebook/safety/sim-sf-crane",
+    "bookId": "sitebook",
+    "title": "크레인 전도 안정: 인양 하중·반경·아웃리거 → 안정 비와 접지압",
+    "link": "chapters/safety.html#sim-sf-crane"
+  },
+  {
+    "id": "sitebook/safety/sim-sf-invest",
+    "bookId": "sitebook",
+    "title": "안전 투자 효과: 투자 → 기대 재해와 총비용 곡선",
+    "link": "chapters/safety.html#sim-sf-invest"
+  },
+  {
+    "id": "sitebook/site-planning/sim-sp-power",
+    "bookId": "sitebook",
+    "title": "가설 전기 용량 산정: 공정별 장비 → kW → kVA → 수전 용량",
+    "link": "chapters/site-planning.html#sim-sp-power"
+  },
+  {
+    "id": "sitebook/site-planning/sim-sp-layout",
+    "bookId": "sitebook",
+    "title": "현장 배치 계획기: 크레인·야적장·사무실·출입구를 끌어 놓기 → 커버율·동선·간섭 점수",
+    "link": "chapters/site-planning.html#sim-sp-layout"
+  },
+  {
+    "id": "sitebook/site-planning/sim-sp-chart",
+    "bookId": "sitebook",
+    "title": "타워크레인 하중–반경 곡선: 지브 길이 · 인양물 · 반경 → 가능 여부",
+    "link": "chapters/site-planning.html#sim-sp-chart"
+  },
+  {
+    "id": "sitebook/site-planning/sim-sp-lifts",
+    "bookId": "sitebook",
+    "title": "양중 횟수와 크레인 대수: 층별 물량 · 사이클 → 필요 대수",
+    "link": "chapters/site-planning.html#sim-sp-lifts"
+  },
+  {
+    "id": "sitebook/site-planning/sim-sp-fdn",
+    "bookId": "sitebook",
+    "title": "크레인 기초 반력: 전도 모멘트 → 편심 → 접지압 또는 말뚝 반력",
+    "link": "chapters/site-planning.html#sim-sp-fdn"
+  },
+  {
+    "id": "sitebook/site-planning/sim-sp-3d",
+    "bookId": "sitebook",
+    "title": "3D 현장: 크레인 선회 반경, 올라가는 건물, 인접 건물",
+    "link": "chapters/site-planning.html#sim-sp-3d"
+  },
+  {
+    "id": "sitebook/site-planning/sim-sp-cost",
+    "bookId": "sitebook",
+    "title": "가설 공사비 비중: 공기 · 크레인 사용 기간 · 단가 → 항목별 비용과 총 공사비 대비 비중",
+    "link": "chapters/site-planning.html#sim-sp-cost"
+  },
+  {
+    "id": "sitebook/steel-erection/sim-se-split",
+    "bookId": "sitebook",
+    "title": "부재 분할과 운반: 절당 층수 → 길이 · 무게 · 이음 · 트럭 대수",
+    "link": "chapters/steel-erection.html#sim-se-split"
+  },
+  {
+    "id": "sitebook/steel-erection/sim-se-lift",
+    "bookId": "sitebook",
+    "title": "양중 가능 판정: 부재를 끌어 놓기 → 반경 · 정격 하중 · 이용률",
+    "link": "chapters/steel-erection.html#sim-se-lift"
+  },
+  {
+    "id": "sitebook/steel-erection/sim-se-sequence",
+    "bookId": "sitebook",
+    "title": "세우기 순서와 가설 안정: 순서 바꾸기 → 단계별 안정 판정",
+    "link": "chapters/steel-erection.html#sim-se-sequence"
+  },
+  {
+    "id": "sitebook/steel-erection/sim-se-plumb",
+    "bookId": "sitebook",
+    "title": "기둥 수직도 누적: 층별 오차 · 편향 · 보정 → 지붕 편차",
+    "link": "chapters/steel-erection.html#sim-se-plumb"
+  },
+  {
+    "id": "sitebook/steel-erection/sim-se-bolt",
+    "bookId": "sitebook",
+    "title": "볼트 조임력: 토크 · 토크 계수 산포 → 축력 분포 (F10T M20 교육용)",
+    "link": "chapters/steel-erection.html#sim-se-bolt"
+  },
+  {
+    "id": "sitebook/steel-erection/sim-se-schedule",
+    "bookId": "sitebook",
+    "title": "철골 vs RC 공기 비교: 층 사이클 · 제작 리드 타임 → 전체 공기 · 비용 (CB.pm.cpm)",
+    "link": "chapters/steel-erection.html#sim-se-schedule"
+  },
+  {
+    "id": "sitebook/steel-erection/sim-se-3d",
+    "bookId": "sitebook",
+    "title": "3D 세우기 애니메이션: B-10S 절 단위 세우기와 데크 · 콘크리트 (CB.orbit)",
+    "link": "chapters/steel-erection.html#sim-se-3d"
+  },
+  {
     "id": "thinfilmbook/ald/sim-qcm",
     "bookId": "thinfilmbook",
     "title": "인시투 QCM: 펄스 시간과 질량 계단",
