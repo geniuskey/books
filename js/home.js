@@ -13,6 +13,7 @@ EB.start("home", (d) => {
   const byId = Object.fromEntries(published.map((b) => [b.id, b]));
   const shelves = $("#home-shelves");
   const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)");
+  const PAGE_SIZE = 4;
   const arrow = (path) => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${path}"/></svg>`;
 
   function cover(b, placement) {
@@ -44,10 +45,17 @@ EB.start("home", (d) => {
     nav.addEventListener("click", (event) => {
       const button = event.target.closest("button");
       if (!button) return;
+      // 한 번에 PAGE_SIZE권씩 넘긴다. 화면이 좁아 그보다 적게 보이면 보이는 만큼 넘긴다.
       const firstCover = track.querySelector(".shelf-cover");
-      const step = firstCover.getBoundingClientRect().width + (parseFloat(getComputedStyle(track).columnGap) || 0);
-      const page = Math.max(1, Math.floor(track.clientWidth / step) - 1);
-      track.scrollBy({ left: Number(button.dataset.dir) * step * page, behavior: reduceMotion.matches ? "instant" : "smooth" });
+      const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      const step = firstCover.getBoundingClientRect().width + gap;
+      const page = Math.max(1, Math.min(PAGE_SIZE, Math.floor((track.clientWidth + gap) / step)));
+      const count = track.querySelectorAll(".shelf-cover").length;
+      const at = Math.round(track.scrollLeft / step);
+      const dir = Number(button.dataset.dir);
+      const index = dir > 0 ? Math.floor(at / page) + 1 : Math.ceil(at / page) - 1;
+      const target = Math.max(0, Math.min(count - 1, index * page));
+      track.scrollTo({ left: target * step, behavior: reduceMotion.matches ? "instant" : "smooth" });
     });
     track.addEventListener("scroll", update, { passive: true });
     new ResizeObserver(update).observe(track);
@@ -64,8 +72,7 @@ EB.start("home", (d) => {
     const popular = (books) => books.map((b, i) => ({ b, i })).sort((x, y) => (opens[y.b.id] || 0) - (opens[x.b.id] || 0) || x.i - y.i).map((x) => x.b);
 
     // 분야별 서가: 분야 전체 조회수가 많은 분야부터, 각 분야 안에서는 많이 펼친 순서. 같으면 books.json의 분야 순서를 지킨다.
-    // 서가마다 인기 상위 SHELF_SIZE권만 놓고 나머지는 전체 책장으로 잇는다. 데스크톱에서는 두 서가씩 한 줄에 나란히 둔다.
-    const SHELF_SIZE = 4;
+    // 서가마다 PAGE_SIZE권씩 보이고 < > 버튼으로 다음 묶음을 넘긴다. 데스크톱에서는 두 서가씩 한 줄에 나란히 둔다.
     const fieldShelves = d.fields.map((f, i) => {
       const books = popular(published.filter((b) => b.field === f.id));
       return { field: f, books, i, opens: books.reduce((n, b) => n + (opens[b.id] || 0), 0) };
@@ -73,7 +80,7 @@ EB.start("home", (d) => {
     const jump = $("#browse-fields");
     fieldShelves.forEach(({ field, books }) => {
       const id = `shelf-${field.id}`;
-      shelf({ id, title: field.name, note: `${books.length}권`, books: books.slice(0, SHELF_SIZE), placement: `field-${field.id}`, link: EB.fieldUrl(field.id), linkLabel: "모두 보기", half: true });
+      shelf({ id, title: field.name, note: `${books.length}권`, books, placement: `field-${field.id}`, link: EB.fieldUrl(field.id), linkLabel: "모두 보기", half: true });
       const a = document.createElement("a");
       a.href = `#${id}`;
       a.textContent = field.name;
