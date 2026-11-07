@@ -64,23 +64,16 @@ EB.start("home", (d) => {
     const popular = (books) => books.map((b, i) => ({ b, i })).sort((x, y) => (opens[y.b.id] || 0) - (opens[x.b.id] || 0) || x.i - y.i).map((x) => x.b);
 
     // 분야별 서가: 분야 전체 조회수가 많은 분야부터, 각 분야 안에서는 많이 펼친 순서. 같으면 books.json의 분야 순서를 지킨다.
-    // 책이 적은 분야끼리는 데스크톱에서 한 줄에 나란히 둔다.
+    // 서가마다 인기 상위 SHELF_SIZE권만 놓고 나머지는 전체 책장으로 잇는다. 데스크톱에서는 두 서가씩 한 줄에 나란히 둔다.
+    const SHELF_SIZE = 4;
     const fieldShelves = d.fields.map((f, i) => {
       const books = popular(published.filter((b) => b.field === f.id));
       return { field: f, books, i, opens: books.reduce((n, b) => n + (opens[b.id] || 0), 0) };
     }).filter((x) => x.books.length).sort((x, y) => y.opens - x.opens || x.i - y.i);
-    fieldShelves.forEach((x) => { x.half = x.books.length <= 6; });
-    // 짝이 없는 작은 서가는 한 줄 전체를 쓴다.
-    let run = [];
-    [...fieldShelves, null].forEach((x) => {
-      if (x && x.half) { run.push(x); return; }
-      if (run.length % 2) run[run.length - 1].half = false;
-      run = [];
-    });
     const jump = $("#browse-fields");
-    fieldShelves.forEach(({ field, books, half }) => {
+    fieldShelves.forEach(({ field, books }) => {
       const id = `shelf-${field.id}`;
-      shelf({ id, title: field.name, note: `${books.length}권`, books, placement: `field-${field.id}`, link: EB.mapUrl(field.id), linkLabel: "지식 지도", half });
+      shelf({ id, title: field.name, note: `${books.length}권`, books: books.slice(0, SHELF_SIZE), placement: `field-${field.id}`, link: EB.fieldUrl(field.id), linkLabel: "모두 보기", half: true });
       const a = document.createElement("a");
       a.href = `#${id}`;
       a.textContent = field.name;
