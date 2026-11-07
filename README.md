@@ -116,6 +116,7 @@ python3 -m http.server 8000   # → http://localhost:8000
 | `status`, `phase` | 상태, 로드맵 단계 |
 | `ideas` | 집필 예정 책에서 만들고 싶은 시뮬레이터 |
 | `headline`, `url`, `repo` | 출간·집필 중인 책의 한 줄 문구, 사이트 주소, GitHub 주소 |
+| `legacyUrls` | 서가를 옮기기 전의 옛 사이트 주소. 조회수 집계(`tools/build-analytics.py`)에서 같은 책으로 합칩니다. 책 주소를 바꾸면 이전 `url`을 여기에 추가하세요 |
 | `chapters`, `simulators`, `level`, `topics` | 출간된 책의 챕터 수, 시뮬레이터 수, 난이도, 주제어 |
 | `color`, `colorDark` | 책 대표색 (없으면 분야 색). 기본은 각 책 사이트의 `--accent`지만, 같은 분야에서 비슷한 색이 겹치면 이 사이트에서만 다른 색으로 바꿔 씁니다 |
 | `motif` | 표지 일러스트 (`memory`, `pixel`, `layers`, `attention`, `aperture`, `logic`, `circuit`, `package`, `car`, `wafermap`, `litho`, `probe`, `soc`, `subpixel`, `shmoo`, `lens`, `network`, `matrix`, `umbrella`, `house`, `ripple`, `transform`, `brackets`, `digital`, `fab`, `process`, `etch`, `guitar`, `piano`, `drums`, `bass`, `linear`, `calculus`, `ode`, `numerical`, `beam`, `concrete`, `soil`, `tower`, `rebar`, `bridge`, `crane`, `bim`; 과목 ID와 같은 SciBook 표지; 없으면 기본 격자). 새 그림은 `js/covers.js`에 추가하고 움직임은 `css/style.css`의 표지 애니메이션에 둡니다. `fab`·`process`·`etch`는 SemiBooks, `guitar`·`piano`·`drums`·`bass`는 MusicBooks, `linear`·`calculus`·`ode`·`numerical`은 MathBooks, `beam`·`concrete`·`soil`·`tower`·`rebar`·`bridge`·`crane`·`bim`은 ConstructionBooks와 같은 코드를 씁니다 |
@@ -231,6 +232,6 @@ node tools/check-models.cjs
 홈의 책 링크는 클릭할 때 GA4 `open_book` 이벤트(`book_id`, `link_url`, `placement`)를 보냅니다(홈 서가별 클릭 분석용). `.github/workflows/analytics.yml`이 3시간마다 `tools/build-analytics.py`로 집계해 `data/analytics.json`을 커밋합니다.
 
 - `stats`: 2026-10-30(GA4 도입)부터 오늘(KST)까지 `*.euiyun.com` 책 사이트의 다녀간 분·다시 찾아온 분·페이지 본 횟수. 홈 첫 화면에 표시
-- `opens`: 최근 28일 동안 책별 페이지 조회수(각 책 사이트의 `hostName`+`pagePath`를 책 URL 접두사로 묶음, GA4 '페이지 및 화면'의 조회수와 같은 기준). 홈의 분야별 서가는 분야에 속한 책 조회수의 합이 많은 분야부터 놓고(분야 바로 가기도 같은 순서), 분야 안에서는 책 조회수 순서로 놓습니다. 같으면 `books.json` 순서를 따릅니다.
+- `opens`: 최근 28일 동안 책별 페이지 조회수(각 책 사이트의 `hostName`+`pagePath`를 책 URL 접두사로 묶음, GA4 '페이지 및 화면'의 조회수와 같은 기준). 옛 주소(`legacyUrls`)의 조회수도 같은 책으로 합칩니다. 홈의 분야별 서가는 분야에 속한 책 조회수의 합이 많은 분야부터 놓고(분야 바로 가기도 같은 순서), 분야 안에서는 책 조회수 순서로 놓습니다. 같으면 `books.json` 순서를 따릅니다.
 
 설정은 Repository 수준(환경 Secret은 읽지 않음)에 둡니다. Secret `GA4_CREDENTIALS`(Books 속성 뷰어 권한이 있는 서비스 계정 JSON), Variable 또는 Secret `GA4_PROPERTY_ID`(숫자 속성 ID). 설정이 없으면 예약 실행은 건너뛰고 직접 실행은 실패로 표시합니다.

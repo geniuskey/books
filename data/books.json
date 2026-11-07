@@ -169,6 +169,9 @@
         "description": "From semiconductor physics to transistors and devices."
       },
       "url": "https://semi.euiyun.com/device/",
+      "legacyUrls": [
+        "https://devicebook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "physics",
@@ -217,6 +220,9 @@
         "description": "Build digital circuits from CMOS gates to flip-flops, adders, SRAM, and synthesis."
       },
       "url": "https://semi.euiyun.com/digital/",
+      "legacyUrls": [
+        "https://digitalbook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "design",
@@ -265,6 +271,9 @@
         "description": "Explore the principles and tradeoffs of chip design."
       },
       "url": "https://semi.euiyun.com/design/",
+      "legacyUrls": [
+        "https://designbook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/semi-books",
       "stage": "design",
       "status": "published",
@@ -312,6 +321,9 @@
         "description": "Follow the architecture of a system on a chip."
       },
       "url": "https://semi.euiyun.com/soc/",
+      "legacyUrls": [
+        "https://socbook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "design",
@@ -360,6 +372,9 @@
         "description": "Design analog circuits and explore their behavior with in-browser SPICE."
       },
       "url": "https://semi.euiyun.com/analog/",
+      "legacyUrls": [
+        "https://analogbook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "design",
@@ -408,6 +423,9 @@
         "description": "See how semiconductor processes build a chip layer by layer."
       },
       "url": "https://semi.euiyun.com/process/",
+      "legacyUrls": [
+        "https://processbook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/semi-books",
       "stage": "process",
       "status": "published",
@@ -454,6 +472,9 @@
         "description": "Discover how patterns are printed on a wafer."
       },
       "url": "https://semi.euiyun.com/litho/",
+      "legacyUrls": [
+        "https://lithobook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "process",
@@ -502,6 +523,9 @@
         "description": "Explore how wet and plasma etching shape semiconductor features."
       },
       "url": "https://semi.euiyun.com/etch/",
+      "legacyUrls": [
+        "https://etchbook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "process",
@@ -534,6 +558,9 @@
         "description": "Tune implant energy, dose, and anneal to see how doping shapes junctions."
       },
       "url": "https://semi.euiyun.com/doping/",
+      "legacyUrls": [
+        "https://dopingbook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "process",
@@ -566,6 +593,9 @@
         "description": "Understand yield through process variation and data."
       },
       "url": "https://semi.euiyun.com/yield/",
+      "legacyUrls": [
+        "https://yieldbook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "process",
@@ -613,6 +643,9 @@
         "description": "Investigate why chips fail and how engineers find the cause."
       },
       "url": "https://semi.euiyun.com/failure/",
+      "legacyUrls": [
+        "https://failurebook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "process",
@@ -660,6 +693,9 @@
         "description": "Simulate fabrication steps and solve the equations inside a transistor."
       },
       "url": "https://semi.euiyun.com/tcad/",
+      "legacyUrls": [
+        "https://tcadbook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "process",
@@ -708,6 +744,9 @@
         "description": "Explore the connections and structures inside chip packages."
       },
       "url": "https://semi.euiyun.com/packaging/",
+      "legacyUrls": [
+        "https://packagingbook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/semi-books",
       "stage": "packaging",
       "status": "published",
@@ -755,6 +794,9 @@
         "description": "Plan and run the tests that verify a chip."
       },
       "url": "https://semi.euiyun.com/test/",
+      "legacyUrls": [
+        "https://testbook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "packaging",
@@ -803,6 +845,9 @@
         "description": "From SRAM and DRAM to HBM, NAND, and SSDs."
       },
       "url": "https://semi.euiyun.com/memory/",
+      "legacyUrls": [
+        "https://memorybook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/semi-books",
       "stage": "device",
       "status": "published",
@@ -848,6 +893,9 @@
         "description": "Trace light through lenses and into image sensor pixels."
       },
       "url": "https://semi.euiyun.com/optics/",
+      "legacyUrls": [
+        "https://opticsbook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "physics",
@@ -880,6 +928,9 @@
         "description": "Explore pixels, image sensors, noise, and image processing."
       },
       "url": "https://semi.euiyun.com/sensor/",
+      "legacyUrls": [
+        "https://sensorbook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/semi-books",
       "stage": "device",
       "status": "published",
@@ -925,6 +976,9 @@
         "description": "Discover how LCD, OLED, and other displays make light."
       },
       "url": "https://semi.euiyun.com/display/",
+      "legacyUrls": [
+        "https://displaybook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "stage": "device",
@@ -1007,6 +1061,9 @@
         "description": "Map the companies, tools, and supply chains behind a chip."
       },
       "url": "https://semi.euiyun.com/industry/",
+      "legacyUrls": [
+        "https://chipindustrybook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/semi-books",
       "field": "semiconductor",
       "status": "published",
@@ -1274,6 +1331,9 @@
         "description": "Explore vehicles from engines and batteries to autonomy."
       },
       "url": "https://system.euiyun.com/car/",
+      "legacyUrls": [
+        "https://carbook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/system-books",
       "status": "published",
       "color": "#dd5a16",
@@ -1320,6 +1380,9 @@
         "description": "Explore buoyancy, propulsion, waves, and the design of ships."
       },
       "url": "https://system.euiyun.com/ship/",
+      "legacyUrls": [
+        "https://shipbook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/system-books",
       "status": "published",
       "color": "#0b6fb5",
@@ -1351,6 +1414,9 @@
         "description": "Take apart the hardware inside a smartphone."
       },
       "url": "https://system.euiyun.com/phone/",
+      "legacyUrls": [
+        "https://phonebook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/system-books",
       "field": "electronics",
       "status": "published",
@@ -1398,6 +1464,9 @@
         "description": "Measure and reproduce color across lighting, cameras, and displays."
       },
       "url": "https://science.euiyun.com/color/",
+      "legacyUrls": [
+        "https://colorbook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/science-books",
       "field": "science",
       "status": "published",
@@ -1443,6 +1512,9 @@
         "description": "Explore budgeting, credit, investing, insurance, and retirement."
       },
       "url": "https://money.euiyun.com/money/",
+      "legacyUrls": [
+        "https://moneybook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/money-books",
       "field": "money",
       "status": "published",
@@ -1482,6 +1554,9 @@
         "description": "Read economic news by changing rates, prices, and policy yourself."
       },
       "url": "https://money.euiyun.com/economics/",
+      "legacyUrls": [
+        "https://economicsbook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/money-books",
       "status": "published",
       "level": "입문",
@@ -1526,6 +1601,9 @@
         "description": "Trade in a simulated market and learn how stocks and portfolios work."
       },
       "url": "https://money.euiyun.com/stock/",
+      "legacyUrls": [
+        "https://stockbook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/money-books",
       "field": "money",
       "status": "published",
@@ -1571,6 +1649,9 @@
         "description": "Explore insurance premiums, policies, claims, and coverage decisions."
       },
       "url": "https://money.euiyun.com/insure/",
+      "legacyUrls": [
+        "https://insurebook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/money-books",
       "status": "published",
       "level": "입문",
@@ -1618,6 +1699,9 @@
         "description": "Change the numbers and follow taxes from payroll withholding to inheritance."
       },
       "url": "https://money.euiyun.com/tax/",
+      "legacyUrls": [
+        "https://taxbook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/money-books",
       "status": "published",
       "level": "입문",
@@ -1660,6 +1744,9 @@
         "description": "Work out home prices, rent deposits, mortgages, and buy-or-rent decisions with numbers."
       },
       "url": "https://money.euiyun.com/estate/",
+      "legacyUrls": [
+        "https://estatebook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/money-books",
       "status": "published",
       "level": "입문",
@@ -1738,6 +1825,9 @@
         "description": "Take a camera apart in 3D, then learn photography by changing its settings yourself."
       },
       "url": "https://system.euiyun.com/camera/",
+      "legacyUrls": [
+        "https://camerabook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/system-books",
       "status": "published",
       "level": "입문",
@@ -1785,6 +1875,9 @@
         "description": "Make sounds and explore harmony, rhythm, synthesis, and signal processing."
       },
       "url": "https://music.euiyun.com/fundamentals/",
+      "legacyUrls": [
+        "https://musicbook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/music-books",
       "field": "culture",
       "status": "published",
@@ -1830,6 +1923,9 @@
         "description": "Mix and compare color to see that color is a relationship, not a name."
       },
       "url": "https://art.euiyun.com/color/",
+      "legacyUrls": [
+        "https://artbook.euiyun.com/color/"
+      ],
       "repo": "https://github.com/geniuskey/artbook",
       "checkout": "artbook/color",
       "field": "culture",
@@ -1876,6 +1972,9 @@
         "description": "Move grids and crops to see how placement changes a picture."
       },
       "url": "https://art.euiyun.com/composition/",
+      "legacyUrls": [
+        "https://artbook.euiyun.com/composition/"
+      ],
       "repo": "https://github.com/geniuskey/artbook",
       "checkout": "artbook/composition",
       "field": "culture",
@@ -1922,6 +2021,9 @@
         "description": "Learn to see before you draw: perspective, light, shadow, and the figure."
       },
       "url": "https://art.euiyun.com/drawing/",
+      "legacyUrls": [
+        "https://artbook.euiyun.com/drawing/"
+      ],
       "repo": "https://github.com/geniuskey/artbook",
       "checkout": "artbook/drawing",
       "field": "culture",
@@ -1968,6 +2070,9 @@
         "description": "Typeset Hangul and Latin text with sliders for spacing, leading, and hierarchy."
       },
       "url": "https://art.euiyun.com/type/",
+      "legacyUrls": [
+        "https://artbook.euiyun.com/type/"
+      ],
       "repo": "https://github.com/geniuskey/artbook",
       "checkout": "artbook/type",
       "field": "culture",
@@ -2014,6 +2119,9 @@
         "description": "Read art history through the palettes and compositions of public-domain masterpieces."
       },
       "url": "https://art.euiyun.com/history/",
+      "legacyUrls": [
+        "https://artbook.euiyun.com/history/"
+      ],
       "repo": "https://github.com/geniuskey/artbook",
       "checkout": "artbook/history",
       "field": "culture",
@@ -2060,6 +2168,9 @@
         "description": "Explore exposure, focus, sensors, and color in photography."
       },
       "url": "https://art.euiyun.com/image/",
+      "legacyUrls": [
+        "https://artbook.euiyun.com/image/"
+      ],
       "repo": "https://github.com/geniuskey/artbook",
       "checkout": "artbook/image",
       "field": "culture",
@@ -2106,6 +2217,9 @@
         "description": "Design for a canvas without a fixed size: layout, responsive design, and accessibility."
       },
       "url": "https://art.euiyun.com/web/",
+      "legacyUrls": [
+        "https://artbook.euiyun.com/web/"
+      ],
       "repo": "https://github.com/geniuskey/artbook",
       "checkout": "artbook/web",
       "field": "culture",
@@ -2152,6 +2266,9 @@
         "description": "Choose the problem before drawing screens: research, flows, prototypes, and testing."
       },
       "url": "https://art.euiyun.com/product/",
+      "legacyUrls": [
+        "https://artbook.euiyun.com/product/"
+      ],
       "repo": "https://github.com/geniuskey/artbook",
       "checkout": "artbook/product",
       "field": "culture",
@@ -2198,6 +2315,9 @@
         "description": "Shape objects for the hand: form, ergonomics, materials, and manufacturing."
       },
       "url": "https://art.euiyun.com/industrial/",
+      "legacyUrls": [
+        "https://artbook.euiyun.com/industrial/"
+      ],
       "repo": "https://github.com/geniuskey/artbook",
       "checkout": "artbook/industrial",
       "field": "culture",
@@ -2547,6 +2667,9 @@
         "description": "Explore mathematics through engineering problems and interactive diagrams."
       },
       "url": "https://math.euiyun.com/foundations/",
+      "legacyUrls": [
+        "https://mathbook.euiyun.com/"
+      ],
       "repo": "https://github.com/geniuskey/math-books",
       "status": "published",
       "level": "공대 학부",
@@ -2721,6 +2844,9 @@
       "status": "published",
       "level": "대학 1–2학년",
       "url": "https://math.euiyun.com/probability/",
+      "legacyUrls": [
+        "https://science.euiyun.com/probability-statistics/"
+      ],
       "repo": "https://github.com/geniuskey/math-books",
       "checkout": "math-books/probability",
       "color": "#15803d",

@@ -5,6 +5,7 @@
   같은 속성을 쓰는 책 사이트(shipbook, science 등)도 포함하고 euiyun.com 본 사이트는 뺀다.
 - opens: 최근 28일 동안 책별 페이지 조회수(많은 순). 각 책 사이트(hostName + pagePath)의 조회수를
   books.json의 책 URL 접두사로 묶어 센다. GA4 '페이지 및 화면' 보고서의 조회수와 같은 기준이다.
+  서가를 옮긴 책은 legacyUrls(옛 주소)의 조회수도 같은 책으로 합쳐, 이전 직후에도 28일 순위가 끊기지 않게 한다.
   홈은 분야별 조회수 합이 많은 분야의 서가부터, 각 서가 안에서는 이 순서대로 보여 준다.
   (홈에서 링크를 누른 횟수만 세면 검색 등으로 책에 바로 들어온 독자가 빠져 실제 순위와 어긋난다.)
 
@@ -107,7 +108,8 @@ def main():
             shape = f"{len(property_id)} characters, {sum(c.isdigit() for c in property_id)} digits"
         sys.exit(f"GA4_PROPERTY_ID must be the numeric property ID (Admin > Property details), got {shape}")
     catalog = json.loads((ROOT / "data/books.json").read_text())
-    books = [(normalize(b["url"]), b["id"]) for b in catalog["books"] if b.get("status") == "published" and b.get("url")]
+    books = [(normalize(url), b["id"]) for b in catalog["books"] if b.get("status") == "published" and b.get("url")
+             for url in [b["url"], *b.get("legacyUrls", [])]]
 
     ga = GA4(property_id)
     out = {"updated": datetime.now(KST).date().isoformat(), "stats": build_stats(ga), "opens": build_top(ga, books)}
