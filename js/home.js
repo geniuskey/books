@@ -1,4 +1,4 @@
-/* 홈: GA4 방문 통계, 인기순 분야별 서가, 대표 실험, 저자 노트 */
+/* 홈: GA4 방문 통계, 인기 분야순 서가, 대표 실험, 저자 노트 */
 EB.start("home", (d) => {
   "use strict";
   const { $, esc } = EB;
@@ -63,8 +63,12 @@ EB.start("home", (d) => {
     // 많이 펼친 순서. 같으면 books.json의 순서를 지킨다.
     const popular = (books) => books.map((b, i) => ({ b, i })).sort((x, y) => (opens[y.b.id] || 0) - (opens[x.b.id] || 0) || x.i - y.i).map((x) => x.b);
 
-    // 분야별 서가: 각 분야 안에서 많이 펼친 순서. 책이 적은 분야끼리는 데스크톱에서 한 줄에 나란히 둔다.
-    const fieldShelves = d.fields.map((f) => ({ field: f, books: popular(published.filter((b) => b.field === f.id)) })).filter((x) => x.books.length);
+    // 분야별 서가: 분야 전체 조회수가 많은 분야부터, 각 분야 안에서는 많이 펼친 순서. 같으면 books.json의 분야 순서를 지킨다.
+    // 책이 적은 분야끼리는 데스크톱에서 한 줄에 나란히 둔다.
+    const fieldShelves = d.fields.map((f, i) => {
+      const books = popular(published.filter((b) => b.field === f.id));
+      return { field: f, books, i, opens: books.reduce((n, b) => n + (opens[b.id] || 0), 0) };
+    }).filter((x) => x.books.length).sort((x, y) => y.opens - x.opens || x.i - y.i);
     fieldShelves.forEach((x) => { x.half = x.books.length <= 6; });
     // 짝이 없는 작은 서가는 한 줄 전체를 쓴다.
     let run = [];
