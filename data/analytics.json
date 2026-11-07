@@ -3,9 +3,9 @@
   "stats": {
     "since": "2026-10-30",
     "until": "2026-11-07",
-    "visitors": 4387,
-    "returning": 1241,
-    "pageViews": 23934
+    "visitors": 4403,
+    "returning": 1245,
+    "pageViews": 23964
   },
   "opens": {
     "period": "최근 28일",
@@ -13,7 +13,7 @@
     "books": [
       {
         "id": "memorybook",
-        "opens": 2822
+        "opens": 2823
       },
       {
         "id": "processbook",
@@ -21,11 +21,11 @@
       },
       {
         "id": "devicebook",
-        "opens": 1249
+        "opens": 1251
       },
       {
         "id": "etchbook",
-        "opens": 617
+        "opens": 618
       },
       {
         "id": "chipindustrybook",
@@ -40,16 +40,16 @@
         "opens": 537
       },
       {
+        "id": "packagingbook",
+        "opens": 525
+      },
+      {
         "id": "moneybook",
         "opens": 523
       },
       {
-        "id": "packagingbook",
-        "opens": 523
-      },
-      {
         "id": "sensorbook",
-        "opens": 493
+        "opens": 497
       },
       {
         "id": "analogbook",
@@ -113,7 +113,7 @@
       },
       {
         "id": "opticsbook",
-        "opens": 157
+        "opens": 158
       },
       {
         "id": "networkbook",
@@ -160,16 +160,16 @@
         "opens": 94
       },
       {
+        "id": "electromagnetics",
+        "opens": 93
+      },
+      {
         "id": "powerbook",
         "opens": 92
       },
       {
-        "id": "electromagnetics",
-        "opens": 90
-      },
-      {
         "id": "musicbook",
-        "opens": 88
+        "opens": 89
       },
       {
         "id": "fluid-mechanics",
@@ -233,7 +233,7 @@
       },
       {
         "id": "thermal-physics",
-        "opens": 30
+        "opens": 31
       },
       {
         "id": "artbook-industrial",
@@ -256,11 +256,11 @@
         "opens": 20
       },
       {
-        "id": "drumbook",
-        "opens": 19
+        "id": "quantum-mechanics",
+        "opens": 20
       },
       {
-        "id": "quantum-mechanics",
+        "id": "drumbook",
         "opens": 19
       },
       {
@@ -289,7 +289,7 @@
       },
       {
         "id": "materialsbook",
-        "opens": 8
+        "opens": 9
       },
       {
         "id": "organic-chemistry",
