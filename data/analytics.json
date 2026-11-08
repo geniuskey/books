@@ -3,9 +3,9 @@
   "stats": {
     "since": "2026-10-30",
     "until": "2026-11-08",
-    "visitors": 4807,
-    "returning": 1360,
-    "pageViews": 25496
+    "visitors": 4822,
+    "returning": 1362,
+    "pageViews": 25615
   },
   "opens": {
     "period": "최근 28일",
@@ -13,27 +13,27 @@
     "books": [
       {
         "id": "memorybook",
-        "opens": 2929
+        "opens": 2958
       },
       {
         "id": "processbook",
-        "opens": 1750
+        "opens": 1755
       },
       {
         "id": "devicebook",
-        "opens": 1310
+        "opens": 1314
       },
       {
         "id": "etchbook",
         "opens": 637
       },
       {
-        "id": "chipindustrybook",
-        "opens": 609
+        "id": "packagingbook",
+        "opens": 617
       },
       {
-        "id": "packagingbook",
-        "opens": 600
+        "id": "chipindustrybook",
+        "opens": 611
       },
       {
         "id": "yieldbook",
@@ -45,11 +45,11 @@
       },
       {
         "id": "moneybook",
-        "opens": 533
+        "opens": 535
       },
       {
         "id": "analogbook",
-        "opens": 521
+        "opens": 522
       },
       {
         "id": "sensorbook",
@@ -57,7 +57,7 @@
       },
       {
         "id": "digitalbook",
-        "opens": 488
+        "opens": 495
       },
       {
         "id": "lithobook",
@@ -89,11 +89,11 @@
       },
       {
         "id": "bodybook",
-        "opens": 278
+        "opens": 282
       },
       {
         "id": "stockbook",
-        "opens": 246
+        "opens": 249
       },
       {
         "id": "cmpbook",
@@ -108,12 +108,12 @@
         "opens": 183
       },
       {
-        "id": "plasmabook",
-        "opens": 173
+        "id": "opticsbook",
+        "opens": 177
       },
       {
-        "id": "opticsbook",
-        "opens": 166
+        "id": "plasmabook",
+        "opens": 173
       },
       {
         "id": "networkbook",
@@ -129,7 +129,7 @@
       },
       {
         "id": "thinfilmbook",
-        "opens": 143
+        "opens": 144
       },
       {
         "id": "camerabook",
@@ -281,11 +281,11 @@
       },
       {
         "id": "mechanicsbook",
-        "opens": 17
+        "opens": 18
       },
       {
         "id": "organic-chemistry",
-        "opens": 16
+        "opens": 18
       },
       {
         "id": "odebook",
@@ -297,6 +297,10 @@
       },
       {
         "id": "numericalbook",
+        "opens": 6
+      },
+      {
+        "id": "sitebook",
         "opens": 6
       },
       {
