@@ -227,7 +227,7 @@ node tools/check-models.cjs
 
 컴퓨터·AI 교과서는 [ComputingBooks](https://computing.euiyun.com/)(형제 저장소 `../computing-books`)에서 통합 관리합니다. 2026-11-07에 ComputerBook·NetworkBook·AIBook·AXBook을 개별 사이트에서 옮겼습니다. 책 주소는 `https://computing.euiyun.com/{slug}/`(`computer`·`network`·`ai`·`ax`)이며 `checkout`은 `computing-books/{slug}`입니다. 책 ID와 `computing` 분야는 그대로 두었습니다. 옛 `*book.euiyun.com` 사이트는 원래 저장소에서 새 주소의 같은 쪽으로 넘기는 리다이렉트 페이지만 배포하며(검색어·해시 유지, 없는 경로는 `404.html`이 넘김), 주소는 `legacyUrls`에 남겨 조회수를 합칩니다. 메타데이터와 장·시뮬레이터 수는 `computing-books/catalog.js`를 기준으로 합니다. 준비 중인 GPUBook·OSBook·DatabaseBook·StatBook은 서가의 `roadmap.json`에도 같은 목록으로 둡니다. 서가 전체 의견(`computingbooks`)은 `sisterBooks`에 둡니다. 모델 검사 워크플로는 ComputerBook을 `geniuskey/computing-books`에서 체크아웃합니다.
 
-의학·건강 교과서는 [MedicalBooks](https://medical.euiyun.com/)(형제 저장소 `../medical-books`)에서 통합 관리합니다. 2026-11-07에 BodyBook을 개별 사이트에서 옮겼습니다. 책 주소는 `https://medical.euiyun.com/body/`이며 `checkout`은 `medical-books/body`입니다. 책 ID와 `health` 분야는 그대로 두었습니다. 옛 `bodybook.euiyun.com` 사이트는 같은 방식의 리다이렉트 페이지만 배포하며, 주소는 `legacyUrls`에 남깁니다. 메타데이터와 장·시뮬레이터 수는 `medical-books/catalog.js`를 기준으로 합니다. 서가 전체 의견(`medicalbooks`)은 `sisterBooks`에 둡니다.
+의학·건강 교과서는 [MedicalBooks](https://medical.euiyun.com/)(형제 저장소 `../medical-books`)에서 통합 관리합니다. 2026-11-07에 BodyBook을 개별 사이트에서 옮겼습니다. 책 주소는 `https://medical.euiyun.com/{slug}/`이며 `checkout`은 `medical-books/{slug}`입니다. 2026-11-08에 AnatomyBook(`anatomy`)을 새로 출판했습니다. 책 ID와 `health` 분야는 그대로 두었습니다. 옛 `bodybook.euiyun.com` 사이트는 같은 방식의 리다이렉트 페이지만 배포하며, 주소는 `legacyUrls`에 남깁니다. 메타데이터와 장·시뮬레이터 수는 `medical-books/catalog.js`를 기준으로 합니다. 서가 전체 의견(`medicalbooks`)은 `sisterBooks`에 둡니다.
 
 미술 교과서는 [ArtBooks](https://art.euiyun.com/)(형제 저장소 `../art-books`, 옛 `geniuskey/artbook`)에서 통합 관리하며 `checkout`은 `art-books/{slug}`입니다.
 

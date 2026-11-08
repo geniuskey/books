@@ -723,6 +723,20 @@
       s += `<path class="cv-hit" d="M140 64 116 40c-14-14 4-34 18-20l6 6 6-6c14-14 32 6 18 20Z" fill="${W}" fill-opacity=".75" stroke="${W}" stroke-width="1.4"/>`;
       return svg(s);
     },
+    // 해부학: 뼈대 위로 CT 단면선이 오르내리고, 오른쪽에 가슴 높이 가로 단면이 보인다
+    skeleton() {
+      let s = `<circle cx="70" cy="17" r="10" fill="${W}" fill-opacity=".85"/><path d="M64 27h12v4H64z" fill="${W}" fill-opacity=".7"/>`;
+      range(12).forEach((k) => { s += `<rect x="67.5" y="${33 + k * 4.4}" width="5" height="3.2" rx="1" fill="${W}" fill-opacity=".8"/>`; });
+      range(5).forEach((k) => { const y = 38 + k * 6; s += `<path d="M68 ${y}C56 ${y - 2} 52 ${y + 6} 58 ${y + 9}M72 ${y}C84 ${y - 2} 88 ${y + 6} 82 ${y + 9}" fill="none" stroke="${W}" stroke-width="1.6" stroke-opacity=".75"/>`; });
+      s += `<path d="M50 34H90M50 34L44 58 42 82M90 34L96 58 98 82" fill="none" stroke="${W}" stroke-width="2" stroke-linecap="round"/>`;
+      s += `<path d="M58 88Q70 80 82 88L78 98H62Z" fill="${W}" fill-opacity=".7"/><path d="M63 98L60 124M77 98L80 124" stroke="${W}" stroke-width="2.4" stroke-linecap="round"/>`;
+      s += `<path class="cs-scan" d="M30 70H110" stroke="#ffe066" stroke-width="2" stroke-opacity=".9"/>`;
+      s += `<ellipse cx="154" cy="70" rx="36" ry="26" fill="${W}" fill-opacity=".08" stroke="${W}" stroke-width="1.4"/>`;
+      s += `<ellipse cx="140" cy="68" rx="11" ry="14" fill="${W}" fill-opacity=".3"/><ellipse cx="168" cy="68" rx="11" ry="14" fill="${W}" fill-opacity=".3"/>`;
+      s += `<ellipse class="cv-pulse" cx="156" cy="62" rx="7" ry="6" fill="#ff8a9a" fill-opacity=".85"/><circle cx="154" cy="88" r="4.5" fill="${W}" fill-opacity=".9"/>`;
+      s += `<text x="122" y="122" fill="${W}" font-size="9" font-family="monospace" fill-opacity=".8">AXIAL</text>`;
+      return svg(s);
+    },
     // 오선과 음표, 아래에서 스펙트럼 막대가 출렁인다
     music() {
       const r = rnd(11); let s = "";
