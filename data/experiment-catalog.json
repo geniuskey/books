@@ -49176,6 +49176,762 @@
     "link": "chapters/steel-erection.html#sim-se-3d"
   },
   {
+    "id": "bimbook/analysis/sim-an-views",
+    "bookId": "bimbook",
+    "title": "한 모델, 다섯 가지 분석 뷰",
+    "link": "chapters/analysis.html#sim-an-views"
+  },
+  {
+    "id": "bimbook/analysis/sim-an-frame",
+    "bookId": "bimbook",
+    "title": "물리 → 해석 모델 변환과 CB.frame 해석",
+    "link": "chapters/analysis.html#sim-an-frame"
+  },
+  {
+    "id": "bimbook/analysis/sim-an-wwr",
+    "bookId": "bimbook",
+    "title": "창면적비와 에너지: 겨울 열 손실 · 여름 일사(교육용 정상 상태)",
+    "link": "chapters/analysis.html#sim-an-wwr"
+  },
+  {
+    "id": "bimbook/analysis/sim-an-sun",
+    "bookId": "bimbook",
+    "title": "태양 경로와 그림자: 날짜·시각 → B-10 그림자 투영",
+    "link": "chapters/analysis.html#sim-an-sun"
+  },
+  {
+    "id": "bimbook/analysis/sim-an-egress",
+    "bookId": "bimbook",
+    "title": "피난 거리 검사: 출구를 끌면 거리장이 다시 계산된다",
+    "link": "chapters/analysis.html#sim-an-egress"
+  },
+  {
+    "id": "bimbook/analysis/sim-an-ceiling",
+    "bookId": "bimbook",
+    "title": "천장고 규정 검사: 덕트 높이 → 간섭 수 · 천장고 · 판정",
+    "link": "chapters/analysis.html#sim-an-ceiling"
+  },
+  {
+    "id": "bimbook/analysis/sim-an-rules",
+    "bookId": "bimbook",
+    "title": "규칙 기반 검토 편집기: 규칙을 고치면 위반 요소가 다시 칠해진다",
+    "link": "chapters/analysis.html#sim-an-rules"
+  },
+  {
+    "id": "bimbook/analysis/sim-an-interop",
+    "bookId": "bimbook",
+    "title": "분석 연계 손실: 교환 형식과 왕복 횟수 → 남는 정보(교육용)",
+    "link": "chapters/analysis.html#sim-an-interop"
+  },
+  {
+    "id": "bimbook/cde/sim-cd-drift",
+    "bookId": "bimbook",
+    "title": "사본의 표류: 메일 배포 vs 중앙 참조",
+    "link": "chapters/cde.html#sim-cd-drift"
+  },
+  {
+    "id": "bimbook/cde/sim-cd-state",
+    "bookId": "bimbook",
+    "title": "CDE 상태 기계: 컨테이너를 끌어 상태를 바꾼다",
+    "link": "chapters/cde.html#sim-cd-state"
+  },
+  {
+    "id": "bimbook/cde/sim-cd-name",
+    "bookId": "bimbook",
+    "title": "명명 규칙 검사기: 필드별 통과·실패와 메타데이터 일관성",
+    "link": "chapters/cde.html#sim-cd-name"
+  },
+  {
+    "id": "bimbook/cde/sim-cd-fed",
+    "bookId": "bimbook",
+    "title": "연합 모델 조립: 분야 모델을 켜면 간섭이 나타난다",
+    "link": "chapters/cde.html#sim-cd-fed"
+  },
+  {
+    "id": "bimbook/cde/sim-cd-diff",
+    "bookId": "bimbook",
+    "title": "모델 버전 비교: 두 판의 B-10을 GlobalId로 짝짓기",
+    "link": "chapters/cde.html#sim-cd-diff"
+  },
+  {
+    "id": "bimbook/cde/sim-cd-audit",
+    "bookId": "bimbook",
+    "title": "감사 추적 타임라인: 기록을 조작하면 사슬이 끊어진다",
+    "link": "chapters/cde.html#sim-cd-audit"
+  },
+  {
+    "id": "bimbook/cde/sim-cd-access",
+    "bookId": "bimbook",
+    "title": "접근 권한 매트릭스: 역할 × 상태 칸을 눌러 권한을 바꾼다",
+    "link": "chapters/cde.html#sim-cd-access"
+  },
+  {
+    "id": "bimbook/cde/sim-cd-cadence",
+    "bookId": "bimbook",
+    "title": "정보 교환 주기: 교환 비용과 재작업의 균형",
+    "link": "chapters/cde.html#sim-cd-cadence"
+  },
+  {
+    "id": "bimbook/clash/sim-cl-aabb",
+    "bookId": "bimbook",
+    "title": "AABB 겹침 놀이터: 축별 겹침, 깊이, 부피와 허위 간섭",
+    "link": "chapters/clash.html#sim-cl-aabb"
+  },
+  {
+    "id": "bimbook/clash/sim-cl-check",
+    "bookId": "bimbook",
+    "title": "간섭 검토기: B-10 BIM에서 규칙별 간섭 찾기",
+    "link": "chapters/clash.html#sim-cl-check"
+  },
+  {
+    "id": "bimbook/clash/sim-cl-soft",
+    "bookId": "bimbook",
+    "title": "여유 공간 두께와 소프트 간섭의 계단",
+    "link": "chapters/clash.html#sim-cl-soft"
+  },
+  {
+    "id": "bimbook/clash/sim-cl-drop",
+    "bookId": "bimbook",
+    "title": "덕트 높이 조정: 간섭 수와 천장고 곡선",
+    "link": "chapters/clash.html#sim-cl-drop"
+  },
+  {
+    "id": "bimbook/clash/sim-cl-group",
+    "bookId": "bimbook",
+    "title": "간섭 그룹화: 반경과 규칙으로 80건을 이슈로 묶기",
+    "link": "chapters/clash.html#sim-cl-group"
+  },
+  {
+    "id": "bimbook/clash/sim-cl-board",
+    "bookId": "bimbook",
+    "title": "해결 워크플로 보드: 상태 칸반과 남은 이슈 곡선",
+    "link": "chapters/clash.html#sim-cl-board"
+  },
+  {
+    "id": "bimbook/clash/sim-cl-fix",
+    "bookId": "bimbook",
+    "title": "해결안 비교: 고친 모델로 다시 검사하기",
+    "link": "chapters/clash.html#sim-cl-fix"
+  },
+  {
+    "id": "bimbook/clash/sim-cl-grid",
+    "bookId": "bimbook",
+    "title": "격자 가속: 비교 횟수와 계산 시간 재기",
+    "link": "chapters/clash.html#sim-cl-grid"
+  },
+  {
+    "id": "bimbook/computational/sim-cp-graph",
+    "bookId": "bimbook",
+    "title": "데이터 흐름 그래프: 입력을 바꾸면 하류만 다시 계산",
+    "link": "chapters/computational.html#sim-cp-graph"
+  },
+  {
+    "id": "bimbook/computational/sim-cp-grid",
+    "bookId": "bimbook",
+    "title": "구조 그리드 격자 탐색: 48가지 그리드의 히트맵",
+    "link": "chapters/computational.html#sim-cp-grid"
+  },
+  {
+    "id": "bimbook/computational/sim-cp-ga",
+    "bookId": "bimbook",
+    "title": "유전 알고리즘: 1 m 간격 자유 그리드 최적화",
+    "link": "chapters/computational.html#sim-cp-ga"
+  },
+  {
+    "id": "bimbook/computational/sim-cp-pareto",
+    "bookId": "bimbook",
+    "title": "파레토 전선: 공사비 대 채광",
+    "link": "chapters/computational.html#sim-cp-pareto"
+  },
+  {
+    "id": "bimbook/computational/sim-cp-reg",
+    "bookId": "bimbook",
+    "title": "공사비 회귀: 예측 구간과 과적합",
+    "link": "chapters/computational.html#sim-cp-reg"
+  },
+  {
+    "id": "bimbook/computational/sim-cp-bias",
+    "bookId": "bimbook",
+    "title": "외삽과 편향 실험: 학습 데이터가 말해 주지 않는 것",
+    "link": "chapters/computational.html#sim-cp-bias"
+  },
+  {
+    "id": "bimbook/computational/sim-cp-mass",
+    "bookId": "bimbook",
+    "title": "생성 매스: 매개변수 → 연면적·외피, 그리고 자동 생성",
+    "link": "chapters/computational.html#sim-cp-mass"
+  },
+  {
+    "id": "bimbook/computational/sim-cp-clf",
+    "bookId": "bimbook",
+    "title": "분류 임계값과 검증 부담: B-10 요소 360개",
+    "link": "chapters/computational.html#sim-cp-clf"
+  },
+  {
+    "id": "bimbook/digital-twin/sim-dt-data",
+    "bookId": "bimbook",
+    "title": "데이터 양 계산기: 센서 수 × 주기 × 바이트, 엣지 처리와 보존 정책",
+    "link": "chapters/digital-twin.html#sim-dt-data"
+  },
+  {
+    "id": "bimbook/digital-twin/sim-dt-alias",
+    "bookId": "bimbook",
+    "title": "샘플링과 앨리어싱: 신호 진동수 · 표본화 진동수 → 보이는 진동수",
+    "link": "chapters/digital-twin.html#sim-dt-alias"
+  },
+  {
+    "id": "bimbook/digital-twin/sim-dt-kalman",
+    "bookId": "bimbook",
+    "title": "센서 데이터 스트림: 원 신호 vs 칼만 필터(q · r 조절)",
+    "link": "chapters/digital-twin.html#sim-dt-kalman"
+  },
+  {
+    "id": "bimbook/digital-twin/sim-dt-anomaly",
+    "bookId": "bimbook",
+    "title": "이상 탐지: CHWP-1 진동 60일, 탐지와 거짓 경보",
+    "link": "chapters/digital-twin.html#sim-dt-anomaly"
+  },
+  {
+    "id": "bimbook/digital-twin/sim-dt-rul",
+    "bookId": "bimbook",
+    "title": "잔여 수명 추정: 필터 차압 추세 → 예측 고장 시점과 구간",
+    "link": "chapters/digital-twin.html#sim-dt-rul"
+  },
+  {
+    "id": "bimbook/digital-twin/sim-dt-hvac",
+    "bookId": "bimbook",
+    "title": "공조 제어 루프: 설정 온도 · 외기 · 제어 방식 → 실내 온도 응답",
+    "link": "chapters/digital-twin.html#sim-dt-hvac"
+  },
+  {
+    "id": "bimbook/digital-twin/sim-dt-dash",
+    "bookId": "bimbook",
+    "title": "3D 센서 대시보드: B-10 층별 센서 60개, 시간 슬라이더",
+    "link": "chapters/digital-twin.html#sim-dt-dash"
+  },
+  {
+    "id": "bimbook/digital-twin/sim-dt-quality",
+    "bookId": "bimbook",
+    "title": "데이터 품질 검사: 튐 · 고착 · 결측 · 범위 밖 · 표류",
+    "link": "chapters/digital-twin.html#sim-dt-quality"
+  },
+  {
+    "id": "bimbook/fabrication/sim-fb-sched",
+    "bookId": "bimbook",
+    "title": "철근 가공표 생성: G1 배근 → 형상 · 절단 길이 · 개수 · 질량",
+    "link": "chapters/fabrication.html#sim-fb-sched"
+  },
+  {
+    "id": "bimbook/fabrication/sim-fb-cut",
+    "bookId": "bimbook",
+    "title": "절단 최적화: 필요 길이 목록 → 정척 배치, 순서대로 vs FFD, 손실률",
+    "link": "chapters/fabrication.html#sim-fb-cut"
+  },
+  {
+    "id": "bimbook/fabrication/sim-fb-mod",
+    "bookId": "bimbook",
+    "title": "모듈 분할: B-10 기준층 → 모듈 수 · 유형 수 · 운송 판정",
+    "link": "chapters/fabrication.html#sim-fb-mod"
+  },
+  {
+    "id": "bimbook/fabrication/sim-fb-tol",
+    "bookId": "bimbook",
+    "title": "공차 누적: 부재 수 · 개별 공차 → 누적 편차 분포, 최악 vs RSS vs 몬테카를로",
+    "link": "chapters/fabrication.html#sim-fb-tol"
+  },
+  {
+    "id": "bimbook/fabrication/sim-fb-spool",
+    "bookId": "bimbook",
+    "title": "스풀 분할: 경로 길이 · 최대 스풀 길이 · 금지 구간 → 스풀 수와 이음 수",
+    "link": "chapters/fabrication.html#sim-fb-spool"
+  },
+  {
+    "id": "bimbook/fabrication/sim-fb-cnc",
+    "bookId": "bimbook",
+    "title": "CNC 천공 경로: 도면 순서 vs 최근접 이웃 vs 2-opt(교육용)",
+    "link": "chapters/fabrication.html#sim-fb-cnc"
+  },
+  {
+    "id": "bimbook/fabrication/sim-fb-asm",
+    "bookId": "bimbook",
+    "title": "조립 순서 3D: 순서 규칙 → 지지 위반 · 현장 적치 · 부재 추적 기록",
+    "link": "chapters/fabrication.html#sim-fb-asm"
+  },
+  {
+    "id": "bimbook/facility/sim-fm-cobie",
+    "bookId": "bimbook",
+    "title": "COBie 표 생성기: B-10 BIM → 시트 미리보기와 완결성 검사",
+    "link": "chapters/facility.html#sim-fm-cobie"
+  },
+  {
+    "id": "bimbook/facility/sim-fm-space",
+    "bookId": "bimbook",
+    "title": "공간 관리: 층 평면에서 용도·인원 바꾸기 → 전용률·점유율·인당 면적",
+    "link": "chapters/facility.html#sim-fm-space"
+  },
+  {
+    "id": "bimbook/facility/sim-fm-strategy",
+    "bookId": "bimbook",
+    "title": "유지보수 전략 비교: 와이블 고장 → 사후·예방·예지의 연간 비용",
+    "link": "chapters/facility.html#sim-fm-strategy"
+  },
+  {
+    "id": "bimbook/facility/sim-fm-interval",
+    "bookId": "bimbook",
+    "title": "점검 주기 최적화: 점검비 + 위험 비용",
+    "link": "chapters/facility.html#sim-fm-interval"
+  },
+  {
+    "id": "bimbook/facility/sim-fm-renewal",
+    "bookId": "bimbook",
+    "title": "자산 교체 계획: 연도별 교체 예산과 현재 가치, 예산 상한과 적체",
+    "link": "chapters/facility.html#sim-fm-renewal"
+  },
+  {
+    "id": "bimbook/facility/sim-fm-workorder",
+    "bookId": "bimbook",
+    "title": "작업 지시 칸반: 요청 → 접수 → 대기 → 작업 → 완료, 평균 처리 시간",
+    "link": "chapters/facility.html#sim-fm-workorder"
+  },
+  {
+    "id": "bimbook/facility/sim-fm-finder",
+    "bookId": "bimbook",
+    "title": "3D 자산 찾기: B-10 BIM 위의 설비 34대",
+    "link": "chapters/facility.html#sim-fm-finder"
+  },
+  {
+    "id": "bimbook/five-d/sim-fv-calc",
+    "bookId": "bimbook",
+    "title": "5D 계산기: B-10 요소 물량 × 단가 → 공종별 · 유형별 금액",
+    "link": "chapters/five-d.html#sim-fv-calc"
+  },
+  {
+    "id": "bimbook/five-d/sim-fv-map",
+    "bookId": "bimbook",
+    "title": "내역 연결 검사: 요소 유형 × 내역 항목 → 누락 · 불일치 · 금액 차이",
+    "link": "chapters/five-d.html#sim-fv-map"
+  },
+  {
+    "id": "bimbook/five-d/sim-fv-change",
+    "bookId": "bimbook",
+    "title": "설계 변경 원가 델타: 기둥 단면 · 슬래브 두께 · 보 춤 → 물량 · 금액 변화",
+    "link": "chapters/five-d.html#sim-fv-change"
+  },
+  {
+    "id": "bimbook/five-d/sim-fv-cash",
+    "bookId": "bimbook",
+    "title": "4D + 5D 현금 흐름: 요소 완료 × 금액 → S 곡선, CB.pm.spread 와 비교",
+    "link": "chapters/five-d.html#sim-fv-cash"
+  },
+  {
+    "id": "bimbook/five-d/sim-fv-alt",
+    "bookId": "bimbook",
+    "title": "RC vs 철골 대안: 모델 물량 × 단가 + CPM 공기 × 간접비 (교육용)",
+    "link": "chapters/five-d.html#sim-fv-alt"
+  },
+  {
+    "id": "bimbook/five-d/sim-fv-billing",
+    "bookId": "bimbook",
+    "title": "기성 산정: 주 → 완료 요소 금액 = 기성 (계획 vs 50주 지연 시나리오)",
+    "link": "chapters/five-d.html#sim-fv-billing"
+  },
+  {
+    "id": "bimbook/five-d/sim-fv-heat",
+    "bookId": "bimbook",
+    "title": "원가 3D 히트맵: 요소를 금액 · 단위 금액 · 거푸집 비중으로 칠하기",
+    "link": "chapters/five-d.html#sim-fv-heat"
+  },
+  {
+    "id": "bimbook/five-d/sim-fv-tornado",
+    "bookId": "bimbook",
+    "title": "단가 민감도 토네이도: 입력 ±범위 → 모델 5D 합계의 변화",
+    "link": "chapters/five-d.html#sim-fv-tornado"
+  },
+  {
+    "id": "bimbook/four-d/sim-fd-play",
+    "bookId": "bimbook",
+    "title": "4D 재생: 주 슬라이더 → B-10 BIM이 P-B10 공정대로 올라간다",
+    "link": "chapters/four-d.html#sim-fd-play"
+  },
+  {
+    "id": "bimbook/four-d/sim-fd-link",
+    "bookId": "bimbook",
+    "title": "연결 규칙 편집기: 유형 × 층 → 활동, 미연결 · 공종 불일치 · 순서 오류 검사",
+    "link": "chapters/four-d.html#sim-fd-link"
+  },
+  {
+    "id": "bimbook/four-d/sim-fd-dur",
+    "bookId": "bimbook",
+    "title": "공정 변경 영향: 활동 기간 · 선후행 → CPM · 4D · 순서 오류 즉시 갱신",
+    "link": "chapters/four-d.html#sim-fd-dur"
+  },
+  {
+    "id": "bimbook/four-d/sim-fd-zone",
+    "bookId": "bimbook",
+    "title": "작업 공간 간섭: 활동별 작업 상자 → 같은 시기 겹침 검출",
+    "link": "chapters/four-d.html#sim-fd-zone"
+  },
+  {
+    "id": "bimbook/four-d/sim-fd-actual",
+    "bookId": "bimbook",
+    "title": "계획 대 실적: SiteBook 13장 지연 시나리오 → 늦은 요소 빨강",
+    "link": "chapters/four-d.html#sim-fd-actual"
+  },
+  {
+    "id": "bimbook/four-d/sim-fd-heat",
+    "bookId": "bimbook",
+    "title": "층별 진도 히트맵: 주 → 층 × 공종 진도 (계획 · 실적 · 차이)",
+    "link": "chapters/four-d.html#sim-fd-heat"
+  },
+  {
+    "id": "bimbook/four-d/sim-fd-crane",
+    "bookId": "bimbook",
+    "title": "타워크레인 양중 시퀀스: PC 요소 무게 · 반경 → 4D 순서대로 판정",
+    "link": "chapters/four-d.html#sim-fd-crane"
+  },
+  {
+    "id": "bimbook/geometry/sim-gm-precision",
+    "bookId": "bimbook",
+    "title": "좌표 크기와 정밀도: 원점에서 멀어질수록 거칠어지는 격자",
+    "link": "chapters/geometry.html#sim-gm-precision"
+  },
+  {
+    "id": "bimbook/geometry/sim-gm-matrix",
+    "bookId": "bimbook",
+    "title": "변환 행렬 놀이터: 이동·회전·축척과 합성 순서",
+    "link": "chapters/geometry.html#sim-gm-matrix"
+  },
+  {
+    "id": "bimbook/geometry/sim-gm-sweep",
+    "bookId": "bimbook",
+    "title": "돌출·회전·스윕 만들기: 단면 점을 끌면 솔리드와 부피가 다시 계산된다",
+    "link": "chapters/geometry.html#sim-gm-sweep"
+  },
+  {
+    "id": "bimbook/geometry/sim-gm-csg",
+    "bookId": "bimbook",
+    "title": "CSG 불리언: 코어 벽 W-CORE3-3F와 덕트 개구부",
+    "link": "chapters/geometry.html#sim-gm-csg"
+  },
+  {
+    "id": "bimbook/geometry/sim-gm-mesh",
+    "bookId": "bimbook",
+    "title": "메시 부피 계산: 발산 정리 vs 해석해, 법선을 뒤집으면",
+    "link": "chapters/geometry.html#sim-gm-mesh"
+  },
+  {
+    "id": "bimbook/geometry/sim-gm-window",
+    "bookId": "bimbook",
+    "title": "파라메트릭 창 패밀리: 매개변수를 바꾸면 형상이 다시 생성되고 구속을 검사한다",
+    "link": "chapters/geometry.html#sim-gm-window"
+  },
+  {
+    "id": "bimbook/geometry/sim-gm-beam",
+    "bookId": "bimbook",
+    "title": "파라메트릭 보: 격자를 끌면 경간·춤·물량·간섭이 다시 계산된다",
+    "link": "chapters/geometry.html#sim-gm-beam"
+  },
+  {
+    "id": "bimbook/geometry/sim-gm-tol",
+    "bookId": "bimbook",
+    "title": "허용 오차와 맞닿음 판정: 간격, ε, 좌표 크기",
+    "link": "chapters/geometry.html#sim-gm-tol"
+  },
+  {
+    "id": "bimbook/gis/sim-gs-proj",
+    "bookId": "bimbook",
+    "title": "투영 왜곡: 메르카토르 sec φ와 횡메르카토르 k₀(1 + x²/2R²)",
+    "link": "chapters/gis.html#sim-gs-proj"
+  },
+  {
+    "id": "bimbook/gis/sim-gs-xform",
+    "bookId": "bimbook",
+    "title": "좌표 변환기: 로컬 ↔ 지도와 매개변수 오류의 편차",
+    "link": "chapters/gis.html#sim-gs-xform"
+  },
+  {
+    "id": "bimbook/gis/sim-gs-dem",
+    "bookId": "bimbook",
+    "title": "DEM 등고선과 경사·향: B-10 주변 400 × 400 m",
+    "link": "chapters/gis.html#sim-gs-dem"
+  },
+  {
+    "id": "bimbook/gis/sim-gs-lod",
+    "bookId": "bimbook",
+    "title": "도시 블록 LOD: 같은 B-10 블록을 다섯 수준으로",
+    "link": "chapters/gis.html#sim-gs-lod"
+  },
+  {
+    "id": "bimbook/gis/sim-gs-convert",
+    "bookId": "bimbook",
+    "title": "IFC → CityGML 변환기: B-10에서 무엇이 남나",
+    "link": "chapters/gis.html#sim-gs-convert"
+  },
+  {
+    "id": "bimbook/gis/sim-gs-sun",
+    "bookId": "bimbook",
+    "title": "일조 분석: B-10 그림자와 북쪽 이웃의 일조 시간",
+    "link": "chapters/gis.html#sim-gs-sun"
+  },
+  {
+    "id": "bimbook/gis/sim-gs-flood",
+    "bookId": "bimbook",
+    "title": "홍수 침수 지도: 수위와 연결성",
+    "link": "chapters/gis.html#sim-gs-flood"
+  },
+  {
+    "id": "bimbook/gis/sim-gs-view",
+    "bookId": "bimbook",
+    "title": "가시권 분석: 관찰점을 옮기며 보이는 땅 찾기",
+    "link": "chapters/gis.html#sim-gs-view"
+  },
+  {
+    "id": "bimbook/glossary/sim-gl-bim",
+    "bookId": "bimbook",
+    "title": "덕트·배관 깊이 · 허용 오차 → 그룹별 간섭 · 천장고 · 상자 합과 공제 물량",
+    "link": "chapters/glossary.html#sim-gl-bim"
+  },
+  {
+    "id": "bimbook/glossary/sim-gl-geo",
+    "bookId": "bimbook",
+    "title": "로컬 (x, y) · 회전 · 축척 · 원점 · 곱하는 순서 → 4 × 4 행렬 → 지도 (E, N) · 편차 · 역변환",
+    "link": "chapters/glossary.html#sim-gl-geo"
+  },
+  {
+    "id": "bimbook/ifc/sim-if-inherit",
+    "bookId": "bimbook",
+    "title": "상속 계층 탐색: 엔터티를 고르면 물려받은 속성이 보인다",
+    "link": "chapters/ifc.html#sim-if-inherit"
+  },
+  {
+    "id": "bimbook/ifc/sim-if-graph",
+    "bookId": "bimbook",
+    "title": "관계 그래프 3D: B-10 BIM의 요소와 관계 선",
+    "link": "chapters/ifc.html#sim-if-graph"
+  },
+  {
+    "id": "bimbook/ifc/sim-if-tree",
+    "bookId": "bimbook",
+    "title": "IFC 공간 구조 트리: B-10 BIM 접고 펼치기",
+    "link": "chapters/ifc.html#sim-if-tree"
+  },
+  {
+    "id": "bimbook/ifc/sim-if-pset",
+    "bookId": "bimbook",
+    "title": "속성 세트 편집: 요소를 골라 Pset 값을 바꾸면 질의 결과가 바뀐다",
+    "link": "chapters/ifc.html#sim-if-pset"
+  },
+  {
+    "id": "bimbook/ifc/sim-if-guid",
+    "bookId": "bimbook",
+    "title": "GlobalId 만들기와 버전 비교: ID가 유지될 때와 바뀔 때",
+    "link": "chapters/ifc.html#sim-if-guid"
+  },
+  {
+    "id": "bimbook/ifc/sim-if-step",
+    "bookId": "bimbook",
+    "title": "STEP 파일 읽기: 고치면 엔터티 표와 참조 그래프가 바뀐다",
+    "link": "chapters/ifc.html#sim-if-step"
+  },
+  {
+    "id": "bimbook/ifc/sim-if-mvd",
+    "bookId": "bimbook",
+    "title": "교환 범위 고르기: 목적에 따라 무엇이 넘어가나",
+    "link": "chapters/ifc.html#sim-if-mvd"
+  },
+  {
+    "id": "bimbook/ifc/sim-if-ids",
+    "bookId": "bimbook",
+    "title": "IDS 검증: 요구 규칙을 넣으면 B-10 요소가 통과·실패로 갈린다",
+    "link": "chapters/ifc.html#sim-if-ids"
+  },
+  {
+    "id": "bimbook/lod/sim-ld-column",
+    "bookId": "bimbook",
+    "title": "LOD 슬라이더: 기둥 하나가 100에서 400까지",
+    "link": "chapters/lod.html#sim-ld-column"
+  },
+  {
+    "id": "bimbook/lod/sim-ld-loin",
+    "bookId": "bimbook",
+    "title": "LOIN 카드 만들기: 목적·시점·객체 → 형상·정보·문서 요구",
+    "link": "chapters/lod.html#sim-ld-loin"
+  },
+  {
+    "id": "bimbook/lod/sim-ld-bep",
+    "bookId": "bimbook",
+    "title": "BEP 체크리스트 만들기: 프로젝트 특성 → 필요한 항목",
+    "link": "chapters/lod.html#sim-ld-bep"
+  },
+  {
+    "id": "bimbook/lod/sim-ld-matrix",
+    "bookId": "bimbook",
+    "title": "요구 매트릭스: 칸을 눌러 계획 LOD를 바꾸면 과잉·부족이 칠해진다",
+    "link": "chapters/lod.html#sim-ld-matrix"
+  },
+  {
+    "id": "bimbook/lod/sim-ld-complete",
+    "bookId": "bimbook",
+    "title": "속성 완결성 검사: B-10 요소의 속성을 비우면",
+    "link": "chapters/lod.html#sim-ld-complete"
+  },
+  {
+    "id": "bimbook/lod/sim-ld-rules",
+    "bookId": "bimbook",
+    "title": "검수 규칙 편집기: 규칙을 켜면 위반 요소가 3D로 빨갛게",
+    "link": "chapters/lod.html#sim-ld-rules"
+  },
+  {
+    "id": "bimbook/lod/sim-ld-value",
+    "bookId": "bimbook",
+    "title": "모델링 노력 vs 가치: 목적마다 다른 최적 LOD",
+    "link": "chapters/lod.html#sim-ld-value"
+  },
+  {
+    "id": "bimbook/lod/sim-ld-rebar",
+    "bookId": "bimbook",
+    "title": "LOD 400 철근 상세: G1-YB-3F의 배근과 물량",
+    "link": "chapters/lod.html#sim-ld-rebar"
+  },
+  {
+    "id": "bimbook/overview/sim-ov-drift",
+    "bookId": "bimbook",
+    "title": "도면 불일치 실험: 2D 도면 세트 vs 모델",
+    "link": "chapters/overview.html#sim-ov-drift"
+  },
+  {
+    "id": "bimbook/overview/sim-ov-explore",
+    "bookId": "bimbook",
+    "title": "B-10 BIM 탐색기: 요소 유형 켜고 끄기, 클릭하면 속성 표",
+    "link": "chapters/overview.html#sim-ov-explore"
+  },
+  {
+    "id": "bimbook/overview/sim-ov-query",
+    "bookId": "bimbook",
+    "title": "속성 질의: 조건을 쓰면 일치 요소가 강조된다",
+    "link": "chapters/overview.html#sim-ov-query"
+  },
+  {
+    "id": "bimbook/overview/sim-ov-views",
+    "bookId": "bimbook",
+    "title": "하나의 모델 여러 뷰: 평면과 단면을 같은 요소에서 생성",
+    "link": "chapters/overview.html#sim-ov-views"
+  },
+  {
+    "id": "bimbook/overview/sim-ov-life",
+    "bookId": "bimbook",
+    "title": "생애 주기 정보 흐름: 인계 손실이 운영 단계에 남기는 것",
+    "link": "chapters/overview.html#sim-ov-life"
+  },
+  {
+    "id": "bimbook/overview/sim-ov-net",
+    "bookId": "bimbook",
+    "title": "참여자 협업 그물: 점대점 n(n−1)/2 vs 공유 모델 n",
+    "link": "chapters/overview.html#sim-ov-net"
+  },
+  {
+    "id": "bimbook/overview/sim-ov-maturity",
+    "bookId": "bimbook",
+    "title": "성숙도 자가 진단: 체크하면 수준이 정해진다",
+    "link": "chapters/overview.html#sim-ov-maturity"
+  },
+  {
+    "id": "bimbook/overview/sim-ov-qty",
+    "bookId": "bimbook",
+    "title": "B-10 BIM 물량 한눈에: 상자 합과 SiteBook 적산의 차이",
+    "link": "chapters/overview.html#sim-ov-qty"
+  },
+  {
+    "id": "bimbook/qto/sim-qt-table",
+    "bookId": "bimbook",
+    "title": "B-10 BIM 물량 집계 표: 층을 고르면 표와 3D가 함께 바뀐다",
+    "link": "chapters/qto.html#sim-qt-table"
+  },
+  {
+    "id": "bimbook/qto/sim-qt-deduct",
+    "bookId": "bimbook",
+    "title": "겹침 공제 실험: 우선순위와 모델링 규약을 바꾸면",
+    "link": "chapters/qto.html#sim-qt-deduct"
+  },
+  {
+    "id": "bimbook/qto/sim-qt-form",
+    "bookId": "bimbook",
+    "title": "거푸집 면적 산출기: 노출면만 세기",
+    "link": "chapters/qto.html#sim-qt-form"
+  },
+  {
+    "id": "bimbook/qto/sim-qt-rebar",
+    "bookId": "bimbook",
+    "title": "철근 물량: 원단위 × 부피 vs 상세 모델(교육용)",
+    "link": "chapters/qto.html#sim-qt-rebar"
+  },
+  {
+    "id": "bimbook/qto/sim-qt-opening",
+    "bookId": "bimbook",
+    "title": "개구부 공제 기준: 문턱을 바꾸면 무엇이 달라지나",
+    "link": "chapters/qto.html#sim-qt-opening"
+  },
+  {
+    "id": "bimbook/qto/sim-qt-cost",
+    "bookId": "bimbook",
+    "title": "내역 연결: 분류 코드 → 공종별 금액(SiteBook 12장 단가)",
+    "link": "chapters/qto.html#sim-qt-cost"
+  },
+  {
+    "id": "bimbook/qto/sim-qt-2d",
+    "bookId": "bimbook",
+    "title": "2D 적산 vs BIM 산출: 오차 분포(몬테카를로 400회)",
+    "link": "chapters/qto.html#sim-qt-2d"
+  },
+  {
+    "id": "bimbook/reality-capture/sim-rc-geo",
+    "bookId": "bimbook",
+    "title": "지리 참조: 로컬 점 → 지도 좌표, 매개변수 오류의 영향",
+    "link": "chapters/reality-capture.html#sim-rc-geo"
+  },
+  {
+    "id": "bimbook/reality-capture/sim-rc-tri",
+    "bookId": "bimbook",
+    "title": "사진 측량 삼각 측량: 두 카메라 · 각도 오차 → 점 위치와 오차(교육용 2D)",
+    "link": "chapters/reality-capture.html#sim-rc-tri"
+  },
+  {
+    "id": "bimbook/reality-capture/sim-rc-gsd",
+    "bookId": "bimbook",
+    "title": "드론 비행 계획: 고도 · 중복도 → GSD · 사진 수 · 높이 오차",
+    "link": "chapters/reality-capture.html#sim-rc-gsd"
+  },
+  {
+    "id": "bimbook/reality-capture/sim-rc-scan",
+    "bookId": "bimbook",
+    "title": "점 밀도와 거리: 각도 간격 · 거리 · 입사각 · 잡음 → 점 간격",
+    "link": "chapters/reality-capture.html#sim-rc-scan"
+  },
+  {
+    "id": "bimbook/reality-capture/sim-rc-reg",
+    "bookId": "bimbook",
+    "title": "점군 정합: 손으로 맞추기 vs 타깃 정합(rigid2D) vs ICP",
+    "link": "chapters/reality-capture.html#sim-rc-reg"
+  },
+  {
+    "id": "bimbook/reality-capture/sim-rc-ransac",
+    "bookId": "bimbook",
+    "title": "RANSAC 평면: 잡음 · 이상점 비율 → 찾은 평면과 인라이어, 최소 제곱과 비교",
+    "link": "chapters/reality-capture.html#sim-rc-ransac"
+  },
+  {
+    "id": "bimbook/reality-capture/sim-rc-flat",
+    "bookId": "bimbook",
+    "title": "슬래브 평탄도 히트맵: 합성 점군 → 편차 색과 3 m 직선자 판정",
+    "link": "chapters/reality-capture.html#sim-rc-flat"
+  },
+  {
+    "id": "bimbook/reality-capture/sim-rc-dev",
+    "bookId": "bimbook",
+    "title": "스캔 대 BIM 편차: 시공 기둥 위치 오차 → 스캔 점 → 편차 색 3D",
+    "link": "chapters/reality-capture.html#sim-rc-dev"
+  },
+  {
     "id": "thinfilmbook/ald/sim-qcm",
     "bookId": "thinfilmbook",
     "title": "인시투 QCM: 펄스 시간과 질량 계단",

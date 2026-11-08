@@ -3121,12 +3121,15 @@
         "description": "Rotate models and query their data to learn IFC, LOD, clash detection, 4D/5D, reality capture and digital twins."
       },
       "field": "construction",
-      "status": "writing",
-      "phase": 1,
+      "status": "published",
       "level": "건축·토목 3–4학년·BIM 실무 입문",
+      "url": "https://construction.euiyun.com/bim/",
       "repo": "https://github.com/geniuskey/construction-books",
+      "checkout": "construction-books/bim",
       "color": "#5f3dc4",
       "colorDark": "#b197fc",
+      "chapters": 17,
+      "simulators": 126,
       "topics": [
         "형상·파라메트릭",
         "IFC·LOD",
