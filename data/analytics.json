@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-10",
+  "updated": "2026-11-11",
   "stats": {
     "since": "2026-10-30",
-    "until": "2026-11-10",
-    "visitors": 6124,
-    "returning": 1682,
-    "pageViews": 33690
+    "until": "2026-11-11",
+    "visitors": 6146,
+    "returning": 1689,
+    "pageViews": 33898
   },
   "opens": {
     "period": "최근 28일",
@@ -13,39 +13,39 @@
     "books": [
       {
         "id": "memorybook",
-        "opens": 3785
+        "opens": 3818
       },
       {
         "id": "processbook",
-        "opens": 2243
+        "opens": 2257
       },
       {
         "id": "devicebook",
-        "opens": 1725
+        "opens": 1735
       },
       {
         "id": "packagingbook",
-        "opens": 912
+        "opens": 921
       },
       {
         "id": "moneybook",
-        "opens": 753
+        "opens": 757
       },
       {
         "id": "etchbook",
-        "opens": 721
+        "opens": 722
       },
       {
         "id": "sensorbook",
-        "opens": 718
+        "opens": 719
       },
       {
         "id": "yieldbook",
-        "opens": 711
+        "opens": 718
       },
       {
         "id": "chipindustrybook",
-        "opens": 700
+        "opens": 702
       },
       {
         "id": "designbook",
@@ -53,7 +53,7 @@
       },
       {
         "id": "digitalbook",
-        "opens": 637
+        "opens": 649
       },
       {
         "id": "analogbook",
@@ -61,15 +61,15 @@
       },
       {
         "id": "lithobook",
-        "opens": 533
+        "opens": 535
       },
       {
         "id": "socbook",
-        "opens": 531
+        "opens": 533
       },
       {
         "id": "testbook",
-        "opens": 495
+        "opens": 502
       },
       {
         "id": "aibook",
@@ -77,7 +77,7 @@
       },
       {
         "id": "failurebook",
-        "opens": 428
+        "opens": 435
       },
       {
         "id": "estatebook",
@@ -85,7 +85,7 @@
       },
       {
         "id": "displaybook",
-        "opens": 387
+        "opens": 389
       },
       {
         "id": "computerbook",
@@ -97,19 +97,23 @@
       },
       {
         "id": "stockbook",
-        "opens": 337
+        "opens": 342
       },
       {
         "id": "cmpbook",
-        "opens": 281
+        "opens": 283
       },
       {
         "id": "plasmabook",
-        "opens": 237
+        "opens": 238
       },
       {
         "id": "carbook",
-        "opens": 231
+        "opens": 232
+      },
+      {
+        "id": "general-physics",
+        "opens": 232
       },
       {
         "id": "axbook",
@@ -120,24 +124,20 @@
         "opens": 214
       },
       {
-        "id": "general-physics",
-        "opens": 211
+        "id": "infrabook",
+        "opens": 212
       },
       {
-        "id": "infrabook",
-        "opens": 210
+        "id": "tcadbook",
+        "opens": 199
       },
       {
         "id": "networkbook",
         "opens": 196
       },
       {
-        "id": "tcadbook",
-        "opens": 195
-      },
-      {
         "id": "thinfilmbook",
-        "opens": 181
+        "opens": 182
       },
       {
         "id": "camerabook",
@@ -145,7 +145,7 @@
       },
       {
         "id": "dopingbook",
-        "opens": 150
+        "opens": 153
       },
       {
         "id": "electromagnetics",
@@ -177,7 +177,7 @@
       },
       {
         "id": "probability-statistics",
-        "opens": 103
+        "opens": 104
       },
       {
         "id": "fluid-mechanics",
@@ -217,7 +217,7 @@
       },
       {
         "id": "calculusbook",
-        "opens": 55
+        "opens": 56
       },
       {
         "id": "modern-physics",
@@ -244,12 +244,12 @@
         "opens": 46
       },
       {
-        "id": "solid-state",
+        "id": "anatomybook",
         "opens": 41
       },
       {
-        "id": "anatomybook",
-        "opens": 40
+        "id": "solid-state",
+        "opens": 41
       },
       {
         "id": "artbook-drawing",
@@ -281,7 +281,7 @@
       },
       {
         "id": "bassbook",
-        "opens": 28
+        "opens": 29
       },
       {
         "id": "artbook-composition",
