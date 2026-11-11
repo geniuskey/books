@@ -266,7 +266,10 @@ window.FIELD_MAPS = {
     title: "몸을 이해하고 일상을 돌보기",
     desc: "심장·폐·근육·호르몬의 작동과 연결을 배우며 몸의 원리를 이해합니다.",
     groups: [
-      ["몸의 원리", "Understand", "우리 몸의 구조와 작동 방식", ["bodybook"]],
+      ["몸의 원리", "Understand", "우리 몸의 구조와 작동 방식", ["anatomybook", "bodybook"]],
+    ],
+    links: [
+      ["anatomybook", "bodybook", "뼈·근육·장기·혈관의 위치에서 순환·호흡·대사의 작동으로"],
     ],
   },
   culture: {
