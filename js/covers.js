@@ -1280,6 +1280,58 @@
     },
   };
   Object.assign(M, CONSTRUCTION);
+  // SchoolBooks covers (school-books): clock, tent, newspaper. 움직임은 .sc- 클래스가 맡고, 멈춘 첫 프레임도 완성된 그림이다.
+  const SCHOOL = {
+    // 초등 · 하루의 수학과 과학: 아침 7시의 벽시계. 분침이 한 바퀴 돌 때 시침이 30° 가고, 왼쪽 하늘에는 해가 떠서 진다.
+    clock() {
+      const cx = 138, cy = 64, R = 44, P = (deg, r) => [cf(cx + r * Math.sin((deg * Math.PI) / 180)), cf(cy - r * Math.cos((deg * Math.PI) / 180))];
+      const arc = "M14 118Q56 4 98 118";
+      let s = `<path d="${arc}" fill="none" stroke="${W}" stroke-opacity=".35" stroke-dasharray="2 4"/><path d="M8 118H100" stroke="${W}" stroke-opacity=".45"/>`;
+      s += `<circle class="mt-ride" style="offset-path:path('${arc}');animation-duration:6s" r="6" fill="#ffd43b"/>`;
+      s += `<path d="M184 12a9 9 0 1 0 6 15 7 7 0 1 1-6-15Z" fill="#ffe8a3" fill-opacity=".85"/>`;
+      s += `<circle cx="${cx}" cy="${cy}" r="${R}" fill="${W}" fill-opacity=".12" stroke="${W}" stroke-width="2.6"/>`;
+      range(60).forEach((m) => {
+        const hour = m % 5 === 0, [x1, y1] = P(m * 6, R - (hour ? 9 : 4)), [x2, y2] = P(m * 6, R - 2);
+        s += `<path d="M${x1} ${y1}L${x2} ${y2}" stroke="${W}" stroke-width="${hour ? 2 : 0.8}" stroke-opacity="${hour ? 0.9 : 0.5}"/>`;
+      });
+      [[0, "12"], [90, "3"], [180, "6"], [270, "9"]].forEach(([deg, t]) => { const [x, y] = P(deg, R - 17); s += `<text x="${x}" y="${cf(y + 3.5)}" text-anchor="middle" fill="${W}" font-size="10" font-family="sans-serif" font-weight="700">${t}</text>`; });
+      // 7시: 시침은 210°, 분침은 12를 가리킨다
+      s += `<g class="sc-hour"><path d="M${cx} ${cy}L${P(210, 22).join(" ")}" stroke="${W}" stroke-width="4.2" stroke-linecap="round"/></g>`;
+      s += `<g class="sc-minute"><path d="M${cx} ${cy}L${cx} ${cy - 34}" stroke="#ffd43b" stroke-width="2.4" stroke-linecap="round"/></g>`;
+      s += `<circle cx="${cx}" cy="${cy}" r="3.4" fill="${W}"/>`;
+      return svg(s);
+    },
+    // 중등 · 캠핑장의 수학과 과학: 등산로 경사 아래 텐트와 모닥불, 밤하늘의 별.
+    tent() {
+      const r = rnd(17); let s = "";
+      s += `<path d="M10 116L52 58 72 82 104 40 150 116" fill="${W}" fill-opacity=".1" stroke="${W}" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round"/>`;
+      s += `<path d="M40 98H62V68" fill="none" stroke="#ffd43b" stroke-opacity=".8" stroke-width="1.2" stroke-dasharray="2 2"/>`;
+      range(7).forEach(() => { const x = 20 + r() * 168, y = 8 + r() * 30; s += `<circle class="cv-blink" style="animation-delay:${(r() * 1.6).toFixed(2)}s" cx="${cf(x)}" cy="${cf(y)}" r="${cf(0.9 + r() * 1.2)}" fill="${W}"/>`; });
+      s += `<path d="M90 116L122 56 154 116Z" fill="${W}" fill-opacity=".88"/><path d="M122 70L110 116H134Z" fill="#000" fill-opacity=".28"/>`;
+      s += `<path d="M122 56 116 50M122 56 128 50M100 98 82 116M144 98 162 116" stroke="${W}" stroke-width="1" stroke-opacity=".75"/>`;
+      s += `<path d="M6 116H194" stroke="${W}" stroke-width="2"/>`;
+      s += `<path d="M168 116l18-6M168 110l18 6" stroke="#c8925a" stroke-width="2.6" stroke-linecap="round"/>`;
+      s += `<path class="sc-flame" d="M177 111c-7-5-6-13 0-22 6 9 7 17 0 22Z" fill="#ff922b"/>`;
+      s += `<path class="sc-flame" style="animation-delay:-.35s" d="M177 111c-4-3-3-8 0-12 3 4 4 9 0 12Z" fill="#ffd43b"/>`;
+      return svg(s);
+    },
+    // 고등 · 뉴스 속 수학과 과학: 헤드라인과 기사 단, 지수 곡선 그래프가 그려지는 신문.
+    newspaper() {
+      let s = `<g transform="rotate(-3 112 66)">`;
+      s += `<rect x="40" y="10" width="144" height="112" rx="2" fill="${W}" fill-opacity=".12" stroke="${W}" stroke-width="1.6"/>`;
+      s += `<text x="112" y="27" text-anchor="middle" fill="${W}" font-size="13" font-family="Georgia, serif" font-weight="700">THE DAILY</text>`;
+      s += `<path d="M48 32H176M48 35H176" stroke="${W}" stroke-opacity=".7"/>`;
+      s += `<rect x="48" y="41" width="128" height="7" rx="1.5" fill="${W}" fill-opacity=".85"/><rect x="48" y="51" width="84" height="5" rx="1.5" fill="${W}" fill-opacity=".6"/>`;
+      range(7).forEach((i) => { const y = 64 + i * 7.5; s += `<path d="M48 ${y}H${i === 6 ? 70 : 88}M96 ${y}H${i === 6 ? 110 : 120}" stroke="${W}" stroke-opacity=".38" stroke-width="2"/>`; });
+      s += `<rect x="128" y="62" width="48" height="50" fill="${W}" fill-opacity=".1" stroke="${W}" stroke-opacity=".55"/>`;
+      s += `<path d="M134 106H172M134 106V68" stroke="${W}" stroke-opacity=".6"/>`;
+      const d = range(13).map((i) => `${i ? "L" : "M"}${cf(134 + i * 3)} ${cf(106 - (36 * (1.3 ** i - 1)) / (1.3 ** 12 - 1))}`).join("");
+      s += `<path class="cv-draw" pathLength="1" d="${d}" fill="none" stroke="#ffc46b" stroke-width="2" stroke-linejoin="round" stroke-dasharray="1"/>`;
+      s += `</g>`;
+      return svg(s);
+    },
+  };
+  Object.assign(M, SCHOOL);
 
   window.coverArt = (motif) => (M[motif] || M.grid)();
 })();

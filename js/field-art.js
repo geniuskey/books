@@ -47,6 +47,10 @@
       <path d="M30 40 64 106M64 40 30 106" class="fa-tint"/>
       <path d="M80 18v44M80 22h28M80 22l-14 8h14M102 22v14" class="fa-accent"/>
       <rect x="96" y="36" width="12" height="7" class="fa-solid"/>`,
+    school: `<path d="M18 96c15-6 31-6 46 2 15-8 31-8 46-2V58c-15-6-31-6-46 2-15-8-31-8-46-2Z" class="fa-paper"/>
+      <path d="M64 60v38M28 70h24M28 79h18M28 88h22" class="fa-muted"/>
+      <path d="M80 22v16L70 56h28L88 38V22M76 22h16" class="fa-tint"/><path d="M74 49h20" class="fa-accent"/>
+      <path d="M26 48 40 24l14 24Z" class="fa-tint"/><circle cx="84" cy="13" r="2.5" class="fa-solid"/>`,
     health: `<path d="M64 104 29 70C7 47 36 18 56 38l8 8 8-8c20-20 49 9 27 32Z" class="fa-tint"/>
       <path d="M21 68h23l8-17 13 34 10-23 6 6h26" class="fa-accent"/>
       <path d="M98 23v14m-7-7h14" class="fa-muted"/>`,

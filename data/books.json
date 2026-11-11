@@ -154,6 +154,15 @@
       "color": "#c2410c",
       "colorDark": "#fb923c",
       "desc": "음악에서 미술과 시각 표현, 웹·제품·산업디자인까지."
+    },
+    {
+      "id": "school",
+      "wing": "life",
+      "name": "학교 수학·과학",
+      "en": "School Math & Science",
+      "desc": "초등·중등·고등 교과서에서 배우는 수학과 과학을 하루·캠핑·뉴스 속 질문으로 다시 만나는 그림책 같은 서가. SchoolBooks에서 관리합니다.",
+      "color": "#2f5d50",
+      "colorDark": "#7cc4ad"
     }
   ],
   "books": [
@@ -3432,6 +3441,100 @@
         "슬랩·톤"
       ],
       "motif": "bass"
+    },
+    {
+      "id": "school-elementary",
+      "code": "ELM",
+      "title": "하루의 수학과 과학",
+      "subtitle": "초등학교 수학·과학",
+      "headline": "아침 7시부터 밤 9시까지, 지우의 하루가 교과서가 된다",
+      "description": "열 살 지우의 평범한 하루를 따라 아침 7시부터 밤 9시까지. 시계, 거울의 김, 토스트 나누기, 그림자, 타일, 자석, 급식, 거스름돈, 강낭콩, 주사위, 지도, 달. 먼저 예상하고, 직접 해 보고, 플랩을 들춰 확인한 뒤 도장을 모으며 초등학교 6년의 수학과 과학을 다시 만납니다.",
+      "field": "school",
+      "status": "writing",
+      "phase": 1,
+      "level": "초등 3–6학년 · 어른",
+      "repo": "https://github.com/geniuskey/school-books",
+      "checkout": "school-books/elementary",
+      "color": "#b03a2e",
+      "colorDark": "#ff8f70",
+      "topics": [
+        "시각과 시간",
+        "물의 상태 변화",
+        "분수",
+        "그림자",
+        "넓이와 둘레",
+        "전기 회로",
+        "소화와 순환",
+        "가능성",
+        "비와 비율",
+        "달의 위상"
+      ],
+      "motif": "clock"
+    },
+    {
+      "id": "school-middle",
+      "code": "MID",
+      "title": "캠핑장의 수학과 과학",
+      "subtitle": "중학교 수학·과학",
+      "headline": "1박 2일 캠핑에서 다시 만나는 중학교 3년",
+      "description": "중2 민서 가족의 1박 2일 캠핑. 캠핑비 나누기, 산에서 부푸는 과자 봉지, 등산로 경사, 텐트 줄, 랜턴 배터리, 나무 높이, 모닥불, 포물선, 메아리와 별빛, 강수확률, 별자리, 숲 공기, 별점 리뷰로 중학교 3년의 수학과 과학을 다시 봅니다.",
+      "field": "school",
+      "status": "writing",
+      "phase": 1,
+      "level": "중학생 · 어른",
+      "repo": "https://github.com/geniuskey/school-books",
+      "checkout": "school-books/middle",
+      "color": "#5f7a1f",
+      "colorDark": "#b5d65a",
+      "topics": [
+        "일차방정식",
+        "기체와 압력",
+        "일차함수",
+        "피타고라스 정리",
+        "전기 회로",
+        "닮음",
+        "질량 보존",
+        "이차함수",
+        "힘과 운동",
+        "확률",
+        "계절",
+        "광합성",
+        "대푯값"
+      ],
+      "motif": "tent"
+    },
+    {
+      "id": "school-high",
+      "code": "HIG",
+      "title": "뉴스 속 수학과 과학",
+      "subtitle": "고등학교 수학·과학",
+      "headline": "헤드라인 한 줄 뒤에 숨은 고등학교 수학·과학",
+      "description": "아침 식탁의 뉴스 헤드라인 한 줄에서 출발해 복리와 지수, 지진 규모와 로그, 구간단속과 미분, 누적 강수량과 적분, 여론조사와 신뢰구간, 검사 정확도와 베이즈, GPS, 원소의 기원, 배터리, 산과 염기, 안전벨트, 전력망, DNA, 온실효과까지. 숫자 원리만 다루고 정치·투자 판단은 하지 않습니다.",
+      "field": "school",
+      "status": "writing",
+      "phase": 1,
+      "level": "고등학생 · 어른",
+      "repo": "https://github.com/geniuskey/school-books",
+      "checkout": "school-books/high",
+      "color": "#7a2350",
+      "colorDark": "#f08cc0",
+      "topics": [
+        "복리·지수",
+        "로그",
+        "미분",
+        "적분",
+        "표본과 신뢰구간",
+        "조건부확률",
+        "벡터·삼각함수",
+        "주기율표",
+        "산화·환원",
+        "산·염기",
+        "운동량",
+        "전자기 유도",
+        "DNA",
+        "온실효과"
+      ],
+      "motif": "newspaper"
     }
   ],
   "tools": [
@@ -3525,6 +3628,14 @@
       "status": "published",
       "url": "https://medical.euiyun.com/",
       "checkout": "medical-books"
+    },
+    {
+      "id": "schoolbooks",
+      "title": "SchoolBooks",
+      "subtitle": "학교 수학·과학 서가",
+      "status": "writing",
+      "url": "https://school.euiyun.com/",
+      "checkout": "school-books"
     }
   ]
 }

@@ -119,7 +119,7 @@ python3 -m http.server 8000   # → http://localhost:8000
 | `legacyUrls` | 서가를 옮기기 전의 옛 사이트 주소. 조회수 집계(`tools/build-analytics.py`)에서 같은 책으로 합칩니다. 책 주소를 바꾸면 이전 `url`을 여기에 추가하세요 |
 | `chapters`, `simulators`, `level`, `topics` | 출간된 책의 챕터 수, 시뮬레이터 수, 난이도, 주제어 |
 | `color`, `colorDark` | 책 대표색 (없으면 분야 색). 기본은 각 책 사이트의 `--accent`지만, 같은 분야에서 비슷한 색이 겹치면 이 사이트에서만 다른 색으로 바꿔 씁니다 |
-| `motif` | 표지 일러스트 (`memory`, `pixel`, `layers`, `attention`, `aperture`, `logic`, `circuit`, `package`, `car`, `wafermap`, `litho`, `probe`, `soc`, `subpixel`, `shmoo`, `lens`, `network`, `matrix`, `umbrella`, `house`, `ripple`, `transform`, `brackets`, `digital`, `fab`, `process`, `etch`, `guitar`, `piano`, `drums`, `bass`, `linear`, `calculus`, `ode`, `numerical`, `beam`, `concrete`, `soil`, `tower`, `rebar`, `bridge`, `crane`, `bim`; 과목 ID와 같은 SciBook 표지; 없으면 기본 격자). 새 그림은 `js/covers.js`에 추가하고 움직임은 `css/style.css`의 표지 애니메이션에 둡니다. `fab`·`process`·`etch`는 SemiBooks, `guitar`·`piano`·`drums`·`bass`는 MusicBooks, `linear`·`calculus`·`ode`·`numerical`은 MathBooks, `beam`·`concrete`·`soil`·`tower`·`rebar`·`bridge`·`crane`·`bim`은 ConstructionBooks와 같은 코드를 씁니다 |
+| `motif` | 표지 일러스트 (`memory`, `pixel`, `layers`, `attention`, `aperture`, `logic`, `circuit`, `package`, `car`, `wafermap`, `litho`, `probe`, `soc`, `subpixel`, `shmoo`, `lens`, `network`, `matrix`, `umbrella`, `house`, `ripple`, `transform`, `brackets`, `digital`, `fab`, `process`, `etch`, `guitar`, `piano`, `drums`, `bass`, `linear`, `calculus`, `ode`, `numerical`, `beam`, `concrete`, `soil`, `tower`, `rebar`, `bridge`, `crane`, `bim`, `clock`, `tent`, `newspaper`; 과목 ID와 같은 SciBook 표지; 없으면 기본 격자). 새 그림은 `js/covers.js`에 추가하고 움직임은 `css/style.css`의 표지 애니메이션에 둡니다. `fab`·`process`·`etch`는 SemiBooks, `guitar`·`piano`·`drums`·`bass`는 MusicBooks, `linear`·`calculus`·`ode`·`numerical`은 MathBooks, `beam`·`concrete`·`soil`·`tower`·`rebar`·`bridge`·`crane`·`bim`은 ConstructionBooks와 같은 코드를 씁니다. `clock`·`tent`·`newspaper`는 SchoolBooks를 위해 이 사이트에서 그렸습니다 |
 | `featured` | 대표 시뮬레이터: `title`, `desc`, `link`(책 주소 기준 상대 경로, 예: `chapters/hbm.html#sim-h3`), `image`(`img/sims/` 아래 캡처) |
 
 새 주제는 먼저 `data/editorial-backlog.json`에 아이디어로 보관합니다. 독자 한 유형, 기존 책으로 해결되지 않는 질문, 차별화된 대표 실험을 정한 뒤 `books.json`에 `status: "planned"`로 올립니다. 쓰기 시작하면 `writing`, 출간하면 `published`로 바꾸며 주소와 숫자를 채웁니다.
@@ -128,7 +128,7 @@ python3 -m http.server 8000   # → http://localhost:8000
 
 상단 검색창은 입력 즉시 책 이름·분야·주제에서 관련 검색어를 최대 8개까지 드롭다운으로 제안합니다. 클릭하거나 ↑·↓로 고른 뒤 Enter를 누르면 해당 검색어로 검색하며, Esc나 바깥 클릭으로 닫습니다. 한글 조합 중에는 Enter로 검색하지 않습니다. 검색은 `/library/?q=검색어`로 연결하며, 전체 책장에서는 입력 즉시 현재 필터 안에서 검색합니다.
 
-분야는 반도체, 기초과학·공학, 수학, 건설·건축, 컴퓨터·AI, 기기·시스템, 돈·부동산, 건강, 예술·교양의 9개로 구성합니다. 기존 주제는 지식 지도의 내부 분류로 유지하며, 이전 분야 URL은 통합 분야로 연결합니다.
+분야는 반도체, 기초과학·공학, 수학, 건설·건축, 컴퓨터·AI, 기기·시스템, 돈·부동산, 건강, 예술·교양, 학교 수학·과학의 10개로 구성합니다. 기존 주제는 지식 지도의 내부 분류로 유지하며, 이전 분야 URL은 통합 분야로 연결합니다.
 
 홈은 사전 지식 없이 시작하기 좋은 출간 도서 10권을 `js/home.js`의 `starterPicks` 순서로 소개합니다. PC에서는 5권씩 두 줄로, 작은 화면에서는 같은 두 줄을 좌우로 넘기며 볼 수 있습니다. 책마다 짧은 추천 문구를 표시합니다. 분야 선택은 `/paths/?field=<id>` 지식 지도로 연결합니다. 전체 책장 상단에도 선택한 분야의 지도 링크를 표시합니다. 홈에서는 분야별 전권 목록을 따로 펼치지 않습니다.
 
@@ -148,7 +148,7 @@ python3 -m http.server 8000   # → http://localhost:8000
 
 ‘이 분야 책 전체 보기’는 `/library/?field=<id>&status=all`로 연결합니다. 아직 읽을 수 없는 책은 해당 분야와 책 이름으로 필터한 전체 책장으로 연결합니다. 홈의 별도 분야 카드와 상단 분야 드롭다운은 제거했습니다. 분야 분류는 책장·실험 필터와 지도 선택에 사용합니다.
 
-OpticsBook을 출간해 반도체 분야의 기초 물리로 분류했습니다. 이미지 센서 개발에 필요한 회절·PSF·MTF, 박막, 마이크로렌즈·픽셀 광학 스택·입사각·광학 크로스토크를 다루며, SensorBook의 센서 구조·회로·신호 처리 설명을 광학 원리와 설계 변수로 보완합니다. 읽기 경로 `lens-to-pixel`은 OpticsBook에서 SensorBook으로 이어집니다. 현재 다음 차례(1단계)에는 책이 없고, ElectricBook·StatBook 등은 후속 후보입니다.
+OpticsBook을 출간해 반도체 분야의 기초 물리로 분류했습니다. 이미지 센서 개발에 필요한 회절·PSF·MTF, 박막, 마이크로렌즈·픽셀 광학 스택·입사각·광학 크로스토크를 다루며, SensorBook의 센서 구조·회로·신호 처리 설명을 광학 원리와 설계 변수로 보완합니다. 읽기 경로 `lens-to-pixel`은 OpticsBook에서 SensorBook으로 이어집니다. 현재 다음 차례(1단계)에는 SchoolBooks의 세 권이 있고, ElectricBook·StatBook 등은 후속 후보입니다.
 
 `og.png`(공유 미리보기 이미지)는 `tools/og.html`을 `python3 tools/build-og.py`(Playwright 필요)로 캡처한 것입니다. 책장과 숫자를 `data/books.json`·`data/experiment-catalog.json`에서 읽으므로 책을 출간한 뒤 다시 실행해 주세요. `img/sims/`의 시뮬레이터 화면은 캡처 이미지라 시뮬레이터가 바뀌면 다시 캡처해 주세요. 시뮬레이터 캡처는 각 책 페이지에서 `#sim-… .sim-view` 영역을 가로 720px JPEG로 저장한 것입니다.
 
@@ -228,6 +228,8 @@ node tools/check-models.cjs
 컴퓨터·AI 교과서는 [ComputingBooks](https://computing.euiyun.com/)(형제 저장소 `../computing-books`)에서 통합 관리합니다. 2026-11-07에 ComputerBook·NetworkBook·AIBook·AXBook을 개별 사이트에서 옮겼습니다. 책 주소는 `https://computing.euiyun.com/{slug}/`(`computer`·`network`·`ai`·`ax`)이며 `checkout`은 `computing-books/{slug}`입니다. 책 ID와 `computing` 분야는 그대로 두었습니다. 옛 `*book.euiyun.com` 사이트는 원래 저장소에서 새 주소의 같은 쪽으로 넘기는 리다이렉트 페이지만 배포하며(검색어·해시 유지, 없는 경로는 `404.html`이 넘김), 주소는 `legacyUrls`에 남겨 조회수를 합칩니다. 메타데이터와 장·시뮬레이터 수는 `computing-books/catalog.js`를 기준으로 합니다. 준비 중인 GPUBook·OSBook·DatabaseBook·StatBook은 서가의 `roadmap.json`에도 같은 목록으로 둡니다. 서가 전체 의견(`computingbooks`)은 `sisterBooks`에 둡니다. 모델 검사 워크플로는 ComputerBook을 `geniuskey/computing-books`에서 체크아웃합니다.
 
 의학·건강 교과서는 [MedicalBooks](https://medical.euiyun.com/)(형제 저장소 `../medical-books`)에서 통합 관리합니다. 2026-11-07에 BodyBook을 개별 사이트에서 옮겼습니다. 책 주소는 `https://medical.euiyun.com/{slug}/`이며 `checkout`은 `medical-books/{slug}`입니다. 2026-11-08에 AnatomyBook(`anatomy`)을 새로 출판했습니다. 책 ID와 `health` 분야는 그대로 두었습니다. 옛 `bodybook.euiyun.com` 사이트는 같은 방식의 리다이렉트 페이지만 배포하며, 주소는 `legacyUrls`에 남깁니다. 메타데이터와 장·시뮬레이터 수는 `medical-books/catalog.js`를 기준으로 합니다. 서가 전체 의견(`medicalbooks`)은 `sisterBooks`에 둡니다.
+
+학교 수학·과학은 [SchoolBooks](https://school.euiyun.com/)(형제 저장소 `../school-books`)에서 통합 관리하며 2026-11-11에 `school` 분야(살아가는 지식)를 새로 만들었습니다. 학생과 학교 수학·과학을 잊은 어른을 위한 그림책 같은 서가로, 초등 ‘하루의 수학과 과학’(`school-elementary`, ELM), 중등 ‘캠핑장의 수학과 과학’(`school-middle`, MID), 고등 ‘뉴스 속 수학과 과학’(`school-high`, HIG)을 모두 집필 중(1단계)으로 등록했습니다. 책 주소는 `https://school.euiyun.com/{elementary|middle|high}/`, `checkout`은 `school-books/{slug}`입니다. 아직 공개 주소가 열리지 않아 `url`은 비워 두었으며, 장을 공개하면 `url`을 넣어 ‘미리 읽기’와 독자 의견을 열고, 출간할 때 `en`·`chapters`·`simulators`를 채웁니다(장마다 대표 시뮬레이터 하나, 13·15·15장 예정). 지도는 초등 → 중등 → 고등 학교급을 따르고, 고등은 미적분·확률과 통계·일반물리·일반화학·전자기학과, 중등은 공학 수학 입문과 분야를 넘어 연결합니다. 표지(`clock`·`tent`·`newspaper`)는 이 사이트에서 그렸고, 서가 전체 의견(`schoolbooks`)은 `sisterBooks`에 둡니다.
 
 미술 교과서는 [ArtBooks](https://art.euiyun.com/)(형제 저장소 `../art-books`, 옛 `geniuskey/artbook`)에서 통합 관리하며 `checkout`은 `art-books/{slug}`입니다.
 

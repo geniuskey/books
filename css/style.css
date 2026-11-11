@@ -624,6 +624,12 @@ section.block { padding: 56px 0; border-top: 1px solid var(--border); }
 @keyframes cs-floor { 0%, 100% { fill-opacity: .08; } 30% { fill-opacity: .45; } }
 .cs-scan { animation: cs-scan 2.8s ease-in-out infinite alternate; }
 @keyframes cs-scan { from { transform: translateY(-58px); } to { transform: translateY(46px); } }
+/* SchoolBooks covers: 시계 바늘(분침 한 바퀴에 시침 30°)과 모닥불. */
+.sc-minute { transform-box: view-box; transform-origin: 138px 64px; animation: sc-turn 6s linear infinite; }
+.sc-hour { transform-box: view-box; transform-origin: 138px 64px; animation: sc-turn 72s linear infinite; }
+@keyframes sc-turn { to { transform: rotate(360deg); } }
+.sc-flame { transform-box: fill-box; transform-origin: center bottom; animation: sc-flame .9s ease-in-out infinite alternate; }
+@keyframes sc-flame { from { transform: scale(.86, .78); } to { transform: scale(1.04, 1.08); } }
 @media (prefers-reduced-motion: reduce) { .cover-art * { animation: none !important; } .cover-art { transition: none; } }
 
 /* ---------- 홈의 대표 실험 ---------- */

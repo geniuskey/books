@@ -345,6 +345,20 @@ window.FIELD_MAPS = {
       ]
     ]
   },
+  school: {
+    // SchoolBooks 서가의 학교급(초등 → 중등 → 고등)을 따릅니다.
+    title: "그 나이엔 이 정도는",
+    desc: "SchoolBooks의 학교 수학·과학 그림책입니다. 초등의 하루에서 중학교의 캠핑, 고등학교의 뉴스 헤드라인으로 이어가며 교과서 개념을 생활 속 질문으로 다시 만납니다.",
+    groups: [
+      ["초등학교", "Elementary", "하루 일과에서 만나는 초등 3–6학년 수학·과학", ["school-elementary"]],
+      ["중학교", "Middle", "1박 2일 캠핑에서 다시 보는 중학교 3년", ["school-middle"]],
+      ["고등학교", "High", "뉴스 헤드라인 뒤의 고등학교 수학·과학", ["school-high"]],
+    ],
+    links: [
+      ["school-elementary", "school-middle", "분수·비와 비율, 그림자·전기 회로에서 일차방정식·닮음·옴의 법칙으로"],
+      ["school-middle", "school-high", "일차·이차함수와 확률·대푯값에서 지수·로그·미분과 신뢰구간으로"],
+    ],
+  },
 };
 
 // 분야를 넘는 연결도 한 번만 등록합니다. 양쪽 책의 소개에서 같은 이유로 탐색합니다.
@@ -419,4 +433,10 @@ window.FIELD_MAP_CROSS_LINKS = [
   ["bodybook", "artbook-drawing", "근육·몸의 구조와 인체 표현"],
   ["bodybook", "artbook-industrial", "몸의 움직임과 제품의 인간공학"],
   ["phonebook", "artbook-industrial", "기구·재료·조립·방열과 제품 설계"],
+  ["school-middle", "mathbook", "일차·이차함수 그래프와 피타고라스·닮음에서 공학 수학의 함수·벡터·기하로"],
+  ["school-high", "calculusbook", "구간단속의 평균·순간 속력과 누적 강수량에서 미분·적분의 정의로"],
+  ["school-high", "probability-statistics", "여론조사의 표본오차·신뢰구간과 검사 정확도의 베이즈 정리"],
+  ["school-high", "general-physics", "안전벨트의 운동량·충격량과 벡터로 나눈 힘을 대학 역학으로"],
+  ["school-high", "general-chemistry", "주기율표·산화 환원·산과 염기를 원자 구조·전기화학·평형으로"],
+  ["school-high", "electromagnetics", "발전기·전력망의 전자기 유도에서 패러데이 법칙과 맥스웰 방정식으로"],
 ];
