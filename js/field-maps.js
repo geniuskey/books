@@ -1,33 +1,7 @@
 /* 분야별 개념 묶음과 연결. 책의 집필 순서와는 독립적인 탐색 지도입니다.
    서가가 지도를 가진 분야는 data/books.json의 fields[].stages·map을 쓰고, 여기에는 허브 전용 값(regions, 추가 연결)만 둡니다. */
 window.FIELD_MAPS = {
-  science: {
-    title: "대학에서 배우는 과학과 공학의 기초",
-    desc: "ScienceBooks의 공통 기초 교재입니다. 물리·화학·재료와 열·유동, 빛과 색을 공부하고 각 전공의 응용으로 이어갑니다.",
-    // [왼쪽, 위, 열 수]. 화학은 한 줄로 세워 세 묶음이 한 행에 들어가게 합니다.
-    regions: [[12, 12, 2], [486, 12, 1], [742, 12, 2], [742, 188, 1]],
-    groups: [
-      ["물리와 전자기", "Physics", "운동·파동에서 양자·고체, 전기장과 전자기파의 원리", ["general-physics", "modern-physics", "quantum-mechanics", "solid-state", "electromagnetics"]],
-      ["화학과 재료", "Chemistry", "원자·분자·반응에서 재료의 구조와 물성까지", ["general-chemistry", "organic-chemistry", "materials-science"]],
-      ["열과 유동", "Thermal & Fluids", "열·평형과 상변화, 유동 해석", ["thermal-physics", "fluid-mechanics"]],
-      ["빛과 색", "Color", "빛을 측정하고 기기에서 색을 재현하는 원리", ["colorbook"]],
-    ],
-    links: [
-      ["general-physics", "modern-physics", "빛과 원자의 기초에서 양자역학과 에너지 띠로"],
-      ["modern-physics", "quantum-mechanics", "슈뢰딩거 방정식 입문에서 디랙 표기·각운동량·근사법으로"],
-      ["modern-physics", "solid-state", "양자 통계·에너지 띠에서 결정 속 전자와 반도체로"],
-      ["quantum-mechanics", "solid-state", "블로흐 정리·터널링으로 이해하는 띠 구조와 나노 구조"],
-      ["general-physics", "electromagnetics", "전기·자기 기초에서 장과 맥스웰 방정식으로"],
-      ["general-chemistry", "organic-chemistry", "화학 결합에서 분자 구조와 반응 메커니즘으로"],
-      ["general-chemistry", "materials-science", "원자·결합·결정에서 재료의 구조와 물성으로"],
-      ["solid-state", "materials-science", "결정 구조·결함·확산을 물성과 미세조직으로"],
-      ["general-chemistry", "thermal-physics", "열화학·자유 에너지에서 열역학과 상평형으로"],
-      ["thermal-physics", "materials-science", "자유 에너지·상태도로 이해하는 상변태와 미세조직"],
-      ["general-physics", "fluid-mechanics", "유체의 압력·흐름에서 검사 체적과 관 유동으로"],
-      ["thermal-physics", "fluid-mechanics", "기체 운동론·확산·열전달과 유동"],
-      ["general-physics", "colorbook", "빛의 파동·스펙트럼에서 측색과 색공간으로"],
-    ],
-  },
+  // science: 지도는 science-books의 catalog.json(map)에서 빌드가 만든 shelf.json을 거쳐 tools/sync-books.py로 data/books.json에 온다.
   // math: 지도는 math-books의 book.json(map)에서 tools/sync-books.py로 data/books.json에 옵니다.
   math: {
     regions: [[12, 12, 1], [268, 12, 3], [998, 12, 1]],
@@ -42,6 +16,8 @@ window.FIELD_MAPS = {
     regions: [[12, 12, 1], [268, 12, 2], [12, 286, 3], [742, 386, 1], [742, 12, 2], [998, 386, 1]],
   },
   // computing: 지도는 computing-books의 book.json(map)에서 tools/sync-books.py로 data/books.json에 옵니다.
+  // electronics: 묶음과 서가 안 연결은 서가 지도(system-books)에서 tools/sync-books.py로 data/books.json에 온다.
+  // 여기에는 여러 서가를 아우르는 제목·설명과 서가 밖 책의 연결만 둔다.
   electronics: {
     title: "회로에서 움직이는 시스템까지",
     desc: "전기 신호가 연결되고 제어되어 일상의 기기와 이동 수단이 됩니다.",
@@ -49,13 +25,6 @@ window.FIELD_MAPS = {
       ["electricbook", "phonebook", "회로가 모여 스마트폰이 되기까지"],
       ["electricbook", "carbook", "전압·전류·회로로 자동차 전장과 전원 이해하기"],
       ["electricbook", "shipbook", "전압·전류·회로로 선박 전기 시스템 이해하기"],
-      ["phonebook", "camerabook", "스마트폰 카메라 모듈과 전용 카메라의 센서·렌즈 크기 비교"],
-      ["carbook", "shipbook", "전동 추진·에너지 관리와 자율 이동 시스템 비교"],
-      ["phonebook", "carbook", "배터리 관리·열 설계의 기기별 제약 비교"],
-    ],
-    groups: [
-      ["회로와 전기", "Circuits", "전자 기기를 이루는 회로의 기본 원리", ["electricbook"]],
-      ["기기와 이동 수단", "Systems", "스마트폰·카메라·자동차·선박의 작동 방식", ["phonebook", "camerabook", "carbook", "shipbook"]],
     ],
   },
   // money: 지도는 money-books의 book.json(map)에서 tools/sync-books.py로 data/books.json에 옵니다.
@@ -68,78 +37,11 @@ window.FIELD_MAPS = {
     regions: [[12, 12, 2], [504, 12, 2], [12, 210, 2]],
   },
   // health: 지도는 medical-books의 book.json(map)에서 tools/sync-books.py로 data/books.json에 옵니다.
+  // culture: 묶음과 서가 안 연결은 서가 지도(music-books·art-books)에서 tools/sync-books.py로 data/books.json에 온다.
+  // 여기에는 여러 서가를 아우르는 제목·설명과 서가 밖 책의 연결만 둔다.
   culture: {
-    "title": "세상을 이해하고 표현하는 방법",
-    "desc": "음악에서 미술과 시각 표현, 웹·제품·산업디자인까지.",
-    "links": [
-      ["musicbook", "guitarbook", "화성·음색을 지판과 연주로 연결하기"],
-      ["musicbook", "pianobook", "음정·화성을 건반과 반주로 익히기"],
-      ["musicbook", "drumbook", "박자·리듬을 손발의 연주로 연결하기"],
-      ["musicbook", "bassbook", "근음·코드톤·리듬을 베이스라인으로 연결하기"],
-      ["guitarbook", "bassbook", "같은 지판·TAB에서 코드 반주와 베이스라인으로"],
-      ["drumbook", "bassbook", "킥 드럼과 맞물리는 리듬 섹션의 그루브"],
-      ["artbook-color", "artbook-composition", "색과 형태로 시선 이끌기"],
-      ["artbook-color", "artbook-image", "이미지의 색을 읽는 눈"],
-      ["artbook-composition", "artbook-drawing", "구도를 손으로 표현하기"],
-      ["artbook-composition", "artbook-type", "글자도 화면의 형태로 보기"],
-      ["artbook-history", "artbook-image", "시대의 맥락에서 이미지 읽기"],
-      ["artbook-type", "artbook-web", "웹 화면의 읽기 흐름 만들기"],
-      ["artbook-web", "artbook-product", "화면에서 제품의 경험으로"],
-      ["artbook-drawing", "artbook-industrial", "스케치에서 제품의 형태로"],
-      ["artbook-composition", "artbook-image", "사진의 프레임·자르기와 구도"],
-      ["artbook-composition", "artbook-web", "그리드·위계·여백으로 화면 구성하기"],
-      ["artbook-color", "artbook-web", "팔레트·대비와 웹 접근성·디자인 토큰"],
-      ["artbook-color", "artbook-industrial", "색·재료·마감으로 제품의 인상 설계하기"],
-      ["artbook-history", "artbook-composition", "시대별 작품의 구도와 시선 흐름 분석하기"],
-      ["artbook-product", "artbook-industrial", "사용자 조사·사용성과 물리적 제품의 인간공학"],
-    ],
-    "groups": [
-      [
-        "감각과 표현",
-        "Create",
-        "음·화음·리듬을 직접 듣고 구성하기",
-        [
-          "musicbook", "guitarbook", "pianobook", "drumbook", "bassbook"
-        ]
-      ],
-      [
-        "보기",
-        "See",
-        "색이 생기고 달라 보이는 원리",
-        [
-          "artbook-color"
-        ]
-      ],
-      [
-        "짜기와 그리기",
-        "Make",
-        "구도와 드로잉, 글자로 화면을 구성하기",
-        [
-          "artbook-composition",
-          "artbook-drawing",
-          "artbook-type"
-        ]
-      ],
-      [
-        "읽기",
-        "Read",
-        "미술사와 사진으로 이미지를 읽기",
-        [
-          "artbook-history",
-          "artbook-image"
-        ]
-      ],
-      [
-        "디자인하기",
-        "Design",
-        "웹·디지털 제품·산업 제품으로 쓰이는 디자인",
-        [
-          "artbook-web",
-          "artbook-product",
-          "artbook-industrial"
-        ]
-      ]
-    ]
+    title: "세상을 이해하고 표현하는 방법",
+    desc: "음악에서 미술과 시각 표현, 웹·제품·산업디자인까지.",
   },
 };
 

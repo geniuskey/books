@@ -8,7 +8,8 @@ hub catalog so they are written once:
   catalog.json or shelf.json (format euiyun-shelf/1) or, for older shelves, from catalog.js.
 - A shelf with a map (catalog.json "map") also owns its field's topic groups (fields[].stages),
   the map title/description/links (fields[].map) and each book's stage. A group may list several
-  shelf stages in "stages"; the hub stores the group's ID as the book's stage.
+  shelf stages in "stages"; the hub stores the group's ID as the book's stage. A field fed by several
+  shelves joins their groups; books on no mapped shelf get groups from fields[].hubStages.
 - Hub-only values stay here: field, featured, en, legacyUrls, level, checkout, and anything a
   book lists in "keepLocal" (for example a code renamed to avoid a clash on this site).
 
@@ -80,6 +81,7 @@ def remote_shelf(shelf, hub_books):
 
 def sync(catalog, load=local_shelf, hold_publish=False):
     changes, notes = [], []
+    contributions = {}
     by_checkout = {}
     for book in catalog['books']:
         if '/' in book.get('checkout', ''):
@@ -96,7 +98,7 @@ def sync(catalog, load=local_shelf, hold_publish=False):
         books, shelf_map, field_id = loaded
         # A map group may hold several shelf stages ("stages"); on the hub a book's stage is its group.
         group_of = {stage: group['id'] for group in (shelf_map or {}).get('groups', []) for stage in group.get('stages', [group['id']])}
-        seen = set()
+        seen, hub_id = set(), {}
         for source in books:
             # Planned books may not have a checkout yet, so fall back to the ID.
             book = hub_books.get(source.get('slug')) or next((b for b in catalog['books'] if b['id'] == source['id']), None)
@@ -104,6 +106,7 @@ def sync(catalog, load=local_shelf, hold_publish=False):
                 notes.append(f'{shelf}: {source["id"]} is on the shelf but not in books.json (add it with its field)')
                 continue
             seen.add(book['id'])
+            hub_id[source['id']] = book['id']
             keep = set(book.get('keepLocal', []))
             updates = {key: source[key] for key in BOOK_FIELDS if key in source and key not in keep}
             if source.get('status') == 'planned':
@@ -130,16 +133,36 @@ def sync(catalog, load=local_shelf, hold_publish=False):
                 notes.append(f'{shelf}: {book["id"]} is in books.json but not on the shelf')
 
         if shelf_map:
-            field = next(f for f in catalog['fields'] if f['id'] == field_id)
-            stages = [{key: group[key] for key in ('id', 'name', 'en', 'desc')} for group in shelf_map['groups']]
-            field_map = {key: shelf_map[key] for key in ('title', 'desc', 'links') if key in shelf_map}
-            for key, value in (('stages', stages), ('map', field_map)):
-                if field.get(key) != value:
-                    change(f'fields.{field_id}', key, field.get(key), value)
-                    field[key] = value
-            strays = [b['id'] for b in catalog['books'] if b['field'] == field_id and b['id'] not in seen]
-            if strays:
-                notes.append(f'{field_id}: books outside {shelf} have no stage on its map: {strays}')
+            fields = {b['field'] for b in catalog['books'] if b['id'] in seen}
+            assert len(fields) == 1, f'{shelf}: its books sit in several hub fields {fields}'
+            first = min(i for i, b in enumerate(catalog['books']) if b['id'] in seen)
+            # Links name books by their shelf IDs; the hub may know a book by another ID (color → colorbook).
+            shelf_map = dict(shelf_map, links=[[hub_id.get(a, a), hub_id.get(b, b), why] for a, b, why in shelf_map.get('links', [])])
+            contributions.setdefault(fields.pop(), []).append((first, shelf, shelf_map, seen))
+
+    # A field's map is composed from every shelf map in it, after the hub's own groups (fields[].hubStages)
+    # for books that live on no mapped shelf. Title and description come from a shelf only when it is the
+    # sole source; otherwise js/field-maps.js keeps them.
+    for field_id, parts in contributions.items():
+        field = next(f for f in catalog['fields'] if f['id'] == field_id)
+        parts.sort(key=lambda part: part[0])
+        hub_stages = field.get('hubStages', [])
+        stages = list(hub_stages) + [{key: group[key] for key in ('id', 'name', 'en', 'desc')}
+                                     for _, _, shelf_map, _ in parts for group in shelf_map['groups']]
+        ids = [stage['id'] for stage in stages]
+        assert len(ids) == len(set(ids)), f'{field_id}: two map groups share an ID: {ids}'
+        field_map = {'links': [link for _, _, shelf_map, _ in parts for link in shelf_map.get('links', [])]}
+        if len(parts) == 1 and not hub_stages:
+            field_map = {key: parts[0][2][key] for key in ('title', 'desc', 'links') if key in parts[0][2]}
+        for key, value in (('stages', stages), ('map', field_map)):
+            if field.get(key) != value:
+                change(f'fields.{field_id}', key, field.get(key), value)
+                field[key] = value
+        covered = set().union(*(seen for *_, seen in parts))
+        hub_ids = {stage['id'] for stage in hub_stages}
+        strays = [b['id'] for b in catalog['books'] if b['field'] == field_id and b['id'] not in covered and b.get('stage') not in hub_ids]
+        if strays:
+            notes.append(f'{field_id}: books with no group on its map (add a hubStages group and give them its stage): {strays}')
     return changes, notes
 
 

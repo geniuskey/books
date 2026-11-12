@@ -104,11 +104,20 @@ python3 -m http.server 8000   # → http://localhost:8000
 - 허브 전용 값(`field`, `featured`, `en`, `legacyUrls`, `level`, `checkout`)은 건드리지 않습니다.
 - 이 사이트에서만 다르게 쓰는 값은 책의 `keepLocal`에 적습니다. 예: 코드가 겹치는 AnatomyBook `ANT`, MaterialsBook `CMT`.
 - 집필 예정 책에는 주소와 장·시뮬레이터 수를 옮기지 않습니다.
-- 서가 `catalog.json`에 `map`이 있으면 그 분야의 묶음(`fields[].stages`), 지도 제목·설명·연결(`fields[].map`)과 책의 `stage`도 서가에서 가져옵니다. 이런 분야는 `js/field-maps.js`에 허브 전용 값(`regions`, 추가 연결)만 둡니다. 지금은 `health`(medical-books), `math`(math-books), `construction`(construction-books), `money`(money-books), `computing`(computing-books), `semiconductor`(semi-books)가 이 방식입니다. 묶음은 서가 stage 여러 개를 담을 수 있고(`stages`), 허브에는 묶음 ID가 책의 `stage`로 들어갑니다. 서가에서 연결이 6개를 넘으면 ‘책 사이 연결’로 접어 보여 줍니다.
-- science-books는 자기 `catalog.json`을 따로 쓰므로 빌드(`python3.12 tools/build.py`)가 만드는 `shelf.json`을 읽습니다. 과목명·설명·상태·주소·장과 시뮬레이터 수만 오고, 코드·표지·지도는 허브가 관리합니다. art-books는 아직 읽을 수 있는 서가 카탈로그가 없어 직접 관리합니다.
+- 서가 카탈로그에 `map`이 있으면 그 분야의 묶음(`fields[].stages`), 지도 연결(`fields[].map`)과 책의 `stage`도 서가에서 가져옵니다. 지금은 모든 분야가 이 방식입니다. 한 분야에 서가가 여럿이면(culture = music + art, electronics = system) 묶음을 서가의 첫 책 순서대로 잇고 연결을 합칩니다. 제목·설명은 서가가 하나일 때만 서가에서 오고, 여럿이면 `js/field-maps.js`에 둡니다. 서가 밖 책(ElectricBook)은 `fields[].hubStages`의 허브 묶음을 쓰고 책의 `stage`를 허브에서 정합니다. 연결의 책 ID가 허브와 다르면(SciBook `color` → `colorbook`) 허브 ID로 바꿉니다. `js/field-maps.js`에는 배치 좌표(`regions`), 여러 서가를 아우르는 제목·설명, 서가 밖 책의 연결만 남습니다.
+- science-books는 자기 `catalog.json`을 따로 쓰므로 빌드(`python3.12 tools/build.py`)가 만드는 `shelf.json`을 읽습니다. 과목명·설명·상태·주소·장과 시뮬레이터 수, 분야별 묶음과 지도(`catalog.json`의 `map`)가 오고, 코드·표지는 허브가 관리합니다. art-books는 `tools/sync-catalog.py`가 각 책 `book.json`(이름·설명·표지 값)에서 `catalog.json`을 만듭니다.
 
 ### 서가 홈 공통 코드: `tools/shelf-kit/`
-medical·math·construction·money·computing 서가의 `shelf.css`와 `shared/js/shelf.js`는 이 폴더가 원본입니다. 고친 뒤 `python3 tools/sync-shelf-kit.py`로 형제 폴더에 복사하고 서가마다 커밋합니다. `--check`는 어긋난 사본만 보여 줍니다. 서가마다 다른 값은 각 서가 `catalog.js`의 `window.SHELF`(`book.json`의 제목·주소·`coverTitles`·`map`)로 받습니다. 테마 저장 키는 서가 주소의 첫 이름(`medical-theme` 등)입니다. semi·music·system·art 서가는 아직 자기 코드를 씁니다.
+아홉 서가(medical·math·construction·money·computing·semi·music·system·art)의 첫 화면은 같은 코드를 씁니다. 원본과 서가 안 사본은 다음과 같습니다.
+
+| 원본(books) | 서가 안 사본 |
+|---|---|
+| `tools/shelf-kit/shelf.js` | `shared/js/shelf.js` |
+| `tools/shelf-kit/shelf.css` | `shelf.css` |
+| `js/covers.js`(허브 표지) | `shared/js/covers.js` |
+| `css/cover-animations.css`(허브 표지 움직임) | `shared/css/cover-animations.css` |
+
+고친 뒤 `python3 tools/sync-shelf-kit.py`로 형제 폴더에 복사하고 서가마다 커밋합니다. `--check`는 어긋난 사본만 보여 줍니다. 서가마다 다른 값은 각 서가 `catalog.js`의 `window.SHELF`(`book.json`의 제목·주소·`coverTitles`·`map`·`themeKey`·`readLink`)로 받고, 서가 고유 스타일은 `shelf-local.css`에 둡니다(semi: 본문 검색·7열 책장, music: 2열 실험, art: 전시실 벽·7열 책장). 본문 검색이 있는 서가는 `SHELF_SEARCH_HITS`·`ShelfSearch`·`shelf:search`로 공통 코드와 이어집니다. 테마 저장 키는 서가 주소의 첫 이름(`medical-theme` 등)이고 art는 `ab-theme`입니다. science-books는 첫 화면 디자인이 달라 공통 코드를 쓰지 않습니다.
 - 매일 KST 05:41에 `.github/workflows/sync-books.yml`이 `--remote --hold-publish`로 공개된 서가 카탈로그(`https://<서가>/catalog.json`, 없으면 `catalog.js`)를 읽어 바뀐 값을 커밋합니다. 출간 상태로 바뀌는 책은 실험 수집·읽기 경로·OG 이미지가 함께 필요하므로 상태·주소·장 수를 그대로 두고 실행 요약에 알립니다. 그 책은 형제 폴더를 받아 `python3 tools/sync-books.py`로 직접 출간 처리합니다.
 
 - `wings` — 두 갈래 (`work`, `life`)
@@ -241,15 +250,15 @@ node tools/check-models.cjs
 | 서가 | 저장소 | 허브 분야 | 지도 | 메모 |
 |---|---|---|---|---|
 | [SemiBooks](https://semi.euiyun.com/) | `semi-books` | `semiconductor` | 서가 | 제조·인프라 묶음은 `process`+`infra`. PlasmaBook은 공정 장비 책이라 반도체 분야 |
-| [SciBook](https://science.euiyun.com/) | `science-books` | `science` | 허브 | `shelf.json`을 읽음. 색채공학(`colorbook`, `color/`)은 ID를 유지한 채 이 서가로 옴 |
+| [SciBook](https://science.euiyun.com/) | `science-books` | `science` | 서가 | `shelf.json`을 읽음. 색채공학(`colorbook`, `color/`)은 ID를 유지한 채 이 서가로 옴 |
 | [MathBooks](https://math.euiyun.com/) | `math-books` | `math` | 서가 | 장 수에 용어집 포함. 확률과 통계는 SciBook에서 옮겨 옴 |
 | [ConstructionBooks](https://construction.euiyun.com/) | `construction-books` | `construction` | 서가 | 장 수에 용어집 포함 |
 | [ComputingBooks](https://computing.euiyun.com/) | `computing-books` | `computing` | 서가 | 예정 4권은 서가 `roadmap.json`에도 둠. 모델 검사 CI가 이 저장소를 체크아웃 |
 | [MoneyBooks](https://money.euiyun.com/) | `money-books` | `money` | 서가 | |
 | [MedicalBooks](https://medical.euiyun.com/) | `medical-books` | `health` | 서가 | |
-| [SystemBooks](https://system.euiyun.com/) | `system-books` | `electronics` | 허브 | 분야에 서가 밖 ElectricBook이 함께 있음. CameraBook은 `culture`에서 옮겨 옴 |
-| [MusicBooks](https://music.euiyun.com/) | `music-books` | `culture` | 허브 | 분야를 ArtBooks와 나눠 씀 |
-| [ArtBooks](https://art.euiyun.com/) | `art-books` | `culture` | 허브 | 읽을 수 있는 서가 카탈로그가 없어 허브에서 직접 관리 |
+| [SystemBooks](https://system.euiyun.com/) | `system-books` | `electronics` | 서가 | 분야에 서가 밖 ElectricBook(허브 묶음 `circuits`)이 함께 있음. CameraBook은 `culture`에서 옮겨 옴 |
+| [MusicBooks](https://music.euiyun.com/) | `music-books` | `culture` | 서가 | 분야를 ArtBooks와 나눠 씀 |
+| [ArtBooks](https://art.euiyun.com/) | `art-books` | `culture` | 서가 | 이름·설명은 각 책 `book.json`, 책 안의 이름(ColorBook 등)은 각 책 `book.js` |
 
 지난 이전·출간 경위는 `git log -- data/books.json`에서 볼 수 있습니다.
 

@@ -446,7 +446,110 @@
       "en": "Science & Engineering",
       "color": "#0a7f6f",
       "colorDark": "#2fd1b5",
-      "desc": "일반물리·화학에서 전자기학·열역학·재료·유체와 색채공학까지. ScienceBooks에서 관리하는 대학 과학·공학 교재입니다."
+      "desc": "일반물리·화학에서 전자기학·열역학·재료·유체와 색채공학까지. ScienceBooks에서 관리하는 대학 과학·공학 교재입니다.",
+      "stages": [
+        {
+          "id": "chemistry",
+          "name": "화학",
+          "en": "Chemistry",
+          "desc": "원자·분자·반응에서 유기 분자의 구조와 메커니즘까지"
+        },
+        {
+          "id": "physics",
+          "name": "물리학",
+          "en": "Physics",
+          "desc": "운동·파동에서 전자기·열·통계, 양자와 고체까지"
+        },
+        {
+          "id": "mechanics",
+          "name": "공학 역학",
+          "en": "Engineering Mechanics",
+          "desc": "유체의 압력·흐름과 관 유동 해석"
+        },
+        {
+          "id": "materials",
+          "name": "재료공학",
+          "en": "Materials Engineering",
+          "desc": "결정 구조·결함·확산에서 재료의 물성과 미세조직으로"
+        },
+        {
+          "id": "color",
+          "name": "색채공학",
+          "en": "Color Science",
+          "desc": "빛을 측정하고 기기에서 색을 재현하는 원리"
+        }
+      ],
+      "map": {
+        "title": "대학에서 배우는 과학과 공학의 기초",
+        "desc": "ScienceBooks의 공통 기초 교재입니다. 물리·화학·재료와 열·유동, 빛과 색을 공부하고 각 전공의 응용으로 이어갑니다.",
+        "links": [
+          [
+            "general-physics",
+            "modern-physics",
+            "빛과 원자의 기초에서 양자역학과 에너지 띠로"
+          ],
+          [
+            "modern-physics",
+            "quantum-mechanics",
+            "슈뢰딩거 방정식 입문에서 디랙 표기·각운동량·근사법으로"
+          ],
+          [
+            "modern-physics",
+            "solid-state",
+            "양자 통계·에너지 띠에서 결정 속 전자와 반도체로"
+          ],
+          [
+            "quantum-mechanics",
+            "solid-state",
+            "블로흐 정리·터널링으로 이해하는 띠 구조와 나노 구조"
+          ],
+          [
+            "general-physics",
+            "electromagnetics",
+            "전기·자기 기초에서 장과 맥스웰 방정식으로"
+          ],
+          [
+            "general-chemistry",
+            "organic-chemistry",
+            "화학 결합에서 분자 구조와 반응 메커니즘으로"
+          ],
+          [
+            "general-chemistry",
+            "materials-science",
+            "원자·결합·결정에서 재료의 구조와 물성으로"
+          ],
+          [
+            "solid-state",
+            "materials-science",
+            "결정 구조·결함·확산을 물성과 미세조직으로"
+          ],
+          [
+            "general-chemistry",
+            "thermal-physics",
+            "열화학·자유 에너지에서 열역학과 상평형으로"
+          ],
+          [
+            "thermal-physics",
+            "materials-science",
+            "자유 에너지·상태도로 이해하는 상변태와 미세조직"
+          ],
+          [
+            "general-physics",
+            "fluid-mechanics",
+            "유체의 압력·흐름에서 검사 체적과 관 유동으로"
+          ],
+          [
+            "thermal-physics",
+            "fluid-mechanics",
+            "기체 운동론·확산·열전달과 유동"
+          ],
+          [
+            "general-physics",
+            "colorbook",
+            "빛의 파동·스펙트럼에서 측색과 색공간으로"
+          ]
+        ]
+      }
     },
     {
       "id": "math",
@@ -781,7 +884,54 @@
       "en": "Devices & Systems",
       "color": "#15803d",
       "colorDark": "#4ade80",
-      "desc": "회로의 원리에서 스마트폰, 카메라, 자동차, 선박까지."
+      "desc": "회로의 원리에서 스마트폰, 카메라, 자동차, 선박까지.",
+      "hubStages": [
+        {
+          "id": "circuits",
+          "name": "회로와 전기",
+          "en": "Circuits",
+          "desc": "전자 기기를 이루는 회로의 기본 원리"
+        }
+      ],
+      "stages": [
+        {
+          "id": "circuits",
+          "name": "회로와 전기",
+          "en": "Circuits",
+          "desc": "전자 기기를 이루는 회로의 기본 원리"
+        },
+        {
+          "id": "mobility",
+          "name": "탈것",
+          "en": "Mobility",
+          "desc": "자동차와 선박이 움직이고 제어되는 원리"
+        },
+        {
+          "id": "device",
+          "name": "전자 기기",
+          "en": "Devices",
+          "desc": "스마트폰과 카메라가 작동하는 방식"
+        }
+      ],
+      "map": {
+        "links": [
+          [
+            "phonebook",
+            "camerabook",
+            "스마트폰 카메라 모듈과 전용 카메라의 센서·렌즈 크기 비교"
+          ],
+          [
+            "carbook",
+            "shipbook",
+            "전동 추진·에너지 관리와 자율 이동 시스템 비교"
+          ],
+          [
+            "phonebook",
+            "carbook",
+            "배터리 관리·열 설계의 기기별 제약 비교"
+          ]
+        ]
+      }
     },
     {
       "id": "money",
@@ -904,7 +1054,149 @@
       "en": "Arts & Culture",
       "color": "#c2410c",
       "colorDark": "#fb923c",
-      "desc": "음악에서 미술과 시각 표현, 웹·제품·산업디자인까지."
+      "desc": "음악에서 미술과 시각 표현, 웹·제품·산업디자인까지.",
+      "stages": [
+        {
+          "id": "fundamentals",
+          "name": "음악 기초",
+          "en": "Fundamentals",
+          "desc": "음·화음·리듬을 직접 듣고 구성하기"
+        },
+        {
+          "id": "instruments",
+          "name": "악기",
+          "en": "Instruments",
+          "desc": "기타·피아노·드럼·베이스로 직접 연주하기"
+        },
+        {
+          "id": "basics",
+          "name": "조형 기초",
+          "en": "Foundations",
+          "desc": "색·형태·드로잉으로 보는 눈과 그리는 손 기르기"
+        },
+        {
+          "id": "media",
+          "name": "글자와 이미지",
+          "en": "Type & Image",
+          "desc": "글자와 사진·디지털 이미지를 읽고 다루기"
+        },
+        {
+          "id": "history",
+          "name": "미술사",
+          "en": "Art History",
+          "desc": "사조의 흐름을 색·구도·기법의 변화로 읽기"
+        },
+        {
+          "id": "design",
+          "name": "디자인",
+          "en": "Design",
+          "desc": "웹·디지털 제품·산업 제품으로 쓰이는 디자인"
+        }
+      ],
+      "map": {
+        "links": [
+          [
+            "musicbook",
+            "guitarbook",
+            "화성·음색을 지판과 연주로 연결하기"
+          ],
+          [
+            "musicbook",
+            "pianobook",
+            "음정·화성을 건반과 반주로 익히기"
+          ],
+          [
+            "musicbook",
+            "drumbook",
+            "박자·리듬을 손발의 연주로 연결하기"
+          ],
+          [
+            "musicbook",
+            "bassbook",
+            "근음·코드톤·리듬을 베이스라인으로 연결하기"
+          ],
+          [
+            "guitarbook",
+            "bassbook",
+            "같은 지판·TAB에서 코드 반주와 베이스라인으로"
+          ],
+          [
+            "drumbook",
+            "bassbook",
+            "킥 드럼과 맞물리는 리듬 섹션의 그루브"
+          ],
+          [
+            "artbook-color",
+            "artbook-composition",
+            "색과 형태로 시선 이끌기"
+          ],
+          [
+            "artbook-color",
+            "artbook-image",
+            "이미지의 색을 읽는 눈"
+          ],
+          [
+            "artbook-composition",
+            "artbook-drawing",
+            "구도를 손으로 표현하기"
+          ],
+          [
+            "artbook-composition",
+            "artbook-type",
+            "글자도 화면의 형태로 보기"
+          ],
+          [
+            "artbook-history",
+            "artbook-image",
+            "시대의 맥락에서 이미지 읽기"
+          ],
+          [
+            "artbook-type",
+            "artbook-web",
+            "웹 화면의 읽기 흐름 만들기"
+          ],
+          [
+            "artbook-web",
+            "artbook-product",
+            "화면에서 제품의 경험으로"
+          ],
+          [
+            "artbook-drawing",
+            "artbook-industrial",
+            "스케치에서 제품의 형태로"
+          ],
+          [
+            "artbook-composition",
+            "artbook-image",
+            "사진의 프레임·자르기와 구도"
+          ],
+          [
+            "artbook-composition",
+            "artbook-web",
+            "그리드·위계·여백으로 화면 구성하기"
+          ],
+          [
+            "artbook-color",
+            "artbook-web",
+            "팔레트·대비와 웹 접근성·디자인 토큰"
+          ],
+          [
+            "artbook-color",
+            "artbook-industrial",
+            "색·재료·마감으로 제품의 인상 설계하기"
+          ],
+          [
+            "artbook-history",
+            "artbook-composition",
+            "시대별 작품의 구도와 시선 흐름 분석하기"
+          ],
+          [
+            "artbook-product",
+            "artbook-industrial",
+            "사용자 조사·사용성과 물리적 제품의 인간공학"
+          ]
+        ]
+      }
     }
   ],
   "books": [
@@ -1604,7 +1896,7 @@
       "status": "published",
       "level": "공대 학부",
       "chapters": 17,
-      "simulators": 92,
+      "simulators": 93,
       "color": "#0e9384",
       "colorDark": "#2dd4bf",
       "topics": [
@@ -2184,7 +2476,8 @@
           "image": "img/sims/carbook-sim-fl.jpg"
         }
       ],
-      "checkout": "system-books/car"
+      "checkout": "system-books/car",
+      "stage": "mobility"
     },
     {
       "id": "shipbook",
@@ -2218,7 +2511,8 @@
         "항해·자율운항"
       ],
       "motif": "ship",
-      "checkout": "system-books/ship"
+      "checkout": "system-books/ship",
+      "stage": "mobility"
     },
     {
       "id": "phonebook",
@@ -2268,7 +2562,8 @@
           "image": "img/sims/phonebook-sim-mod.jpg"
         }
       ],
-      "checkout": "system-books/phone"
+      "checkout": "system-books/phone",
+      "stage": "device"
     },
     {
       "id": "colorbook",
@@ -2305,7 +2600,8 @@
       "keepLocal": [
         "title",
         "description"
-      ]
+      ],
+      "stage": "color"
     },
     {
       "id": "electricbook",
@@ -2320,7 +2616,8 @@
         "옴의 법칙 회로 놀이터",
         "RC 충방전 곡선",
         "교류와 임피던스"
-      ]
+      ],
+      "stage": "circuits"
     },
     {
       "id": "moneybook",
@@ -2729,7 +3026,8 @@
         }
       ],
       "field": "electronics",
-      "checkout": "system-books/camera"
+      "checkout": "system-books/camera",
+      "stage": "device"
     },
     {
       "id": "musicbook",
@@ -2777,7 +3075,8 @@
           "image": "img/sims/musicbook-sim-prg-playground.jpg"
         }
       ],
-      "checkout": "music-books/fundamentals"
+      "checkout": "music-books/fundamentals",
+      "stage": "fundamentals"
     },
     {
       "id": "artbook-color",
@@ -2785,7 +3084,7 @@
       "title": "ArtBook 색채",
       "subtitle": "미술·디자인 색채 교과서",
       "headline": "색은 이름이 아니라 관계다",
-      "description": "빛과 지각, 색을 숫자로 적는 법, 혼색, 색상환과 조화, 명도·채도·대비, 색의 상대성, 그림 속 색, 접근성, 팔레트, 인쇄까지. 직접 끌고 섞고 흑백으로 바꿔 비교하며 배우는 ArtBook 서가의 첫 권(ColorBook)입니다.",
+      "description": "빛과 지각, 색을 숫자로 적는 법, 혼색, 색상환과 조화, 명도·채도·대비, 색의 상대성, 그림 속 색, 접근성, 팔레트, 인쇄까지. 서윤의 작업 노트를 따라 직접 끌고 섞고 비교하며 배우는 미술·시각 디자인 색채 교과서(ColorBook).",
       "en": {
         "title": "ArtBook · Color",
         "description": "Mix and compare color to see that color is a relationship, not a name."
@@ -2826,15 +3125,16 @@
           "link": "chapters/mixing.html#sim-mi-gamut",
           "image": "img/sims/artbook-color-sim-mi-gamut.jpg"
         }
-      ]
+      ],
+      "stage": "basics"
     },
     {
       "id": "artbook-composition",
       "code": "CMP",
-      "title": "ArtBook 구도",
+      "title": "ArtBook 형태와 구도",
       "subtitle": "형태와 구도",
       "headline": "같은 것도 어디에 놓느냐에 따라 다른 그림이 된다",
-      "description": "점·선·면, 형과 바탕, 게슈탈트, 시선의 흐름, 깊이, 균형, 리듬, 3분할과 황금비의 실제와 신화, 여백, 프레임과 자르기, 지면 구성, 명작의 구도 읽기까지. 그림 위 격자를 끌고 자르기 상자를 옮기며 규칙이 통하는 순간과 깨지는 순간을 함께 보는 ArtBook 서가의 두 번째 권(CompositionBook)입니다.",
+      "description": "점·선·면, 형과 바탕, 게슈탈트, 시선의 흐름, 깊이, 균형, 리듬, 3분할과 황금비의 실제와 신화, 여백, 프레임과 자르기, 지면 구성, 명작의 구도 읽기까지. 서윤의 겨울 작업 노트를 따라 직접 끌고 옮기고 잘라 보며 배우는 구도 교과서(CompositionBook).",
       "en": {
         "title": "ArtBook · Composition",
         "description": "Move grids and crops to see how placement changes a picture."
@@ -2875,7 +3175,8 @@
           "link": "chapters/frame.html#sim-crop",
           "image": "img/sims/artbook-composition-sim-crop.jpg"
         }
-      ]
+      ],
+      "stage": "basics"
     },
     {
       "id": "artbook-drawing",
@@ -2883,7 +3184,7 @@
       "title": "ArtBook 드로잉",
       "subtitle": "드로잉",
       "headline": "그리기는 손보다 먼저 보기의 기술이다",
-      "description": "윤곽과 측정, 선과 해칭, 1·2·3점 투시, 원과 타원, 상자로 생각하기, 명암의 단계, 그림자 투영, 풍경과 대기, 인체의 비례와 구조, 제스처와 크로키까지. 소실점을 끌고 해를 옮기고 관절을 굽혀 보며 배우는 ArtBook 서가의 세 번째 권(DrawingBook)입니다.",
+      "description": "윤곽과 측정, 선과 해칭, 1·2·3점 투시, 원과 타원, 상자로 생각하기, 명암의 단계, 그림자 투영, 풍경과 대기, 인체의 비례와 구조, 제스처와 크로키까지. 서윤의 봄 스케치북을 따라 소실점을 끌고 빛을 옮기며 배우는 드로잉 교과서(DrawingBook).",
       "en": {
         "title": "ArtBook · Drawing",
         "description": "Learn to see before you draw: perspective, light, shadow, and the figure."
@@ -2924,15 +3225,16 @@
           "link": "chapters/shadow.html#sim-sh-sun",
           "image": "img/sims/artbook-drawing-sim-sh-sun.jpg"
         }
-      ]
+      ],
+      "stage": "basics"
     },
     {
       "id": "artbook-type",
       "code": "TYP",
-      "title": "ArtBook 타이포",
+      "title": "ArtBook 타이포그래피",
       "subtitle": "타이포그래피",
       "headline": "좋은 글자는 읽는 동안 보이지 않는다",
-      "description": "글자의 해부, 한글의 구조, 글꼴의 갈래, 자간과 커닝, 행간과 글줄 길이, 가독성 연구의 실제, 위계, 그리드, 정렬, 화면의 글자와 웹폰트, 제목과 레터링까지. 한글과 라틴 글자를 같은 무게로 다루며 슬라이더로 직접 조판해 보는 ArtBook 서가의 네 번째 권(TypeBook)입니다.",
+      "description": "글자의 해부, 한글의 구조, 글꼴의 갈래, 자간과 커닝, 행간과 글줄 길이, 가독성, 위계, 그리드, 정렬, 화면의 글자, 제목과 레터링까지. 서윤의 여름 조판 노트를 따라 슬라이더로 직접 조판하며 배우는 한글·라틴 타이포그래피 교과서(TypeBook).",
       "en": {
         "title": "ArtBook · Typography",
         "description": "Typeset Hangul and Latin text with sliders for spacing, leading, and hierarchy."
@@ -2973,7 +3275,8 @@
           "link": "chapters/spacing.html#sim-sp-kern",
           "image": "img/sims/artbook-type-sim-sp-kern.jpg"
         }
-      ]
+      ],
+      "stage": "media"
     },
     {
       "id": "artbook-history",
@@ -2981,7 +3284,7 @@
       "title": "ArtBook 미술사",
       "subtitle": "미술사",
       "headline": "사조는 이름이 아니라 색·구도·기법의 변화다",
-      "description": "고대와 중세, 르네상스, 바로크, 네덜란드 황금기, 로코코와 신고전주의, 낭만주의와 사실주의, 인상주의와 후기 인상주의, 그리고 중국·한국·일본의 회화와 판화까지. 공공 도메인 명작에서 팔레트를 뽑고 구도선을 얹어 시대와 지역을 나란히 읽는 ArtBook 서가의 다섯 번째 권(ArtHistoryBook)입니다.",
+      "description": "고대와 중세, 르네상스, 바로크, 네덜란드 황금기, 로코코와 신고전주의, 낭만주의와 사실주의, 인상주의와 후기 인상주의, 그리고 동아시아 회화, 한국 미술, 판화와 우키요에까지. 그림 읽기 모임을 따라 명작에서 팔레트를 뽑고 구도선을 얹어 읽는 미술사(ArtHistoryBook).",
       "en": {
         "title": "ArtBook · Art History",
         "description": "Read art history through the palettes and compositions of public-domain masterpieces."
@@ -3022,15 +3325,16 @@
           "link": "chapters/eastasia.html#sim-ea-scroll",
           "image": "img/sims/artbook-history-sim-ea-scroll.jpg"
         }
-      ]
+      ],
+      "stage": "history"
     },
     {
       "id": "artbook-image",
       "code": "IMG",
-      "title": "ArtBook 이미지",
+      "title": "ArtBook 사진과 이미지",
       "subtitle": "사진과 이미지",
       "headline": "사진은 빛을 숫자로 받아 적는 일이다",
-      "description": "노출과 히스토그램, 사진의 빛, 초점거리와 원근, 초점과 심도, 화소와 센서, 색 보정, 해상도와 압축, 사진의 구도와 역사까지. 셔터를 누르고 화소를 들여다보며 각 손잡이가 무엇을 바꾸고 무엇을 대가로 치르는지 보는 ArtBook 서가의 여섯 번째 권(ImageBook)입니다.",
+      "description": "노출, 히스토그램, 사진의 빛, 초점거리와 화각, 거리와 원근, 초점과 심도, 화소와 센서, 색 보정, 해상도와 압축, 사진의 구도, 사진의 역사까지. 서윤의 겨울 촬영 노트를 따라 셔터를 누르고 화소를 들여다보며 배우는 사진과 디지털 이미지 교과서(ImageBook).",
       "en": {
         "title": "ArtBook · Photography",
         "description": "Explore exposure, focus, sensors, and color in photography."
@@ -3071,15 +3375,16 @@
           "link": "chapters/focus.html#sim-fc-dof",
           "image": "img/sims/artbook-image-sim-fc-dof.jpg"
         }
-      ]
+      ],
+      "stage": "media"
     },
     {
       "id": "artbook-web",
       "code": "WEB",
-      "title": "ArtBook 웹",
+      "title": "ArtBook 웹 디자인",
       "subtitle": "웹 디자인",
       "headline": "웹은 크기를 정할 수 없는 캔버스다",
-      "description": "뷰포트와 CSS 픽셀, 박스와 간격, 레이아웃 그리드, 반응형, 디자인 토큰과 다크 모드, 컴포넌트와 상태, 내비게이션, 폼, 모션, 웹 접근성, 성능까지. 창 폭을 끌고 상태를 바꿔 보며 배우는 ArtBook 서가의 일곱 번째 권(WebBook)입니다.",
+      "description": "뷰포트와 CSS 픽셀, 박스와 간격, 레이아웃 그리드, 반응형, 디자인 토큰과 다크 모드, 컴포넌트와 상태, 내비게이션, 폼, 모션, 웹 접근성, 성능까지. 서윤의 웹 개편 노트를 따라 창 폭을 끌고 상태를 바꿔 보며 배우는 웹 디자인 교과서(WebBook).",
       "en": {
         "title": "ArtBook · Web Design",
         "description": "Design for a canvas without a fixed size: layout, responsive design, and accessibility."
@@ -3120,7 +3425,8 @@
           "link": "chapters/responsive.html#sim-rs-clamp",
           "image": "img/sims/artbook-web-sim-rs-clamp.jpg"
         }
-      ]
+      ],
+      "stage": "design"
     },
     {
       "id": "artbook-product",
@@ -3128,7 +3434,7 @@
       "title": "ArtBook 제품 디자인",
       "subtitle": "디지털 제품 디자인",
       "headline": "화면을 그리기 전에 문제를 고른다",
-      "description": "사용자 조사, 문제 정의, 정보 구조, 사용자 흐름, 상호작용의 원리, 프로토타입, 사용성 테스트, 지표와 A/B 테스트, UX 라이팅, 디자인 시스템, 다크 패턴과 윤리까지. 묻고 그리고 시험해 보며 배우는 ArtBook 서가의 여덟 번째 권(ProductBook)입니다.",
+      "description": "사용자 조사, 문제 정의, 정보 구조, 사용자 흐름, 상호작용의 원리, 프로토타입, 사용성 테스트, 지표와 A/B 테스트, UX 라이팅, 디자인 시스템, 다크 패턴과 윤리까지. 책방 E의 '맡아 두기' 서비스를 따라 묻고 그리고 시험해 보며 배우는 디지털 제품 디자인 교과서(ProductBook).",
       "en": {
         "title": "ArtBook · Product Design",
         "description": "Choose the problem before drawing screens: research, flows, prototypes, and testing."
@@ -3169,7 +3475,8 @@
           "link": "chapters/metrics.html#sim-pk",
           "image": "img/sims/artbook-product-sim-pk.jpg"
         }
-      ]
+      ],
+      "stage": "design"
     },
     {
       "id": "artbook-industrial",
@@ -3177,7 +3484,7 @@
       "title": "ArtBook 산업디자인",
       "subtitle": "산업디자인",
       "headline": "물건은 손에서 완성된다",
-      "description": "제품 스케치와 도면, 형태와 곡면, 비례와 안정, 인간공학과 인체 치수, 조작과 피드백, 재료, 사출 성형 등 생산 공정, 구조와 조립, 색·재료·마감(CMF), 수명과 지속가능성, 산업디자인의 역사까지. 형태를 돌리고 손에 쥐어 보며 배우는 ArtBook 서가의 아홉 번째 권(IndustrialBook)입니다.",
+      "description": "제품 스케치와 도면, 형태와 곡면, 비례와 안정, 인간공학과 인체 치수, 조작과 피드백, 재료, 생산 공정, 구조와 조립, CMF, 수명과 지속가능성, 산업디자인의 역사까지. 책방 E 10주년 독서등을 따라 형태를 돌리고 손에 쥐어 보며 배우는 산업디자인 교과서(IndustrialBook).",
       "en": {
         "title": "ArtBook · Industrial Design",
         "description": "Shape objects for the hand: form, ergonomics, materials, and manufacturing."
@@ -3218,7 +3525,8 @@
           "link": "chapters/ergonomics.html#sim-pct",
           "image": "img/sims/artbook-industrial-sim-pct.jpg"
         }
-      ]
+      ],
+      "stage": "design"
     },
     {
       "id": "general-chemistry",
@@ -3249,7 +3557,8 @@
         "열역학·전기화학·핵화학",
         "부록"
       ],
-      "simulators": 99
+      "simulators": 99,
+      "stage": "chemistry"
     },
     {
       "id": "general-physics",
@@ -3282,7 +3591,8 @@
         "빛과 현대 물리",
         "부록"
       ],
-      "simulators": 159
+      "simulators": 159,
+      "stage": "physics"
     },
     {
       "id": "modern-physics",
@@ -3311,7 +3621,8 @@
         "고체로 가는 길",
         "부록"
       ],
-      "simulators": 76
+      "simulators": 76,
+      "stage": "physics"
     },
     {
       "id": "solid-state",
@@ -3341,7 +3652,8 @@
         "물질의 응답과 나노 구조",
         "부록"
       ],
-      "simulators": 81
+      "simulators": 81,
+      "stage": "physics"
     },
     {
       "id": "electromagnetics",
@@ -3371,7 +3683,8 @@
         "계산",
         "부록"
       ],
-      "simulators": 104
+      "simulators": 104,
+      "stage": "physics"
     },
     {
       "id": "thermal-physics",
@@ -3401,7 +3714,8 @@
         "수송과 비평형",
         "부록"
       ],
-      "simulators": 134
+      "simulators": 134,
+      "stage": "physics"
     },
     {
       "id": "materials-science",
@@ -3431,7 +3745,8 @@
         "기능 성질과 신뢰성",
         "부록"
       ],
-      "simulators": 144
+      "simulators": 144,
+      "stage": "materials"
     },
     {
       "id": "quantum-mechanics",
@@ -3461,7 +3776,8 @@
         "현대 양자역학과 양자 소자",
         "부록"
       ],
-      "simulators": 135
+      "simulators": 135,
+      "stage": "physics"
     },
     {
       "id": "fluid-mechanics",
@@ -3490,7 +3806,8 @@
         "응용 유동",
         "부록"
       ],
-      "simulators": 76
+      "simulators": 76,
+      "stage": "mechanics"
     },
     {
       "id": "organic-chemistry",
@@ -3521,7 +3838,8 @@
         "반도체 재료의 유기화학",
         "부록"
       ],
-      "simulators": 155
+      "simulators": 155,
+      "stage": "chemistry"
     },
     {
       "id": "mathbook",
@@ -4178,7 +4496,8 @@
         "핑거스타일",
         "일렉 톤"
       ],
-      "motif": "guitar"
+      "motif": "guitar",
+      "stage": "instruments"
     },
     {
       "id": "pianobook",
@@ -4209,7 +4528,8 @@
         "재즈 보이싱",
         "페달·표현"
       ],
-      "motif": "piano"
+      "motif": "piano",
+      "stage": "instruments"
     },
     {
       "id": "drumbook",
@@ -4240,7 +4560,8 @@
         "장르",
         "타이밍"
       ],
-      "motif": "drums"
+      "motif": "drums",
+      "stage": "instruments"
     },
     {
       "id": "bassbook",
@@ -4271,7 +4592,8 @@
         "장르 라인",
         "슬랩·톤"
       ],
-      "motif": "bass"
+      "motif": "bass",
+      "stage": "instruments"
     }
   ],
   "tools": [

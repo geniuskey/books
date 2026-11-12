@@ -7442,7 +7442,7 @@
   {
     "id": "memorybook/dram-cell/sim-sa",
     "bookId": "memorybook",
-    "title": "센스 앰프 동작 파형 (단계별)",
+    "title": "센스 앰프 과도 해석과 오프셋 몬테카를로",
     "link": "chapters/dram-cell.html#sim-sa"
   },
   {
@@ -7502,7 +7502,7 @@
   {
     "id": "memorybook/dram-ops/sim-sch",
     "bookId": "memorybook",
-    "title": "스케줄러 비교: FCFS vs FR-FCFS",
+    "title": "DDR5 컨트롤러 샌드박스",
     "link": "chapters/dram-ops.html#sim-sch"
   },
   {
