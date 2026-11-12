@@ -1,0 +1,64 @@
+name: Sync book facts from shelves
+
+# 매일 각 서가가 공개한 catalog.json(없으면 catalog.js)을 읽어 data/books.json을 맞춘다.
+# 출간 상태 변경은 실험 목록·읽기 경로·OG 이미지도 필요하므로 사람에게 남기고 요약에 알린다.
+# 이 커밋은 GITHUB_TOKEN으로 푸시해 다른 워크플로를 깨우지 않으므로 같은 검사를 여기서 돌린다.
+
+on:
+  schedule:
+    - cron: '41 20 * * *'  # 매일 UTC 20:41 = KST 05:41
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-books
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: books
+      - uses: actions/checkout@v4
+        with:
+          repository: geniuskey/semi-books
+          path: semi-books
+      - uses: actions/checkout@v4
+        with:
+          repository: geniuskey/computing-books
+          path: computing-books
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Sync data/books.json from published shelf catalogs
+        working-directory: books
+        run: |
+          python3 tools/sync-books.py --remote --hold-publish | tee "$RUNNER_TEMP/sync.txt"
+          if grep -q 'publish it on the hub by hand' "$RUNNER_TEMP/sync.txt"; then
+            { echo '### 허브에서 직접 출간 처리할 책'; grep 'publish it on the hub by hand' "$RUNNER_TEMP/sync.txt" | sed 's/^note: /- /'; } >> "$GITHUB_STEP_SUMMARY"
+            grep 'publish it on the hub by hand' "$RUNNER_TEMP/sync.txt" | sed 's/^note: /::notice::/'
+          fi
+      - name: Check the catalog
+        working-directory: books
+        run: |
+          node tools/check-field-maps.cjs
+          node --test tools/check-models.test.cjs
+          python3 tools/check-discovery.py
+          python3 tools/check-routes.py
+      - name: Commit when the catalog changed
+        working-directory: books
+        run: |
+          if git diff --quiet -- data/books.json; then echo "No change."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add data/books.json
+          git commit -m "Sync book facts from shelves"
+          git pull --rebase --quiet origin main
+          git push

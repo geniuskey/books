@@ -106,6 +106,7 @@ python3 -m http.server 8000   # → http://localhost:8000
 - 집필 예정 책에는 주소와 장·시뮬레이터 수를 옮기지 않습니다.
 - 서가 `catalog.json`에 `map`이 있으면 그 분야의 묶음(`fields[].stages`), 지도 제목·설명·연결(`fields[].map`)과 책의 `stage`도 서가에서 가져옵니다. 이런 분야는 `js/field-maps.js`에 허브 전용 값(`regions`, 추가 연결)만 둡니다. 지금은 `health`(medical-books), `math`(math-books), `construction`(construction-books), `money`(money-books), `computing`(computing-books)가 이 방식입니다. 서가에서 연결이 6개를 넘으면 ‘책 사이 연결’로 접어 보여 줍니다.
 - art-books·science-books는 아직 읽을 수 있는 서가 카탈로그가 없어 직접 관리합니다.
+- 매일 KST 05:41에 `.github/workflows/sync-books.yml`이 `--remote --hold-publish`로 공개된 서가 카탈로그(`https://<서가>/catalog.json`, 없으면 `catalog.js`)를 읽어 바뀐 값을 커밋합니다. 출간 상태로 바뀌는 책은 실험 수집·읽기 경로·OG 이미지가 함께 필요하므로 상태·주소·장 수를 그대로 두고 실행 요약에 알립니다. 그 책은 형제 폴더를 받아 `python3 tools/sync-books.py`로 직접 출간 처리합니다.
 
 - `wings` — 두 갈래 (`work`, `life`)
 - `fieldAliases` — 이전 분야 ID를 통합 분야로 연결 (`ai` → `computing`, `housing` → `money`, `art` → `culture`).
