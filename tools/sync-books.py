@@ -7,7 +7,8 @@ hub catalog so they are written once:
 - Book facts (title, description, status, counts, colors, ...) come from the shelf's
   catalog.json (format euiyun-shelf/1) or, for older shelves, from catalog.js.
 - A shelf with a map (catalog.json "map") also owns its field's topic groups (fields[].stages),
-  the map title/description/links (fields[].map) and each book's stage.
+  the map title/description/links (fields[].map) and each book's stage. A group may list several
+  shelf stages in "stages"; the hub stores the group's ID as the book's stage.
 - Hub-only values stay here: field, featured, en, legacyUrls, level, checkout, and anything a
   book lists in "keepLocal" (for example a code renamed to avoid a clash on this site).
 
@@ -92,6 +93,8 @@ def sync(catalog, load=local_shelf, hold_publish=False):
             notes.append(f'{shelf}: no shelf catalog to read; left unchanged')
             continue
         books, shelf_map, field_id = loaded
+        # A map group may hold several shelf stages ("stages"); on the hub a book's stage is its group.
+        group_of = {stage: group['id'] for group in (shelf_map or {}).get('groups', []) for stage in group.get('stages', [group['id']])}
         seen = set()
         for source in books:
             # Planned books may not have a checkout yet, so fall back to the ID.
@@ -109,7 +112,7 @@ def sync(catalog, load=local_shelf, hold_publish=False):
             if source.get('status') != 'planned' and source.get('url') not in (None, '', '#') and 'url' not in keep:
                 updates['url'] = source['url'] if source['url'].startswith('http') else base + source['url']
             if shelf_map and 'stage' not in keep:
-                updates['stage'] = source['stage']
+                updates['stage'] = group_of[source['stage']]
             if hold_publish and 'status' in updates and 'published' in (book.get('status'), updates['status']) \
                     and book.get('status') != updates['status']:
                 notes.append(f'{shelf}: {book["id"]} is {updates.pop("status")} on the shelf; publish it on the hub by hand')
