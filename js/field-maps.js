@@ -114,70 +114,7 @@ window.FIELD_MAPS = {
       ["socbook", "analogbook", "SoC의 클럭·전원에 쓰이는 PLL·LDO"],
     ],
   },
-  computing: {
-    "title": "컴퓨터의 원리에서 데이터와 AI 활용까지",
-    "desc": "컴퓨터와 네트워크의 원리에서 데이터 분석, 신경망과 AI의 업무 활용까지.",
-    "links": [
-      ["computerbook", "osbook", "하드웨어 위에서 프로그램 실행하기"],
-      ["computerbook", "networkbook", "한 대의 컴퓨터에서 연결된 컴퓨터로"],
-      ["osbook", "databasebook", "프로그램과 데이터의 저장·관리"],
-      ["networkbook", "databasebook", "네트워크로 접근하는 데이터베이스와 통신 지연"],
-      ["statbook", "aibook", "데이터의 불확실성에서 모델 학습으로"],
-      ["aibook", "axbook", "학습한 모델을 실제 업무에 적용하기"],
-      ["statbook", "axbook", "실험과 측정으로 도입 효과 판단하기"],
-      ["computerbook", "aibook", "CPU·GPU의 연산과 메모리 위에서 신경망 실행하기"],
-      ["databasebook", "axbook", "업무 데이터의 저장 구조와 기준정보·데이터 정리"],
-      ["databasebook", "aibook", "검색·인덱스와 RAG의 지식 검색"],
-      ["networkbook", "aibook", "데이터센터 네트워크와 분산 학습의 통신 병목"],
-      ["computerbook", "gpubook", "컴퓨터의 GPU 기초에서 워프·SIMT·메모리 병목으로"],
-      ["gpubook", "aibook", "GPU의 병렬 실행·메모리 대역폭과 신경망 학습·추론"],
-    ],
-    "groups": [
-      [
-        "컴퓨터의 기초",
-        "Foundation",
-        "하드웨어와 운영체제가 프로그램을 실행하는 원리",
-        [
-          "computerbook",
-          "gpubook",
-          "osbook"
-        ]
-      ],
-      [
-        "연결과 운영",
-        "Connect",
-        "데이터를 저장하고 시스템을 연결하기",
-        [
-          "networkbook",
-          "databasebook"
-        ]
-      ],
-      [
-        "수학·데이터",
-        "Foundation",
-        "표본과 불확실성, 실험 설계로 데이터를 해석하기",
-        [
-          "statbook"
-        ]
-      ],
-      [
-        "학습과 모델",
-        "Learning",
-        "머신러닝에서 신경망·언어 모델까지",
-        [
-          "aibook"
-        ]
-      ],
-      [
-        "조직과 업무에 적용",
-        "Apply",
-        "데이터·프로세스·목표를 정리해 AI를 업무에 정착시키기",
-        [
-          "axbook"
-        ]
-      ]
-    ]
-  },
+  // computing: 지도는 computing-books의 book.json(map)에서 tools/sync-books.py로 data/books.json에 옵니다.
   electronics: {
     title: "회로에서 움직이는 시스템까지",
     desc: "전기 신호가 연결되고 제어되어 일상의 기기와 이동 수단이 됩니다.",
