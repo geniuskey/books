@@ -28,61 +28,14 @@ window.FIELD_MAPS = {
       ["general-physics", "colorbook", "빛의 파동·스펙트럼에서 측색과 색공간으로"],
     ],
   },
+  // math: 지도는 math-books의 book.json(map)에서 tools/sync-books.py로 data/books.json에 옵니다.
   math: {
-    title: "공학 문제를 푸는 수학의 도구",
-    desc: "MathBooks의 대학 수학 교재입니다. 공학 수학 입문에서 선형대수·미적분·미분방정식으로, 확률·통계와 수치해석으로 이어갑니다.",
     regions: [[12, 12, 1], [268, 12, 3], [998, 12, 1]],
-    groups: [
-      ["입문", "Foundations", "공학 문제에서 출발해 수학 도구 전체를 훑어보기", ["mathbook"]],
-      ["대수·해석", "Algebra & Analysis", "공간을 움직이는 행렬, 변화율과 누적, 변화의 법칙", ["linearbook", "calculusbook", "odebook"]],
-      ["확률·계산", "Probability & Computing", "불확실성을 다루는 통계와 컴퓨터로 근사하는 계산", ["probability-statistics", "numericalbook"]],
-    ],
-    links: [
-      ["mathbook", "linearbook", "격자를 휘는 행렬에서 소거·부분공간·SVD로"],
-      ["mathbook", "calculusbook", "극한·급수의 직관에서 미분·적분·다변수로"],
-      ["mathbook", "odebook", "미분방정식 입문에서 진동·라플라스·위상 평면으로"],
-      ["mathbook", "probability-statistics", "확률·정보의 기초에서 분포·추정·검정으로"],
-      ["mathbook", "numericalbook", "수치 해석 맛보기에서 오차·근 찾기·수치 선형대수로"],
-      ["calculusbook", "odebook", "도함수·적분과 테일러 전개로 미분방정식 풀기"],
-      ["linearbook", "odebook", "고유값·고유벡터로 연립 방정식과 위상 평면 읽기"],
-      ["linearbook", "numericalbook", "LU·QR·고유값 분해를 컴퓨터에서 계산하기"],
-      ["calculusbook", "numericalbook", "테일러 전개로 수치 미분·적분과 오차 분석하기"],
-      ["odebook", "numericalbook", "오일러·룽게–쿠타 해법과 안정성"],
-      ["calculusbook", "probability-statistics", "적분으로 정의하는 연속 분포와 기댓값"],
-      ["linearbook", "probability-statistics", "최소제곱·PCA와 회귀 분석"],
-    ],
   },
-  construction: {
-    // ConstructionBooks 서가의 단계 구분(역학·재료·지반 → 구조 설계 → 토목 인프라 → 시공·디지털)을 따릅니다.
-    title: "힘의 흐름에서 지어지는 건물까지",
-    desc: "ConstructionBooks의 건설·건축 교재입니다. 구조역학·건설재료·지반에서 건축구조와 철근콘크리트 설계로, 교량·터널과 시공·BIM으로 이어갑니다.",
-    groups: [
-      ["역학·재료·지반", "Foundations", "하중과 응력, 콘크리트·강재, 흙과 기초의 기본 원리", ["mechanicsbook", "materialsbook", "geotechbook"]],
-      ["구조 설계", "Design", "건물의 구조 시스템과 철근콘크리트 부재 설계", ["structurebook", "concretebook"]],
-      ["토목 인프라", "Civil", "강을 건너고 산을 뚫는 교량·터널·도로", ["civilbook"]],
-      ["시공·디지털", "Delivery", "도면을 건물로 만드는 시공 관리와 BIM", ["sitebook", "bimbook"]],
-    ],
-    links: [
-      ["mechanicsbook", "materialsbook", "응력–변형률·탄성 계수와 콘크리트·강재의 강도"],
-      ["mechanicsbook", "geotechbook", "평형과 응력 해석을 지중 응력·토압·지지력으로"],
-      ["mechanicsbook", "structurebook", "하중 경로·부정정 해석에서 건물의 구조 시스템으로"],
-      ["mechanicsbook", "concretebook", "단면 성질·휨 응력에서 철근콘크리트 단면 설계로"],
-      ["mechanicsbook", "civilbook", "영향선·케이블·아치와 교량의 이동 하중"],
-      ["materialsbook", "concretebook", "콘크리트 강도·철근 성질과 균열·처짐 설계"],
-      ["materialsbook", "sitebook", "타설·양생·강도 시험과 현장 품질 관리"],
-      ["geotechbook", "civilbook", "기초·사면·흙막이와 교량 기초·터널 지반"],
-      ["structurebook", "concretebook", "구조 시스템의 부재를 철근콘크리트로 설계하기"],
-      ["structurebook", "bimbook", "구조 모델과 BIM 정보 모델의 연동"],
-      ["sitebook", "bimbook", "공정·물량 관리와 디지털 건설 모델"],
-      ["geotechbook", "structurebook", "지반 분류·액상화와 내진 설계의 지반 증폭"],
-      ["geotechbook", "concretebook", "지지력·말뚝 반력에서 철근콘크리트 기초 설계로"],
-      ["geotechbook", "sitebook", "토압·흙막이·말뚝 이론과 토공·기초 시공"],
-      ["materialsbook", "civilbook", "아스팔트·골재의 성질과 포장 설계"],
-      ["concretebook", "civilbook", "프리스트레스트 콘크리트와 교량 거더·바닥판"],
-      ["concretebook", "sitebook", "정착·이음과 철근·거푸집·타설 공사"],
-      ["civilbook", "bimbook", "도로·하천 시설과 GIS·도시 모델"],
-    ],
+  math: {
+    regions: [[12, 12, 1], [268, 12, 3], [998, 12, 1]],
   },
+  // construction: 지도는 construction-books의 book.json(map)에서 tools/sync-books.py로 data/books.json에 옵니다.
   semiconductor: {
     title: "전자 하나에서 산업 전체까지",
     desc: "원리에서 설계·제조로, 완성된 칩에서 제품과 산업으로 이어집니다.",
@@ -241,27 +194,14 @@ window.FIELD_MAPS = {
       ["기기와 이동 수단", "Systems", "스마트폰·카메라·자동차·선박의 작동 방식", ["phonebook", "camerabook", "carbook", "shipbook"]],
     ],
   },
+  // money: 지도는 money-books의 book.json(map)에서 tools/sync-books.py로 data/books.json에 옵니다.
+  money: {
+    // [왼쪽, 위, 열 수]. 서가 묶음 순서(돈과 경제 → 투자·집 → 세금·보험)를 따릅니다.
+    regions: [[12, 12, 2], [504, 12, 2], [12, 210, 2]],
+  },
   money: {
     // MoneyBooks 서가의 분야 구분(돈과 경제 → 투자·집 → 세금·보험)을 따릅니다.
     regions: [[12, 12, 2], [504, 12, 2], [12, 210, 2]],
-    "title": "돈의 흐름에서 내 집 마련까지",
-    "desc": "MoneyBooks의 생활 속 돈 교과서입니다. 돈과 경제의 기본 언어에서 주식·부동산으로, 세금과 보험으로 이어갑니다.",
-    "links": [
-      ["moneybook", "economicsbook", "일상의 돈에서 경제 전체로"],
-      ["economicsbook", "stockbook", "경제의 흐름과 기업·주식"],
-      ["moneybook", "insurebook", "돈의 계획에 위험 대비 더하기"],
-      ["moneybook", "taxbook", "벌고 쓰는 돈에 붙는 세금"],
-      ["stockbook", "taxbook", "투자 수익과 세금"],
-      ["moneybook", "estatebook", "금리와 대출로 주거 계획 세우기"],
-      ["moneybook", "stockbook", "자산배분의 기초에서 주식·ETF의 위험과 수익으로"],
-      ["economicsbook", "estatebook", "금리·신용·공급의 시차가 주택시장에 미치는 영향"],
-      ["estatebook", "taxbook", "주택 거래·보유·양도 세금과 과세·공제의 기본 원리"],
-    ],
-    "groups": [
-      ["돈과 경제", "Understand", "월급·예산·금리와 경제 뉴스의 기본 언어", ["moneybook", "economicsbook"]],
-      ["투자·집", "Invest & Housing", "주식의 위험과 수익, 집값의 원리와 전월세·대출", ["stockbook", "estatebook"]],
-      ["세금·보험", "Tax & Insurance", "월급·투자·상속에 붙는 세금과 위험에 대비하는 보험", ["taxbook", "insurebook"]]
-    ]
   },
   // health: 지도는 medical-books의 book.json(map)에서 tools/sync-books.py로 data/books.json에 옵니다.
   culture: {

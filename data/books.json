@@ -99,7 +99,93 @@
       "en": "Mathematics",
       "desc": "공학 수학 입문에서 선형대수·미적분·미분방정식·수치해석, 확률과 통계까지. MathBooks에서 관리하는 대학 수학 교재입니다.",
       "color": "#7c3aed",
-      "colorDark": "#a78bfa"
+      "colorDark": "#a78bfa",
+      "stages": [
+        {
+          "id": "foundations",
+          "name": "입문",
+          "en": "Foundations",
+          "desc": "공학 문제에서 출발해 수학 도구 전체를 훑어보기"
+        },
+        {
+          "id": "core",
+          "name": "대수·해석",
+          "en": "Algebra & Analysis",
+          "desc": "공간을 움직이는 행렬, 변화율과 누적, 변화의 법칙"
+        },
+        {
+          "id": "computing",
+          "name": "확률·계산",
+          "en": "Probability & Computing",
+          "desc": "불확실성을 다루는 통계와 컴퓨터로 근사하는 계산"
+        }
+      ],
+      "map": {
+        "title": "공학 문제를 푸는 수학의 도구",
+        "desc": "MathBooks의 대학 수학 교재입니다. 공학 수학 입문에서 선형대수·미적분·미분방정식으로, 확률·통계와 수치해석으로 이어갑니다.",
+        "links": [
+          [
+            "mathbook",
+            "linearbook",
+            "격자를 휘는 행렬에서 소거·부분공간·SVD로"
+          ],
+          [
+            "mathbook",
+            "calculusbook",
+            "극한·급수의 직관에서 미분·적분·다변수로"
+          ],
+          [
+            "mathbook",
+            "odebook",
+            "미분방정식 입문에서 진동·라플라스·위상 평면으로"
+          ],
+          [
+            "mathbook",
+            "probability-statistics",
+            "확률·정보의 기초에서 분포·추정·검정으로"
+          ],
+          [
+            "mathbook",
+            "numericalbook",
+            "수치 해석 맛보기에서 오차·근 찾기·수치 선형대수로"
+          ],
+          [
+            "calculusbook",
+            "odebook",
+            "도함수·적분과 테일러 전개로 미분방정식 풀기"
+          ],
+          [
+            "linearbook",
+            "odebook",
+            "고유값·고유벡터로 연립 방정식과 위상 평면 읽기"
+          ],
+          [
+            "linearbook",
+            "numericalbook",
+            "LU·QR·고유값 분해를 컴퓨터에서 계산하기"
+          ],
+          [
+            "calculusbook",
+            "numericalbook",
+            "테일러 전개로 수치 미분·적분과 오차 분석하기"
+          ],
+          [
+            "odebook",
+            "numericalbook",
+            "오일러·룽게–쿠타 해법과 안정성"
+          ],
+          [
+            "calculusbook",
+            "probability-statistics",
+            "적분으로 정의하는 연속 분포와 기댓값"
+          ],
+          [
+            "linearbook",
+            "probability-statistics",
+            "최소제곱·PCA와 회귀 분석"
+          ]
+        ]
+      }
     },
     {
       "id": "construction",
@@ -108,7 +194,129 @@
       "en": "Construction & Civil Engineering",
       "desc": "구조역학과 건설재료에서 지반·건축구조·철근콘크리트, 교량·터널·도로, 시공과 BIM까지. ConstructionBooks에서 관리하는 건설·건축 교재입니다.",
       "color": "#2f5f96",
-      "colorDark": "#8db8ea"
+      "colorDark": "#8db8ea",
+      "stages": [
+        {
+          "id": "foundations",
+          "name": "역학·재료·지반",
+          "en": "Foundations",
+          "desc": "하중과 응력, 콘크리트·강재, 흙과 기초의 기본 원리"
+        },
+        {
+          "id": "design",
+          "name": "구조 설계",
+          "en": "Design",
+          "desc": "건물의 구조 시스템과 철근콘크리트 부재 설계"
+        },
+        {
+          "id": "civil",
+          "name": "토목 인프라",
+          "en": "Civil",
+          "desc": "강을 건너고 산을 뚫는 교량·터널·도로"
+        },
+        {
+          "id": "delivery",
+          "name": "시공·디지털",
+          "en": "Delivery",
+          "desc": "도면을 건물로 만드는 시공 관리와 BIM"
+        }
+      ],
+      "map": {
+        "title": "힘의 흐름에서 지어지는 건물까지",
+        "desc": "ConstructionBooks의 건설·건축 교재입니다. 구조역학·건설재료·지반에서 건축구조와 철근콘크리트 설계로, 교량·터널과 시공·BIM으로 이어갑니다.",
+        "links": [
+          [
+            "mechanicsbook",
+            "materialsbook",
+            "응력–변형률·탄성 계수와 콘크리트·강재의 강도"
+          ],
+          [
+            "mechanicsbook",
+            "geotechbook",
+            "평형과 응력 해석을 지중 응력·토압·지지력으로"
+          ],
+          [
+            "mechanicsbook",
+            "structurebook",
+            "하중 경로·부정정 해석에서 건물의 구조 시스템으로"
+          ],
+          [
+            "mechanicsbook",
+            "concretebook",
+            "단면 성질·휨 응력에서 철근콘크리트 단면 설계로"
+          ],
+          [
+            "mechanicsbook",
+            "civilbook",
+            "영향선·케이블·아치와 교량의 이동 하중"
+          ],
+          [
+            "materialsbook",
+            "concretebook",
+            "콘크리트 강도·철근 성질과 균열·처짐 설계"
+          ],
+          [
+            "materialsbook",
+            "sitebook",
+            "타설·양생·강도 시험과 현장 품질 관리"
+          ],
+          [
+            "geotechbook",
+            "civilbook",
+            "기초·사면·흙막이와 교량 기초·터널 지반"
+          ],
+          [
+            "structurebook",
+            "concretebook",
+            "구조 시스템의 부재를 철근콘크리트로 설계하기"
+          ],
+          [
+            "structurebook",
+            "bimbook",
+            "구조 모델과 BIM 정보 모델의 연동"
+          ],
+          [
+            "sitebook",
+            "bimbook",
+            "공정·물량 관리와 디지털 건설 모델"
+          ],
+          [
+            "geotechbook",
+            "structurebook",
+            "지반 분류·액상화와 내진 설계의 지반 증폭"
+          ],
+          [
+            "geotechbook",
+            "concretebook",
+            "지지력·말뚝 반력에서 철근콘크리트 기초 설계로"
+          ],
+          [
+            "geotechbook",
+            "sitebook",
+            "토압·흙막이·말뚝 이론과 토공·기초 시공"
+          ],
+          [
+            "materialsbook",
+            "civilbook",
+            "아스팔트·골재의 성질과 포장 설계"
+          ],
+          [
+            "concretebook",
+            "civilbook",
+            "프리스트레스트 콘크리트와 교량 거더·바닥판"
+          ],
+          [
+            "concretebook",
+            "sitebook",
+            "정착·이음과 철근·거푸집·타설 공사"
+          ],
+          [
+            "civilbook",
+            "bimbook",
+            "도로·하천 시설과 GIS·도시 모델"
+          ]
+        ]
+      }
     },
     {
       "id": "computing",
@@ -135,7 +343,78 @@
       "en": "Money & Housing",
       "color": "#b45309",
       "colorDark": "#fbbf24",
-      "desc": "돈과 경제, 주식과 부동산, 세금과 보험까지. MoneyBooks에서 관리하는 생활 속 돈 교과서입니다."
+      "desc": "돈과 경제, 주식과 부동산, 세금과 보험까지. MoneyBooks에서 관리하는 생활 속 돈 교과서입니다.",
+      "stages": [
+        {
+          "id": "foundations",
+          "name": "돈과 경제",
+          "en": "Understand",
+          "desc": "월급·예산·금리와 경제 뉴스의 기본 언어"
+        },
+        {
+          "id": "invest",
+          "name": "투자·집",
+          "en": "Invest & Housing",
+          "desc": "주식의 위험과 수익, 집값의 원리와 전월세·대출"
+        },
+        {
+          "id": "life",
+          "name": "세금·보험",
+          "en": "Tax & Insurance",
+          "desc": "월급·투자·상속에 붙는 세금과 위험에 대비하는 보험"
+        }
+      ],
+      "map": {
+        "title": "돈의 흐름에서 내 집 마련까지",
+        "desc": "MoneyBooks의 생활 속 돈 교과서입니다. 돈과 경제의 기본 언어에서 주식·부동산으로, 세금과 보험으로 이어갑니다.",
+        "links": [
+          [
+            "moneybook",
+            "economicsbook",
+            "일상의 돈에서 경제 전체로"
+          ],
+          [
+            "economicsbook",
+            "stockbook",
+            "경제의 흐름과 기업·주식"
+          ],
+          [
+            "moneybook",
+            "insurebook",
+            "돈의 계획에 위험 대비 더하기"
+          ],
+          [
+            "moneybook",
+            "taxbook",
+            "벌고 쓰는 돈에 붙는 세금"
+          ],
+          [
+            "stockbook",
+            "taxbook",
+            "투자 수익과 세금"
+          ],
+          [
+            "moneybook",
+            "estatebook",
+            "금리와 대출로 주거 계획 세우기"
+          ],
+          [
+            "moneybook",
+            "stockbook",
+            "자산배분의 기초에서 주식·ETF의 위험과 수익으로"
+          ],
+          [
+            "economicsbook",
+            "estatebook",
+            "금리·신용·공급의 시차가 주택시장에 미치는 영향"
+          ],
+          [
+            "estatebook",
+            "taxbook",
+            "주택 거래·보유·양도 세금과 과세·공제의 기본 원리"
+          ]
+        ]
+      }
     },
     {
       "id": "health",
@@ -1624,7 +1903,8 @@
           "image": "img/sims/moneybook-sim-life.jpg"
         }
       ],
-      "checkout": "money-books/money"
+      "checkout": "money-books/money",
+      "stage": "foundations"
     },
     {
       "id": "economicsbook",
@@ -1671,7 +1951,8 @@
         }
       ],
       "field": "money",
-      "checkout": "money-books/economics"
+      "checkout": "money-books/economics",
+      "stage": "foundations"
     },
     {
       "id": "stockbook",
@@ -1719,7 +2000,8 @@
           "link": "chapters/backtest.html#sim-surv",
           "image": "img/sims/stockbook-sim-surv.jpg"
         }
-      ]
+      ],
+      "stage": "invest"
     },
     {
       "id": "insurebook",
@@ -1769,7 +2051,8 @@
         }
       ],
       "field": "money",
-      "checkout": "money-books/insure"
+      "checkout": "money-books/insure",
+      "stage": "life"
     },
     {
       "id": "taxbook",
@@ -1814,7 +2097,8 @@
         }
       ],
       "field": "money",
-      "checkout": "money-books/tax"
+      "checkout": "money-books/tax",
+      "stage": "life"
     },
     {
       "id": "estatebook",
@@ -1865,7 +2149,8 @@
         }
       ],
       "field": "money",
-      "checkout": "money-books/estate"
+      "checkout": "money-books/estate",
+      "stage": "invest"
     },
     {
       "id": "bodybook",
@@ -2827,7 +3112,8 @@
         }
       ],
       "field": "math",
-      "checkout": "math-books/foundations"
+      "checkout": "math-books/foundations",
+      "stage": "foundations"
     },
     {
       "id": "linearbook",
@@ -2858,7 +3144,8 @@
         "고유값",
         "SVD·PCA"
       ],
-      "motif": "linear"
+      "motif": "linear",
+      "stage": "core"
     },
     {
       "id": "calculusbook",
@@ -2889,7 +3176,8 @@
         "편미분·그래디언트",
         "중적분·벡터 미적분"
       ],
-      "motif": "calculus"
+      "motif": "calculus",
+      "stage": "core"
     },
     {
       "id": "odebook",
@@ -2920,7 +3208,8 @@
         "위상 평면·안정성",
         "혼돈·편미분방정식"
       ],
-      "motif": "ode"
+      "motif": "ode",
+      "stage": "core"
     },
     {
       "id": "numericalbook",
@@ -2951,7 +3240,8 @@
         "수치 선형대수",
         "최적화·PDE"
       ],
-      "motif": "numerical"
+      "motif": "numerical",
+      "stage": "computing"
     },
     {
       "id": "probability-statistics",
@@ -2985,7 +3275,8 @@
         "확률 과정·SPC"
       ],
       "simulators": 165,
-      "headline": "동전을 던지고 표본을 다시 뽑으며 익히는 추론"
+      "headline": "동전을 던지고 표본을 다시 뽑으며 익히는 추론",
+      "stage": "computing"
     },
     {
       "id": "mechanicsbook",
@@ -3017,7 +3308,8 @@
         "처짐·좌굴",
         "부정정·매트릭스"
       ],
-      "motif": "beam"
+      "motif": "beam",
+      "stage": "foundations"
     },
     {
       "id": "materialsbook",
@@ -3053,7 +3345,8 @@
       "motif": "concrete",
       "keepLocal": [
         "code"
-      ]
+      ],
+      "stage": "foundations"
     },
     {
       "id": "geotechbook",
@@ -3085,7 +3378,8 @@
         "지지력·말뚝",
         "액상화·암반"
       ],
-      "motif": "soil"
+      "motif": "soil",
+      "stage": "foundations"
     },
     {
       "id": "structurebook",
@@ -3117,7 +3411,8 @@
         "강·합성·대공간",
         "사용성·보강"
       ],
-      "motif": "tower"
+      "motif": "tower",
+      "stage": "design"
     },
     {
       "id": "concretebook",
@@ -3149,7 +3444,8 @@
         "내진 상세",
         "기초·STM·PSC"
       ],
-      "motif": "rebar"
+      "motif": "rebar",
+      "stage": "design"
     },
     {
       "id": "civilbook",
@@ -3182,7 +3478,8 @@
         "포장·배수",
         "철도·하천"
       ],
-      "motif": "bridge"
+      "motif": "bridge",
+      "stage": "civil"
     },
     {
       "id": "sitebook",
@@ -3215,7 +3512,8 @@
         "품질·안전",
         "생산성"
       ],
-      "motif": "crane"
+      "motif": "crane",
+      "stage": "delivery"
     },
     {
       "id": "bimbook",
@@ -3248,7 +3546,8 @@
         "점군·제작",
         "디지털 트윈·GIS"
       ],
-      "motif": "bim"
+      "motif": "bim",
+      "stage": "delivery"
     },
     {
       "id": "thinfilmbook",
