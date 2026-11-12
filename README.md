@@ -105,7 +105,7 @@ python3 -m http.server 8000   # → http://localhost:8000
 - 이 사이트에서만 다르게 쓰는 값은 책의 `keepLocal`에 적습니다. 예: 코드가 겹치는 AnatomyBook `ANT`, MaterialsBook `CMT`.
 - 집필 예정 책에는 주소와 장·시뮬레이터 수를 옮기지 않습니다.
 - 서가 `catalog.json`에 `map`이 있으면 그 분야의 묶음(`fields[].stages`), 지도 제목·설명·연결(`fields[].map`)과 책의 `stage`도 서가에서 가져옵니다. 이런 분야는 `js/field-maps.js`에 허브 전용 값(`regions`, 추가 연결)만 둡니다. 지금은 `health`(medical-books), `math`(math-books), `construction`(construction-books), `money`(money-books), `computing`(computing-books), `semiconductor`(semi-books)가 이 방식입니다. 묶음은 서가 stage 여러 개를 담을 수 있고(`stages`), 허브에는 묶음 ID가 책의 `stage`로 들어갑니다. 서가에서 연결이 6개를 넘으면 ‘책 사이 연결’로 접어 보여 줍니다.
-- art-books·science-books는 아직 읽을 수 있는 서가 카탈로그가 없어 직접 관리합니다.
+- science-books는 자기 `catalog.json`을 따로 쓰므로 빌드(`python3.12 tools/build.py`)가 만드는 `shelf.json`을 읽습니다. 과목명·설명·상태·주소·장과 시뮬레이터 수만 오고, 코드·표지·지도는 허브가 관리합니다. art-books는 아직 읽을 수 있는 서가 카탈로그가 없어 직접 관리합니다.
 
 ### 서가 홈 공통 코드: `tools/shelf-kit/`
 medical·math·construction·money·computing 서가의 `shelf.css`와 `shared/js/shelf.js`는 이 폴더가 원본입니다. 고친 뒤 `python3 tools/sync-shelf-kit.py`로 형제 폴더에 복사하고 서가마다 커밋합니다. `--check`는 어긋난 사본만 보여 줍니다. 서가마다 다른 값은 각 서가 `catalog.js`의 `window.SHELF`(`book.json`의 제목·주소·`coverTitles`·`map`)로 받습니다. 테마 저장 키는 서가 주소의 첫 이름(`medical-theme` 등)입니다. semi·music·system·art 서가는 아직 자기 코드를 씁니다.
@@ -222,29 +222,36 @@ node tools/check-models.cjs
 
 `python3 tools/build-fields.py`는 `tools/templates/field.html`과 `data/books.json`으로 예전 분야 주소의 이동 페이지와 사이트맵을 생성합니다. `/field/`, `/field/?f=<id>`, `/field/<id>/`는 `/paths/?view=map&field=<id>`로 연결하며 기존 검색 조건·해시를 보존합니다. 분야를 추가하면 이 명령도 실행하세요. 지도의 분류·연결은 `js/field-maps.js`, 지도 렌더링과 보기 전환은 `js/field.js`에서 관리합니다.
 
-### 독자 요청과 SciBook 연결
+### 독자 요청
 
 2026-10-18 독자 요청으로 전자기학·열역학·재료공학·플라즈마공학, 산화·박막 증착·CMP·세정·팹 인프라, 기타·피아노·드럼을 다루는 교과서 10권을 후속 집필 예정에 추가했습니다. 확정 출간일은 없으며 기존 공정 전문 교과서와 연결합니다.
 
-[과학·공학 교과서 SciBook](https://science.euiyun.com/)은 형제 저장소 `../science-books`에서 관리합니다. 공개 사이트와 실제 `catalog.json`·`course.json`의 상태를 기준으로 일반화학·일반물리학·현대물리학·고체물리·전자기학·열·통계물리와 물리화학·재료과학·확률과 통계·유체역학·양자역학(출간)을 `books`의 `science` 분야에 등록합니다. 2026-11-06에는 유기화학(25장, 시뮬레이터 155개)을, 2026-11-07에는 양자역학(20장, 시뮬레이터 135개)을 출간 등록했습니다. 같은 날 SciBook으로 옮긴 색채공학(`colorbook`, `science.euiyun.com/color/`)은 ID를 유지한 채 분야를 `electronics`에서 `science`로 옮기고 지식 지도의 ‘빛과 색’ 묶음에 둡니다. 확률과 통계는 MathBooks로 옮겨 `math` 분야에 둡니다. 2026-10-30에는 SciBook에서 출간한 전자기학·열·통계물리·재료과학이 기존 기획(`electromagneticsbook`·`thermobook`·`materialsbook`)을 대체하도록 과목 ID(`electromagnetics`·`thermal-physics`·`materials-science`)로 바꿨습니다. SciBook 독자 의견 링크가 과목 ID를 보내기 때문입니다. SciBook 로드맵에서 빠진 정역학·동역학은 삭제했습니다. 장·시뮬레이터 수는 SciBook의 생성 파일 `catalog.js`에서 가져옵니다. 아직 공개하지 않은 과목에는 URL을 추측해 넣지 않습니다. 지식 지도에서는 반도체의 관련 응용으로 연결하며, 소자 물리·이미지 센서 광학 등 기존 전문 교재는 반도체 분야에 유지합니다. 과목은 분야별 진행률·로드맵·독자 의견 목록에서 같은 메타데이터를 사용합니다. `sisterBooks`에는 사이트 전체 의견을 위한 `science` ID만 유지합니다. 과목 상태가 바뀌거나 새 과목을 공개하면 함께 갱신하세요.
+### 서가 저장소와 허브의 약속
 
-수학 교과서는 [MathBooks](https://math.euiyun.com/)(형제 저장소 `../math-books`)에서 통합 관리하며 2026-11-06에 `math` 분야(일하는 지식)를 새로 만들었습니다. 책 주소는 `https://math.euiyun.com/{slug}/`이며 `checkout`은 `math-books/{slug}`입니다. MathBook은 ID를 유지한 채 `foundations`로, 확률과 통계는 SciBook에서 가져온 사본인 `probability`로 옮겼습니다(SciBook 주소도 계속 열림). LinearBook·CalculusBook·ODEBook을 출간 상태로, 아직 공개 주소가 없는 NumericalBook을 집필 중(1단계)으로 등록했습니다. 메타데이터와 장·시뮬레이터 수는 `math-books/catalog.js`를 기준으로 하며 장 수에는 용어집을 포함합니다. 지도는 MathBooks 서가의 입문·대수·해석·확률·계산 구분을 따르고, 서가 전체 의견(`mathbooks`)은 `sisterBooks`에 둡니다. 표지(`linear`·`calculus`·`ode`·`numerical`)는 MathBooks와 같은 코드를 씁니다. 같은 날 NumericalBook(`numerical`, 5부 16장 + 용어집, 시뮬레이터 127개)을 출간 상태로 옮기고 읽기 경로 `math-to-simulation`(LinearBook → ODEBook → NumericalBook)을 추가했습니다.
+책은 서가 저장소(형제 폴더)에서 쓰고, 사실 값은 `tools/sync-books.py`가 가져옵니다(위 ‘서가에서 가져오기’). 허브에는 서가가 모르는 값만 둡니다.
 
-건설·건축 교과서는 [ConstructionBooks](https://construction.euiyun.com/)(형제 저장소 `../construction-books`)에서 통합 관리하며 2026-11-07에 `construction` 분야(일하는 지식)를 새로 만들었습니다. 책 주소는 `https://construction.euiyun.com/{slug}/`이며 `checkout`은 `construction-books/{slug}`입니다. MechanicsBook(구조역학)·MaterialsBook(건설재료)을 출간 상태로, 아직 공개 주소가 없는 GeotechBook(지반공학)을 집필 중(1단계)으로, StructureBook·ConcreteBook·CivilBook·SiteBook·BIMBook을 집필 예정(2단계)으로 등록했습니다. 메타데이터와 장·시뮬레이터 수는 `construction-books/catalog.js`를 기준으로 하며 장 수에는 용어집을 포함합니다. MaterialsBook의 코드 `MAT`은 재료과학과 겹치므로 이 사이트에서만 `CMT`를 씁니다. 지도는 서가의 역학·재료·지반 → 구조 설계 → 토목 인프라 → 시공·디지털 구분을 따르고, 서가 전체 의견(`constructionbooks`)은 `sisterBooks`에 둡니다. 표지는 ConstructionBooks와 같은 코드를 씁니다. 2026-11-08에 GeotechBook·StructureBook·ConcreteBook·CivilBook·SiteBook(각 4부 16장 + 용어집)을 출간 상태로 옮기고, 아직 공개 주소가 없는 BIMBook을 집필 중(1단계)으로 바꿨습니다. 지도에 서가 안 연결 7개(지반–구조·기초·시공, 재료–포장, RC–교량·시공, 토목–GIS)와 분야 간 연결 5개(미적분–구조역학, 상미분방정식·수치해석–건축구조, 유체역학–토목, 확률과 통계–시공)를 더하고, 읽기 경로 `load-to-design`(구조역학 → 건축구조 → 철근콘크리트)과 `ground-to-site`(지반 → 토목 → 시공)를 추가했습니다. 같은 날 BIMBook(4부 16장 + 용어집)도 공개해 건설 서가 8권을 모두 출간 상태로 옮기고, 읽기 경로 `model-to-twin`(건축구조 → 시공 → BIM)을 추가했습니다.
+- 책 주소는 `https://<서가>/<slug>/`, `checkout`은 `<서가 저장소>/<slug>`입니다. 실험 목록(`collect-experiments.py`)도 이 경로에서 수집합니다. 일부 책만 갱신할 때는 `--book infrabook`처럼 반복 지정합니다.
+- 책 ID는 서가로 옮겨도 바꾸지 않습니다. 독자 의견·통계가 ID로 이어지기 때문입니다. SciBook 과목은 독자 의견 링크가 과목 ID를 보내므로 과목 ID(`electromagnetics` 등)를 씁니다.
+- 옛 개별 사이트 주소는 `legacyUrls`에 남겨 조회수를 합칩니다.
+- 서가 전체 의견용 ID(`science`, `mathbooks`, `constructionbooks`, `musicbooks`, `moneybooks`, `systembooks`, `computingbooks`, `medicalbooks`)는 `sisterBooks`에 둡니다.
+- 표지 그림은 서가와 같은 `motif` 코드를 `js/covers.js`에 둡니다.
+- 아직 공개하지 않은 책에는 주소를 추측해 넣지 않습니다.
+- 허브에서만 다르게 쓰는 값은 `keepLocal`로 지킵니다. 코드가 겹치는 AnatomyBook `ANT`(AnalogBook `ANA`), MaterialsBook `CMT`(재료과학 `MAT`), FabInfraBook의 이름·코드, ColorBook의 영문 이름·소개입니다.
 
-음악 교과서는 [MusicBooks](https://music.euiyun.com/)(형제 저장소 `../music-books`)에서 통합 관리합니다. 책 주소는 `https://music.euiyun.com/{slug}/`이며 `checkout`은 `music-books/{slug}`입니다. MusicBook은 ID를 유지한 채 `fundamentals`로 옮겼고, 예정이던 GuitarBook·PianoBook·DrumBook과 새 BassBook을 출간 상태로 등록했습니다. 메타데이터와 장·시뮬레이터 수는 `music-books/catalog.js`를 기준으로 합니다. 서가 전체 의견(`musicbooks`)은 `sisterBooks`에 둡니다. 악기 표지(`guitar`·`piano`·`drums`·`bass`)는 MusicBooks와 같은 코드를 씁니다.
+| 서가 | 저장소 | 허브 분야 | 지도 | 메모 |
+|---|---|---|---|---|
+| [SemiBooks](https://semi.euiyun.com/) | `semi-books` | `semiconductor` | 서가 | 제조·인프라 묶음은 `process`+`infra`. PlasmaBook은 공정 장비 책이라 반도체 분야 |
+| [SciBook](https://science.euiyun.com/) | `science-books` | `science` | 허브 | `shelf.json`을 읽음. 색채공학(`colorbook`, `color/`)은 ID를 유지한 채 이 서가로 옴 |
+| [MathBooks](https://math.euiyun.com/) | `math-books` | `math` | 서가 | 장 수에 용어집 포함. 확률과 통계는 SciBook에서 옮겨 옴 |
+| [ConstructionBooks](https://construction.euiyun.com/) | `construction-books` | `construction` | 서가 | 장 수에 용어집 포함 |
+| [ComputingBooks](https://computing.euiyun.com/) | `computing-books` | `computing` | 서가 | 예정 4권은 서가 `roadmap.json`에도 둠. 모델 검사 CI가 이 저장소를 체크아웃 |
+| [MoneyBooks](https://money.euiyun.com/) | `money-books` | `money` | 서가 | |
+| [MedicalBooks](https://medical.euiyun.com/) | `medical-books` | `health` | 서가 | |
+| [SystemBooks](https://system.euiyun.com/) | `system-books` | `electronics` | 허브 | 분야에 서가 밖 ElectricBook이 함께 있음. CameraBook은 `culture`에서 옮겨 옴 |
+| [MusicBooks](https://music.euiyun.com/) | `music-books` | `culture` | 허브 | 분야를 ArtBooks와 나눠 씀 |
+| [ArtBooks](https://art.euiyun.com/) | `art-books` | `culture` | 허브 | 읽을 수 있는 서가 카탈로그가 없어 허브에서 직접 관리 |
 
-돈 교과서는 [MoneyBooks](https://money.euiyun.com/)(형제 저장소 `../money-books`)에서 통합 관리합니다. 2026-11-06에 MoneyBook·EconomicsBook·StockBook·EstateBook·TaxBook·InsureBook을 개별 사이트에서 옮겼습니다. 책 주소는 `https://money.euiyun.com/{slug}/`(`money`·`economics`·`stock`·`estate`·`tax`·`insure`)이며 `checkout`은 `money-books/{slug}`입니다. 책 ID는 그대로 두었고, 옛 `*book.euiyun.com` 주소는 리다이렉트 없이 내렸습니다. 메타데이터와 장·시뮬레이터 수는 `money-books/catalog.js`를 기준으로 합니다. `money` 분야 지도는 MoneyBooks 서가의 돈과 경제·투자·집·세금·보험 구분을 따르며, 서가 전체 의견(`moneybooks`)은 `sisterBooks`에 둡니다. 같은 날 StockBook에 대표 실험 두 개(살아 있는 호가창 `sim-live`, 생존 편향 백테스트 `sim-surv`)를 추가했습니다.
-
-시스템 교과서는 [SystemBooks](https://system.euiyun.com/)(형제 저장소 `../system-books`)에서 통합 관리합니다. 2026-11-07에 CarBook·ShipBook·PhoneBook·CameraBook을 개별 사이트에서 옮겼습니다. 책 주소는 `https://system.euiyun.com/{slug}/`(`car`·`ship`·`phone`·`camera`)이며 `checkout`은 `system-books/{slug}`입니다. 책 ID는 그대로 두고 CameraBook의 분야를 `culture`에서 `electronics`(기기·시스템)로 옮겼으며, 옛 `camerabook.euiyun.com` 주소는 리다이렉트 없이 내립니다. CameraBook은 3D 분해 중심으로 개편된 내용에 맞춰 소개·주제·색과 SystemBooks의 `camera` 표지(`js/covers.js`)를 가져왔습니다. 메타데이터와 장·시뮬레이터 수는 `system-books/catalog.js`를 기준으로 합니다. 서가 전체 의견(`systembooks`)은 `sisterBooks`에 둡니다.
-
-컴퓨터·AI 교과서는 [ComputingBooks](https://computing.euiyun.com/)(형제 저장소 `../computing-books`)에서 통합 관리합니다. 2026-11-07에 ComputerBook·NetworkBook·AIBook·AXBook을 개별 사이트에서 옮겼습니다. 책 주소는 `https://computing.euiyun.com/{slug}/`(`computer`·`network`·`ai`·`ax`)이며 `checkout`은 `computing-books/{slug}`입니다. 책 ID와 `computing` 분야는 그대로 두었습니다. 옛 `*book.euiyun.com` 사이트는 원래 저장소에서 새 주소의 같은 쪽으로 넘기는 리다이렉트 페이지만 배포하며(검색어·해시 유지, 없는 경로는 `404.html`이 넘김), 주소는 `legacyUrls`에 남겨 조회수를 합칩니다. 메타데이터와 장·시뮬레이터 수는 `computing-books/catalog.js`를 기준으로 합니다. 준비 중인 GPUBook·OSBook·DatabaseBook·StatBook은 서가의 `roadmap.json`에도 같은 목록으로 둡니다. 서가 전체 의견(`computingbooks`)은 `sisterBooks`에 둡니다. 모델 검사 워크플로는 ComputerBook을 `geniuskey/computing-books`에서 체크아웃합니다.
-
-의학·건강 교과서는 [MedicalBooks](https://medical.euiyun.com/)(형제 저장소 `../medical-books`)에서 통합 관리합니다. 2026-11-07에 BodyBook을 개별 사이트에서 옮겼습니다. 책 주소는 `https://medical.euiyun.com/{slug}/`이며 `checkout`은 `medical-books/{slug}`입니다. 2026-11-08에 AnatomyBook(`anatomy`)을 새로 출판했습니다. 책 ID와 `health` 분야는 그대로 두었습니다. 옛 `bodybook.euiyun.com` 사이트는 같은 방식의 리다이렉트 페이지만 배포하며, 주소는 `legacyUrls`에 남깁니다. 메타데이터와 장·시뮬레이터 수는 `medical-books/catalog.js`를 기준으로 합니다. 서가 전체 의견(`medicalbooks`)은 `sisterBooks`에 둡니다.
-
-미술 교과서는 [ArtBooks](https://art.euiyun.com/)(형제 저장소 `../art-books`, 옛 `geniuskey/artbook`)에서 통합 관리하며 `checkout`은 `art-books/{slug}`입니다.
-
-반도체 교과서는 [SemiBooks](https://semi.euiyun.com/)에서 통합 관리합니다. 책 주소는 `https://semi.euiyun.com/{slug}/`이며, 산업 지도는 `industry`, 팹 인프라는 `infra`를 사용합니다. `books.json`의 기존 출간 책 ID는 유지하고 `checkout`은 `semi-books/{slug}`를 가리켜 실험 목록도 통합 저장소에서 수집합니다. 팹 인프라는 집필을 완료해 출간 상태로 등록했으며, 통합 사이트의 독자 의견 링크와 맞춰 ID를 `infrabook`으로 사용합니다. 2026-10-21에는 CMP·세정 교과서를 `cmp` 주소의 `cmpbook`으로 출간 등록하고, SemiBooks의 `cmp` 표지와 읽기 경로 `planarize-and-clean`(ProcessBook → CMPBook → YieldBook)을 추가했습니다. 2026-10-31에는 산화·박막 증착 교과서를 `thinfilm` 주소의 `thinfilmbook`으로, 플라즈마공학 교과서를 `plasma` 주소의 `plasmabook`으로 출간 등록했습니다. PlasmaBook은 SemiBooks에서 반도체 공정 장비를 기준으로 쓴 책이므로 `science`가 아닌 `semiconductor` 분야의 `process` 단계에 두고, 전자기학과는 분야를 넘는 연결로 잇습니다. 두 책에 SemiBooks의 `film`·`plasma` 표지와 읽기 경로 `deposit-with-plasma`(ProcessBook → ThinFilmBook → PlasmaBook)를 추가했습니다. 같은 날 전력 반도체 교과서를 `power` 주소의 `powerbook`으로 출간 등록하고(`device` 단계), SemiBooks의 `power` 표지와 읽기 경로 `switch-the-power`(DeviceBook → PowerBook → PackagingBook)를 추가했습니다. 일부 책만 갱신할 때는 `python3 tools/collect-experiments.py --book infrabook`처럼 `--book`을 반복 지정하면 나머지 책의 실험 스냅샷을 보존합니다.
+지난 이전·출간 경위는 `git log -- data/books.json`에서 볼 수 있습니다.
 
 ## GA4 통계와 인기순 서가
 

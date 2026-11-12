@@ -2301,7 +2301,11 @@
         "HDR·색 관리·인쇄"
       ],
       "motif": "subpixel",
-      "checkout": "science-books/color"
+      "checkout": "science-books/color",
+      "keepLocal": [
+        "title",
+        "description"
+      ]
     },
     {
       "id": "electricbook",

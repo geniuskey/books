@@ -5,7 +5,7 @@ Each shelf repository (../<shelf>) owns its books' facts. This script copies the
 hub catalog so they are written once:
 
 - Book facts (title, description, status, counts, colors, ...) come from the shelf's
-  catalog.json (format euiyun-shelf/1) or, for older shelves, from catalog.js.
+  catalog.json or shelf.json (format euiyun-shelf/1) or, for older shelves, from catalog.js.
 - A shelf with a map (catalog.json "map") also owns its field's topic groups (fields[].stages),
   the map title/description/links (fields[].map) and each book's stage. A group may list several
   shelf stages in "stages"; the hub stores the group's ID as the book's stage.
@@ -47,9 +47,10 @@ def fetch(url):
 
 def parse_shelf(read):
     """Return (books, map, field) using read(name) -> text or None, or None without a readable catalog."""
-    text = read('catalog.json')
-    if text:
-        data = json.loads(text)
+    # science-books keeps its own catalog.json, so its standard catalog is shelf.json.
+    for name in ('catalog.json', 'shelf.json'):
+        text = read(name)
+        data = json.loads(text) if text else {}
         if data.get('format') == 'euiyun-shelf/1':
             return data['books'], data.get('map'), data['shelf'].get('field')
     text = read('catalog.js')
