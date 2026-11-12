@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>학교 수학·과학 지식 지도 · Books</title>
+<meta name="description" content="분야별 지식 지도의 새 주소로 이동합니다.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://books.euiyun.com/paths/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>
+(function () {
+  const params = new URLSearchParams(location.search);
+  const fields = ["semiconductor", "science", "math", "construction", "computing", "electronics", "money", "health", "culture", "school"];
+  const aliases = {"ai": "computing", "housing": "money", "art": "culture"};
+  for (const key of ["f", "field"]) {
+    if (Object.hasOwn(aliases, params.get(key))) params.set(key, aliases[params.get(key)]);
+  }
+  const field = "school" || (fields.includes(params.get("f")) ? params.get("f") : fields.includes(params.get("field")) ? params.get("field") : "");
+  params.delete("f");
+  params.set("view", "map");
+  if (field) params.set("field", field); else params.delete("field");
+  location.replace("/paths/?" + params + location.hash);
+})();
+</script>
+<script>try { sessionStorage.removeItem("feedback-admin-session"); } catch (e) {}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LST8C5WL08"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LST8C5WL08');
+</script>
+</head>
+<body><p>지식 지도의 새 주소로 이동합니다. <a href="/paths/?view=map&amp;field=school">지식 지도 보기 →</a></p></body>
+</html>
