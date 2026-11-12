@@ -52,7 +52,9 @@ EB.initKnowledgeMaps = (d) => {
     EB.tint(fieldMap, f);
     const libraryUrl = EB.fieldUrl(id);
     $("#field-library-link").href = libraryUrl;
-    const map = window.FIELD_MAPS[id];
+    // 서가가 관리하는 지도(f.map)에 허브 전용 값(배치·추가 연결)을 얹는다.
+    const hubMap = window.FIELD_MAPS[id];
+    const map = f.map || hubMap ? { ...f.map, ...hubMap, links: [...(f.map?.links || []), ...(hubMap?.links || [])] } : undefined;
     const groups = f.stages
       ? f.stages.map((stage) => ({ ...stage, books: f.books.filter((book) => book.stage === stage.id) }))
       : (map?.groups || []).map(([name, en, desc, ids]) => ({ name, en, desc, books: ids.map((bookId) => f.books.find((book) => book.id === bookId)).filter(Boolean) })).filter((group) => group.books.length);

@@ -28,8 +28,9 @@ function checkLink(link, field) {
   }
 }
 for (const field of data.fields) {
-  const map = maps[field.id];
-  assert(map, `Missing map: ${field.id}`);
+  // A shelf-owned map arrives in books.json (field.map); js/field-maps.js may add hub-only links.
+  assert(maps[field.id] || field.map, `Missing map: ${field.id}`);
+  const map = { ...field.map, ...maps[field.id], links: [...(field.map?.links || []), ...(maps[field.id]?.links || [])] };
   const members = data.books.filter(book => book.field === field.id);
   const assigned = field.stages
     ? field.stages.flatMap(stage => members.filter(book => book.stage === stage.id).map(book => book.id))

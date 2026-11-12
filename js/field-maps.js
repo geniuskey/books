@@ -1,4 +1,5 @@
-/* 분야별 개념 묶음과 연결. 책의 집필 순서와는 독립적인 탐색 지도입니다. */
+/* 분야별 개념 묶음과 연결. 책의 집필 순서와는 독립적인 탐색 지도입니다.
+   서가가 지도를 가진 분야는 data/books.json의 fields[].stages·map을 쓰고, 여기에는 허브 전용 값(regions, 추가 연결)만 둡니다. */
 window.FIELD_MAPS = {
   science: {
     title: "대학에서 배우는 과학과 공학의 기초",
@@ -262,13 +263,7 @@ window.FIELD_MAPS = {
       ["세금·보험", "Tax & Insurance", "월급·투자·상속에 붙는 세금과 위험에 대비하는 보험", ["taxbook", "insurebook"]]
     ]
   },
-  health: {
-    title: "몸을 이해하고 일상을 돌보기",
-    desc: "심장·폐·근육·호르몬의 작동과 연결을 배우며 몸의 원리를 이해합니다.",
-    groups: [
-      ["몸의 원리", "Understand", "우리 몸의 구조와 작동 방식", ["bodybook"]],
-    ],
-  },
+  // health: 지도는 medical-books의 book.json(map)에서 tools/sync-books.py로 data/books.json에 옵니다.
   culture: {
     "title": "세상을 이해하고 표현하는 방법",
     "desc": "음악에서 미술과 시각 표현, 웹·제품·산업디자인까지.",

@@ -96,11 +96,20 @@ python3 -m http.server 8000   # → http://localhost:8000
 - `css/style.css` — 각 교과서와 같은 디자인 토큰을 쓰는 공통 스타일
 
 ## 데이터: `data/books.json`
-책 정보의 원본입니다. 실험 탐색과 학습 경로는 아래의 편집 데이터도 사용합니다.
+사이트가 읽는 책 목록입니다. 실험 탐색과 학습 경로는 아래의 편집 데이터도 사용합니다.
+
+### 서가에서 가져오기: `tools/sync-books.py`
+서가 저장소(`../<서가>`)에 있는 책의 사실은 서가가 원본입니다. 제목·부제·소개·상태·주소·장과 시뮬레이터 수·색·주제·표지 무늬·코드가 여기에 해당합니다. 서가에서 바꾼 뒤 `python3 tools/sync-books.py`로 `books.json`에 옮기고, `--check`로 어긋난 값만 볼 수 있습니다. 책은 `checkout`(`<서가>/<slug>`)으로, 없으면 ID로 맞춥니다. 서가는 `catalog.json`(`format: euiyun-shelf/1`)을 읽고, 아직 없으면 `catalog.js`를 읽습니다.
+
+- 허브 전용 값(`field`, `featured`, `en`, `legacyUrls`, `level`, `checkout`)은 건드리지 않습니다.
+- 이 사이트에서만 다르게 쓰는 값은 책의 `keepLocal`에 적습니다. 예: 코드가 겹치는 AnatomyBook `ANT`, MaterialsBook `CMT`.
+- 집필 예정 책에는 주소와 장·시뮬레이터 수를 옮기지 않습니다.
+- 서가 `catalog.json`에 `map`이 있으면 그 분야의 묶음(`fields[].stages`), 지도 제목·설명·연결(`fields[].map`)과 책의 `stage`도 서가에서 가져옵니다. 이런 분야는 `js/field-maps.js`에 허브 전용 값(`regions`, 추가 연결)만 둡니다. 지금은 `health`(medical-books)가 이 방식입니다.
+- art-books·science-books는 아직 읽을 수 있는 서가 카탈로그가 없어 직접 관리합니다.
 
 - `wings` — 두 갈래 (`work`, `life`)
 - `fieldAliases` — 이전 분야 ID를 통합 분야로 연결 (`ai` → `computing`, `housing` → `money`, `art` → `culture`).
-- `fields` — 분야. `id`, `wing`, `name`, `en`, `desc`, `color`, `colorDark`, 선택적으로 `stages`(가치사슬 단계, 지금은 반도체만)
+- `fields` — 분야. `id`, `wing`, `name`, `en`, `desc`, `color`, `colorDark`, 선택적으로 `stages`(지도 묶음. 반도체는 직접, 서가 지도가 있는 분야는 `sync-books.py`가 채움)와 `map`(서가 지도의 제목·설명·연결)
 - `books` — 책. 같은 분야 안에서는 배열 순서가 추천 읽기 순서이자 웨이퍼를 채우는 순서입니다.
 - `phases` — 로드맵 단계 (1 다음 차례, 2 후속 후보). 집필 중인 책을 포함해 다음 차례는 최대 3권
 - `statusLabels` — 상태 표시 문구 (`published` 출간, `writing` 집필 중, `planned` 집필 예정)
