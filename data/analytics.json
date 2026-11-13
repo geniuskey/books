@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "stats": {
     "since": "2026-10-30",
-    "until": "2026-11-13",
-    "visitors": 7693,
-    "returning": 1972,
-    "pageViews": 40307
+    "until": "2026-11-14",
+    "visitors": 9185,
+    "returning": 2225,
+    "pageViews": 47042
   },
   "opens": {
     "period": "최근 28일",
@@ -13,319 +13,319 @@
     "books": [
       {
         "id": "memorybook",
-        "opens": 4467
+        "opens": 5059
       },
       {
         "id": "processbook",
-        "opens": 2705
+        "opens": 3015
       },
       {
         "id": "devicebook",
-        "opens": 2049
+        "opens": 2329
       },
       {
         "id": "packagingbook",
-        "opens": 1201
-      },
-      {
-        "id": "sensorbook",
-        "opens": 855
-      },
-      {
-        "id": "yieldbook",
-        "opens": 853
+        "opens": 1417
       },
       {
         "id": "moneybook",
-        "opens": 850
+        "opens": 1108
+      },
+      {
+        "id": "sensorbook",
+        "opens": 917
+      },
+      {
+        "id": "yieldbook",
+        "opens": 914
       },
       {
         "id": "etchbook",
-        "opens": 835
+        "opens": 870
       },
       {
         "id": "chipindustrybook",
-        "opens": 804
+        "opens": 856
       },
       {
         "id": "designbook",
-        "opens": 771
+        "opens": 806
       },
       {
         "id": "digitalbook",
-        "opens": 742
+        "opens": 804
       },
       {
         "id": "analogbook",
-        "opens": 699
-      },
-      {
-        "id": "socbook",
-        "opens": 630
+        "opens": 737
       },
       {
         "id": "aibook",
-        "opens": 603
+        "opens": 724
       },
       {
-        "id": "lithobook",
-        "opens": 589
-      },
-      {
-        "id": "testbook",
-        "opens": 589
-      },
-      {
-        "id": "failurebook",
-        "opens": 528
+        "id": "socbook",
+        "opens": 714
       },
       {
         "id": "displaybook",
-        "opens": 476
-      },
-      {
-        "id": "estatebook",
-        "opens": 466
-      },
-      {
-        "id": "computerbook",
-        "opens": 441
-      },
-      {
-        "id": "bodybook",
-        "opens": 395
+        "opens": 702
       },
       {
         "id": "stockbook",
-        "opens": 388
+        "opens": 651
       },
       {
-        "id": "cmpbook",
-        "opens": 319
+        "id": "failurebook",
+        "opens": 631
+      },
+      {
+        "id": "testbook",
+        "opens": 625
+      },
+      {
+        "id": "estatebook",
+        "opens": 619
+      },
+      {
+        "id": "lithobook",
+        "opens": 613
+      },
+      {
+        "id": "computerbook",
+        "opens": 487
+      },
+      {
+        "id": "bodybook",
+        "opens": 454
       },
       {
         "id": "general-physics",
-        "opens": 310
-      },
-      {
-        "id": "infrabook",
-        "opens": 287
+        "opens": 383
       },
       {
         "id": "carbook",
-        "opens": 286
+        "opens": 360
       },
       {
-        "id": "dopingbook",
-        "opens": 282
+        "id": "cmpbook",
+        "opens": 331
       },
       {
         "id": "axbook",
-        "opens": 264
+        "opens": 321
+      },
+      {
+        "id": "dopingbook",
+        "opens": 308
       },
       {
         "id": "plasmabook",
-        "opens": 260
+        "opens": 301
+      },
+      {
+        "id": "infrabook",
+        "opens": 299
       },
       {
         "id": "networkbook",
-        "opens": 256
-      },
-      {
-        "id": "tcadbook",
-        "opens": 248
-      },
-      {
-        "id": "opticsbook",
-        "opens": 231
-      },
-      {
-        "id": "thinfilmbook",
-        "opens": 231
-      },
-      {
-        "id": "camerabook",
-        "opens": 203
+        "opens": 288
       },
       {
         "id": "phonebook",
-        "opens": 184
+        "opens": 262
       },
       {
-        "id": "electromagnetics",
-        "opens": 182
+        "id": "opticsbook",
+        "opens": 259
       },
       {
-        "id": "powerbook",
-        "opens": 180
+        "id": "tcadbook",
+        "opens": 255
       },
       {
-        "id": "mathbook",
-        "opens": 176
+        "id": "thinfilmbook",
+        "opens": 249
       },
       {
         "id": "economicsbook",
-        "opens": 169
+        "opens": 247
       },
       {
-        "id": "general-chemistry",
-        "opens": 143
+        "id": "mathbook",
+        "opens": 241
       },
       {
-        "id": "colorbook",
-        "opens": 141
+        "id": "camerabook",
+        "opens": 235
+      },
+      {
+        "id": "electromagnetics",
+        "opens": 227
       },
       {
         "id": "musicbook",
-        "opens": 138
+        "opens": 200
+      },
+      {
+        "id": "powerbook",
+        "opens": 194
+      },
+      {
+        "id": "colorbook",
+        "opens": 177
       },
       {
         "id": "probability-statistics",
-        "opens": 127
+        "opens": 176
       },
       {
-        "id": "fluid-mechanics",
-        "opens": 117
-      },
-      {
-        "id": "linearbook",
-        "opens": 117
+        "id": "general-chemistry",
+        "opens": 162
       },
       {
         "id": "artbook-type",
-        "opens": 115
-      },
-      {
-        "id": "taxbook",
-        "opens": 112
-      },
-      {
-        "id": "materials-science",
-        "opens": 91
-      },
-      {
-        "id": "pianobook",
-        "opens": 91
-      },
-      {
-        "id": "artbook-color",
-        "opens": 83
+        "opens": 154
       },
       {
         "id": "anatomybook",
-        "opens": 79
+        "opens": 153
       },
       {
-        "id": "shipbook",
-        "opens": 78
+        "id": "taxbook",
+        "opens": 153
+      },
+      {
+        "id": "pianobook",
+        "opens": 146
+      },
+      {
+        "id": "linearbook",
+        "opens": 142
+      },
+      {
+        "id": "fluid-mechanics",
+        "opens": 124
       },
       {
         "id": "calculusbook",
-        "opens": 76
+        "opens": 120
+      },
+      {
+        "id": "materials-science",
+        "opens": 107
+      },
+      {
+        "id": "artbook-color",
+        "opens": 104
+      },
+      {
+        "id": "shipbook",
+        "opens": 100
       },
       {
         "id": "insurebook",
-        "opens": 74
-      },
-      {
-        "id": "modern-physics",
-        "opens": 68
+        "opens": 87
       },
       {
         "id": "artbook-history",
-        "opens": 66
-      },
-      {
-        "id": "quantum-mechanics",
-        "opens": 62
-      },
-      {
-        "id": "thermal-physics",
-        "opens": 62
+        "opens": 84
       },
       {
         "id": "guitarbook",
-        "opens": 59
+        "opens": 82
+      },
+      {
+        "id": "modern-physics",
+        "opens": 80
+      },
+      {
+        "id": "quantum-mechanics",
+        "opens": 75
+      },
+      {
+        "id": "thermal-physics",
+        "opens": 69
       },
       {
         "id": "odebook",
-        "opens": 57
-      },
-      {
-        "id": "solid-state",
-        "opens": 57
-      },
-      {
-        "id": "artbook-drawing",
-        "opens": 48
-      },
-      {
-        "id": "artbook-industrial",
-        "opens": 47
-      },
-      {
-        "id": "artbook-web",
-        "opens": 46
+        "opens": 66
       },
       {
         "id": "mechanicsbook",
-        "opens": 45
+        "opens": 65
       },
       {
-        "id": "artbook-image",
-        "opens": 44
+        "id": "artbook-drawing",
+        "opens": 62
+      },
+      {
+        "id": "solid-state",
+        "opens": 62
+      },
+      {
+        "id": "artbook-industrial",
+        "opens": 51
+      },
+      {
+        "id": "artbook-web",
+        "opens": 51
       },
       {
         "id": "artbook-product",
+        "opens": 49
+      },
+      {
+        "id": "sitebook",
+        "opens": 48
+      },
+      {
+        "id": "artbook-image",
+        "opens": 47
+      },
+      {
+        "id": "drumbook",
+        "opens": 45
+      },
+      {
+        "id": "bassbook",
+        "opens": 44
+      },
+      {
+        "id": "organic-chemistry",
         "opens": 44
       },
       {
         "id": "artbook-composition",
-        "opens": 39
-      },
-      {
-        "id": "organic-chemistry",
-        "opens": 39
-      },
-      {
-        "id": "bassbook",
-        "opens": 37
-      },
-      {
-        "id": "drumbook",
-        "opens": 36
-      },
-      {
-        "id": "sitebook",
-        "opens": 29
+        "opens": 42
       },
       {
         "id": "materialsbook",
-        "opens": 27
+        "opens": 37
       },
       {
         "id": "numericalbook",
-        "opens": 25
+        "opens": 37
       },
       {
         "id": "structurebook",
+        "opens": 30
+      },
+      {
+        "id": "concretebook",
         "opens": 24
       },
       {
         "id": "geotechbook",
-        "opens": 19
-      },
-      {
-        "id": "concretebook",
-        "opens": 17
+        "opens": 22
       },
       {
         "id": "bimbook",
-        "opens": 14
+        "opens": 19
       },
       {
         "id": "civilbook",
-        "opens": 12
+        "opens": 15
       }
     ]
   }
