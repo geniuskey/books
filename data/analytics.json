@@ -3,9 +3,9 @@
   "stats": {
     "since": "2026-10-30",
     "until": "2026-11-14",
-    "visitors": 9185,
-    "returning": 2225,
-    "pageViews": 47042
+    "visitors": 9211,
+    "returning": 2230,
+    "pageViews": 47294
   },
   "opens": {
     "period": "최근 28일",
@@ -13,55 +13,55 @@
     "books": [
       {
         "id": "memorybook",
-        "opens": 5059
+        "opens": 5094
       },
       {
         "id": "processbook",
-        "opens": 3015
+        "opens": 3039
       },
       {
         "id": "devicebook",
-        "opens": 2329
+        "opens": 2337
       },
       {
         "id": "packagingbook",
-        "opens": 1417
+        "opens": 1429
       },
       {
         "id": "moneybook",
-        "opens": 1108
+        "opens": 1116
+      },
+      {
+        "id": "yieldbook",
+        "opens": 918
       },
       {
         "id": "sensorbook",
         "opens": 917
       },
       {
-        "id": "yieldbook",
-        "opens": 914
-      },
-      {
         "id": "etchbook",
-        "opens": 870
+        "opens": 872
       },
       {
         "id": "chipindustrybook",
-        "opens": 856
+        "opens": 862
       },
       {
         "id": "designbook",
-        "opens": 806
+        "opens": 814
       },
       {
         "id": "digitalbook",
-        "opens": 804
+        "opens": 809
       },
       {
         "id": "analogbook",
-        "opens": 737
+        "opens": 741
       },
       {
         "id": "aibook",
-        "opens": 724
+        "opens": 727
       },
       {
         "id": "socbook",
@@ -73,15 +73,15 @@
       },
       {
         "id": "stockbook",
-        "opens": 651
+        "opens": 662
       },
       {
         "id": "failurebook",
-        "opens": 631
+        "opens": 635
       },
       {
         "id": "testbook",
-        "opens": 625
+        "opens": 626
       },
       {
         "id": "estatebook",
@@ -89,11 +89,11 @@
       },
       {
         "id": "lithobook",
-        "opens": 613
+        "opens": 618
       },
       {
         "id": "computerbook",
-        "opens": 487
+        "opens": 489
       },
       {
         "id": "bodybook",
@@ -109,15 +109,15 @@
       },
       {
         "id": "cmpbook",
-        "opens": 331
-      },
-      {
-        "id": "axbook",
-        "opens": 321
+        "opens": 332
       },
       {
         "id": "dopingbook",
-        "opens": 308
+        "opens": 324
+      },
+      {
+        "id": "axbook",
+        "opens": 323
       },
       {
         "id": "plasmabook",
@@ -129,11 +129,11 @@
       },
       {
         "id": "networkbook",
-        "opens": 288
+        "opens": 292
       },
       {
         "id": "phonebook",
-        "opens": 262
+        "opens": 263
       },
       {
         "id": "opticsbook",
@@ -161,11 +161,11 @@
       },
       {
         "id": "electromagnetics",
-        "opens": 227
+        "opens": 231
       },
       {
         "id": "musicbook",
-        "opens": 200
+        "opens": 202
       },
       {
         "id": "powerbook",
@@ -173,7 +173,7 @@
       },
       {
         "id": "colorbook",
-        "opens": 177
+        "opens": 178
       },
       {
         "id": "probability-statistics",
@@ -184,12 +184,12 @@
         "opens": 162
       },
       {
-        "id": "artbook-type",
-        "opens": 154
+        "id": "anatomybook",
+        "opens": 156
       },
       {
-        "id": "anatomybook",
-        "opens": 153
+        "id": "artbook-type",
+        "opens": 154
       },
       {
         "id": "taxbook",
@@ -197,7 +197,7 @@
       },
       {
         "id": "pianobook",
-        "opens": 146
+        "opens": 147
       },
       {
         "id": "linearbook",
@@ -205,7 +205,7 @@
       },
       {
         "id": "fluid-mechanics",
-        "opens": 124
+        "opens": 125
       },
       {
         "id": "calculusbook",
@@ -225,7 +225,7 @@
       },
       {
         "id": "insurebook",
-        "opens": 87
+        "opens": 88
       },
       {
         "id": "artbook-history",
@@ -325,7 +325,7 @@
       },
       {
         "id": "civilbook",
-        "opens": 15
+        "opens": 16
       }
     ]
   }
