@@ -1,13 +1,13 @@
 name: Update GA4 stats and top books
 
-# 3시간마다 GA4에서 Books 방문 통계와 홈에서 많이 연 책(최근 28일)을 집계해 data/analytics.json을 갱신한다.
+# 매일 한 번 GA4에서 Books 방문 통계와 홈에서 많이 연 책(최근 28일)을 집계해 data/analytics.json을 갱신한다.
 # 필요한 저장소 설정(Settings → Secrets and variables → Actions, 환경이 아닌 Repository 수준):
 #   Secret GA4_CREDENTIALS  서비스 계정 JSON
 #   Variable GA4_PROPERTY_ID 숫자 속성 ID (Secret으로 넣어도 읽는다)
 
 on:
   schedule:
-    - cron: '17 */3 * * *'  # 3시간마다 17분. UTC 기준이라 KST로는 0·3·6·…·21시 17분. GA4 당일 데이터는 몇 시간 늦게 채워질 수 있다.
+    - cron: '17 21 * * *'  # 매일 UTC 21:17 = KST 06:17(서가 동기화 05:41 다음). GA4 당일 데이터는 몇 시간 늦게 채워질 수 있다.
   workflow_dispatch:
 
 permissions:
