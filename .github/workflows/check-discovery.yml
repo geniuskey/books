@@ -6,6 +6,7 @@ on:
     paths:
       - 'data/**'
       - 'js/field-maps.js'
+      - 'library/index.html'
       - 'tools/**'
       - '.github/workflows/check-discovery.yml'
   workflow_dispatch:
@@ -35,4 +36,6 @@ jobs:
       - run: node --test tools/check-models.test.cjs
         working-directory: books
       - run: python3 tools/check-discovery.py
+        working-directory: books
+      - run: python3 tools/build-library.py --check
         working-directory: books

@@ -121,6 +121,7 @@ EB.start("library", (d) => {
   window.addEventListener("resize", closeDetails);
   window.addEventListener("blur", closeDetails);
 
+  document.querySelector("#shelf-groups .static-catalog")?.remove();
   const rows = [];
   const sections = [];
   d.fields.forEach((field) => {

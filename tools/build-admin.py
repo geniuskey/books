@@ -4,7 +4,7 @@ from pathlib import Path
 
 root = Path(__file__).resolve().parent.parent
 html = (root / 'feedback/index.html').read_text()
-html = html.replace('독자 의견 · Books', '게시판 관리 · Books')
+html = html.replace('독자 의견 · 교과서 오류 제보와 건의 · Books', '게시판 관리 · Books')
 html = html.replace('https://books.euiyun.com/feedback/', 'https://books.euiyun.com/admin/')
 html = html.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<meta name="robots" content="noindex">')
 html = html.replace('<h1>독자 의견</h1>', '<h1>게시판 관리</h1>')

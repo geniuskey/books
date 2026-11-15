@@ -76,3 +76,8 @@ body[data-page="library"] main > .wrap,
 body[data-page="library"] #shelf-groups > .group { margin-top: 0; padding-top: 12px; }
 body[data-page="library"] #shelf-groups .group-head { margin-bottom: 4px; padding-bottom: 6px; }
 body[data-page="library"] #shelf-groups .catalog-list { padding-top: 8px; }
+
+/* 검색 엔진용 정적 책 목록: JS가 실제 책장을 그리면 숨기고 지운다 */
+.js .static-catalog { display: none; }
+.static-catalog ul { margin: 0 0 1rem; padding-left: 1.2rem; }
+.static-catalog li p { margin: .1rem 0 .5rem; color: var(--text-dim); font-size: .9em; }
