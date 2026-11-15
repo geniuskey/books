@@ -1070,8 +1070,18 @@ body[data-page="simulators"] .lib-filters { flex-direction: row; flex-wrap: wrap
   .browse-fields a { padding: 7px 11px; font-size: 12px; }
 }
 
-@media (min-width: 1101px) {
-  .home-library > .wrap { max-width: 1160px; }
+/* FHD 이상 넓은 화면: 홈이 가운데 1160px에 몰리지 않게 폭을 넓히고 서가를 3열로 둔다. */
+@media (min-width: 1700px) {
+  .home-page { --maxw: 1720px; }
+  .home-library .home-shelves { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 28px; }
+  .library-welcome-side { max-width: 460px; }
+  /* 대표 실험 여섯 장을 겹치지 않고 한 줄에 나란히 둔다. */
+  .home-experiments { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; }
+  .home-experiment { width: auto; }
+  /* 저자 노트는 두 단으로 흘려 줄 길이는 지키고 세로 길이는 줄인다. */
+  .author-body { max-width: none; columns: 2; column-gap: 56px; }
+  .author-body h2, .author-body .sign { column-span: all; }
+  .author-body p { break-inside: avoid; }
 }
 
 @media (min-width: 1101px) {
