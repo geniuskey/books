@@ -183,7 +183,7 @@
   EB.footer = () => {
     const f = document.createElement("footer");
     f.innerHTML = `<div class="wrap">
-      <p>© euiyun · 본문 <a href="https://creativecommons.org/licenses/by/4.0/deed.ko">CC BY 4.0</a>, 코드 <a href="https://github.com/geniuskey/books/blob/main/LICENSE.md">MIT</a></p>
+      <p>© 2026 <a href="https://euiyun.com">Euiyun Lab</a> · 본문 <a href="https://creativecommons.org/licenses/by/4.0/deed.ko">CC BY 4.0</a>, 코드 <a href="https://github.com/geniuskey/books/blob/main/LICENSE.md">MIT</a></p>
       <p class="links"><a href="/">홈</a><a href="/library/">전체 책장</a><a href="/paths/">지식 지도</a><a href="/roadmap/">로드맵</a><a href="/feedback/">독자 의견</a><a href="https://github.com/geniuskey/books">이 사이트의 소스</a><a href="https://buymeacoffee.com/euiyun" target="_blank" rel="noopener">☕ 커피 한 잔 후원</a></p>
     </div>`;
     document.body.appendChild(f);
