@@ -98,7 +98,7 @@
   {
     "id": "devicebook/crystal/sim-split",
     "bookId": "devicebook",
-    "title": "원자를 가까이: 준위가 밴드가 되는 과정 (Si, sp³ 모형)",
+    "title": "원자를 가까이: 준위가 밴드가 되는 과정 (Si를 본뜬 개념 모형)",
     "link": "chapters/crystal.html#sim-split"
   },
   {
@@ -266,7 +266,7 @@
   {
     "id": "devicebook/hetero/sim-align",
     "bookId": "devicebook",
-    "title": "밴드 정렬 탐색기: 앤더슨 규칙 vs 실측",
+    "title": "밴드 정렬 탐색기",
     "link": "chapters/hetero.html#sim-align"
   },
   {
@@ -536,7 +536,7 @@
   {
     "id": "devicebook/pn/sim-exact",
     "bookId": "devicebook",
-    "title": "공핍 근사 vs 정확한 포아송 수치 해",
+    "title": "공핍 근사 vs 포아송·수송 수치 해",
     "link": "chapters/pn.html#sim-exact"
   },
   {
@@ -1814,7 +1814,7 @@
   {
     "id": "analogbook/feedback/sim-loop",
     "bookId": "analogbook",
-    "title": "A를 만 배 바꿔도 폐루프 이득은 1/β 근처에 머문다",
+    "title": "A를 키우면 폐루프 이득이 1/β에 가까워진다",
     "link": "chapters/feedback.html#sim-loop"
   },
   {
@@ -1958,7 +1958,7 @@
   {
     "id": "analogbook/lab/sim-chain",
     "bookId": "analogbook",
-    "title": "AB-1 신호 사슬: 잡음 예산을 짜서 ENOB 10.5를 넘겨라",
+    "title": "AB-1 신호 사슬 잡음 예산",
     "link": "chapters/lab.html#sim-chain"
   },
   {
@@ -2078,7 +2078,7 @@
   {
     "id": "analogbook/mirror/sim-beta",
     "bookId": "analogbook",
-    "title": "β-multiplier의 두 해와 스타트업",
+    "title": "β-multiplier의 동작점과 스타트업",
     "link": "chapters/mirror.html#sim-beta"
   },
   {
