@@ -56242,5 +56242,479 @@
     "bookId": "bassbook",
     "title": "튜닝을 바꾸면 같은 모양이 어떻게 되나",
     "link": "chapters/tuning.html#sim-tun-alt"
+  },
+  {
+    "id": "ensemblebook/balance/sim-bal-band",
+    "bookId": "ensemblebook",
+    "title": "임계대역의 폭과 음정",
+    "link": "chapters/balance.html#sim-bal-band"
+  },
+  {
+    "id": "ensemblebook/balance/sim-bal-spread",
+    "bookId": "ensemblebook",
+    "title": "마스커와 탐침음",
+    "link": "chapters/balance.html#sim-bal-spread"
+  },
+  {
+    "id": "ensemblebook/balance/sim-bal-map",
+    "bookId": "ensemblebook",
+    "title": "마스킹 지도",
+    "link": "chapters/balance.html#sim-bal-map"
+  },
+  {
+    "id": "ensemblebook/balance/sim-bal-dyn",
+    "bookId": "ensemblebook",
+    "title": "같은 f, 다른 음량",
+    "link": "chapters/balance.html#sim-bal-dyn"
+  },
+  {
+    "id": "ensemblebook/balance/sim-bal-solo",
+    "bookId": "ensemblebook",
+    "title": "협주곡: 독주 대 합주",
+    "link": "chapters/balance.html#sim-bal-solo"
+  },
+  {
+    "id": "ensemblebook/balance/sim-bal-fix",
+    "bookId": "ensemblebook",
+    "title": "묻힌 선율 구하기",
+    "link": "chapters/balance.html#sim-bal-fix"
+  },
+  {
+    "id": "ensemblebook/blend/sim-bl-fuse",
+    "bookId": "ensemblebook",
+    "title": "하나인가, 둘인가",
+    "link": "chapters/blend.html#sim-bl-fuse"
+  },
+  {
+    "id": "ensemblebook/blend/sim-bl-pairs",
+    "bookId": "ensemblebook",
+    "title": "더블링 짝 비교",
+    "link": "chapters/blend.html#sim-bl-pairs"
+  },
+  {
+    "id": "ensemblebook/blend/sim-bl-octave",
+    "bookId": "ensemblebook",
+    "title": "겹치는 배음 세기",
+    "link": "chapters/blend.html#sim-bl-octave"
+  },
+  {
+    "id": "ensemblebook/blend/sim-bl-bright",
+    "bookId": "ensemblebook",
+    "title": "악기별 밝기 지도",
+    "link": "chapters/blend.html#sim-bl-bright"
+  },
+  {
+    "id": "ensemblebook/blend/sim-bl-new",
+    "bookId": "ensemblebook",
+    "title": "새 악기 만들기",
+    "link": "chapters/blend.html#sim-bl-new"
+  },
+  {
+    "id": "ensemblebook/brass/sim-br-tube",
+    "bookId": "ensemblebook",
+    "title": "원통관과 금관의 공명",
+    "link": "chapters/brass.html#sim-br-tube"
+  },
+  {
+    "id": "ensemblebook/brass/sim-br-series",
+    "bookId": "ensemblebook",
+    "title": "자연 배음 불어 보기",
+    "link": "chapters/brass.html#sim-br-series"
+  },
+  {
+    "id": "ensemblebook/brass/sim-br-valves",
+    "bookId": "ensemblebook",
+    "title": "밸브 조합과 슬라이드 포지션",
+    "link": "chapters/brass.html#sim-br-valves"
+  },
+  {
+    "id": "ensemblebook/brass/sim-br-dyn",
+    "bookId": "ensemblebook",
+    "title": "셈여림이 바꾸는 스펙트럼",
+    "link": "chapters/brass.html#sim-br-dyn"
+  },
+  {
+    "id": "ensemblebook/brass/sim-br-mute",
+    "bookId": "ensemblebook",
+    "title": "약음기와 막은 음",
+    "link": "chapters/brass.html#sim-br-mute"
+  },
+  {
+    "id": "ensemblebook/brass/sim-br-quintet",
+    "bookId": "ensemblebook",
+    "title": "금관 5중주 믹서",
+    "link": "chapters/brass.html#sim-br-quintet"
+  },
+  {
+    "id": "ensemblebook/chamber/sim-ch-compare",
+    "bookId": "ensemblebook",
+    "title": "같은 곡, 다른 편성",
+    "link": "chapters/chamber.html#sim-ch-compare"
+  },
+  {
+    "id": "ensemblebook/chamber/sim-ch-glue",
+    "bookId": "ensemblebook",
+    "title": "호른이 있을 때와 없을 때",
+    "link": "chapters/chamber.html#sim-ch-glue"
+  },
+  {
+    "id": "ensemblebook/chamber/sim-ch-build",
+    "bookId": "ensemblebook",
+    "title": "네 성부에 악기 배정하기",
+    "link": "chapters/chamber.html#sim-ch-build"
+  },
+  {
+    "id": "ensemblebook/chamber/sim-ch-piano",
+    "bookId": "ensemblebook",
+    "title": "피아노 반주와 현의 선율",
+    "link": "chapters/chamber.html#sim-ch-piano"
+  },
+  {
+    "id": "ensemblebook/chamber/sim-ch-quiz",
+    "bookId": "ensemblebook",
+    "title": "이 편성은 무엇일까?",
+    "link": "chapters/chamber.html#sim-ch-quiz"
+  },
+  {
+    "id": "ensemblebook/glossary/sim-gl-sounds",
+    "bookId": "ensemblebook",
+    "title": "소리 나는 악기·주법 카드",
+    "link": "chapters/glossary.html#sim-gl-sounds"
+  },
+  {
+    "id": "ensemblebook/glossary/sim-gl-timbre",
+    "bookId": "ensemblebook",
+    "title": "이 소리는 어떤 악기?",
+    "link": "chapters/glossary.html#sim-gl-timbre"
+  },
+  {
+    "id": "ensemblebook/glossary/sim-gl-arrange",
+    "bookId": "ensemblebook",
+    "title": "어떤 편성이 연주하나?",
+    "link": "chapters/glossary.html#sim-gl-arrange"
+  },
+  {
+    "id": "ensemblebook/orchestra/sim-orc-growth",
+    "bookId": "ensemblebook",
+    "title": "시대별 오케스트라",
+    "link": "chapters/orchestra.html#sim-orc-growth"
+  },
+  {
+    "id": "ensemblebook/orchestra/sim-orc-seat",
+    "bookId": "ensemblebook",
+    "title": "배치를 바꾸고 자리를 끌어 옮기기",
+    "link": "chapters/orchestra.html#sim-orc-seat"
+  },
+  {
+    "id": "ensemblebook/orchestra/sim-orc-ir",
+    "bookId": "ensemblebook",
+    "title": "홀의 임펄스 응답",
+    "link": "chapters/orchestra.html#sim-orc-ir"
+  },
+  {
+    "id": "ensemblebook/orchestra/sim-orc-sabine",
+    "bookId": "ensemblebook",
+    "title": "홀을 설계해 잔향 시간 계산하기",
+    "link": "chapters/orchestra.html#sim-orc-sabine"
+  },
+  {
+    "id": "ensemblebook/orchestra/sim-orc-full",
+    "bookId": "ensemblebook",
+    "title": "오케스트라를 여러 자리에서 듣기",
+    "link": "chapters/orchestra.html#sim-orc-full"
+  },
+  {
+    "id": "ensemblebook/percussion/sim-pc-modes",
+    "bookId": "ensemblebook",
+    "title": "막의 모드: 그냥 막 ↔ 팀파니",
+    "link": "chapters/percussion.html#sim-pc-modes"
+  },
+  {
+    "id": "ensemblebook/percussion/sim-pc-timp",
+    "bookId": "ensemblebook",
+    "title": "팀파니 두 대 조율하기",
+    "link": "chapters/percussion.html#sim-pc-timp"
+  },
+  {
+    "id": "ensemblebook/percussion/sim-pc-bars",
+    "bookId": "ensemblebook",
+    "title": "막대를 깎아 배음 맞추기",
+    "link": "chapters/percussion.html#sim-pc-bars"
+  },
+  {
+    "id": "ensemblebook/percussion/sim-pc-harp",
+    "bookId": "ensemblebook",
+    "title": "하프 페달 맞추기와 글리산도",
+    "link": "chapters/percussion.html#sim-pc-harp"
+  },
+  {
+    "id": "ensemblebook/percussion/sim-pc-kit",
+    "bookId": "ensemblebook",
+    "title": "오케스트라 타악기 두드리기",
+    "link": "chapters/percussion.html#sim-pc-kit"
+  },
+  {
+    "id": "ensemblebook/percussion/sim-pc-color",
+    "bookId": "ensemblebook",
+    "title": "색 악기 얹기",
+    "link": "chapters/percussion.html#sim-pc-color"
+  },
+  {
+    "id": "ensemblebook/quartet/sim-qt-stack",
+    "bookId": "ensemblebook",
+    "title": "아래부터 한 성부씩 쌓기",
+    "link": "chapters/quartet.html#sim-qt-stack"
+  },
+  {
+    "id": "ensemblebook/quartet/sim-qt-lead",
+    "bookId": "ensemblebook",
+    "title": "블록 화음 vs 성부 진행",
+    "link": "chapters/quartet.html#sim-qt-lead"
+  },
+  {
+    "id": "ensemblebook/quartet/sim-qt-canon",
+    "bookId": "ensemblebook",
+    "title": "주제를 따라가는 캐논",
+    "link": "chapters/quartet.html#sim-qt-canon"
+  },
+  {
+    "id": "ensemblebook/quartet/sim-qt-tex",
+    "bookId": "ensemblebook",
+    "title": "같은 4중주, 네 가지 텍스처",
+    "link": "chapters/quartet.html#sim-qt-tex"
+  },
+  {
+    "id": "ensemblebook/quartet/sim-qt-seat",
+    "bookId": "ensemblebook",
+    "title": "4중주 자리 바꿔 듣기",
+    "link": "chapters/quartet.html#sim-qt-seat"
+  },
+  {
+    "id": "ensemblebook/quartet/sim-qt-mix",
+    "bookId": "ensemblebook",
+    "title": "4중주 믹서와 빠진 성부 맞히기",
+    "link": "chapters/quartet.html#sim-qt-mix"
+  },
+  {
+    "id": "ensemblebook/score/sim-sc-order",
+    "bookId": "ensemblebook",
+    "title": "총보 순서대로 쌓기",
+    "link": "chapters/score.html#sim-sc-order"
+  },
+  {
+    "id": "ensemblebook/score/sim-sc-clef",
+    "bookId": "ensemblebook",
+    "title": "같은 음, 네 음자리표",
+    "link": "chapters/score.html#sim-sc-clef"
+  },
+  {
+    "id": "ensemblebook/score/sim-sc-trans",
+    "bookId": "ensemblebook",
+    "title": "기보음 ↔ 실음 계산기",
+    "link": "chapters/score.html#sim-sc-trans"
+  },
+  {
+    "id": "ensemblebook/score/sim-sc-family",
+    "bookId": "ensemblebook",
+    "title": "같은 악보, 다른 형제 악기",
+    "link": "chapters/score.html#sim-sc-family"
+  },
+  {
+    "id": "ensemblebook/score/sim-sc-range",
+    "bookId": "ensemblebook",
+    "title": "오케스트라 음역표",
+    "link": "chapters/score.html#sim-sc-range"
+  },
+  {
+    "id": "ensemblebook/score/sim-sc-player",
+    "bookId": "ensemblebook",
+    "title": "총보 플레이어",
+    "link": "chapters/score.html#sim-sc-player"
+  },
+  {
+    "id": "ensemblebook/strings/sim-str-family",
+    "bookId": "ensemblebook",
+    "title": "네 악기의 개방현과 음역",
+    "link": "chapters/strings.html#sim-str-family"
+  },
+  {
+    "id": "ensemblebook/strings/sim-str-bow",
+    "bookId": "ensemblebook",
+    "title": "활의 위치와 세기",
+    "link": "chapters/strings.html#sim-str-bow"
+  },
+  {
+    "id": "ensemblebook/strings/sim-str-body",
+    "bookId": "ensemblebook",
+    "title": "같은 음, 다른 상자",
+    "link": "chapters/strings.html#sim-str-body"
+  },
+  {
+    "id": "ensemblebook/strings/sim-str-vib",
+    "bookId": "ensemblebook",
+    "title": "비브라토의 빠르기와 폭",
+    "link": "chapters/strings.html#sim-str-vib"
+  },
+  {
+    "id": "ensemblebook/strings/sim-str-art",
+    "bookId": "ensemblebook",
+    "title": "주법 갤러리",
+    "link": "chapters/strings.html#sim-str-art"
+  },
+  {
+    "id": "ensemblebook/strings/sim-str-sec",
+    "bookId": "ensemblebook",
+    "title": "현의 옥타브 유니즌",
+    "link": "chapters/strings.html#sim-str-sec"
+  },
+  {
+    "id": "ensemblebook/studio/sim-std-desk",
+    "bookId": "ensemblebook",
+    "title": "합주 작업대",
+    "link": "chapters/studio.html#sim-std-desk"
+  },
+  {
+    "id": "ensemblebook/studio/sim-std-range",
+    "bookId": "ensemblebook",
+    "title": "음역 검사와 음량 추정",
+    "link": "chapters/studio.html#sim-std-range"
+  },
+  {
+    "id": "ensemblebook/studio/sim-std-mask",
+    "bookId": "ensemblebook",
+    "title": "마스킹 지도",
+    "link": "chapters/studio.html#sim-std-mask"
+  },
+  {
+    "id": "ensemblebook/studio/sim-std-ex",
+    "bookId": "ensemblebook",
+    "title": "오케스트레이션 과제",
+    "link": "chapters/studio.html#sim-std-ex"
+  },
+  {
+    "id": "ensemblebook/texture/sim-tx-kinds",
+    "bookId": "ensemblebook",
+    "title": "짜임 듣고 구별하기",
+    "link": "chapters/texture.html#sim-tx-kinds"
+  },
+  {
+    "id": "ensemblebook/texture/sim-tx-tutti",
+    "bookId": "ensemblebook",
+    "title": "한 선율, 네 가지 두께",
+    "link": "chapters/texture.html#sim-tx-tutti"
+  },
+  {
+    "id": "ensemblebook/texture/sim-tx-layers",
+    "bookId": "ensemblebook",
+    "title": "층 쌓기: 〈환희의 송가〉",
+    "link": "chapters/texture.html#sim-tx-layers"
+  },
+  {
+    "id": "ensemblebook/texture/sim-tx-cresc",
+    "bookId": "ensemblebook",
+    "title": "여덟 마디 크레셴도",
+    "link": "chapters/texture.html#sim-tx-cresc"
+  },
+  {
+    "id": "ensemblebook/texture/sim-tx-call",
+    "bookId": "ensemblebook",
+    "title": "부름과 응답",
+    "link": "chapters/texture.html#sim-tx-call"
+  },
+  {
+    "id": "ensemblebook/together/sim-tg-sum",
+    "bookId": "ensemblebook",
+    "title": "두 악기의 파형 더하기",
+    "link": "chapters/together.html#sim-tg-sum"
+  },
+  {
+    "id": "ensemblebook/together/sim-tg-beats",
+    "bookId": "ensemblebook",
+    "title": "맥놀이 듣고 조율하기",
+    "link": "chapters/together.html#sim-tg-beats"
+  },
+  {
+    "id": "ensemblebook/together/sim-tg-section",
+    "bookId": "ensemblebook",
+    "title": "한 대에서 섹션까지",
+    "link": "chapters/together.html#sim-tg-section"
+  },
+  {
+    "id": "ensemblebook/together/sim-tg-db",
+    "bookId": "ensemblebook",
+    "title": "dB 합 계산기",
+    "link": "chapters/together.html#sim-tg-db"
+  },
+  {
+    "id": "ensemblebook/together/sim-tg-mix",
+    "bookId": "ensemblebook",
+    "title": "4중주 믹서",
+    "link": "chapters/together.html#sim-tg-mix"
+  },
+  {
+    "id": "ensemblebook/voicing/sim-vc-spacing",
+    "bookId": "ensemblebook",
+    "title": "간격 바꿔 쌓기",
+    "link": "chapters/voicing.html#sim-vc-spacing"
+  },
+  {
+    "id": "ensemblebook/voicing/sim-vc-pairs",
+    "bookId": "ensemblebook",
+    "title": "두 쌍에 화음 나누기",
+    "link": "chapters/voicing.html#sim-vc-pairs"
+  },
+  {
+    "id": "ensemblebook/voicing/sim-vc-double",
+    "bookId": "ensemblebook",
+    "title": "종지에서 한 음 겹치기",
+    "link": "chapters/voicing.html#sim-vc-double"
+  },
+  {
+    "id": "ensemblebook/voicing/sim-vc-colors",
+    "bookId": "ensemblebook",
+    "title": "현 · 목관 · 금관 · 투티",
+    "link": "chapters/voicing.html#sim-vc-colors"
+  },
+  {
+    "id": "ensemblebook/voicing/sim-vc-editor",
+    "bookId": "ensemblebook",
+    "title": "다섯 성부 보이싱 편집기",
+    "link": "chapters/voicing.html#sim-vc-editor"
+  },
+  {
+    "id": "ensemblebook/winds/sim-wd-tube",
+    "bookId": "ensemblebook",
+    "title": "관의 공명 사다리",
+    "link": "chapters/winds.html#sim-wd-tube"
+  },
+  {
+    "id": "ensemblebook/winds/sim-wd-flute",
+    "bookId": "ensemblebook",
+    "title": "숨의 세기와 음역",
+    "link": "chapters/winds.html#sim-wd-flute"
+  },
+  {
+    "id": "ensemblebook/winds/sim-wd-clar",
+    "bookId": "ensemblebook",
+    "title": "클라리넷의 음역별 스펙트럼",
+    "link": "chapters/winds.html#sim-wd-clar"
+  },
+  {
+    "id": "ensemblebook/winds/sim-wd-reed",
+    "bookId": "ensemblebook",
+    "title": "겹리드의 포먼트",
+    "link": "chapters/winds.html#sim-wd-reed"
+  },
+  {
+    "id": "ensemblebook/winds/sim-wd-four",
+    "bookId": "ensemblebook",
+    "title": "네 목관의 같은 음",
+    "link": "chapters/winds.html#sim-wd-four"
+  },
+  {
+    "id": "ensemblebook/winds/sim-wd-range",
+    "bookId": "ensemblebook",
+    "title": "음역표와 적힌 음",
+    "link": "chapters/winds.html#sim-wd-range"
   }
 ]
