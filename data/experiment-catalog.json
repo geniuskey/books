@@ -2676,10 +2676,40 @@
     "link": "chapters/switchedcap.html#sim-set"
   },
   {
+    "id": "processbook/advanced/sim-eot",
+    "bookId": "processbook",
+    "title": "같은 EOT, 다른 누설: High-k가 필요한 이유",
+    "link": "chapters/advanced.html#sim-eot"
+  },
+  {
+    "id": "processbook/advanced/sim-wf",
+    "bookId": "processbook",
+    "title": "금속 일함수로 문턱 전압 맞추기",
+    "link": "chapters/advanced.html#sim-wf"
+  },
+  {
     "id": "processbook/advanced/sim-3d",
     "bookId": "processbook",
     "title": "트랜지스터 구조 비교",
     "link": "chapters/advanced.html#sim-3d"
+  },
+  {
+    "id": "processbook/advanced/sim-lambda",
+    "bookId": "processbook",
+    "title": "게이트가 감싸는 면이 많을수록: 자연 길이 λ",
+    "link": "chapters/advanced.html#sim-lambda"
+  },
+  {
+    "id": "processbook/advanced/sim-ns",
+    "bookId": "processbook",
+    "title": "나노시트 공정을 단면으로",
+    "link": "chapters/advanced.html#sim-ns"
+  },
+  {
+    "id": "processbook/advanced/sim-ir",
+    "bookId": "processbook",
+    "title": "후면 전력 공급: 전압 강하를 얼마나 줄이나",
+    "link": "chapters/advanced.html#sim-ir"
   },
   {
     "id": "processbook/advanced/sim-hb",
@@ -2692,6 +2722,12 @@
     "bookId": "processbook",
     "title": "모놀리식 대 칩렛: 수율과 원가",
     "link": "chapters/advanced.html#sim-chiplet"
+  },
+  {
+    "id": "processbook/anneal/sim-walk",
+    "bookId": "processbook",
+    "title": "무작위 걸음에서 확산으로",
+    "link": "chapters/anneal.html#sim-walk"
   },
   {
     "id": "processbook/anneal/sim-fick",
@@ -2712,6 +2748,36 @@
     "link": "chapters/anneal.html#sim-rta"
   },
   {
+    "id": "processbook/anneal/sim-heat",
+    "bookId": "processbook",
+    "title": "밀리초와 나노초: 열은 얼마나 깊이 들어가나",
+    "link": "chapters/anneal.html#sim-heat"
+  },
+  {
+    "id": "processbook/anneal/sim-sol",
+    "bookId": "processbook",
+    "title": "고체 용해도: 넣은 만큼 다 일하지는 않는다",
+    "link": "chapters/anneal.html#sim-sol"
+  },
+  {
+    "id": "processbook/anneal/sim-cdd",
+    "bookId": "processbook",
+    "title": "농도 의존 확산: 비소 분포가 상자 모양이 되는 이유",
+    "link": "chapters/anneal.html#sim-cdd"
+  },
+  {
+    "id": "processbook/cmp/sim-kin",
+    "bookId": "processbook",
+    "title": "패드와 캐리어의 회전: 어디서나 같은 속도로",
+    "link": "chapters/cmp.html#sim-kin"
+  },
+  {
+    "id": "processbook/cmp/sim-zone",
+    "bookId": "processbook",
+    "title": "다중 존 압력으로 반경 프로파일 맞추기",
+    "link": "chapters/cmp.html#sim-zone"
+  },
+  {
     "id": "processbook/cmp/sim-sh",
     "bookId": "processbook",
     "title": "단차 제거: 패턴 밀도별 업·다운 두께",
@@ -2724,10 +2790,22 @@
     "link": "chapters/cmp.html#sim-dish"
   },
   {
+    "id": "processbook/cmp/sim-sti",
+    "bookId": "processbook",
+    "title": "STI CMP: 질화막에서 멈추기",
+    "link": "chapters/cmp.html#sim-sti"
+  },
+  {
     "id": "processbook/cmp/sim-fill",
     "bookId": "processbook",
     "title": "칩 배치 밀도 → 연마 후 두께 지도",
     "link": "chapters/cmp.html#sim-fill"
+  },
+  {
+    "id": "processbook/cmp/sim-pcl",
+    "bookId": "processbook",
+    "title": "CMP 후 세정: 작은 입자일수록 떼기 어렵다",
+    "link": "chapters/cmp.html#sim-pcl"
   },
   {
     "id": "processbook/deposition/sim-cvd",
@@ -2736,10 +2814,28 @@
     "link": "chapters/deposition.html#sim-cvd"
   },
   {
+    "id": "processbook/deposition/sim-lpcvd",
+    "bookId": "processbook",
+    "title": "LPCVD 튜브: 앞 웨이퍼가 먹고 남은 기체",
+    "link": "chapters/deposition.html#sim-lpcvd"
+  },
+  {
     "id": "processbook/deposition/sim-cov",
     "bookId": "processbook",
     "title": "트렌치 단차 피복과 보이드",
     "link": "chapters/deposition.html#sim-cov"
+  },
+  {
+    "id": "processbook/deposition/sim-sput",
+    "bookId": "processbook",
+    "title": "스퍼터링: 이온 에너지·압력과 방향성",
+    "link": "chapters/deposition.html#sim-sput"
+  },
+  {
+    "id": "processbook/deposition/sim-hdp",
+    "bookId": "processbook",
+    "title": "증착-식각-증착 갭필",
+    "link": "chapters/deposition.html#sim-hdp"
   },
   {
     "id": "processbook/deposition/sim-ald",
@@ -2748,10 +2844,34 @@
     "link": "chapters/deposition.html#sim-ald"
   },
   {
+    "id": "processbook/deposition/sim-hc",
+    "bookId": "processbook",
+    "title": "SiGe 임계 두께: 변형된 채 자랄 수 있는 한계",
+    "link": "chapters/deposition.html#sim-hc"
+  },
+  {
     "id": "processbook/deposition/sim-bow",
     "bookId": "processbook",
     "title": "Stoney 식: 막 응력 → 웨이퍼 휨",
     "link": "chapters/deposition.html#sim-bow"
+  },
+  {
+    "id": "processbook/etch/sim-iso",
+    "bookId": "processbook",
+    "title": "언더컷과 이방성: 식각 면은 어떻게 전진하나",
+    "link": "chapters/etch.html#sim-iso"
+  },
+  {
+    "id": "processbook/etch/sim-sheath",
+    "bookId": "processbook",
+    "title": "압력과 바이어스가 이온의 방향을 정한다",
+    "link": "chapters/etch.html#sim-sheath"
+  },
+  {
+    "id": "processbook/etch/sim-syn",
+    "bookId": "processbook",
+    "title": "이온과 라디칼의 시너지 (Coburn–Winters)",
+    "link": "chapters/etch.html#sim-syn"
   },
   {
     "id": "processbook/etch/sim-etch",
@@ -2778,6 +2898,30 @@
     "link": "chapters/etch.html#sim-oe"
   },
   {
+    "id": "processbook/etch/sim-load",
+    "bookId": "processbook",
+    "title": "로딩 효과: 열린 면적이 넓으면 느리고, 좁으면 종말점이 안 보인다",
+    "link": "chapters/etch.html#sim-load"
+  },
+  {
+    "id": "processbook/implant/sim-mass",
+    "bookId": "processbook",
+    "title": "질량 분석 자석: 원하는 이온만 골라내기",
+    "link": "chapters/implant.html#sim-mass"
+  },
+  {
+    "id": "processbook/implant/sim-beam",
+    "bookId": "processbook",
+    "title": "빔 전류와 도즈: 웨이퍼 한 장에 몇 초?",
+    "link": "chapters/implant.html#sim-beam"
+  },
+  {
+    "id": "processbook/implant/sim-stop",
+    "bookId": "processbook",
+    "title": "핵 저지와 전자 저지: 이온은 어떻게 멈추나",
+    "link": "chapters/implant.html#sim-stop"
+  },
+  {
     "id": "processbook/implant/sim-prof",
     "bookId": "processbook",
     "title": "주입 농도 분포와 접합 깊이",
@@ -2796,10 +2940,76 @@
     "link": "chapters/implant.html#sim-edge"
   },
   {
+    "id": "processbook/implant/sim-amorph",
+    "bookId": "processbook",
+    "title": "비정질화: 손상이 문턱을 넘는 깊이",
+    "link": "chapters/implant.html#sim-amorph"
+  },
+  {
+    "id": "processbook/integration/sim-cmos",
+    "bookId": "processbook",
+    "title": "공정 흐름 한눈에 보기",
+    "link": "chapters/integration.html#sim-cmos"
+  },
+  {
+    "id": "processbook/integration/sim-mask",
+    "bookId": "processbook",
+    "title": "마스크 수 세기: 모듈마다 늘어나는 노광",
+    "link": "chapters/integration.html#sim-mask"
+  },
+  {
+    "id": "processbook/integration/sim-sa",
+    "bookId": "processbook",
+    "title": "자기 정렬의 값: 오버레이가 게이트와 소스를 어긋나게 하면",
+    "link": "chapters/integration.html#sim-sa"
+  },
+  {
+    "id": "processbook/integration/sim-spacer",
+    "bookId": "processbook",
+    "title": "스페이서 폭의 줄다리기: 단채널 효과와 직렬 저항",
+    "link": "chapters/integration.html#sim-spacer"
+  },
+  {
+    "id": "processbook/integration/sim-sil",
+    "bookId": "processbook",
+    "title": "실리사이드: 온도가 상과 저항을 정한다",
+    "link": "chapters/integration.html#sim-sil"
+  },
+  {
     "id": "processbook/integration/sim-vt",
     "bookId": "processbook",
     "title": "채널 도핑 · 산화막 두께 → 문턱 전압",
     "link": "chapters/integration.html#sim-vt"
+  },
+  {
+    "id": "processbook/integration/sim-tb",
+    "bookId": "processbook",
+    "title": "열 예산은 쌓인다: 접합이 깊어지는 순서",
+    "link": "chapters/integration.html#sim-tb"
+  },
+  {
+    "id": "processbook/lab/lab",
+    "bookId": "processbook",
+    "title": "실험대",
+    "link": "chapters/lab.html#lab"
+  },
+  {
+    "id": "processbook/lab/sim-sweep",
+    "bookId": "processbook",
+    "title": "조건 스윕: 한 손잡이, 다섯 단면",
+    "link": "chapters/lab.html#sim-sweep"
+  },
+  {
+    "id": "processbook/lab/sim-window",
+    "bookId": "processbook",
+    "title": "공정 창 지도: 두 손잡이를 동시에",
+    "link": "chapters/lab.html#sim-window"
+  },
+  {
+    "id": "processbook/litho/sim-tput",
+    "bookId": "processbook",
+    "title": "노광량과 처리량: 스캐너는 시간당 몇 장을 찍나",
+    "link": "chapters/litho.html#sim-tput"
   },
   {
     "id": "processbook/litho/sim-pupil",
@@ -2814,6 +3024,42 @@
     "link": "chapters/litho.html#sim-fem"
   },
   {
+    "id": "processbook/litho/sim-knobs",
+    "bookId": "processbook",
+    "title": "세 손잡이: 해상도와 초점 심도의 맞교환",
+    "link": "chapters/litho.html#sim-knobs"
+  },
+  {
+    "id": "processbook/litho/sim-imm",
+    "bookId": "processbook",
+    "title": "액침: 공기에 갇히는 빛을 물이 꺼낸다",
+    "link": "chapters/litho.html#sim-imm"
+  },
+  {
+    "id": "processbook/litho/sim-mlm",
+    "bookId": "processbook",
+    "title": "EUV 거울: Mo/Si 다층막의 브래그 반사",
+    "link": "chapters/litho.html#sim-mlm"
+  },
+  {
+    "id": "processbook/litho/sim-shadow",
+    "bookId": "processbook",
+    "title": "EUV 마스크의 그림자와 아나모픽 렌즈",
+    "link": "chapters/litho.html#sim-shadow"
+  },
+  {
+    "id": "processbook/metal/sim-dd",
+    "bookId": "processbook",
+    "title": "듀얼 다마신을 쌓아 보자",
+    "link": "chapters/metal.html#sim-dd"
+  },
+  {
+    "id": "processbook/metal/sim-ecp",
+    "bookId": "processbook",
+    "title": "전해 도금: 바닥부터 채우는 수퍼필",
+    "link": "chapters/metal.html#sim-ecp"
+  },
+  {
     "id": "processbook/metal/sim-size",
     "bookId": "processbook",
     "title": "금속별 선 저항 대 선폭",
@@ -2826,16 +3072,46 @@
     "link": "chapters/metal.html#sim-rc"
   },
   {
+    "id": "processbook/metal/sim-lowk",
+    "bookId": "processbook",
+    "title": "구멍을 뚫어 k를 낮추면 약해진다",
+    "link": "chapters/metal.html#sim-lowk"
+  },
+  {
     "id": "processbook/metal/sim-em",
     "bookId": "processbook",
     "title": "Black 식: 전류 밀도·온도와 수명",
     "link": "chapters/metal.html#sim-em"
   },
   {
+    "id": "processbook/metal/sim-blech",
+    "bookId": "processbook",
+    "title": "짧은 선은 죽지 않는다: 블레흐 길이",
+    "link": "chapters/metal.html#sim-blech"
+  },
+  {
+    "id": "processbook/metal/sim-sav",
+    "bookId": "processbook",
+    "title": "자기 정렬 비아: 오버레이가 남긴 간격",
+    "link": "chapters/metal.html#sim-sav"
+  },
+  {
+    "id": "processbook/metrology/sim-sem",
+    "bookId": "processbook",
+    "title": "CD-SEM 라인 스캔에서 선폭 읽기",
+    "link": "chapters/metrology.html#sim-sem"
+  },
+  {
     "id": "processbook/metrology/sim-fit",
     "bookId": "processbook",
     "title": "반사 분광 막 두께 피팅",
     "link": "chapters/metrology.html#sim-fit"
+  },
+  {
+    "id": "processbook/metrology/sim-ellip",
+    "bookId": "processbook",
+    "title": "엘립소미터: Ψ와 Δ로 얇은 막 재기",
+    "link": "chapters/metrology.html#sim-ellip"
   },
   {
     "id": "processbook/metrology/sim-ov",
@@ -2850,10 +3126,34 @@
     "link": "chapters/metrology.html#sim-spc"
   },
   {
+    "id": "processbook/metrology/sim-gage",
+    "bookId": "processbook",
+    "title": "측정기가 공정을 흐리게 본다: P/T 비와 오판정",
+    "link": "chapters/metrology.html#sim-gage"
+  },
+  {
     "id": "processbook/metrology/sim-ym",
     "bookId": "processbook",
     "title": "수율 모델 비교와 결함 군집",
     "link": "chapters/metrology.html#sim-ym"
+  },
+  {
+    "id": "processbook/metrology/sim-ca",
+    "bookId": "processbook",
+    "title": "임계 면적: 어떤 결함이 칩을 죽이나",
+    "link": "chapters/metrology.html#sim-ca"
+  },
+  {
+    "id": "processbook/overview/sim-scale",
+    "bookId": "processbook",
+    "title": "자릿수 여행: 웨이퍼에서 원자까지",
+    "link": "chapters/overview.html#sim-scale"
+  },
+  {
+    "id": "processbook/overview/sim-diode",
+    "bookId": "processbook",
+    "title": "가장 단순한 소자 하나 만들어 보기",
+    "link": "chapters/overview.html#sim-diode"
   },
   {
     "id": "processbook/overview/sim-clean",
@@ -2862,16 +3162,46 @@
     "link": "chapters/overview.html#sim-clean"
   },
   {
+    "id": "processbook/overview/sim-pdep",
+    "bookId": "processbook",
+    "title": "입자는 어떻게 웨이퍼에 내려앉나: 침강과 확산",
+    "link": "chapters/overview.html#sim-pdep"
+  },
+  {
     "id": "processbook/overview/sim-dpw",
     "bookId": "processbook",
     "title": "웨이퍼 맵: 다이 수 · 수율 · 원가",
     "link": "chapters/overview.html#sim-dpw"
   },
   {
+    "id": "processbook/overview/sim-cpt",
+    "bookId": "processbook",
+    "title": "세대마다 트랜지스터당 원가는 얼마나 줄까",
+    "link": "chapters/overview.html#sim-cpt"
+  },
+  {
+    "id": "processbook/overview/sim-cycle",
+    "bookId": "processbook",
+    "title": "왜 석 달이나 걸리나: 가동률과 대기 시간",
+    "link": "chapters/overview.html#sim-cycle"
+  },
+  {
+    "id": "processbook/oxidation/sim-flux",
+    "bookId": "processbook",
+    "title": "산화제 농도는 막 속에서 어떻게 떨어지나: 세 플럭스",
+    "link": "chapters/oxidation.html#sim-flux"
+  },
+  {
     "id": "processbook/oxidation/sim-dg",
     "bookId": "processbook",
     "title": "Deal–Grove 산화막 두께 계산기",
     "link": "chapters/oxidation.html#sim-dg"
+  },
+  {
+    "id": "processbook/oxidation/sim-recipe",
+    "bookId": "processbook",
+    "title": "목표 두께를 얻는 온도와 시간",
+    "link": "chapters/oxidation.html#sim-recipe"
   },
   {
     "id": "processbook/oxidation/sim-col",
@@ -2886,6 +3216,18 @@
     "link": "chapters/oxidation.html#sim-locos"
   },
   {
+    "id": "processbook/oxidation/sim-cv",
+    "bookId": "processbook",
+    "title": "산화막 전하가 C–V 곡선을 옮긴다",
+    "link": "chapters/oxidation.html#sim-cv"
+  },
+  {
+    "id": "processbook/oxidation/sim-redis",
+    "bookId": "processbook",
+    "title": "산화가 도펀트를 옮긴다: 붕소 고갈과 인 파일업",
+    "link": "chapters/oxidation.html#sim-redis"
+  },
+  {
     "id": "processbook/resist/sim-con",
     "bookId": "processbook",
     "title": "대비 곡선과 현상 속도",
@@ -2898,10 +3240,28 @@
     "link": "chapters/resist.html#sim-sw"
   },
   {
+    "id": "processbook/resist/sim-spin",
+    "bookId": "processbook",
+    "title": "스핀 속도로 두께를, 두께로 스윙의 꼭짓점을",
+    "link": "chapters/resist.html#sim-spin"
+  },
+  {
     "id": "processbook/resist/sim-prof",
     "bookId": "processbook",
     "title": "레지스트 단면: 도즈 · 포커스 · 두께 · PEB",
     "link": "chapters/resist.html#sim-prof"
+  },
+  {
+    "id": "processbook/resist/sim-pc",
+    "bookId": "processbook",
+    "title": "패턴 붕괴: 헹굼물의 모세관 힘",
+    "link": "chapters/resist.html#sim-pc"
+  },
+  {
+    "id": "processbook/resist/sim-peb",
+    "bookId": "processbook",
+    "title": "PEB 1 °C가 선폭을 얼마나 바꾸나",
+    "link": "chapters/resist.html#sim-peb"
   },
   {
     "id": "processbook/resist/sim-opc",
@@ -2928,10 +3288,34 @@
     "link": "chapters/wafer.html#sim-seg"
   },
   {
+    "id": "processbook/wafer/sim-vg",
+    "bookId": "processbook",
+    "title": "인상 속도와 온도 기울기: 보론코프 결함 지도",
+    "link": "chapters/wafer.html#sim-vg"
+  },
+  {
+    "id": "processbook/wafer/sim-dz",
+    "bookId": "processbook",
+    "title": "내부 게터링: 산소를 빼낸 무결함 층(DZ)",
+    "link": "chapters/wafer.html#sim-dz"
+  },
+  {
     "id": "processbook/wafer/sim-rho",
     "bookId": "processbook",
     "title": "어빈 곡선: 도핑 ↔ 비저항 ↔ 면저항",
     "link": "chapters/wafer.html#sim-rho"
+  },
+  {
+    "id": "processbook/wafer/sim-koh",
+    "bookId": "processbook",
+    "title": "결정 방향이 식각 모양을 정한다: KOH 이방성 식각",
+    "link": "chapters/wafer.html#sim-koh"
+  },
+  {
+    "id": "processbook/wafer/sim-flat",
+    "bookId": "processbook",
+    "title": "평탄도가 초점을 잡아먹는다: TTV와 SFQR",
+    "link": "chapters/wafer.html#sim-flat"
   },
   {
     "id": "processbook/wafer/sim-life",
