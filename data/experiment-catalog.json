@@ -13374,6 +13374,792 @@
     "link": "chapters/web.html#sim-html"
   },
   {
+    "id": "gpubook/alu/sim-bits",
+    "bookId": "gpubook",
+    "title": "비트 배치 탐색기: 실수 하나를 각 포맷에 넣기",
+    "link": "chapters/alu.html#sim-bits"
+  },
+  {
+    "id": "gpubook/alu/sim-dist",
+    "bookId": "gpubook",
+    "title": "표현 가능 값의 분포: 로그 축 위의 점과 상대 간격",
+    "link": "chapters/alu.html#sim-dist"
+  },
+  {
+    "id": "gpubook/alu/sim-fma",
+    "bookId": "gpubook",
+    "title": "FMA 데이터패스 단계별 추적",
+    "link": "chapters/alu.html#sim-fma"
+  },
+  {
+    "id": "gpubook/alu/sim-area",
+    "bookId": "gpubook",
+    "title": "곱셈기 면적 모델: 정밀도를 낮추면 같은 면적에 레인이 몇 배",
+    "link": "chapters/alu.html#sim-area"
+  },
+  {
+    "id": "gpubook/alu/sim-perf",
+    "bookId": "gpubook",
+    "title": "정밀도별 처리량·전력: GX-1 피크 재현",
+    "link": "chapters/alu.html#sim-perf"
+  },
+  {
+    "id": "gpubook/alu/sim-acc",
+    "bookId": "gpubook",
+    "title": "누산 정밀도와 오차 누적: 길이 K 내적",
+    "link": "chapters/alu.html#sim-acc"
+  },
+  {
+    "id": "gpubook/alu/sim-sfu",
+    "bookId": "gpubook",
+    "title": "SFU 근사: 표 크기와 다항식 차수, 맞는 비트 수",
+    "link": "chapters/alu.html#sim-sfu"
+  },
+  {
+    "id": "gpubook/alu/sim-q",
+    "bookId": "gpubook",
+    "title": "INT8 양자화: 스케일 선택과 이상치",
+    "link": "chapters/alu.html#sim-q"
+  },
+  {
+    "id": "gpubook/die/sim-wf",
+    "bookId": "gpubook",
+    "title": "웨이퍼 다이 배치: 격자로 세기 vs 근사식",
+    "link": "chapters/die.html#sim-wf"
+  },
+  {
+    "id": "gpubook/die/sim-mc",
+    "bookId": "gpubook",
+    "title": "결함 몬테카를로: 웨이퍼에 결함 뿌리기",
+    "link": "chapters/die.html#sim-mc"
+  },
+  {
+    "id": "gpubook/die/sim-ya",
+    "bookId": "gpubook",
+    "title": "수율 vs 다이 면적: 모델별 곡선",
+    "link": "chapters/die.html#sim-ya"
+  },
+  {
+    "id": "gpubook/die/sim-hv",
+    "bookId": "gpubook",
+    "title": "SM 하베스팅: 여유 SM 수와 판매 가능 수율",
+    "link": "chapters/die.html#sim-hv"
+  },
+  {
+    "id": "gpubook/die/sim-cs",
+    "bookId": "gpubook",
+    "title": "양품 다이당 원가 계산기",
+    "link": "chapters/die.html#sim-cs"
+  },
+  {
+    "id": "gpubook/die/sim-cl",
+    "bookId": "gpubook",
+    "title": "칩렛 분할: 1개 vs 2개 vs 4개 패키지 원가",
+    "link": "chapters/die.html#sim-cl"
+  },
+  {
+    "id": "gpubook/die/sim-lk",
+    "bookId": "gpubook",
+    "title": "다이 간 링크 비교: 가장자리 길이·전력·지연",
+    "link": "chapters/die.html#sim-lk"
+  },
+  {
+    "id": "gpubook/die/sim-pk",
+    "bookId": "gpubook",
+    "title": "GX-1 패키지 원가 합산",
+    "link": "chapters/die.html#sim-pk"
+  },
+  {
+    "id": "gpubook/glossary/sim-cm",
+    "bookId": "gpubook",
+    "title": "장 사이 공유 용어 네트워크",
+    "link": "chapters/glossary.html#sim-cm"
+  },
+  {
+    "id": "gpubook/glossary/sim-fc",
+    "bookId": "gpubook",
+    "title": "플래시 카드",
+    "link": "chapters/glossary.html#sim-fc"
+  },
+  {
+    "id": "gpubook/hbm/sim-bw",
+    "bookId": "gpubook",
+    "title": "메모리 대역폭 계산기",
+    "link": "chapters/hbm.html#sim-bw"
+  },
+  {
+    "id": "gpubook/hbm/sim-en",
+    "bookId": "gpubook",
+    "title": "넓고 느린 버스 vs 좁고 빠른 버스: 비트당 에너지",
+    "link": "chapters/hbm.html#sim-en"
+  },
+  {
+    "id": "gpubook/hbm/sim-3d",
+    "bookId": "gpubook",
+    "title": "HBM 스택 분해 모델",
+    "link": "chapters/hbm.html#sim-3d"
+  },
+  {
+    "id": "gpubook/hbm/sim-dr",
+    "bookId": "gpubook",
+    "title": "의사 채널 하나의 뱅크·행 버퍼 시뮬레이터",
+    "link": "chapters/hbm.html#sim-dr"
+  },
+  {
+    "id": "gpubook/hbm/sim-pw",
+    "bookId": "gpubook",
+    "title": "HBM 전력과 리프레시 손실",
+    "link": "chapters/hbm.html#sim-pw"
+  },
+  {
+    "id": "gpubook/hbm/sim-st",
+    "bookId": "gpubook",
+    "title": "스택 높이·용량·열",
+    "link": "chapters/hbm.html#sim-st"
+  },
+  {
+    "id": "gpubook/hbm/sim-sh",
+    "bookId": "gpubook",
+    "title": "쇼어라인 계산기: 다이 크기와 최대 스택 수",
+    "link": "chapters/hbm.html#sim-sh"
+  },
+  {
+    "id": "gpubook/hbm/sim-fit",
+    "bookId": "gpubook",
+    "title": "GX-LM-70B를 담는 데 필요한 스택: 용량 vs 대역폭 vs 원가",
+    "link": "chapters/hbm.html#sim-fit"
+  },
+  {
+    "id": "gpubook/noc/sim-topo",
+    "bookId": "gpubook",
+    "title": "토폴로지 비교: 면적·홉·이분 대역폭",
+    "link": "chapters/noc.html#sim-topo"
+  },
+  {
+    "id": "gpubook/noc/sim-xbar",
+    "bookId": "gpubook",
+    "title": "크로스바 경합: 사이클 단위 시뮬레이션",
+    "link": "chapters/noc.html#sim-xbar"
+  },
+  {
+    "id": "gpubook/noc/sim-hash",
+    "bookId": "gpubook",
+    "title": "주소 해싱: 스트라이드 접근의 슬라이스 부하",
+    "link": "chapters/noc.html#sim-hash"
+  },
+  {
+    "id": "gpubook/noc/sim-part",
+    "bookId": "gpubook",
+    "title": "L2 파티션: 원거리 비율과 연결 포화",
+    "link": "chapters/noc.html#sim-part"
+  },
+  {
+    "id": "gpubook/noc/sim-wire",
+    "bookId": "gpubook",
+    "title": "분산 RC 배선 지연과 리피터 최적",
+    "link": "chapters/noc.html#sim-wire"
+  },
+  {
+    "id": "gpubook/noc/sim-clock",
+    "bookId": "gpubook",
+    "title": "클럭 분배: H-트리 vs 메시의 스큐와 전력",
+    "link": "chapters/noc.html#sim-clock"
+  },
+  {
+    "id": "gpubook/noc/sim-cdc",
+    "bookId": "gpubook",
+    "title": "클럭 도메인 교차: 동기화기 MTBF와 FIFO 지연",
+    "link": "chapters/noc.html#sim-cdc"
+  },
+  {
+    "id": "gpubook/noc/sim-floor",
+    "bookId": "gpubook",
+    "title": "다이 평면 배치 실험: 배선 길이와 NoC 전력",
+    "link": "chapters/noc.html#sim-floor"
+  },
+  {
+    "id": "gpubook/onchip/sim-sram",
+    "bookId": "gpubook",
+    "title": "SRAM 면적 계산기와 비트셀 축소 둔화",
+    "link": "chapters/onchip.html#sim-sram"
+  },
+  {
+    "id": "gpubook/onchip/sim-hier",
+    "bookId": "gpubook",
+    "title": "GX-1 메모리 계층 비교 (로그 축)",
+    "link": "chapters/onchip.html#sim-hier"
+  },
+  {
+    "id": "gpubook/onchip/sim-co",
+    "bookId": "gpubook",
+    "title": "워프 주소 → 섹터·라인 트랜잭션",
+    "link": "chapters/onchip.html#sim-co"
+  },
+  {
+    "id": "gpubook/onchip/sim-bk",
+    "bookId": "gpubook",
+    "title": "공유 메모리 뱅크 충돌 (32뱅크 × 4 B)",
+    "link": "chapters/onchip.html#sim-bk"
+  },
+  {
+    "id": "gpubook/onchip/sim-ca",
+    "bookId": "gpubook",
+    "title": "집합 연관 캐시 LRU 시뮬레이터",
+    "link": "chapters/onchip.html#sim-ca"
+  },
+  {
+    "id": "gpubook/onchip/sim-sp",
+    "bookId": "gpubook",
+    "title": "256 KB를 공유 메모리와 L1로 나누기",
+    "link": "chapters/onchip.html#sim-sp"
+  },
+  {
+    "id": "gpubook/onchip/sim-en",
+    "bookId": "gpubook",
+    "title": "데이터 이동 에너지 대 연산 에너지",
+    "link": "chapters/onchip.html#sim-en"
+  },
+  {
+    "id": "gpubook/onchip/sim-as",
+    "bookId": "gpubook",
+    "title": "복사와 계산 겹치기: 더블 버퍼링 타임라인",
+    "link": "chapters/onchip.html#sim-as"
+  },
+  {
+    "id": "gpubook/overview/sim-area",
+    "bookId": "gpubook",
+    "title": "780 mm²를 어떻게 나눌까",
+    "link": "chapters/overview.html#sim-area"
+  },
+  {
+    "id": "gpubook/overview/sim-queue",
+    "bookId": "gpubook",
+    "title": "작업 큐: 언제 GPU가 이기는가",
+    "link": "chapters/overview.html#sim-queue"
+  },
+  {
+    "id": "gpubook/overview/sim-peak",
+    "bookId": "gpubook",
+    "title": "GX-1 피크 계산기",
+    "link": "chapters/overview.html#sim-peak"
+  },
+  {
+    "id": "gpubook/overview/sim-shader",
+    "bookId": "gpubook",
+    "title": "세대 연표와 통합 셰이더의 활용률",
+    "link": "chapters/overview.html#sim-shader"
+  },
+  {
+    "id": "gpubook/overview/sim-pkg3d",
+    "bookId": "gpubook",
+    "title": "GX-1 패키지 분해",
+    "link": "chapters/overview.html#sim-pkg3d"
+  },
+  {
+    "id": "gpubook/overview/sim-hier",
+    "bookId": "gpubook",
+    "title": "계층 줌: 레인에서 랙까지",
+    "link": "chapters/overview.html#sim-hier"
+  },
+  {
+    "id": "gpubook/overview/sim-energy",
+    "bookId": "gpubook",
+    "title": "FMA 한 번의 진짜 비용",
+    "link": "chapters/overview.html#sim-energy"
+  },
+  {
+    "id": "gpubook/overview/sim-budget",
+    "bookId": "gpubook",
+    "title": "설계 선택과 네 예산 레이더",
+    "link": "chapters/overview.html#sim-budget"
+  },
+  {
+    "id": "gpubook/package/sim-p3",
+    "bookId": "gpubook",
+    "title": "GX-1 패키지 분해 모델",
+    "link": "chapters/package.html#sim-p3"
+  },
+  {
+    "id": "gpubook/package/sim-dn",
+    "bookId": "gpubook",
+    "title": "연결 밀도 비교",
+    "link": "chapters/package.html#sim-dn"
+  },
+  {
+    "id": "gpubook/package/sim-sh",
+    "bookId": "gpubook",
+    "title": "쇼어라인 대역폭",
+    "link": "chapters/package.html#sim-sh"
+  },
+  {
+    "id": "gpubook/package/sim-ip",
+    "bookId": "gpubook",
+    "title": "인터포저 크기 계산기",
+    "link": "chapters/package.html#sim-ip"
+  },
+  {
+    "id": "gpubook/package/sim-wr",
+    "bookId": "gpubook",
+    "title": "인터포저 배선 RC와 신호 전송",
+    "link": "chapters/package.html#sim-wr"
+  },
+  {
+    "id": "gpubook/package/sim-wp",
+    "bookId": "gpubook",
+    "title": "휨과 열팽창 불일치 (바이메탈 근사)",
+    "link": "chapters/package.html#sim-wp"
+  },
+  {
+    "id": "gpubook/package/sim-bp",
+    "bookId": "gpubook",
+    "title": "범프 피치 · 범프 수 · 전류",
+    "link": "chapters/package.html#sim-bp"
+  },
+  {
+    "id": "gpubook/package/sim-hb",
+    "bookId": "gpubook",
+    "title": "하이브리드 본딩 3D 적층",
+    "link": "chapters/package.html#sim-hb"
+  },
+  {
+    "id": "gpubook/power/sim-pw",
+    "bookId": "gpubook",
+    "title": "동적·누설 전력 계산기: GX-1 760 W 재현과 C eff 역산",
+    "link": "chapters/power.html#sim-pw"
+  },
+  {
+    "id": "gpubook/power/sim-vf",
+    "bookId": "gpubook",
+    "title": "V–f 곡선과 전력 상한 아래 최적 동작점",
+    "link": "chapters/power.html#sim-vf"
+  },
+  {
+    "id": "gpubook/power/sim-pi",
+    "bookId": "gpubook",
+    "title": "전력 관리 제어 루프: 부하 계단에 대한 클럭·전력 응답",
+    "link": "chapters/power.html#sim-pi"
+  },
+  {
+    "id": "gpubook/power/sim-path",
+    "bookId": "gpubook",
+    "title": "전류 경로 계산기: 단계 효율, 배전 손실, 범프·볼 수",
+    "link": "chapters/power.html#sim-path"
+  },
+  {
+    "id": "gpubook/power/sim-pdn",
+    "bookId": "gpubook",
+    "title": "PDN 임피던스 주파수 응답과 목표 임피던스",
+    "link": "chapters/power.html#sim-pdn"
+  },
+  {
+    "id": "gpubook/power/sim-dr",
+    "bookId": "gpubook",
+    "title": "부하 급변 과도 응답: 전류 계단 → 다이 전압 강하",
+    "link": "chapters/power.html#sim-dr"
+  },
+  {
+    "id": "gpubook/power/sim-ir",
+    "bookId": "gpubook",
+    "title": "IR 드롭 격자 풀이: 범프 배치·핫스팟 → 전압 지도",
+    "link": "chapters/power.html#sim-ir"
+  },
+  {
+    "id": "gpubook/power/sim-gate",
+    "bookId": "gpubook",
+    "title": "전력 게이팅과 다크 실리콘: 넓고 느리게 vs 좁고 빠르게",
+    "link": "chapters/power.html#sim-gate"
+  },
+  {
+    "id": "gpubook/roadmap/sim-trend",
+    "bookId": "gpubook",
+    "title": "세대 추세 외삽",
+    "link": "chapters/roadmap.html#sim-trend"
+  },
+  {
+    "id": "gpubook/roadmap/sim-supply",
+    "bookId": "gpubook",
+    "title": "공급망 병목 모델",
+    "link": "chapters/roadmap.html#sim-supply"
+  },
+  {
+    "id": "gpubook/roadmap/sim-cost",
+    "bookId": "gpubook",
+    "title": "원가 구조 분해",
+    "link": "chapters/roadmap.html#sim-cost"
+  },
+  {
+    "id": "gpubook/roadmap/sim-tco",
+    "bookId": "gpubook",
+    "title": "총소유비용(TCO)",
+    "link": "chapters/roadmap.html#sim-tco"
+  },
+  {
+    "id": "gpubook/roadmap/sim-asic",
+    "bookId": "gpubook",
+    "title": "GPU vs 맞춤형 ASIC 손익분기",
+    "link": "chapters/roadmap.html#sim-asic"
+  },
+  {
+    "id": "gpubook/roadmap/sim-next",
+    "bookId": "gpubook",
+    "title": "다음 기술 효과 계산기",
+    "link": "chapters/roadmap.html#sim-next"
+  },
+  {
+    "id": "gpubook/roadmap/sim-beyond",
+    "bookId": "gpubook",
+    "title": "웨이퍼 스케일 vs 칩렛 vs 패널 레벨",
+    "link": "chapters/roadmap.html#sim-beyond"
+  },
+  {
+    "id": "gpubook/roadmap/sim-wall",
+    "bookId": "gpubook",
+    "title": "전력 벽",
+    "link": "chapters/roadmap.html#sim-wall"
+  },
+  {
+    "id": "gpubook/roofline/sim-rl",
+    "bookId": "gpubook",
+    "title": "GX-1 루프라인: 커널 점을 옮겨 제한 요인 찾기",
+    "link": "chapters/roofline.html#sim-rl"
+  },
+  {
+    "id": "gpubook/roofline/sim-kc",
+    "bookId": "gpubook",
+    "title": "커널 카탈로그: FLOP·바이트를 세어 루프라인에 놓기",
+    "link": "chapters/roofline.html#sim-kc"
+  },
+  {
+    "id": "gpubook/roofline/sim-tile",
+    "bookId": "gpubook",
+    "title": "GEMM 타일링 트래픽 계산기: 타일이 행렬을 쓸고 가는 동안",
+    "link": "chapters/roofline.html#sim-tile"
+  },
+  {
+    "id": "gpubook/roofline/sim-hr",
+    "bookId": "gpubook",
+    "title": "계층별 루프라인: 같은 GEMM이 어느 지붕에 닿나",
+    "link": "chapters/roofline.html#sim-hr"
+  },
+  {
+    "id": "gpubook/roofline/sim-fu",
+    "bookId": "gpubook",
+    "title": "연산 융합: 따로 vs 합쳐서",
+    "link": "chapters/roofline.html#sim-fu"
+  },
+  {
+    "id": "gpubook/roofline/sim-pr",
+    "bookId": "gpubook",
+    "title": "정밀도 하향: 선형층의 배치와 리지 이동",
+    "link": "chapters/roofline.html#sim-pr"
+  },
+  {
+    "id": "gpubook/roofline/sim-wl",
+    "bookId": "gpubook",
+    "title": "메모리 장벽 추세: 성장률이 다를 때 리지의 이동",
+    "link": "chapters/roofline.html#sim-wl"
+  },
+  {
+    "id": "gpubook/roofline/sim-ds",
+    "bookId": "gpubook",
+    "title": "설계자 관점: 같은 1,000 W에서 HBM 스택 수 정하기",
+    "link": "chapters/roofline.html#sim-ds"
+  },
+  {
+    "id": "gpubook/scale/sim-par",
+    "bookId": "gpubook",
+    "title": "병렬화 방식별 통신량과 계산 대비 통신 시간 (GX-LM-70B)",
+    "link": "chapters/scale.html#sim-par"
+  },
+  {
+    "id": "gpubook/scale/sim-pam",
+    "bookId": "gpubook",
+    "title": "NRZ vs PAM4: 심볼률·나이퀴스트·등가 손실",
+    "link": "chapters/scale.html#sim-pam"
+  },
+  {
+    "id": "gpubook/scale/sim-eye",
+    "bookId": "gpubook",
+    "title": "눈 다이어그램: PRBS → 채널 → 이퀄라이저 → BER",
+    "link": "chapters/scale.html#sim-eye"
+  },
+  {
+    "id": "gpubook/scale/sim-reach",
+    "bookId": "gpubook",
+    "title": "채널 손실 vs 거리·매체와 도달 거리",
+    "link": "chapters/scale.html#sim-reach"
+  },
+  {
+    "id": "gpubook/scale/sim-budget",
+    "bookId": "gpubook",
+    "title": "링크 예산: 링크 수 × 레인 × 속도 → 대역폭·전력·가장자리",
+    "link": "chapters/scale.html#sim-budget"
+  },
+  {
+    "id": "gpubook/scale/sim-topo",
+    "bookId": "gpubook",
+    "title": "토폴로지 비교: 이분 대역폭·홉·스위치 수",
+    "link": "chapters/scale.html#sim-topo"
+  },
+  {
+    "id": "gpubook/scale/sim-ar",
+    "bookId": "gpubook",
+    "title": "올리듀스: 링 단계 애니메이션과 링·트리·스위치 시간",
+    "link": "chapters/scale.html#sim-ar"
+  },
+  {
+    "id": "gpubook/scale/sim-scale",
+    "bookId": "gpubook",
+    "title": "스케일업 vs 스케일아웃: 학습 단계 시간 분해",
+    "link": "chapters/scale.html#sim-scale"
+  },
+  {
+    "id": "gpubook/sm/sim-sched",
+    "bookId": "gpubook",
+    "title": "워프 스케줄러 사이클 시뮬레이션: LRR vs GTO",
+    "link": "chapters/sm.html#sim-sched"
+  },
+  {
+    "id": "gpubook/sm/sim-ilp",
+    "bookId": "gpubook",
+    "title": "지연 × ILP → 필요한 워프 수와 레지스터 예산",
+    "link": "chapters/sm.html#sim-ilp"
+  },
+  {
+    "id": "gpubook/sm/sim-issue",
+    "bookId": "gpubook",
+    "title": "발행 폭과 실행 유닛 점유: 이중 발행은 얼마나 버나",
+    "link": "chapters/sm.html#sim-issue"
+  },
+  {
+    "id": "gpubook/sm/sim-bank",
+    "bookId": "gpubook",
+    "title": "레지스터 뱅크 충돌과 오퍼랜드 수집기",
+    "link": "chapters/sm.html#sim-bank"
+  },
+  {
+    "id": "gpubook/sm/sim-occ",
+    "bookId": "gpubook",
+    "title": "점유율 계산기 (GX-1 SM 한계)",
+    "link": "chapters/sm.html#sim-occ"
+  },
+  {
+    "id": "gpubook/sm/sim-div",
+    "bookId": "gpubook",
+    "title": "분기 발산: 활성 마스크와 SIMT 효율",
+    "link": "chapters/sm.html#sim-div"
+  },
+  {
+    "id": "gpubook/sm/sim-area",
+    "bookId": "gpubook",
+    "title": "SM 면적 예산: 레지스터를 늘리면 무엇이 줄어드나",
+    "link": "chapters/sm.html#sim-area"
+  },
+  {
+    "id": "gpubook/sm/sim-sm3d",
+    "bookId": "gpubook",
+    "title": "3D SM 평면도와 명령어 하나의 에너지 경로",
+    "link": "chapters/sm.html#sim-sm3d"
+  },
+  {
+    "id": "gpubook/tensor/sim-gm",
+    "bookId": "gpubook",
+    "title": "행렬곱 연산량 vs 데이터량",
+    "link": "chapters/tensor.html#sim-gm"
+  },
+  {
+    "id": "gpubook/tensor/sim-rf",
+    "bookId": "gpubook",
+    "title": "FMA당 레지스터 읽기와 에너지: 벡터 레인 vs 텐서 코어",
+    "link": "chapters/tensor.html#sim-rf"
+  },
+  {
+    "id": "gpubook/tensor/sim-do",
+    "bookId": "gpubook",
+    "title": "512 FMA를 어떻게 늘어놓을까: 내적 길이 L",
+    "link": "chapters/tensor.html#sim-do"
+  },
+  {
+    "id": "gpubook/tensor/sim-sy",
+    "bookId": "gpubook",
+    "title": "시스톨릭 배열 사이클 시뮬레이션",
+    "link": "chapters/tensor.html#sim-sy"
+  },
+  {
+    "id": "gpubook/tensor/sim-tc",
+    "bookId": "gpubook",
+    "title": "텐서 코어 입출력 대역폭 계산기",
+    "link": "chapters/tensor.html#sim-tc"
+  },
+  {
+    "id": "gpubook/tensor/sim-sp",
+    "bookId": "gpubook",
+    "title": "2:4 희소성: 압축 형식과 실효 가속",
+    "link": "chapters/tensor.html#sim-sp"
+  },
+  {
+    "id": "gpubook/tensor/sim-mx",
+    "bookId": "gpubook",
+    "title": "블록 공유 지수와 양자화 오차",
+    "link": "chapters/tensor.html#sim-mx"
+  },
+  {
+    "id": "gpubook/tensor/sim-ar",
+    "bookId": "gpubook",
+    "title": "같은 면적에서 FLOPS와 FLOP당 에너지",
+    "link": "chapters/tensor.html#sim-ar"
+  },
+  {
+    "id": "gpubook/tensor/sim-np",
+    "bookId": "gpubook",
+    "title": "NPU식 거대 배열 vs GPU식 소형 텐서 코어: 활용률",
+    "link": "chapters/tensor.html#sim-np"
+  },
+  {
+    "id": "gpubook/thermal/sim-ch",
+    "bookId": "gpubook",
+    "title": "1D 열저항 사슬: 층마다 몇 K가 떨어지나",
+    "link": "chapters/thermal.html#sim-ch"
+  },
+  {
+    "id": "gpubook/thermal/sim-sp",
+    "bookId": "gpubook",
+    "title": "퍼짐 저항: 열원 크기와 퍼짐층 두께",
+    "link": "chapters/thermal.html#sim-sp"
+  },
+  {
+    "id": "gpubook/thermal/sim-hm",
+    "bookId": "gpubook",
+    "title": "2D 다이 열 지도: 핫스팟은 어디에, 몇 K",
+    "link": "chapters/thermal.html#sim-hm"
+  },
+  {
+    "id": "gpubook/thermal/sim-tr",
+    "bookId": "gpubook",
+    "title": "과도 열 응답: 전력 계단과 주기 펄스",
+    "link": "chapters/thermal.html#sim-tr"
+  },
+  {
+    "id": "gpubook/thermal/sim-thr",
+    "bookId": "gpubook",
+    "title": "열 스로틀링: 냉각수 온도·유량 → 지속 클럭",
+    "link": "chapters/thermal.html#sim-thr"
+  },
+  {
+    "id": "gpubook/thermal/sim-rw",
+    "bookId": "gpubook",
+    "title": "열 폭주 조건: 고정점 반복",
+    "link": "chapters/thermal.html#sim-rw"
+  },
+  {
+    "id": "gpubook/thermal/sim-cool",
+    "bookId": "gpubook",
+    "title": "냉각 방식 비교: 감당할 수 있는 모듈 전력",
+    "link": "chapters/thermal.html#sim-cool"
+  },
+  {
+    "id": "gpubook/thermal/sim-rack",
+    "bookId": "gpubook",
+    "title": "랙·데이터센터: 랙 kW, 유량, PUE",
+    "link": "chapters/thermal.html#sim-rack"
+  },
+  {
+    "id": "gpubook/throughput/sim-little",
+    "bookId": "gpubook",
+    "title": "리틀의 법칙 큐: 대역폭 × 지연 = 떠 있는 바이트",
+    "link": "chapters/throughput.html#sim-little"
+  },
+  {
+    "id": "gpubook/throughput/sim-hide",
+    "bookId": "gpubook",
+    "title": "지연 숨기기의 저장 비용: CPU식 vs GPU식",
+    "link": "chapters/throughput.html#sim-hide"
+  },
+  {
+    "id": "gpubook/throughput/sim-warps",
+    "bookId": "gpubook",
+    "title": "워프 수 vs ALU 활용률: 사이클 시뮬레이션",
+    "link": "chapters/throughput.html#sim-warps"
+  },
+  {
+    "id": "gpubook/throughput/sim-ctx",
+    "bookId": "gpubook",
+    "title": "문맥 전환 비용: 소프트웨어 저장 vs 레지스터 파일 상주",
+    "link": "chapters/throughput.html#sim-ctx"
+  },
+  {
+    "id": "gpubook/throughput/sim-simt",
+    "bookId": "gpubook",
+    "title": "SIMD·SIMT·MIMD: 같은 분기 코드를 레인에 뿌리기",
+    "link": "chapters/throughput.html#sim-simt"
+  },
+  {
+    "id": "gpubook/throughput/sim-grid",
+    "bookId": "gpubook",
+    "title": "그리드를 SM 144개에 배분하기: 웨이브 양자화",
+    "link": "chapters/throughput.html#sim-grid"
+  },
+  {
+    "id": "gpubook/throughput/sim-amdahl",
+    "bookId": "gpubook",
+    "title": "암달·구스타프손 계산기",
+    "link": "chapters/throughput.html#sim-amdahl"
+  },
+  {
+    "id": "gpubook/throughput/sim-pipe",
+    "bookId": "gpubook",
+    "title": "파이프라인 깊이 vs 처리량·지연",
+    "link": "chapters/throughput.html#sim-pipe"
+  },
+  {
+    "id": "gpubook/workloads/sim-train",
+    "bookId": "gpubook",
+    "title": "학습 시간·에너지 계산기",
+    "link": "chapters/workloads.html#sim-train"
+  },
+  {
+    "id": "gpubook/workloads/sim-inf",
+    "bookId": "gpubook",
+    "title": "추론 성능 모델: TTFT · TPOT · 토큰/s",
+    "link": "chapters/workloads.html#sim-inf"
+  },
+  {
+    "id": "gpubook/workloads/sim-ai",
+    "bookId": "gpubook",
+    "title": "배치와 디코드 산술 강도",
+    "link": "chapters/workloads.html#sim-ai"
+  },
+  {
+    "id": "gpubook/workloads/sim-kv",
+    "bookId": "gpubook",
+    "title": "KV 캐시 용량과 동시 시퀀스 수",
+    "link": "chapters/workloads.html#sim-kv"
+  },
+  {
+    "id": "gpubook/workloads/sim-q",
+    "bookId": "gpubook",
+    "title": "양자화 효과: 정밀도별 처리량 한계",
+    "link": "chapters/workloads.html#sim-q"
+  },
+  {
+    "id": "gpubook/workloads/sim-moe",
+    "bookId": "gpubook",
+    "title": "MoE: 연산량 vs 메모리량 vs 통신량",
+    "link": "chapters/workloads.html#sim-moe"
+  },
+  {
+    "id": "gpubook/workloads/sim-gfx",
+    "bookId": "gpubook",
+    "title": "그래픽 파이프라인 병목과 고정 기능",
+    "link": "chapters/workloads.html#sim-gfx"
+  },
+  {
+    "id": "gpubook/workloads/sim-area",
+    "bookId": "gpubook",
+    "title": "면적 배분 설계 실험",
+    "link": "chapters/workloads.html#sim-area"
+  },
+  {
     "id": "networkbook/apps/sim-dns",
     "bookId": "networkbook",
     "title": "DNS 조회의 여행: 캐시와 TTL",
@@ -18988,6 +19774,42 @@
     "bookId": "colorbook",
     "title": "메타머 쌍의 광원·관측자 메타머리즘 지수",
     "link": "chapters/measurement.html#sim-mi"
+  },
+  {
+    "id": "colorbook/motion/sim-flicker",
+    "bookId": "colorbook",
+    "title": "PWM 변조 — 직접 플리커, IEEE 1789 영역, 팬텀 어레이",
+    "link": "chapters/motion.html#sim-flicker"
+  },
+  {
+    "id": "colorbook/motion/sim-sacc",
+    "bookId": "colorbook",
+    "title": "단속 운동의 주 계열과 속도 프로파일",
+    "link": "chapters/motion.html#sim-sacc"
+  },
+  {
+    "id": "colorbook/motion/sim-cbu",
+    "bookId": "colorbook",
+    "title": "색 분리 — 서브필드 속도와 시선 속도",
+    "link": "chapters/motion.html#sim-cbu"
+  },
+  {
+    "id": "colorbook/motion/sim-blur",
+    "bookId": "colorbook",
+    "title": "홀드형 모션 블러 — 주사율, 지속 시간, 응답 시간, 풀다운",
+    "link": "chapters/motion.html#sim-blur"
+  },
+  {
+    "id": "colorbook/motion/sim-trox",
+    "bookId": "colorbook",
+    "title": "트록슬러 소실과 보색 잔상 — 중앙 십자를 20초 이상 응시",
+    "link": "chapters/motion.html#sim-trox"
+  },
+  {
+    "id": "colorbook/motion/sim-hfp",
+    "bookId": "colorbook",
+    "title": "이색 플리커 측광 — 주파수와 관찰자의 L:M 가중치",
+    "link": "chapters/motion.html#sim-hfp"
   },
   {
     "id": "colorbook/print/sim-mix",

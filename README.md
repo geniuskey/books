@@ -249,11 +249,11 @@ node tools/check-models.cjs
 
 | 서가 | 저장소 | 허브 분야 | 지도 | 메모 |
 |---|---|---|---|---|
-| [SemiBooks](https://semi.euiyun.com/) | `semi-books` | `semiconductor` | 서가 | 제조·인프라 묶음은 `process`+`infra`. PlasmaBook은 공정 장비 책이라 반도체 분야 |
+| [SemiBooks](https://semi.euiyun.com/) | `semi-books` | `semiconductor` | 서가 | 제조·인프라 묶음은 `process`+`infra`. PlasmaBook은 공정 장비 책이라 반도체 분야. GPUBook은 GPU를 칩으로 다루는 책이라 컴퓨팅이 아니라 반도체 분야(회로·설계, SoCBook 옆) |
 | [SciBook](https://science.euiyun.com/) | `science-books` | `science` | 서가 | `shelf.json`을 읽음. 색채공학(`colorbook`, `color/`)은 ID를 유지한 채 이 서가로 옴 |
 | [MathBooks](https://math.euiyun.com/) | `math-books` | `math` | 서가 | 장 수에 용어집 포함. 확률과 통계는 SciBook에서 옮겨 옴 |
 | [ConstructionBooks](https://construction.euiyun.com/) | `construction-books` | `construction` | 서가 | 장 수에 용어집 포함 |
-| [ComputingBooks](https://computing.euiyun.com/) | `computing-books` | `computing` | 서가 | 예정 4권은 서가 `roadmap.json`에도 둠. 모델 검사 CI가 이 저장소를 체크아웃 |
+| [ComputingBooks](https://computing.euiyun.com/) | `computing-books` | `computing` | 서가 | 예정 3권은 서가 `roadmap.json`에도 둠. 모델 검사 CI가 이 저장소를 체크아웃 |
 | [MoneyBooks](https://money.euiyun.com/) | `money-books` | `money` | 서가 | |
 | [MedicalBooks](https://medical.euiyun.com/) | `medical-books` | `health` | 서가 | |
 | [SystemBooks](https://system.euiyun.com/) | `system-books` | `electronics` | 서가 | 분야에 서가 밖 ElectricBook(허브 묶음 `circuits`)이 함께 있음. CameraBook은 `culture`에서 옮겨 옴 |

@@ -20,9 +20,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <script>document.documentElement.classList.add("js"); try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
 <link rel="stylesheet" href="/css/style.css?v=20261115-wide-home">
-<link rel="stylesheet" href="/css/cover-animations.css?v=20261113-cover-split">
+<link rel="stylesheet" href="/css/cover-animations.css?v=20261128-gpu-cover">
 <link rel="stylesheet" href="/css/field-navigation.css?v=20261115-static-catalog">
-<script src="/js/covers.js?v=20261113-cover-split" defer></script>
+<script src="/js/covers.js?v=20261128-gpu-cover" defer></script>
 <script src="/js/core.js?v=20261112-coffee" defer></script>
 <script src="/js/library.js?v=20261115-static-catalog" defer></script>
 <script>try { sessionStorage.removeItem("feedback-admin-session"); } catch (e) {}</script>
@@ -73,6 +73,7 @@
 <li><a href="https://semi.euiyun.com/display/">DisplayBook</a> · 디스플레이 교과서<p>색채 과학, TFT, LCD, OLED, 마이크로LED, HDR, 구동 회로부터 폴더블과 XR까지. 서브픽셀을 확대하고 OLED 적층을 돌려 보며 디스플레이가 빛을 만드는 원리를 배웁니다.</p></li>
 <li><a href="https://semi.euiyun.com/power/">PowerBook</a> · 전력 반도체 교과서<p>Si, SiC, GaN. 전기를 바꾸는 스위치를 재료와 항복 전압에서 시스템까지 다루는 편. 드리프트층과 에지 종단, PiN·쇼트키 다이오드, 전력 MOSFET·슈퍼정션·IGBT, SiC MOSFET과 GaN HEMT, 스위칭 손실과 게이트 구동, DC-DC·PFC·인버터 PWM, 열 설계와 모듈 패키징, 신뢰성과 수명까지. 가상 기준 플랫폼 PW-800의 800 V 전기차 인버터를 직접 스위칭해 보며 배우는 전력 반도체 교과서.</p></li>
 <li><a href="https://semi.euiyun.com/industry/">ChipIndustryBook</a> · 반도체 산업 지도<p>설계 도구와 IP, 팹리스, 장비·소재, 파운드리·메모리, 패키징부터 시장과 지정학까지. 반도체 산업의 가치사슬을 지도와 시뮬레이터로 살펴봅니다.</p></li>
+<li><a href="https://semi.euiyun.com/gpu/">GPUBook</a> · GPU 칩 설계 교과서<p>연산 유닛, HBM, 패키징까지. GPU를 프로그래밍 대상이 아니라 칩으로 다루는 편. CPU와 다른 면적 배분, 워프 스케줄러와 레지스터 파일, 텐서 코어와 수 표현, 온칩 SRAM과 루프라인, HBM 대역폭, 다이 크기·수율·칩렛, 2.5D 인터포저, 전력 공급과 발열, 칩간 링크까지. 가상 기준 칩 GX-1의 면적·대역폭·전력·원가 예산을 직접 바꿔 보며 배우는 GPU 칩 설계 교과서.</p></li>
 <li><a href="https://semi.euiyun.com/thinfilm/">ThinFilmBook</a> · 반도체 산화·박막 증착 교과서<p>8대 공정 학습을 심화하는 산화·박막 편. 진공과 기체 수송, 열산화와 딜-그로브 모델, 계면과 열 예산, 핵생성과 성장 모드, PVD·CVD·ALD의 반응과 수송, 포화, 피복성과 갭필, 균일도, 막질과 계측까지. 가상 기준 장비 TF-300의 온도·압력·유량·펄스 조건으로 직접 막을 키워 보며 배우는 반도체 산화·박막 증착 교과서.</p></li>
 <li><a href="https://semi.euiyun.com/plasma/">PlasmaBook</a> · 플라즈마공학 교과서<p>식각·증착 공정의 엔진인 저온 플라즈마를 깊이 다루는 편. 데바이 차폐와 충돌, 전자 에너지 분포, 방전 개시와 시스, 전역 모델, CCP·ICP와 RF 정합, 펄스 플라즈마, 래디컬 화학과 표면 손상, 탐침·분광 진단과 PIC 모델링까지. 가상 기준 장비 PL-300의 압력·전력·주파수·바이어스 손잡이로 직접 플라즈마를 켜 보며 배우는 플라즈마공학 교과서.</p></li>
 <li><a href="https://semi.euiyun.com/cmp/">CMPBook</a> · 반도체 CMP·세정 교과서<p>프레스턴 방정식과 운동학, 패드·컨디셔닝·슬러리, 마찰과 온도, 패턴 의존성과 디싱·이로전, 산화막·STI·구리·텅스텐 CMP, 종점 검출과 공정 제어, 결함, 세정의 기초와 CMP 후 세정, 하이브리드 본딩까지. 가상 기준 공정 CP-300으로 직접 깎고 씻어 보며 배우는 반도체 CMP·세정 교과서.</p></li>
@@ -111,7 +112,6 @@
 </ul></section>
 <section class="group"><h2>컴퓨터·AI</h2><ul>
 <li><a href="https://computing.euiyun.com/computer/">ComputerBook</a> · 누구나 읽는 컴퓨터 교과서<p>스위치 하나에서 CPU, 메모리, 운영체제, 네트워크, GPU까지. 장난감 CPU를 한 박자씩 돌리고 패킷을 보내며, 컴퓨터 구조를 배운 적 없어도 이해하도록 썼습니다.</p></li>
-<li>GPUBook · GPU 구조와 병렬 컴퓨팅 (집필 예정)<p>스레드와 워프, SIMT 실행, 메모리 계층과 데이터 이동. 그래픽과 AI 연산이 GPU에서 실행되는 과정을 따라가며 병렬 처리와 대역폭의 병목을 비교합니다.</p></li>
 <li>OSBook · 운영체제 (집필 예정)<p>프로세스, 메모리, 파일 시스템을 한 단계 더 깊이.</p></li>
 <li><a href="https://computing.euiyun.com/network/">NetworkBook</a> · 누구나 읽는 네트워크 교과서<p>신호와 프로토콜에서 구리선·광섬유·전파·위성, IP와 라우팅, TCP, Wi-Fi와 5G, 데이터센터와 클라우드, 그리고 SerDes·스위치 ASIC·RF 칩·실리콘 포토닉스 같은 통신 반도체까지. 신호를 직접 보내고 망가뜨리며 네트워크의 모든 층을 이해하도록 썼습니다.</p></li>
 <li>DatabaseBook · 데이터베이스 (집필 예정)<p>SQL, 인덱스, 트랜잭션.</p></li>

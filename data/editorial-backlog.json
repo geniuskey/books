@@ -689,7 +689,7 @@
       "replacement": "gpubook",
       "sectionTarget": "socbook",
       "section": "NPU의 시스톨릭 어레이와 데이터 재사용",
-      "note": "GPU는 병렬 실행·메모리 병목 중심의 독립 책으로 계획하고 NPU는 SoCBook 심화 섹션으로 둔다."
+      "note": "GPU는 칩 설계(SM·텐서 코어·HBM·패키징) 중심의 독립 책으로 SemiBooks에서 출간했고(2026-11-28, gpubook), NPU는 SoCBook 심화 섹션으로 둔다."
     }
   ]
 }

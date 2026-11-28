@@ -430,6 +430,24 @@
       s += `<path d="M150 82 l-8 12 h6 l-3 10 10 -14 h-6 z" fill="${W}" fill-opacity=".8"/>`;
       return svg(s);
     },
+    // GPU 패키지 위에서 본 모습: 가운데 로직 다이의 SM 격자가 번갈아 켜지고, 양옆 HBM 스택 3개씩에서 데이터가 인터포저를 건너 다이로 들어간다.
+    gpu() {
+      let s = `<rect x="22" y="14" width="160" height="104" rx="4" fill="${W}" fill-opacity=".08" stroke="${W}" stroke-opacity=".45" stroke-width="1.2"/>`;
+      s += `<rect x="70" y="24" width="64" height="84" rx="2" fill="${W}" fill-opacity=".14" stroke="${W}" stroke-opacity=".8" stroke-width="1.3"/>`;
+      for (let i = 0; i < 6; i++) for (let j = 0; j < 8; j++) {
+        const k = (i * 5 + j * 3) % 11;
+        s += `<rect class="gp-sm" style="animation-delay:${(k * 0.13).toFixed(2)}s" x="${75 + i * 9.4}" y="${29 + j * 9.6}" width="7.4" height="7.6" rx="1" fill="${W}" fill-opacity=".3"/>`;
+      }
+      [32, 58, 84].forEach((y, k) => {
+        [30, 146].forEach((x, side) => {
+          s += `<rect x="${x}" y="${y}" width="28" height="20" rx="2" fill="${W}" fill-opacity=".22" stroke="${W}" stroke-opacity=".6"/>`;
+          s += `<path d="M${x + 4} ${y + 7} H${x + 24} M${x + 4} ${y + 13} H${x + 24}" stroke="${W}" stroke-opacity=".35"/>`;
+          const x0 = side ? x : x + 28, x1 = side ? 134 : 70;
+          s += `<path class="gp-bw" style="animation-delay:${((k + side * 3) * 0.17).toFixed(2)}s" d="M${x0} ${y + 10} H${x1}" stroke="#ffd8a8" stroke-width="2" stroke-dasharray="3 3"/>`;
+        });
+      });
+      return svg(s);
+    },
     // 인과적 어텐션 히트맵
     attention() {
       const r = rnd(11); let s = ""; const n = 7, p = 15, x0 = 74, y0 = 14;
