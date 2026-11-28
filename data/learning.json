@@ -389,6 +389,22 @@
         "structure"
       ]
     },
+    "gpubook/sim-pkg3d": {
+      "question": "GPU 칩 하나는 다이·HBM·인터포저·냉각판이 어떻게 쌓여 만들어질까요?",
+      "concepts": [
+        "packaging",
+        "memory",
+        "structure"
+      ]
+    },
+    "gpubook/sim-rl": {
+      "question": "같은 GPU에서 어떤 연산은 왜 메모리 대역폭에 막히고 어떤 연산은 연산 성능에 막힐까요?",
+      "concepts": [
+        "computing",
+        "ai",
+        "design"
+      ]
+    },
     "socbook/sim-mesh": {
       "question": "패킷이 같은 길에 몰리면 어디서 병목이 생길까요?",
       "concepts": [

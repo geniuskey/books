@@ -2223,6 +2223,20 @@
       "status": "published",
       "stage": "design",
       "motif": "gpu",
+      "featured": [
+        {
+          "title": "GX-1 패키지 분해",
+          "desc": "780 mm² 로직 다이, HBM 스택 6개, 실리콘 인터포저, 냉각판을 3D로 돌려 보기",
+          "link": "chapters/overview.html#sim-pkg3d",
+          "image": "img/sims/gpubook-sim-pkg3d.jpg"
+        },
+        {
+          "title": "GX-1 루프라인",
+          "desc": "커널 점을 옮기며 HBM 대역폭과 텐서 코어 중 무엇이 성능을 막는지 찾기",
+          "link": "chapters/roofline.html#sim-rl",
+          "image": "img/sims/gpubook-sim-rl.jpg"
+        }
+      ],
       "url": "https://semi.euiyun.com/gpu/",
       "repo": "https://github.com/geniuskey/semi-books",
       "checkout": "semi-books/gpu",
